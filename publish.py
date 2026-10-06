@@ -117,6 +117,8 @@ def ranks():
     return out
 
 
+PLAN_START = "2026-10-07"   # first session of the Master 3 plan
+BASELINE_DAYS = 14          # baseline = ranked runs in the 14 days before the plan started
 STATS = r"C:/Program Files (x86)/Steam/steamapps/common/Aimbeast/Aimbeast/Trainer/Statistics/Ranked"
 
 
@@ -131,8 +133,13 @@ def history():
             for s, d in zip(j["Score"], j["Date"]):
                 dd, mm, yy = map(int, d.split("/"))
                 days.setdefault(dt.date(yy, mm, dd).isoformat(), []).append(s)
-        out.append({"name": name, "days": [{"date": k, "median": round(st.median(v)), "best": round(max(v)), "runs": len(v)}
-                                           for k, v in sorted(days.items())]})
+        start = dt.date.fromisoformat(PLAN_START)
+        before = [s for k, v in days.items() for s in v
+                  if start - dt.timedelta(days=BASELINE_DAYS) <= dt.date.fromisoformat(k) < start]
+        base = {"median": round(st.median(before)), "best": round(max(before)), "runs": len(before)} if before else None
+        out.append({"name": name, "baseline": base,
+                    "days": [{"date": k, "median": round(st.median(v)), "best": round(max(v)), "runs": len(v)}
+                             for k, v in sorted(days.items())]})
     return out
 
 
@@ -149,7 +156,7 @@ def build():
     rows = read_log()
     return {"updated": dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
             "today": {"date": dt.date.today().isoformat(), "progress": today_progress()},
-            "ranks": ranks(), "history": history(), "days": sessions_by_day(rows)}
+            "plan_start": PLAN_START, "ranks": ranks(), "history": history(), "days": sessions_by_day(rows)}
 
 
 def git(*args):

@@ -1,11 +1,12 @@
 {
- "updated": "2026-10-07 05:33",
+ "updated": "2026-10-07 05:36",
  "today": {
   "date": "2026-10-07",
   "progress": {
-   "RANK INT A": 18
+   "RANK INT A": 20
   }
  },
+ "plan_start": "2026-10-07",
  "ranks": [
   {
    "name": "SMOOTH THIN TRACK V2",
@@ -68,8 +69,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 842.0,
-   "median_14d": 662,
-   "runs_14d": 97,
+   "median_14d": 661,
+   "runs_14d": 99,
    "steps": [
     0.0,
     240.0,
@@ -179,6 +180,11 @@
  "history": [
   {
    "name": "SMOOTH THIN TRACK V2",
+   "baseline": {
+    "median": 429,
+    "best": 490,
+    "runs": 103
+   },
    "days": [
     {
      "date": "2026-09-23",
@@ -256,6 +262,11 @@
   },
   {
    "name": "AIR TRACK SMOOTH V3 150%",
+   "baseline": {
+    "median": 447,
+    "best": 545,
+    "runs": 94
+   },
    "days": [
     {
      "date": "2026-09-23",
@@ -333,6 +344,11 @@
   },
   {
    "name": "AIR CONTROL SPHERE - S",
+   "baseline": {
+    "median": 663,
+    "best": 842,
+    "runs": 95
+   },
    "days": [
     {
      "date": "2026-09-23",
@@ -402,14 +418,19 @@
     },
     {
      "date": "2026-10-07",
-     "median": 502,
-     "best": 507,
-     "runs": 2
+     "median": 532,
+     "best": 599,
+     "runs": 4
     }
    ]
   },
   {
    "name": "PASU TRACK EVO (RCT) - 0.85X",
+   "baseline": {
+    "median": 340,
+    "best": 398,
+    "runs": 87
+   },
    "days": [
     {
      "date": "2026-09-23",
@@ -463,6 +484,11 @@
   },
   {
    "name": "PASU TRACK XYZ",
+   "baseline": {
+    "median": 472,
+    "best": 556,
+    "runs": 84
+   },
    "days": [
     {
      "date": "2026-09-23",
@@ -516,6 +542,11 @@
   },
   {
    "name": "ZEUS TRACK EVO - NOBLINK",
+   "baseline": {
+    "median": 491,
+    "best": 553,
+    "runs": 121
+   },
    "days": [
     {
      "date": "2026-08-29",
@@ -685,17 +716,17 @@
  "days": [
   {
    "date": "2026-10-07",
-   "runs": 18,
-   "restarts": 44,
+   "runs": 20,
+   "restarts": 45,
    "rest_median_s": 16,
    "rest_longest_s": 325,
    "breaks": [],
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 18,
+     "runs": 20,
      "first": "05:01",
-     "last": "05:32"
+     "last": "05:35"
     }
    ]
   },
