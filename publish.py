@@ -143,6 +143,25 @@ def history():
     return out
 
 
+JOURNAL = os.path.join(HERE, "journal.md")
+
+
+def journal():
+    """Entries from journal.md: a '## YYYY-MM-DD Author' line, then the text. Newest first."""
+    out, cur = [], None
+    if os.path.exists(JOURNAL):
+        for line in open(JOURNAL, encoding="utf-8"):
+            if line.startswith("## "):
+                bits = line[3:].strip().split(None, 1)
+                cur = {"date": bits[0], "author": bits[1].strip() if len(bits) > 1 else "Ryan", "text": ""}
+                out.append(cur)
+            elif cur is not None and not line.startswith("<!--"):
+                cur["text"] += line
+    for e in out: e["text"] = e["text"].strip()
+    out = [e for e in out if e["text"]]
+    return sorted(out, key=lambda e: e["date"], reverse=True)
+
+
 def today_progress():
     p = BANNER + "/progress.txt"; today = dt.date.today().isoformat(); out = {}
     if os.path.exists(p):
@@ -157,7 +176,7 @@ def build():
     return {"updated": dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
             "updated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "today": {"date": dt.date.today().isoformat(), "progress": today_progress()},
-            "plan_start": PLAN_START, "ranks": ranks(), "history": history(), "days": sessions_by_day(rows)}
+            "plan_start": PLAN_START, "ranks": ranks(), "history": history(), "journal": journal(), "days": sessions_by_day(rows)}
 
 
 def git(*args):
@@ -165,7 +184,8 @@ def git(*args):
 
 
 def main():
-    if "--if-marker" in sys.argv and not os.path.exists(MARKER): return
+    journal_changed = os.path.exists(JOURNAL) and (not os.path.exists(OUT) or os.path.getmtime(JOURNAL) > os.path.getmtime(OUT))
+    if "--if-marker" in sys.argv and not os.path.exists(MARKER) and not journal_changed: return
     data = build()
     new = json.dumps(data, indent=1, ensure_ascii=False)
     old = open(OUT, encoding="utf-8").read() if os.path.exists(OUT) else ""
@@ -175,7 +195,7 @@ def main():
             print(d["date"], "runs", d["runs"], "restarts", d["restarts"], "median rest", d["rest_median_s"], "s, breaks", len(d["breaks"]))
         for r in data["ranks"]: print(f'  {r["name"]}: 14d best {r["best_14d"]} / M3 {r["master3"]}')
         return
-    if strip(new) != strip(old):
+    if strip(new) != strip(old) or journal_changed:
         open(OUT, "w", encoding="utf-8").write(new)
         git("add", "data.json")
         c = git("commit", "-m", "Update practice data " + data["updated"])

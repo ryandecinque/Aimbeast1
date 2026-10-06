@@ -61,6 +61,22 @@ summary .small { font-weight: 400; }
 .kbase { width: 16px; border-top: 1.5px solid var(--ink-3); }
 ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
 .rt { font-family: var(--display); font-weight: 700; letter-spacing: .02em; text-transform: uppercase; }
+
+.jtab { position: fixed; right: 0; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; background: var(--ink); color: var(--bg); border: 0; border-radius: 8px 0 0 8px; padding: 16px 10px; font: 700 15px/1 var(--display); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; z-index: 20; }
+.jtab small { display: block; font: 500 11px var(--body); letter-spacing: 0; text-transform: none; opacity: .8; margin-top: 8px; }
+.jpanel { position: fixed; top: 0; right: 0; height: 100%; width: min(380px, 100%); background: var(--surface); border-left: 1px solid var(--rule); transform: translateX(100%); transition: transform .2s ease; z-index: 30; display: flex; flex-direction: column; }
+.jpanel.open { transform: none; }
+.jhead { display: flex; justify-content: space-between; align-items: center; padding: 16px 18px; border-bottom: 1px solid var(--rule); }
+.jclose { background: none; border: 1px solid var(--rule); color: var(--ink); border-radius: 6px; padding: 4px 10px; cursor: pointer; font: 14px var(--body); }
+.jlist { overflow-y: auto; padding: 8px 18px 24px; display: flex; flex-direction: column; gap: 4px; }
+.jentry { padding: 12px 0; border-top: 1px solid var(--rule); white-space: pre-line; font-size: 15px; }
+.jentry:first-child { border-top: 0; }
+.jentry.claude { background: var(--track); margin: 0 -10px; padding: 12px 10px; border-radius: 6px; border-top: 0; }
+.jmeta { display: flex; gap: 8px; align-items: baseline; margin-bottom: 4px; font-size: 13px; color: var(--ink-3); white-space: normal; }
+.jmeta a { color: var(--ink); font-weight: 600; }
+.jwho { font: 700 13px var(--display); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-2); }
+@media (min-width: 1100px) { body.jopen main { margin-right: 400px; } body.jopen .jtab { display: none; } }
+@media (prefers-reduced-motion: reduce) { .jpanel { transition: none; } }
 </style>
 </head>
 <body>
@@ -133,6 +149,11 @@ ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 
   </section>
 </main>
 
+<button class="jtab" id="jtab" aria-controls="jpanel" aria-expanded="false">Journal<small id="jcount"></small></button>
+<aside class="jpanel" id="jpanel" aria-label="Aim journal" tabindex="-1">
+  <div class="jhead"><h2>Aim journal</h2><button class="jclose" id="jclose" aria-label="Close journal">Close</button></div>
+  <div class="jlist" id="jlist"></div>
+</aside>
 <script>
 const fmtS = s => s == null ? "–" : (s >= 90 ? (s / 60).toFixed(1) + " min" : s + " s");
 const el = (tag, attrs = {}, html = "") => Object.assign(document.createElement(tag), attrs, html ? { innerHTML: html } : {});
@@ -223,6 +244,25 @@ function insights(d) {
   out.forEach(([k, big, sub]) => I.appendChild(el("div", { className: "tile" }, `<span class="small">${esc(k)}</span><span class="big">${esc(big)}</span><span class="sub" style="font-size:14px">${esc(sub)}</span>`)));
 }
 
+function journal(entries) {
+  const tab = document.getElementById("jtab"), panel = document.getElementById("jpanel"), list = document.getElementById("jlist");
+  document.getElementById("jcount").textContent = entries.length ? `${entries.length} · ${short(entries[0].date)}` : "";
+  if (!entries.length) list.appendChild(el("p", { className: "sub" }, "No entries yet. Ryan writes after sessions; Claude adds a review when asked."));
+  entries.forEach(e => {
+    const c = e.author.toLowerCase() === "claude";
+    list.appendChild(el("div", { className: "jentry" + (c ? " claude" : "") },
+      `<div class="jmeta"><a href="#day-${esc(e.date)}">${esc(e.date)}</a><span class="jwho">${esc(e.author)}${c ? " · session review" : ""}</span></div>${esc(e.text)}`));
+  });
+  const set = open => { panel.classList.toggle("open", open); document.body.classList.toggle("jopen", open); tab.setAttribute("aria-expanded", open);
+    try { localStorage.setItem("journalOpen", open ? "1" : ""); } catch (_) {}
+    if (open) panel.focus(); else tab.focus(); };
+  tab.onclick = () => set(true); document.getElementById("jclose").onclick = () => set(false);
+  document.addEventListener("keydown", ev => { if (ev.key === "Escape" && panel.classList.contains("open")) set(false); });
+  list.addEventListener("click", ev => { const a = ev.target.closest("a[href^='#day-']"); if (!a) return; const t = document.querySelector(a.getAttribute("href")); if (t) { t.open = true; if (innerWidth < 1100) set(false); } });
+  let was = false; try { was = localStorage.getItem("journalOpen") === "1"; } catch (_) {}
+  if (was) { panel.classList.add("open"); document.body.classList.add("jopen"); tab.setAttribute("aria-expanded", true); }
+}
+
 fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   const mins = Math.max(0, Math.round((Date.now() - Date.parse(d.updated_utc || "")) / 60000));
   const ago = isNaN(mins) ? d.updated + " (Cambodia time)" : mins < 1 ? "just now" : mins < 60 ? mins + " min ago" : mins < 1440 ? Math.round(mins / 60) + " h ago" : Math.round(mins / 1440) + " days ago";
@@ -230,6 +270,7 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   const prog = Object.entries(d.today.progress || {});
   document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${k} ${Math.min(v, 24)} of 24`).join(" · ").replace(/ZEUS BUILDER (\d+) of 24/, "ZEUS BUILDER $1 of 14") : "Today: no runs yet";
   TODAY = d.today.date;
+  journal(d.journal || []);
   insights(d);
   const M = document.getElementById("multiples");
   d.history.forEach(h => scoreChart(M, h, (d.ranks.find(r => r.name === h.name) || {}).master3, d.plan_start));
