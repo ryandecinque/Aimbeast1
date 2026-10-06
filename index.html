@@ -19,6 +19,7 @@
 }
 :root[data-theme="dark"] { --bg: #121211; --surface: #1a1a19; --ink: #f4f3ee; --ink-2: #c3c2b7; --ink-3: #8f8e86; --rule: #2e2e2b; --accent: #f07a45; --track: #2a2a27; color-scheme: dark; }
 * { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 var(--body); padding: 28px 16px 64px; }
 main { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
 h1, h2, h3 { font-family: var(--display); font-weight: 800; text-transform: uppercase; line-height: 1.05; margin: 0; }
@@ -64,7 +65,7 @@ ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 
 
 .jtab { position: fixed; right: 0; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; background: var(--ink); color: var(--bg); border: 0; border-radius: 8px 0 0 8px; padding: 16px 10px; font: 700 15px/1 var(--display); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; z-index: 20; }
 .jtab small { display: block; font: 500 11px var(--body); letter-spacing: 0; text-transform: none; opacity: .8; margin-top: 8px; }
-.jpanel { position: fixed; top: 0; right: 0; height: 100%; width: min(380px, 100%); background: var(--surface); border-left: 1px solid var(--rule); transform: translateX(100%); transition: transform .2s ease; z-index: 30; display: flex; flex-direction: column; }
+.jpanel { position: fixed; top: 0; right: 0; height: 100%; width: 380px; max-width: 100vw; background: var(--surface); border-left: 1px solid var(--rule); transform: translateX(100%); transition: transform .2s ease; z-index: 30; display: flex; flex-direction: column; }
 .jpanel.open { transform: none; }
 .jhead { display: flex; justify-content: space-between; align-items: center; padding: 16px 18px; border-bottom: 1px solid var(--rule); }
 .jclose { background: none; border: 1px solid var(--rule); color: var(--ink); border-radius: 6px; padding: 4px 10px; cursor: pointer; font: 14px var(--body); }
@@ -77,34 +78,51 @@ ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 
 .jwho { font: 700 13px var(--display); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-2); }
 @media (min-width: 1100px) { body.jopen main { margin-right: 400px; } body.jopen .jtab { display: none; } }
 @media (prefers-reduced-motion: reduce) { .jpanel { transition: none; } }
+.lead { font: 600 18px/1.45 var(--body); max-width: 60ch; }
+.jump { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.jump a { color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--rule); padding: 10px 0 2px; }
+.jump a:hover { color: var(--ink); border-color: var(--accent); }
+.ph { min-height: 96px; background: var(--track); border-color: transparent; }
+.ph.tall { min-height: 200px; }
+main.ready section { animation: fade .15s ease-out; }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+summary { min-height: 44px; align-items: center; }
+@media (max-width: 1099px) {
+  .jpanel { left: 0; width: auto; }
+  .jtab { top: auto; bottom: 16px; right: 16px; transform: none; writing-mode: horizontal-tb; border-radius: 999px; padding: 12px 18px; box-shadow: 0 0 0 4px var(--bg); }
+  .jtab small { display: inline; margin: 0 0 0 8px; }
+  body { padding-bottom: 96px; }
+}
+@media (prefers-reduced-motion: reduce) { main.ready section { animation: none; } }
 </style>
 </head>
 <body>
 <main>
   <header style="display:flex;flex-direction:column;gap:10px">
     <h1>Road to Master 3</h1>
-    <p class="sub">My Aimbeast practice, logged automatically after every session. Goal: Master 3 on all 6 Aimbeast V1 Intermediate tracking scenarios, then Advanced.</p>
-    <p id="today" class="rt" style="font-size:20px"></p>
-    <p class="small" id="updated">Loading…</p>
+    <p class="sub">My practice in Aimbeast, an aim trainer for shooters, logged automatically after every session. The goal: reach Master 3, the top Intermediate rank, on all 6 ranked tracking scenarios.</p>
+    <p id="summary" class="lead">Loading the latest numbers…</p>
+    <p class="small"><span id="today"></span><span id="updated"></span></p>
+    <nav class="jump" aria-label="Jump to"><a href="#insights-sec">Summary</a><a href="#charts-sec">Charts</a><a href="#log-sec">Practice log</a><a href="#plan-sec">Plan</a></nav>
   </header>
 
-  <section>
+  <section id="insights-sec">
     <h2>Insights</h2>
-    <div class="tiles" id="insights"></div>
+    <div class="tiles" id="insights"><div class="tile ph"></div><div class="tile ph"></div><div class="tile ph"></div></div>
   </section>
 
-  <section>
+  <section id="charts-sec">
     <h2>Score over time</h2>
     <p class="sub">Each ranked scenario by day. <span class="key"><i class="kline"></i>median</span> <span class="key"><i class="kdot"></i>best run</span> <span class="key"><i class="kdash"></i>Master 3</span> <span class="key"><i class="kbase"></i>baseline (14 days before the plan)</span></p>
     <p class="small">Median is a typical run that day; best is the top run. Master 3 is reached with a single run at or above the dashed line. Rest is the time from the end of one run to the start of the next.</p>
-    <div class="multiples" id="multiples"></div>
+    <div class="multiples" id="multiples"><div class="card ph tall"></div><div class="card ph tall"></div></div>
   </section>
 
   <section>
     <h2>Practice volume and rest</h2>
     <div class="pair">
       <div class="card"><h3>Runs finished per day</h3><div id="runsChart"></div></div>
-      <div class="card"><h3>Median rest between runs</h3><div id="restChart"></div></div>
+      <div class="card"><h3>Rest between runs (median)</h3><div id="restChart"></div></div>
     </div>
   </section>
 
@@ -114,13 +132,13 @@ ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 
     <div class="card" id="ranks"></div>
   </section>
 
-  <section>
+  <section id="log-sec">
     <h2>Practice days</h2>
     <p class="sub">Runs finished, restarts, the rest between runs, and longer breaks between playlists. Open a day for details.</p>
     <div class="card" id="days"></div>
   </section>
 
-  <section>
+  <section id="plan-sec">
     <h2>The plan</h2>
     <div class="card scroll">
       <table>
@@ -155,6 +173,10 @@ ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 
   <div class="jlist" id="jlist"></div>
 </aside>
 <script>
+const nice = n => String(n).toLowerCase().replace(/(^|[\s(\-])([a-z])/g, (m, a, c) => a + c.toUpperCase()).replace(/\b(Rct|Xyz)\b/g, w => w.toUpperCase()).replace(/\b(V\d|0\.85x)\b/gi, w => w.toUpperCase()).replace(/ - S$/, " - S");
+const WD = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], MO = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const nd = iso => { const [y, m, d] = iso.split("-").map(Number); const t = new Date(y, m - 1, d); return `${WD[t.getDay()]} ${d} ${MO[m - 1]}`; };
+const plain = r => r.replace(/^RANK INT ([AB])$/, "playlist $1").replace(/^RANK ADV ([AB])$/, "advanced playlist $1").replace(/^ZEUS BUILDER$/, "Zeus builder");
 const fmtS = s => s == null ? "–" : (s >= 90 ? (s / 60).toFixed(1) + " min" : s + " s");
 const el = (tag, attrs = {}, html = "") => Object.assign(document.createElement(tag), attrs, html ? { innerHTML: html } : {});
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -182,7 +204,7 @@ function yAxis(svg, y, lo, hi, L, R) {
 }
 function scoreChart(host, h, m3, start) {
   const W = 320, H = 180, L = 38, R = W - 8, T = 14, B = H - 22, days = h.days.slice(-30);
-  const card = el("div", { className: "card" }); card.appendChild(el("h3", {}, esc(h.name))); host.appendChild(card);
+  const card = el("div", { className: "card" }); card.appendChild(el("h3", {}, esc(nice(h.name)))); host.appendChild(card);
   if (!days.length) { card.appendChild(el("p", { className: "small" }, "No ranked runs yet.")); return; }
   const { svg, show } = frame(card, W, H);
   svg.setAttribute("aria-label", `${h.name}: daily median and best against Master 3 at ${m3}`);
@@ -225,22 +247,20 @@ function insights(d) {
     const now = h.days.filter(x => x.date >= since(7)).map(x => x.median), before = h.days.filter(x => x.date < since(7) && x.date >= since(14)).map(x => x.median);
     return { name: h.name, now: med(now), before: med(before), nDays: now.length, bDays: before.length };
   }).filter(m => m.now != null && m.before != null && m.nDays >= 2 && m.bDays >= 2).map(m => ({ ...m, pct: (m.now - m.before) / m.before * 100 }));
-  if (!moves.length) out.push(["Biggest move this week", "Too early", "Needs at least 2 practice days this week and last week on the same scenario."]);
   if (moves.length) { const up = moves.reduce((a, b) => b.pct > a.pct ? b : a);
-    out.push(["Biggest move this week", (up.pct >= 0 ? "+" : "") + up.pct.toFixed(1) + "%", `${up.name}: daily median ${up.before} → ${up.now}`]); }
+    out.push(["Biggest move this week", (up.pct >= 0 ? "+" : "") + up.pct.toFixed(1) + "%", `${nice(up.name)}: daily median ${up.before} → ${up.now}`]); }
   const vsBase = d.history.filter(h => h.baseline).map(h => {
     const after = h.days.filter(x => x.date >= d.plan_start).map(x => x.median);
     return after.length >= 2 ? { name: h.name, base: h.baseline.median, now: med(after), pct: (med(after) - h.baseline.median) / h.baseline.median * 100 } : null; }).filter(Boolean);
   if (vsBase.length) { const avg = vsBase.reduce((a, b) => a + b.pct, 0) / vsBase.length;
     out.push(["Since the plan started", (avg >= 0 ? "+" : "") + avg.toFixed(1) + "%", `Average change in daily median against the baseline, across ${vsBase.length} scenario${vsBase.length > 1 ? "s" : ""} played since ${d.plan_start}`]); }
-  else out.push(["Since the plan started", "Too early", `Plan started ${d.plan_start}. Compared with the baseline (the 14 days before it) once each scenario has 2 days of practice, so one session can't skew it.`]);
   const close = d.ranks.filter(r => r.master3 && r.best_14d).map(r => ({ ...r, p: r.best_14d / r.master3 })).sort((a, b) => b.p - a.p)[0];
-  if (close) out.push(["Closest to Master 3", Math.round(close.p * 100) + "%", `${close.name}: best ${close.best_14d} of ${close.master3} in the last 14 days`]);
+  if (close) out.push(["Closest to Master 3", Math.round(close.p * 100) + "%", `${nice(close.name)}: best ${close.best_14d} of ${close.master3} in the last 14 days`]);
   const far = d.ranks.filter(r => r.master3 && r.best_14d).map(r => ({ ...r, p: r.best_14d / r.master3 })).sort((a, b) => a.p - b.p)[0];
-  if (far) out.push(["Furthest from Master 3", Math.round(far.p * 100) + "%", `${far.name}: needs +${Math.round(far.master3 - far.best_14d)}`]);
+  if (far) out.push(["Furthest from Master 3", Math.round(far.p * 100) + "%", `${nice(far.name)}: needs +${Math.round(far.master3 - far.best_14d)}`]);
   const rd = d.days.filter(x => x.rest_median_s != null);
   if (rd.length) out.push(["Typical rest between runs", fmtS(rd[0].rest_median_s), rd.length > 1 ? `${rd[0].date}, against ${fmtS(med(rd.slice(1).map(x => x.rest_median_s)))} on earlier days` : rd[0].date]);
-  const I = document.getElementById("insights");
+  const I = document.getElementById("insights"); I.innerHTML = "";
   out.forEach(([k, big, sub]) => I.appendChild(el("div", { className: "tile" }, `<span class="small">${esc(k)}</span><span class="big">${esc(big)}</span><span class="sub" style="font-size:14px">${esc(sub)}</span>`)));
 }
 
@@ -251,7 +271,7 @@ function journal(entries) {
   entries.forEach(e => {
     const c = e.author.toLowerCase() === "claude";
     list.appendChild(el("div", { className: "jentry" + (c ? " claude" : "") },
-      `<div class="jmeta"><a href="#day-${esc(e.date)}">${esc(e.date)}</a><span class="jwho">${esc(e.author)}${c ? " · session review" : ""}</span></div>${esc(e.text)}`));
+      `<div class="jmeta"><a href="#day-${esc(e.date)}">${esc(nd(e.date))}</a><span class="jwho">${esc(e.author)}${c ? " · session review" : ""}</span></div>${esc(e.text)}`));
   });
   const set = open => { panel.classList.toggle("open", open); document.body.classList.toggle("jopen", open); tab.setAttribute("aria-expanded", open);
     try { localStorage.setItem("journalOpen", open ? "1" : ""); } catch (_) {}
@@ -260,7 +280,7 @@ function journal(entries) {
   document.addEventListener("keydown", ev => { if (ev.key === "Escape" && panel.classList.contains("open")) set(false); });
   list.addEventListener("click", ev => { const a = ev.target.closest("a[href^='#day-']"); if (!a) return; const t = document.querySelector(a.getAttribute("href")); if (t) { t.open = true; if (innerWidth < 1100) set(false); } });
   let was = false; try { was = localStorage.getItem("journalOpen") === "1"; } catch (_) {}
-  if (was) { panel.classList.add("open"); document.body.classList.add("jopen"); tab.setAttribute("aria-expanded", true); }
+  if (was && innerWidth >= 1100) { panel.classList.add("open"); document.body.classList.add("jopen"); tab.setAttribute("aria-expanded", true); }
 }
 
 fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
@@ -268,11 +288,21 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   const ago = isNaN(mins) ? d.updated + " (Cambodia time)" : mins < 1 ? "just now" : mins < 60 ? mins + " min ago" : mins < 1440 ? Math.round(mins / 60) + " h ago" : Math.round(mins / 1440) + " days ago";
   document.getElementById("updated").textContent = "Updated " + ago + (mins > 1440 ? " · may be out of date" : "");
   const prog = Object.entries(d.today.progress || {});
-  document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${k} ${Math.min(v, 24)} of 24`).join(" · ").replace(/ZEUS BUILDER (\d+) of 24/, "ZEUS BUILDER $1 of 14") : "Today: no runs yet";
+  document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 14 : 24)} of ${k === "ZEUS BUILDER" ? 14 : 24} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
   TODAY = d.today.date;
   journal(d.journal || []);
   insights(d);
-  const M = document.getElementById("multiples");
+  {
+    const done = d.ranks.filter(r => r.master3 && r.official_best >= r.master3).length;
+    const sc = d.ranks.filter(r => r.master3 && r.best_14d).map(r => ({ n: nice(r.name), p: Math.round(r.best_14d / r.master3 * 100) })).sort((a, b) => b.p - a.p);
+    const dayN = Math.floor((Date.parse(d.today.date) - Date.parse(d.plan_start)) / 864e5) + 1;
+    const parts = [dayN >= 1 ? `Day ${dayN} of the plan` : "The plan starts " + nd(d.plan_start), `${done} of 6 at Master 3`];
+    if (sc.length) parts.push(`closest: ${sc[0].n} (${sc[0].p}%)`, `furthest: ${sc[sc.length - 1].n} (${sc[sc.length - 1].p}%)`);
+    const enough = d.history.every(h => !h.baseline || h.days.filter(x => x.date >= d.plan_start).length >= 2);
+    document.getElementById("summary").textContent = parts.join(" · ") + (enough ? "." : ". Too early to compare with before the plan.");
+  }
+  document.querySelector("main").classList.add("ready");
+  const M = document.getElementById("multiples"); M.innerHTML = "";
   d.history.forEach(h => scoreChart(M, h, (d.ranks.find(r => r.name === h.name) || {}).master3, d.plan_start));
   const asc = d.days.slice().reverse();
   barChart(document.getElementById("runsChart"), asc, r => r.runs, "Runs finished per day", v => v + " runs");
@@ -281,7 +311,7 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   d.ranks.forEach(r => {
     const pct = r.master3 && r.best_14d ? Math.min(100, r.best_14d / r.master3 * 100) : 0;
     const row = el("div", { className: "rank" },
-      `<span class="name">${esc(r.name)}</span><span class="num">${r.best_14d ?? "–"} / ${r.master3 ?? "–"}</span>` +
+      `<span class="name">${esc(nice(r.name))}</span><span class="num">${r.best_14d ?? "–"} / ${r.master3 ?? "–"}</span>` +
       `<div class="bar" role="img" aria-label="${pct.toFixed(0)} percent of Master 3"><span style="width:${pct}%"></span></div>` +
       `<span class="small" style="grid-column:1/-1">Median ${r.median_14d ?? "–"} over ${r.runs_14d} runs</span>`);
     R.appendChild(row);
@@ -291,7 +321,7 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
     const det = el("details", { id: "day-" + day.date });
     const breaks = day.breaks.length ? day.breaks.map(b => `<li>${esc(b.at)}: ${b.minutes} min between ${esc(b.after)} and ${esc(b.before)}</li>`).join("") : "<li>None</li>";
     const lists = day.playlists.map(p => `<li>${esc(p.name)}: ${p.runs} runs, ${p.first}–${p.last}</li>`).join("");
-    det.innerHTML = `<summary><span>${day.date}</span><span class="small">${day.runs} runs · median rest ${fmtS(day.rest_median_s)} · ${day.breaks.length} breaks</span></summary>
+    det.innerHTML = `<summary><span>${nd(day.date)}</span><span class="small">${day.runs} runs · median rest ${fmtS(day.rest_median_s)} · ${day.breaks.length} breaks</span></summary>
       <div class="day">
         <p class="sub">Restarts: ${day.restarts}. Longest rest between runs: ${fmtS(day.rest_longest_s)}.</p>
         <div><h3>Playlists</h3><ul class="sub">${lists}</ul></div>
