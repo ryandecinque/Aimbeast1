@@ -117,6 +117,25 @@ def ranks():
     return out
 
 
+STATS = r"C:/Program Files (x86)/Steam/steamapps/common/Aimbeast/Aimbeast/Trainer/Statistics/Ranked"
+
+
+def history():
+    """Daily median, best and run count per scenario, from the game's own ranked statistics."""
+    out = []
+    for ws, name in INT:
+        p = os.path.join(STATS, name + ".json")
+        days = {}
+        if os.path.exists(p):
+            j = json.loads(open(p, "rb").read().decode("utf-16"))
+            for s, d in zip(j["Score"], j["Date"]):
+                dd, mm, yy = map(int, d.split("/"))
+                days.setdefault(dt.date(yy, mm, dd).isoformat(), []).append(s)
+        out.append({"name": name, "days": [{"date": k, "median": round(st.median(v)), "best": round(max(v)), "runs": len(v)}
+                                           for k, v in sorted(days.items())]})
+    return out
+
+
 def today_progress():
     p = BANNER + "/progress.txt"; today = dt.date.today().isoformat(); out = {}
     if os.path.exists(p):
@@ -130,7 +149,7 @@ def build():
     rows = read_log()
     return {"updated": dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
             "today": {"date": dt.date.today().isoformat(), "progress": today_progress()},
-            "ranks": ranks(), "days": sessions_by_day(rows)}
+            "ranks": ranks(), "history": history(), "days": sessions_by_day(rows)}
 
 
 def git(*args):

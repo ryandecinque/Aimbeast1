@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-07 05:28",
+ "updated": "2026-10-07 05:33",
  "today": {
   "date": "2026-10-07",
   "progress": {
-   "RANK INT A": 15
+   "RANK INT A": 18
   }
  },
  "ranks": [
@@ -40,8 +40,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 545.0,
-   "median_14d": 443,
-   "runs_14d": 101,
+   "median_14d": 442,
+   "runs_14d": 102,
    "steps": [
     0.0,
     180.0,
@@ -68,8 +68,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 842.0,
-   "median_14d": 663,
-   "runs_14d": 95,
+   "median_14d": 662,
+   "runs_14d": 97,
    "steps": [
     0.0,
     240.0,
@@ -176,20 +176,526 @@
    ]
   }
  ],
+ "history": [
+  {
+   "name": "SMOOTH THIN TRACK V2",
+   "days": [
+    {
+     "date": "2026-09-23",
+     "median": 430,
+     "best": 457,
+     "runs": 3
+    },
+    {
+     "date": "2026-09-24",
+     "median": 406,
+     "best": 444,
+     "runs": 3
+    },
+    {
+     "date": "2026-09-25",
+     "median": 425,
+     "best": 477,
+     "runs": 15
+    },
+    {
+     "date": "2026-09-26",
+     "median": 418,
+     "best": 439,
+     "runs": 3
+    },
+    {
+     "date": "2026-09-27",
+     "median": 430,
+     "best": 490,
+     "runs": 12
+    },
+    {
+     "date": "2026-09-28",
+     "median": 442,
+     "best": 482,
+     "runs": 12
+    },
+    {
+     "date": "2026-09-29",
+     "median": 425,
+     "best": 463,
+     "runs": 18
+    },
+    {
+     "date": "2026-09-30",
+     "median": 400,
+     "best": 471,
+     "runs": 3
+    },
+    {
+     "date": "2026-10-01",
+     "median": 433,
+     "best": 479,
+     "runs": 19
+    },
+    {
+     "date": "2026-10-02",
+     "median": 409,
+     "best": 448,
+     "runs": 5
+    },
+    {
+     "date": "2026-10-03",
+     "median": 430,
+     "best": 472,
+     "runs": 10
+    },
+    {
+     "date": "2026-10-07",
+     "median": 375,
+     "best": 441,
+     "runs": 8
+    }
+   ]
+  },
+  {
+   "name": "AIR TRACK SMOOTH V3 150%",
+   "days": [
+    {
+     "date": "2026-09-23",
+     "median": 442,
+     "best": 494,
+     "runs": 3
+    },
+    {
+     "date": "2026-09-24",
+     "median": 430,
+     "best": 438,
+     "runs": 3
+    },
+    {
+     "date": "2026-09-25",
+     "median": 454,
+     "best": 487,
+     "runs": 15
+    },
+    {
+     "date": "2026-09-26",
+     "median": 435,
+     "best": 436,
+     "runs": 3
+    },
+    {
+     "date": "2026-09-27",
+     "median": 463,
+     "best": 505,
+     "runs": 9
+    },
+    {
+     "date": "2026-09-28",
+     "median": 433,
+     "best": 473,
+     "runs": 12
+    },
+    {
+     "date": "2026-09-29",
+     "median": 472,
+     "best": 521,
+     "runs": 18
+    },
+    {
+     "date": "2026-09-30",
+     "median": 416,
+     "best": 482,
+     "runs": 3
+    },
+    {
+     "date": "2026-10-01",
+     "median": 463,
+     "best": 499,
+     "runs": 13
+    },
+    {
+     "date": "2026-10-02",
+     "median": 413,
+     "best": 445,
+     "runs": 5
+    },
+    {
+     "date": "2026-10-03",
+     "median": 488,
+     "best": 545,
+     "runs": 10
+    },
+    {
+     "date": "2026-10-07",
+     "median": 360,
+     "best": 391,
+     "runs": 8
+    }
+   ]
+  },
+  {
+   "name": "AIR CONTROL SPHERE - S",
+   "days": [
+    {
+     "date": "2026-09-23",
+     "median": 648,
+     "best": 744,
+     "runs": 6
+    },
+    {
+     "date": "2026-09-24",
+     "median": 566,
+     "best": 577,
+     "runs": 2
+    },
+    {
+     "date": "2026-09-25",
+     "median": 633,
+     "best": 745,
+     "runs": 15
+    },
+    {
+     "date": "2026-09-26",
+     "median": 624,
+     "best": 639,
+     "runs": 2
+    },
+    {
+     "date": "2026-09-27",
+     "median": 663,
+     "best": 770,
+     "runs": 9
+    },
+    {
+     "date": "2026-09-28",
+     "median": 662,
+     "best": 811,
+     "runs": 12
+    },
+    {
+     "date": "2026-09-29",
+     "median": 705,
+     "best": 842,
+     "runs": 18
+    },
+    {
+     "date": "2026-09-30",
+     "median": 648,
+     "best": 692,
+     "runs": 3
+    },
+    {
+     "date": "2026-10-01",
+     "median": 652,
+     "best": 768,
+     "runs": 13
+    },
+    {
+     "date": "2026-10-02",
+     "median": 694,
+     "best": 801,
+     "runs": 5
+    },
+    {
+     "date": "2026-10-03",
+     "median": 701,
+     "best": 799,
+     "runs": 10
+    },
+    {
+     "date": "2026-10-07",
+     "median": 502,
+     "best": 507,
+     "runs": 2
+    }
+   ]
+  },
+  {
+   "name": "PASU TRACK EVO (RCT) - 0.85X",
+   "days": [
+    {
+     "date": "2026-09-23",
+     "median": 340,
+     "best": 351,
+     "runs": 5
+    },
+    {
+     "date": "2026-09-25",
+     "median": 324,
+     "best": 359,
+     "runs": 15
+    },
+    {
+     "date": "2026-09-27",
+     "median": 346,
+     "best": 390,
+     "runs": 9
+    },
+    {
+     "date": "2026-09-28",
+     "median": 340,
+     "best": 356,
+     "runs": 12
+    },
+    {
+     "date": "2026-09-29",
+     "median": 344,
+     "best": 379,
+     "runs": 18
+    },
+    {
+     "date": "2026-10-01",
+     "median": 346,
+     "best": 398,
+     "runs": 13
+    },
+    {
+     "date": "2026-10-02",
+     "median": 328,
+     "best": 359,
+     "runs": 5
+    },
+    {
+     "date": "2026-10-03",
+     "median": 350,
+     "best": 392,
+     "runs": 10
+    }
+   ]
+  },
+  {
+   "name": "PASU TRACK XYZ",
+   "days": [
+    {
+     "date": "2026-09-23",
+     "median": 421,
+     "best": 446,
+     "runs": 2
+    },
+    {
+     "date": "2026-09-25",
+     "median": 450,
+     "best": 556,
+     "runs": 15
+    },
+    {
+     "date": "2026-09-27",
+     "median": 480,
+     "best": 526,
+     "runs": 9
+    },
+    {
+     "date": "2026-09-28",
+     "median": 470,
+     "best": 490,
+     "runs": 9
+    },
+    {
+     "date": "2026-09-29",
+     "median": 482,
+     "best": 534,
+     "runs": 21
+    },
+    {
+     "date": "2026-10-01",
+     "median": 473,
+     "best": 536,
+     "runs": 12
+    },
+    {
+     "date": "2026-10-02",
+     "median": 435,
+     "best": 488,
+     "runs": 4
+    },
+    {
+     "date": "2026-10-03",
+     "median": 470,
+     "best": 524,
+     "runs": 12
+    }
+   ]
+  },
+  {
+   "name": "ZEUS TRACK EVO - NOBLINK",
+   "days": [
+    {
+     "date": "2026-08-29",
+     "median": 462,
+     "best": 561,
+     "runs": 13
+    },
+    {
+     "date": "2026-08-30",
+     "median": 473,
+     "best": 521,
+     "runs": 36
+    },
+    {
+     "date": "2026-08-31",
+     "median": 491,
+     "best": 554,
+     "runs": 20
+    },
+    {
+     "date": "2026-09-01",
+     "median": 461,
+     "best": 481,
+     "runs": 15
+    },
+    {
+     "date": "2026-09-02",
+     "median": 483,
+     "best": 541,
+     "runs": 37
+    },
+    {
+     "date": "2026-09-03",
+     "median": 473,
+     "best": 525,
+     "runs": 20
+    },
+    {
+     "date": "2026-09-04",
+     "median": 485,
+     "best": 520,
+     "runs": 15
+    },
+    {
+     "date": "2026-09-05",
+     "median": 494,
+     "best": 591,
+     "runs": 29
+    },
+    {
+     "date": "2026-09-06",
+     "median": 502,
+     "best": 551,
+     "runs": 30
+    },
+    {
+     "date": "2026-09-07",
+     "median": 510,
+     "best": 550,
+     "runs": 20
+    },
+    {
+     "date": "2026-09-08",
+     "median": 473,
+     "best": 533,
+     "runs": 20
+    },
+    {
+     "date": "2026-09-10",
+     "median": 478,
+     "best": 527,
+     "runs": 10
+    },
+    {
+     "date": "2026-09-14",
+     "median": 481,
+     "best": 569,
+     "runs": 15
+    },
+    {
+     "date": "2026-09-15",
+     "median": 550,
+     "best": 581,
+     "runs": 2
+    },
+    {
+     "date": "2026-09-16",
+     "median": 497,
+     "best": 561,
+     "runs": 12
+    },
+    {
+     "date": "2026-09-17",
+     "median": 495,
+     "best": 520,
+     "runs": 7
+    },
+    {
+     "date": "2026-09-18",
+     "median": 481,
+     "best": 497,
+     "runs": 7
+    },
+    {
+     "date": "2026-09-23",
+     "median": 516,
+     "best": 528,
+     "runs": 3
+    },
+    {
+     "date": "2026-09-25",
+     "median": 482,
+     "best": 551,
+     "runs": 12
+    },
+    {
+     "date": "2026-09-27",
+     "median": 516,
+     "best": 549,
+     "runs": 9
+    },
+    {
+     "date": "2026-09-28",
+     "median": 496,
+     "best": 526,
+     "runs": 9
+    },
+    {
+     "date": "2026-09-29",
+     "median": 488,
+     "best": 547,
+     "runs": 21
+    },
+    {
+     "date": "2026-10-01",
+     "median": 472,
+     "best": 498,
+     "runs": 8
+    },
+    {
+     "date": "2026-10-02",
+     "median": 494,
+     "best": 541,
+     "runs": 14
+    },
+    {
+     "date": "2026-10-03",
+     "median": 500,
+     "best": 547,
+     "runs": 28
+    },
+    {
+     "date": "2026-10-04",
+     "median": 495,
+     "best": 553,
+     "runs": 8
+    },
+    {
+     "date": "2026-10-05",
+     "median": 451,
+     "best": 491,
+     "runs": 9
+    }
+   ]
+  }
+ ],
  "days": [
   {
    "date": "2026-10-07",
-   "runs": 15,
-   "restarts": 42,
+   "runs": 18,
+   "restarts": 44,
    "rest_median_s": 16,
    "rest_longest_s": 325,
    "breaks": [],
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 15,
+     "runs": 18,
      "first": "05:01",
-     "last": "05:27"
+     "last": "05:32"
     }
    ]
   },
