@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Road to Master 3</title>
+<meta name="description" content="Live Aimbeast practice log: rest times, ranks, the plan and the reasoning behind it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #f6f6f3; --surface: #fcfcfb; --ink: #141413; --ink-2: #52514e; --ink-3: #8a8983;
+  --rule: #e2e1dc; --accent: #d9581f; --track: #ebeae5;
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #121211; --surface: #1a1a19; --ink: #f4f3ee; --ink-2: #c3c2b7; --ink-3: #8f8e86; --rule: #2e2e2b; --accent: #f07a45; --track: #2a2a27; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #121211; --surface: #1a1a19; --ink: #f4f3ee; --ink-2: #c3c2b7; --ink-3: #8f8e86; --rule: #2e2e2b; --accent: #f07a45; --track: #2a2a27; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 var(--body); padding: 28px 16px 64px; }
+main { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 800; text-transform: uppercase; line-height: 1.05; margin: 0; }
+h1 { font-size: clamp(38px, 7vw, 56px); } h2 { font-size: 26px; } h3 { font-size: 18px; font-weight: 700; }
+p { margin: 0; max-width: 68ch; }
+section { display: flex; flex-direction: column; gap: 14px; }
+.sub { color: var(--ink-2); } .small { font-size: 13px; color: var(--ink-3); }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 16px 18px; }
+.rank { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; padding: 10px 0; border-top: 1px solid var(--rule); }
+.rank:first-child { border-top: 0; }
+.rank .name { font-weight: 600; font-size: 15px; }
+.rank .num { font-variant-numeric: tabular-nums; color: var(--ink-2); font-size: 14px; text-align: right; }
+.bar { grid-column: 1 / -1; height: 8px; background: var(--track); border-radius: 4px; overflow: hidden; }
+.bar span { display: block; height: 100%; background: var(--accent); border-radius: 0 4px 4px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 8px 6px; border-top: 1px solid var(--rule); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); border-top: 0; }
+.scroll { overflow-x: auto; }
+details { border-top: 1px solid var(--rule); padding: 12px 0; }
+details:first-of-type { border-top: 0; }
+summary { cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+summary .small { font-weight: 400; }
+.day { display: flex; flex-direction: column; gap: 10px; padding-top: 10px; }
+.notes { border-top: 1px dashed var(--rule); padding-top: 10px; }
+ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+.rt { font-family: var(--display); font-weight: 700; letter-spacing: .02em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<main>
+  <header style="display:flex;flex-direction:column;gap:10px">
+    <h1>Road to Master 3</h1>
+    <p class="sub">My Aimbeast practice, logged automatically after every session. Goal: Master 3 on all 6 Aimbeast V1 Intermediate tracking scenarios, then Advanced.</p>
+    <p class="small" id="updated">Loading…</p>
+  </header>
+
+  <section>
+    <h2>Ranks</h2>
+    <p class="sub">Best score in the last 14 days against the Master 3 requirement. The bar fills toward Master 3.</p>
+    <div class="card" id="ranks"></div>
+  </section>
+
+  <section>
+    <h2>Practice days</h2>
+    <p class="sub">Runs finished, restarts, the rest between runs, and longer breaks between playlists. Open a day to read or leave a note.</p>
+    <div class="card" id="days"></div>
+  </section>
+
+  <section>
+    <h2>The plan</h2>
+    <div class="card scroll">
+      <table>
+        <tr><th>Day</th><th>Main hour</th><th>Optional, later</th></tr>
+        <tr><td>A days</td><td class="rt">RANK INT A</td><td><span class="rt">ZEUS BUILDER</span>, then <span class="rt">RANK INT A</span> again</td></tr>
+        <tr><td>B days</td><td class="rt">RANK INT B</td><td><span class="rt">RANK ADV B</span>, then <span class="rt">RANK INT B</span> again</td></tr>
+      </table>
+    </div>
+    <ul class="sub">
+      <li><span class="rt">RANK INT A</span>: Smooth Thin Track V2, Air Track Smooth V3 150%, Air Control Sphere - S. 8 runs each.</li>
+      <li><span class="rt">RANK INT B</span>: Pasu Track Evo (RCT) - 0.85X, Pasu Track XYZ, Zeus Track Evo - Noblink. 8 runs each.</li>
+      <li><span class="rt">ZEUS BUILDER</span>: 7 drills, 2 runs each, that train the parts of Zeus Track: its fast direction changes and its sudden up/down jumps.</li>
+      <li>A 2–3 minute break away from the screen at every scenario switch.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Why this plan</h2>
+    <ul class="sub">
+      <li><b>Spread out, not crammed.</b> Each scenario gets 8 runs every other day, so there's a full day of rest between practising the same thing.</li>
+      <li><b>The slowest scenario decides the finish.</b> All six need to reach Master 3, so extra time goes to the ones furthest away.</li>
+      <li><b>Zeus Track gets its own practice.</b> It sat at the same weekly median for five weeks despite hundreds of runs, so its parts are trained separately. It's a trial: if Zeus hasn't moved by Oct 25, that time goes back to the Advanced playlist.</li>
+      <li><b>Ranked runs come first.</b> Extra practice happens later in the day, so attempts at new ranks are always fresh.</li>
+      <li><b>Honest timeline.</b> On current form every scenario is 5–7 ranks short of Master 3. That's months, not weeks, so progress is judged by the weekly trend.</li>
+    </ul>
+  </section>
+</main>
+
+<script>
+// Cusdis comment widget: one thread per practice day. Fill in the app id from your Cusdis dashboard.
+const CUSDIS_APP_ID = "PASTE-CUSDIS-APP-ID";
+const CUSDIS_HOST = "https://cusdis.com";
+
+const fmtS = s => s == null ? "–" : (s >= 90 ? (s / 60).toFixed(1) + " min" : s + " s");
+const el = (tag, attrs = {}, html = "") => Object.assign(document.createElement(tag), attrs, html ? { innerHTML: html } : {});
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+let cusdisLoading;
+function loadCusdis() {
+  if (!cusdisLoading) cusdisLoading = new Promise(res => {
+    window.CUSDIS_PREVENT_INITIAL_RENDER = true;
+    const s = el("script", { src: CUSDIS_HOST + "/js/cusdis.es.js", async: true, defer: true });
+    s.onload = res; document.body.appendChild(s);
+  });
+  return cusdisLoading;
+}
+function mountNotes(box, date) {
+  if (box.dataset.ready) return; box.dataset.ready = "1";
+  if (CUSDIS_APP_ID.startsWith("PASTE")) { box.innerHTML = '<p class="small">Notes open once the comment service is connected.</p>'; return; }
+  const t = el("div", { id: "cusdis_thread_" + date });
+  Object.assign(t.dataset, { host: CUSDIS_HOST, appId: CUSDIS_APP_ID, pageId: "day-" + date,
+    pageUrl: location.origin + location.pathname + "#day-" + date, pageTitle: "Practice notes " + date, theme: "auto" });
+  box.appendChild(el("p", { className: "small" }, "Leave a note: type your name every time. Notes appear after I approve them."));
+  box.appendChild(t);
+  loadCusdis().then(() => window.renderCusdis && window.renderCusdis(t));
+}
+
+fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
+  document.getElementById("updated").textContent = "Last updated " + d.updated + " (Cambodia time)";
+  const R = document.getElementById("ranks");
+  d.ranks.forEach(r => {
+    const pct = r.master3 && r.best_14d ? Math.min(100, r.best_14d / r.master3 * 100) : 0;
+    const row = el("div", { className: "rank" },
+      `<span class="name">${esc(r.name)}</span><span class="num">${r.best_14d ?? "–"} / ${r.master3 ?? "–"}</span>` +
+      `<div class="bar" role="img" aria-label="${pct.toFixed(0)} percent of Master 3"><span style="width:${pct}%"></span></div>` +
+      `<span class="small" style="grid-column:1/-1">Median ${r.median_14d ?? "–"} over ${r.runs_14d} runs</span>`);
+    R.appendChild(row);
+  });
+  const D = document.getElementById("days");
+  d.days.forEach(day => {
+    const det = el("details", { id: "day-" + day.date });
+    const breaks = day.breaks.length ? day.breaks.map(b => `<li>${esc(b.at)}: ${b.minutes} min between ${esc(b.after)} and ${esc(b.before)}</li>`).join("") : "<li>None</li>";
+    const lists = day.playlists.map(p => `<li>${esc(p.name)}: ${p.runs} runs, ${p.first}–${p.last}</li>`).join("");
+    det.innerHTML = `<summary><span>${day.date}</span><span class="small">${day.runs} runs · median rest ${fmtS(day.rest_median_s)} · ${day.breaks.length} breaks</span></summary>
+      <div class="day">
+        <p class="sub">Restarts: ${day.restarts}. Longest rest between runs: ${fmtS(day.rest_longest_s)}.</p>
+        <div><h3>Playlists</h3><ul class="sub">${lists}</ul></div>
+        <div><h3>Breaks</h3><ul class="sub">${breaks}</ul></div>
+        <div class="notes"><h3>Notes</h3></div>
+      </div>`;
+    det.addEventListener("toggle", () => det.open && mountNotes(det.querySelector(".notes"), day.date));
+    D.appendChild(det);
+  });
+  if (location.hash.startsWith("#day-")) { const t = document.querySelector(location.hash); if (t) { t.open = true; t.scrollIntoView(); } }
+}).catch(() => { document.getElementById("updated").textContent = "Couldn't load the data. Try again in a minute."; });
+</script>
+</body>
+</html>
