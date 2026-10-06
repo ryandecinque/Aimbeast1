@@ -94,6 +94,17 @@ summary { min-height: 44px; align-items: center; }
   body { padding-bottom: 96px; }
 }
 @media (prefers-reduced-motion: reduce) { main.ready section { animation: none; } }
+
+.jlist { width: 100%; max-width: 68ch; margin: 0 auto; }
+.jday { padding: 14px 0 18px; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 10px; }
+.jday:first-child { border-top: 0; }
+.jdayhead { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.jdayhead a { font: 700 18px var(--display); text-transform: uppercase; color: var(--ink); }
+.jday .jentry { border-top: 0; padding: 0; line-height: 1.65; }
+.jday .jentry.claude { margin: 0; padding: 10px 12px; border-left: 3px solid var(--ink-3); border-radius: 0; }
+.jwho { font: 700 12px var(--display); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); margin-bottom: 2px; }
+.jclose { min-height: 44px; min-width: 64px; }
+.jtab small { font-variant-numeric: tabular-nums; }
 </style>
 </head>
 <body>
@@ -264,14 +275,22 @@ function insights(d) {
   out.forEach(([k, big, sub]) => I.appendChild(el("div", { className: "tile" }, `<span class="small">${esc(k)}</span><span class="big">${esc(big)}</span><span class="sub" style="font-size:14px">${esc(sub)}</span>`)));
 }
 
-function journal(entries) {
+function journal(entries, days) {
   const tab = document.getElementById("jtab"), panel = document.getElementById("jpanel"), list = document.getElementById("jlist");
-  document.getElementById("jcount").textContent = entries.length ? `${entries.length} · ${short(entries[0].date)}` : "";
+  document.getElementById("jcount").textContent = entries.length ? `${entries.length} ${entries.length === 1 ? "entry" : "entries"}` : "";
   if (!entries.length) list.appendChild(el("p", { className: "sub" }, "No entries yet. Ryan writes after sessions; Claude adds a review when asked."));
-  entries.forEach(e => {
-    const c = e.author.toLowerCase() === "claude";
-    list.appendChild(el("div", { className: "jentry" + (c ? " claude" : "") },
-      `<div class="jmeta"><a href="#day-${esc(e.date)}">${esc(nd(e.date))}</a><span class="jwho">${esc(e.author)}${c ? " · session review" : ""}</span></div>${esc(e.text)}`));
+  const byDay = {};
+  entries.forEach(e => (byDay[e.date] = byDay[e.date] || []).push(e));
+  const body = t => esc(t).replace(/^(What happened|Conditions|Next time):/gm, "<b>$1:</b>");
+  Object.keys(byDay).sort().reverse().forEach(date => {
+    const st = (days || []).find(x => x.date === date);
+    const g = el("div", { className: "jday" },
+      `<div class="jdayhead"><a href="#day-${esc(date)}">${esc(nd(date))}</a>${st ? `<span class="small">${st.runs} runs · median rest ${fmtS(st.rest_median_s)}</span>` : ""}</div>`);
+    byDay[date].sort((x, y) => (x.author.toLowerCase() === "claude") - (y.author.toLowerCase() === "claude")).forEach(e => {
+      const c = e.author.toLowerCase() === "claude";
+      g.appendChild(el("div", { className: "jentry" + (c ? " claude" : "") }, `<div class="jwho">${esc(e.author)}${c ? " · session review" : ""}</div>${body(e.text)}`));
+    });
+    list.appendChild(g);
   });
   const set = open => { panel.classList.toggle("open", open); document.body.classList.toggle("jopen", open); tab.setAttribute("aria-expanded", open);
     try { localStorage.setItem("journalOpen", open ? "1" : ""); } catch (_) {}
@@ -290,7 +309,7 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   const prog = Object.entries(d.today.progress || {});
   document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 14 : 24)} of ${k === "ZEUS BUILDER" ? 14 : 24} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
   TODAY = d.today.date;
-  journal(d.journal || []);
+  journal(d.journal || [], d.days);
   insights(d);
   {
     const done = d.ranks.filter(r => r.master3 && r.official_best >= r.master3).length;
