@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-07 05:18",
+ "updated": "2026-10-07 05:28",
  "today": {
   "date": "2026-10-07",
   "progress": {
-   "RANK INT A": 9
+   "RANK INT A": 15
   }
  },
  "ranks": [
@@ -40,8 +40,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 545.0,
-   "median_14d": 447,
-   "runs_14d": 95,
+   "median_14d": 443,
+   "runs_14d": 101,
    "steps": [
     0.0,
     180.0,
@@ -179,17 +179,17 @@
  "days": [
   {
    "date": "2026-10-07",
-   "runs": 9,
-   "restarts": 26,
-   "rest_median_s": 12,
+   "runs": 15,
+   "restarts": 42,
+   "rest_median_s": 16,
    "rest_longest_s": 325,
    "breaks": [],
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 9,
+     "runs": 15,
      "first": "05:01",
-     "last": "05:17"
+     "last": "05:27"
     }
    ]
   },
