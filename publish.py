@@ -155,6 +155,7 @@ def today_progress():
 def build():
     rows = read_log()
     return {"updated": dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "updated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "today": {"date": dt.date.today().isoformat(), "progress": today_progress()},
             "plan_start": PLAN_START, "ranks": ranks(), "history": history(), "days": sessions_by_day(rows)}
 
