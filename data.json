@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-08 06:01",
- "updated_utc": "2026-10-07T23:01:19Z",
+ "updated": "2026-10-08 06:06",
+ "updated_utc": "2026-10-07T23:06:19Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
-   "RANK INT B": 11
+   "RANK INT B": 14
   }
  },
  "plan_start": "2026-10-07",
@@ -127,7 +127,7 @@
    "official_best": 580.0,
    "best_14d": 556.0,
    "median_14d": 472,
-   "runs_14d": 85,
+   "runs_14d": 88,
    "steps": [
     0.0,
     180.0,
@@ -547,9 +547,9 @@
     },
     {
      "date": "2026-10-08",
-     "median": 452,
-     "best": 500,
-     "runs": 3
+     "median": 461,
+     "best": 524,
+     "runs": 6
     }
    ]
   },
@@ -751,17 +751,17 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 11,
-   "restarts": 12,
-   "rest_median_s": 88,
+   "runs": 14,
+   "restarts": 13,
+   "rest_median_s": 80,
    "rest_longest_s": 259,
    "breaks": [],
    "playlists": [
     {
      "name": "RANK INT B",
-     "runs": 11,
+     "runs": 14,
      "first": "05:32",
-     "last": "05:58"
+     "last": "06:05"
     }
    ],
    "scenarios": [
@@ -775,11 +775,11 @@
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
-     "runs": 3,
+     "runs": 6,
      "routine": "RANK INT B",
      "first": "05:50",
-     "best": 500,
-     "median": 452
+     "best": 524,
+     "median": 461
     }
    ]
   },
@@ -1057,7 +1057,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 132,
+  "runs": 135,
   "days": 3,
   "groups": [
    {
@@ -1072,7 +1072,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 42,
+    "runs": 44,
     "pct": 102.1
    },
    {
