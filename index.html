@@ -105,6 +105,11 @@ summary { min-height: 44px; align-items: center; }
 .jwho { font: 700 12px var(--display); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); margin-bottom: 2px; }
 .jclose { min-height: 44px; min-width: 64px; }
 .jtab small { font-variant-numeric: tabular-nums; }
+.jdate { font: 700 18px var(--display); text-transform: uppercase; }
+.jlog { font-size: 14px; table-layout: fixed; width: 100%; }
+.jlog td:first-child { overflow-wrap: anywhere; }
+.jlist { overflow-x: hidden; }
+.jlog td:not(:first-child), .jlog th:not(:first-child) { text-align: right; width: 56px; }
 </style>
 </head>
 <body>
@@ -114,7 +119,7 @@ summary { min-height: 44px; align-items: center; }
     <p class="sub">My practice in Aimbeast, an aim trainer for shooters, logged automatically after every session. The goal: reach Master 3, the top Intermediate rank, on all 6 ranked tracking scenarios.</p>
     <p id="summary" class="lead">Loading the latest numbers…</p>
     <p class="small"><span id="today"></span><span id="updated"></span></p>
-    <nav class="jump" aria-label="Jump to"><a href="#insights-sec">Summary</a><a href="#charts-sec">Charts</a><a href="#log-sec">Practice log</a><a href="#plan-sec">Plan</a></nav>
+    <nav class="jump" aria-label="Jump to"><a href="#insights-sec">Summary</a><a href="#charts-sec">Charts</a><a href="#journal" id="jumpjournal">Journal and session log</a><a href="#plan-sec">Plan</a></nav>
   </header>
 
   <section id="insights-sec">
@@ -143,11 +148,6 @@ summary { min-height: 44px; align-items: center; }
     <div class="card" id="ranks"></div>
   </section>
 
-  <section id="log-sec">
-    <h2>Practice days</h2>
-    <p class="sub">Runs finished, restarts, the rest between runs, and longer breaks between playlists. Open a day for details.</p>
-    <div class="card" id="days"></div>
-  </section>
 
   <section id="plan-sec">
     <h2>The plan</h2>
@@ -179,8 +179,8 @@ summary { min-height: 44px; align-items: center; }
 </main>
 
 <button class="jtab" id="jtab" aria-controls="jpanel" aria-expanded="false">Journal<small id="jcount"></small></button>
-<aside class="jpanel" id="jpanel" aria-label="Aim journal" tabindex="-1">
-  <div class="jhead"><h2>Aim journal</h2><button class="jclose" id="jclose" aria-label="Close journal">Close</button></div>
+<aside class="jpanel" id="jpanel" aria-label="Journal and session log" tabindex="-1">
+  <div class="jhead"><h2>Journal and session log</h2><button class="jclose" id="jclose" aria-label="Close journal">Close</button></div>
   <div class="jlist" id="jlist"></div>
 </aside>
 <script>
@@ -270,22 +270,25 @@ function insights(d) {
   const far = d.ranks.filter(r => r.master3 && r.best_14d).map(r => ({ ...r, p: r.best_14d / r.master3 })).sort((a, b) => a.p - b.p)[0];
   if (far) out.push(["Furthest from Master 3", Math.round(far.p * 100) + "%", `${nice(far.name)}: needs +${Math.round(far.master3 - far.best_14d)}`]);
   const rd = d.days.filter(x => x.rest_median_s != null);
-  if (rd.length) out.push(["Typical rest between runs", fmtS(rd[0].rest_median_s), rd.length > 1 ? `${rd[0].date}, against ${fmtS(med(rd.slice(1).map(x => x.rest_median_s)))} on earlier days` : rd[0].date]);
+  if (rd.length) out.push(["Typical rest between runs", fmtS(rd[0].rest_median_s), rd.length > 1 ? `${nd(rd[0].date)}, against ${fmtS(med(rd.slice(1).map(x => x.rest_median_s)))} on earlier days` : nd(rd[0].date)]);
   const I = document.getElementById("insights"); I.innerHTML = "";
   out.forEach(([k, big, sub]) => I.appendChild(el("div", { className: "tile" }, `<span class="small">${esc(k)}</span><span class="big">${esc(big)}</span><span class="sub" style="font-size:14px">${esc(sub)}</span>`)));
 }
 
 function journal(entries, days) {
   const tab = document.getElementById("jtab"), panel = document.getElementById("jpanel"), list = document.getElementById("jlist");
-  document.getElementById("jcount").textContent = entries.length ? `${entries.length} ${entries.length === 1 ? "entry" : "entries"}` : "";
-  if (!entries.length) list.appendChild(el("p", { className: "sub" }, "No entries yet. Ryan writes after sessions; Claude adds a review when asked."));
+  document.getElementById("jcount").textContent = `${(days || []).length} days · ${entries.length} ${entries.length === 1 ? "note" : "notes"}`;
+  if (!entries.length && !(days || []).length) list.appendChild(el("p", { className: "sub" }, "Nothing logged yet."));
   const byDay = {};
+  (days || []).forEach(x => byDay[x.date] = byDay[x.date] || []);
   entries.forEach(e => (byDay[e.date] = byDay[e.date] || []).push(e));
   const body = t => esc(t).replace(/^(What happened|Conditions|Next time):/gm, "<b>$1:</b>");
   Object.keys(byDay).sort().reverse().forEach(date => {
     const st = (days || []).find(x => x.date === date);
-    const g = el("div", { className: "jday" },
-      `<div class="jdayhead"><a href="#day-${esc(date)}">${esc(nd(date))}</a>${st ? `<span class="small">${st.runs} runs · median rest ${fmtS(st.rest_median_s)}</span>` : ""}</div>`);
+    const rows = st && st.scenarios ? st.scenarios.map(x => `<tr><td>${esc(nice(x.name.replace(/ - RANKED$/, "")))}<span class="small"> · ${esc(plain(x.routine))}</span></td><td>${x.runs}</td><td>${x.best ?? "–"}</td><td>${x.median ?? "–"}</td></tr>`).join("") : "";
+    const g = el("div", { className: "jday", id: "day-" + date },
+      `<div class="jdayhead"><span class="jdate">${esc(nd(date))}</span>${st ? `<span class="small">${st.runs} runs · median rest ${fmtS(st.rest_median_s)} · ${st.restarts} restarts · ${st.breaks.length} breaks</span>` : ""}</div>` +
+      (rows ? `<div class="scroll"><table class="jlog"><tr><th>Scenario</th><th>Runs</th><th>Best</th><th>Median</th></tr>${rows}</table></div>` : ""));
     byDay[date].sort((x, y) => (x.author.toLowerCase() === "claude") - (y.author.toLowerCase() === "claude")).forEach(e => {
       const c = e.author.toLowerCase() === "claude";
       g.appendChild(el("div", { className: "jentry" + (c ? " claude" : "") }, `<div class="jwho">${esc(e.author)}${c ? " · session review" : ""}</div>${body(e.text)}`));
@@ -297,7 +300,8 @@ function journal(entries, days) {
     if (open) panel.focus(); else tab.focus(); };
   tab.onclick = () => set(true); document.getElementById("jclose").onclick = () => set(false);
   document.addEventListener("keydown", ev => { if (ev.key === "Escape" && panel.classList.contains("open")) set(false); });
-  list.addEventListener("click", ev => { const a = ev.target.closest("a[href^='#day-']"); if (!a) return; const t = document.querySelector(a.getAttribute("href")); if (t) { t.open = true; if (innerWidth < 1100) set(false); } });
+  document.getElementById("jumpjournal").onclick = ev => { ev.preventDefault(); set(true); };
+  if (location.hash.startsWith("#day-") || location.hash === "#journal") { set(true); const t = document.querySelector(location.hash); if (t) t.scrollIntoView(); }
   let was = false; try { was = localStorage.getItem("journalOpen") === "1"; } catch (_) {}
   if (was && innerWidth >= 1100) { panel.classList.add("open"); document.body.classList.add("jopen"); tab.setAttribute("aria-expanded", true); }
 }
@@ -335,20 +339,6 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
       `<span class="small" style="grid-column:1/-1">Median ${r.median_14d ?? "–"} over ${r.runs_14d} runs</span>`);
     R.appendChild(row);
   });
-  const D = document.getElementById("days");
-  d.days.forEach(day => {
-    const det = el("details", { id: "day-" + day.date });
-    const breaks = day.breaks.length ? day.breaks.map(b => `<li>${esc(b.at)}: ${b.minutes} min between ${esc(b.after)} and ${esc(b.before)}</li>`).join("") : "<li>None</li>";
-    const lists = day.playlists.map(p => `<li>${esc(p.name)}: ${p.runs} runs, ${p.first}–${p.last}</li>`).join("");
-    det.innerHTML = `<summary><span>${nd(day.date)}</span><span class="small">${day.runs} runs · median rest ${fmtS(day.rest_median_s)} · ${day.breaks.length} breaks</span></summary>
-      <div class="day">
-        <p class="sub">Restarts: ${day.restarts}. Longest rest between runs: ${fmtS(day.rest_longest_s)}.</p>
-        <div><h3>Playlists</h3><ul class="sub">${lists}</ul></div>
-        <div><h3>Breaks</h3><ul class="sub">${breaks}</ul></div>
-      </div>`;
-    D.appendChild(det);
-  });
-  if (location.hash.startsWith("#day-")) { const t = document.querySelector(location.hash); if (t) { t.open = true; t.scrollIntoView(); } }
 }).catch(() => { document.getElementById("updated").textContent = "Couldn't load the data. Try again in a minute."; });
 </script>
 </body>

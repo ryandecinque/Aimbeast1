@@ -51,6 +51,8 @@ def sessions_by_day(rows):
             d["runs"] += 1
             p = d["playlists"].setdefault(routine, {"runs": 0, "first": r["time"][11:16], "last": r["time"][11:16]})
             p["runs"] += 1; p["last"] = r["time"][11:16]
+            sc = d.setdefault("scen", {}).setdefault(r["scenario"], {"runs": 0, "routine": routine, "first": r["time"][11:16]})
+            sc["runs"] += 1
             last_end = (r["t"], routine); pending_rest = last_end
         elif r["event"] == "end":
             if not last_restart or (r["t"] - last_restart).total_seconds() > 1:
@@ -75,8 +77,31 @@ def sessions_by_day(rows):
                     "rest_median_s": round(st.median(rs)) if rs else None,
                     "rest_longest_s": max(rs) if rs else None,
                     "breaks": d["breaks"],
-                    "playlists": [{"name": k, **v} for k, v in d["playlists"].items()]})
+                    "playlists": [{"name": k, **v} for k, v in d["playlists"].items()],
+                    "scenarios": [{"name": k, **v, **day_scores(k, day)} for k, v in sorted(d.get("scen", {}).items(), key=lambda kv: kv[1]["first"])]})
     return out
+
+
+TRAINER_STATS = r"C:/Program Files (x86)/Steam/steamapps/common/Aimbeast/Aimbeast/Trainer/Statistics"
+_stats_cache = {}
+
+
+def day_scores(scenario, day):
+    """Best and median score for one scenario on one day, from the game's own statistics files."""
+    base = scenario[:-9] if scenario.endswith(" - RANKED") else scenario
+    folders = ["Ranked", "Normal", "Custom"] if base != scenario else ["Normal", "Custom", "Ranked"]
+    y, m, dd = day.split("-"); want = f"{int(dd)}/{int(m)}/{y}"
+    for f in folders:
+        for name in (base, scenario):
+            path = os.path.join(TRAINER_STATS, f, name + ".json")
+            if not os.path.exists(path): continue
+            if path not in _stats_cache:
+                try: _stats_cache[path] = json.loads(open(path, "rb").read().decode("utf-16"))
+                except Exception: _stats_cache[path] = {"Score": [], "Date": []}
+            j = _stats_cache[path]
+            s = [x for x, d in zip(j.get("Score", []), j.get("Date", [])) if d == want]
+            if s: return {"best": round(max(s)), "median": round(st.median(s))}
+    return {}
 
 
 def read_rank_data():

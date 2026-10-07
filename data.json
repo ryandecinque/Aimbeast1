@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-07 06:20",
- "updated_utc": "2026-10-06T23:20:28Z",
+ "updated": "2026-10-07 11:26",
+ "updated_utc": "2026-10-07T04:26:36Z",
  "today": {
   "date": "2026-10-07",
   "progress": {
@@ -741,6 +741,32 @@
      "first": "05:01",
      "last": "05:46"
     }
+   ],
+   "scenarios": [
+    {
+     "name": "SMOOTH THIN TRACK V2 - RANKED",
+     "runs": 8,
+     "routine": "RANK INT A",
+     "first": "05:01",
+     "best": 441,
+     "median": 375
+    },
+    {
+     "name": "AIR TRACK SMOOTH V3 150% - RANKED",
+     "runs": 8,
+     "routine": "RANK INT A",
+     "first": "05:17",
+     "best": 391,
+     "median": 360
+    },
+    {
+     "name": "AIR CONTROL SPHERE - S - RANKED",
+     "runs": 8,
+     "routine": "RANK INT A",
+     "first": "05:31",
+     "best": 605,
+     "median": 557
+    }
    ]
   },
   {
@@ -811,6 +837,72 @@
      "runs": 13,
      "first": "10:50",
      "last": "11:30"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "143 CLOSE CHOPPY STRAFES",
+     "runs": 8,
+     "routine": "OCT DAY A1",
+     "first": "06:52",
+     "best": 511,
+     "median": 455
+    },
+    {
+     "name": "143 ANY STRAFES (FAR)",
+     "runs": 8,
+     "routine": "OCT DAY A1",
+     "first": "07:06",
+     "best": 780,
+     "median": 724
+    },
+    {
+     "name": "143 FLICKER ARENA",
+     "runs": 8,
+     "routine": "OCT DAY A1",
+     "first": "08:07",
+     "best": 476,
+     "median": 424
+    },
+    {
+     "name": "143 ZIGZAG STRAFES",
+     "runs": 8,
+     "routine": "OCT DAY A1",
+     "first": "08:15",
+     "best": 526,
+     "median": 430
+    },
+    {
+     "name": "143 SWEEPER STRAFES",
+     "runs": 8,
+     "routine": "OCT DAY A1",
+     "first": "08:22",
+     "best": 499,
+     "median": 436
+    },
+    {
+     "name": "143 ANY STRAFES",
+     "runs": 6,
+     "routine": "OCT DAY A1",
+     "first": "08:35",
+     "best": 866,
+     "median": 812
+    },
+    {
+     "name": "KTN CLOSE FS - RANKED",
+     "runs": 11,
+     "routine": "(single scenario)",
+     "first": "10:50",
+     "best": 320,
+     "median": 306
+    },
+    {
+     "name": "KTN CLOSE FS EASY - RANKED",
+     "runs": 2,
+     "routine": "(single scenario)",
+     "first": "11:22",
+     "best": 414,
+     "median": 390
     }
    ]
   }
