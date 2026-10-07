@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-07 21:11",
- "updated_utc": "2026-10-07T14:11:20Z",
+ "updated": "2026-10-07 21:16",
+ "updated_utc": "2026-10-07T14:16:19Z",
  "today": {
   "date": "2026-10-07",
   "progress": {
    "ZEUS BUILDER": 14,
-   "RANK INT A": 40
+   "RANK INT A": 41
   }
  },
  "plan_start": "2026-10-07",
@@ -71,8 +71,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 842.0,
-   "median_14d": 656,
-   "runs_14d": 103,
+   "median_14d": 654,
+   "runs_14d": 104,
    "steps": [
     0.0,
     240.0,
@@ -422,7 +422,7 @@
      "date": "2026-10-07",
      "median": 557,
      "best": 605,
-     "runs": 8
+     "runs": 9
     }
    ]
   },
@@ -735,8 +735,8 @@
  "days": [
   {
    "date": "2026-10-07",
-   "runs": 54,
-   "restarts": 46,
+   "runs": 55,
+   "restarts": 49,
    "rest_median_s": 26,
    "rest_longest_s": 607,
    "breaks": [
@@ -768,9 +768,9 @@
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 40,
+     "runs": 41,
      "first": "05:01",
-     "last": "21:10"
+     "last": "21:15"
     },
     {
      "name": "ZEUS BUILDER",
@@ -798,7 +798,7 @@
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
-     "runs": 8,
+     "runs": 9,
      "routine": "RANK INT A",
      "first": "05:31",
      "best": 605,
@@ -1001,13 +1001,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 113,
+  "runs": 114,
   "days": 2,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 26,
-    "pct": 96.1
+    "runs": 27,
+    "pct": 96.8
    },
    {
     "label": "Later attempts, rest under 20 s",
