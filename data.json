@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-07 21:01",
- "updated_utc": "2026-10-07T14:01:20Z",
+ "updated": "2026-10-07 21:06",
+ "updated_utc": "2026-10-07T14:06:20Z",
  "today": {
   "date": "2026-10-07",
   "progress": {
    "ZEUS BUILDER": 14,
-   "RANK INT A": 35
+   "RANK INT A": 37
   }
  },
  "plan_start": "2026-10-07",
@@ -44,7 +44,7 @@
    "official_best": 548.0,
    "best_14d": 545.0,
    "median_14d": 443,
-   "runs_14d": 105,
+   "runs_14d": 107,
    "steps": [
     0.0,
     180.0,
@@ -338,9 +338,9 @@
     },
     {
      "date": "2026-10-07",
-     "median": 367,
+     "median": 372,
      "best": 537,
-     "runs": 11
+     "runs": 13
     }
    ]
   },
@@ -735,9 +735,9 @@
  "days": [
   {
    "date": "2026-10-07",
-   "runs": 49,
-   "restarts": 40,
-   "rest_median_s": 24,
+   "runs": 51,
+   "restarts": 44,
+   "rest_median_s": 26,
    "rest_longest_s": 607,
    "breaks": [
     {
@@ -768,9 +768,9 @@
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 35,
+     "runs": 37,
      "first": "05:01",
-     "last": "21:00"
+     "last": "21:05"
     },
     {
      "name": "ZEUS BUILDER",
@@ -790,11 +790,11 @@
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
-     "runs": 11,
+     "runs": 13,
      "routine": "RANK INT A",
      "first": "05:17",
      "best": 537,
-     "median": 367
+     "median": 372
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
@@ -1001,23 +1001,23 @@
   }
  ],
  "rest_effect": {
-  "runs": 108,
+  "runs": 110,
   "days": 2,
   "groups": [
    {
     "label": "First attempt on a scenario",
     "runs": 26,
-    "pct": 96.8
+    "pct": 96.4
    },
    {
     "label": "Later attempts, rest under 20 s",
     "runs": 44,
-    "pct": 100.0
+    "pct": 99.9
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 28,
-    "pct": 102.1
+    "runs": 30,
+    "pct": 102.5
    },
    {
     "label": "First run after a break of 15 min+",
