@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-07 13:56",
- "updated_utc": "2026-10-07T06:56:19Z",
+ "updated": "2026-10-07 14:01",
+ "updated_utc": "2026-10-07T07:01:19Z",
  "today": {
   "date": "2026-10-07",
   "progress": {
    "RANK INT A": 24,
-   "ZEUS BUILDER": 12
+   "ZEUS BUILDER": 14
   }
  },
  "plan_start": "2026-10-07",
@@ -730,9 +730,9 @@
  "days": [
   {
    "date": "2026-10-07",
-   "runs": 36,
-   "restarts": 64,
-   "rest_median_s": 21,
+   "runs": 38,
+   "restarts": 66,
+   "rest_median_s": 23,
    "rest_longest_s": 607,
    "breaks": [
     {
@@ -757,9 +757,9 @@
     },
     {
      "name": "ZEUS BUILDER",
-     "runs": 12,
+     "runs": 14,
      "first": "12:25",
-     "last": "13:52"
+     "last": "13:59"
     }
    ],
    "scenarios": [
@@ -834,6 +834,14 @@
      "first": "13:51",
      "best": 162,
      "median": 142
+    },
+    {
+     "name": "THIN FAST",
+     "runs": 2,
+     "routine": "ZEUS BUILDER",
+     "first": "13:57",
+     "best": 1435,
+     "median": 1410
     }
    ]
   },
