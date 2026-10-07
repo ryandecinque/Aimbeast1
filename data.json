@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-08 06:36",
- "updated_utc": "2026-10-07T23:36:20Z",
+ "updated": "2026-10-08 06:41",
+ "updated_utc": "2026-10-07T23:41:20Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
    "RANK INT B": 24,
-   "ZEUS BUILDER": 5
+   "ZEUS BUILDER": 7
   }
  },
  "plan_start": "2026-10-07",
@@ -758,8 +758,8 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 29,
-   "restarts": 32,
+   "runs": 31,
+   "restarts": 35,
    "rest_median_s": 48,
    "rest_longest_s": 259,
    "breaks": [
@@ -779,9 +779,9 @@
     },
     {
      "name": "ZEUS BUILDER",
-     "runs": 5,
+     "runs": 7,
      "first": "06:27",
-     "last": "06:34"
+     "last": "06:39"
     }
    ],
    "scenarios": [
@@ -827,11 +827,19 @@
     },
     {
      "name": "PENNYTRACKING",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS BUILDER",
      "first": "06:34",
-     "best": 500,
-     "median": 500
+     "best": 575,
+     "median": 538
+    },
+    {
+     "name": "SLOW ACCEL 'STT' SHORT",
+     "runs": 1,
+     "routine": "ZEUS BUILDER",
+     "first": "06:39",
+     "best": 287,
+     "median": 287
     }
    ]
   },
@@ -1109,17 +1117,17 @@
   }
  ],
  "rest_effect": {
-  "runs": 150,
+  "runs": 152,
   "days": 3,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 33,
-    "pct": 96.8
+    "runs": 34,
+    "pct": 96.4
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 47,
+    "runs": 48,
     "pct": 99.9
    },
    {
