@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-08 06:46",
- "updated_utc": "2026-10-07T23:46:20Z",
+ "updated": "2026-10-08 06:51",
+ "updated_utc": "2026-10-07T23:51:20Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
    "RANK INT B": 24,
-   "ZEUS BUILDER": 10
+   "ZEUS BUILDER": 13
   }
  },
  "plan_start": "2026-10-07",
@@ -758,8 +758,8 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 34,
-   "restarts": 38,
+   "runs": 37,
+   "restarts": 39,
    "rest_median_s": 48,
    "rest_longest_s": 259,
    "breaks": [
@@ -779,9 +779,9 @@
     },
     {
      "name": "ZEUS BUILDER",
-     "runs": 10,
+     "runs": 13,
      "first": "06:27",
-     "last": "06:45"
+     "last": "06:50"
     }
    ],
    "scenarios": [
@@ -848,6 +848,22 @@
      "first": "06:43",
      "best": 502,
      "median": 484
+    },
+    {
+     "name": "SMOOTH THIN TRACK V2 - S",
+     "runs": 2,
+     "routine": "ZEUS BUILDER",
+     "first": "06:46",
+     "best": 170,
+     "median": 164
+    },
+    {
+     "name": "THIN FAST",
+     "runs": 1,
+     "routine": "ZEUS BUILDER",
+     "first": "06:50",
+     "best": 1565,
+     "median": 1565
     }
    ]
   },
@@ -1125,13 +1141,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 155,
+  "runs": 158,
   "days": 3,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 35,
-    "pct": 96.0
+    "runs": 37,
+    "pct": 96.2
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1140,7 +1156,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 56,
+    "runs": 57,
     "pct": 102.1
    },
    {
