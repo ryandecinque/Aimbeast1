@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-07 13:36",
- "updated_utc": "2026-10-07T06:36:19Z",
+ "updated": "2026-10-07 13:41",
+ "updated_utc": "2026-10-07T06:41:19Z",
  "today": {
   "date": "2026-10-07",
   "progress": {
    "RANK INT A": 24,
-   "ZEUS BUILDER": 7
+   "ZEUS BUILDER": 10
   }
  },
  "plan_start": "2026-10-07",
@@ -730,9 +730,9 @@
  "days": [
   {
    "date": "2026-10-07",
-   "runs": 31,
-   "restarts": 61,
-   "rest_median_s": 20,
+   "runs": 34,
+   "restarts": 62,
+   "rest_median_s": 21,
    "rest_longest_s": 581,
    "breaks": [
     {
@@ -757,9 +757,9 @@
     },
     {
      "name": "ZEUS BUILDER",
-     "runs": 7,
+     "runs": 10,
      "first": "12:25",
-     "last": "13:34"
+     "last": "13:40"
     }
    ],
    "scenarios": [
@@ -813,11 +813,19 @@
     },
     {
      "name": "SLOW ACCEL 'STT' SHORT",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS BUILDER",
      "first": "13:34",
      "best": 265,
-     "median": 265
+     "median": 263
+    },
+    {
+     "name": "CLOSELY STRAFING KYTAN",
+     "runs": 2,
+     "routine": "ZEUS BUILDER",
+     "first": "13:38",
+     "best": 508,
+     "median": 478
     }
    ]
   },
