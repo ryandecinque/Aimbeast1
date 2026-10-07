@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-07 21:31",
- "updated_utc": "2026-10-07T14:31:19Z",
+ "updated": "2026-10-07 21:34",
+ "updated_utc": "2026-10-07T14:34:50Z",
  "today": {
   "date": "2026-10-07",
   "progress": {
    "ZEUS BUILDER": 14,
-   "RANK INT A": 47
+   "RANK INT A": 48
   }
  },
  "plan_start": "2026-10-07",
@@ -71,8 +71,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 842.0,
-   "median_14d": 660,
-   "runs_14d": 110,
+   "median_14d": 661,
+   "runs_14d": 111,
    "steps": [
     0.0,
     240.0,
@@ -420,9 +420,9 @@
     },
     {
      "date": "2026-10-07",
-     "median": 599,
+     "median": 602,
      "best": 780,
-     "runs": 15
+     "runs": 16
     }
    ]
   },
@@ -730,14 +730,19 @@
    "date": "2026-10-07",
    "author": "Claude",
    "text": "Playlist: ZEUS BUILDER (14 runs, 12:24–13:59)\nWhat happened: First full play of the playlist. The three drills played before were all under their April–May medians: Close Fast Precise 1550 (was 1870), Thin Fast 1410 (1580), Ground Plaza 331 (346). The four new drills set their starting scores.\nConditions: A Steam sign-out stopped the session for 51 minutes. The run straight after dropped from 1645 to 1455, and Smooth Thin S was 123 after a 10-minute gap, then 162. No note on sleep or settings for this session.\nNext time: Play it in one go and treat each drill's first run as warm-up. On the snap drills, try relaxing before you reach the target, and write down whether you did."
+  },
+  {
+   "date": "2026-10-07",
+   "author": "Claude",
+   "text": "Playlist: RANK INT A, second time today (24 runs, 20:27–21:34)\nWhat happened: Much better than this morning. Medians: Smooth Thin 418 (morning 375), Air Track 481 (360), Sphere S 706 (557). Air Track and Sphere S beat their pre-plan baselines (447 and 663), and Smooth Thin was just under (429). Best runs: 464, 537 and 780.\nConditions: Evening, wide awake, about 15 hours after the morning's just-woke-up session. Rests were longer, mostly 30 s to 2 min. No note on screen, sound or hitmarker, so the exact differences aren't known.\nNext time: Keep whatever you did tonight, and write it down so it can be repeated. The morning was conditions, not skill. The first run of each scenario was again the lowest, so keep treating it as warm-up."
   }
  ],
  "days": [
   {
    "date": "2026-10-07",
-   "runs": 61,
-   "restarts": 53,
-   "rest_median_s": 30,
+   "runs": 62,
+   "restarts": 55,
+   "rest_median_s": 31,
    "rest_longest_s": 607,
    "breaks": [
     {
@@ -768,9 +773,9 @@
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 47,
+     "runs": 48,
      "first": "05:01",
-     "last": "21:30"
+     "last": "21:33"
     },
     {
      "name": "ZEUS BUILDER",
@@ -798,11 +803,11 @@
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
-     "runs": 15,
+     "runs": 16,
      "routine": "RANK INT A",
      "first": "05:31",
      "best": 780,
-     "median": 599
+     "median": 602
     },
     {
      "name": "GROUND PLAZA FS NO UFO",
@@ -1001,7 +1006,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 120,
+  "runs": 121,
   "days": 2,
   "groups": [
    {
