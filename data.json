@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-07 14:20",
- "updated_utc": "2026-10-07T07:20:06Z",
+ "updated": "2026-10-07 20:31",
+ "updated_utc": "2026-10-07T13:31:20Z",
  "today": {
   "date": "2026-10-07",
   "progress": {
-   "RANK INT A": 24,
-   "ZEUS BUILDER": 14
+   "ZEUS BUILDER": 14,
+   "RANK INT A": 26
   }
  },
  "plan_start": "2026-10-07",
@@ -16,7 +16,7 @@
    "official_best": 555.0,
    "best_14d": 490.0,
    "median_14d": 426,
-   "runs_14d": 111,
+   "runs_14d": 113,
    "steps": [
     0.0,
     168.0,
@@ -258,7 +258,7 @@
      "date": "2026-10-07",
      "median": 375,
      "best": 441,
-     "runs": 8
+     "runs": 10
     }
    ]
   },
@@ -735,9 +735,9 @@
  "days": [
   {
    "date": "2026-10-07",
-   "runs": 38,
-   "restarts": 32,
-   "rest_median_s": 23,
+   "runs": 40,
+   "restarts": 33,
+   "rest_median_s": 22,
    "rest_longest_s": 607,
    "breaks": [
     {
@@ -751,14 +751,20 @@
      "before": "ZEUS BUILDER",
      "at": "12:31",
      "minutes": 51.5
+    },
+    {
+     "after": "ZEUS BUILDER",
+     "before": "RANK INT A",
+     "at": "13:59",
+     "minutes": 387.7
     }
    ],
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 24,
+     "runs": 26,
      "first": "05:01",
-     "last": "05:46"
+     "last": "20:29"
     },
     {
      "name": "ZEUS BUILDER",
@@ -770,7 +776,7 @@
    "scenarios": [
     {
      "name": "SMOOTH THIN TRACK V2 - RANKED",
-     "runs": 8,
+     "runs": 10,
      "routine": "RANK INT A",
      "first": "05:01",
      "best": 441,
@@ -989,17 +995,17 @@
   }
  ],
  "rest_effect": {
-  "runs": 97,
+  "runs": 99,
   "days": 2,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 24,
-    "pct": 96.8
+    "runs": 25,
+    "pct": 96.9
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 41,
+    "runs": 42,
     "pct": 100.0
    },
    {
@@ -1009,8 +1015,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 7,
-    "pct": 93.9
+    "runs": 8,
+    "pct": 96.5
    }
   ]
  }
