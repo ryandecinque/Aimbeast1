@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-07 12:31",
- "updated_utc": "2026-10-07T05:31:19Z",
+ "updated": "2026-10-07 12:36",
+ "updated_utc": "2026-10-07T05:36:19Z",
  "today": {
   "date": "2026-10-07",
   "progress": {
-   "ZEUS BUILDER": 4,
+   "ZEUS BUILDER": 5,
    "RANK INT A": 24
   }
  },
@@ -730,7 +730,7 @@
  "days": [
   {
    "date": "2026-10-07",
-   "runs": 28,
+   "runs": 29,
    "restarts": 56,
    "rest_median_s": 18,
    "rest_longest_s": 325,
@@ -751,9 +751,9 @@
     },
     {
      "name": "ZEUS BUILDER",
-     "runs": 4,
+     "runs": 5,
      "first": "12:25",
-     "last": "12:29"
+     "last": "12:31"
     }
    ],
    "scenarios": [
@@ -796,6 +796,14 @@
      "first": "12:28",
      "best": 194,
      "median": 184
+    },
+    {
+     "name": "CLOSE FAST PRECISE",
+     "runs": 1,
+     "routine": "ZEUS BUILDER",
+     "first": "12:31",
+     "best": 1645,
+     "median": 1645
     }
    ]
   },
