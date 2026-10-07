@@ -291,7 +291,7 @@ function journal(entries, days) {
   const byDay = {};
   (days || []).forEach(x => byDay[x.date] = byDay[x.date] || []);
   entries.forEach(e => (byDay[e.date] = byDay[e.date] || []).push(e));
-  const body = t => esc(t).replace(/^(What happened|Conditions|Rest|Next time):/gm, "<b>$1:</b>");
+  const body = t => esc(t).replace(/^(What happened|Conditions|Rest|Playlist|Next time):/gm, "<b>$1:</b>");
   Object.keys(byDay).sort().reverse().forEach(date => {
     const st = (days || []).find(x => x.date === date);
     const rows = st && st.scenarios ? st.scenarios.map(x => `<tr><td>${esc(nice(x.name.replace(/ - RANKED$/, "")))}<span class="small"> · ${esc(plain(x.routine))}</span></td><td>${x.runs}</td><td>${x.best ?? "–"}</td><td>${x.median ?? "–"}</td></tr>`).join("") : "";

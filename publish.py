@@ -38,11 +38,14 @@ def read_log():
 
 
 def sessions_by_day(rows):
-    """Completed runs, restarts (repeat entries within 1 s count once), rests and playlist breaks per day."""
+    """Completed runs, restarts, rests and playlist breaks per day.
+    A restart is an unfinished end at least 3 s after the run started (the game also logs unfinished ends
+    in the same second as every start; those are noise). Repeat entries within 1 s count once."""
     days = {}
     last_end = None        # (time, routine) of the last completed run
     pending_rest = None    # rest waiting for the next start
     last_restart = None
+    last_start = None
     for r in rows:
         day = r["t"].date().isoformat()
         d = days.setdefault(day, {"runs": 0, "restarts": 0, "rests": [], "breaks": [], "playlists": {}})
@@ -55,10 +58,12 @@ def sessions_by_day(rows):
             sc["runs"] += 1
             last_end = (r["t"], routine); pending_rest = last_end
         elif r["event"] == "end":
+            if last_start is None or (r["t"] - last_start).total_seconds() < 3: continue
             if not last_restart or (r["t"] - last_restart).total_seconds() > 1:
                 d["restarts"] += 1
             last_restart = r["t"]
-        elif r["event"] == "start" and pending_rest:
+        if r["event"] == "start": last_start = r["t"]
+        if r["event"] == "start" and pending_rest:
             gap = (r["t"] - pending_rest[0]).total_seconds()
             same_day = r["t"].date() == pending_rest[0].date()
             if same_day and gap >= 0:
