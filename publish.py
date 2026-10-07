@@ -201,7 +201,16 @@ def build():
     return {"updated": dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
             "updated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "today": {"date": dt.date.today().isoformat(), "progress": today_progress()},
-            "plan_start": PLAN_START, "ranks": ranks(), "history": history(), "journal": journal(), "days": sessions_by_day(rows)}
+            "plan_start": PLAN_START, "ranks": ranks(), "history": history(), "journal": journal(), "days": sessions_by_day(rows), "rest_effect": rest_effect()}
+
+
+def rest_effect():
+    try:
+        import rest_analysis
+        return rest_analysis.rest_effect()
+    except Exception as e:
+        print("rest_effect skipped:", e)
+        return None
 
 
 def git(*args):

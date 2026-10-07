@@ -106,6 +106,9 @@ summary { min-height: 44px; align-items: center; }
 .jclose { min-height: 44px; min-width: 64px; }
 .jtab small { font-variant-numeric: tabular-nums; }
 .jdate { font: 700 18px var(--display); text-transform: uppercase; }
+#restEffectCard { margin-top: 12px; }
+.restfx { font-size: 14px; width: 100%; }
+.restfx td:not(:first-child), .restfx th:not(:first-child) { text-align: right; white-space: nowrap; padding-left: 12px; }
 .jlog { font-size: 14px; table-layout: fixed; width: 100%; }
 .jlog td:first-child { overflow-wrap: anywhere; }
 .jlist { overflow-x: hidden; }
@@ -139,6 +142,11 @@ summary { min-height: 44px; align-items: center; }
     <div class="pair">
       <div class="card"><h3>Runs finished per day</h3><div id="runsChart"></div></div>
       <div class="card"><h3>Rest between runs (median)</h3><div id="restChart"></div></div>
+    </div>
+    <div class="card" id="restEffectCard" hidden>
+      <h3>Does rest change the score?</h3>
+      <table class="restfx" id="restEffect"><thead><tr><th>Before the run</th><th>Runs</th><th>Score vs usual</th></tr></thead><tbody></tbody></table>
+      <p class="small" id="restEffectNote"></p>
     </div>
   </section>
 
@@ -283,7 +291,7 @@ function journal(entries, days) {
   const byDay = {};
   (days || []).forEach(x => byDay[x.date] = byDay[x.date] || []);
   entries.forEach(e => (byDay[e.date] = byDay[e.date] || []).push(e));
-  const body = t => esc(t).replace(/^(What happened|Conditions|Next time):/gm, "<b>$1:</b>");
+  const body = t => esc(t).replace(/^(What happened|Conditions|Rest|Next time):/gm, "<b>$1:</b>");
   Object.keys(byDay).sort().reverse().forEach(date => {
     const st = (days || []).find(x => x.date === date);
     const rows = st && st.scenarios ? st.scenarios.map(x => `<tr><td>${esc(nice(x.name.replace(/ - RANKED$/, "")))}<span class="small"> Â· ${esc(plain(x.routine))}</span></td><td>${x.runs}</td><td>${x.best ?? "â€“"}</td><td>${x.median ?? "â€“"}</td></tr>`).join("") : "";
@@ -330,6 +338,15 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   d.history.forEach(h => scoreChart(M, h, (d.ranks.find(r => r.name === h.name) || {}).master3, d.plan_start));
   const asc = d.days.slice().reverse();
   barChart(document.getElementById("runsChart"), asc, r => r.runs, "Runs finished per day", v => v + " runs");
+  if (d.rest_effect && d.rest_effect.groups) {
+    const re = d.rest_effect;
+    document.querySelector("#restEffect tbody").innerHTML = re.groups.map(g =>
+      `<tr><td>${esc(g.label)}</td><td>${g.runs}</td><td>${g.pct == null ? "–" : g.pct + "%"}</td></tr>`).join("");
+    document.getElementById("restEffectNote").textContent =
+      `Each run's score as a % of that scenario's usual (median) score, from ${re.runs} runs over ${re.days} day${re.days === 1 ? "" : "s"}. ` +
+      (re.days < 14 ? "Tentative: differences of a few % are noise until there are a few weeks of data." : "Differences of 1–2% are still within normal run-to-run swing.");
+    document.getElementById("restEffectCard").hidden = false;
+  }
   barChart(document.getElementById("restChart"), asc, r => r.rest_median_s, "Median rest between runs per day", v => fmtS(v));
   const R = document.getElementById("ranks");
   d.ranks.forEach(r => {
