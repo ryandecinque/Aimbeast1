@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-08 06:51",
- "updated_utc": "2026-10-07T23:51:20Z",
+ "updated": "2026-10-08 06:56",
+ "updated_utc": "2026-10-07T23:56:20Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
    "RANK INT B": 24,
-   "ZEUS BUILDER": 13
+   "ZEUS BUILDER": 14
   }
  },
  "plan_start": "2026-10-07",
@@ -156,7 +156,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 492,
-   "runs_14d": 126,
+   "runs_14d": 127,
    "steps": [
     0.0,
     198.0,
@@ -726,9 +726,9 @@
     },
     {
      "date": "2026-10-08",
-     "median": 503,
+     "median": 501,
      "best": 519,
-     "runs": 8
+     "runs": 9
     }
    ]
   }
@@ -758,8 +758,8 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 37,
-   "restarts": 39,
+   "runs": 39,
+   "restarts": 41,
    "rest_median_s": 48,
    "rest_longest_s": 259,
    "breaks": [
@@ -768,6 +768,12 @@
      "before": "ZEUS BUILDER",
      "at": "06:25",
      "minutes": 1.8
+    },
+    {
+     "after": "ZEUS BUILDER",
+     "before": "(single scenario)",
+     "at": "06:53",
+     "minutes": 1.4
     }
    ],
    "playlists": [
@@ -779,9 +785,15 @@
     },
     {
      "name": "ZEUS BUILDER",
-     "runs": 13,
+     "runs": 14,
      "first": "06:27",
-     "last": "06:50"
+     "last": "06:53"
+    },
+    {
+     "name": "(single scenario)",
+     "runs": 1,
+     "first": "06:55",
+     "last": "06:55"
     }
    ],
    "scenarios": [
@@ -803,11 +815,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 8,
+     "runs": 9,
      "routine": "RANK INT B",
      "first": "06:11",
      "best": 519,
-     "median": 503
+     "median": 501
     },
     {
      "name": "GROUND PLAZA FS NO UFO",
@@ -859,11 +871,11 @@
     },
     {
      "name": "THIN FAST",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS BUILDER",
      "first": "06:50",
      "best": 1565,
-     "median": 1565
+     "median": 1458
     }
    ]
   },
@@ -1141,13 +1153,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 158,
+  "runs": 160,
   "days": 3,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 37,
-    "pct": 96.2
+    "runs": 38,
+    "pct": 96.5
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1156,8 +1168,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 57,
-    "pct": 102.1
+    "runs": 58,
+    "pct": 102.0
    },
    {
     "label": "First run after a break of 15 min+",
