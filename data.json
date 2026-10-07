@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-07 21:21",
- "updated_utc": "2026-10-07T14:21:19Z",
+ "updated": "2026-10-07 21:26",
+ "updated_utc": "2026-10-07T14:26:19Z",
  "today": {
   "date": "2026-10-07",
   "progress": {
    "ZEUS BUILDER": 14,
-   "RANK INT A": 43
+   "RANK INT A": 45
   }
  },
  "plan_start": "2026-10-07",
@@ -72,7 +72,7 @@
    "official_best": 878.0,
    "best_14d": 842.0,
    "median_14d": 657,
-   "runs_14d": 106,
+   "runs_14d": 108,
    "steps": [
     0.0,
     240.0,
@@ -420,9 +420,9 @@
     },
     {
      "date": "2026-10-07",
-     "median": 589,
-     "best": 732,
-     "runs": 11
+     "median": 599,
+     "best": 780,
+     "runs": 13
     }
    ]
   },
@@ -735,9 +735,9 @@
  "days": [
   {
    "date": "2026-10-07",
-   "runs": 57,
-   "restarts": 50,
-   "rest_median_s": 27,
+   "runs": 59,
+   "restarts": 51,
+   "rest_median_s": 28,
    "rest_longest_s": 607,
    "breaks": [
     {
@@ -768,9 +768,9 @@
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 43,
+     "runs": 45,
      "first": "05:01",
-     "last": "21:18"
+     "last": "21:25"
     },
     {
      "name": "ZEUS BUILDER",
@@ -798,11 +798,11 @@
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
-     "runs": 11,
+     "runs": 13,
      "routine": "RANK INT A",
      "first": "05:31",
-     "best": 732,
-     "median": 589
+     "best": 780,
+     "median": 599
     },
     {
      "name": "GROUND PLAZA FS NO UFO",
@@ -1001,7 +1001,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 116,
+  "runs": 118,
   "days": 2,
   "groups": [
    {
