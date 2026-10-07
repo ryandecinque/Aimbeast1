@@ -1,11 +1,10 @@
 {
- "updated": "2026-10-07 21:37",
- "updated_utc": "2026-10-07T14:37:38Z",
+ "updated": "2026-10-08 05:36",
+ "updated_utc": "2026-10-07T22:36:19Z",
  "today": {
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "progress": {
-   "ZEUS BUILDER": 14,
-   "RANK INT A": 48
+   "RANK INT B": 2
   }
  },
  "plan_start": "2026-10-07",
@@ -16,7 +15,7 @@
    "official_best": 555.0,
    "best_14d": 490.0,
    "median_14d": 426,
-   "runs_14d": 119,
+   "runs_14d": 116,
    "steps": [
     0.0,
     168.0,
@@ -43,8 +42,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 545.0,
-   "median_14d": 446,
-   "runs_14d": 110,
+   "median_14d": 447,
+   "runs_14d": 107,
    "steps": [
     0.0,
     180.0,
@@ -72,7 +71,7 @@
    "official_best": 878.0,
    "best_14d": 842.0,
    "median_14d": 661,
-   "runs_14d": 111,
+   "runs_14d": 105,
    "steps": [
     0.0,
     240.0,
@@ -99,8 +98,8 @@
    "master3": 506.0,
    "official_best": 398.0,
    "best_14d": 398.0,
-   "median_14d": 340,
-   "runs_14d": 87,
+   "median_14d": 339,
+   "runs_14d": 84,
    "steps": [
     0.0,
     138.0,
@@ -128,7 +127,7 @@
    "official_best": 580.0,
    "best_14d": 556.0,
    "median_14d": 472,
-   "runs_14d": 84,
+   "runs_14d": 82,
    "steps": [
     0.0,
     180.0,
@@ -156,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 491,
-   "runs_14d": 121,
+   "runs_14d": 118,
    "steps": [
     0.0,
     198.0,
@@ -481,6 +480,12 @@
      "median": 350,
      "best": 392,
      "runs": 10
+    },
+    {
+     "date": "2026-10-08",
+     "median": 278,
+     "best": 291,
+     "runs": 2
     }
    ]
   },
@@ -739,6 +744,32 @@
  ],
  "days": [
   {
+   "date": "2026-10-08",
+   "runs": 2,
+   "restarts": 1,
+   "rest_median_s": 90,
+   "rest_longest_s": 92,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "RANK INT B",
+     "runs": 2,
+     "first": "05:32",
+     "last": "05:34"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "PASU TRACK EVO (RCT) - 0.85X",
+     "runs": 2,
+     "routine": "RANK INT B",
+     "first": "05:32",
+     "best": 291,
+     "median": 278
+    }
+   ]
+  },
+  {
    "date": "2026-10-07",
    "runs": 62,
    "restarts": 55,
@@ -768,6 +799,12 @@
      "before": "RANK INT A",
      "at": "20:29",
      "minutes": 15.6
+    },
+    {
+     "after": "RANK INT A",
+     "before": "(single scenario)",
+     "at": "21:33",
+     "minutes": 7.3
     }
    ],
    "playlists": [
@@ -1006,13 +1043,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 121,
-  "days": 2,
+  "runs": 123,
+  "days": 3,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 27,
-    "pct": 96.8
+    "runs": 28,
+    "pct": 96.1
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1021,8 +1058,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 35,
-    "pct": 102.7
+    "runs": 36,
+    "pct": 102.9
    },
    {
     "label": "First run after a break of 15 min+",
