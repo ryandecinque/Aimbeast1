@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-07 14:03",
- "updated_utc": "2026-10-07T07:03:02Z",
+ "updated": "2026-10-07 14:20",
+ "updated_utc": "2026-10-07T07:20:06Z",
  "today": {
   "date": "2026-10-07",
   "progress": {
@@ -725,13 +725,18 @@
    "date": "2026-10-07",
    "author": "Ryan",
    "text": "Did Session 1. It was terrible. I played it within 10 minutes of waking up. I played with f.lux app on (which removes blue light) and with a lower screen light on my laptop because my girlfriend was sleeping. I also played with hitmarker on, but turned it off in the final 4 runs of my playlist because it was annoying. I also played without sound. Normally, I play benchmark scenarios without sound, but I want to build up my skill at reading the bot. I used to play without sound when I first started, but I'm starting again. If you have any feedback, stats you want to see, UI/UX feedback, dm me in discord"
+  },
+  {
+   "date": "2026-10-07",
+   "author": "Claude",
+   "text": "Playlist: ZEUS BUILDER (14 runs, 12:24–13:59)\nWhat happened: First full play of the playlist. The three drills played before were all under their April–May medians: Close Fast Precise 1550 (was 1870), Thin Fast 1410 (1580), Ground Plaza 331 (346). The four new drills set their starting scores.\nConditions: A Steam sign-out stopped the session for 51 minutes. The run straight after dropped from 1645 to 1455, and Smooth Thin S was 123 after a 10-minute gap, then 162. No note on sleep or settings for this session.\nNext time: Play it in one go and treat each drill's first run as warm-up. On the snap drills, try relaxing before you reach the target, and write down whether you did."
   }
  ],
  "days": [
   {
    "date": "2026-10-07",
    "runs": 38,
-   "restarts": 66,
+   "restarts": 32,
    "rest_median_s": 23,
    "rest_longest_s": 607,
    "breaks": [
@@ -848,7 +853,7 @@
   {
    "date": "2026-10-06",
    "runs": 59,
-   "restarts": 90,
+   "restarts": 38,
    "rest_median_s": 16,
    "rest_longest_s": 781,
    "breaks": [
