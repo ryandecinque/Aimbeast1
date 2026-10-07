@@ -113,6 +113,34 @@ summary { min-height: 44px; align-items: center; }
 .jlog td:first-child { overflow-wrap: anywhere; }
 .jlist { overflow-x: hidden; }
 .jlog td:not(:first-child), .jlog th:not(:first-child) { text-align: right; width: 56px; }
+/* journal calendar */
+.jcal { padding-top: 6px; display: flex; flex-direction: column; gap: 12px; }
+.jnav { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.jnav span { display: flex; gap: 6px; }
+.jmonth { font: 700 20px var(--display); text-transform: uppercase; letter-spacing: .04em; }
+.jbtn { min-height: 44px; min-width: 44px; padding: 0 12px; background: none; border: 1px solid var(--rule); border-radius: 6px; color: var(--ink); font: 15px var(--body); cursor: pointer; }
+.jbtn:hover:not(:disabled) { border-color: var(--ink-3); }
+.jbtn:disabled { opacity: .35; cursor: default; }
+.cgrid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+.cwd { font-size: 11px; color: var(--ink-3); text-align: center; text-transform: uppercase; letter-spacing: .06em; padding-bottom: 2px; }
+.cday { aspect-ratio: 1 / 1.05; min-height: 44px; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; color: var(--ink-3); font: 14px var(--body); border: 1px solid transparent; background: none; padding: 0; }
+.cday.empty { visibility: hidden; }
+.cday.on { background: var(--track); color: var(--ink); cursor: pointer; border-color: var(--rule); }
+.cday.on:hover, .cday.on:focus-visible { border-color: var(--ink-3); }
+.cday.today { border-color: var(--ink-2); }
+.cnum { font-weight: 600; line-height: 1; }
+.cruns { font-size: 11px; color: var(--ink-2); line-height: 1; min-height: 11px; font-variant-numeric: tabular-nums; }
+.cmarks { display: flex; gap: 3px; min-height: 6px; }
+.mnote, .mrev { display: inline-block; width: 6px; height: 6px; border-radius: 50%; }
+.mnote { background: var(--ink); }
+.mrev { border: 1.5px solid var(--ink-2); width: 5px; height: 5px; }
+.clegend { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; margin: 0; }
+.clegend span { display: inline-flex; align-items: center; gap: 6px; }
+.cnum-k { font-size: 11px; color: var(--ink-2); font-weight: 400; }
+.jday > .jnav { margin-bottom: 2px; }
+.zoom-in { animation: zoomin .15s ease-out; transform-origin: 50% 20%; }
+@keyframes zoomin { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .zoom-in { animation: none; } }
 </style>
 </head>
 <body>
@@ -193,10 +221,10 @@ summary { min-height: 44px; align-items: center; }
   <div class="jlist" id="jlist"></div>
 </aside>
 <script>
-const nice = n => String(n).toLowerCase().replace(/(^|[\s(\-])([a-z])/g, (m, a, c) => a + c.toUpperCase()).replace(/\b(Rct|Xyz)\b/g, w => w.toUpperCase()).replace(/\b(V\d|0\.85x)\b/gi, w => w.toUpperCase()).replace(/ - S$/, " - S");
+const nice = n => String(n).toLowerCase().replace(/(^|[\s(\-])([a-z])/g, (m, a, c) => a + c.toUpperCase()).replace(/\b(rct|xyz|stt|fs|ufo)\b/gi, w => w.toUpperCase()).replace(/\b(V\d|0\.85x)\b/gi, w => w.toUpperCase()).replace(/ - S$/, " - S");
 const WD = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], MO = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const nd = iso => { const [y, m, d] = iso.split("-").map(Number); const t = new Date(y, m - 1, d); return `${WD[t.getDay()]} ${d} ${MO[m - 1]}`; };
-const plain = r => r.replace(/^RANK INT ([AB])$/, "playlist $1").replace(/^RANK ADV ([AB])$/, "advanced playlist $1").replace(/^ZEUS BUILDER$/, "Zeus builder");
+const plain = r => r.replace(/^RANK INT ([AB])$/, "playlist $1").replace(/^RANK ADV ([AB])$/, "advanced playlist $1").replace(/^ZEUS BUILDER$/, "Zeus Builder");
 const fmtS = s => s == null ? "–" : (s >= 90 ? (s / 60).toFixed(1) + " min" : s + " s");
 const el = (tag, attrs = {}, html = "") => Object.assign(document.createElement(tag), attrs, html ? { innerHTML: html } : {});
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -292,25 +320,79 @@ function journal(entries, days) {
   (days || []).forEach(x => byDay[x.date] = byDay[x.date] || []);
   entries.forEach(e => (byDay[e.date] = byDay[e.date] || []).push(e));
   const body = t => esc(t).replace(/^(What happened|Conditions|Rest|Playlist|Next time):/gm, "<b>$1:</b>");
-  Object.keys(byDay).sort().reverse().forEach(date => {
+  const isC = e => e.author.toLowerCase() === "claude";
+  const dates = Object.keys(byDay).sort();
+  const months = [...new Set(dates.map(d => d.slice(0, 7)))];
+  const pad = n => String(n).padStart(2, "0");
+  const todayIso = (() => { const t = new Date(); return `${t.getFullYear()}-${pad(t.getMonth() + 1)}-${pad(t.getDate())}`; })();
+  let month = months[months.length - 1];
+
+  // one practice day, zoomed in
+  function dayView(date) {
     const st = (days || []).find(x => x.date === date);
+    const i = dates.indexOf(date), prev = dates[i - 1], next = dates[i + 1];
     const rows = st && st.scenarios ? st.scenarios.map(x => `<tr><td>${esc(nice(x.name.replace(/ - RANKED$/, "")))}<span class="small"> · ${esc(plain(x.routine))}</span></td><td>${x.runs}</td><td>${x.best ?? "–"}</td><td>${x.median ?? "–"}</td></tr>`).join("") : "";
     const g = el("div", { className: "jday", id: "day-" + date },
+      `<div class="jnav"><button class="jbtn" data-cal>‹ Calendar</button><span><button class="jbtn" data-go="${prev || ""}" ${prev ? "" : "disabled"} aria-label="Previous practice day">‹</button><button class="jbtn" data-go="${next || ""}" ${next ? "" : "disabled"} aria-label="Next practice day">›</button></span></div>` +
       `<div class="jdayhead"><span class="jdate">${esc(nd(date))}</span>${st ? `<span class="small">${st.runs} runs · median rest ${fmtS(st.rest_median_s)} · ${st.restarts} restarts · ${st.breaks.length} breaks</span>` : ""}</div>` +
       (rows ? `<div class="scroll"><table class="jlog"><tr><th>Scenario</th><th>Runs</th><th>Best</th><th>Median</th></tr>${rows}</table></div>` : ""));
-    byDay[date].sort((x, y) => (x.author.toLowerCase() === "claude") - (y.author.toLowerCase() === "claude")).forEach(e => {
-      const c = e.author.toLowerCase() === "claude";
-      g.appendChild(el("div", { className: "jentry" + (c ? " claude" : "") }, `<div class="jwho">${esc(e.author)}${c ? " · session review" : ""}</div>${body(e.text)}`));
+    byDay[date].slice().sort((x, y) => isC(x) - isC(y)).forEach(e => {
+      g.appendChild(el("div", { className: "jentry" + (isC(e) ? " claude" : "") }, `<div class="jwho">${esc(e.author)}${isC(e) ? " · review" : ""}</div>${body(e.text)}`));
     });
-    list.appendChild(g);
-  });
+    if (!byDay[date].length) g.appendChild(el("p", { className: "small" }, "No notes for this day."));
+    return g;
+  }
+
+  // the month grid, Monday first
+  function calView() {
+    const [y, m] = month.split("-").map(Number);
+    const first = new Date(y, m - 1, 1), n = new Date(y, m, 0).getDate(), lead = (first.getDay() + 6) % 7;
+    const mi = months.indexOf(month);
+    let cells = "";
+    for (let k = 0; k < lead; k++) cells += `<span class="cday empty"></span>`;
+    for (let d = 1; d <= n; d++) {
+      const iso = `${month}-${pad(d)}`, st = (days || []).find(x => x.date === iso), es = byDay[iso];
+      const cls = "cday" + (iso === todayIso ? " today" : "");
+      if (!es) { cells += `<span class="${cls}"><span class="cnum">${d}</span></span>`; continue; }
+      const note = es.some(e => !isC(e)), rev = es.some(isC);
+      const label = `${nd(iso)}${st ? `, ${st.runs} runs` : ""}${note ? ", note" : ""}${rev ? ", review" : ""}`;
+      cells += `<button class="${cls} on" data-day="${iso}" aria-label="${esc(label)}"><span class="cnum">${d}</span>` +
+        `<span class="cruns">${st ? st.runs : ""}</span><span class="cmarks">${note ? '<i class="mnote"></i>' : ""}${rev ? '<i class="mrev"></i>' : ""}</span></button>`;
+    }
+    const name = first.toLocaleDateString("en-GB", { month: "long", year: "numeric" });
+    return el("div", { className: "jcal" },
+      `<div class="jnav"><button class="jbtn" data-month="${months[mi - 1] || ""}" ${mi > 0 ? "" : "disabled"} aria-label="Previous month">‹</button>` +
+      `<span class="jmonth">${esc(name)}</span><button class="jbtn" data-month="${months[mi + 1] || ""}" ${mi < months.length - 1 ? "" : "disabled"} aria-label="Next month">›</button></div>` +
+      `<div class="cgrid" role="group" aria-label="${esc(name)}">${["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map(w => `<span class="cwd">${w}</span>`).join("")}${cells}</div>` +
+      `<p class="small clegend"><span><b class="cnum-k">24</b> runs that day</span><span><i class="mnote"></i> Ryan's note</span><span><i class="mrev"></i> Claude's review</span></p>` +
+      `<p class="small">Tap a day to see its runs, notes and reviews.</p>`);
+  }
+
+  function show(view, date, keepUrl) {
+    const node = view === "day" ? dayView(date) : calView();
+    node.classList.add("zoom-in");
+    list.replaceChildren(node); list.scrollTop = 0;
+    const url = view === "day" ? "#day-" + date : (location.hash.startsWith("#day-") ? location.pathname + location.search : null);
+    if (url && !keepUrl) history.replaceState(null, "", url);
+    const f = node.querySelector(view === "day" ? "[data-cal]" : `[data-day="${date}"]`); if (f) f.focus({ preventScroll: true });
+  }
+  list.onclick = ev => {
+    const b = ev.target.closest("button"); if (!b || b.disabled) return;
+    if (b.dataset.day) show("day", b.dataset.day);
+    else if (b.dataset.go) show("day", b.dataset.go);
+    else if (b.hasAttribute("data-cal")) { const d = list.querySelector(".jday")?.id.slice(4); if (d) month = d.slice(0, 7); show("cal", d); }
+    else if (b.dataset.month) { month = b.dataset.month; show("cal"); }
+  };
+  if (dates.length) show("cal", null, true);
+  const openDay = () => { const d = location.hash.slice(5); if (byDay[d]) { month = d.slice(0, 7); show("day", d); set(true); } };
+  addEventListener("hashchange", () => { if (location.hash.startsWith("#day-")) openDay(); });
   const set = open => { panel.classList.toggle("open", open); document.body.classList.toggle("jopen", open); tab.setAttribute("aria-expanded", open);
     try { localStorage.setItem("journalOpen", open ? "1" : ""); } catch (_) {}
     if (open) panel.focus(); else tab.focus(); };
   tab.onclick = () => set(true); document.getElementById("jclose").onclick = () => set(false);
   document.addEventListener("keydown", ev => { if (ev.key === "Escape" && panel.classList.contains("open")) set(false); });
   document.getElementById("jumpjournal").onclick = ev => { ev.preventDefault(); set(true); };
-  if (location.hash.startsWith("#day-") || location.hash === "#journal") { set(true); const t = document.querySelector(location.hash); if (t) t.scrollIntoView(); }
+  if (location.hash.startsWith("#day-")) openDay(); else if (location.hash === "#journal") set(true);
   let was = false; try { was = localStorage.getItem("journalOpen") === "1"; } catch (_) {}
   if (was && innerWidth >= 1100) { panel.classList.add("open"); document.body.classList.add("jopen"); tab.setAttribute("aria-expanded", true); }
 }
@@ -341,10 +423,10 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   if (d.rest_effect && d.rest_effect.groups) {
     const re = d.rest_effect;
     document.querySelector("#restEffect tbody").innerHTML = re.groups.map(g =>
-      `<tr><td>${esc(g.label)}</td><td>${g.runs}</td><td>${g.pct == null ? "�" : g.pct + "%"}</td></tr>`).join("");
+      `<tr><td>${esc(g.label)}</td><td>${g.runs}</td><td>${g.pct == null ? "�" : g.pct + "%"}</td></tr>`).join("");
     document.getElementById("restEffectNote").textContent =
       `Each run's score as a % of that scenario's usual (median) score, from ${re.runs} runs over ${re.days} day${re.days === 1 ? "" : "s"}. ` +
-      (re.days < 14 ? "Tentative: differences of a few % are noise until there are a few weeks of data." : "Differences of 1�2% are still within normal run-to-run swing.");
+      (re.days < 14 ? "Tentative: differences of a few % are noise until there are a few weeks of data." : "Differences of 1�2% are still within normal run-to-run swing.");
     document.getElementById("restEffectCard").hidden = false;
   }
   barChart(document.getElementById("restChart"), asc, r => r.rest_median_s, "Median rest between runs per day", v => fmtS(v));
