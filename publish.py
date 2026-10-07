@@ -219,7 +219,8 @@ def rest_effect():
 
 
 def git(*args):
-    return subprocess.run(["git", *args], cwd=HERE, capture_output=True, text=True)
+    # CREATE_NO_WINDOW: the scheduled task runs under pythonw, so without this every git call flashes a console window mid-run
+    return subprocess.run(["git", *args], cwd=HERE, capture_output=True, text=True, creationflags=0x08000000)
 
 
 def main():
