@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-07 20:51",
- "updated_utc": "2026-10-07T13:51:20Z",
+ "updated": "2026-10-07 20:56",
+ "updated_utc": "2026-10-07T13:56:20Z",
  "today": {
   "date": "2026-10-07",
   "progress": {
    "ZEUS BUILDER": 14,
-   "RANK INT A": 29
+   "RANK INT A": 32
   }
  },
  "plan_start": "2026-10-07",
@@ -16,7 +16,7 @@
    "official_best": 555.0,
    "best_14d": 490.0,
    "median_14d": 426,
-   "runs_14d": 116,
+   "runs_14d": 119,
    "steps": [
     0.0,
     168.0,
@@ -256,9 +256,9 @@
     },
     {
      "date": "2026-10-07",
-     "median": 385,
+     "median": 400,
      "best": 464,
-     "runs": 13
+     "runs": 16
     }
    ]
   },
@@ -735,9 +735,9 @@
  "days": [
   {
    "date": "2026-10-07",
-   "runs": 43,
-   "restarts": 37,
-   "rest_median_s": 23,
+   "runs": 46,
+   "restarts": 38,
+   "rest_median_s": 24,
    "rest_longest_s": 607,
    "breaks": [
     {
@@ -768,9 +768,9 @@
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 29,
+     "runs": 32,
      "first": "05:01",
-     "last": "20:50"
+     "last": "20:55"
     },
     {
      "name": "ZEUS BUILDER",
@@ -782,11 +782,11 @@
    "scenarios": [
     {
      "name": "SMOOTH THIN TRACK V2 - RANKED",
-     "runs": 13,
+     "runs": 16,
      "routine": "RANK INT A",
      "first": "05:01",
      "best": 464,
-     "median": 385
+     "median": 400
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
@@ -1001,13 +1001,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 102,
+  "runs": 105,
   "days": 2,
   "groups": [
    {
     "label": "First attempt on a scenario",
     "runs": 25,
-    "pct": 96.9
+    "pct": 96.8
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1016,13 +1016,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 24,
-    "pct": 102.5
+    "runs": 27,
+    "pct": 102.2
    },
    {
     "label": "First run after a break of 15 min+",
     "runs": 9,
-    "pct": 96.9
+    "pct": 93.9
    }
   ]
  }
