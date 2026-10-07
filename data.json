@@ -1,10 +1,11 @@
 {
- "updated": "2026-10-08 06:26",
- "updated_utc": "2026-10-07T23:26:20Z",
+ "updated": "2026-10-08 06:31",
+ "updated_utc": "2026-10-07T23:31:20Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
-   "RANK INT B": 24
+   "RANK INT B": 24,
+   "ZEUS BUILDER": 3
   }
  },
  "plan_start": "2026-10-07",
@@ -757,17 +758,30 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 24,
-   "restarts": 25,
-   "rest_median_s": 51,
+   "runs": 27,
+   "restarts": 27,
+   "rest_median_s": 49,
    "rest_longest_s": 259,
-   "breaks": [],
+   "breaks": [
+    {
+     "after": "RANK INT B",
+     "before": "ZEUS BUILDER",
+     "at": "06:25",
+     "minutes": 1.8
+    }
+   ],
    "playlists": [
     {
      "name": "RANK INT B",
      "runs": 24,
      "first": "05:32",
      "last": "06:25"
+    },
+    {
+     "name": "ZEUS BUILDER",
+     "runs": 3,
+     "first": "06:27",
+     "last": "06:31"
     }
    ],
    "scenarios": [
@@ -794,6 +808,22 @@
      "first": "06:11",
      "best": 519,
      "median": 503
+    },
+    {
+     "name": "GROUND PLAZA FS NO UFO",
+     "runs": 2,
+     "routine": "ZEUS BUILDER",
+     "first": "06:27",
+     "best": 387,
+     "median": 354
+    },
+    {
+     "name": "'STT' SHORT - S - 0.5X",
+     "runs": 1,
+     "routine": "ZEUS BUILDER",
+     "first": "06:31",
+     "best": 214,
+     "median": 214
     }
    ]
   },
@@ -1071,18 +1101,18 @@
   }
  ],
  "rest_effect": {
-  "runs": 145,
+  "runs": 148,
   "days": 3,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 30,
-    "pct": 95.7
+    "runs": 32,
+    "pct": 96.4
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 46,
-    "pct": 99.9
+    "runs": 47,
+    "pct": 100.0
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
