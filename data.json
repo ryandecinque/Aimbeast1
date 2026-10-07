@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-08 06:21",
- "updated_utc": "2026-10-07T23:21:19Z",
+ "updated": "2026-10-08 06:26",
+ "updated_utc": "2026-10-07T23:26:20Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
-   "RANK INT B": 22
+   "RANK INT B": 24
   }
  },
  "plan_start": "2026-10-07",
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 492,
-   "runs_14d": 124,
+   "runs_14d": 126,
    "steps": [
     0.0,
     198.0,
@@ -725,9 +725,9 @@
     },
     {
      "date": "2026-10-08",
-     "median": 508,
+     "median": 503,
      "best": 519,
-     "runs": 6
+     "runs": 8
     }
    ]
   }
@@ -757,17 +757,17 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 22,
-   "restarts": 21,
-   "rest_median_s": 64,
+   "runs": 24,
+   "restarts": 25,
+   "rest_median_s": 51,
    "rest_longest_s": 259,
    "breaks": [],
    "playlists": [
     {
      "name": "RANK INT B",
-     "runs": 22,
+     "runs": 24,
      "first": "05:32",
-     "last": "06:20"
+     "last": "06:25"
     }
    ],
    "scenarios": [
@@ -789,11 +789,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 6,
+     "runs": 8,
      "routine": "RANK INT B",
      "first": "06:11",
      "best": 519,
-     "median": 508
+     "median": 503
     }
    ]
   },
@@ -1071,7 +1071,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 143,
+  "runs": 145,
   "days": 3,
   "groups": [
    {
@@ -1086,7 +1086,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 51,
+    "runs": 53,
     "pct": 102.0
    },
    {
