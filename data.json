@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-08 20:28",
- "updated_utc": "2026-10-08T13:28:58Z",
+ "updated": "2026-10-08 21:51",
+ "updated_utc": "2026-10-08T14:51:19Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -783,7 +783,7 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 67,
+   "runs": 68,
    "restarts": 58,
    "rest_median_s": 44,
    "rest_longest_s": 732,
@@ -823,6 +823,12 @@
      "before": "(single scenario)",
      "at": "10:31",
      "minutes": 5.1
+    },
+    {
+     "after": "(single scenario)",
+     "before": "(single scenario)",
+     "at": "20:25",
+     "minutes": 81.7
     }
    ],
    "playlists": [
@@ -840,9 +846,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 19,
+     "runs": 20,
      "first": "06:55",
-     "last": "20:25"
+     "last": "21:48"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
@@ -995,6 +1001,14 @@
      "first": "20:25",
      "best": 1110,
      "median": 1110
+    },
+    {
+     "name": "VOX TS BALANCED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "21:48",
+     "best": 5,
+     "median": 5
     }
    ]
   },
@@ -1272,13 +1286,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 188,
+  "runs": 189,
   "days": 3,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 48,
-    "pct": 97.1
+    "runs": 49,
+    "pct": 97.3
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1292,8 +1306,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 11,
-    "pct": 93.9
+    "runs": 12,
+    "pct": 96.5
    }
   ]
  },
