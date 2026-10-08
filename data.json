@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-08 14:08",
- "updated_utc": "2026-10-08T07:08:39Z",
+ "updated": "2026-10-08 20:26",
+ "updated_utc": "2026-10-08T13:26:19Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -783,9 +783,9 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 64,
-   "restarts": 56,
-   "rest_median_s": 46,
+   "runs": 67,
+   "restarts": 58,
+   "rest_median_s": 44,
    "rest_longest_s": 732,
    "breaks": [
     {
@@ -840,9 +840,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 16,
+     "runs": 19,
      "first": "06:55",
-     "last": "10:50"
+     "last": "20:25"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
@@ -971,6 +971,30 @@
      "first": "10:37",
      "best": 529,
      "median": 529
+    },
+    {
+     "name": "VOX TS BALANCED 125% - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "20:22",
+     "best": 340,
+     "median": 340
+    },
+    {
+     "name": "TRM TS VARIED 5H - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "20:23",
+     "best": 322,
+     "median": 322
+    },
+    {
+     "name": "SUMO AIR TS 180 V2 - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "20:25",
+     "best": 1110,
+     "median": 1110
     }
    ]
   },
@@ -1248,13 +1272,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 185,
+  "runs": 188,
   "days": 3,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 45,
-    "pct": 96.8
+    "runs": 48,
+    "pct": 97.1
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1275,6 +1299,40 @@
  },
  "aim": {
   "2026-10-08": [
+   {
+    "scenario": "SUMO AIR TS 180 V2 - RANKED",
+    "runs": 1,
+    "on_target": 78,
+    "reaction_ms": 217,
+    "overshoot_pct": 0,
+    "pps_by_distance": {
+     "far": 4.4,
+     "mid": 4.0,
+     "close": 3.8
+    }
+   },
+   {
+    "scenario": "TRM TS VARIED 5H - RANKED",
+    "runs": 1,
+    "on_target": 81,
+    "reaction_ms": 209,
+    "overshoot_pct": 0,
+    "pps_by_distance": {
+     "far": 3.9,
+     "mid": 3.3
+    }
+   },
+   {
+    "scenario": "VOX TS BALANCED 125 - RANKED",
+    "runs": 1,
+    "on_target": 81,
+    "reaction_ms": 217,
+    "overshoot_pct": 0,
+    "pps_by_distance": {
+     "far": 4.5,
+     "mid": 4.5
+    }
+   },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
     "runs": 5,
