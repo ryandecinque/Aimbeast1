@@ -13,7 +13,7 @@ def angles(r):
     best = None
     cx, cy, cz = float(r["cam_x"]), float(r["cam_y"]), float(r["cam_z"])
     yaw, pitch = float(r["yaw"]), float(r["pitch"])
-    for i in (1, 2, 3):
+    for i in range(1, 9):              # up to 8 bots (older files have 3)
         x = r.get(f"b{i}_x")
         if not x or x == "0.0": continue
         dx, dy, dz = float(x) - cx, float(r[f"b{i}_y"]) - cy, float(r[f"b{i}_z"]) - cz
@@ -26,6 +26,8 @@ def angles(r):
 
 def analyse(path, size=None):
     rows = list(csv.DictReader((gzip.open(path, "rt", encoding="utf-8") if path.endswith(".gz") else open(path, encoding="utf-8"))))
+    if max(int(r.get("bots") or 0) for r in rows) > 2:     # switching / multi-bot: tracking numbers don't apply
+        return {"skipped": "switching or multi-bot scenario (not analysed yet)"}
     s = []
     for r in rows:
         a = angles(r)
