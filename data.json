@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-08 07:39",
- "updated_utc": "2026-10-08T00:39:24Z",
+ "updated": "2026-10-08 08:59",
+ "updated_utc": "2026-10-08T01:59:53Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -750,6 +750,11 @@
    "text": "Playlist: ZEUS BUILDER, second play (14 runs, 06:26–06:53), plus 4 extra Zeus Track runs\nWhat happened: Every repeat drill went up on yesterday: Ground Plaza 355 (best 387, above its old best of 369), 'STT' Short 0.5x 240 (184), Slow Accel 294 (263), Kytan 484 (478), Smooth Thin S 164 (142), Thin Fast 1458 (best 1565). First plays of the new Pennytracking drill: 500, then 575. The extra Zeus runs held at a median of 502, the same as before the builder.\nConditions: Played straight after RANK INT B, still within the first 90 minutes after waking, so it was a 90-minute, 42-run morning with short breaks. No sign of fatigue: almost every drill's second run was equal or better.\nNext time: Most of today's gains are from learning the new drills, so they aren't skill changes yet. Zeus Track itself didn't move straight after the builder, which is normal; any carry-over will show over days. Write a one-line note on sleep, screen and sound before you play."
   },
   {
+   "date": "2026-10-08",
+   "author": "Claude",
+   "text": "Playlist: Video check of this morning's 12 Zeus Track runs (from the Twitch VOD)\nWhat happened: I measured the crosshair against the target on every frame. Time on target was 31–38% per run, and it matched the scores closely: the three lowest-scoring runs (453, 455, 472) were the three lowest on target. About 95% of the time off target was left-right misses. Only about 5% came from the up/down kicks, although runs with more kick misses did score lower. Almost half the misses (47%) were overshoots: the crosshair went through the target to the other side right after a correction. Each run had 9–16 long misses of half a second or more, and those decided which runs scored well.\nConditions: The scores show no fatigue. Time on target was the same in the first and last 20 seconds of runs, and the same before and after ZEUS BUILDER.\nNext time: On Zeus, aim to under-correct after a direction change. Land on the near edge of the target instead of swinging through it, and accept being slightly behind rather than past it. The left-right direction changes are where most of the points are, more than the kicks."
+  },
+  {
    "date": "2026-10-07",
    "author": "Claude",
    "text": "What happened: First session of the plan, RANK INT A, all 24 runs. Medians were well under your baseline: Smooth Thin 375 (baseline 429), Air Track 150% 360 (447), Sphere S 557 (663).\nConditions: Played within 10 minutes of waking, f.lux on, a dimmed screen, no sound, hitmarker on then off for the last 4 runs. Five changes at once, so this session says little about your skill.\nRest: A first look at rest across all 97 runs from Oct 6 and 7. The first attempt on each scenario scores about 3% below its usual, and the first run after a 15+ minute break about 6% below. That's warm-up, not tiredness. Inside a scenario, runs after 20 s to 2 min of rest scored about 2% higher than runs started within 20 s, but that's too little data to trust yet. Time of day shows no pattern. Treat the first run on each scenario as warm-up and don't judge yourself on it.\nNext time: Change one thing at a time. Keep no sound if that's the goal, but play fully awake with normal brightness so the next sessions are comparable."
@@ -773,8 +778,8 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 42,
-   "restarts": 43,
+   "runs": 43,
+   "restarts": 45,
    "rest_median_s": 46,
    "rest_longest_s": 259,
    "breaks": [
@@ -789,6 +794,12 @@
      "before": "(single scenario)",
      "at": "06:53",
      "minutes": 1.4
+    },
+    {
+     "after": "(single scenario)",
+     "before": "BAZHAN MEDIUM TRACKING",
+     "at": "07:00",
+     "minutes": 117.7
     }
    ],
    "playlists": [
@@ -809,6 +820,12 @@
      "runs": 4,
      "first": "06:55",
      "last": "07:00"
+    },
+    {
+     "name": "BAZHAN MEDIUM TRACKING",
+     "runs": 1,
+     "first": "08:59",
+     "last": "08:59"
     }
    ],
    "scenarios": [
@@ -891,6 +908,14 @@
      "first": "06:50",
      "best": 1565,
      "median": 1458
+    },
+    {
+     "name": "CONTROLTRACK",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "08:59",
+     "best": 935,
+     "median": 935
     }
    ]
   },
@@ -1168,13 +1193,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 163,
+  "runs": 164,
   "days": 3,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 38,
-    "pct": 96.5
+    "runs": 39,
+    "pct": 96.8
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1188,8 +1213,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 9,
-    "pct": 93.9
+    "runs": 10,
+    "pct": 96.5
    }
   ]
  }
