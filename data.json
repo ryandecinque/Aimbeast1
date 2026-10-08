@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-08 10:41",
- "updated_utc": "2026-10-08T03:41:19Z",
+ "updated": "2026-10-08 10:44",
+ "updated_utc": "2026-10-08T03:44:11Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -156,7 +156,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 492,
-   "runs_14d": 136,
+   "runs_14d": 137,
    "steps": [
     0.0,
     198.0,
@@ -728,7 +728,7 @@
      "date": "2026-10-08",
      "median": 501,
      "best": 549,
-     "runs": 18
+     "runs": 19
     }
    ]
   }
@@ -778,9 +778,9 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 59,
+   "runs": 60,
    "restarts": 52,
-   "rest_median_s": 44,
+   "rest_median_s": 45,
    "rest_longest_s": 732,
    "breaks": [
     {
@@ -835,9 +835,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 11,
+     "runs": 12,
      "first": "06:55",
-     "last": "10:37"
+     "last": "10:43"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
@@ -865,7 +865,7 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 18,
+     "runs": 19,
      "routine": "RANK INT B",
      "first": "06:11",
      "best": 549,
@@ -1243,12 +1243,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 180,
+  "runs": 181,
   "days": 3,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 44,
+    "runs": 45,
     "pct": 96.8
    },
    {
@@ -1265,6 +1265,24 @@
     "label": "First run after a break of 15 min+",
     "runs": 11,
     "pct": 93.9
+   }
+  ]
+ },
+ "aim": {
+  "2026-10-08": [
+   {
+    "scenario": "ZEUS TRACK EVO - NOBLINK",
+    "runs": 1,
+    "on_target": 44,
+    "reaction_ms": 133,
+    "overshoot_pct": 42
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - NOBLINK EZ",
+    "runs": 1,
+    "on_target": 49,
+    "reaction_ms": 133,
+    "overshoot_pct": 33
    }
   ]
  }
