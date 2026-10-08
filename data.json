@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-08 21:51",
- "updated_utc": "2026-10-08T14:51:19Z",
+ "updated": "2026-10-08 22:31",
+ "updated_utc": "2026-10-08T15:31:19Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -783,7 +783,7 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 68,
+   "runs": 69,
    "restarts": 58,
    "rest_median_s": 44,
    "rest_longest_s": 732,
@@ -829,6 +829,12 @@
      "before": "(single scenario)",
      "at": "20:25",
      "minutes": 81.7
+    },
+    {
+     "after": "(single scenario)",
+     "before": "(single scenario)",
+     "at": "21:48",
+     "minutes": 41.6
     }
    ],
    "playlists": [
@@ -846,9 +852,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 20,
+     "runs": 21,
      "first": "06:55",
-     "last": "21:48"
+     "last": "22:30"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
@@ -1009,6 +1015,14 @@
      "first": "21:48",
      "best": 5,
      "median": 5
+    },
+    {
+     "name": "POPCORN - M",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "22:30",
+     "best": 0,
+     "median": 0
     }
    ]
   },
@@ -1285,32 +1299,7 @@
    ]
   }
  ],
- "rest_effect": {
-  "runs": 189,
-  "days": 3,
-  "groups": [
-   {
-    "label": "First attempt on a scenario",
-    "runs": 49,
-    "pct": 97.3
-   },
-   {
-    "label": "Later attempts, rest under 20 s",
-    "runs": 56,
-    "pct": 100.0
-   },
-   {
-    "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 66,
-    "pct": 102.1
-   },
-   {
-    "label": "First run after a break of 15 min+",
-    "runs": 12,
-    "pct": 96.5
-   }
-  ]
- },
+ "rest_effect": null,
  "aim": {
   "2026-10-08": [
    {
