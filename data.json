@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-08 10:51",
- "updated_utc": "2026-10-08T03:51:19Z",
+ "updated": "2026-10-08 10:53",
+ "updated_utc": "2026-10-08T03:53:12Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -755,6 +755,11 @@
    "text": "Playlist: Video check of this morning's 12 Zeus Track runs (from the Twitch VOD)\nHow I measured it: I downloaded the Zeus part of the stream (06:10–07:00, 1600×900 at 60 fps) and matched each run to the practice log using the clock on screen. I then read 30 frames a second from every run, about 1,700 per run. On each frame a script finds the cyan target by its colour and measures how far it is from the crosshair at the centre of the screen, left-right and up-down, scaled to the target's size. A frame counts as on target when the crosshair is inside the target's outline. A miss counts when the crosshair is outside for at least 0.1 s. A miss is up-down when the vertical distance is larger, and left-right otherwise. An overshoot is a miss on the opposite side within 0.2 s of the previous one, meaning the crosshair passed through the target. To check it works, time on target matched the scores with a correlation of 0.84. About 4 seconds of each run show no target at all, the same in every run, so those frames were left out. Limits: one session of 12 runs, and the video can't show grip or hand tension.\nWhat happened: I measured the crosshair against the target on every frame. Time on target was 31–38% per run, and it matched the scores closely: the three lowest-scoring runs (453, 455, 472) were the three lowest on target. About 95% of the time off target was left-right misses. Only about 5% came from the up/down kicks, although runs with more kick misses did score lower. Almost half the misses (47%) were overshoots: the crosshair went through the target to the other side right after a correction. Each run had 9–16 long misses of half a second or more, and those decided which runs scored well.\nConditions: The scores show no fatigue. Time on target was the same in the first and last 20 seconds of runs, and the same before and after ZEUS BUILDER.\nNext time: On Zeus, aim to under-correct after a direction change. Land on the near edge of the target instead of swinging through it, and accept being slightly behind rather than past it. The left-right direction changes are where most of the points are, more than the kicks."
   },
   {
+   "date": "2026-10-08",
+   "author": "Claude",
+   "text": "Playlist: Zeus Track, 5 extra ranked runs (10:42–10:51), first runs measured by the new aim recorder\nWhat happened: Time on target rose through the set: 44%, 47%, 48%, 49%, 52%. Overshoots fell: 42% of corrections went past the bot in the first run and 26% in the last. Reaction to direction changes stayed at about 130 ms the whole time. Up-down misses were only 7–16% of the time off target, so most points are still lost left to right.\nHow I measured it: A read-only game mod records your aim and the bot's position 60 times a second during each run. It costs about 0.04 ms per frame, so no FPS loss. A script then works out time on target, how quickly you follow direction changes, and how often a correction goes past the bot.\nNext time: The run with the fewest overshoots was the best one. Keep landing on the near edge of the bot after a direction change rather than swinging through it. Your reactions are already quick, so the room to gain is in the size of the correction, not its speed."
+  },
+  {
    "date": "2026-10-07",
    "author": "Claude",
    "text": "What happened: First session of the plan, RANK INT A, all 24 runs. Medians were well under your baseline: Smooth Thin 375 (baseline 429), Air Track 150% 360 (447), Sphere S 557 (663).\nConditions: Played within 10 minutes of waking, f.lux on, a dimmed screen, no sound, hitmarker on then off for the last 4 runs. Five changes at once, so this session says little about your skill.\nRest: A first look at rest across all 97 runs from Oct 6 and 7. The first attempt on each scenario scores about 3% below its usual, and the first run after a 15+ minute break about 6% below. That's warm-up, not tiredness. Inside a scenario, runs after 20 s to 2 min of rest scored about 2% higher than runs started within 20 s, but that's too little data to trust yet. Time of day shows no pattern. Treat the first run on each scenario as warm-up and don't judge yourself on it.\nNext time: Change one thing at a time. Keep no sound if that's the goal, but play fully awake with normal brightness so the next sessions are comparable."
@@ -779,8 +784,8 @@
   {
    "date": "2026-10-08",
    "runs": 64,
-   "restarts": 55,
-   "rest_median_s": 45,
+   "restarts": 56,
+   "rest_median_s": 46,
    "rest_longest_s": 732,
    "breaks": [
     {
