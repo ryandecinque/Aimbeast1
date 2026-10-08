@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-08 09:01",
- "updated_utc": "2026-10-08T02:01:19Z",
+ "updated": "2026-10-08 09:06",
+ "updated_utc": "2026-10-08T02:06:19Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -778,7 +778,7 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 44,
+   "runs": 45,
    "restarts": 47,
    "rest_median_s": 45,
    "rest_longest_s": 259,
@@ -823,9 +823,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 2,
+     "runs": 3,
      "first": "08:59",
-     "last": "09:00"
+     "last": "09:02"
     }
    ],
    "scenarios": [
@@ -911,11 +911,11 @@
     },
     {
      "name": "CONTROLTRACK",
-     "runs": 2,
+     "runs": 3,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "08:59",
-     "best": 1013,
-     "median": 974
+     "best": 1070,
+     "median": 1013
     }
    ]
   },
@@ -1193,7 +1193,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 165,
+  "runs": 166,
   "days": 3,
   "groups": [
    {
@@ -1203,8 +1203,8 @@
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 50,
-    "pct": 99.9
+    "runs": 51,
+    "pct": 100.0
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -1214,7 +1214,7 @@
    {
     "label": "First run after a break of 15 min+",
     "runs": 10,
-    "pct": 94.9
+    "pct": 93.9
    }
   ]
  }
