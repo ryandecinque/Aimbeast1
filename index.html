@@ -320,7 +320,7 @@ function journal(entries, days) {
   const byDay = {};
   (days || []).forEach(x => byDay[x.date] = byDay[x.date] || []);
   entries.forEach(e => (byDay[e.date] = byDay[e.date] || []).push(e));
-  const body = t => esc(t).replace(/^(What happened|Conditions|Rest|Playlist|Next time):/gm, "<b>$1:</b>");
+  const body = t => esc(t).replace(/^(What happened|How I measured it|Conditions|Rest|Playlist|Next time):/gm, "<b>$1:</b>");
   const isC = e => e.author.toLowerCase() === "claude";
   const dates = Object.keys(byDay).sort();
   const months = [...new Set(dates.map(d => d.slice(0, 7)))];
