@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-08 09:36",
- "updated_utc": "2026-10-08T02:36:19Z",
+ "updated_utc": "2026-10-08T02:36:22Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -752,7 +752,7 @@
   {
    "date": "2026-10-08",
    "author": "Claude",
-   "text": "Playlist: Video check of this morning's 12 Zeus Track runs (from the Twitch VOD)\nWhat happened: I measured the crosshair against the target on every frame. Time on target was 31–38% per run, and it matched the scores closely: the three lowest-scoring runs (453, 455, 472) were the three lowest on target. About 95% of the time off target was left-right misses. Only about 5% came from the up/down kicks, although runs with more kick misses did score lower. Almost half the misses (47%) were overshoots: the crosshair went through the target to the other side right after a correction. Each run had 9–16 long misses of half a second or more, and those decided which runs scored well.\nConditions: The scores show no fatigue. Time on target was the same in the first and last 20 seconds of runs, and the same before and after ZEUS BUILDER.\nNext time: On Zeus, aim to under-correct after a direction change. Land on the near edge of the target instead of swinging through it, and accept being slightly behind rather than past it. The left-right direction changes are where most of the points are, more than the kicks."
+   "text": "Playlist: Video check of this morning's 12 Zeus Track runs (from the Twitch VOD)\nHow I measured it: I downloaded the Zeus part of the stream (06:10–07:00, 1600×900 at 60 fps) and matched each run to the practice log using the clock on screen. I then read 30 frames a second from every run, about 1,700 per run. On each frame a script finds the cyan target by its colour and measures how far it is from the crosshair at the centre of the screen, left-right and up-down, scaled to the target's size. A frame counts as on target when the crosshair is inside the target's outline. A miss counts when the crosshair is outside for at least 0.1 s. A miss is up-down when the vertical distance is larger, and left-right otherwise. An overshoot is a miss on the opposite side within 0.2 s of the previous one, meaning the crosshair passed through the target. To check it works, time on target matched the scores with a correlation of 0.84. About 4 seconds of each run show no target at all, the same in every run, so those frames were left out. Limits: one session of 12 runs, and the video can't show grip or hand tension.\nWhat happened: I measured the crosshair against the target on every frame. Time on target was 31–38% per run, and it matched the scores closely: the three lowest-scoring runs (453, 455, 472) were the three lowest on target. About 95% of the time off target was left-right misses. Only about 5% came from the up/down kicks, although runs with more kick misses did score lower. Almost half the misses (47%) were overshoots: the crosshair went through the target to the other side right after a correction. Each run had 9–16 long misses of half a second or more, and those decided which runs scored well.\nConditions: The scores show no fatigue. Time on target was the same in the first and last 20 seconds of runs, and the same before and after ZEUS BUILDER.\nNext time: On Zeus, aim to under-correct after a direction change. Land on the near edge of the target instead of swinging through it, and accept being slightly behind rather than past it. The left-right direction changes are where most of the points are, more than the kicks."
   },
   {
    "date": "2026-10-07",
@@ -780,7 +780,7 @@
    "date": "2026-10-08",
    "runs": 53,
    "restarts": 50,
-   "rest_median_s": 44,
+   "rest_median_s": 45,
    "rest_longest_s": 732,
    "breaks": [
     {
