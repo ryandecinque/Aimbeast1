@@ -363,7 +363,7 @@ function journal(entries, days, aim, best) {
     if (am && am.length) g.appendChild(el("div", { className: "scroll" },
       `<table class="jlog aimt"><tr><th>Aim</th><th>Runs</th><th title="Share of the run your crosshair was on the target">On target</th><th title="How fast you follow a direction change">Reaction</th><th title="Share of corrections that went past the target">Over&shy;shoot</th></tr>` +
       am.map(x => `<tr><td>${esc(nice(x.scenario))}</td><td>${x.runs}</td><td>${x.on_target ?? "–"}%</td><td>${x.reaction_ms ?? "–"} ms</td><td>${x.overshoot_pct ?? "–"}%</td></tr>`).join("") +
-      `</table><p class="small">On target: how much of the run your crosshair was on the bot. Reaction: how fast you turn after the bot changes direction (compare runs, not other people). Overshoot: how often a correction goes past the bot.</p>`));
+      `</table>` + am.filter(x => x.pps_by_distance && Object.keys(x.pps_by_distance).length > 1).map(x => `<p class="small"><b>${esc(nice(x.scenario))}, points per second by distance:</b> far ${x.pps_by_distance.far ?? "–"} · middle ${x.pps_by_distance.mid ?? "–"} · close ${x.pps_by_distance.close ?? "–"}</p>`).join("") + `<p class="small">On target: how much of the run your crosshair was on the bot. Reaction: how fast you turn after the bot changes direction (compare runs, not other people). Overshoot: how often a correction goes past the bot.</p>`));
     byDay[date].slice().sort((x, y) => isC(x) - isC(y)).forEach(e => {
       g.appendChild(el("div", { className: "jentry" + (isC(e) ? " claude" : "") }, `<div class="jwho">${esc(e.author)}${isC(e) ? " · review" : ""}</div>${body(e.text)}`));
     });
@@ -452,6 +452,15 @@ function aimPanel(m, aim, best) {
       `<p>${esc(x.text)}</p><p class="small">${esc(x.scenario)}, ${esc(x.run)}. Played at half speed.</p></div>`).join("") +
     (rows.length ? `<div><h3 style="margin:0 0 6px;font:700 17px var(--display);text-transform:uppercase">Latest numbers (${esc(nd(last))})</h3><div class="scroll"><table class="jlog aimt"><tr><th>Scenario</th><th>Runs</th><th>On target</th><th>Reaction</th><th>Over&shy;shoot</th></tr>` +
       rows.map(x => `<tr><td>${esc(nice(x.scenario))}</td><td>${x.runs}</td><td>${x.on_target ?? "–"}%</td><td>${x.reaction_ms ?? "–"} ms</td><td>${x.overshoot_pct ?? "–"}%</td></tr>`).join("") + `</table></div></div>` : "") +
+    (() => {
+      const zd = days.map(dt => [dt, (aim[dt] || []).find(x => /noblink$/i.test(x.scenario.trim()) && x.pps_by_distance && x.pps_by_distance.far)]).filter(x => x[1]);
+      if (!zd.length) return "";
+      return `<div><h3 style="margin:0 0 6px;font:700 17px var(--display);text-transform:uppercase">Zeus Track: points per second by distance</h3>` +
+        `<p class="small">Each round the bot starts far away and walks toward me. This shows where I score least.</p>` +
+        `<div class="scroll"><table class="jlog aimt"><tr><th>Day</th><th>Far</th><th>Middle</th><th>Close</th></tr>` +
+        zd.map(([dt, x]) => `<tr><td>${esc(nd(dt))}</td><td>${x.pps_by_distance.far ?? "–"}</td><td>${x.pps_by_distance.mid ?? "–"}</td><td>${x.pps_by_distance.close ?? "–"}</td></tr>`).join("") +
+        `</table></div></div>`;
+    })() +
     `<details><summary>How these are made</summary><p class="small">A read-only mod saves my camera angle, the bot's position, my hits and whether I'm holding fire, 60 times a second, with no effect on frame rate. Left side: what my screen looked like. Right side: a simple model with the same reaction time as me that eases in and matches the bot's speed. It's an illustration of the fix, not a real player. The bars underneath compare the bot's speed with the aim's speed.</p></details>`;
   if (still) list.querySelectorAll(".moment img").forEach(img => img.onclick = () => { img.src = img.dataset.gif; });
   const set = open => { if (open && innerWidth < 1300 && window.closeJournal) window.closeJournal();

@@ -32,10 +32,15 @@ def analyse(path, size=None):
         if a: s.append(dict(t=float(r["t"]), ex=a[0], ey=a[1], d=a[2], hits=int(r["hits"]), m1=r["m1"] == "1"))
     if len(s) < 600: return None
     # skip the countdown: start from the first hit (or 3 s in)
-    first_hit = next((i for i in range(1, len(s)) if s[i]["hits"] > s[i - 1]["hits"]), None)
+    resets = [i for i in range(1, len(s)) if s[i]["hits"] < s[i - 1]["hits"]]      # run starts when the game zeroes the counter
+    first_hit = resets[-1] if resets else next((i for i in range(1, len(s)) if s[i]["hits"] > s[i - 1]["hits"]), None)
     s = s[first_hit if first_hit is not None else 180:]
     if len(s) < 600: return None
     # target size from the data itself: aim error at the moments a hit landed (90th percentile)
+    for x in s:                                      # error converted to distance at the bot: same bot size near or far
+        x["ex0"] = x["ex"]
+        x["ex"] = math.degrees(math.atan(math.tan(math.radians(x["ex"])) * x["d"] / 1000))
+        x["ey"] = math.degrees(math.atan(math.tan(math.radians(x["ey"])) * x["d"] / 1000))
     hx = sorted(abs(s[i]["ex"]) for i in range(1, len(s)) if s[i]["hits"] > s[i - 1]["hits"])
     hy = sorted(abs(s[i]["ey"]) for i in range(1, len(s)) if s[i]["hits"] > s[i - 1]["hits"])
     if len(hx) < 20: return None
@@ -72,7 +77,7 @@ def analyse(path, size=None):
             d = (y - prev + 180) % 360 - 180; acc += d
         else: acc = y
         prev = y; absyaw.append(acc)
-    boty = [absyaw[i] + s[i]["ex"] for i in range(len(s))]
+    boty = [absyaw[i] + s[i]["ex0"] for i in range(len(s))]   # true angles, not the distance-scaled error
     def vel(a, i, w=3): return (a[min(i + w, len(a) - 1)] - a[max(i - w, 0)]) / ((min(i + w, len(a) - 1) - max(i - w, 0)) * dt_)
     bv = [vel(boty, i) for i in range(len(s))]; av = [vel(absyaw, i) for i in range(len(s))]
     reacts = []
@@ -86,6 +91,14 @@ def analyse(path, size=None):
             if j < min(len(s), i + int(0.6 / dt_)): reacts.append((j - i) * dt_ * 1000)
             i += int(0.15 / dt_)
         else: i += 1
+    # split by how far away the bot is (Zeus rounds start far and end close): share of time, on target, points per second
+    bands = {}
+    for name, lo, hi in (("far", 1500, 1e9), ("mid", 800, 1500), ("close", 0, 800)):
+        idx = [i for i in range(1, len(s)) if lo <= s[i]["d"] < hi]
+        if len(idx) < 60: continue
+        pts = sum(max(0, s[i]["hits"] - s[i - 1]["hits"]) for i in idx)
+        bands[name] = dict(seconds=round(len(idx) * dt_, 1), on_target=round(100 * sum(on[i] for i in idx) / len(idx), 1),
+                           points_per_sec=round(pts / (len(idx) * dt_), 1))
     n = len(s); third = n // 3
     pct = lambda a: round(100 * sum(a) / max(len(a), 1), 1)
     offt = sum(e["dur"] for e in real) or 1
@@ -96,7 +109,7 @@ def analyse(path, size=None):
         long_losses=sum(e["dur"] >= LOSS for e in real),
         updown_pct=round(100 * sum(e["dur"] for e in real if e["axis"] == "ud") / offt),
         m1_held=pct([x["m1"] for x in s]), hits=s[-1]["hits"] - s[0]["hits"], seconds=round(s[-1]["t"] - s[0]["t"], 1),
-        target_deg=[round(wx, 2), round(wy, 2)])
+        target_deg=[round(wx, 2), round(wy, 2)], by_distance=bands)
 
 def run_name(path):
     b = os.path.basename(path).replace(".csv.gz", "").replace(".csv", "")
@@ -115,7 +128,11 @@ def by_day():
         rows = []
         for name, vs in sorted(sc.items()):
             med = lambda k: (round(st.median([x[k] for x in vs if x.get(k) is not None])) if any(x.get(k) is not None for x in vs) else None)
-            rows.append(dict(scenario=name, runs=len(vs), on_target=med("on_target"), reaction_ms=med("reaction_ms"), overshoot_pct=med("overshoot_pct")))
+            bands = {}
+            for b in ("far", "mid", "close"):
+                xs = [x["by_distance"][b]["points_per_sec"] for x in vs if b in (x.get("by_distance") or {})]
+                if xs: bands[b] = round(st.median(xs), 1)
+            rows.append(dict(scenario=name, runs=len(vs), on_target=med("on_target"), reaction_ms=med("reaction_ms"), overshoot_pct=med("overshoot_pct"), pps_by_distance=bands))
         out[d] = rows
     return out
 
