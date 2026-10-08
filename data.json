@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-08 13:33",
- "updated_utc": "2026-10-08T06:33:22Z",
+ "updated": "2026-10-08 14:08",
+ "updated_utc": "2026-10-08T07:08:39Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -757,7 +757,7 @@
   {
    "date": "2026-10-08",
    "author": "Claude",
-   "text": "Playlist: Zeus Track, 5 extra ranked runs (10:42–10:51), first runs measured by the new aim recorder\nWhat happened: Scores 469, 537, 476, 514, 514. Time on target was 44%, 52%, 49%, 48%, 45%, and the 537 run was the best on target with the fewest overshoots (29% of corrections went past the bot, against 42% in the first run). (Corrected: an earlier version said time on target rose every run. That came from measuring the target's size separately for each run, now fixed.) Reaction to direction changes stayed at about 130 ms the whole time. Up-down misses were only 7–16% of the time off target, so most points are still lost left to right.\nHow I measured it: A read-only game mod records your aim and the bot's position 60 times a second during each run. It costs about 0.04 ms per frame, so no FPS loss. A script then works out time on target, how quickly you follow direction changes, and how often a correction goes past the bot.\nNext time: The run with the fewest overshoots was the best one. Keep landing on the near edge of the bot after a direction change rather than swinging through it. Your reactions are already quick, so the room to gain is in the size of the correction, not its speed."
+   "text": "Playlist: Zeus Track, 5 extra ranked runs (10:42–10:51), first runs measured by the new aim recorder\nWhat happened: Scores 469, 537, 476, 514, 514. Time on target was 31%, 39%, 34%, 38%, 34%, so the 537 run was the best on target. About 4 in 10 corrections went past the bot in every run (31–40%). By distance, I score least when the bot is far away at the start of each round (7.2 points a second), most in the middle (9.3) and a bit less up close (8.6). Reaction to direction changes stayed at about 130 ms. (Corrected: earlier numbers here measured the bot's size in degrees, which made it look easier to stay on when it was far away. Now its real size at its real distance is used, and time on target matches the scores more closely.)\nHow I measured it: A read-only game mod records your aim and the bot's position 60 times a second during each run. It costs about 0.04 ms per frame, so no FPS loss. A script then works out time on target, how quickly you follow direction changes, and how often a correction goes past the bot.\nNext time: Keep landing on the near edge of the bot after a direction change rather than swinging through it, and pay extra attention at the start of each round when the bot is far away and small. Your reactions are already quick, so the gains are in the size of the correction, not its speed."
   },
   {
    "date": "2026-10-07",
@@ -1278,16 +1278,26 @@
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
     "runs": 5,
-    "on_target": 47,
+    "on_target": 34,
     "reaction_ms": 133,
-    "overshoot_pct": 32
+    "overshoot_pct": 38,
+    "pps_by_distance": {
+     "far": 7.2,
+     "mid": 9.3,
+     "close": 8.6
+    }
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK EZ",
     "runs": 1,
-    "on_target": 49,
+    "on_target": 37,
     "reaction_ms": 133,
-    "overshoot_pct": 33
+    "overshoot_pct": 42,
+    "pps_by_distance": {
+     "far": 7.6,
+     "mid": 10.2,
+     "close": 8.9
+    }
    }
   ]
  },
@@ -1331,9 +1341,9 @@
     "score": 537,
     "time": "10:44",
     "gif": "best-zeus-2026-10-08",
-    "on_target": 52,
+    "on_target": 39,
     "reaction_ms": 133,
-    "overshoot_pct": 29,
+    "overshoot_pct": 40,
     "best_14d": 553,
     "master3": 726,
     "note": "Best of 5 recorded runs today (469, 537, 476, 514, 514). The clip is its 8 seconds with the most hits."
