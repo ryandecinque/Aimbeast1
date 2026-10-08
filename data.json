@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-08 09:06",
- "updated_utc": "2026-10-08T02:06:19Z",
+ "updated": "2026-10-08 09:16",
+ "updated_utc": "2026-10-08T02:16:19Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -778,10 +778,10 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 45,
+   "runs": 46,
    "restarts": 47,
-   "rest_median_s": 45,
-   "rest_longest_s": 259,
+   "rest_median_s": 46,
+   "rest_longest_s": 732,
    "breaks": [
     {
      "after": "RANK INT B",
@@ -823,9 +823,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 3,
+     "runs": 4,
      "first": "08:59",
-     "last": "09:02"
+     "last": "09:15"
     }
    ],
    "scenarios": [
@@ -916,6 +916,14 @@
      "first": "08:59",
      "best": 1070,
      "median": 1013
+    },
+    {
+     "name": "GAME BALL",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:15",
+     "best": 668,
+     "median": 668
     }
    ]
   },
@@ -1193,13 +1201,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 166,
+  "runs": 167,
   "days": 3,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 39,
-    "pct": 96.2
+    "runs": 40,
+    "pct": 96.5
    },
    {
     "label": "Later attempts, rest under 20 s",
