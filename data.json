@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-08 09:26",
- "updated_utc": "2026-10-08T02:26:19Z",
+ "updated": "2026-10-08 09:31",
+ "updated_utc": "2026-10-08T02:31:19Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -778,9 +778,9 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 47,
-   "restarts": 47,
-   "rest_median_s": 46,
+   "runs": 50,
+   "restarts": 49,
+   "rest_median_s": 45,
    "rest_longest_s": 732,
    "breaks": [
     {
@@ -823,9 +823,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 5,
+     "runs": 8,
      "first": "08:59",
-     "last": "09:25"
+     "last": "09:29"
     }
    ],
    "scenarios": [
@@ -919,11 +919,19 @@
     },
     {
      "name": "GAME BALL",
-     "runs": 2,
+     "runs": 3,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "09:15",
-     "best": 668,
-     "median": 664
+     "best": 744,
+     "median": 668
+    },
+    {
+     "name": "SMOOTH ACCEL BOT",
+     "runs": 2,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:28",
+     "best": 357,
+     "median": 335
     }
    ]
   },
@@ -1201,17 +1209,17 @@
   }
  ],
  "rest_effect": {
-  "runs": 168,
+  "runs": 171,
   "days": 3,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 40,
-    "pct": 96.5
+    "runs": 41,
+    "pct": 96.2
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 51,
+    "runs": 53,
     "pct": 100.0
    },
    {
