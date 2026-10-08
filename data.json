@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-08 22:56",
- "updated_utc": "2026-10-08T15:56:19Z",
+ "updated": "2026-10-08 23:01",
+ "updated_utc": "2026-10-08T16:01:19Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -783,7 +783,7 @@
  "days": [
   {
    "date": "2026-10-08",
-   "runs": 70,
+   "runs": 71,
    "restarts": 58,
    "rest_median_s": 44,
    "rest_longest_s": 732,
@@ -858,9 +858,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 22,
+     "runs": 23,
      "first": "06:55",
-     "last": "22:55"
+     "last": "22:56"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
@@ -1029,6 +1029,14 @@
      "first": "22:30",
      "best": 740,
      "median": 370
+    },
+    {
+     "name": "VOX TS BALANCED - 150%",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "22:56",
+     "best": 347,
+     "median": 347
     }
    ]
   },
@@ -1306,13 +1314,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 191,
+  "runs": 192,
   "days": 3,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 50,
-    "pct": 97.1
+    "runs": 51,
+    "pct": 97.3
    },
    {
     "label": "Later attempts, rest under 20 s",
