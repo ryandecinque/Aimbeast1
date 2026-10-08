@@ -195,9 +195,9 @@ summary { min-height: 44px; align-items: center; }
       </table>
     </div>
     <ul class="sub">
-      <li><span class="rt">RANK INT A</span>: Smooth Thin Track V2, Air Track Smooth V3 150%, Air Control Sphere - S. 8 runs each.</li>
-      <li><span class="rt">RANK INT B</span>: Pasu Track Evo (RCT) - 0.85X, Pasu Track XYZ, Zeus Track Evo - Noblink. 8 runs each.</li>
-      <li><span class="rt">ZEUS BUILDER</span>: 7 drills, 2 runs each, that train the parts of Zeus Track: its fast direction changes and its sudden up/down jumps.</li>
+      <li><span class="rt">RANK INT A</span>: Smooth Thin Track V2, Air Track Smooth V3 150%, Air Control Sphere - S. 8 runs each, after a 2-run warm-up on the easier Air Control Sphere.</li>
+      <li><span class="rt">RANK INT B</span>: Pasu Track Evo (RCT) - 0.85X, Pasu Track XYZ, Zeus Track Evo - Noblink. 8 runs each, after a 2-run warm-up on the slower Pasu Track Evo (RCT) - 0.6X.</li>
+      <li><span class="rt">ZEUS BUILDER</span>: 7 drills, 2 runs each, that train the parts of Zeus Track: its fast direction changes and its sudden up/down jumps. It starts with a 2-run warm-up on the easier Zeus Track Evo - Noblink (EZ).</li>
       <li>A 2–3 minute break away from the screen at every scenario switch.</li>
     </ul>
   </section>
@@ -205,6 +205,7 @@ summary { min-height: 44px; align-items: center; }
   <section>
     <h2>Why this plan</h2>
     <ul class="sub">
+      <li><b>Warm up first.</b> In the practice log, the first run on each scenario scores about 3% below usual, and about 6% after a long break. Two easy runs at the start of each playlist take that cold-hands cost before the counted runs.</li>
       <li><b>Spread out, not crammed.</b> Each scenario gets 8 runs every other day, so there's a full day of rest between practising the same thing.</li>
       <li><b>The slowest scenario decides the finish.</b> All six need to reach Master 3, so extra time goes to the ones furthest away.</li>
       <li><b>Zeus Track gets its own practice.</b> It sat at the same weekly median for five weeks despite hundreds of runs, so its parts are trained separately. It's a trial: if Zeus hasn't moved by Oct 25, that time goes back to the Advanced playlist.</li>
@@ -402,7 +403,7 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   const ago = isNaN(mins) ? d.updated + " (Cambodia time)" : mins < 1 ? "just now" : mins < 60 ? mins + " min ago" : mins < 1440 ? Math.round(mins / 60) + " h ago" : Math.round(mins / 1440) + " days ago";
   document.getElementById("updated").textContent = "Updated " + ago + (mins > 1440 ? " · may be out of date" : "");
   const prog = Object.entries(d.today.progress || {});
-  document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 14 : 24)} of ${k === "ZEUS BUILDER" ? 14 : 24} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
+  document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 16 : 26)} of ${k === "ZEUS BUILDER" ? 16 : 26} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
   TODAY = d.today.date;
   journal(d.journal || [], d.days);
   insights(d);
