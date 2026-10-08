@@ -1,0 +1,16 @@
+{
+ "2026-10-08": [
+  {
+   "scenario": "Zeus Track Evo - Noblink",
+   "score": 537,
+   "time": "10:44",
+   "gif": "best-zeus-2026-10-08",
+   "on_target": 52,
+   "reaction_ms": 133,
+   "overshoot_pct": 29,
+   "best_14d": 553,
+   "master3": 726,
+   "note": "Best of 5 recorded runs today (469, 537, 476, 514, 514). The clip is its 8 seconds with the most hits."
+  }
+ ]
+}

@@ -24,7 +24,7 @@ def angles(r):
         if best is None or ex * ex + ey * ey < best[0] ** 2 + best[1] ** 2: best = (ex, ey, d)
     return best
 
-def analyse(path):
+def analyse(path, size=None):
     rows = list(csv.DictReader((gzip.open(path, "rt", encoding="utf-8") if path.endswith(".gz") else open(path, encoding="utf-8"))))
     s = []
     for r in rows:
@@ -39,7 +39,7 @@ def analyse(path):
     hx = sorted(abs(s[i]["ex"]) for i in range(1, len(s)) if s[i]["hits"] > s[i - 1]["hits"])
     hy = sorted(abs(s[i]["ey"]) for i in range(1, len(s)) if s[i]["hits"] > s[i - 1]["hits"])
     if len(hx) < 20: return None
-    wx, wy = hx[int(.9 * len(hx))], hy[int(.9 * len(hy))]
+    wx, wy = size if size else (hx[int(.9 * len(hx))], hy[int(.9 * len(hy))])
     on = [abs(x["ex"]) <= wx and abs(x["ey"]) <= wy for x in s]
     dt_ = (s[-1]["t"] - s[0]["t"]) / (len(s) - 1)
     # off-target stretches
@@ -125,13 +125,27 @@ def main():
         if time.time() - os.path.getmtime(p) > 7 * 86400:
             with open(p, "rb") as a, gzip.open(p + ".gz", "wb") as b: b.write(a.read())
             os.remove(p)
-    for p in sorted(glob.glob(RUNS + "/*.csv") + glob.glob(RUNS + "/*.csv.gz")):
+    files = sorted(glob.glob(RUNS + "/*.csv") + glob.glob(RUNS + "/*.csv.gz"))
+    todo = [p for p in files if os.path.basename(p).replace(".gz", "") not in cache]
+    for p in todo:                                   # pass 1: each run's own target-size estimate
         k = os.path.basename(p).replace(".gz", "")
-        if k in cache: continue
         try: res = analyse(p)
         except Exception as e: res = {"error": str(e)}
         d, t, scen = run_name(p)
         cache[k] = dict(date=d, time=t, scenario=scen, **(res or {"skipped": "too short"}))
+    # pass 2: one target size per scenario (median of all its runs), so runs are measured the same way
+    sizes = {}
+    for v in cache.values():
+        if "target_deg" in v: sizes.setdefault(v["scenario"], []).append(v["target_deg"])
+    pooled = {sc: (st.median(a for a, b in L), st.median(b for a, b in L)) for sc, L in sizes.items()}
+    for p in files:
+        k = os.path.basename(p).replace(".gz", ""); v = cache.get(k, {})
+        sc = v.get("scenario")
+        if sc in pooled and v.get("pooled") != [round(x, 2) for x in pooled[sc]]:
+            try:
+                res = analyse(p, pooled[sc])
+                if res: cache[k] = dict(date=v["date"], time=v["time"], scenario=sc, pooled=[round(x, 2) for x in pooled[sc]], **res)
+            except Exception: pass
     json.dump(cache, open(OUT, "w", encoding="utf-8"), indent=1)
     if "--print" in sys.argv:
         n = int(sys.argv[sys.argv.index("--print") + 1])

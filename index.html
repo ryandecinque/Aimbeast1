@@ -334,7 +334,7 @@ function insights(d) {
   out.forEach(([k, big, sub]) => I.appendChild(el("div", { className: "tile" }, `<span class="small">${esc(k)}</span><span class="big">${esc(big)}</span><span class="sub" style="font-size:14px">${esc(sub)}</span>`)));
 }
 
-function journal(entries, days, aim) {
+function journal(entries, days, aim, best) {
   const tab = document.getElementById("jtab"), panel = document.getElementById("jpanel"), list = document.getElementById("jlist");
   document.getElementById("jcount").textContent = `${(days || []).length} days · ${entries.length} ${entries.length === 1 ? "note" : "notes"}`;
   if (!entries.length && !(days || []).length) list.appendChild(el("p", { className: "sub" }, "Nothing logged yet."));
@@ -358,6 +358,7 @@ function journal(entries, days, aim) {
       `<div class="jnav"><button class="jbtn" data-cal>‹ Calendar</button><span><button class="jbtn" data-go="${prev || ""}" ${prev ? "" : "disabled"} aria-label="Previous practice day">‹</button><button class="jbtn" data-go="${next || ""}" ${next ? "" : "disabled"} aria-label="Next practice day">›</button></span></div>` +
       `<div class="jdayhead"><span class="jdate">${esc(nd(date))}</span>${st ? `<span class="small">${st.runs} runs · median rest ${fmtS(st.rest_median_s)} · ${st.restarts} restarts · ${st.breaks.length} breaks</span>` : ""}</div>` +
       (rows ? `<div class="scroll"><table class="jlog"><tr><th>Scenario</th><th>Runs</th><th>Best</th><th>Median</th></tr>${rows}</table></div>` : ""));
+    ((best || {})[date] || []).forEach(x => g.appendChild(el("div", {}, bestCard(x, date))));
     const am = (aim || {})[date];
     if (am && am.length) g.appendChild(el("div", { className: "scroll" },
       `<table class="jlog aimt"><tr><th>Aim</th><th>Runs</th><th title="Share of the run your crosshair was on the target">On target</th><th title="How fast you follow a direction change">Reaction</th><th title="Share of corrections that went past the target">Over&shy;shoot</th></tr>` +
@@ -413,7 +414,8 @@ function journal(entries, days, aim) {
   if (dates.length) show("cal", null, true);
   const openDay = () => { const d = location.hash.slice(5); if (byDay[d]) { month = d.slice(0, 7); show("day", d); set(true); } };
   addEventListener("hashchange", () => { if (location.hash.startsWith("#day-")) openDay(); });
-  const set = open => { if (open && innerWidth < 1300 && window.closeAim) window.closeAim();   // side by side on wide screens; one at a time where each covers the screen panel.classList.toggle("open", open); document.body.classList.toggle("jopen", open); tab.setAttribute("aria-expanded", open);
+  // side by side on wide screens; one at a time where a panel covers most of the screen
+  const set = open => { if (open && innerWidth < 1300 && window.closeAim) window.closeAim(); panel.classList.toggle("open", open); document.body.classList.toggle("jopen", open); tab.setAttribute("aria-expanded", open);
     try { localStorage.setItem("journalOpen", open ? "1" : ""); } catch (_) {}
     if (open) panel.focus(); else tab.focus(); };
   tab.onclick = () => set(true); document.getElementById("jclose").onclick = () => set(false);
@@ -425,13 +427,25 @@ function journal(entries, days, aim) {
   if (was && innerWidth >= 1100) { panel.classList.add("open"); document.body.classList.add("jopen"); tab.setAttribute("aria-expanded", true); }
 }
 
-function aimPanel(m, aim) {
+function bestCard(x, date) {
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  return `<div class="moment"><h3>Best recorded run: ${esc(nice(x.scenario))} ${x.score}</h3>` +
+    `<img src="assets/aim/${esc(x.gif)}.${still ? "png" : "gif"}" data-gif="assets/aim/${esc(x.gif)}.gif" loading="lazy" width="640" height="360" alt="The 8 best seconds of my ${esc(nice(x.scenario))} run that scored ${x.score}">` +
+    `<p class="score">Score <b>${x.score}</b>${x.best_14d ? ` · 14-day best ${x.best_14d}` : ""}${x.master3 ? ` · Master 3 is ${x.master3}` : ""}</p>` +
+    `<p class="score">On target ${x.on_target}% · reaction ${x.reaction_ms} ms · overshoot ${x.overshoot_pct}%</p>` +
+    `<p class="small">${esc(nd(date))}, ${esc(x.time)}. ${esc(x.note || "")}</p></div>`;
+}
+
+function aimPanel(m, aim, best) {
   const tab = document.getElementById("atab"), panel = document.getElementById("apanel"), list = document.getElementById("alist");
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const days = Object.keys(aim || {}).sort(), last = days[days.length - 1], rows = last ? aim[last] : [];
+  const top = {};
+  Object.entries(best || {}).forEach(([dt, xs]) => xs.forEach(x => { if (!top[x.scenario] || x.score > top[x.scenario].x.score) top[x.scenario] = { x, dt }; }));
   list.innerHTML =
     `<p>A small game mod records where my crosshair and the bot are, 60 times a second. These are moments where I lose points, rebuilt from that data, next to a smooth version of the same moment.</p>` +
     (m && m.focus ? `<div class="focus"><span class="small">Working on this week</span><br>${esc(m.focus)}</div>` : "") +
+    (Object.keys(top).length ? `<h3 style="margin:4px 0 0;font:700 15px var(--display);text-transform:uppercase;color:var(--ink-3)">Best recorded runs so far</h3>` + Object.values(top).map(o => bestCard(o.x, o.dt)).join("") + `<h3 style="margin:8px 0 0;font:700 15px var(--display);text-transform:uppercase;color:var(--ink-3)">Weak moments</h3>` : "") +
     ((m && m.moments) || []).map(x => `<div class="moment"><h3>${esc(x.title)}</h3>` +
       `<img src="assets/aim/${esc(x.file)}.${still ? "png" : "gif"}" data-gif="assets/aim/${esc(x.file)}.gif" loading="lazy" width="860" height="400" alt="${esc(x.title)}: my aim on the left, a smooth version on the right">` +
       `<p class="score">On target in this clip: <b>me ${x.you}%</b> · smooth version ${x.smooth}%</p>` +
@@ -457,8 +471,8 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   const prog = Object.entries(d.today.progress || {});
   document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 16 : 26)} of ${k === "ZEUS BUILDER" ? 16 : 26} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
   TODAY = d.today.date;
-  journal(d.journal || [], d.days, d.aim || {});
-  aimPanel(d.aim_moments, d.aim || {});
+  journal(d.journal || [], d.days, d.aim || {}, d.best_runs || {});
+  aimPanel(d.aim_moments, d.aim || {}, d.best_runs || {});
   insights(d);
   {
     const done = d.ranks.filter(r => r.master3 && r.official_best >= r.master3).length;
