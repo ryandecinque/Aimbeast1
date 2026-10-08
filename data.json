@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-08 07:37",
- "updated_utc": "2026-10-08T00:37:28Z",
+ "updated": "2026-10-08 07:39",
+ "updated_utc": "2026-10-08T00:39:24Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -737,12 +737,12 @@
   {
    "date": "2026-10-08",
    "author": "Ryan",
-   "text": "Played within 10 minutes of waking up, similar to yesterday."
+   "text": "Played within 10 minutes of waking up, similar to yesterday. No f.lux and no dim screen this time. Sound off and hitmarker off, and I'm keeping both off from now on."
   },
   {
    "date": "2026-10-08",
    "author": "Claude",
-   "text": "Playlist: RANK INT B (24 runs, 05:31–06:25)\nWhat happened: Zeus Track median 503 (best 519), above its five-week level of about 490. PASU XYZ 471 (best 524), level with its baseline of 472. PASU 0.85x 302 (best 354), under its baseline of 340.\nConditions: Played within 10 minutes of waking, like yesterday morning. Unlike yesterday, scores were close to normal: Zeus above its usual level, XYZ on its baseline. Only PASU 0.85x, the first scenario, was low, and it climbed from 265 to 354, a cold start rather than a slump (its last three days were 346, 328 and 350). So waking up alone doesn't explain yesterday's bad morning. The likelier causes are yesterday's other changes (f.lux, dim screen, hitmarker switched mid-session) or its very short rests: a 16 s median, against 46 s today.\nNext time: Try a couple of minutes on an easy scenario before ranked PASU so the first counted runs aren't cold, and note it in your journal if you do. One good Zeus day isn't a trend yet, so the Sunday check-in will look at the weekly median."
+   "text": "Playlist: RANK INT B (24 runs, 05:31–06:25)\nWhat happened: Zeus Track median 503 (best 519), above its five-week level of about 490. PASU XYZ 471 (best 524), level with its baseline of 472. PASU 0.85x 302 (best 354), under its baseline of 340.\nConditions: Played within 10 minutes of waking, like yesterday morning. Unlike yesterday, scores were close to normal: Zeus above its usual level, XYZ on its baseline. Only PASU 0.85x, the first scenario, was low, and it climbed from 265 to 354, a cold start rather than a slump (its last three days were 346, 328 and 350). So waking up alone doesn't explain yesterday's bad morning. Today had no f.lux and no dim screen, so the dip came from those, from yesterday's hitmarker switch, or from its very short rests (a 16 s median, against 46 s today). Sound and hitmarker are now fixed off, so from here on only rest, sleep and screen can vary.\nNext time: Try a couple of minutes on an easy scenario before ranked PASU so the first counted runs aren't cold, and note it in your journal if you do. One good Zeus day isn't a trend yet, so the Sunday check-in will look at the weekly median."
   },
   {
    "date": "2026-10-08",
