@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-08 20:26",
- "updated_utc": "2026-10-08T13:26:19Z",
+ "updated": "2026-10-08 20:28",
+ "updated_utc": "2026-10-08T13:28:58Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -1299,40 +1299,6 @@
  },
  "aim": {
   "2026-10-08": [
-   {
-    "scenario": "SUMO AIR TS 180 V2 - RANKED",
-    "runs": 1,
-    "on_target": 78,
-    "reaction_ms": 217,
-    "overshoot_pct": 0,
-    "pps_by_distance": {
-     "far": 4.4,
-     "mid": 4.0,
-     "close": 3.8
-    }
-   },
-   {
-    "scenario": "TRM TS VARIED 5H - RANKED",
-    "runs": 1,
-    "on_target": 81,
-    "reaction_ms": 209,
-    "overshoot_pct": 0,
-    "pps_by_distance": {
-     "far": 3.9,
-     "mid": 3.3
-    }
-   },
-   {
-    "scenario": "VOX TS BALANCED 125 - RANKED",
-    "runs": 1,
-    "on_target": 81,
-    "reaction_ms": 217,
-    "overshoot_pct": 0,
-    "pps_by_distance": {
-     "far": 4.5,
-     "mid": 4.5
-    }
-   },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
     "runs": 5,
