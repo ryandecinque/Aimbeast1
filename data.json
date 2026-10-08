@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-08 07:01",
- "updated_utc": "2026-10-08T00:01:20Z",
+ "updated": "2026-10-08 07:26",
+ "updated_utc": "2026-10-08T00:26:17Z",
  "today": {
   "date": "2026-10-08",
   "progress": {
@@ -734,6 +734,16 @@
   }
  ],
  "journal": [
+  {
+   "date": "2026-10-08",
+   "author": "Claude",
+   "text": "Playlist: RANK INT B (24 runs, 05:31–06:25)\nWhat happened: Zeus Track median 503 (best 519), above its five-week level of about 490. PASU XYZ 471 (best 524), level with its baseline of 472. PASU 0.85x 302 (best 354), under its baseline of 340.\nConditions: Early start again, with no note on sleep or settings. Rests were longer, a median of 46 s, so that habit stuck. PASU 0.85x was the first scenario of the day and climbed from 265 to 354: a cold start, not a slump. Its last three days were 346, 328 and 350.\nNext time: Try a couple of minutes on an easy scenario before ranked PASU so the first counted runs aren't cold, and note it in your journal if you do. One good Zeus day isn't a trend yet, so the Sunday check-in will look at the weekly median."
+  },
+  {
+   "date": "2026-10-08",
+   "author": "Claude",
+   "text": "Playlist: ZEUS BUILDER, second play (14 runs, 06:26–06:53), plus 4 extra Zeus Track runs\nWhat happened: Every repeat drill went up on yesterday: Ground Plaza 355 (best 387, above its old best of 369), 'STT' Short 0.5x 240 (184), Slow Accel 294 (263), Kytan 484 (478), Smooth Thin S 164 (142), Thin Fast 1458 (best 1565). First plays of the new Pennytracking drill: 500, then 575. The extra Zeus runs held at a median of 502, the same as before the builder.\nConditions: Played straight after RANK INT B, so it was a 90-minute, 42-run morning with short breaks. No sign of fatigue: almost every drill's second run was equal or better.\nNext time: Most of today's gains are from learning the new drills, so they aren't skill changes yet. Zeus Track itself didn't move straight after the builder, which is normal; any carry-over will show over days. Write a one-line note on sleep, screen and sound before you play."
+  },
   {
    "date": "2026-10-07",
    "author": "Claude",
