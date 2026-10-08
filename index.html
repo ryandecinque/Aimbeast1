@@ -113,6 +113,9 @@ summary { min-height: 44px; align-items: center; }
 .jlog td:first-child { overflow-wrap: anywhere; }
 .jlist { overflow-x: hidden; }
 .jlog td:not(:first-child), .jlog th:not(:first-child) { text-align: right; width: 56px; }
+.aimt { font-size: 13px; }
+.aimt td:not(:first-child), .aimt th:not(:first-child) { width: 62px; padding-left: 2px; padding-right: 2px; }
+.aimt th { font-size: 11px; }
 /* journal calendar */
 .jcal { padding-top: 6px; display: flex; flex-direction: column; gap: 12px; }
 .jnav { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
@@ -222,7 +225,7 @@ summary { min-height: 44px; align-items: center; }
   <div class="jlist" id="jlist"></div>
 </aside>
 <script>
-const nice = n => String(n).toLowerCase().replace(/(^|[\s(\-])([a-z])/g, (m, a, c) => a + c.toUpperCase()).replace(/\b(rct|xyz|stt|fs|ufo)\b/gi, w => w.toUpperCase()).replace(/\b(V\d|0\.85x)\b/gi, w => w.toUpperCase()).replace(/ - S$/, " - S");
+const nice = n => String(n).toLowerCase().replace(/(^|[\s(\-])([a-z])/g, (m, a, c) => a + c.toUpperCase()).replace(/\b(rct|xyz|stt|fs|ufo|ez)\b/gi, w => w.toUpperCase()).replace(/\b(V\d|0\.85x)\b/gi, w => w.toUpperCase()).replace(/ - S$/, " - S");
 const WD = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], MO = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const nd = iso => { const [y, m, d] = iso.split("-").map(Number); const t = new Date(y, m - 1, d); return `${WD[t.getDay()]} ${d} ${MO[m - 1]}`; };
 const plain = r => r.replace(/^RANK INT ([AB])$/, "playlist $1").replace(/^RANK ADV ([AB])$/, "advanced playlist $1").replace(/^ZEUS BUILDER$/, "Zeus Builder");
@@ -313,7 +316,7 @@ function insights(d) {
   out.forEach(([k, big, sub]) => I.appendChild(el("div", { className: "tile" }, `<span class="small">${esc(k)}</span><span class="big">${esc(big)}</span><span class="sub" style="font-size:14px">${esc(sub)}</span>`)));
 }
 
-function journal(entries, days) {
+function journal(entries, days, aim) {
   const tab = document.getElementById("jtab"), panel = document.getElementById("jpanel"), list = document.getElementById("jlist");
   document.getElementById("jcount").textContent = `${(days || []).length} days · ${entries.length} ${entries.length === 1 ? "note" : "notes"}`;
   if (!entries.length && !(days || []).length) list.appendChild(el("p", { className: "sub" }, "Nothing logged yet."));
@@ -337,6 +340,11 @@ function journal(entries, days) {
       `<div class="jnav"><button class="jbtn" data-cal>‹ Calendar</button><span><button class="jbtn" data-go="${prev || ""}" ${prev ? "" : "disabled"} aria-label="Previous practice day">‹</button><button class="jbtn" data-go="${next || ""}" ${next ? "" : "disabled"} aria-label="Next practice day">›</button></span></div>` +
       `<div class="jdayhead"><span class="jdate">${esc(nd(date))}</span>${st ? `<span class="small">${st.runs} runs · median rest ${fmtS(st.rest_median_s)} · ${st.restarts} restarts · ${st.breaks.length} breaks</span>` : ""}</div>` +
       (rows ? `<div class="scroll"><table class="jlog"><tr><th>Scenario</th><th>Runs</th><th>Best</th><th>Median</th></tr>${rows}</table></div>` : ""));
+    const am = (aim || {})[date];
+    if (am && am.length) g.appendChild(el("div", { className: "scroll" },
+      `<table class="jlog aimt"><tr><th>Aim</th><th>Runs</th><th title="Share of the run your crosshair was on the target">On target</th><th title="How fast you follow a direction change">Reaction</th><th title="Share of corrections that went past the target">Over&shy;shoot</th></tr>` +
+      am.map(x => `<tr><td>${esc(nice(x.scenario))}</td><td>${x.runs}</td><td>${x.on_target ?? "–"}%</td><td>${x.reaction_ms ?? "–"} ms</td><td>${x.overshoot_pct ?? "–"}%</td></tr>`).join("") +
+      `</table><p class="small">On target: how much of the run your crosshair was on the bot. Reaction: how fast you turn after the bot changes direction (compare runs, not other people). Overshoot: how often a correction goes past the bot.</p>`));
     byDay[date].slice().sort((x, y) => isC(x) - isC(y)).forEach(e => {
       g.appendChild(el("div", { className: "jentry" + (isC(e) ? " claude" : "") }, `<div class="jwho">${esc(e.author)}${isC(e) ? " · review" : ""}</div>${body(e.text)}`));
     });
@@ -405,7 +413,7 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   const prog = Object.entries(d.today.progress || {});
   document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 16 : 26)} of ${k === "ZEUS BUILDER" ? 16 : 26} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
   TODAY = d.today.date;
-  journal(d.journal || [], d.days);
+  journal(d.journal || [], d.days, d.aim || {});
   insights(d);
   {
     const done = d.ranks.filter(r => r.master3 && r.official_best >= r.master3).length;
