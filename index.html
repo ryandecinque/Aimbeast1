@@ -413,7 +413,7 @@ function journal(entries, days, aim) {
   if (dates.length) show("cal", null, true);
   const openDay = () => { const d = location.hash.slice(5); if (byDay[d]) { month = d.slice(0, 7); show("day", d); set(true); } };
   addEventListener("hashchange", () => { if (location.hash.startsWith("#day-")) openDay(); });
-  const set = open => { if (open && window.closeAim) window.closeAim(); panel.classList.toggle("open", open); document.body.classList.toggle("jopen", open); tab.setAttribute("aria-expanded", open);
+  const set = open => { if (open && innerWidth < 1300 && window.closeAim) window.closeAim();   // side by side on wide screens; one at a time where each covers the screen panel.classList.toggle("open", open); document.body.classList.toggle("jopen", open); tab.setAttribute("aria-expanded", open);
     try { localStorage.setItem("journalOpen", open ? "1" : ""); } catch (_) {}
     if (open) panel.focus(); else tab.focus(); };
   tab.onclick = () => set(true); document.getElementById("jclose").onclick = () => set(false);
@@ -440,7 +440,7 @@ function aimPanel(m, aim) {
       rows.map(x => `<tr><td>${esc(nice(x.scenario))}</td><td>${x.runs}</td><td>${x.on_target ?? "–"}%</td><td>${x.reaction_ms ?? "–"} ms</td><td>${x.overshoot_pct ?? "–"}%</td></tr>`).join("") + `</table></div></div>` : "") +
     `<details><summary>How these are made</summary><p class="small">A read-only mod saves my camera angle, the bot's position, my hits and whether I'm holding fire, 60 times a second, with no effect on frame rate. Left side: what my screen looked like. Right side: a simple model with the same reaction time as me that eases in and matches the bot's speed. It's an illustration of the fix, not a real player. The bars underneath compare the bot's speed with the aim's speed.</p></details>`;
   if (still) list.querySelectorAll(".moment img").forEach(img => img.onclick = () => { img.src = img.dataset.gif; });
-  const set = open => { if (open && window.closeJournal) window.closeJournal();
+  const set = open => { if (open && innerWidth < 1300 && window.closeJournal) window.closeJournal();
     panel.classList.toggle("open", open); document.body.classList.toggle("aopen", open); tab.setAttribute("aria-expanded", open);
     if (open) panel.focus(); else tab.focus(); };
   window.closeAim = () => { if (panel.classList.contains("open")) { panel.classList.remove("open"); document.body.classList.remove("aopen"); tab.setAttribute("aria-expanded", false); } };
