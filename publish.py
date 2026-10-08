@@ -206,7 +206,12 @@ def build():
     return {"updated": dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
             "updated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "today": {"date": dt.date.today().isoformat(), "progress": today_progress()},
-            "plan_start": PLAN_START, "ranks": ranks(), "history": history(), "journal": journal(), "days": sessions_by_day(rows), "rest_effect": rest_effect(), "aim": aim_by_day()}
+            "plan_start": PLAN_START, "ranks": ranks(), "history": history(), "journal": journal(), "days": sessions_by_day(rows), "rest_effect": rest_effect(), "aim": aim_by_day(), "aim_moments": aim_moments()}
+
+
+def aim_moments():
+    p = os.path.join(HERE, "aim_moments.json")
+    return json.load(open(p, encoding="utf-8")) if os.path.exists(p) else None
 
 
 def aim_by_day():

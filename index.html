@@ -77,6 +77,17 @@ ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 
 .jmeta a { color: var(--ink); font-weight: 600; }
 .jwho { font: 700 13px var(--display); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-2); }
 @media (min-width: 1100px) { body.jopen main { margin-right: 400px; } body.jopen .jtab { display: none; } }
+.atab { position: fixed; left: 0; top: 50%; transform: translateY(-50%) rotate(180deg); writing-mode: vertical-rl; background: var(--ink); color: var(--bg); border: 0; border-radius: 0 8px 8px 0; padding: 16px 10px; font: 700 15px/1 var(--display); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; z-index: 20; }
+.apanel { position: fixed; top: 0; left: 0; height: 100%; width: 380px; max-width: 100vw; background: var(--surface); border-right: 1px solid var(--rule); transform: translateX(-100%); transition: transform .2s ease; z-index: 30; display: flex; flex-direction: column; }
+.apanel.open { transform: none; }
+.alist { overflow-y: auto; overflow-x: hidden; padding: 12px 18px 28px; display: flex; flex-direction: column; gap: 18px; width: 100%; max-width: 68ch; margin: 0 auto; }
+.alist .focus { border-left: 3px solid var(--accent); padding: 6px 12px; background: var(--track); border-radius: 0 6px 6px 0; }
+.moment { display: flex; flex-direction: column; gap: 6px; }
+.moment img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--rule); cursor: pointer; background: #161615; }
+.moment h3 { margin: 0; font: 700 17px var(--display); text-transform: uppercase; letter-spacing: .03em; }
+.moment .score { font-size: 14px; font-variant-numeric: tabular-nums; }
+@media (min-width: 1100px) { body.aopen main { margin-left: 400px; } body.aopen .atab { display: none; } }
+@media (prefers-reduced-motion: reduce) { .apanel { transition: none; } }
 @media (prefers-reduced-motion: reduce) { .jpanel { transition: none; } }
 .lead { font: 600 18px/1.45 var(--body); max-width: 60ch; }
 .jump { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
@@ -91,6 +102,8 @@ summary { min-height: 44px; align-items: center; }
   .jpanel { left: 0; width: auto; }
   .jtab { top: auto; bottom: 16px; right: 16px; transform: none; writing-mode: horizontal-tb; border-radius: 999px; padding: 12px 18px; box-shadow: 0 0 0 4px var(--bg); }
   .jtab small { display: inline; margin: 0 0 0 8px; }
+  .apanel { right: 0; width: auto; }
+  .atab { top: auto; bottom: 16px; left: 16px; transform: none; writing-mode: horizontal-tb; border-radius: 999px; padding: 12px 18px; box-shadow: 0 0 0 4px var(--bg); }
   body { padding-bottom: 96px; }
 }
 @media (prefers-reduced-motion: reduce) { main.ready section { animation: none; } }
@@ -153,7 +166,7 @@ summary { min-height: 44px; align-items: center; }
     <p class="sub">My practice in Aimbeast, an aim trainer for shooters, logged automatically after every session. The goal: reach Master 3, the top Intermediate rank, on all 6 ranked tracking scenarios.</p>
     <p id="summary" class="lead">Loading the latest numbers…</p>
     <p class="small"><span id="today"></span><span id="updated"></span></p>
-    <nav class="jump" aria-label="Jump to"><a href="#insights-sec">Summary</a><a href="#charts-sec">Charts</a><a href="#journal" id="jumpjournal">Journal and session log</a><a href="#plan-sec">Plan</a></nav>
+    <nav class="jump" aria-label="Jump to"><a href="#insights-sec">Summary</a><a href="#charts-sec">Charts</a><a href="#journal" id="jumpjournal">Journal and session log</a><a href="#aim" id="jumpaim">Aim data</a><a href="#plan-sec">Plan</a></nav>
   </header>
 
   <section id="insights-sec">
@@ -219,6 +232,11 @@ summary { min-height: 44px; align-items: center; }
   </section>
 </main>
 
+<button class="atab" id="atab" aria-controls="apanel" aria-expanded="false">Aim data</button>
+<aside class="apanel" id="apanel" aria-label="Aim data" tabindex="-1">
+  <div class="jhead"><h2>Aim data</h2><button class="jclose" id="aclose" aria-label="Close aim data">Close</button></div>
+  <div class="alist" id="alist"><p class="small">Loading…</p></div>
+</aside>
 <button class="jtab" id="jtab" aria-controls="jpanel" aria-expanded="false">Journal<small id="jcount"></small></button>
 <aside class="jpanel" id="jpanel" aria-label="Journal and session log" tabindex="-1">
   <div class="jhead"><h2>Journal and session log</h2><button class="jclose" id="jclose" aria-label="Close journal">Close</button></div>
@@ -395,15 +413,41 @@ function journal(entries, days, aim) {
   if (dates.length) show("cal", null, true);
   const openDay = () => { const d = location.hash.slice(5); if (byDay[d]) { month = d.slice(0, 7); show("day", d); set(true); } };
   addEventListener("hashchange", () => { if (location.hash.startsWith("#day-")) openDay(); });
-  const set = open => { panel.classList.toggle("open", open); document.body.classList.toggle("jopen", open); tab.setAttribute("aria-expanded", open);
+  const set = open => { if (open && window.closeAim) window.closeAim(); panel.classList.toggle("open", open); document.body.classList.toggle("jopen", open); tab.setAttribute("aria-expanded", open);
     try { localStorage.setItem("journalOpen", open ? "1" : ""); } catch (_) {}
     if (open) panel.focus(); else tab.focus(); };
   tab.onclick = () => set(true); document.getElementById("jclose").onclick = () => set(false);
+  window.closeJournal = () => { if (panel.classList.contains("open")) { panel.classList.remove("open"); document.body.classList.remove("jopen"); tab.setAttribute("aria-expanded", false); } };
   document.addEventListener("keydown", ev => { if (ev.key === "Escape" && panel.classList.contains("open")) set(false); });
   document.getElementById("jumpjournal").onclick = ev => { ev.preventDefault(); set(true); };
   if (location.hash.startsWith("#day-")) openDay(); else if (location.hash === "#journal") set(true);
   let was = false; try { was = localStorage.getItem("journalOpen") === "1"; } catch (_) {}
   if (was && innerWidth >= 1100) { panel.classList.add("open"); document.body.classList.add("jopen"); tab.setAttribute("aria-expanded", true); }
+}
+
+function aimPanel(m, aim) {
+  const tab = document.getElementById("atab"), panel = document.getElementById("apanel"), list = document.getElementById("alist");
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const days = Object.keys(aim || {}).sort(), last = days[days.length - 1], rows = last ? aim[last] : [];
+  list.innerHTML =
+    `<p>A small game mod records where my crosshair and the bot are, 60 times a second. These are moments where I lose points, rebuilt from that data, next to a smooth version of the same moment.</p>` +
+    (m && m.focus ? `<div class="focus"><span class="small">Working on this week</span><br>${esc(m.focus)}</div>` : "") +
+    ((m && m.moments) || []).map(x => `<div class="moment"><h3>${esc(x.title)}</h3>` +
+      `<img src="assets/aim/${esc(x.file)}.${still ? "png" : "gif"}" data-gif="assets/aim/${esc(x.file)}.gif" loading="lazy" width="860" height="400" alt="${esc(x.title)}: my aim on the left, a smooth version on the right">` +
+      `<p class="score">On target in this clip: <b>me ${x.you}%</b> · smooth version ${x.smooth}%</p>` +
+      `<p>${esc(x.text)}</p><p class="small">${esc(x.scenario)}, ${esc(x.run)}. Played at half speed.</p></div>`).join("") +
+    (rows.length ? `<div><h3 style="margin:0 0 6px;font:700 17px var(--display);text-transform:uppercase">Latest numbers (${esc(nd(last))})</h3><div class="scroll"><table class="jlog aimt"><tr><th>Scenario</th><th>Runs</th><th>On target</th><th>Reaction</th><th>Over&shy;shoot</th></tr>` +
+      rows.map(x => `<tr><td>${esc(nice(x.scenario))}</td><td>${x.runs}</td><td>${x.on_target ?? "–"}%</td><td>${x.reaction_ms ?? "–"} ms</td><td>${x.overshoot_pct ?? "–"}%</td></tr>`).join("") + `</table></div></div>` : "") +
+    `<details><summary>How these are made</summary><p class="small">A read-only mod saves my camera angle, the bot's position, my hits and whether I'm holding fire, 60 times a second, with no effect on frame rate. Left side: what my screen looked like. Right side: a simple model with the same reaction time as me that eases in and matches the bot's speed. It's an illustration of the fix, not a real player. The bars underneath compare the bot's speed with the aim's speed.</p></details>`;
+  if (still) list.querySelectorAll(".moment img").forEach(img => img.onclick = () => { img.src = img.dataset.gif; });
+  const set = open => { if (open && window.closeJournal) window.closeJournal();
+    panel.classList.toggle("open", open); document.body.classList.toggle("aopen", open); tab.setAttribute("aria-expanded", open);
+    if (open) panel.focus(); else tab.focus(); };
+  window.closeAim = () => { if (panel.classList.contains("open")) { panel.classList.remove("open"); document.body.classList.remove("aopen"); tab.setAttribute("aria-expanded", false); } };
+  tab.onclick = () => set(true); document.getElementById("aclose").onclick = () => set(false);
+  document.addEventListener("keydown", ev => { if (ev.key === "Escape" && panel.classList.contains("open")) set(false); });
+  document.getElementById("jumpaim").onclick = ev => { ev.preventDefault(); set(true); };
+  if (location.hash === "#aim") set(true);
 }
 
 fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
@@ -414,6 +458,7 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 16 : 26)} of ${k === "ZEUS BUILDER" ? 16 : 26} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
   TODAY = d.today.date;
   journal(d.journal || [], d.days, d.aim || {});
+  aimPanel(d.aim_moments, d.aim || {});
   insights(d);
   {
     const done = d.ranks.filter(r => r.master3 && r.official_best >= r.master3).length;

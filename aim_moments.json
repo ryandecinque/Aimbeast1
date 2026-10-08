@@ -1,0 +1,33 @@
+{
+ "updated": "2026-10-08",
+ "focus": "Ease into the bot and match its speed. No hard stops, no swinging past it.",
+ "moments": [
+  {
+   "file": "zeus-overshoot",
+   "title": "Swinging past the bot",
+   "scenario": "Zeus Track",
+   "run": "Thu 8 Oct, 10:42",
+   "text": "The bot keeps moving the same way, but my correction is so fast it goes straight through it and out the other side. Then I have to correct back.",
+   "you": 17,
+   "smooth": 72
+  },
+  {
+   "file": "zeus-hard-stop",
+   "title": "Catch up, then brake",
+   "scenario": "Zeus Track",
+   "run": "Thu 8 Oct, 10:49",
+   "text": "The bot gets away, I make a big catch-up, then I nearly stop dead while the bot keeps going. Watch my aim-speed bar empty out.",
+   "you": 63,
+   "smooth": 85
+  },
+  {
+   "file": "zeus-stop-go",
+   "title": "Stop-go instead of smooth",
+   "scenario": "Zeus Track",
+   "run": "Thu 8 Oct, 10:49",
+   "text": "Even when I'm on the bot, my aim speed pulses: too fast, then too slow, about three times a second. The smooth version just matches the bot's speed.",
+   "you": 85,
+   "smooth": 96
+  }
+ ]
+}
