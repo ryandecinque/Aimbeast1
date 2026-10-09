@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-09 10:06",
- "updated_utc": "2026-10-09T03:06:19Z",
+ "updated": "2026-10-09 10:11",
+ "updated_utc": "2026-10-09T03:11:19Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
    "RANK INT A": 26,
-   "ZEUS BUILDER": 2
+   "ZEUS BUILDER": 3
   }
  },
  "plan_start": "2026-10-07",
@@ -811,8 +811,8 @@
  "days": [
   {
    "date": "2026-10-09",
-   "runs": 28,
-   "restarts": 23,
+   "runs": 29,
+   "restarts": 24,
    "rest_median_s": 55,
    "rest_longest_s": 794,
    "breaks": [
@@ -832,9 +832,9 @@
     },
     {
      "name": "ZEUS BUILDER",
-     "runs": 2,
+     "runs": 3,
      "first": "09:52",
-     "last": "10:02"
+     "last": "10:10"
     }
    ],
    "scenarios": [
@@ -877,6 +877,14 @@
      "first": "09:52",
      "best": 531,
      "median": 528
+    },
+    {
+     "name": "GROUND PLAZA FS NO UFO",
+     "runs": 1,
+     "routine": "ZEUS BUILDER",
+     "first": "10:10",
+     "best": 340,
+     "median": 340
     }
    ]
   },
@@ -1413,13 +1421,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 220,
+  "runs": 221,
   "days": 4,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 56,
-    "pct": 99.0
+    "runs": 57,
+    "pct": 99.2
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1498,6 +1506,16 @@
      "far": 7.4,
      "mid": 8.4,
      "close": 4.8
+    }
+   },
+   {
+    "scenario": "GROUND PLAZA FS NO UFO",
+    "runs": 1,
+    "on_target": 31,
+    "reaction_ms": 184,
+    "overshoot_pct": 49,
+    "pps_by_distance": {
+     "close": 5.6
     }
    },
    {
