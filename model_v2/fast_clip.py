@@ -58,6 +58,15 @@ def life_pos(L, t):
 
 def alive(a, L, i): return L.i0 <= i <= L.i1
 
+def cam_at(a, t):
+    """The player's real camera position at real time t. The player isn't fixed in Aimbeast (drops after spawning,
+    Dodge and Possession scenarios move them), and the model changes the aim only, so it keeps this path too."""
+    T, C = a["T"], a["cam"]; k = bisect.bisect_left(T, t)
+    if k <= 0: return C[0]
+    if k >= len(T): return C[-1]
+    u = (t - T[k - 1]) / (T[k] - T[k - 1]) if T[k] > T[k - 1] else 0
+    return tuple(x + (y - x) * u for x, y in zip(C[k - 1], C[k]))
+
 def hit_errors(a, zfix=None):
     """At every hit: (left-right units, aim height minus bot height in units, life) for the bot nearest the crosshair."""
     out, T, cam = [], a["T"], a["cam"]
@@ -135,8 +144,9 @@ def simulate(a, R, M, w, pred=1.0):
     previous kill to this one), the flick is made stiffer until it keeps up; if even the stiffest flick can't, the kill
     lands at Ryan's own time. So the model is never slower than Ryan on any bot, and since every bot's model life is
     then no longer than its real one, no bot is ever shown past its recorded path."""
-    T, s0, cam0 = a["T"], a["start"], a["cam"][a["start"]]
+    T, s0 = a["T"], a["start"]
     kills, t0 = M["kills"], M["t0"]
+    cam = lambda tau: cam_at(a, t0 + tau)                       # the real camera path, same clock as the run
     spawn = {}                                                   # life -> model spawn time (s after run start)
     for L in a["lives"]:
         if L.spawn != "kill": spawn[id(L)] = T[L.i0] - t0
@@ -166,9 +176,9 @@ def simulate(a, R, M, w, pred=1.0):
             tgt = kills[min(kt_seen, len(kills) - 1)]["life"]
             p = lpos(tgt, seen) if seen >= 0 else None
             if p is not None:
-                ty, tp = bot_angles(cam0, p, sy)
+                ty, tp = bot_angles(cam(seen), p, sy)
                 if seen - 2 * DT >= spawn[id(tgt)]:
-                    py, pp = bot_angles(cam0, lpos(tgt, seen - 2 * DT), sy)
+                    py, pp = bot_angles(cam(seen - 2 * DT), lpos(tgt, seen - 2 * DT), sy)
                     ty += pred * (ty - py) / (2 * DT) * DELAY; tp += pred * (tp - pp) / (2 * DT) * DELAY
                 for _ in range(SUB):                             # small steps keep a stiff spring stable
                     ay = w_ * w_ * (ty - sy) - 2 * w_ * vy; ap = w_ * w_ * (tp - sp_) - 2 * w_ * vp
@@ -178,7 +188,7 @@ def simulate(a, R, M, w, pred=1.0):
                 vy *= 0.9; vp *= 0.9; sy += vy * DT; sp_ += vp * DT
             aim.append((tau, sy, sp_))
             pos = lpos(L, tau)
-            if pos is not None and on_target(cam0, sy, sp_, pos, R): dmg += DT
+            if pos is not None and on_target(cam(tau), sy, sp_, pos, R): dmg += DT
             step += 1
             if dmg >= M["need"] - 1e-9 and (hold is None or tau >= hold - 1e-9): return (sy, sp_, vy, vp, step), aim, step - 1
 
@@ -200,7 +210,7 @@ def simulate(a, R, M, w, pred=1.0):
                 seg = [x for x in seg if x[0] <= ks * DT + 1e-9]
                 st_ = st_[:4] + (ks + 1,)
                 pos = lpos(kills[k]["life"], ks * DT)
-                if not (pos and seg and on_target(cam0, seg[-1][1], seg[-1][2], pos, R)): forced_off += 1
+                if not (pos and seg and on_target(cam(ks * DT), seg[-1][1], seg[-1][2], pos, R)): forced_off += 1
                 forced.append(k + 1)
             else:                                                # the kill lands at Ryan's own time on this bot
                 st_, seg, ks = segment(state, k, w_used, deadline, hold=math.floor(deadline / DT + 1e-9) * DT)
@@ -317,11 +327,11 @@ def make(path, out, factor=1.2, render=True):
 def draw(a, R, shape, est, M, sim, factor, out):
     T, s0, t0, Y = a["T"], a["start"], M["t0"], M["Y"]
     X = sim["kt"][-1]; HF = fov()
-    cam0 = a["cam"][s0]
+    moved = max(math.dist(c[:2], a["cam"][s0][:2]) for c in a["cam"][s0:]) > 50     # Dodge / Possession: the player moves
     floor = a["floor"]
     title = a["scenario"]; nk = len(M["kills"])
     lab_m = f"Same bots, {round(100 * (factor - 1))}% faster"
-    note = "Same bots, same order, real paths. Spacing between bots is approximate." + (" Bot height estimated from hits." if est else "")
+    note = "Same bots, same order, real paths" + (", same movement as your run" if moved else "") + ". Spacing between bots is approximate." + (" Bot height estimated from hits." if est else "")
     real_kt = [k["t"] - t0 for k in M["kills"]]
     def real_frame(Wd, Ht, tau, final=False):
         i = min(bisect.bisect_left(T, t0 + tau), a["n"] - 1)
@@ -362,7 +372,7 @@ def draw(a, R, shape, est, M, sim, factor, out):
                 d.text((Wd / 2, Ht / 2 - 100), f"done in {X:.1f}s", fill=ACC, font=FBIG, anchor="mm")
                 d.text((Wd / 2, Ht / 2 - 50), f"real: {Y:.1f}s  ({nk} kills each)", fill=INK, font=FM, anchor="mm")
                 d.text((Wd / 2, Ht / 2 - 8), "On bots you already killed fast, the model matches you.", fill=DIM, font=FS, anchor="mm")
-        return view(Wd, Ht, cam0, ay, ap, bots, R, shape, floor, HF, hud)
+        return view(Wd, Ht, cam_at(a, t0 + tq), ay, ap, bots, R, shape, floor, HF, hud)
 
     def write(name, Wd, Ht, frames):
         p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{Wd}x{Ht}", "-r", "30", "-i", "-",
