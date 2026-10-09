@@ -41,6 +41,8 @@ model's kill happens. The whole run ends sooner. Nothing is invented.
   between bots is approximate. The video says so.
 - Samples at 1.2x (2026-10-09): VOX TS BALANCED - 150% reaches 1.20x (49.3 s vs 59.3 s; 35 of 69 bots matched to Ryan),
   POPCORN - M reaches 1.22x (48.7 s vs 59.5 s; 26 of 37 matched).
+- PASU XYZ (Bazhan, clicking, 2026-10-09 11:38): 16/16 kills, reaches 1.17x (46.9 s vs 55.0 s; 10 of 16 matched).
+  Not PASU TRACK XYZ (tierem), which is tracking and refused.
 
 ## Older recordings
 - Files from before the kill counter (VOX 125%, TRM, SUMO, 2026-10-08 20:2x) can't be checked, so they're skipped.
