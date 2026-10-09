@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-09 09:11",
- "updated_utc": "2026-10-09T02:11:46Z",
+ "updated": "2026-10-09 09:34",
+ "updated_utc": "2026-10-09T02:34:51Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
@@ -1603,5 +1603,74 @@
     "note": "Best of 8 today (median 438). The clip is its 8 seconds with the most hits."
    }
   ]
+ },
+ "pbs": {
+  "events": [
+   {
+    "kind": "week",
+    "ws": "2793819845",
+    "name": "AIR TRACK SMOOTH V3 150%",
+    "title": "Air Track Smooth V3 150%",
+    "median": 468,
+    "old": 449,
+    "date": "2026-10-09",
+    "seen_utc": "2026-10-09T02:33:21Z",
+    "master3": 660,
+    "trend": [
+     438,
+     436,
+     442,
+     438,
+     447,
+     447,
+     449,
+     447,
+     448,
+     440,
+     468
+    ],
+    "card": "2026-10-09-airtrack-week.png"
+   },
+   {
+    "kind": "week",
+    "ws": "2795101783",
+    "name": "AIR CONTROL SPHERE - S",
+    "title": "Air Control Sphere - S",
+    "median": 683,
+    "old": 676,
+    "date": "2026-10-09",
+    "seen_utc": "2026-10-09T02:33:21Z",
+    "master3": 880,
+    "trend": [
+     614,
+     616,
+     616,
+     638,
+     644,
+     662,
+     661,
+     660,
+     668,
+     676,
+     660,
+     683
+    ],
+    "card": "2026-10-09-spheres-week.png"
+   }
+  ],
+  "plan_bests": {
+   "2026-10-09": [
+    {
+     "title": "Smooth Thin Track V2",
+     "score": 474,
+     "old": 464
+    },
+    {
+     "title": "Air Control Sphere - S",
+     "score": 853,
+     "old": 780
+    }
+   ]
+  }
  }
 }

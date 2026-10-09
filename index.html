@@ -149,6 +149,24 @@ summary { min-height: 44px; align-items: center; }
 .cmarks { display: flex; gap: 3px; min-height: 6px; }
 .mnote, .mrev { display: inline-block; width: 6px; height: 6px; border-radius: 50%; }
 .mnote { background: var(--ink); }
+.mpb { display: inline-block; width: 8px; height: 8px; background: var(--accent); clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+.pbbar { position: relative; overflow: hidden; background: var(--surface); border: 1.5px solid var(--accent); border-radius: 8px; padding: 14px 16px; display: flex; flex-direction: column; gap: 12px; }
+.pbbar[hidden] { display: none; }
+.pbitem { display: flex; gap: 14px; align-items: center; position: relative; }
+.pbitem + .pbitem { border-top: 1px solid var(--rule); padding-top: 12px; }
+.pbitem img { width: 132px; height: auto; border-radius: 6px; flex: none; }
+.pbk { font: 700 13px/1.2 var(--display); letter-spacing: .06em; color: var(--accent); text-transform: uppercase; }
+.pbt { font: 800 24px/1.1 var(--display); text-transform: uppercase; }
+.pbitem p { font-size: 14px; color: var(--ink-2); }
+.pbitem a { color: var(--ink-2); }
+.pbx { position: absolute; top: 6px; right: 8px; background: none; border: 0; color: var(--ink-3); font-size: 20px; cursor: pointer; line-height: 1; padding: 4px; z-index: 1; }
+.pbconf { position: absolute; inset: 0; pointer-events: none; }
+.chip { display: inline-block; font-size: 12px; border: 1px solid var(--rule); border-radius: 999px; padding: 2px 9px; color: var(--ink-2); margin: 0 6px 6px 0; }
+.chip.hot { border-color: var(--accent); color: var(--ink); }
+.shelf { display: flex; flex-direction: column; gap: 10px; }
+.shelf a { display: flex; gap: 10px; align-items: center; color: inherit; text-decoration: none; }
+.shelf img { width: 110px; height: auto; border-radius: 4px; flex: none; }
+@media (max-width: 520px) { .pbitem { align-items: flex-start; gap: 10px; } .pbitem img { width: 84px; margin-top: 4px; } .pbt { font-size: 20px; } .pbitem p { font-size: 13px; } }
 .mrev { border: 1.5px solid var(--ink-2); width: 5px; height: 5px; }
 .clegend { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; margin: 0; }
 .clegend span { display: inline-flex; align-items: center; gap: 6px; }
@@ -161,6 +179,7 @@ summary { min-height: 44px; align-items: center; }
 </head>
 <body>
 <main>
+  <div id="pb" class="pbbar" hidden aria-live="polite"></div>
   <header style="display:flex;flex-direction:column;gap:10px">
     <h1>Road to Master 3</h1>
     <p class="sub">My practice in Aimbeast, an aim trainer for shooters, logged automatically after every session. The goal: reach Master 3, the top Intermediate rank, on all 6 ranked tracking scenarios.</p>
@@ -253,6 +272,51 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;",
 
 
 let TODAY = "";
+let PBS = { events: [], plan_bests: {} }, PBDAYS = {};
+const pbHead = e => e.rank_to ? `Rank up to ${e.rank_to}` : e.kind === "pb" ? "New personal best" : "Best week yet";
+
+// celebrations: events first seen in the last 24 hours, biggest first, one confetti burst per viewer
+function pbBanner(pbs, days) {
+  const box = document.getElementById("pb");
+  const rank = e => e.rank_to ? 2 : e.kind === "pb" ? 1 : 0;
+  const live = (pbs.events || []).filter(e => Date.now() - Date.parse(e.seen_utc) < 864e5).sort((a, b) => rank(b) - rank(a));
+  const key = e => [e.kind, e.ws, e.date].join(":");
+  let hidden = {}; try { hidden = JSON.parse(localStorage.getItem("pbClosed") || "{}"); } catch (_) {}
+  const show = live.filter(e => !hidden[key(e)]);
+  if (!show.length) return;
+  const cond = d => {
+    const st = (days || []).find(x => x.date === d); if (!st || !st.scenarios || !st.scenarios.length) return "";
+    const f = st.scenarios.slice().sort((a, b) => a.first.localeCompare(b.first))[0];
+    return `That day: ${/ - RANKED$/.test(f.name) ? "no warm-up" : "warmed up first"}, median rest ${fmtS(st.rest_median_s)}. <a href="#day-${d}">Read the day</a> · `;
+  };
+  box.innerHTML = `<button class="pbx" aria-label="Close">×</button>` + show.map(e => {
+    const line = e.kind === "week" ? `Typical score over the last 7 days: <b>${e.median}</b>, up from ${e.old}.`
+      : `<b>${e.score}</b>, old best ${e.old}${e.master3 ? `. Master 3 is ${e.master3}${e.score >= e.master3 ? ": reached" : `, ${e.master3 - e.score} to go`}` : ""}.`;
+    return `<div class="pbitem"><img src="assets/pb/${esc(e.card)}" alt="Share card: ${esc(pbHead(e))}, ${esc(nice(e.title))}" width="1200" height="675">` +
+      `<div><div class="pbk">${esc(pbHead(e))}</div><div class="pbt">${esc(nice(e.title))}</div><p>${line}</p><p class="small">${cond(e.date)}<a href="assets/pb/${esc(e.card)}" download>Share card</a></p></div></div>`;
+  }).join("");
+  box.hidden = false;
+  box.querySelector(".pbx").onclick = () => { show.forEach(e => hidden[key(e)] = 1); try { localStorage.setItem("pbClosed", JSON.stringify(hidden)); } catch (_) {} box.hidden = true; };
+  let seen = {}; try { seen = JSON.parse(localStorage.getItem("pbSeen") || "{}"); } catch (_) {}
+  const fresh = show.filter(e => !seen[key(e)]);
+  if (!fresh.length || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  fresh.forEach(e => seen[key(e)] = 1); try { localStorage.setItem("pbSeen", JSON.stringify(seen)); } catch (_) {}
+  requestAnimationFrame(() => {
+    const cv = document.createElement("canvas"); cv.className = "pbconf"; box.appendChild(cv);
+    const r = box.getBoundingClientRect(), dpr = devicePixelRatio || 1; cv.width = r.width * dpr; cv.height = r.height * dpr;
+    const ctx = cv.getContext("2d"); ctx.scale(dpr, dpr);
+    const cs = getComputedStyle(document.documentElement), cols = ["--accent", "--ink-2", "--ink-3"].map(v => cs.getPropertyValue(v).trim());
+    const P = Array.from({ length: 70 }, () => ({ x: r.width * (.2 + .6 * Math.random()), y: r.height * .7, vx: (Math.random() - .5) * 7, vy: -4 - Math.random() * 6, s: 3 + Math.random() * 4, a: Math.random() * 6, c: cols[Math.floor(Math.random() * 3)] }));
+    const t0 = performance.now();
+    (function tick(t) {
+      const k = (t - t0) / 1600; ctx.clearRect(0, 0, r.width, r.height);
+      if (k >= 1) { cv.remove(); return; }
+      ctx.globalAlpha = 1 - k * k;
+      P.forEach(p => { p.vy += .25; p.x += p.vx; p.y += p.vy; p.a += .2; ctx.fillStyle = p.c; ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.a); ctx.fillRect(-p.s / 2, -p.s / 4, p.s, p.s / 2); ctx.restore(); });
+      requestAnimationFrame(tick);
+    })(t0);
+  });
+}
 const NS = "http://www.w3.org/2000/svg";
 const svgEl = (tag, attrs) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
 const short = d => { const [, m, dd] = d.split("-"); return +dd + "/" + +m; };
@@ -358,6 +422,9 @@ function journal(entries, days, aim, best) {
       `<div class="jnav"><button class="jbtn" data-cal>‹ Calendar</button><span><button class="jbtn" data-go="${prev || ""}" ${prev ? "" : "disabled"} aria-label="Previous practice day">‹</button><button class="jbtn" data-go="${next || ""}" ${next ? "" : "disabled"} aria-label="Next practice day">›</button></span></div>` +
       `<div class="jdayhead"><span class="jdate">${esc(nd(date))}</span>${st ? `<span class="small">${st.runs} runs · median rest ${fmtS(st.rest_median_s)} · ${st.restarts} restarts · ${st.breaks.length} breaks</span>` : ""}</div>` +
       (rows ? `<div class="scroll"><table class="jlog"><tr><th>Scenario</th><th>Runs</th><th>Best</th><th>Median</th></tr>${rows}</table></div>` : ""));
+    const chips = (PBS.events || []).filter(e => e.date === date).map(e => `<span class="chip hot">${esc(pbHead(e))}: ${esc(nice(e.title))} ${e.kind === "week" ? e.median : e.score}</span>`)
+      .concat(((PBS.plan_bests || {})[date] || []).map(x => `<span class="chip">Best since the plan started: ${esc(nice(x.title))} ${x.score} (was ${x.old})</span>`));
+    if (chips.length) g.appendChild(el("div", {}, chips.join("")));
     ((best || {})[date] || []).forEach(x => g.appendChild(el("div", {}, bestCard(x, date))));
     const am = (aim || {})[date];
     if (am && am.length) g.appendChild(el("div", { className: "scroll" },
@@ -383,16 +450,16 @@ function journal(entries, days, aim, best) {
       const cls = "cday" + (iso === todayIso ? " today" : "");
       if (!es) { cells += `<span class="${cls}"><span class="cnum">${d}</span></span>`; continue; }
       const note = es.some(e => !isC(e)), rev = es.some(isC);
-      const label = `${nd(iso)}${st ? `, ${st.runs} runs` : ""}${note ? ", note" : ""}${rev ? ", review" : ""}`;
+      const label = `${nd(iso)}${st ? `, ${st.runs} runs` : ""}${note ? ", note" : ""}${rev ? ", review" : ""}${PBDAYS[iso] ? ", new best" : ""}`;
       cells += `<button class="${cls} on" data-day="${iso}" aria-label="${esc(label)}"><span class="cnum">${d}</span>` +
-        `<span class="cruns">${st ? st.runs : ""}</span><span class="cmarks">${note ? '<i class="mnote"></i>' : ""}${rev ? '<i class="mrev"></i>' : ""}</span></button>`;
+        `<span class="cruns">${st ? st.runs : ""}</span><span class="cmarks">${note ? '<i class="mnote"></i>' : ""}${rev ? '<i class="mrev"></i>' : ""}${PBDAYS[iso] ? '<i class="mpb"></i>' : ""}</span></button>`;
     }
     const name = first.toLocaleDateString("en-GB", { month: "long", year: "numeric" });
     return el("div", { className: "jcal" },
       `<div class="jnav"><button class="jbtn" data-month="${months[mi - 1] || ""}" ${mi > 0 ? "" : "disabled"} aria-label="Previous month">‹</button>` +
       `<span class="jmonth">${esc(name)}</span><button class="jbtn" data-month="${months[mi + 1] || ""}" ${mi < months.length - 1 ? "" : "disabled"} aria-label="Next month">›</button></div>` +
       `<div class="cgrid" role="group" aria-label="${esc(name)}">${["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map(w => `<span class="cwd">${w}</span>`).join("")}${cells}</div>` +
-      `<p class="small clegend"><span><b class="cnum-k">24</b> runs that day</span><span><i class="mnote"></i> Ryan's note</span><span><i class="mrev"></i> Claude's review</span></p>` +
+      `<p class="small clegend"><span><b class="cnum-k">24</b> runs that day</span><span><i class="mnote"></i> Ryan's note</span><span><i class="mrev"></i> Claude's review</span><span><i class="mpb"></i> new best</span></p>` +
       `<p class="small">Tap a day to see its runs, notes and reviews.</p>`);
   }
 
@@ -445,6 +512,8 @@ function aimPanel(m, aim, best) {
   list.innerHTML =
     `<p>A small game mod records where my crosshair and the bot are, 60 times a second. These are moments where I lose points, rebuilt from that data, next to a smooth version of the same moment.</p>` +
     (m && m.focus ? `<div class="focus"><span class="small">Working on this week</span><br>${esc(m.focus)}</div>` : "") +
+    ((PBS.events || []).length ? `<h3 style="margin:4px 0 0;font:700 15px var(--display);text-transform:uppercase;color:var(--ink-3)">PB shelf</h3><div class="shelf">` +
+      PBS.events.slice().reverse().map(e => `<a href="assets/pb/${esc(e.card)}" target="_blank" rel="noopener"><img src="assets/pb/${esc(e.card)}" alt="" width="1200" height="675" loading="lazy"><span><b>${esc(pbHead(e))}</b><br>${esc(nice(e.title))}: ${e.kind === "week" ? e.median : e.score} <span class="small">· ${esc(nd(e.date))}</span></span></a>`).join("") + `</div>` : "") +
     (Object.keys(top).length ? `<h3 style="margin:4px 0 0;font:700 15px var(--display);text-transform:uppercase;color:var(--ink-3)">Best recorded runs so far</h3>` + Object.values(top).map(o => bestCard(o.x, o.dt)).join("") + `<h3 style="margin:8px 0 0;font:700 15px var(--display);text-transform:uppercase;color:var(--ink-3)">Weak moments</h3>` : "") +
     ((m && m.moments) || []).map(x => `<div class="moment"><h3>${esc(x.title)}</h3>` +
       `<img src="assets/aim/${esc(x.file)}.${still ? "png" : "gif"}" data-gif="assets/aim/${esc(x.file)}.gif" loading="lazy" width="860" height="400" alt="${esc(x.title)}: my aim on the left, a smooth version on the right">` +
@@ -480,6 +549,8 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   const prog = Object.entries(d.today.progress || {});
   document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 16 : 26)} of ${k === "ZEUS BUILDER" ? 16 : 26} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
   TODAY = d.today.date;
+  PBS = d.pbs || PBS; (PBS.events || []).forEach(e => PBDAYS[e.date] = 1);
+  pbBanner(PBS, d.days);
   journal(d.journal || [], d.days, d.aim || {}, d.best_runs || {});
   aimPanel(d.aim_moments, d.aim || {}, d.best_runs || {});
   insights(d);

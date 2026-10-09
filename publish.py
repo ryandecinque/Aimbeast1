@@ -206,7 +206,16 @@ def build():
     return {"updated": dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
             "updated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "today": {"date": dt.date.today().isoformat(), "progress": today_progress()},
-            "plan_start": PLAN_START, "ranks": ranks(), "history": history(), "journal": journal(), "days": sessions_by_day(rows), "rest_effect": rest_effect(), "aim": aim_by_day(), "aim_moments": aim_moments(), "best_runs": best_runs()}
+            "plan_start": PLAN_START, "ranks": ranks(), "history": history(), "journal": journal(), "days": sessions_by_day(rows), "rest_effect": rest_effect(), "aim": aim_by_day(), "aim_moments": aim_moments(), "best_runs": best_runs(), "pbs": pbs()}
+
+
+def pbs():
+    try:
+        import pb_events
+        return pb_events.update(ranks(), PLAN_START, INT)
+    except Exception as e:
+        print("pb events skipped:", e)
+        return {"events": [], "plan_bests": {}}
 
 
 def best_runs():
@@ -264,7 +273,7 @@ def main():
         return
     if strip(new) != strip(old) or journal_changed:
         open(OUT, "w", encoding="utf-8").write(new)
-        git("add", "data.json", "best_runs.json", "assets/aim")
+        git("add", "data.json", "best_runs.json", "assets/aim", "pbs.json", "assets/pb")
         c = git("commit", "-m", "Update practice data " + data["updated"])
         p = git("push")
         print(c.stdout.strip() or c.stderr.strip()); print(p.stderr.strip())
