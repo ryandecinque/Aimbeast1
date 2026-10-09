@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AimStats</title>
+<style>
+:root {
+  --bg: #161615; --panel: #201f1d; --line: #34332f; --ink: #f4f3ee; --dim: #a19f96; --faint: #6f6d66;
+  --accent: #f07a45; --good: #78d278; --bot: #5ae1d7; --warn: #f0c85a;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 "Segoe UI", system-ui, sans-serif; }
+main { max-width: 1120px; margin: 0 auto; padding: 24px 16px 64px; }
+header { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+h1 { font-size: 26px; margin: 0; letter-spacing: .5px; }
+h1 span { color: var(--accent); }
+#status { color: var(--dim); font-size: 13px; }
+#status b { color: var(--ink); font-weight: 600; }
+.box { border: 1px solid var(--line); background: var(--panel); border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; }
+.warn { border-color: #6b5a2a; color: var(--warn); }
+.pb { border-color: #6b3d27; }
+.pb h2 { color: var(--accent); margin: 0 0 8px; font-size: 18px; }
+.pb .cards { display: flex; gap: 12px; flex-wrap: wrap; }
+.pb .cards a { display: block; width: 300px; max-width: 100%; }
+.pb img { width: 100%; border-radius: 6px; display: block; }
+.scen { border: 1px solid var(--line); background: var(--panel); border-radius: 12px; padding: 18px; margin-bottom: 22px; }
+.scen h2 { margin: 0; font-size: 20px; }
+.chip { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .6px; padding: 2px 7px; border-radius: 4px; background: #3a2a20; color: var(--accent); vertical-align: middle; margin-left: 6px; }
+.sub { color: var(--dim); font-size: 13px; margin: 2px 0 14px; }
+.grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 18px; }
+@media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+video, .gif img { width: 100%; border-radius: 8px; background: #000; display: block; }
+.cap { color: var(--dim); font-size: 13px; margin-top: 6px; }
+.nums { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; }
+.num { border-top: 1px solid var(--line); padding-top: 8px; }
+.num .v { font-size: 26px; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.num .v small { font-size: 14px; color: var(--dim); font-weight: 400; }
+.num .l { color: var(--dim); font-size: 13px; }
+.wide { grid-column: 1 / -1; }
+.week { font-size: 15px; }
+.up { color: var(--good); } .down { color: var(--accent); }
+svg.spark { width: 100%; height: 56px; display: block; margin-top: 6px; }
+.lower { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; margin-top: 18px; }
+@media (max-width: 820px) { .lower { grid-template-columns: 1fr; } }
+h3 { font-size: 14px; text-transform: uppercase; letter-spacing: .8px; color: var(--dim); margin: 0 0 8px; }
+.target form { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+select, input, button { font: inherit; color: var(--ink); background: #2a2926; border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px; }
+select { max-width: 100%; }
+input { width: 110px; }
+button { background: var(--accent); border-color: var(--accent); color: #1a1a19; font-weight: 700; cursor: pointer; }
+button:disabled { opacity: .5; cursor: default; }
+.bar { height: 6px; background: #2a2926; border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .5s; }
+.vids { display: grid; gap: 10px; margin-top: 10px; }
+.empty { text-align: center; padding: 48px 16px; color: var(--dim); }
+.empty b { color: var(--ink); font-size: 18px; display: block; margin-bottom: 6px; }
+footer { color: var(--faint); font-size: 13px; margin-top: 30px; border-top: 1px solid var(--line); padding-top: 14px; }
+a { color: var(--bot); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Aim<span>Stats</span></h1>
+    <div id="status">Loading…</div>
+  </header>
+  <div id="top"></div>
+  <div id="scens"></div>
+  <footer id="foot"></footer>
+</main>
+<script>
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const day = d => { if (!d) return ""; const [y, m, dd] = d.split("-").map(Number); return new Date(y, m - 1, dd).toLocaleDateString(undefined, { day: "numeric", month: "short" }); };
+const media = (kind, f) => `/media/${kind}/${encodeURIComponent(f)}`;
+let lastSig = "", page = null, chosen = {};
+
+function spark(trend) {
+  if (!trend || trend.length < 2) return "";
+  const W = 300, H = 56, xs = trend.map(t => t.median), lo = Math.min(...xs), hi = Math.max(...xs) || 1, span = (hi - lo) || 1;
+  const pts = xs.map((v, i) => [4 + (W - 8) * i / (xs.length - 1), H - 6 - (H - 12) * (v - lo) / span]);
+  const last = pts[pts.length - 1];
+  return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-label="Typical score per practice day">
+    <polyline points="${pts.map(p => p.join(",")).join(" ")}" fill="none" stroke="#a19f96" stroke-width="2" vector-effect="non-scaling-stroke"/>
+    <circle cx="${last[0]}" cy="${last[1]}" r="4" fill="#f07a45"/></svg>
+    <div class="cap">Typical score on each of your last ${trend.length} practice days (${lo}–${hi}).</div>`;
+}
+
+function weekLine(w) {
+  if (w.this == null && w.last == null) return "Not enough runs yet to compare weeks.";
+  if (w.last == null) return `This week your typical score is <b>${w.this}</b> (${w.this_runs} runs). Next week you'll see if it's going up.`;
+  if (w.this == null) return `No runs this week yet. Last week your typical score was <b>${w.last}</b>.`;
+  const d = w.this - w.last;
+  const word = d > 0 ? `<span class="up">up ${d}</span>` : d < 0 ? `<span class="down">down ${-d}</span>` : "the same";
+  return `This week your typical score is <b>${w.this}</b> (${w.this_runs} runs), last week <b>${w.last}</b>: ${word}.`;
+}
+
+function card(s) {
+  const n = s.last_day_numbers, dist = n.by_distance || {};
+  const bands = Object.keys(dist);
+  const clip = s.clip ? `<video src="${media("clips", s.clip.mp4)}" poster="${media("clips", s.clip.png)}" autoplay muted loop playsinline></video>
+      <div class="cap">Best run on ${day(s.clip.date || s.last_day)}: <b>${s.clip.score}</b>. These are its 8 seconds with the most hits, rebuilt from your aim data.</div>`
+    : `<div class="box cap">The best-run clip is being made…</div>`;
+  const swing = s.swing ? `<div class="gif"><img src="${media("gifs", s.swing.gif)}" alt="Swing-past moment" loading="lazy"></div>
+      <div class="cap">From your ${esc(s.swing.time)} run on ${day(s.swing.date)}${s.swing.at != null ? `, ${Math.round(s.swing.at)} s in` : ""}: the bot kept going, your correction went through it and out the other side.
+      ${s.swing.you != null ? `In this moment you were on the bot <b>${s.swing.you}%</b> of the time; a smooth follow with your same reaction time gets <b>${s.swing.smooth}%</b>.` : ""}</div>`
+    : `<div class="cap">A swing-past moment shows up here a couple of minutes after you stop playing this scenario.</div>`;
+  const runs = s.runs.map(r => `<option value="${esc(r.file)}">${day(r.date)} ${esc(r.time)}: ${r.score}</option>`).join("");
+  return `<section class="scen" data-name="${esc(s.name)}">
+    <h2>${esc(s.title)}${s.ranked ? '<span class="chip">RANKED</span>' : ""}</h2>
+    <div class="sub">Last played ${day(s.last_day)} · ${n.runs} run${n.runs === 1 ? "" : "s"} recorded that day · ${s.runs_recorded} recorded in total${s.all_time_best ? ` · all-time best ${s.all_time_best}` : ""}</div>
+    <div class="grid">
+      <div>${clip}</div>
+      <div class="nums">
+        <div class="num"><div class="v">${n.best} <small>/ ${n.typical} typical</small></div><div class="l">Best score that day</div></div>
+        <div class="num"><div class="v">${n.on_target != null ? Math.round(n.on_target) + "%" : "–"}</div><div class="l">Time on target (typical run)</div></div>
+        <div class="num"><div class="v">${n.swing_past != null ? Math.round(n.swing_past) + "%" : "–"}</div><div class="l">Misses where you swung past the bot</div></div>
+        <div class="num"><div class="v">${n.reaction_ms != null ? Math.round(n.reaction_ms) + " ms" : "–"}</div><div class="l">Reaction when the bot changes direction</div></div>
+        ${bands.length > 1 ? `<div class="num wide"><div class="v" style="font-size:20px">${bands.map(b => `${b} <b>${dist[b]}</b>`).join(" · ")}</div><div class="l">Points per second by distance to the bot</div></div>` : ""}
+        <div class="num wide week">${weekLine(s.week)}${spark(s.trend)}</div>
+      </div>
+    </div>
+    <div class="lower">
+      <div><h3>Swing-past moment</h3>${swing}</div>
+      <div class="target"><h3>Target-score video</h3>
+        <div class="cap" style="margin:0 0 8px">Pick a run and type a score. You get a model run on the same bot movement that would score that, on its own and side by side with yours. Takes about a minute.</div>
+        <form onsubmit="return makeVideo(event, this)">
+          <select name="run">${runs}</select>
+          <input name="target" type="number" min="1" max="100000" placeholder="e.g. 700" required>
+          <button type="submit">Make video</button>
+        </form>
+        <div class="job"></div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderJobs() {
+  document.querySelectorAll(".scen").forEach(sec => {
+    const files = [...sec.querySelectorAll("option")].map(o => o.value);
+    const js = (page.jobs || []).filter(j => files.includes(j.run)).sort((a, b) => b.id - a.id);
+    const el = $(".job", sec), j = js[0];
+    const busy = (page.jobs || []).some(x => x.status === "queued" || x.status === "running");
+    sec.querySelector("button").disabled = busy;
+    if (!j) { el.innerHTML = ""; return; }
+    const sig = j.id + j.status + j.pct;
+    if (el.dataset.sig === sig) return;
+    el.dataset.sig = sig;
+    if (j.status === "done") {
+      el.innerHTML = `<div class="cap">Model run for ${j.target}${j.model_score && Math.abs(j.model_score - j.target) > j.target * 0.03 ? ` (the closest the model got was ${j.model_score})` : ""}, next to your ${j.real_score}:</div>
+        <div class="vids"><video src="${media("videos", j.side)}" controls playsinline></video>
+        <video src="${media("videos", j.solo)}" controls playsinline></video></div>
+        <div class="cap"><a href="${media("videos", j.side)}" download>Save side by side</a> · <a href="${media("videos", j.solo)}" download>Save model run</a></div>`;
+    } else if (j.status === "failed") {
+      el.innerHTML = `<div class="cap down">${esc(j.error || "Something went wrong.")}</div>`;
+    } else {
+      el.innerHTML = `<div class="cap">${esc(j.stage || "Waiting")}… ${j.pct || 0}%</div><div class="bar"><i style="width:${j.pct || 0}%"></i></div>`;
+    }
+  });
+}
+
+async function makeVideo(e, form) {
+  e.preventDefault();
+  const body = { run: form.run.value, target: Number(form.target.value) };
+  const r = await fetch("/api/target", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  const j = await r.json();
+  if (!r.ok) { $(".job", form.closest(".scen")).innerHTML = `<div class="cap down">${esc(j.error)}</div>`; return false; }
+  page.jobs = [...(page.jobs || []), j]; renderJobs(); refresh();
+  return false;
+}
+
+function render() {
+  const top = [];
+  if (!page.game_found) top.push(`<div class="box warn">AimStats couldn't find Aimbeast. Run <b>Install.bat</b> first.</div>`);
+  else if (!page.recorder_installed) top.push(`<div class="box warn">The recorder isn't installed in the game yet. Run <b>Install.bat</b>, then play a tracking scenario.</div>`);
+  if (page.warning) top.push(`<div class="box warn">${esc(page.warning)}</div>`);
+  const ev = page.events_recent || [];
+  if (ev.length) top.push(`<div class="box pb"><h2>${ev.length === 1 ? (ev[0].kind === "pb" ? "New personal best!" : "Best week yet!") : "New bests!"}</h2>
+    <div class="cap" style="margin-bottom:10px">${ev.map(e => e.kind === "pb" ? `${esc(e.title)}: <b>${e.score}</b> (old best ${e.old})` : `${esc(e.title)}: typical score over 7 days <b>${e.median}</b> (was ${e.old})`).join(" · ")}. Click a card to save it and share it.</div>
+    <div class="cards">${ev.map(e => `<a href="${media("pb", e.card)}" download><img src="${media("pb", e.card)}" alt="Share card"></a>`).join("")}</div></div>`);
+  $("#top").innerHTML = top.join("");
+  const sc = page.scenarios || [];
+  const keep = {};                                   // don't lose what someone is typing when new runs arrive
+  document.querySelectorAll(".scen").forEach(sec => { const f = $("form", sec); keep[sec.dataset.name] = [f.run.value, f.target.value]; });
+  $("#scens").innerHTML = sc.length ? sc.map(card).join("") :
+    `<div class="box empty"><b>No tracking runs yet</b>Start Aimbeast and play any tracking scenario. Your stats show up here about a minute after the run ends.</div>`;
+  const sk = page.skipped || {};
+  const skipped = [...(sk.switching || []), ...(sk.clicking || [])];
+  $("#foot").innerHTML = `Tracking scenarios only for now. Switching and clicking scenarios are recorded but not analysed yet${skipped.length ? ` (you've played ${skipped.length}: ${skipped.slice(0, 6).map(esc).join(", ")}${skipped.length > 6 ? "…" : ""})` : ""}.<br>
+    Everything stays on this PC: nothing is uploaded, and the recorder only reads from the game. ${page.last_recording ? `Newest recording: ${day(page.last_recording.slice(0, 10))} ${page.last_recording.slice(11, 13)}:${page.last_recording.slice(13, 15)}.` : ""}`;
+  document.querySelectorAll(".scen").forEach(sec => {
+    const k = keep[sec.dataset.name], f = $("form", sec);
+    if (k) { if ([...f.run.options].some(o => o.value === k[0])) f.run.value = k[0]; f.target.value = k[1]; }
+  });
+  renderJobs();
+}
+
+async function refresh() {
+  try {
+    const r = await fetch("/api/page", { cache: "no-store" });
+    page = await r.json();
+    const t = page.last_check ? new Date(page.last_check * 1000).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) : null;
+    $("#status").innerHTML = page.busy ? `<b>${esc(page.busy)}…</b>` : t ? `Watching for new runs · checked ${t}` : "Starting up…";
+    const sig = page.updated + "|" + (page.scenarios || []).length;
+    if (sig !== lastSig) { lastSig = sig; render(); } else renderJobs();
+  } catch (e) {
+    $("#status").innerHTML = `<b>AimStats isn't running.</b> Double-click "Open AimStats.bat".`;
+  }
+}
+refresh();
+setInterval(refresh, 4000);
+</script>
+</body>
+</html>

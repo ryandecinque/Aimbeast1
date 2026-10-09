@@ -1,0 +1,41 @@
+AimStats v1: test checklist
+===========================
+Takes about 15 minutes. Write down anything that confuses you, in your own words. That's the most useful part.
+
+Before you start
+[ ] Aimbeast is closed.
+[ ] Note your FPS in one tracking scenario you know well (so you can compare after).
+
+Install
+[ ] Unzip AimStats somewhere outside the game folder and double-click Install.bat.
+[ ] It says "Found Aimbeast: ..." with the right folder.
+    If it asks for the folder instead: paste your Aimbeast folder and note that it asked.
+[ ] Note what it says it added (and whether it said you already had UE4SS).
+[ ] Antivirus said nothing / flagged something (write down what).
+
+Play
+[ ] Start Aimbeast. It starts normally, with no extra windows.
+[ ] Play one normal tracking run to the end (any tracking scenario).
+[ ] Play one RANKED tracking run to the end.
+[ ] FPS is the same as before (roughly).
+
+Stats page
+[ ] Double-click "Open AimStats.bat". The page opens in your browser.
+[ ] Within about a minute of finishing a run, its scenario shows a best-run clip and numbers.
+[ ] The ranked run shows up too (with a RANKED tag).
+[ ] Stop playing for a few minutes: a swing-past moment appears under the scenario.
+[ ] Target-score video: pick a run, type a score a bit above it, press Make video.
+    It finishes in a minute or two and both videos play.
+[ ] Anything on the page you didn't understand? Write it down.
+
+Uninstall
+[ ] Close Aimbeast and the AimStats window. Double-click Uninstall.bat.
+[ ] It says it removed the files and put the game back.
+[ ] Start Aimbeast once more: it starts normally and nothing is recorded.
+[ ] In Aimbeast\Aimbeast\Binaries\Win64 there's no dwmapi.dll and no ue4ss folder left
+    (unless you had UE4SS before AimStats; then your own setup should be just as it was).
+
+Send back
+- What it said at install and uninstall (a screenshot is fine).
+- Anything confusing, broken or slow.
+- The file data\aimstats.log from the AimStats folder, if something went wrong.
