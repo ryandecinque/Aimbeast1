@@ -40,6 +40,7 @@ def write(name, Wd, Ht, frame_fn, p0, p1):
     print("wrote", name)
 
 
+NOTE = "Bot height estimated from hits" if R.EST else ""
 MODEL = f"Model tuned to {target}" + (f" (closest it got: {R.sim_score})" if abs(R.sim_score - target) > 0.03 * target else "")     + (", same movement as your run" if R.moves else "")
 def solo(i, final=False):
     i = min(i, end - 1)
@@ -49,6 +50,9 @@ def side(i, final=False):
     im = Image.new("RGB", (1920, 560), (14, 14, 13))
     im.paste(R.view(944, 531, i, R.YAW[i], R.PIT[i], real_score if final else R.real_cum[i], f"You, real run ({real_score})", 0 if final else R.t_left(i)), (10, 18))
     im.paste(R.view(944, 531, i, *R.sim[i], R.sim_score if final else R.sim_cum[i], MODEL, 0 if final else R.t_left(i)), (966, 18))
+    if NOTE:
+        from PIL import ImageDraw
+        ImageDraw.Draw(im).text((1904, 556), NOTE, fill=(150, 150, 146), anchor="rd")
     return im
 write(out + "_solo.mp4", 1280, 720, solo, 20, 50)
 write(out + "_side.mp4", 1920, 560, side, 50, 99)

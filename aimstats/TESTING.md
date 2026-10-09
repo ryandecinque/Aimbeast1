@@ -123,6 +123,14 @@ python build_zip.py --python python-3.11.9-embed-amd64.zip --ffmpeg imageio_ffmp
   - The "failed its safety checks" notice was checked in the browser.
 - `aimstats/FOR-YOUR-FRIEND.txt`: the message for a friend, 227 words.
 
+## Fixed: flying bots in older recordings (before phase 5)
+- `model_run.py` already took a flying bot's visible height from the aim at each hit, joined up in between and lightly smoothed, whenever the root height was clearly wrong.
+  - On the Air Track 526 and Sphere S 853 runs from 9 Oct this was active, and the drawn ball sat on the crosshair at hits.
+- **Change:** the model's aim now also follows that estimated height. Before, it copied the player's pitch. Model clips and target-score videos now say "Bot height estimated from hits".
+- **Re-made with best_run_gif's 8-second windows:**
+  - **Air Track (window 2379–2859):** at its 85 hits the ball centre is a median 0.11° from the crosshair. The model's dot is 0.63° from the centre while on target, against a ball radius of about 2.8°. +20% reached: 634 against a target of 631.
+  - **Sphere S (2776–3256):** 0.02° at its 154 hits. The model's dot is 0.19° from the centre, against a radius of about 0.8°. +20% wasn't reachable (943 against 1024), and the clip says so.
+
 ## Not tested yet (needs Ryan or a friend)
 - The game starting and recording with the installed files. That needs a real install, and the decision says nothing installs until Ryan says go.
 - A clean Windows account.
