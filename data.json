@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-09 11:41",
- "updated_utc": "2026-10-09T04:41:20Z",
+ "updated": "2026-10-09 12:26",
+ "updated_utc": "2026-10-09T05:26:19Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
@@ -817,7 +817,7 @@
  "days": [
   {
    "date": "2026-10-09",
-   "runs": 54,
+   "runs": 55,
    "restarts": 42,
    "rest_median_s": 51,
    "rest_longest_s": 794,
@@ -839,6 +839,12 @@
      "before": "(single scenario)",
      "at": "11:06",
      "minutes": 0.3
+    },
+    {
+     "after": "(single scenario)",
+     "before": "(single scenario)",
+     "at": "11:39",
+     "minutes": 36.7
     }
    ],
    "playlists": [
@@ -856,9 +862,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 12,
+     "runs": 13,
      "first": "11:07",
-     "last": "11:39"
+     "last": "12:16"
     }
    ],
    "scenarios": [
@@ -896,11 +902,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK (EZ)",
-     "runs": 3,
+     "runs": 4,
      "routine": "ZEUS BUILDER",
      "first": "09:52",
      "best": 652,
-     "median": 531
+     "median": 536
     },
     {
      "name": "GROUND PLAZA FS NO UFO",
@@ -1533,13 +1539,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 246,
+  "runs": 247,
   "days": 4,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 71,
-    "pct": 98.4
+    "runs": 72,
+    "pct": 98.6
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1553,8 +1559,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 16,
-    "pct": 98.8
+    "runs": 17,
+    "pct": 99.2
    }
   ]
  },
@@ -1706,14 +1712,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK EZ",
-    "runs": 3,
-    "on_target": 35,
+    "runs": 4,
+    "on_target": 36,
     "reaction_ms": 133,
-    "overshoot_pct": 33,
+    "overshoot_pct": 36,
     "pps_by_distance": {
-     "far": 8.7,
-     "mid": 10.3,
-     "close": 8.8
+     "far": 8.4,
+     "mid": 9.9,
+     "close": 9.2
     }
    }
   ]
