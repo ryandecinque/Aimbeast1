@@ -39,10 +39,27 @@ model's kill happens. The whole run ends sooner. Nothing is invented.
   nearest factor is used and the label shows the real % ("Same bots, 22% faster").
 - Several bots can be alive at once. Each one keeps its own real path, shifted to its new spawn time, so the spacing
   between bots is approximate. The video says so.
-- Samples at 1.2x (2026-10-09): VOX TS BALANCED - 150% reaches 1.20x (49.3 s vs 59.3 s; 35 of 69 bots matched to Ryan),
-  POPCORN - M reaches 1.22x (48.7 s vs 59.5 s; 26 of 37 matched).
-- PASU XYZ (Bazhan, clicking, 2026-10-09 11:38): 16/16 kills, reaches 1.17x (46.9 s vs 55.0 s; 10 of 16 matched).
-  Not PASU TRACK XYZ (tierem), which is tracking and refused.
+
+## Clicking scenarios (1-health bots)
+Sitting on a 1-health bot until it dies is bad clicking technique (Ryan, 2026-10-09), so these use a different model:
+- It flicks and clicks. A click on the bot kills it. Ryan loses these runs to misses (PASU XYZ: 49 of 65 clicks missed),
+  so the model is **Ryan with fewer misses**.
+- On each bot it takes Ryan's own time from the last kill to his first click, then clicks with his own gaps between
+  clicks on that bot. It keeps only a share of the clicks he missed there: each kept miss lands just beside the bot,
+  and the last click is on the bot and kills it. Only that share is tuned to reach the factor.
+- Its aim matches the bot's speed as it settles, so it doesn't trail a moving bot. A kill waits until the dot is on
+  the bot, for as long as the bot's real path lasts. A miss waits until the dot is off it.
+- The dot shows a ring on every click, in both halves of the video. The end card counts clicks and misses for both.
+- The report gives `misses_kept`, `model_misses` vs `ryan_misses`, and `kills_with_dot_off_bot`. That last one should be
+  0. A non-zero count means the bot's real path ran out before the dot reached it, and the kill was forced.
+
+## Samples at 1.2x (2026-10-09)
+- VOX TS BALANCED - 150% (switching, tracks each bot down): 1.20x (49.3 s vs 59.3 s; 35 of 69 bots matched to Ryan).
+- PASU XYZ (Bazhan, clicking, 11:38): 16/16 kills, 1.20x (45.8 s vs 55.0 s). It keeps 76% of Ryan's misses (37 of
+  53 clicks missed vs his 49 of 65), and every kill lands with the dot on the bot.
+- POPCORN - M (clicking): 1.21x (49.3 s vs 59.5 s), keeping 32% of Ryan's misses (7 vs 22). 3 kills are forced with
+  the dot off the bot.
+- PASU TRACK XYZ (tierem) is a tracking scenario, so it's refused.
 
 ## Older recordings
 - Files from before the kill counter (VOX 125%, TRM, SUMO, 2026-10-08 20:2x) can't be checked, so they're skipped.

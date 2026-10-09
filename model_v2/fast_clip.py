@@ -10,6 +10,11 @@
 # the kill lands at Ryan's own time. So no bot ever lives longer than its recorded path. Only the steady pace is tuned,
 # until the total time is real time / factor; if that can't be hit, the nearest factor is used and labelled.
 #
+# Clicking scenarios (1-health bots): the model doesn't sit on a bot, it flicks and clicks. It is Ryan with fewer
+# misses: on each bot it takes Ryan's own time to its first click, then clicks with Ryan's own gaps, but drops some
+# of the clicks he missed (a kept miss lands just beside the bot); the last click is on the bot and kills it. Its aim
+# matches the bot's speed as it settles, so it doesn't trail behind. Only the share of misses kept is tuned.
+#
 # Outputs: <out>_side.mp4 (real left, model right, model holds a "done in Xs" card) and <out>_solo.mp4 (model only).
 # Usage: python model_v2/fast_clip.py <run csv> <out prefix> [factor=1.2]
 import bisect, math, os, statistics as st, subprocess, sys
@@ -133,11 +138,23 @@ def build(a, R):
         streaks.append(s)
     need = max(DT, st.median(streaks))
     hits = a["hits"][kills[-1]["i"]] - a["hits"][s0]
-    return dict(kills=kills, t0=t0, Y=Y, need=need, hpk=max(1, round(hits / len(kills))), hits=hits)
+    hpk = max(1, round(hits / len(kills)))
+    # clicking: Ryan's presses (m1 going down) and his rhythm, the median gap between presses less than 1 s apart
+    presses = [T[i] - t0 for i in range(s0 + 1, kills[-1]["i"] + 1) if a["rows"][i].get("m1") == "1" and a["rows"][i - 1].get("m1") != "1"]
+    gaps = [b - x for x, b in zip(presses, presses[1:]) if b - x < 1.0]
+    click = a["rules"].get("settings", {}).get("ScenarioType") == "CLICKING" and hpk == 1 and len(gaps) >= 5
+    rt = [0.0] + [k["t"] - t0 for k in kills]
+    per_bot = [[x for x in presses if rt[n] < x <= rt[n + 1] + 1e-9] for n in range(len(kills))]
+    rmiss = [max(0, len(b) - 1) for b in per_bot]
+    first = [(b[0] if b else rt[n + 1]) - rt[n] for n, b in enumerate(per_bot)]     # kill -> his first click on the next bot
+    bgaps = [[y - x for x, y in zip(b, b[1:])] for b in per_bot]                     # his gaps between clicks on each bot
+    return dict(kills=kills, t0=t0, Y=Y, need=0.0 if click else need, hpk=hpk, hits=hits, click=click,
+                gap=st.median(gaps) if gaps else None, presses=presses, rmiss=rmiss, first=first, bgaps=bgaps)
 
 W_MAX = 240          # stiffest spring tried when the model has to keep up with Ryan on a bot
+W_CLICK = 20         # clicking: fixed flick strength (settles on a bot in about a quarter of a second)
 
-def simulate(a, R, M, w, pred=1.0):
+def simulate(a, R, M, w, pred=1.0, q=1.0):
     """Runs the model with steady aim strength w, one kill at a time.
     Each kill: the model reacts DELAY late, flicks with the spring, and stays on the bot until it has had Ryan's own
     time on target for a kill. If that steady pace would take longer than Ryan took on this bot (his time from his
@@ -161,66 +178,96 @@ def simulate(a, R, M, w, pred=1.0):
         if L.spawn == "kill": by_kill.setdefault(L.after_kill, []).append(L)
     idx_of = {n: a["kills"].index(k) for n, k in enumerate(kills)}
     real_t = [0.0] + [k["t"] - t0 for k in kills]               # Ryan's kill times (0 = run start)
+    cum = [0]                                                    # clicking: misses kept per bot, share q of Ryan's
+    for m in M.get("rmiss", []): cum.append(cum[-1] + m)
+    keep = [math.floor(q * cum[n + 1] + 1e-9) - math.floor(q * cum[n] + 1e-9) for n in range(len(cum) - 1)]
 
-    def segment(state, k, w_, deadline, hold=None):
+    def segment(state, k, w_, deadline, hold=None, misses=0, sched=None):
         """Steps from state until kill k lands (or the deadline passes). With hold, the kill waits until that time
         (the model stays on the bot). Returns (state, aim samples, kill step or None)."""
         sy, sp_, vy, vp, step = state
-        aim, dmg = [], 0.0
+        aim, dmg, clicks, last, since = [], 0.0, [], None, None
         L = kills[k]["life"]
         while True:
             tau = step * DT
-            if tau > deadline + 1e-9: return (sy, sp_, vy, vp, step), aim, None
+            if tau > deadline + 1e-9: return (sy, sp_, vy, vp, step), aim, None, clicks
             seen = tau - DELAY                                   # what the model sees: the world DELAY ago
             kt_seen = sum(1 for x in kt if x <= seen)
             tgt = kills[min(kt_seen, len(kills) - 1)]["life"]
             p = lpos(tgt, seen) if seen >= 0 else None
             if p is not None:
                 ty, tp = bot_angles(cam(seen), p, sy)
+                tvy = tvp = 0.0
                 if seen - 2 * DT >= spawn[id(tgt)]:
                     py, pp = bot_angles(cam(seen - 2 * DT), lpos(tgt, seen - 2 * DT), sy)
-                    ty += pred * (ty - py) / (2 * DT) * DELAY; tp += pred * (tp - pp) / (2 * DT) * DELAY
+                    tvy, tvp = (ty - py) / (2 * DT), (tp - pp) / (2 * DT)
+                    ty += pred * tvy * DELAY; tp += pred * tvp * DELAY
+                if not M["click"]: tvy = tvp = 0.0              # clicking: match the bot's speed, don't trail it
+                elif tgt is L:
+                    c_ = cam(seen); ang_r = math.degrees(math.atan(R / max(1.0, math.dist(c_, p))))
+                    if misses: ty += (1 if (k + misses) % 2 else -1) * 1.7 * ang_r     # a miss: just beside the bot
+            aim_pt = (ty, tp) if p is not None else None
+            if p is not None:
                 for _ in range(SUB):                             # small steps keep a stiff spring stable
-                    ay = w_ * w_ * (ty - sy) - 2 * w_ * vy; ap = w_ * w_ * (tp - sp_) - 2 * w_ * vp
+                    ay = w_ * w_ * (ty - sy) + 2 * w_ * (tvy - vy); ap = w_ * w_ * (tp - sp_) + 2 * w_ * (tvp - vp)
                     vy += ay * DT / SUB; vp += ap * DT / SUB
                     sy += vy * DT / SUB; sp_ += vp * DT / SUB
             else:
                 vy *= 0.9; vp *= 0.9; sy += vy * DT; sp_ += vp * DT
             aim.append((tau, sy, sp_))
             pos = lpos(L, tau)
+            if M["click"]:
+                # clicks on Ryan's own schedule for this bot; the kept misses go beside it, the last click kills it
+                # (the killing click waits until the dot is on the bot, a missed one until it's off it)
+                if sched and tau >= sched[len(clicks)] - DT / 2:
+                    final = len(clicks) == len(sched) - 1
+                    on = pos is not None and on_target(cam(tau), sy, sp_, pos, R)
+                    if final != on: step += 1; continue
+                    clicks.append((tau, final, on))
+                    if final: return (sy, sp_, vy, vp, step + 1), aim, step, clicks
+                    misses = max(0, misses - 1)
+                step += 1; continue
             if pos is not None and on_target(cam(tau), sy, sp_, pos, R): dmg += DT
             step += 1
-            if dmg >= M["need"] - 1e-9 and (hold is None or tau >= hold - 1e-9): return (sy, sp_, vy, vp, step), aim, step - 1
+            if dmg >= M["need"] - 1e-9 and (hold is None or tau >= hold - 1e-9): return (sy, sp_, vy, vp, step), aim, step - 1, clicks
 
     state = (a["yaw"][s0], a["pitch"][s0], 0.0, 0.0, 0)
-    aim, matched, forced, forced_off = [], [], [], 0
+    aim, matched, forced, forced_off, clicks = [], [], [], 0, []
     for k in range(len(kills)):
         prev = kt[-1] if kt else 0.0
         L = kills[k]["life"]
-        deadline = min(prev + (real_t[k + 1] - real_t[k]),        # Ryan's own time on this bot
+        deadline = min(prev + (real_t[k + 1] - real_t[k]) if not M["click"] else 1e9,   # Ryan's own time on this bot
                        spawn[id(L)] + T[L.i1] - T[L.i0])          # and never past its last recorded position
-        st_, seg, ks = segment(state, k, w, deadline)
+        # (clicking: the killing click may wait for the dot to reach the bot, while the bot's real path lasts)
+        sched = None
+        if M["click"]:
+            g = M["bgaps"][k]; c0 = prev + max(M["first"][k], DELAY + 0.1)
+            sched = [c0 + sum(g[:j]) for j in range(keep[k] + 1)]
+        st_, seg, ks, cl = segment(state, k, w, deadline, misses=keep[k] if M["click"] else 0, sched=sched)
         if ks is None:                                           # steady pace is slower than Ryan here: keep up
             w_used = w
-            while ks is None and w_used < W_MAX:
+            while ks is None and w_used < W_MAX:                 # (clicking: same clicks, a quicker flick onto the bot)
                 w_used = min(W_MAX, w_used * 1.25)
-                st_, seg, ks = segment(state, k, w_used, deadline)
+                st_, seg, ks, cl = segment(state, k, w_used, deadline, misses=keep[k] if M["click"] else 0, sched=sched)
             if ks is None:                                       # even the stiffest flick can't: kill at Ryan's time
                 ks = int(math.floor(deadline / DT + 1e-9))
                 seg = [x for x in seg if x[0] <= ks * DT + 1e-9]
                 st_ = st_[:4] + (ks + 1,)
                 pos = lpos(kills[k]["life"], ks * DT)
                 if not (pos and seg and on_target(cam(ks * DT), seg[-1][1], seg[-1][2], pos, R)): forced_off += 1
+                cl = [c for c in cl if c[0] <= ks * DT + 1e-9] + [(ks * DT, True, bool(pos and seg and on_target(cam(ks * DT), seg[-1][1], seg[-1][2], pos, R)))]
                 forced.append(k + 1)
-            else:                                                # the kill lands at Ryan's own time on this bot
-                st_, seg, ks = segment(state, k, w_used, deadline, hold=math.floor(deadline / DT + 1e-9) * DT)
+            elif M["click"]:                                     # clicking: the kill lands on the click, no waiting
                 matched.append(k + 1)
-        state = st_; aim += seg
+            else:                                                # the kill lands at Ryan's own time on this bot
+                st_, seg, ks, cl = segment(state, k, w_used, deadline, hold=math.floor(deadline / DT + 1e-9) * DT)
+                matched.append(k + 1)
+        state = st_; aim += seg; clicks += cl
         tau = ks * DT; kt.append(tau)
         for NL in by_kill.get(idx_of[k], []):                    # lives this kill brought in
             spawn[id(NL)] = tau + (T[NL.i0] - kills[k]["t"])
-    return dict(aim=aim, kt=kt, spawn=spawn, done=len(kt) == len(kills), w=w, lpos=lpos,
-                matched=matched, forced=forced, forced_off=forced_off)
+    return dict(aim=aim, kt=kt, spawn=spawn, done=len(kt) == len(kills), w=w, q=q, lpos=lpos,
+                matched=matched, forced=forced, forced_off=forced_off, clicks=clicks)
 
 def overruns(a, M, s):
     """Bots shown past their real path (should always be empty): [(kill number, seconds short)]."""
@@ -234,6 +281,12 @@ def tune(a, R, M, factor):
     """Steady aim strength from soft to stiff; picks the one whose total time is closest to real / factor."""
     want = M["Y"] / factor
     best = None
+    if M["click"]:                                               # clicking: share of Ryan's misses kept, from all to none
+        for q in [1 - x / 50 for x in range(51)]:
+            s = simulate(a, R, M, W_CLICK, q=q); s["X"] = s["kt"][-1]
+            if best is None or abs(s["X"] - want) < abs(best["X"] - want): best = s
+        best["over"] = overruns(a, M, best)
+        return best
     for w in [2 + 2 * x for x in range(0, 60)]:
         s = simulate(a, R, M, w)
         s["X"] = s["kt"][-1]
@@ -253,7 +306,7 @@ try:
 except Exception: FB = FM = FS = FBIG = ImageFont.load_default()
 BG_TOP, BG_BOT, GRID, BOTC, AIMC, INK, DIM, ACC = (44, 46, 48), (30, 31, 32), (78, 80, 82), (90, 225, 215), (255, 60, 60), (240, 240, 236), (170, 170, 164), (255, 200, 90)
 
-def view(Wd, Ht, cam, ay, ap, bots, R, shape, floor, hfov, hud):
+def view(Wd, Ht, cam, ay, ap, bots, R, shape, floor, hfov, hud, click=None):
     """One frame in the player's own view, drawn like pb_video.py: floor grid, horizon, bots, red dot, HUD."""
     f = (Wd / 2) / math.tan(math.radians(hfov / 2))
     im = Image.new("RGB", (Wd, Ht), BG_BOT); d = ImageDraw.Draw(im)
@@ -288,6 +341,9 @@ def view(Wd, Ht, cam, ay, ap, bots, R, shape, floor, hfov, hud):
         rx = max(3, R / fz * f); ry = rx if shape == "sphere" else max(6, 2.2 * R / fz * f)
         d.rounded_rectangle([cx - rx, cy - ry, cx + rx, cy + ry], radius=rx, fill=BOTC)
     d.ellipse([Wd / 2 - 3, Ht / 2 - 3, Wd / 2 + 3, Ht / 2 + 3], fill=AIMC)
+    if click is not None:                                                # a click in the last 0.12 s: ring around the dot
+        r_ = 9 + 60 * click
+        d.ellipse([Wd / 2 - r_, Ht / 2 - r_, Wd / 2 + r_, Ht / 2 + r_], outline=INK, width=2)
     hud(d, Wd, Ht)
     return im
 
@@ -317,11 +373,16 @@ def make(path, out, factor=1.2, render=True):
                   bots_matched_to_ryan=len(sim["matched"]) + len(sim["forced"]),
                   bots_at_ryans_exact_time=len(sim["forced"]), of_those_not_on_target_at_kill=sim["forced_off"],
                   bots_past_real_path=len(sim["over"]))
+    if M["click"]:
+        report.update(clicking=True, misses_kept=round(sim["q"], 2), click_gap_s=round(M["gap"], 3), ryan_clicks=len(M["presses"]), ryan_misses=len(M["presses"]) - len(M["kills"]),
+                      model_clicks=len(sim["clicks"]), model_misses=sum(1 for c in sim["clicks"] if not c[1]),
+                      kills_with_dot_off_bot=sum(1 for c in sim["clicks"] if c[1] and not c[2]),
+                      misses_with_dot_on_bot=sum(1 for c in sim["clicks"] if not c[1] and c[2]))
     if sim["over"]: raise SystemExit(f"bug: bots shown past their real path {sim['over']}")
     if abs(f_got - factor) <= 0.03: report["verdict"] = "ok"
     else:
         report["verdict"] = (f"{factor}x isn't reachable on this run (the model's total time jumps past it as the aim gets "
-                             f"stronger); nearest: {f_got}x.")
+                             f"stronger{' / misses drop' if M['click'] else ''}); nearest: {f_got}x.")
     if not render: return report
     draw(a, R, shape, est, M, sim, f_got, out)
     return report
@@ -335,6 +396,12 @@ def draw(a, R, shape, est, M, sim, factor, out):
     lab_m = f"Same bots, {round(100 * (factor - 1))}% faster"
     note = "Same bots, same order, real paths" + (", same movement as your run" if moved else "") + ". Spacing between bots is approximate." + (" Bot height estimated from hits." if est else "")
     real_kt = [k["t"] - t0 for k in M["kills"]]
+    def ring(times, tau):
+        """Seconds since the latest click if it was in the last 0.12 s (for the ring), else None."""
+        k = bisect.bisect_right(times, tau + 1e-9) - 1
+        return tau - times[k] if k >= 0 and tau - times[k] < 0.12 else None
+    real_clicks = M["presses"] if M["click"] else []
+    model_clicks = [c[0] for c in sim["clicks"]]
     def real_frame(Wd, Ht, tau, final=False):
         i = min(bisect.bisect_left(T, t0 + tau), a["n"] - 1)
         bots = [life_pos(L, T[i]) for L in a["lives"] if alive(a, L, i)]
@@ -346,7 +413,7 @@ def draw(a, R, shape, est, M, sim, factor, out):
             d.text((Wd / 2, Ht - 28), title, fill=INK, font=FS, anchor="mm")
             if final:
                 d.text((Wd / 2, Ht / 2 - 80), f"done in {Y:.1f}s", fill=ACC, font=FBIG, anchor="mm")
-        return view(Wd, Ht, a["cam"][i], a["yaw"][i], a["pitch"][i], bots, R, shape, floor, HF, hud)
+        return view(Wd, Ht, a["cam"][i], a["yaw"][i], a["pitch"][i], bots, R, shape, floor, HF, hud, ring(real_clicks, tau))
     aim = sim["aim"]
     def model_frame(Wd, Ht, tau, caption=True):
         done = tau >= X
@@ -373,8 +440,12 @@ def draw(a, R, shape, est, M, sim, factor, out):
                 d.rectangle([Wd / 2 - 300, Ht / 2 - 135, Wd / 2 + 300, Ht / 2 + 12], fill=(20, 20, 19))
                 d.text((Wd / 2, Ht / 2 - 100), f"done in {X:.1f}s", fill=ACC, font=FBIG, anchor="mm")
                 d.text((Wd / 2, Ht / 2 - 50), f"real: {Y:.1f}s  ({nk} kills each)", fill=INK, font=FM, anchor="mm")
-                d.text((Wd / 2, Ht / 2 - 8), "On bots you already killed fast, the model matches you.", fill=DIM, font=FS, anchor="mm")
-        return view(Wd, Ht, cam_at(a, t0 + tq), ay, ap, bots, R, shape, floor, HF, hud)
+                if M["click"]:
+                    nm = sum(1 for c in sim["clicks"] if not c[1])
+                    d.text((Wd / 2, Ht / 2 - 8), f"Clicks: {len(sim['clicks'])} ({nm} missed) vs your {len(real_clicks)} ({len(real_clicks) - nk} missed)", fill=DIM, font=FS, anchor="mm")
+                else:
+                    d.text((Wd / 2, Ht / 2 - 8), "On bots you already killed fast, the model matches you.", fill=DIM, font=FS, anchor="mm")
+        return view(Wd, Ht, cam_at(a, t0 + tq), ay, ap, bots, R, shape, floor, HF, hud, None if done else ring(model_clicks, tq))
 
     def write(name, Wd, Ht, frames):
         p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{Wd}x{Ht}", "-r", "30", "-i", "-",
