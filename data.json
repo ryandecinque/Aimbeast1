@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-09 08:39",
- "updated_utc": "2026-10-09T01:39:34Z",
+ "updated": "2026-10-09 09:10",
+ "updated_utc": "2026-10-09T02:10:22Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
@@ -1447,9 +1447,9 @@
    {
     "scenario": "AIR CONTROL SPHERE",
     "runs": 2,
-    "on_target": 46,
+    "on_target": 52,
     "reaction_ms": 101,
-    "overshoot_pct": 30,
+    "overshoot_pct": 29,
     "pps_by_distance": {
      "mid": 14.1,
      "close": 16.1
@@ -1458,9 +1458,9 @@
    {
     "scenario": "AIR CONTROL SPHERE - S - RANKED",
     "runs": 8,
-    "on_target": 40,
+    "on_target": 46,
     "reaction_ms": null,
-    "overshoot_pct": 34,
+    "overshoot_pct": 37,
     "pps_by_distance": {
      "mid": 12.2,
      "close": 12.1
@@ -1469,9 +1469,9 @@
    {
     "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
     "runs": 8,
-    "on_target": 45,
+    "on_target": 49,
     "reaction_ms": 75,
-    "overshoot_pct": 39,
+    "overshoot_pct": 41,
     "pps_by_distance": {
      "far": 7.4,
      "mid": 8.4,
@@ -1491,7 +1491,7 @@
   ]
  },
  "aim_moments": {
-  "updated": "2026-10-08",
+  "updated": "2026-10-09",
   "focus": "Ease into the bot and match its speed. No hard stops, no swinging past it.",
   "moments": [
    {
@@ -1520,6 +1520,33 @@
     "text": "Even when I'm on the bot, my aim speed pulses: too fast, then too slow, about three times a second. The smooth version just matches the bot's speed.",
     "you": 85,
     "smooth": 96
+   },
+   {
+    "file": "spheres-overshoot",
+    "title": "Swinging past the bot: Sphere S",
+    "scenario": "Air Control Sphere - S",
+    "run": "Fri 9 Oct, 07:53 (734)",
+    "text": "The bot keeps going the same way, and my catch-up goes through it and out the other side. This scenario only shows left-right: the recorder can't see the bot's real height here.",
+    "you": 24,
+    "smooth": 91
+   },
+   {
+    "file": "airtrack-overshoot",
+    "title": "Swinging past the bot: Air Track",
+    "scenario": "Air Track Smooth V3 150%",
+    "run": "Fri 9 Oct, 07:37 (479)",
+    "text": "Same habit on a flying bot: a fast correction that doesn't brake in time, then a correction back. Left-right only, for the same reason as Sphere S.",
+    "you": 29,
+    "smooth": 82
+   },
+   {
+    "file": "smooththin-overshoot",
+    "title": "Swinging past the bot: Smooth Thin",
+    "scenario": "Smooth Thin Track V2",
+    "run": "Fri 9 Oct, 07:28 (436)",
+    "text": "I'm close, speed up to close the gap, and end up on the far side of a thin bot. The smooth version eases in and just matches its speed.",
+    "you": 40,
+    "smooth": 87
    }
   ]
  },
@@ -1544,9 +1571,9 @@
     "score": 853,
     "time": "07:55",
     "gif": "best-spheres-2026-10-09",
-    "on_target": 48,
+    "on_target": 51,
     "reaction_ms": null,
-    "overshoot_pct": 25,
+    "overshoot_pct": 27,
     "best_14d": 853,
     "master3": 880,
     "note": "Best of 8 today (median 740). A new best, above my old 842. The clip is its 8 seconds with the most hits."
@@ -1556,9 +1583,9 @@
     "score": 526,
     "time": "07:35",
     "gif": "best-airtrack-2026-10-09",
-    "on_target": 45,
+    "on_target": 50,
     "reaction_ms": 67,
-    "overshoot_pct": 38,
+    "overshoot_pct": 41,
     "best_14d": 545,
     "master3": 660,
     "note": "Best of 8 today (median 482). The clip is its 8 seconds with the most hits."
