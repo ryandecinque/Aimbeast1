@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-09 10:56",
- "updated_utc": "2026-10-09T03:56:19Z",
+ "updated": "2026-10-09 11:01",
+ "updated_utc": "2026-10-09T04:01:19Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
    "RANK INT A": 26,
-   "ZEUS BUILDER": 11
+   "ZEUS BUILDER": 13
   }
  },
  "plan_start": "2026-10-07",
@@ -811,9 +811,9 @@
  "days": [
   {
    "date": "2026-10-09",
-   "runs": 37,
-   "restarts": 33,
-   "rest_median_s": 55,
+   "runs": 39,
+   "restarts": 34,
+   "rest_median_s": 57,
    "rest_longest_s": 794,
    "breaks": [
     {
@@ -838,9 +838,9 @@
     },
     {
      "name": "ZEUS BUILDER",
-     "runs": 11,
+     "runs": 13,
      "first": "09:52",
-     "last": "10:56"
+     "last": "10:59"
     }
    ],
    "scenarios": [
@@ -918,11 +918,19 @@
     },
     {
      "name": "CLOSELY STRAFING KYTAN",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS BUILDER",
      "first": "10:56",
      "best": 506,
-     "median": 506
+     "median": 485
+    },
+    {
+     "name": "TAMTARGETSWITCH SMOOTH EASY VSB",
+     "runs": 1,
+     "routine": "ZEUS BUILDER",
+     "first": "10:59",
+     "best": 27,
+     "median": 27
     }
    ]
   },
@@ -1459,13 +1467,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 229,
+  "runs": 231,
   "days": 4,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 61,
-    "pct": 98.8
+    "runs": 62,
+    "pct": 99.0
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1474,8 +1482,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 84,
-    "pct": 102.0
+    "runs": 85,
+    "pct": 102.2
    },
    {
     "label": "First run after a break of 15 min+",
@@ -1548,12 +1556,12 @@
    },
    {
     "scenario": "CLOSELY STRAFING KYTAN",
-    "runs": 1,
-    "on_target": 23,
+    "runs": 2,
+    "on_target": 22,
     "reaction_ms": 150,
-    "overshoot_pct": 59,
+    "overshoot_pct": 63,
     "pps_by_distance": {
-     "close": 8.4
+     "close": 8.0
     }
    },
    {
@@ -1606,6 +1614,17 @@
     "overshoot_pct": 33,
     "pps_by_distance": {
      "mid": 7.2
+    }
+   },
+   {
+    "scenario": "TAMTARGETSWITCH SMOOTH EASY VSB",
+    "runs": 1,
+    "on_target": 82,
+    "reaction_ms": 33,
+    "overshoot_pct": 0,
+    "pps_by_distance": {
+     "mid": 13.7,
+     "close": 14.8
     }
    },
    {
