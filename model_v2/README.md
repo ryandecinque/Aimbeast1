@@ -27,11 +27,16 @@ model's kill happens. The whole run ends sooner. Nothing is invented.
 - The spring is critically damped, so a flick to the next bot never goes past it.
 - It stays on each bot until it dies. The time on target a kill takes is Ryan's own: the median unbroken stretch he
   spent on each bot right before killing it.
-- Only the spring strength is tuned, until the total time is the real time ÷ factor.
+- It is never slower than Ryan on any single bot. If its steady pace would take longer than Ryan did (from his
+  previous kill to this one), it flicks harder and the kill lands at Ryan's own time. The end card says so.
+  Because of this, a bot's model life is never longer than its real one, so no bot is ever frozen or shown past
+  its recorded path (the script stops with an error if one would be).
+- Only the steady pace is tuned, until the total time is the real time ÷ factor. If that can't be reached, the
+  nearest factor is used and the label shows the real % ("Same bots, 22% faster").
 - Several bots can be alive at once. Each one keeps its own real path, shifted to its new spawn time, so the spacing
   between bots is approximate. The video says so.
-- If a bot's real path ends before the model would kill it, the run can't be shown at that factor. The script then
-  reports which bots ran out and uses the nearest factor that works.
+- Samples at 1.2x (2026-10-09): VOX TS BALANCED - 150% reaches 1.20x (49.3 s vs 59.3 s; 35 of 69 bots matched to Ryan),
+  POPCORN - M reaches 1.22x (48.7 s vs 59.5 s; 26 of 37 matched).
 
 ## Older recordings
 - Files from before the kill counter (VOX 125%, TRM, SUMO, 2026-10-08 20:2x) can't be checked, so they're skipped.

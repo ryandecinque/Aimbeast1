@@ -5,8 +5,10 @@
 #
 # The model: same human reaction (~130 ms) and spring-follow aim as ideal_run_video.py. It flicks to each next target
 # with no over-aim (a critically damped spring can't overshoot a still target), then stays on it until the bot dies.
-# Time on target needed per kill is Ryan's own from the run: his time on target per hit x hits per kill.
-# Only the aim strength is tuned, until the model's total time is real time / factor.
+# Time on target needed per kill is Ryan's own from the run (his median stretch on a bot right before each kill).
+# The model is never slower than Ryan on any single bot: where its steady pace would be, it keeps up (stiffer flick) and
+# the kill lands at Ryan's own time. So no bot ever lives longer than its recorded path. Only the steady pace is tuned,
+# until the total time is real time / factor; if that can't be hit, the nearest factor is used and labelled.
 #
 # Outputs: <out>_side.mp4 (real left, model right, model holds a "done in Xs" card) and <out>_solo.mp4 (model only).
 # Usage: python model_v2/fast_clip.py <run csv> <out prefix> [factor=1.2]
@@ -124,9 +126,15 @@ def build(a, R):
     hits = a["hits"][kills[-1]["i"]] - a["hits"][s0]
     return dict(kills=kills, t0=t0, Y=Y, need=need, hpk=max(1, round(hits / len(kills))), hits=hits)
 
+W_MAX = 240          # stiffest spring tried when the model has to keep up with Ryan on a bot
+
 def simulate(a, R, M, w, pred=1.0):
-    """Runs the model with aim strength w. Returns per-step aim, the model kill times, each life's model spawn time,
-    and the lives whose real path ran out before the model killed them."""
+    """Runs the model with steady aim strength w, one kill at a time.
+    Each kill: the model reacts DELAY late, flicks with the spring, and stays on the bot until it has had Ryan's own
+    time on target for a kill. If that steady pace would take longer than Ryan took on this bot (his time from his
+    previous kill to this one), the flick is made stiffer until it keeps up; if even the stiffest flick can't, the kill
+    lands at Ryan's own time. So the model is never slower than Ryan on any bot, and since every bot's model life is
+    then no longer than its real one, no bot is ever shown past its recorded path."""
     T, s0, cam0 = a["T"], a["start"], a["cam"][a["start"]]
     kills, t0 = M["kills"], M["t0"]
     spawn = {}                                                   # life -> model spawn time (s after run start)
@@ -138,70 +146,95 @@ def simulate(a, R, M, w, pred=1.0):
         s = spawn.get(id(L))
         if s is None or tau < s: return None
         return life_pos(L, T[L.i0] + (tau - s))
-    def ran_out(L, tau): return T[L.i0] + (tau - spawn[id(L)]) > T[L.i1] + 1.5 / 60
     by_kill = {}
     for L in a["lives"]:
         if L.spawn == "kill": by_kill.setdefault(L.after_kill, []).append(L)
-    kno = {id(k["life"]): n for n, k in enumerate(kills)}       # life -> order in the kill list
     idx_of = {n: a["kills"].index(k) for n, k in enumerate(kills)}
-    sy, sp_ = a["yaw"][s0], a["pitch"][s0]; vy = vp = 0.0
-    aim, k, dmg, tau, bad = [], 0, 0.0, 0.0, []
-    limit = M["Y"] * 1.6 + 5
-    while k < len(kills) and tau < limit:
-        # what the model sees: the world DELAY ago (the current target as of then)
-        seen = tau - DELAY
-        kt_seen = sum(1 for x in kt if x <= seen)
-        tgt_seen = kills[min(kt_seen, len(kills) - 1)]["life"]
-        p = lpos(tgt_seen, max(seen, 0.0)) if seen >= 0 else None
-        if p is not None:
-            p2 = lpos(tgt_seen, max(seen - 2 * DT, spawn[id(tgt_seen)]))
-            ty, tp = bot_angles(cam0, p, sy)
-            py, pp = bot_angles(cam0, p2, sy)
-            ty += pred * (ty - py) / (2 * DT) * DELAY * (seen - 2 * DT >= spawn[id(tgt_seen)])
-            tp += pred * (tp - pp) / (2 * DT) * DELAY * (seen - 2 * DT >= spawn[id(tgt_seen)])
-            for _ in range(SUB):                                 # small steps keep a stiff spring stable
-                ay = w * w * (ty - sy) - 2 * w * vy; ap = w * w * (tp - sp_) - 2 * w * vp
-                vy += ay * DT / SUB; vp += ap * DT / SUB
-                sy += vy * DT / SUB; sp_ += vp * DT / SUB
-        else:
-            vy *= 0.9; vp *= 0.9
-            sy += vy * DT; sp_ += vp * DT
-        aim.append((tau, sy, sp_))
-        # damage on the real current target
+    real_t = [0.0] + [k["t"] - t0 for k in kills]               # Ryan's kill times (0 = run start)
+
+    def segment(state, k, w_, deadline, hold=None):
+        """Steps from state until kill k lands (or the deadline passes). With hold, the kill waits until that time
+        (the model stays on the bot). Returns (state, aim samples, kill step or None)."""
+        sy, sp_, vy, vp, step = state
+        aim, dmg = [], 0.0
         L = kills[k]["life"]
-        pos = lpos(L, tau)
-        if pos is not None and on_target(cam0, sy, sp_, pos, R): dmg += DT
-        if pos is not None and ran_out(L, tau) and id(L) not in {id(x) for x in bad}: bad.append(L)
-        if dmg >= M["need"]:
-            kt.append(tau); dmg = 0.0
-            real_k = kills[k]
-            for NL in by_kill.get(idx_of[k], []):                 # lives this kill brought in
-                spawn[id(NL)] = tau + (T[NL.i0] - real_k["t"])
-            k += 1
-        tau += DT
-    return dict(aim=aim, kt=kt, spawn=spawn, bad=bad, done=k == len(kills), w=w, lpos=lpos)
+        while True:
+            tau = step * DT
+            if tau > deadline + 1e-9: return (sy, sp_, vy, vp, step), aim, None
+            seen = tau - DELAY                                   # what the model sees: the world DELAY ago
+            kt_seen = sum(1 for x in kt if x <= seen)
+            tgt = kills[min(kt_seen, len(kills) - 1)]["life"]
+            p = lpos(tgt, seen) if seen >= 0 else None
+            if p is not None:
+                ty, tp = bot_angles(cam0, p, sy)
+                if seen - 2 * DT >= spawn[id(tgt)]:
+                    py, pp = bot_angles(cam0, lpos(tgt, seen - 2 * DT), sy)
+                    ty += pred * (ty - py) / (2 * DT) * DELAY; tp += pred * (tp - pp) / (2 * DT) * DELAY
+                for _ in range(SUB):                             # small steps keep a stiff spring stable
+                    ay = w_ * w_ * (ty - sy) - 2 * w_ * vy; ap = w_ * w_ * (tp - sp_) - 2 * w_ * vp
+                    vy += ay * DT / SUB; vp += ap * DT / SUB
+                    sy += vy * DT / SUB; sp_ += vp * DT / SUB
+            else:
+                vy *= 0.9; vp *= 0.9; sy += vy * DT; sp_ += vp * DT
+            aim.append((tau, sy, sp_))
+            pos = lpos(L, tau)
+            if pos is not None and on_target(cam0, sy, sp_, pos, R): dmg += DT
+            step += 1
+            if dmg >= M["need"] - 1e-9 and (hold is None or tau >= hold - 1e-9): return (sy, sp_, vy, vp, step), aim, step - 1
+
+    state = (a["yaw"][s0], a["pitch"][s0], 0.0, 0.0, 0)
+    aim, matched, forced, forced_off = [], [], [], 0
+    for k in range(len(kills)):
+        prev = kt[-1] if kt else 0.0
+        L = kills[k]["life"]
+        deadline = min(prev + (real_t[k + 1] - real_t[k]),        # Ryan's own time on this bot
+                       spawn[id(L)] + T[L.i1] - T[L.i0])          # and never past its last recorded position
+        st_, seg, ks = segment(state, k, w, deadline)
+        if ks is None:                                           # steady pace is slower than Ryan here: keep up
+            w_used = w
+            while ks is None and w_used < W_MAX:
+                w_used = min(W_MAX, w_used * 1.25)
+                st_, seg, ks = segment(state, k, w_used, deadline)
+            if ks is None:                                       # even the stiffest flick can't: kill at Ryan's time
+                ks = int(math.floor(deadline / DT + 1e-9))
+                seg = [x for x in seg if x[0] <= ks * DT + 1e-9]
+                st_ = st_[:4] + (ks + 1,)
+                pos = lpos(kills[k]["life"], ks * DT)
+                if not (pos and seg and on_target(cam0, seg[-1][1], seg[-1][2], pos, R)): forced_off += 1
+                forced.append(k + 1)
+            else:                                                # the kill lands at Ryan's own time on this bot
+                st_, seg, ks = segment(state, k, w_used, deadline, hold=math.floor(deadline / DT + 1e-9) * DT)
+                matched.append(k + 1)
+        state = st_; aim += seg
+        tau = ks * DT; kt.append(tau)
+        for NL in by_kill.get(idx_of[k], []):                    # lives this kill brought in
+            spawn[id(NL)] = tau + (T[NL.i0] - kills[k]["t"])
+    return dict(aim=aim, kt=kt, spawn=spawn, done=len(kt) == len(kills), w=w, lpos=lpos,
+                matched=matched, forced=forced, forced_off=forced_off)
 
 def overruns(a, M, s):
-    """Bots whose real path ends before the model kills them: [(kill number, seconds short)]."""
+    """Bots shown past their real path (should always be empty): [(kill number, seconds short)]."""
     T, out = a["T"], []
     for n, k in enumerate(M["kills"][:len(s["kt"])]):
         L = k["life"]; short = (s["kt"][n] - s["spawn"][id(L)]) - (T[L.i1] - T[L.i0])
-        if short > 1.5 / 60: out.append((n + 1, round(short, 2)))
+        if short > 1e-6: out.append((n + 1, round(short, 3)))
     return out
 
 def tune(a, R, M, factor):
-    """Every aim strength from soft to stiff. Picks the one whose total time is closest to real / factor among those
-    where no bot runs past its real path. Returns (sim, sim closest to the asked factor ignoring paths)."""
+    """Steady aim strength from soft to stiff; picks the one whose total time is closest to real / factor."""
     want = M["Y"] / factor
-    runs = []
-    for w in range(10, 101, 2):
+    best = None
+    for w in [2 + 2 * x for x in range(0, 60)]:
         s = simulate(a, R, M, w)
-        if not s["done"]: continue
-        s["X"] = s["kt"][-1]; s["over"] = overruns(a, M, s); runs.append(s)
-    if not runs: return None, None
-    asked = min(runs, key=lambda s: abs(s["X"] - want))
-    ok = [s for s in runs if not s["over"] and s["X"] < M["Y"]]
-    return (min(ok, key=lambda s: abs(math.log(M["Y"] / s["X"] / factor))) if ok else None), asked
+        s["X"] = s["kt"][-1]
+        if best is None or abs(s["X"] - want) < abs(best["X"] - want): best = s
+        if s["X"] < want - 0.3: break
+    w0 = best["w"]                                               # finer steps around it: total time jumps between strengths
+    for w in [w0 + d / 4 for d in range(-8, 9) if d and w0 + d / 4 > 0]:
+        s = simulate(a, R, M, w); s["X"] = s["kt"][-1]
+        if abs(s["X"] - want) < abs(best["X"] - want): best = s
+    best["over"] = overruns(a, M, best)
+    return best
 
 # ---------------------------------------------------------------------------------------------------- drawing
 try:
@@ -266,18 +299,17 @@ def make(path, out, factor=1.2, render=True):
     M = build(a, R)
     report.update(radius=round(R), shape=shape, height_from_hits=est, need_on_target_s=round(M["need"], 3), hits_per_kill=M["hpk"],
                   real_s=round(M["Y"], 2), kills=len(M["kills"]))
-    sim, asked = tune(a, R, M, factor)
-    if asked:
-        report["at_asked"] = dict(factor=round(M["Y"] / asked["X"], 2), bots_past_real_path=len(asked["over"]),
-                                  worst_short_s=max([o[1] for o in asked["over"]], default=0), which=asked["over"][:10])
-    if sim is None:
-        report["verdict"] = f"no aim strength gets through without a bot running past its real path"; return report
+    sim = tune(a, R, M, factor)
     X = sim["X"]; f_got = round(M["Y"] / X, 2)
-    report.update(factor=f_got, factor_asked=factor, model_s=round(X, 2), w=sim["w"])
+    report.update(factor=f_got, factor_asked=factor, model_s=round(X, 2), steady_w=sim["w"],
+                  bots_matched_to_ryan=len(sim["matched"]) + len(sim["forced"]),
+                  bots_at_ryans_exact_time=len(sim["forced"]), of_those_not_on_target_at_kill=sim["forced_off"],
+                  bots_past_real_path=len(sim["over"]))
+    if sim["over"]: raise SystemExit(f"bug: bots shown past their real path {sim['over']}")
     if abs(f_got - factor) <= 0.03: report["verdict"] = "ok"
     else:
-        report["verdict"] = (f"{factor}x isn't possible on this run: {len(asked['over'])} bots' real paths end before the model "
-                             f"reaches them (worst by {report['at_asked']['worst_short_s']}s). Nearest that works: {f_got}x.")
+        report["verdict"] = (f"{factor}x isn't reachable on this run (the model's total time jumps past it as the aim gets "
+                             f"stronger); nearest: {f_got}x.")
     if not render: return report
     draw(a, R, shape, est, M, sim, f_got, out)
     return report
@@ -288,8 +320,7 @@ def draw(a, R, shape, est, M, sim, factor, out):
     cam0 = a["cam"][s0]
     floor = a["floor"]
     title = a["scenario"]; nk = len(M["kills"])
-    pct = round(100 * (factor - 1))
-    lab_m = f"Same bots, {pct}% faster"
+    lab_m = f"Same bots, {round(100 * (factor - 1))}% faster"
     note = "Same bots, same order, real paths. Spacing between bots is approximate." + (" Bot height estimated from hits." if est else "")
     real_kt = [k["t"] - t0 for k in M["kills"]]
     def real_frame(Wd, Ht, tau, final=False):
@@ -327,9 +358,10 @@ def draw(a, R, shape, est, M, sim, factor, out):
             d.text((Wd / 2, Ht - 28), title, fill=INK, font=FS, anchor="mm")
             if caption: d.text((Wd - 14, Ht - 8), note, fill=(120, 120, 116), font=FS, anchor="rd")
             if done:
-                d.rectangle([Wd / 2 - 300, Ht / 2 - 135, Wd / 2 + 300, Ht / 2 - 25], fill=(20, 20, 19))
+                d.rectangle([Wd / 2 - 300, Ht / 2 - 135, Wd / 2 + 300, Ht / 2 + 12], fill=(20, 20, 19))
                 d.text((Wd / 2, Ht / 2 - 100), f"done in {X:.1f}s", fill=ACC, font=FBIG, anchor="mm")
                 d.text((Wd / 2, Ht / 2 - 50), f"real: {Y:.1f}s  ({nk} kills each)", fill=INK, font=FM, anchor="mm")
+                d.text((Wd / 2, Ht / 2 - 8), "On bots you already killed fast, the model matches you.", fill=DIM, font=FS, anchor="mm")
         return view(Wd, Ht, cam0, ay, ap, bots, R, shape, floor, HF, hud)
 
     def write(name, Wd, Ht, frames):
