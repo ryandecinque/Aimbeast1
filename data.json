@@ -1,10 +1,11 @@
 {
- "updated": "2026-10-09 09:40",
- "updated_utc": "2026-10-09T02:40:33Z",
+ "updated": "2026-10-09 09:56",
+ "updated_utc": "2026-10-09T02:56:29Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
-   "RANK INT A": 26
+   "RANK INT A": 26,
+   "ZEUS BUILDER": 1
   }
  },
  "plan_start": "2026-10-07",
@@ -810,17 +811,30 @@
  "days": [
   {
    "date": "2026-10-09",
-   "runs": 26,
-   "restarts": 20,
-   "rest_median_s": 57,
+   "runs": 27,
+   "restarts": 23,
+   "rest_median_s": 55,
    "rest_longest_s": 794,
-   "breaks": [],
+   "breaks": [
+    {
+     "after": "RANK INT A",
+     "before": "ZEUS BUILDER",
+     "at": "08:16",
+     "minutes": 95.2
+    }
+   ],
    "playlists": [
     {
      "name": "RANK INT A",
      "runs": 26,
      "first": "07:05",
      "last": "08:16"
+    },
+    {
+     "name": "ZEUS BUILDER",
+     "runs": 1,
+     "first": "09:52",
+     "last": "09:52"
     }
    ],
    "scenarios": [
@@ -855,6 +869,14 @@
      "first": "07:47",
      "best": 853,
      "median": 740
+    },
+    {
+     "name": "ZEUS TRACK EVO - NOBLINK (EZ)",
+     "runs": 1,
+     "routine": "ZEUS BUILDER",
+     "first": "09:52",
+     "best": 531,
+     "median": 531
     }
    ]
   },
@@ -1391,13 +1413,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 218,
+  "runs": 219,
   "days": 4,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 55,
-    "pct": 98.8
+    "runs": 56,
+    "pct": 99.0
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1411,8 +1433,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 14,
-    "pct": 96.5
+    "runs": 15,
+    "pct": 99.2
    }
   ]
  },
@@ -1433,9 +1455,9 @@
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK EZ",
     "runs": 1,
-    "on_target": 37,
+    "on_target": 39,
     "reaction_ms": 133,
-    "overshoot_pct": 42,
+    "overshoot_pct": 43,
     "pps_by_distance": {
      "far": 7.6,
      "mid": 10.2,
@@ -1486,6 +1508,18 @@
     "overshoot_pct": 33,
     "pps_by_distance": {
      "mid": 7.2
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - NOBLINK EZ",
+    "runs": 1,
+    "on_target": 35,
+    "reaction_ms": 150,
+    "overshoot_pct": 33,
+    "pps_by_distance": {
+     "far": 7.9,
+     "mid": 10.3,
+     "close": 8.8
     }
    }
   ]
