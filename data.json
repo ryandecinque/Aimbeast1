@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-09 09:34",
- "updated_utc": "2026-10-09T02:34:51Z",
+ "updated": "2026-10-09 09:40",
+ "updated_utc": "2026-10-09T02:40:33Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
@@ -1527,8 +1527,8 @@
     "scenario": "Air Control Sphere - S",
     "run": "Fri 9 Oct, 07:53 (734)",
     "text": "The bot keeps going the same way, and my catch-up goes through it and out the other side. This scenario only shows left-right: the recorder can't see the bot's real height here.",
-    "you": 24,
-    "smooth": 91
+    "you": 29,
+    "smooth": 94
    },
    {
     "file": "airtrack-overshoot",
@@ -1536,8 +1536,8 @@
     "scenario": "Air Track Smooth V3 150%",
     "run": "Fri 9 Oct, 07:37 (479)",
     "text": "Same habit on a flying bot: a fast correction that doesn't brake in time, then a correction back. Left-right only, for the same reason as Sphere S.",
-    "you": 29,
-    "smooth": 82
+    "you": 35,
+    "smooth": 96
    },
    {
     "file": "smooththin-overshoot",
@@ -1562,7 +1562,8 @@
     "overshoot_pct": 40,
     "best_14d": 553,
     "master3": 726,
-    "note": "Best of 5 recorded runs today (469, 537, 476, 514, 514). The clip is its 8 seconds with the most hits."
+    "note": "Best of 5 recorded runs today (469, 537, 476, 514, 514). The clip is its 8 seconds with the most hits.",
+    "video": true
    }
   ],
   "2026-10-09": [
@@ -1576,7 +1577,8 @@
     "overshoot_pct": 27,
     "best_14d": 853,
     "master3": 880,
-    "note": "Best of 8 today (median 740). My best since Sep 23 (was 842). All-time best is 878. The clip is its 8 seconds with the most hits."
+    "note": "Best of 8 today (median 740). My best since Sep 23 (was 842). All-time best is 878. The clip is its 8 seconds with the most hits.",
+    "video": true
    },
    {
     "scenario": "Air Track Smooth V3 150%",
@@ -1588,7 +1590,8 @@
     "overshoot_pct": 41,
     "best_14d": 545,
     "master3": 660,
-    "note": "Best of 8 today (median 482). The clip is its 8 seconds with the most hits."
+    "note": "Best of 8 today (median 482). The clip is its 8 seconds with the most hits.",
+    "video": true
    },
    {
     "scenario": "Smooth Thin Track V2",
@@ -1600,7 +1603,8 @@
     "overshoot_pct": 19,
     "best_14d": 490,
     "master3": 616,
-    "note": "Best of 8 today (median 438). The clip is its 8 seconds with the most hits."
+    "note": "Best of 8 today (median 438). The clip is its 8 seconds with the most hits.",
+    "video": true
    }
   ]
  },
