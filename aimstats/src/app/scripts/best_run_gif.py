@@ -4,9 +4,9 @@ import csv, math, sys
 from PIL import Image, ImageDraw, ImageFont
 
 path, score, label, out = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
-from aim_analysis import moving_ids
+from aim_analysis import moving_ids, thin60
 import config
-rows = list(csv.DictReader(config.open_run(path)))
+rows = thin60(list(csv.DictReader(config.open_run(path))))
 IDS = moving_ids(rows)                            # skip bots left over from earlier scenarios (they never move)
 S = []
 for r in rows:

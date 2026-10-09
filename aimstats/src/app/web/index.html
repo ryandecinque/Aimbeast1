@@ -125,7 +125,7 @@ function aimTrends(t) {
   if (!t || t.length < 2) return `<div class="cap">Aim numbers over time show up after your second practice day.</div>`;
   return `<div class="l" style="color:var(--dim);font-size:13px;margin-top:10px">Aim numbers on each practice day (typical run)</div><div class="minis">
     ${mini(t.map(d => d.on_target), "On target", v => Math.round(v) + "%")}
-    ${mini(t.map(d => d.swing_past), "Swing-past (lower is better)", v => Math.round(v) + "%")}
+    ${mini(t.map(d => d.swing_past), "Over-aim (lower is better)", v => Math.round(v) + "%")}
     ${mini(t.map(d => d.pps), "Hits per second", v => v.toFixed(1))}</div>`;
 }
 
@@ -139,7 +139,7 @@ function restText(r) {
 function runTable(s) {
   const rest = !!page.practice, hits = s.unit === "hits";
   return `<details><summary>All recorded runs (${s.runs_recorded}${s.runs_recorded > s.runs.length ? `, newest ${s.runs.length} shown` : ""})</summary><div class="tbl"><table>
-    <tr><th>Day</th><th>Time</th><th>${hits ? "Hits" : "Score"}</th><th>On target</th><th>Swing-past</th><th>Hits/s</th>${rest ? "<th>Rest before</th>" : ""}</tr>
+    <tr><th>Day</th><th>Time</th><th>${hits ? "Hits" : "Score"}</th><th>On target</th><th>Over-aim</th><th>Hits/s</th>${rest ? "<th>Rest before</th>" : ""}</tr>
     ${s.runs.map(r => `<tr><td>${day(r.date)}</td><td>${esc(r.time)}</td><td>${r.score}</td><td>${Math.round(r.on_target)}%</td>
       <td>${r.swing_past != null ? Math.round(r.swing_past) + "%" : "–"}</td><td>${r.pps ?? "–"}</td>${rest ? `<td>${restText(r.rest)}</td>` : ""}</tr>`).join("")}
   </table></div></details>`;
@@ -220,10 +220,10 @@ function card(s) {
       <div class="cap">Same run, 20% better: something to model your aim on.${m.reached ? "" : ` The model reached ${m.model_score}, the closest it could get to ${m.target}.`}
       Same bot movement and the same human reaction time; only the smoothness changes.</div></div>` : "")
     : `<div class="box cap">No video for this scenario yet. Tick it under Videos at the top, or press Make clip.</div>`) + makeBtn;
-  const swing = s.swing ? `<div class="gif"><img src="${media("gifs", s.swing.gif)}" alt="Swing-past moment" loading="lazy"></div>
-      <div class="cap">From your ${esc(s.swing.time)} run on ${day(s.swing.date)}${s.swing.at != null ? `, ${Math.round(s.swing.at)} s in` : ""}: the bot kept going, your correction went through it and out the other side.
+  const swing = s.swing ? `<div class="gif"><img src="${media("gifs", s.swing.gif)}" alt="Over-aim moment" loading="lazy"></div>
+      <div class="cap">From your ${esc(s.swing.time)} run on ${day(s.swing.date)}${s.swing.at != null ? `, ${Math.round(s.swing.at)} s in` : ""}: the bot kept going and you over-aimed, going through it and out the other side.
       ${s.swing.you != null ? `In this moment you were on the bot <b>${s.swing.you}%</b> of the time; a smooth follow with your same reaction time gets <b>${s.swing.smooth}%</b>.` : ""}</div>`
-    : `<div class="cap">A swing-past moment shows up here a couple of minutes after you stop playing this scenario.</div>`;
+    : `<div class="cap">An over-aim moment shows up here a couple of minutes after you stop playing this scenario.</div>`;
   const runs = s.runs.map(r => `<option value="${esc(r.file)}">${day(r.date)} ${esc(r.time)}: ${r.score}</option>`).join("");
   return `<section class="scen" data-name="${esc(s.name)}">
     <h2>${esc(s.title)}${s.ranked ? '<span class="chip">RANKED</span>' : ""}</h2>
@@ -233,14 +233,14 @@ function card(s) {
       <div class="nums">
         <div class="num"><div class="v">${n.best} <small>/ ${n.typical} typical</small></div><div class="l">${hits ? "Most hits that day (the game's score didn't match, so these are hits)" : "Best score that day"}</div></div>
         <div class="num"><div class="v">${n.on_target != null ? Math.round(n.on_target) + "%" : "–"}</div><div class="l">Time on target (typical run)</div></div>
-        <div class="num"><div class="v">${n.swing_past != null ? Math.round(n.swing_past) + "%" : "–"}</div><div class="l">Misses where you swung past the bot</div></div>
+        <div class="num"><div class="v">${n.swing_past != null ? Math.round(n.swing_past) + "%" : "–"}</div><div class="l">Over-aim: misses where you went past the bot</div></div>
         <div class="num"><div class="v">${n.reaction_ms != null ? Math.round(n.reaction_ms) + " ms" : "–"}</div><div class="l">Reaction when the bot changes direction</div></div>
         ${bands.length > 1 ? `<div class="num wide"><div class="v" style="font-size:20px">${bands.map(b => `${b} <b>${dist[b]}</b>`).join(" · ")}</div><div class="l">Hits per second by distance to the bot</div></div>` : ""}
         <div class="num wide week">${weekLine(s.week)}${spark(s.trend)}${aimTrends(s.aim_trend)}</div>
       </div>
     </div>
     <div class="lower">
-      <div><h3>Swing-past moment</h3>${swing}</div>
+      <div><h3>Over-aim moment</h3>${swing}</div>
       <div class="target"><h3>Target-score video</h3>
         <div class="cap" style="margin:0 0 8px">Pick a run and type a score. You get a model run on the same bot movement that would score that, on its own and side by side with yours. Takes about a minute.</div>
         <form onsubmit="return makeVideo(event, this)">

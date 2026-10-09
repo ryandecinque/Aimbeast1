@@ -78,7 +78,7 @@ print("   settings: GuiConsoleEnabled = 0:", "GuiConsoleEnabled = 0" in ini, "| 
       "| EnableDumping = 0:", "EnableDumping = 0" in ini)
 print("   mods.txt:", open(os.path.join(wA, "ue4ss", "Mods", "mods.txt")).read().strip().replace("\n", " | "))
 rec = open(os.path.join(wA, "ue4ss", "Mods", "AimRecorder", "Scripts", "main.lua")).read()
-print("   recorder: phase 5:", "phase 5" in rec, "| RECORD_RANKED = true:", "local RECORD_RANKED = true" in rec)
+print("   recorder: phase 6:", "phase 6" in rec, "| 120/s clicking:", "CLICK_RATE = 1 / 120" in rec, "| RECORD_RANKED = true:", "local RECORD_RANKED = true" in rec)
 listed = sorted(f["path"] for f in man["created_files"]) == d["extra"]
 print("   manifest lists exactly the added files:", listed)
 # pretend the game ran: a recording, the practice log and UE4SS's log

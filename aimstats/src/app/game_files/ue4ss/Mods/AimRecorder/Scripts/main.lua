@@ -1,7 +1,7 @@
--- AimRecorder, phase 5: READ-ONLY recorder (up to 8 bots with id, health and visible body position, plus kills and misses). Never writes to the game, never changes scores.
--- AimStats copy. During a run (ranked runs too) it samples 60 times a second: camera aim and position,
--- every bot's position, the hit counter and whether M1 is held. It only reads these values; it never sets
--- scores, timers, bots or anything ranked. Samples stay in memory and are written once, when the run ends,
+-- AimRecorder, phase 6: READ-ONLY recorder (up to 8 bots with id, health and visible body position, plus kills and misses). Never writes to the game, never changes scores.
+-- AimStats copy. During a run (ranked runs too) it samples 60 times a second (120 in clicking runs): camera aim
+-- and position, every bot's position, the hit counter and whether M1 is held. It only reads these values; it never
+-- sets scores, timers, bots or anything ranked. Samples stay in memory and are written once, when the run ends,
 -- to its own folder. F7 turns recording on/off.
 -- Output: ue4ss/Mods/AimRecorder/runs/<date>_<time>_<scenario>.csv, summary lines in log.txt
 local TAG = "[AimRecorder] "
@@ -10,6 +10,8 @@ local HUD = "/Game/Aimbeast/UI/HUD/T_HUD.T_HUD_C"
 local PAWN = "/Game/Aimbeast/Player/Trainer/AB_C_Trainer.AB_C_Trainer_C"
 local MAIN_GI = "/Game/Aimbeast/Main_GI.Main_GI_C"
 local RATE = 1 / 60
+local CLICK_RATE = 1 / 120       -- clicking runs (6+ separate clicks) switch to 120 snapshots a second for click timing
+local CLICK_PRESSES = 6
 local MAXBOTS = 8                  -- switching scenarios have 4-6 bots at once (phase 3, 2026-10-08)
 local RECORD_RANKED = true         -- ranked runs are recorded too. Still read-only.
 
@@ -46,7 +48,8 @@ local function startRun()
     rec = nil
     if not enabled then return end
     if scenario:find("RANKED", 1, true) and not RECORD_RANKED then log("skipping ranked run: " .. scenario); return end
-    rec = { rows = {}, t = 0, acc = 0, bots = {}, cost = 0, ticks = 0, samples = 0, started = os.date("%Y-%m-%d_%H%M%S") }
+    rec = { rows = {}, t = 0, acc = 0, bots = {}, cost = 0, ticks = 0, samples = 0, started = os.date("%Y-%m-%d_%H%M%S"),
+            rate = RATE, presses = 0, lastm1 = false, first = {}, moved = {} }
 end
 
 local function sample(r)
@@ -60,6 +63,13 @@ local function sample(r)
         cm = pc and pc:IsValid() and pc.PlayerCameraManager or nil; r.cm = cm
         if not (cm and cm:IsValid()) then return end
     end
+    -- clicking runs: many separate presses (tracking is one long hold) -> sample twice as often from here on
+    local m1 = pawn["isMouseLeftDown?"] and true or false
+    if m1 and not r.lastm1 then
+        r.presses = r.presses + 1
+        if r.presses >= CLICK_PRESSES and r.rate ~= CLICK_RATE then r.rate = CLICK_RATE; r.clicking = true end
+    end
+    r.lastm1 = m1
     local rot = cm:GetCameraRotation()
     local loc = cm:GetCameraLocation()
     -- bots: re-find when any is gone, and every 30 samples so newly spawned bots are noticed
@@ -72,8 +82,13 @@ local function sample(r)
         local b = r.bots[i]
         if b:IsValid() then
             local p = b:K2_GetActorLocation()
-            parts[#parts + 1] = string.format("%d,%.1f,%.1f,%.1f,%.1f", b:GetAddress(), p.X, p.Y, p.Z, b.Health or -1)
-                .. "," .. partPos(b, "c_middle_c") .. "," .. partPos(b, "sphere_c") .. "," .. partPos(b, "c_head")
+            local a = b:GetAddress()
+            -- bots left over from earlier scenarios stand still: only read body parts for bots that have moved this run
+            local f = r.first[a]
+            if not f then r.first[a] = { p.X, p.Y, p.Z }
+            elseif not r.moved[a] and math.abs(p.X - f[1]) + math.abs(p.Y - f[2]) + math.abs(p.Z - f[3]) > 50 then r.moved[a] = true end
+            parts[#parts + 1] = string.format("%d,%.1f,%.1f,%.1f,%.1f", a, p.X, p.Y, p.Z, b.Health or -1) .. "," ..
+                (r.moved[a] and (partPos(b, "c_middle_c") .. "," .. partPos(b, "sphere_c") .. "," .. partPos(b, "c_head")) or ",,,,,,,,")
         else
             parts[#parts + 1] = ",,,,,,,,,,,,,"
         end
@@ -95,8 +110,8 @@ local function endRun(reason)
         f:write(head .. "\n")
         f:write(table.concat(r.rows, "\n")); f:write("\n"); f:close()
     end
-    log(string.format("%s: %s, %d samples over %.1f s, cost %.3f ms per sample, %.4f ms per frame (%d frames) -> %s",
-        reason, scenario, r.samples, r.t, r.samples > 0 and 1000 * r.cost / r.samples or 0, r.ticks > 0 and 1000 * r.cost / r.ticks or 0, r.ticks, path))
+    log(string.format("%s: %s%s, %d samples over %.1f s, cost %.3f ms per sample, %.4f ms per frame (%d frames) -> %s",
+        reason, scenario, r.clicking and " (clicking, 120/s)" or "", r.samples, r.t, r.samples > 0 and 1000 * r.cost / r.samples or 0, r.ticks > 0 and 1000 * r.cost / r.ticks or 0, r.ticks, path))
 end
 
 local hooked = { hud = false, pawn = false, gi = false }
@@ -126,8 +141,8 @@ local function tryHooks()
                 local dt = 0
                 pcall(function() dt = DeltaSeconds:get() end)
                 r.t = r.t + dt; r.acc = r.acc + dt; r.ticks = r.ticks + 1
-                if r.acc >= RATE then
-                    r.acc = r.acc % RATE
+                if r.acc >= r.rate then
+                    r.acc = r.acc % r.rate
                     local ok, err = pcall(sample, r)
                     if not ok then
                         r.errors = (r.errors or 0) + 1
@@ -147,4 +162,4 @@ RegisterKeyBind(Key.F7, function()
     log("recording " .. (enabled and "ON" or "OFF") .. " (F7)")
 end)
 RegisterHook("/Script/Engine.PlayerController:ClientRestart", function() tryHooks() end)
-log("loaded (phase 5 recorder, read-only, ranked " .. (RECORD_RANKED and "on" or "off") .. ")")
+log("loaded (phase 6 recorder, read-only, ranked " .. (RECORD_RANKED and "on" or "off") .. ")")

@@ -6,7 +6,7 @@
 # body position (phase 5) or, for older recordings of flying bots, from the aim at hit moments.
 import csv, math, os, statistics as st
 from PIL import Image, ImageDraw, ImageFont
-from aim_analysis import moving_ids, height_source
+from aim_analysis import moving_ids, height_source, thin60
 import config, scenario_profile
 
 DT = 1 / 60
@@ -22,7 +22,7 @@ class Run:
         self.hfov = config.fov()
         scen = os.path.basename(path)[18:].replace(".gz", "").replace(".csv", "").replace("_", " ").strip()
         self.scen, self.title = scen, " ".join(scen.split())
-        rows = list(csv.DictReader(config.open_run(path)))
+        rows = thin60(list(csv.DictReader(config.open_run(path))))
         ids = moving_ids(rows); src = height_source(rows, ids)
         P = lambda r, k, a: r[f"b{k}_{src}{a}"] if src and r.get(f"b{k}_{src}z") else r[f"b{k}_{a}"]
         T, CAM, YAW, PIT, BOT, HITS = [], [], [], [], [], []

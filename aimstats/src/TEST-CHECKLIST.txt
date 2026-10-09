@@ -25,7 +25,7 @@ Stats page
 [ ] In the Videos panel at the top, tick a scenario and press Make videos: a best-run clip and a
     "20% better" side by side appear on its card within a minute or two.
 [ ] The ranked run shows up too (with a RANKED tag).
-[ ] Stop playing for a few minutes: a swing-past moment appears under the scenario.
+[ ] Stop playing for a few minutes: an over-aim moment appears under the scenario.
 [ ] Target-score video: pick a run, type a score a bit above it, press Make video.
     It finishes in a minute or two and both videos play.
 [ ] Anything on the page you didn't understand? Write it down.

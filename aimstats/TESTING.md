@@ -59,6 +59,15 @@ python build_zip.py --python python-3.11.9-embed-amd64.zip --ffmpeg imageio_ffmp
   - Pennytracking 630 to 757, Slow Accel 300 to 359, Smooth Thin 452 to 538 (target 542). About 4 s per clip.
 - Target-score video re-checked after the change: Pennytracking 630 with a target of 700, the model reached 710.
 
+## Added: "over-aim" wording and recorder phase 6
+- **"Over-aim" wording.** "Swing-past", "swinging past the bot" and "overshoot" now read "over-aim" everywhere players see them: the page, the README, the checklist and the text in the GIFs ("No over-aiming.", "over-aim: past the bot"). Internal names are unchanged.
+- **Recorder phase 6**, copied from Ryan's live file (the live file wasn't touched), still read-only (checked: no writes).
+  - Body parts are read only for bots that moved more than 50 units this run.
+  - Runs with 6 or more separate clicks are sampled 120 times a second.
+- **`thin60()`** in aim_analysis thins such files back to 60 a second; the render scripts use it too.
+  - On normal files it returns them untouched. The results are identical with and without it on Sphere S and Smooth Thin runs.
+  - A test file at 120 a second (7345 rows) came back as 3669 rows; the original has 3673.
+
 ## Not tested yet (needs Ryan or a friend)
 - The game starting and recording with the installed files. That needs a real install, and the decision says nothing installs until Ryan says go.
 - A clean Windows account.

@@ -167,7 +167,7 @@ def work(first=False):
             tag = f"{scen}|{date}"
             if watch["gifs"].get(tag, {}).get("n") == len(runs): continue
             title, _ = title_of(scen)
-            status["busy"] = f"Finding a swing-past moment in {title}"
+            status["busy"] = f"Finding an over-aim moment in {title}"
             out = os.path.join(MEDIA["gifs"], f"{slug(scen)}-{date}.gif")
             os.makedirs(MEDIA["gifs"], exist_ok=True)
             done = {"n": len(runs)}

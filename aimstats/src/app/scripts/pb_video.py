@@ -7,13 +7,13 @@
 #   .gif output: set CLIP=<first sample>,<last sample> for a short full-view clip (640x360, real speed)
 import csv, math, subprocess, sys, statistics as st
 from PIL import Image, ImageDraw, ImageFont
-from aim_analysis import moving_ids, height_source
+from aim_analysis import moving_ids, height_source, thin60
 import config
 
 path, score, title, out = sys.argv[1], int(sys.argv[2]), sys.argv[3], sys.argv[4]
 caption = sys.argv[5] if len(sys.argv) > 5 else ""
 HFOV, DT = config.fov(), 1 / 60
-rows = list(csv.DictReader(config.open_run(path)))
+rows = thin60(list(csv.DictReader(config.open_run(path))))
 IDS = moving_ids(rows)
 SRC = height_source(rows, IDS)          # "m" body / "s" sphere / "" root
 P = lambda r, k, a: r[f"b{k}_{SRC}{a}"] if SRC and r.get(f"b{k}_{SRC}z") else r[f"b{k}_{a}"]

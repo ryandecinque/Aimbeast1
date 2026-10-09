@@ -4,11 +4,11 @@
 # Usage: python weak_moment_auto.py <run csv> <out.gif> [@seconds]
 import csv, math, os, statistics as st, sys
 from PIL import Image, ImageDraw, ImageFont
-from aim_analysis import moving_ids, height_source
+from aim_analysis import moving_ids, height_source, thin60
 import config
 
 path, out = sys.argv[1], sys.argv[2]
-rows = list(csv.DictReader(config.open_run(path)))
+rows = thin60(list(csv.DictReader(config.open_run(path))))
 IDS = moving_ids(rows)
 SRC = height_source(rows, IDS)          # visible body position where the recorder has it
 P = lambda r, k, a: r[f"b{k}_{SRC}{a}"] if SRC and r.get(f"b{k}_{SRC}z") else r[f"b{k}_{a}"]
@@ -90,11 +90,11 @@ while i < n - 60:
 if len(sys.argv) > 3:
     c = min(range(n), key=lambda k: abs(ts[k] - float(sys.argv[3][1:])))
     cands = [x for x in cands if abs(x[2] - c) < 30] or cands
-if not cands: print("no swing-past moment in this run"); sys.exit(2)
+if not cands: print("no over-aim moment in this run"); sys.exit(2)
 cands.sort(key=lambda c: (c[6] >= 0.2, c[0]), reverse=True)   # prefer clean moments: on the bot for part of the clip
 gain, peak, i0, a, b, W_, real_on, sim_on = cands[0]
 sim = simulate(a, b, W_)
-print(f"{len(cands)} swing-past moments; chose t={ts[i0] - ts[start]:.1f}s into the run: on target you {real_on:.0%}, smooth {sim_on:.0%} (w={W_})")
+print(f"{len(cands)} over-aim moments; chose t={ts[i0] - ts[start]:.1f}s into the run: on target you {real_on:.0%}, smooth {sim_on:.0%} (w={W_})")
 
 W, H, PW = 860, 400, 420
 try: F = ImageFont.truetype("arialbd.ttf", 20); FS = ImageFont.truetype("arial.ttf", 15); FT = ImageFont.truetype("arialbd.ttf", 16)
@@ -108,7 +108,7 @@ topspeed = max([abs(x) for x in av[a:b] + bv[a:b] if x is not None] + [s[2] for 
 def phase(k):
     if k < i0 - 10: return "behind the bot"
     if k < i0: return "fast correction"
-    if k < i0 + 16: return "too far: past the bot"
+    if k < i0 + 16: return "over-aim: past the bot"
     return "correcting back"
 
 frames = []
@@ -133,7 +133,7 @@ for idx, k in enumerate(range(a, b)):
         d.rectangle([x0 + 85, sy0 + 4, x0 + 85 + bw(math.hypot(bv[k] or 0, bpv[k] or 0)), sy0 + 16], fill=BOT)
         d.rectangle([x0 + 85, sy0 + 30, x0 + 85 + bw(avel), sy0 + 42], fill=col)
     d.text((10, H - 44), "Your run: " + phase(k), fill=BAD if i0 - 10 <= k < i0 + 16 else INK, font=FT)
-    d.text((10, H - 22), "Smooth: same reaction time, eases in and matches the bot's speed. No swinging past it.  (half speed" + (", left-right only)" if LR_ONLY else ")"), fill=DIM, font=FS)
+    d.text((10, H - 22), "Smooth: same reaction time, eases in and matches the bot's speed. No over-aiming.  (half speed" + (", left-right only)" if LR_ONLY else ")"), fill=DIM, font=FS)
     frames.append(im.convert("P", palette=Image.ADAPTIVE, colors=32))
 frames += [frames[-1]] * 20
 frames[0].save(out, save_all=True, append_images=frames[1:], duration=33, loop=0, optimize=True)
