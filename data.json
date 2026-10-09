@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-09 11:01",
- "updated_utc": "2026-10-09T04:01:19Z",
+ "updated": "2026-10-09 11:06",
+ "updated_utc": "2026-10-09T04:06:19Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
    "RANK INT A": 26,
-   "ZEUS BUILDER": 13
+   "ZEUS BUILDER": 16
   }
  },
  "plan_start": "2026-10-07",
@@ -811,8 +811,8 @@
  "days": [
   {
    "date": "2026-10-09",
-   "runs": 39,
-   "restarts": 34,
+   "runs": 42,
+   "restarts": 35,
    "rest_median_s": 57,
    "rest_longest_s": 794,
    "breaks": [
@@ -838,9 +838,9 @@
     },
     {
      "name": "ZEUS BUILDER",
-     "runs": 13,
+     "runs": 16,
      "first": "09:52",
-     "last": "10:59"
+     "last": "11:06"
     }
    ],
    "scenarios": [
@@ -926,11 +926,19 @@
     },
     {
      "name": "TAMTARGETSWITCH SMOOTH EASY VSB",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS BUILDER",
      "first": "10:59",
-     "best": 27,
-     "median": 27
+     "best": 32,
+     "median": 30
+    },
+    {
+     "name": "THIN FAST",
+     "runs": 2,
+     "routine": "ZEUS BUILDER",
+     "first": "11:04",
+     "best": 1650,
+     "median": 1510
     }
    ]
   },
@@ -1467,13 +1475,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 231,
+  "runs": 234,
   "days": 4,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 62,
-    "pct": 99.0
+    "runs": 63,
+    "pct": 98.4
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1482,8 +1490,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 85,
-    "pct": 102.2
+    "runs": 87,
+    "pct": 102.6
    },
    {
     "label": "First run after a break of 15 min+",
@@ -1618,12 +1626,12 @@
    },
    {
     "scenario": "TAMTARGETSWITCH SMOOTH EASY VSB",
-    "runs": 1,
-    "on_target": 82,
-    "reaction_ms": 33,
-    "overshoot_pct": 0,
+    "runs": 2,
+    "on_target": 81,
+    "reaction_ms": 125,
+    "overshoot_pct": 3,
     "pps_by_distance": {
-     "mid": 13.7,
+     "mid": 14.8,
      "close": 14.8
     }
    },
