@@ -1,7 +1,9 @@
 # Full-run video of one real run, rebuilt from AimRecorder data in Ryan's own view (103 horizontal FOV, 16:9).
 # For scenarios where the recorded bot height is wrong (Sphere S, Air Track: the visible bot moves up and down
 # but the recorded position doesn't), the bot's height is taken from the aim at hit moments and interpolated.
-# Usage: python pb_video.py <run csv> <score> <scenario title> <out.mp4> [caption]
+# Bot shape and size come from the scenario's bot profile (scenario_profile.py); capsule size falls back to the hits.
+# Usage: python pb_video.py <run csv> <score> <scenario title> <out.mp4|out.gif> [caption]
+#   .gif output: set CLIP=<first sample>,<last sample> for a short full-view clip (640x360, real speed)
 import csv, math, subprocess, sys, statistics as st
 from PIL import Image, ImageDraw, ImageFont
 from aim_analysis import moving_ids
@@ -44,7 +46,11 @@ if EST:   # bot height from the aim at hit moments, linearly interpolated, light
     BP = [st.mean(BP[max(0, k - 3):k + 4]) for k in range(n)]
 else:
     BP = [raw_pitch(i) - math.degrees(math.atan(OFFU / hd(i))) if BOT[i] else None for i in range(n)]
-SPHERE = "SPHERE" in title.upper()               # Air Control Sphere scenarios use a ball, not a capsule
+import scenario_profile
+PROFILE = scenario_profile.bot_profile(title)
+SPHERE = PROFILE.get("BotType") == "SPHERE" if PROFILE else "SPHERE" in title.upper()
+if SPHERE and PROFILE.get("SphereRadiusMin") and not PROFILE.get("SphereRandomRadius?"):
+    HW = 30.0 * PROFILE["SphereRadiusMin"]        # base ball radius ~30 units (fits the hits on Sphere S and Air Track)
 HH = HW if SPHERE else 2.2 * HW
 BOTW = []   # visible bot centre in world space
 for i in range(n):
@@ -109,6 +115,24 @@ def frame(i, final=False):
         d.text((Wd / 2, Ht / 2 - 90), f"{score}", fill=ACC, font=FBIG, anchor="mm")
     return im
 
+import os
+if out.lower().endswith(".mp4") and os.environ.get("CLIP"):    # short full-view clip: real speed, loops on the site
+    a, b = (int(x) for x in os.environ["CLIP"].split(","))
+    p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{Wd}x{Ht}", "-r", "30", "-i", "-",
+                          "-vf", "scale=960:540", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "24", "-preset", "medium", "-movflags", "+faststart", "-an", out],
+                         stdin=subprocess.PIPE)
+    for i in range(a, b, 2): p.stdin.write(frame(i).tobytes())
+    p.stdin.close(); p.wait()
+    frame((a + b) // 2).resize((960, 540), Image.LANCZOS).save(out[:-4] + ".png")
+    print("wrote", out); sys.exit()
+if out.lower().endswith(".gif"):
+    import os
+    a, b = (int(x) for x in os.environ["CLIP"].split(","))
+    frames = [frame(i).resize((640, 360), Image.LANCZOS).convert("P", palette=Image.ADAPTIVE, colors=48) for i in range(a, b, 2)]
+    frames += [frames[-1]] * 12
+    frames[0].save(out, save_all=True, append_images=frames[1:], duration=33, loop=0, optimize=True)
+    frames[len(frames) // 2].convert("RGB").save(out[:-4] + ".png")
+    print("wrote", out, len(frames), "frames"); sys.exit()
 p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{Wd}x{Ht}", "-r", "30", "-i", "-",
                       "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "21", "-preset", "medium", "-movflags", "+faststart", out], stdin=subprocess.PIPE)
 lead = frame(start).tobytes()

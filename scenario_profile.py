@@ -47,3 +47,20 @@ if __name__ == "__main__":
     for f in sys.argv[1:]:
         print("==", f)
         for k, v in read(f).items(): print(f"  {k}: {v}")
+
+
+WORKSHOP = r"C:/Program Files (x86)/Steam/steamapps/workshop/content/1100990"
+
+def bot_profile(scenario):
+    """The bot profile of a scenario, found by its .scen file name ('AIR CONTROL SPHERE - S' finds
+    'AIR CONTROL SPHERE - S - RANKED.scen'). {} if not found."""
+    import glob, os
+    key = lambda s: re.sub(r"[^A-Z0-9]", "", s.upper().replace(" - RANKED", ""))
+    want = key(scenario)
+    for scen in glob.glob(os.path.join(WORKSHOP, "*", "*.scen")):
+        if key(os.path.basename(scen)[:-5]) == want:
+            bots = glob.glob(os.path.join(os.path.dirname(scen), "*.bot"))
+            if bots:
+                try: return read(bots[0])
+                except Exception: return {}
+    return {}

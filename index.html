@@ -83,6 +83,7 @@ ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 
 .alist { overflow-y: auto; overflow-x: hidden; padding: 12px 18px 28px; display: flex; flex-direction: column; gap: 18px; width: 100%; max-width: 68ch; margin: 0 auto; }
 .alist .focus { border-left: 3px solid var(--accent); padding: 6px 12px; background: var(--track); border-radius: 0 6px 6px 0; }
 .moment { display: flex; flex-direction: column; gap: 6px; }
+.moment video { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--rule); background: #161615; display: block; }
 .moment img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--rule); cursor: pointer; background: #161615; }
 .moment h3 { margin: 0; font: 700 17px var(--display); text-transform: uppercase; letter-spacing: .03em; }
 .moment .score { font-size: 14px; font-variant-numeric: tabular-nums; }
@@ -497,7 +498,8 @@ function journal(entries, days, aim, best) {
 function bestCard(x, date) {
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
   return `<div class="moment"><h3>Best recorded run: ${esc(nice(x.scenario))} ${x.score}</h3>` +
-    `<img src="assets/aim/${esc(x.gif)}.${still ? "png" : "gif"}" data-gif="assets/aim/${esc(x.gif)}.gif" loading="lazy" width="640" height="360" alt="The 8 best seconds of my ${esc(nice(x.scenario))} run that scored ${x.score}">` +
+    (x.video ? `<video src="assets/aim/${esc(x.gif)}.mp4" poster="assets/aim/${esc(x.gif)}.png" width="960" height="540" muted loop playsinline preload="none" ${still ? "controls" : "autoplay"} aria-label="The 8 best seconds of my ${esc(nice(x.scenario))} run that scored ${x.score}, in my own view"></video>`
+      : `<img src="assets/aim/${esc(x.gif)}.${still ? "png" : "gif"}" data-gif="assets/aim/${esc(x.gif)}.gif" loading="lazy" width="640" height="360" alt="The 8 best seconds of my ${esc(nice(x.scenario))} run that scored ${x.score}">`) +
     `<p class="score">Score <b>${x.score}</b>${x.best_14d ? ` · 14-day best ${x.best_14d}` : ""}${x.master3 ? ` · Master 3 is ${x.master3}` : ""}</p>` +
     `<p class="score">On target ${x.on_target}%${x.reaction_ms != null ? ` · reaction ${x.reaction_ms} ms` : ""} · overshoot ${x.overshoot_pct}%</p>` +
     `<p class="small">${esc(nd(date))}, ${esc(x.time)}. ${esc(x.note || "")}</p></div>`;

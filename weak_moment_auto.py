@@ -33,7 +33,9 @@ HW = sorted(abs(U(by[i] - yaw[i], dist[i])) for i in hit_i)[int(.9 * len(hit_i))
 HH = sorted(abs(U(bp[i] - pit[i], dist[i]) - OFF) for i in hit_i)[int(.9 * len(hit_i))]
 if LR_ONLY: HH = 2.2 * HW                        # draw a normal capsule; its height isn't measured
 HW = max(HW, 0.45 * HH)
-if "SPHERE" in os.path.basename(path).upper():    # a ball, not a capsule
+import scenario_profile                           # bot shape from the scenario's bot file
+_scen = os.path.basename(path)[18:].replace(".csv", "").replace(".gz", "")
+if scenario_profile.bot_profile(_scen).get("BotType") == "SPHERE":    # a ball, not a capsule
     HH = HW = sorted(abs(U(by[i] - yaw[i], dist[i])) for i in hit_i)[int(.98 * len(hit_i))]
 cbp = [None if bp[i] is None else (pit[i] if LR_ONLY else math.degrees(math.atan2(U(bp[i], dist[i]) - OFF, dist[i]))) for i in range(n)]   # bot centre pitch
 ex = [None if by[i] is None else (by[i] - yaw[i]) for i in range(n)]

@@ -10,7 +10,8 @@
    "overshoot_pct": 40,
    "best_14d": 553,
    "master3": 726,
-   "note": "Best of 5 recorded runs today (469, 537, 476, 514, 514). The clip is its 8 seconds with the most hits."
+   "note": "Best of 5 recorded runs today (469, 537, 476, 514, 514). The clip is its 8 seconds with the most hits.",
+   "video": true
   }
  ],
  "2026-10-09": [
@@ -24,7 +25,8 @@
    "overshoot_pct": 27,
    "best_14d": 853,
    "master3": 880,
-   "note": "Best of 8 today (median 740). My best since Sep 23 (was 842). All-time best is 878. The clip is its 8 seconds with the most hits."
+   "note": "Best of 8 today (median 740). My best since Sep 23 (was 842). All-time best is 878. The clip is its 8 seconds with the most hits.",
+   "video": true
   },
   {
    "scenario": "Air Track Smooth V3 150%",
@@ -36,7 +38,8 @@
    "overshoot_pct": 41,
    "best_14d": 545,
    "master3": 660,
-   "note": "Best of 8 today (median 482). The clip is its 8 seconds with the most hits."
+   "note": "Best of 8 today (median 482). The clip is its 8 seconds with the most hits.",
+   "video": true
   },
   {
    "scenario": "Smooth Thin Track V2",
@@ -48,7 +51,8 @@
    "overshoot_pct": 19,
    "best_14d": 490,
    "master3": 616,
-   "note": "Best of 8 today (median 438). The clip is its 8 seconds with the most hits."
+   "note": "Best of 8 today (median 438). The clip is its 8 seconds with the most hits.",
+   "video": true
   }
  ]
 }

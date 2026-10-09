@@ -56,14 +56,13 @@ def update(master3=None, best_14d=None, official=None):
                                 os.path.join(HERE, "assets", "aim", gif + ".gif")], cwd=HERE, capture_output=True, text=True,
                                creationflags=0x08000000)
             if r.returncode != 0: print("best-run gif failed:", r.stderr[-300:]); continue
-            im = Image.open(os.path.join(HERE, "assets", "aim", gif + ".gif")); im.seek(min(120, im.n_frames - 1))
-            im.convert("RGB").save(os.path.join(HERE, "assets", "aim", gif + ".png"))
+            # best_run_gif writes <gif>.mp4 (full in-game view) and its poster <gif>.png
             before = [s for (d, i), L in sc.items() if i == wid and d < date for s in L]
             note = f"Best of {len(runs)} recorded today (median {round(st.median(x[1]['hits'] for x in runs))})."
             ob = (official or {}).get(rname)
             if ob and score > ob: note += f" A new all-time best, above my old {ob}."
             elif before and score > max(before): note += f" My best since the score log started (was {max(before)}). All-time best is {ob}."
-            new = dict(scenario=title, score=score, time=v["time"][:5], gif=gif, on_target=round(v["on_target"]),
+            new = dict(scenario=title, score=score, time=v["time"][:5], gif=gif, video=True, on_target=round(v["on_target"]),
                        reaction_ms=v.get("reaction_ms"), overshoot_pct=v.get("overshoot_pct"),
                        best_14d=(best_14d or {}).get(rname), master3=(master3 or {}).get(rname),
                        note=note + " The clip is its 8 seconds with the most hits.")
