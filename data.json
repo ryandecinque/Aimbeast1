@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-09 10:46",
- "updated_utc": "2026-10-09T03:46:19Z",
+ "updated": "2026-10-09 10:56",
+ "updated_utc": "2026-10-09T03:56:19Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
    "RANK INT A": 26,
-   "ZEUS BUILDER": 10
+   "ZEUS BUILDER": 11
   }
  },
  "plan_start": "2026-10-07",
@@ -811,9 +811,9 @@
  "days": [
   {
    "date": "2026-10-09",
-   "runs": 36,
-   "restarts": 31,
-   "rest_median_s": 53,
+   "runs": 37,
+   "restarts": 33,
+   "rest_median_s": 55,
    "rest_longest_s": 794,
    "breaks": [
     {
@@ -838,9 +838,9 @@
     },
     {
      "name": "ZEUS BUILDER",
-     "runs": 10,
+     "runs": 11,
      "first": "09:52",
-     "last": "10:45"
+     "last": "10:56"
     }
    ],
    "scenarios": [
@@ -915,6 +915,14 @@
      "first": "10:44",
      "best": 300,
      "median": 289
+    },
+    {
+     "name": "CLOSELY STRAFING KYTAN",
+     "runs": 1,
+     "routine": "ZEUS BUILDER",
+     "first": "10:56",
+     "best": 506,
+     "median": 506
     }
    ]
   },
@@ -1451,13 +1459,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 228,
+  "runs": 229,
   "days": 4,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 60,
-    "pct": 98.6
+    "runs": 61,
+    "pct": 98.8
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1467,7 +1475,7 @@
    {
     "label": "Later attempts, rest 20 s to 2 min",
     "runs": 84,
-    "pct": 102.4
+    "pct": 102.0
    },
    {
     "label": "First run after a break of 15 min+",
@@ -1536,6 +1544,16 @@
      "far": 7.4,
      "mid": 8.4,
      "close": 4.8
+    }
+   },
+   {
+    "scenario": "CLOSELY STRAFING KYTAN",
+    "runs": 1,
+    "on_target": 23,
+    "reaction_ms": 150,
+    "overshoot_pct": 59,
+    "pps_by_distance": {
+     "close": 8.4
     }
    },
    {
