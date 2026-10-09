@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AimStats</title>
+<style>
+:root {
+  --bg: #161615; --panel: #201f1d; --line: #34332f; --ink: #f4f3ee; --dim: #a19f96; --faint: #6f6d66;
+  --accent: #f07a45; --good: #78d278; --bot: #5ae1d7; --warn: #f0c85a;
+  --red: #ff7a7a; --red-bg: #2a1a1a;   /* 6.5:1 on the panel; a light theme would use #b91c1c on #fdf2f2 (5.9:1) */
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 "Segoe UI", system-ui, sans-serif; }
+main { max-width: 1120px; margin: 0 auto; padding: 24px 16px 64px; }
+header { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+h1 { font-size: 26px; margin: 0; letter-spacing: .5px; }
+h1 span { color: var(--accent); }
+#status { color: var(--dim); font-size: 13px; }
+#status b { color: var(--ink); font-weight: 600; }
+.box { border: 1px solid var(--line); background: var(--panel); border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; }
+.warn { border-color: #6b5a2a; color: var(--warn); }
+.pb { border-color: #6b3d27; }
+.pb h2 { color: var(--accent); margin: 0 0 8px; font-size: 18px; }
+.pb .cards { display: flex; gap: 12px; flex-wrap: wrap; }
+.pb .cards a { display: block; width: 300px; max-width: 100%; }
+.pb img { width: 100%; border-radius: 6px; display: block; }
+.scen { border: 1px solid var(--line); background: var(--panel); border-radius: 12px; padding: 18px; margin-bottom: 22px; }
+.scen h2 { margin: 0; font-size: 20px; }
+.chip { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .6px; padding: 2px 7px; border-radius: 4px; background: #3a2a20; color: var(--accent); vertical-align: middle; margin-left: 6px; }
+.sub { color: var(--dim); font-size: 13px; margin: 2px 0 14px; }
+.grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 18px; }
+@media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+video, .gif img { width: 100%; border-radius: 8px; background: #000; display: block; }
+.cap { color: var(--dim); font-size: 13px; margin-top: 6px; }
+.nums { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; }
+.num { border-top: 1px solid var(--line); padding-top: 8px; }
+.num .v { font-size: 26px; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.num .v small { font-size: 14px; color: var(--dim); font-weight: 400; }
+.num .l { color: var(--dim); font-size: 13px; }
+.wide { grid-column: 1 / -1; }
+.week { font-size: 15px; }
+.up { color: var(--good); } .down { color: var(--accent); }
+svg.spark { width: 100%; height: 56px; display: block; margin-top: 6px; }
+.lower { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; margin-top: 18px; }
+@media (max-width: 820px) { .lower { grid-template-columns: 1fr; } }
+h3 { font-size: 14px; text-transform: uppercase; letter-spacing: .8px; color: var(--dim); margin: 0 0 8px; }
+.target form { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+select, input, button { font: inherit; color: var(--ink); background: #2a2926; border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px; }
+select { max-width: 100%; }
+input { width: 110px; }
+button { background: var(--accent); border-color: var(--accent); color: #1a1a19; font-weight: 700; cursor: pointer; }
+button:disabled { opacity: .5; cursor: default; }
+.bar { height: 6px; background: #2a2926; border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .5s; }
+.vids { display: grid; gap: 10px; margin-top: 10px; }
+.empty { text-align: center; padding: 48px 16px; color: var(--dim); }
+.empty b { color: var(--ink); font-size: 18px; display: block; margin-bottom: 6px; }
+footer { color: var(--faint); font-size: 13px; margin-top: 30px; border-top: 1px solid var(--line); padding-top: 14px; }
+a { color: var(--bot); }
+.minis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 4px; }
+@media (max-width: 520px) { .minis { grid-template-columns: 1fr; } }
+.mini .l { color: var(--dim); font-size: 12px; }
+.mini .mv { font-weight: 700; font-size: 14px; color: var(--ink); font-variant-numeric: tabular-nums; }
+svg.spark.small { height: 34px; }
+details { margin-top: 16px; }
+summary { cursor: pointer; color: var(--dim); font-size: 13px; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-numeric: tabular-nums; margin-top: 8px; }
+th, td { text-align: right; padding: 5px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { color: var(--dim); font-weight: 600; }
+th:first-child, td:first-child { text-align: left; }
+.practice h2, .videos h2 { font-size: 16px; margin: 0 0 6px; }
+.vrow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 7px 0; border-bottom: 1px solid var(--line); }
+.vrow label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.vrow .name { font-weight: 600; }
+.vrow .meta { color: var(--dim); font-size: 13px; }
+.vrow .always { margin-left: auto; color: var(--dim); font-size: 13px; }
+.vrow .vs { color: var(--dim); font-size: 13px; min-width: 120px; text-align: right; }
+input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--accent); padding: 0; }
+button.ghost { background: transparent; color: var(--accent); border-color: var(--accent); font-weight: 600; }
+.companion { margin-top: 12px; }
+.nomodel { margin-top: 12px; border-left: 4px solid var(--red); background: var(--red-bg); border-radius: 0 8px 8px 0; padding: 10px 12px; }
+.nomodel .lab { color: var(--red); font-weight: 700; display: flex; align-items: center; gap: 7px; }
+.nomodel .lab svg { flex: none; }
+.nomodel p { margin: 4px 0 0; font-size: 14px; color: var(--ink); }
+.nomodel .coming { color: var(--dim); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Aim<span>Stats</span></h1>
+    <div id="status">Loading…</div>
+  </header>
+  <div id="top"></div>
+  <div id="scens"></div>
+  <footer id="foot"></footer>
+</main>
+<script>
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const day = d => { if (!d) return ""; const [y, m, dd] = d.split("-").map(Number); return new Date(y, m - 1, dd).toLocaleDateString(undefined, { day: "numeric", month: "short" }); };
+const media = (kind, f) => `/media/${kind}/${encodeURIComponent(f)}`;
+let lastSig = "", page = null, chosen = {};
+const NA = "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does.";
+function noModel(mo) {                               // red notice where the model videos would be (icon + words, not colour alone)
+  return `<div class="nomodel" role="note"><div class="lab"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none"
+    stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M5.5 5.5l13 13"/></svg>No 20% better video</div>
+    <p>${esc(mo.text || NA)}</p>${mo.coming ? `<p class="coming">${esc(mo.coming)}</p>` : ""}</div>`;
+}
+
+function spark(trend) {
+  if (!trend || trend.length < 2) return "";
+  const W = 300, H = 56, xs = trend.map(t => t.median), lo = Math.min(...xs), hi = Math.max(...xs) || 1, span = (hi - lo) || 1;
+  const pts = xs.map((v, i) => [4 + (W - 8) * i / (xs.length - 1), H - 6 - (H - 12) * (v - lo) / span]);
+  const last = pts[pts.length - 1];
+  return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-label="Typical score per practice day">
+    <polyline points="${pts.map(p => p.join(",")).join(" ")}" fill="none" stroke="#a19f96" stroke-width="2" vector-effect="non-scaling-stroke"/>
+    <circle cx="${last[0]}" cy="${last[1]}" r="4" fill="#f07a45"/></svg>
+    <div class="cap">Typical score on each of your last ${trend.length} practice days (${lo}–${hi}).</div>`;
+}
+
+function mini(vals, label, fmt) {
+  const xs = vals.filter(v => v != null);
+  if (xs.length < 2) return "";
+  const W = 200, H = 34, lo = Math.min(...xs), hi = Math.max(...xs), span = (hi - lo) || 1;
+  const pts = vals.map((v, i) => v == null ? null : [3 + (W - 6) * i / (vals.length - 1), H - 4 - (H - 8) * (v - lo) / span]).filter(Boolean);
+  const last = pts[pts.length - 1];
+  return `<div class="mini"><div class="l">${label}: <span class="mv">${fmt(xs[xs.length - 1])}</span></div>
+    <svg class="spark small" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-label="${label} per practice day">
+    <polyline points="${pts.map(p => p.join(",")).join(" ")}" fill="none" stroke="#a19f96" stroke-width="2" vector-effect="non-scaling-stroke"/>
+    <circle cx="${last[0]}" cy="${last[1]}" r="3.5" fill="#f07a45"/></svg></div>`;
+}
+
+function aimTrends(t) {
+  if (!t || t.length < 2) return `<div class="cap">Aim numbers over time show up after your second practice day.</div>`;
+  return `<div class="l" style="color:var(--dim);font-size:13px;margin-top:10px">Aim numbers on each practice day (typical run)</div><div class="minis">
+    ${mini(t.map(d => d.on_target), "On target", v => Math.round(v) + "%")}
+    ${mini(t.map(d => d.swing_past), "Over-aim (lower is better)", v => Math.round(v) + "%")}
+    ${mini(t.map(d => d.pps), "Hits per second", v => v.toFixed(1))}</div>`;
+}
+
+function restText(r) {
+  if (!r) return "–";
+  const [kind, s] = r;
+  const dur = x => x < 60 ? `${x} s` : x < 3600 ? `${Math.floor(x / 60)} min ${x % 60 ? (x % 60) + " s" : ""}`.trim() : `${(x / 3600).toFixed(1)} h`;
+  return kind === "rest" ? dur(s) : kind === "break" ? `break, ${dur(s)}` : kind === "first" ? "first of the day" : "after a restart";
+}
+
+function runTable(s) {
+  const rest = !!page.practice, hits = s.unit === "hits";
+  return `<details><summary>All recorded runs (${s.runs_recorded}${s.runs_recorded > s.runs.length ? `, newest ${s.runs.length} shown` : ""})</summary><div class="tbl"><table>
+    <tr><th>Day</th><th>Time</th><th>${hits ? "Hits" : "Score"}</th><th>On target</th><th>Over-aim</th><th>Hits/s</th>${rest ? "<th>Rest before</th>" : ""}</tr>
+    ${s.runs.map(r => `<tr><td>${day(r.date)}</td><td>${esc(r.time)}</td><td>${r.score}</td><td>${Math.round(r.on_target)}%</td>
+      <td>${r.swing_past != null ? Math.round(r.swing_past) + "%" : "–"}</td><td>${r.pps ?? "–"}</td>${rest ? `<td>${restText(r.rest)}</td>` : ""}</tr>`).join("")}
+  </table></div></details>`;
+}
+
+function videosBox() {
+  const today = page.today || [], st = page.settings || { ticked: [], always: [] };
+  if (!today.length) return `<div class="box videos"><h2>Videos</h2><div class="cap">No tracking runs today yet. Once you've played, pick the scenarios you want a best-run clip for here.</div></div>`;
+  const first = !(st.ticked || []).length && !(st.always || []).length;
+  return `<div class="box videos"><h2>Videos</h2>
+    <div class="cap" style="margin-bottom:6px">${first ? "Pick the scenarios you want videos for." : "Ticked scenarios get today's best-run clip and a side by side of the same run, 20% better."}
+      Tick <b>Always</b> to have them made after every session without asking.</div>
+    ${today.map(t => `<div class="vrow" data-name="${esc(t.name)}">
+      <label><input type="checkbox" class="tick" ${(st.ticked || []).includes(t.name) ? "checked" : ""} onchange="saveTicks()">
+        <span class="name">${esc(t.title)}${t.ranked ? '<span class="chip">RANKED</span>' : ""}</span></label>
+      <span class="meta">${t.runs} run${t.runs === 1 ? "" : "s"} · best ${t.best}${t.unit === "hits" ? " hits" : ""}</span>
+      <label class="always"><input type="checkbox" ${(st.always || []).includes(t.name) ? "checked" : ""} onchange="setAlways(this)"> Always</label>
+      <span class="vs">${t.done ? "video made" : ""}</span></div>`).join("")}
+    <div style="margin-top:10px"><button onclick="makeVideos(this)">Make videos</button></div></div>`;
+}
+
+async function post(url, body) {
+  const r = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  return [r.ok, await r.json()];
+}
+function ticked() { return [...document.querySelectorAll(".vrow")].filter(r => $(".tick", r).checked).map(r => r.dataset.name); }
+async function saveTicks() { const [, st] = await post("/api/settings", { ticked: ticked() }); page.settings = st; }
+async function setAlways(box) { const [, st] = await post("/api/settings", { scenario: box.closest(".vrow").dataset.name, always: box.checked }); page.settings = st; }
+async function makeVideos(btn) {
+  const names = ticked();
+  if (!names.length) { alert("Tick at least one scenario first."); return; }
+  const [ok, r] = await post("/api/videos", { scenarios: names });
+  if (ok) { page.jobs = [...(page.jobs || []), ...r.queued]; renderJobs(); }
+}
+async function makeClip(btn) {
+  const [ok, j] = await post("/api/clip", { scenario: btn.closest(".scen").dataset.name });
+  if (ok && j.id) { page.jobs = [...(page.jobs || []), j]; renderJobs(); }
+}
+
+function practiceBox(p) {
+  if (!p || !p.days || !p.days.length) return "";
+  const c = p.compare;
+  let line = "";
+  if (c && c.enough) {
+    const d = c.diff_pct;
+    line = Math.abs(d) < 1
+      ? `After short rests (under 20 s) your scores are about the same as after rests of 20 s to 2 min.`
+      : `After short rests (under 20 s) your scores are typically <b>${Math.abs(d)}% ${d < 0 ? "lower" : "higher"}</b> than after rests of 20 s to 2 min.`;
+    line += ` <span class="cap">Based on ${c.short_runs} and ${c.long_runs} runs; the first try on each scenario is left out, since that's warm-up.</span>`;
+  } else if (c) {
+    line = `<span class="cap">Once you have ${c.need} runs after short rests (under 20 s) and ${c.need} after rests of 20 s to 2 min, this shows whether resting longer helps your score. So far: ${c.short_runs} and ${c.long_runs}.</span>`;
+  }
+  const dur = x => x == null ? "–" : x < 60 ? `${x} s` : `${Math.floor(x / 60)} min ${x % 60} s`;
+  return `<div class="box practice"><h2>Practice and rests</h2><div>${line}</div><div class="tbl"><table>
+    <tr><th>Day</th><th>Runs finished</th><th>Restarts</th><th>Typical rest</th><th>Breaks (15 min+)</th></tr>
+    ${p.days.slice(0, 7).map(d => `<tr><td>${day(d.date)}</td><td>${d.runs}</td><td>${d.restarts}</td><td>${dur(d.rest_typical_s)}</td><td>${d.breaks}</td></tr>`).join("")}
+  </table></div><div class="cap">A rest is the time from finishing a run to starting the next one. Gaps of 15 minutes or more, or switching playlist, count as breaks.</div></div>`;
+}
+
+function weekLine(w) {
+  if (w.this == null && w.last == null) return "Not enough runs yet to compare weeks.";
+  if (w.last == null) return `This week your typical score is <b>${w.this}</b> (${w.this_runs} runs). Next week you'll see if it's going up.`;
+  if (w.this == null) return `No runs this week yet. Last week your typical score was <b>${w.last}</b>.`;
+  const d = w.this - w.last;
+  const word = d > 0 ? `<span class="up">up ${d}</span>` : d < 0 ? `<span class="down">down ${-d}</span>` : "the same";
+  return `This week your typical score is <b>${w.this}</b> (${w.this_runs} runs), last week <b>${w.last}</b>: ${word}.`;
+}
+
+function card(s) {
+  const n = s.last_day_numbers, dist = n.by_distance || {};
+  const hits = s.unit === "hits";                    // game scores didn't line up with the recording: show hits
+  const bands = Object.keys(dist);
+  const m = s.clip && s.model && s.model.ok && s.clip.model;      // never show a model run where the bot reacts to hits
+  const makeBtn = s.clip_today ? "" : `<div style="margin-top:8px"><button class="ghost" onclick="makeClip(this)">Make clip for ${day(s.last_day)}</button> <span class="cap vjob"></span></div>`;
+  const clip = (s.clip ? `<video src="${media("clips", s.clip.mp4)}" poster="${media("clips", s.clip.png)}" autoplay muted loop playsinline></video>
+      <div class="cap">Best run on ${day(s.clip.date)}: <b>${s.clip.score}</b>. These are its 8 seconds with the most hits, rebuilt from your aim data.</div>`
+      + (m ? `<div class="companion"><video src="${media("clips", m.mp4)}" poster="${media("clips", m.png)}" autoplay muted loop playsinline></video>
+      <div class="cap">Same run, 20% better: something to model your aim on.${m.reached ? "" : ` The model reached ${m.model_score}, the closest it could get to ${m.target}.`}
+      Same bot movement${m.moves ? ", same movement as your run" : ""} and the same human reaction time; only the aim changes.</div></div>`
+         : (s.model && !s.model.ok ? noModel(s.model) : ""))
+    : `<div class="box cap">No video for this scenario yet. Tick it under Videos at the top, or press Make clip.</div>`) + makeBtn;
+  const swing = s.swing ? `<div class="gif"><img src="${media("gifs", s.swing.gif)}" alt="Over-aim moment" loading="lazy"></div>
+      <div class="cap">From your ${esc(s.swing.time)} run on ${day(s.swing.date)}${s.swing.at != null ? `, ${Math.round(s.swing.at)} s in` : ""}: the bot kept going and you over-aimed, going through it and out the other side.
+      ${s.swing.you != null ? `In this moment you were on the bot <b>${s.swing.you}%</b> of the time; a smooth follow with your same reaction time gets <b>${s.swing.smooth}%</b>.` : ""}</div>`
+    : `<div class="cap">An over-aim moment shows up here a couple of minutes after you stop playing this scenario.</div>`;
+  const runs = s.runs.map(r => `<option value="${esc(r.file)}">${day(r.date)} ${esc(r.time)}: ${r.score}</option>`).join("");
+  return `<section class="scen" data-name="${esc(s.name)}">
+    <h2>${esc(s.title)}${s.ranked ? '<span class="chip">RANKED</span>' : ""}</h2>
+    <div class="sub">Last played ${day(s.last_day)} · ${n.runs} run${n.runs === 1 ? "" : "s"} recorded that day · ${s.runs_recorded} recorded in total${s.best ? ` · ${s.best.since ? "best" : "all-time best"} ${s.best.score}${hits ? " hits" : ""}${s.best.since ? ` since ${day(s.best.since)}` : ""}` : ""}</div>
+    <div class="grid">
+      <div>${clip}</div>
+      <div class="nums">
+        <div class="num"><div class="v">${n.best} <small>/ ${n.typical} typical</small></div><div class="l">${hits ? "Most hits that day (the game's score didn't match, so these are hits)" : "Best score that day"}</div></div>
+        <div class="num"><div class="v">${n.on_target != null ? Math.round(n.on_target) + "%" : "–"}</div><div class="l">Time on target (typical run)</div></div>
+        <div class="num"><div class="v">${n.swing_past != null ? Math.round(n.swing_past) + "%" : "–"}</div><div class="l">Over-aim: misses where you went past the bot</div></div>
+        <div class="num"><div class="v">${n.reaction_ms != null ? Math.round(n.reaction_ms) + " ms" : "–"}</div><div class="l">Reaction when the bot changes direction</div></div>
+        ${bands.length > 1 ? `<div class="num wide"><div class="v" style="font-size:20px">${bands.map(b => `${b} <b>${dist[b]}</b>`).join(" · ")}</div><div class="l">Hits per second by distance to the bot</div></div>` : ""}
+        <div class="num wide week">${weekLine(s.week)}${spark(s.trend)}${aimTrends(s.aim_trend)}</div>
+      </div>
+    </div>
+    <div class="lower">
+      <div><h3>Over-aim moment</h3>${swing}</div>
+      <div class="target"><h3>Target-score video</h3>
+        ${s.model && s.model.ok ? `<div class="cap" style="margin:0 0 8px">Pick a run and type a score. You get a model run on the same bot movement that would score that, on its own and side by side with yours. Takes about a minute.</div>
+        <form onsubmit="return makeVideo(event, this)">
+          <select name="run">${runs}</select>
+          <input name="target" type="number" min="1" max="100000" placeholder="e.g. 700" required>
+          <button type="submit">Make video</button>
+        </form>
+        <div class="job"></div>` : (s.clip ? `<div class="cap">Not available for this scenario: see the red note above.</div>` : noModel(s.model))}
+      </div>
+    </div>
+    ${runTable(s)}
+  </section>`;
+}
+
+function videoJobText(j) {
+  return j.status === "done" ? "video made" : j.status === "failed" ? (j.error || "failed") : j.status === "queued" ? "waiting…" : `${j.stage}… ${j.pct}%`;
+}
+function renderJobs() {
+  const vj = {};
+  (page.jobs || []).filter(j => j.kind === "videos").sort((a, b) => a.id - b.id).forEach(j => vj[j.scenario] = j);
+  document.querySelectorAll(".vrow").forEach(r => { const j = vj[r.dataset.name]; if (j) $(".vs", r).textContent = videoJobText(j); });
+  document.querySelectorAll(".scen").forEach(sec => { const j = vj[sec.dataset.name], el = $(".vjob", sec); if (j && el) el.textContent = videoJobText(j); });
+
+  document.querySelectorAll(".scen").forEach(sec => {
+    const files = [...sec.querySelectorAll("option")].map(o => o.value);
+    const js = (page.jobs || []).filter(j => j.kind !== "videos" && files.includes(j.run)).sort((a, b) => b.id - a.id);
+    const el = $(".job", sec), j = js[0];
+    if (!el) return;
+    const busy = (page.jobs || []).some(x => x.kind !== "videos" && (x.status === "queued" || x.status === "running"));
+    const tb = sec.querySelector("form button"); if (tb) tb.disabled = busy;
+    if (!j) { el.innerHTML = ""; return; }
+    const sig = j.id + j.status + j.pct;
+    if (el.dataset.sig === sig) return;
+    el.dataset.sig = sig;
+    if (j.status === "done") {
+      el.innerHTML = `<div class="cap">Model run for ${j.target}${j.model_score && Math.abs(j.model_score - j.target) > j.target * 0.03 ? ` (the closest the model got was ${j.model_score})` : ""}, next to your ${j.real_score}:</div>
+        <div class="vids"><video src="${media("videos", j.side)}" controls playsinline></video>
+        <video src="${media("videos", j.solo)}" controls playsinline></video></div>
+        <div class="cap"><a href="${media("videos", j.side)}" download>Save side by side</a> · <a href="${media("videos", j.solo)}" download>Save model run</a></div>`;
+    } else if (j.status === "failed") {
+      el.innerHTML = `<div class="cap down">${esc(j.error || "Something went wrong.")}</div>`;
+    } else {
+      el.innerHTML = `<div class="cap">${esc(j.stage || "Waiting")}… ${j.pct || 0}%</div><div class="bar"><i style="width:${j.pct || 0}%"></i></div>`;
+    }
+  });
+}
+
+async function makeVideo(e, form) {
+  e.preventDefault();
+  const body = { run: form.run.value, target: Number(form.target.value) };
+  const r = await fetch("/api/target", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  const j = await r.json();
+  if (!r.ok) { $(".job", form.closest(".scen")).innerHTML = `<div class="cap down">${esc(j.error)}</div>`; return false; }
+  page.jobs = [...(page.jobs || []), j]; renderJobs(); refresh();
+  return false;
+}
+
+function render() {
+  const top = [];
+  if (!page.game_found) top.push(`<div class="box warn">AimStats couldn't find Aimbeast. Run <b>Install.bat</b> first.</div>`);
+  else if (!page.recorder_installed) top.push(`<div class="box warn">The recorder isn't installed in the game yet. Run <b>Install.bat</b>, then play a tracking scenario.</div>`);
+  if (page.warning) top.push(`<div class="box warn">${esc(page.warning)}</div>`);
+  const ev = page.events_recent || [];
+  if (ev.length) top.push(`<div class="box pb"><h2>${ev.length === 1 ? (ev[0].kind === "pb" ? "New personal best!" : "Best week yet!") : "New bests!"}</h2>
+    <div class="cap" style="margin-bottom:10px">${ev.map(e => e.kind === "pb" ? `${esc(e.title)}: <b>${e.score}</b> (old best ${e.old})` : `${esc(e.title)}: typical score over 7 days <b>${e.median}</b> (was ${e.old})`).join(" · ")}. Click a card to save it and share it.</div>
+    <div class="cards">${ev.map(e => `<a href="${media("pb", e.card)}" download><img src="${media("pb", e.card)}" alt="Share card"></a>`).join("")}</div></div>`);
+  top.push(videosBox());
+  top.push(practiceBox(page.practice));
+  $("#top").innerHTML = top.join("");
+  const sc = page.scenarios || [];
+  const keep = {};                                   // don't lose what someone is typing when new runs arrive
+  document.querySelectorAll(".scen").forEach(sec => { const f = $("form", sec); keep[sec.dataset.name] = [f ? f.run.value : "", f ? f.target.value : "", !!$("details", sec)?.open]; });
+  $("#scens").innerHTML = sc.length ? sc.map(card).join("") :
+    `<div class="box empty"><b>No tracking runs yet</b>Start Aimbeast and play any tracking scenario. Your stats show up here about a minute after the run ends.</div>`;
+  const sk = page.skipped || {};
+  const skipped = [...(sk.switching || []), ...(sk.clicking || [])];
+  $("#foot").innerHTML = `Tracking scenarios only for now. Switching and clicking scenarios are recorded but not analysed yet${skipped.length ? ` (you've played ${skipped.length}: ${skipped.slice(0, 6).map(esc).join(", ")}${skipped.length > 6 ? "…" : ""})` : ""}.<br>
+    Everything stays on this PC: nothing is uploaded, and the recorder only reads from the game. ${page.last_recording ? `Newest recording: ${day(page.last_recording.slice(0, 10))} ${page.last_recording.slice(11, 13)}:${page.last_recording.slice(13, 15)}.` : ""}`;
+  document.querySelectorAll(".scen").forEach(sec => {
+    const k = keep[sec.dataset.name], f = $("form", sec);
+    if (k) { if (f) { if ([...f.run.options].some(o => o.value === k[0])) f.run.value = k[0]; f.target.value = k[1]; } if (k[2]) $("details", sec).open = true; }
+  });
+  renderJobs();
+}
+
+async function refresh() {
+  try {
+    const r = await fetch("/api/page", { cache: "no-store" });
+    page = await r.json();
+    const t = page.last_check ? new Date(page.last_check * 1000).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) : null;
+    $("#status").innerHTML = page.busy ? `<b>${esc(page.busy)}…</b>` : t ? `Watching for new runs · checked ${t}` : "Starting up…";
+    const sig = page.updated + "|" + (page.scenarios || []).length;
+    if (sig !== lastSig) { lastSig = sig; render(); } else renderJobs();
+  } catch (e) {
+    $("#status").innerHTML = `<b>AimStats isn't running.</b> Double-click "Open AimStats.bat".`;
+  }
+}
+refresh();
+setInterval(refresh, 4000);
+</script>
+</body>
+</html>
