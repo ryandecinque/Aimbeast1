@@ -87,6 +87,16 @@ python build_zip.py --python python-3.11.9-embed-amd64.zip --ffmpeg imageio_ffmp
   - A normal run: still made.
   - The page with one card blocked: no form, no model clip, the plain line shown; the other cards unchanged.
 
+## Added: red "No 20% better video" notice
+- **Cards that can't get model videos** show a red notice where the +20% clip would be.
+  - It has a red left border, a crossed-circle icon and the label "No 20% better video", so it doesn't rely on colour alone.
+  - Under that, the plain reason from whichever bot-file check failed (`model_notice()` in model_run.py):
+    - PASU RCT: "This bot reacts to your hits (it speeds up or slows down when hit), ..."
+    - PASU XYZ: "This bot can die, so a better run would need bots that weren't in your recording." plus "A 'same bots, killed sooner' version is coming."
+  - Cards without a clip show the notice in the target-score box instead.
+- **Contrast:** the red is #ff7a7a on #2a1a1a, 6.5:1. The page is dark-only, so the light-theme value (#b91c1c on #fdf2f2, 5.9:1) is noted in the CSS for when a light theme exists.
+- Checked in the browser with one card of each kind.
+
 ## Not tested yet (needs Ryan or a friend)
 - The game starting and recording with the installed files. That needs a real install, and the decision says nothing installs until Ryan says go.
 - A clean Windows account.

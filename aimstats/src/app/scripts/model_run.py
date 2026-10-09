@@ -48,6 +48,39 @@ def model_check(scenario):
     return True, ""
 
 
+ACTIONS = {"SPEED UP/DOWN": "speeds up or slows down", "FLY UP/DOWN": "flies up or down", "JUMP (IN AIR)": "jumps",
+           "JUMP": "jumps", "BLINK": "blinks away", "LEAP": "leaps", "TELEPORT": "teleports"}
+
+
+def model_notice(scenario):
+    """For the page: {"ok", "kind", "text", "coming"} in plain words, from whichever bot-file check failed.
+    kind: "" (ok), "dies" (destroyable, comes back after a kill), "reacts" (does something when hit), "nofile"."""
+    p = scenario_profile.bot_profile(scenario)
+    ok, _ = model_check(scenario)
+    if ok: return dict(ok=True, kind="", text="", coming="")
+    if not p:
+        return dict(ok=False, kind="nofile", coming="", text="This scenario's bot file couldn't be read, so there's no way to be "
+                    "sure a better run wouldn't change what the bot does.")
+    if not p.get("Invincible?"):
+        return dict(ok=False, kind="dies", text="This bot can die, so a better run would need bots that weren't in your recording.",
+                    coming="A 'same bots, killed sooner' version is coming.")
+    what = None
+    if p.get("BlinkOnHit?"): what = "it blinks away when hit"
+    elif p.get("LeapOnHit?"): what = "it leaps when hit"
+    elif p.get("EnableSizeShifting?") and any(w in str(p.get("SizeShiftEndTrigger", "")).upper() for w in HIT_WORDS):
+        what = "it changes size as it takes damage"
+    else:
+        for k, v in p.items():
+            if k.startswith("EventTrigger_") and any(w in str(v).upper() for w in HIT_WORDS):
+                act = str(p.get("EventTriggered_" + k.split("_")[1], "")).upper()
+                verb = ACTIONS.get(act, act.lower() or "changes what it does")
+                when = "when it's destroyed" if "DESTROY" in str(v).upper() else "when hit"
+                what = f"it {verb} {when}"; break
+    what = what or "it changes size with its health"
+    return dict(ok=False, kind="reacts", coming="",
+                text=f"This bot reacts to your hits ({what}), so a better run would change what the bot does.")
+
+
 def tracking_run(path):
     """Model videos are for tracking runs only (one moving bot, analysed); switching and clicking get none in v1."""
     import aim_analysis

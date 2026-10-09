@@ -27,6 +27,7 @@ clip_lock = threading.Lock()
 BEST = {}                   # (scenario, date) -> (score, run file), refreshed by every watcher pass
 FACTOR = 1.2                # the side-by-side companion's model run: 20% better
 MODEL_OK = {}               # scenario -> (ok, reason): model videos only where the bot ignores the player's hits
+MODEL_NOTE = {}             # scenario -> plain-words notice for the page
 
 
 def log(msg):
@@ -259,7 +260,7 @@ def build_page(summ, track, hists, watch, pbs, rest_info=None, practice=None, cl
             week=dict(this=round(st.median(this_w)) if this_w else None, this_runs=len(this_w),
                       last=round(st.median(last_w)) if last_w else None, last_runs=len(last_w)),
             best=best_line(scen, ranked, h, rows), unit="score" if SCALE.get(scen) else "hits",
-            model=dict(ok=MODEL_OK.get(scen, (False, ""))[0], reason=MODEL_OK.get(scen, (False, ""))[1]),
+            model=MODEL_NOTE.setdefault(scen, model_run.model_notice(scen)),
             trend=trend, aim_trend=aim_trend,
             clip=dict(clips[tag], date=tag.split("|")[1]) if tag else None, clip_today=f"{scen}|{last_day}" in clips,
             swing=dict(watch["gifs"][gif_tag], date=gif_tag.split("|")[1]) if gif_tag else None,
