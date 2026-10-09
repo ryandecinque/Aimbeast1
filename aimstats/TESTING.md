@@ -41,6 +41,24 @@ python build_zip.py --python python-3.11.9-embed-amd64.zip --ffmpeg imageio_ffmp
 - **Aim numbers over time:** per tracking scenario, small trend lines for on target, swing-past and points per second, one point per practice day (the typical run). Below 2 days the page says when they'll appear.
 - Install tests re-run on the new zip: 5/5 PASS.
 
+## Added: score fixes, ranked best, opt-in videos and the +20% side by side
+- **Points per hit.** Each scenario's game scores are lined up with the recordings at a steady ratio.
+  - Pennytracking now shows 545 and 630 (5 points a hit); Controlsphere OW shows 9 a hit.
+  - If nothing lines up, the card says "hits". Zeus Track Evo (non-EZ) does this on Ryan's data.
+- **Ranked best** comes from the game's own ranked record in `Trainer/rankedinfo.scns`.
+  - Sphere S: 878. Smooth Thin: 555. Air Track: 548. These match RoutinePlanBanner's numbers.
+  - That record can be out of date (Ryan's was last written in March), so the page shows the higher of it and the statistics file.
+  - Without a record, it says "best X since <first date>".
+- **Videos are opt-in.**
+  - A Videos panel lists today's tracking scenarios with tick boxes and an Always option. The ticks and Always choices are saved in `data/settings.json`, and nothing is set to Always at first.
+  - Each card has a "Make clip" button.
+  - Tested: Make videos for 2 ticked scenarios, Make clip on another, Always on and off.
+  - Clean-up per scenario keeps only the latest day's clip and the best run's clip. Unit-tested with 4 days: 2 kept, files deleted only in data/clips.
+- **`model_clip.py <run csv> <real score> <first sample> <last sample> <out.mp4> [factor]`** makes the side-by-side clip, real run on the left, model on the right, tuned so the whole run scores factor × real (default 1.2).
+  - The model lives in `model_run.py`, shared with `target_video.py`.
+  - Pennytracking 630 to 757, Slow Accel 300 to 359, Smooth Thin 452 to 538 (target 542). About 4 s per clip.
+- Target-score video re-checked after the change: Pennytracking 630 with a target of 700, the model reached 710.
+
 ## Not tested yet (needs Ryan or a friend)
 - The game starting and recording with the installed files. That needs a real install, and the decision says nothing installs until Ryan says go.
 - A clean Windows account.

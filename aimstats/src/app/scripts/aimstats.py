@@ -1,11 +1,13 @@
 # AimStats: a small web server on this PC only (127.0.0.1) plus a watcher. Started by "Open AimStats.bat".
 # The watcher copies new AimRecorder recordings out of the game folder (it never changes or deletes anything there),
-# analyses them, makes a best-run clip per scenario and day, a swing-past GIF once a session goes quiet, checks for
-# PBs, and writes data/page.json, which the page reloads every few seconds. Nothing is sent anywhere.
+# analyses them, makes a swing-past GIF per scenario once a session goes quiet, checks for PBs, and writes
+# data/page.json, which the page reloads every few seconds. Videos are opt-in: the player ticks scenarios in the
+# Videos panel (or sets them to Always), and each gets its best-run clip plus a "+20%" side-by-side companion.
+# Nothing is sent anywhere.
 # Usage: python aimstats.py [--no-browser] [--once]
-import datetime as dt, glob, http.server, json, os, re, shutil, socket, statistics as st, sys, threading, time, traceback
+import datetime as dt, glob, http.server, json, os, queue, re, shutil, socket, statistics as st, sys, threading, time, traceback
 import urllib.parse, urllib.request, webbrowser
-import config, aim_analysis, pb_events, rests
+import config, aim_analysis, pb_events, rests, scenario_profile
 
 PORTS = [int(os.environ["AIMSTATS_PORT"])] if os.environ.get("AIMSTATS_PORT") else range(8765, 8776)   # AIMSTATS_PORT: for testing
 WEB = os.path.join(config.APP, "web")
@@ -16,8 +18,14 @@ WATCH = os.path.join(config.DATA, "watch.json")
 LOG = os.path.join(config.DATA, "aimstats.log")
 QUIET = 120                 # seconds without a new run before swing-past GIFs are made
 status = {"busy": "", "started": time.time(), "last_check": None}
-jobs = {}                   # target-score videos: id -> state
+jobs = {}                   # videos being made (target-score and best-run): id -> state
 job_lock = threading.Lock()
+work_q = queue.Queue()      # one render at a time
+CLIPS = os.path.join(config.DATA, "clips.json")         # best-run clips made: "scenario|date" -> details
+SETTINGS = os.path.join(config.DATA, "settings.json")   # {"ticked": [...], "always": [...]}; nothing is Always at first
+clip_lock = threading.Lock()
+BEST = {}                   # (scenario, date) -> (score, run file), refreshed by every watcher pass
+FACTOR = 1.2                # the side-by-side companion's model run: 20% better
 
 
 def log(msg):
@@ -70,12 +78,32 @@ def title_of(scen):
 def slug(s): return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")[:60]
 
 
+SCALE = {}                  # scenario -> game points per recorded hit (1, 5, ...), None if the scores don't line up
+
+
+def near(score, expect): return abs(score - expect) <= max(3, 0.03 * score)
+
+
+def find_scale(runs, hist):
+    """Points per hit for a scenario: the ratio (game score / recorded hits) that lines up the most recordings with a
+    same-day score in the game's statistics. Some scenarios give 5 points a hit. None if fewer than half line up."""
+    by_day = {}
+    for d, x in hist: by_day.setdefault(d, []).append(x)
+    cands = sorted({round(x / v["hits"], 2) for v in runs if v["hits"] for x in by_day.get(v["date"], [])})
+    best = None
+    for r in cands:
+        n = sum(any(near(x, v["hits"] * r) for x in by_day.get(v["date"], [])) for v in runs)
+        if best is None or n > best[0] or (n == best[0] and abs(r - 1) < abs(best[1] - 1)): best = (n, r)
+    return best[1] if best and best[0] >= max(1, 0.5 * len(runs)) else None
+
+
 def score_for(v, hist):
-    """The game's own score for a recorded run: a same-day score in the statistics file within 3 of the recorded
-    hits (the closest one), else the recorded hits."""
-    same = [s for d, s in hist if d == v["date"]]
-    near = [s for s in same if abs(s - v["hits"]) <= 3]
-    return min(near, key=lambda s: abs(s - v["hits"])) if near else v["hits"]
+    """The game's own score for a recorded run: the same-day score in the statistics file that matches the recorded
+    hits times the scenario's points per hit. Recorded hits if the scenario's scores don't line up (shown as "hits")."""
+    r = SCALE.get(v["scenario"])
+    if not r: return v["hits"]
+    same = [x for d, x in hist if d == v["date"] and near(x, v["hits"] * r)]
+    return min(same, key=lambda x: abs(x - v["hits"] * r)) if same else round(v["hits"] * r)
 
 
 def med(xs):
@@ -119,28 +147,19 @@ def work(first=False):
     hists = {}
     for s in scen_names:          # the game's statistics, only where its score is the hit count the recorder sees
         h = pb_events.history(s); mine = [v for v in track.values() if v["scenario"] == s]
-        agree = sum(any(d == v["date"] and abs(x - v["hits"]) <= 3 for d, x in h) for v in mine)
-        hists[s] = h if mine and agree >= 0.5 * len(mine) else []
+        SCALE[s] = find_scale(mine, h) if mine else None
+        hists[s] = h if SCALE[s] else []
 
-    # best-run clip per scenario and day
     by_sd = {}
     for k, v in track.items():
         by_sd.setdefault((v["scenario"], v["date"]), []).append((score_for(v, hists[v["scenario"]]), k, v))
-    for (scen, date), runs in sorted(by_sd.items(), key=lambda x: x[0][1]):
-        score, k, v = max(runs, key=lambda x: x[0])
-        tag = f"{scen}|{date}"
-        if watch["clips"].get(tag, {}).get("run") == k: continue
-        p = run_path(k)
-        if not p: continue
-        title, _ = title_of(scen)
-        out = os.path.join(MEDIA["clips"], f"{slug(scen)}-{date}.mp4")
-        os.makedirs(MEDIA["clips"], exist_ok=True)
-        status["busy"] = f"Making the best-run clip for {title}"
-        ok, msg = config.run_script("best_run_gif.py", p, score, f"{title}, best run ({score})", out)
-        if ok: watch["clips"][tag] = {"run": k, "score": score, "mp4": os.path.basename(out), "png": os.path.basename(out)[:-4] + ".png"}
-        else:
-            log(f"best-run clip failed for {k}: {msg[-300:]}"); watch["clips"][tag] = {"run": k, "failed": True}
-        save_json(WATCH, watch)
+    BEST.clear(); BEST.update({sd: max(runs, key=lambda x: x[0])[:2] for sd, runs in by_sd.items()})
+    # videos are opt-in: only scenarios set to Always get them on their own, once the session has gone quiet
+    if time.time() - watch.get("last_new", 0) > QUIET:
+        always = set(load_json(SETTINGS, {}).get("always", [])); clips = load_json(CLIPS, {})
+        today = dt.date.today().isoformat()
+        for (scen, date), (score, k) in list(BEST.items()):
+            if scen in always and date == today and clips.get(f"{scen}|{date}", {}).get("run") != k: queue_videos(scen)
 
     # swing-past GIF per scenario and day, once the session has gone quiet
     if time.time() - watch.get("last_new", 0) > QUIET:
@@ -166,15 +185,27 @@ def work(first=False):
 
     # PBs and best weeks
     stills = {}
-    for tag, c in watch["clips"].items():
+    clips = load_json(CLIPS, {})
+    for tag, c in clips.items():
         if c.get("png"): stills[tag.split("|")[0]] = os.path.join(MEDIA["clips"], c["png"])
     pbs = pb_events.update({s: title_of(s)[0] for s in scen_names}, stills)
     save_json(WATCH, watch)
     status["busy"] = "Reading rest times"
     rest_info, practice = rests.summary()              # None, None when there's no practice_log.csv
-    build_page(summ, track, hists, watch, pbs, rest_info, practice)
+    build_page(summ, track, hists, watch, pbs, rest_info, practice, clips)
     status["busy"] = ""
     status["last_check"] = time.time()
+
+
+def best_line(scen, ranked, h, rows):
+    """Best score and how far back it reaches. Ranked: the game's own ranked record if it has one (it can be out of
+    date, so the higher of it and the statistics). Otherwise 'best since' the first day the statistics file has."""
+    known = max([x for _, x in h] + [r["score"] for r in rows])
+    if ranked:
+        off = scenario_profile.official_best(scen)
+        if off and SCALE.get(scen): return dict(score=max(off[0], known), since=None)
+    first = min([d for d, _ in h] + [r["date"] for r in rows])
+    return dict(score=known, since=first)
 
 
 def rest_of(rest_info, k):
@@ -184,7 +215,8 @@ def rest_of(rest_info, k):
     return rests.rest_before(rest_info, when)
 
 
-def build_page(summ, track, hists, watch, pbs, rest_info=None, practice=None):
+def build_page(summ, track, hists, watch, pbs, rest_info=None, practice=None, clips=None):
+    clips = clips or {}
     today = dt.date.today()
     scen_out = []
     for scen in sorted({v["scenario"] for v in track.values()}):
@@ -214,9 +246,8 @@ def build_page(summ, track, hists, watch, pbs, rest_info=None, practice=None):
         daily = {}
         for d, s in scores: daily.setdefault(d, []).append(s)
         trend = [{"date": d, "median": round(st.median(v)), "best": max(v), "runs": len(v)} for d, v in sorted(daily.items())][-30:]
-        clip = watch["clips"].get(f"{scen}|{last_day}") or next((watch["clips"][t] for t in sorted(watch["clips"], reverse=True)
-                                                                  if t.startswith(scen + "|") and watch["clips"][t].get("mp4")), None)
-        clip_date = last_day if watch["clips"].get(f"{scen}|{last_day}") else None
+        tag = next((t for t in ([f"{scen}|{last_day}"] + sorted(clips, reverse=True)) if t in clips and t.startswith(scen + "|")
+                    and clips[t].get("mp4")), None)
         gif_tag = next((t for t in sorted(watch["gifs"], reverse=True) if t.startswith(scen + "|") and watch["gifs"][t].get("gif")), None)
         scen_out.append(dict(
             name=scen, title=title, ranked=ranked, last_day=last_day, runs_recorded=len(rows),
@@ -225,9 +256,9 @@ def build_page(summ, track, hists, watch, pbs, rest_info=None, practice=None):
                                   reaction_ms=med(r["reaction_ms"] for r in day_rows), by_distance=dist),
             week=dict(this=round(st.median(this_w)) if this_w else None, this_runs=len(this_w),
                       last=round(st.median(last_w)) if last_w else None, last_runs=len(last_w)),
-            all_time_best=max([s for _, s in scores] + [r["score"] for r in rows]),
+            best=best_line(scen, ranked, h, rows), unit="score" if SCALE.get(scen) else "hits",
             trend=trend, aim_trend=aim_trend,
-            clip=dict(clip, date=clip_date or (clip or {}).get("date")) if clip and clip.get("mp4") else None,
+            clip=dict(clips[tag], date=tag.split("|")[1]) if tag else None, clip_today=f"{scen}|{last_day}" in clips,
             swing=dict(watch["gifs"][gif_tag], date=gif_tag.split("|")[1]) if gif_tag else None,
             runs=rows[-40:][::-1]))
     scen_out.sort(key=lambda s: s["last_day"] + max(r["time"] for r in s["runs"] if r["date"] == s["last_day"]), reverse=True)
@@ -239,7 +270,11 @@ def build_page(summ, track, hists, watch, pbs, rest_info=None, practice=None):
     last_run = max(summ.keys())[:17] if summ else None
     now = dt.datetime.now(dt.timezone.utc)
     recent = [e for e in pbs["events"] if now - dt.datetime.strptime(e["seen_utc"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=dt.timezone.utc) < dt.timedelta(hours=24)]
-    page = dict(game_found=bool(config.GAME),
+    today = dt.date.today().isoformat()
+    played_today = [dict(name=s_["name"], title=s_["title"], ranked=s_["ranked"], runs=s_["last_day_numbers"]["runs"],
+                         best=s_["last_day_numbers"]["best"], unit=s_["unit"], done=s_["clip_today"])
+                    for s_ in scen_out if s_["last_day"] == today]
+    page = dict(game_found=bool(config.GAME), today=played_today,
                 recorder_installed=bool(config.MODS and os.path.isdir(os.path.join(config.MODS, "AimRecorder"))),
                 last_recording=last_run, warning=recorder_warning(last_run), scenarios=scen_out,
                 skipped={k: sorted(v) for k, v in skipped.items()}, events_recent=recent[::-1], events_all=pbs["events"][::-1][:30],
@@ -258,6 +293,68 @@ def watcher():
         except Exception: log("watcher error:\n" + traceback.format_exc()); status["busy"] = ""
         first = False
         time.sleep(10)
+
+
+def queue_videos(scen):
+    """Queue the latest day's best-run clip and its +20% companion for a scenario, once."""
+    with job_lock:
+        if any(j["kind"] == "videos" and j["scenario"] == scen and j["status"] in ("queued", "running") for j in jobs.values()): return None
+        jid = str(int(time.time() * 1000)) + str(len(jobs))
+        jobs[jid] = dict(id=jid, kind="videos", scenario=scen, status="queued", stage="Waiting", pct=0)
+    work_q.put(jid)
+    return jobs[jid]
+
+
+def video_job(j):
+    scen = j["scenario"]
+    days = sorted(d for s_, d in BEST if s_ == scen)
+    if not days: return j.update(status="failed", error="No recorded runs for this scenario.")
+    date = days[-1]; score, k = BEST[(scen, date)]
+    title, _ = title_of(scen)
+    os.makedirs(MEDIA["clips"], exist_ok=True)
+    out = os.path.join(MEDIA["clips"], f"{slug(scen)}-{date}.mp4")
+    j.update(status="running", stage="Best-run clip", pct=10)
+    ok, msg = config.run_script("best_run_gif.py", run_path(k), score, f"{title}, best run ({score})", out)
+    m = re.search(r"WINDOW (\d+) (\d+)", msg)
+    if not ok or not m:
+        log(f"best-run clip failed for {k}: {msg[-300:]}"); return j.update(status="failed", error="The clip couldn't be made from this run.")
+    entry = {"run": k, "score": score, "mp4": os.path.basename(out), "png": os.path.basename(out)[:-4] + ".png"}
+    j.update(stage="Side by side, 20% better", pct=55)
+    mout = out[:-4] + "-model.mp4"
+    ok, msg = config.run_script("model_clip.py", run_path(k), score, m.group(1), m.group(2), mout, FACTOR)
+    mm = re.search(r'\{"model_score": (\d+), "target": (\d+), "reached": (true|false)\}', msg)
+    if ok and mm:
+        entry["model"] = {"mp4": os.path.basename(mout), "png": os.path.basename(mout)[:-4] + ".png", "model_score": int(mm.group(1)),
+                          "target": int(mm.group(2)), "reached": mm.group(3) == "true"}
+    else: log(f"model clip failed for {k}: {msg[-300:]}")
+    with clip_lock:
+        clips = load_json(CLIPS, {}); clips[f"{scen}|{date}"] = entry
+        housekeeping(clips, scen); save_json(CLIPS, clips)
+    j.update(status="done", stage="Done", pct=100, date=date)
+
+
+def housekeeping(clips, scen):
+    """Per scenario keep only the latest day's clip and the best run's clip; delete the others (AimStats' own files)."""
+    tags = [t for t in clips if t.startswith(scen + "|") and clips[t].get("mp4")]
+    if len(tags) <= 2: return
+    keep = {max(tags), max(tags, key=lambda t: clips[t].get("score", 0))}
+    for t in tags:
+        if t in keep: continue
+        c = clips.pop(t)
+        for f in (c.get("mp4"), c.get("png"), (c.get("model") or {}).get("mp4"), (c.get("model") or {}).get("png")):
+            if f and os.path.basename(f) == f:
+                try: os.remove(os.path.join(MEDIA["clips"], f))
+                except OSError: pass
+
+
+def worker():
+    while True:
+        jid = work_q.get(); j = jobs.get(jid)
+        try:
+            if j["kind"] == "videos": video_job(j)
+            else: target_job(jid, j["run"], j["target"])
+        except Exception as e:
+            log("video error:\n" + traceback.format_exc()); j.update(status="failed", error=str(e))
 
 
 def target_job(jid, k, target):
@@ -324,6 +421,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
             page = load_json(PAGE, {})
             with job_lock: page["jobs"] = list(jobs.values())
             page["busy"] = status["busy"]; page["last_check"] = status["last_check"]
+            page["settings"] = load_json(SETTINGS, {"ticked": [], "always": []})
             return self.send(200, page)
         m = re.match(r"^/media/(clips|gifs|videos|pb)/([^/\\]+)$", p)
         if m:
@@ -334,22 +432,45 @@ class Handler(http.server.BaseHTTPRequestHandler):
             return self.file(path, ctype)
         self.send(404, {"error": "not found"})
 
+    def body(self):
+        try: return json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0)) or 0) or b"{}")
+        except Exception: return None
+
     def do_POST(self):
-        if self.path != "/api/target": return self.send(404, {"error": "not found"})
-        try:
-            body = json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0)) or 0) or b"{}")
-            k, target = str(body["run"]), int(body["target"])
-        except Exception: return self.send(400, {"error": "Pick a run and type a score."})
-        if not (1 <= target <= 100000): return self.send(400, {"error": "Type a score between 1 and 100000."})
-        if not run_path(k) or "on_target" not in load_json(aim_analysis.OUT, {}).get(k, {}):
-            return self.send(400, {"error": "That run isn't available."})
-        with job_lock:
-            if any(j["status"] in ("queued", "running") for j in jobs.values()):
-                return self.send(409, {"error": "A video is already being made. Wait for it to finish."})
-            jid = str(int(time.time() * 1000))
-            jobs[jid] = dict(id=jid, run=k, target=target, status="queued", stage="Waiting", pct=0)
-        threading.Thread(target=target_job, args=(jid, k, target), daemon=True).start()
-        self.send(200, jobs[jid])
+        b = self.body()
+        if b is None: return self.send(400, {"error": "Bad request."})
+        known = {s_ for s_, _ in BEST}
+        if self.path == "/api/target":
+            try: k, target = str(b["run"]), int(b["target"])
+            except Exception: return self.send(400, {"error": "Pick a run and type a score."})
+            if not (1 <= target <= 100000): return self.send(400, {"error": "Type a score between 1 and 100000."})
+            if not run_path(k) or "on_target" not in load_json(aim_analysis.OUT, {}).get(k, {}):
+                return self.send(400, {"error": "That run isn't available."})
+            with job_lock:
+                if any(j.get("kind") == "target" and j["status"] in ("queued", "running") for j in jobs.values()):
+                    return self.send(409, {"error": "A target-score video is already being made. Wait for it to finish."})
+                jid = str(int(time.time() * 1000))
+                jobs[jid] = dict(id=jid, kind="target", run=k, target=target, status="queued", stage="Waiting", pct=0)
+            work_q.put(jid)
+            return self.send(200, jobs[jid])
+        if self.path == "/api/videos":                         # Videos panel: remember the ticks, make the videos
+            ticked = [x for x in b.get("scenarios", []) if x in known]
+            st_ = load_json(SETTINGS, {}); st_["ticked"] = ticked; save_json(SETTINGS, st_)
+            return self.send(200, {"queued": [j for j in (queue_videos(x) for x in ticked) if j]})
+        if self.path == "/api/settings":                       # Always on/off for one scenario, or the ticks
+            st_ = load_json(SETTINGS, {})
+            if "ticked" in b: st_["ticked"] = [x for x in b["ticked"] if x in known]
+            if "scenario" in b and b["scenario"] in known:
+                al = set(st_.get("always", []))
+                if b.get("always"): al.add(b["scenario"])
+                else: al.discard(b["scenario"])
+                st_["always"] = sorted(al)
+            save_json(SETTINGS, st_)
+            return self.send(200, st_)
+        if self.path == "/api/clip":                           # one-off "Make clip" on a card
+            if b.get("scenario") not in known: return self.send(400, {"error": "Unknown scenario."})
+            return self.send(200, queue_videos(b["scenario"]) or {"status": "queued"})
+        self.send(404, {"error": "not found"})
 
 
 def already_running():
@@ -376,7 +497,11 @@ def main():
     if not srv: log("no free port between 8765 and 8775"); return
     log(f"AimStats running at http://127.0.0.1:{port}/  (game folder: {config.GAME or 'not found'})")
     log("Close this window to stop AimStats.")
+    if not os.path.exists(CLIPS):                              # clips made by older versions
+        old = load_json(WATCH, {}).get("clips", {})
+        save_json(CLIPS, {t: c for t, c in old.items() if c.get("mp4")})
     threading.Thread(target=watcher, daemon=True).start()
+    threading.Thread(target=worker, daemon=True).start()
     if "--no-browser" not in sys.argv: webbrowser.open(f"http://127.0.0.1:{port}/")
     srv.serve_forever()
 

@@ -77,3 +77,42 @@ def bot_profile(scenario):
                     try: return read(bot)
                     except Exception: return {}
     return {}
+
+
+def ranked_bests():
+    """{workshop id: (best score, unix date)} from the game's ranked cache (Trainer/rankedinfo.scns): three parallel
+    arrays "Saved Scenarios Ids" / "Scores" / "Unix Dates", each: name, 8-byte size, 4-byte count, then the items.
+    Read only. {} if the file is missing or looks different."""
+    import os
+    import config
+    try:
+        d = unpack(os.path.join(config.TRAINER, "rankedinfo.scns"))
+        def arr(name):
+            o = d.index(name.encode() + b"\x00") + len(name) + 1 + 8
+            n = struct.unpack("<i", d[o:o + 4])[0]; return n, o + 4
+        n, o = arr("Saved Scenarios Ids"); ids = []
+        for _ in range(n):
+            s = fstr_at(d, o)
+            if not s: return {}
+            ids.append(s[0]); o = s[1]
+        n2, o = arr("Saved Scenarios Scores"); scores = struct.unpack(f"<{n2}i", d[o:o + 4 * n2])
+        n3, o = arr("Saved Scenarios Unix Dates"); dates = struct.unpack(f"<{n3}q", d[o:o + 8 * n3])
+        if not (n == n2 == n3): return {}
+        return {i: (s, t) for i, s, t in zip(ids, scores, dates) if s >= 0}
+    except Exception:
+        return {}
+
+
+def official_best(scenario):
+    """(score, date) of the game's cached ranked best for a scenario, or None. Several workshop items can share a
+    scenario name; the one the ranked cache knows wins."""
+    import datetime as dt, glob, os
+    import config
+    if not config.WORKSHOP: return None
+    want = _key(scenario); bests = ranked_bests(); found = []
+    for scen in glob.glob(os.path.join(config.WORKSHOP, "*", "*.scen")):
+        ws = os.path.basename(os.path.dirname(scen))
+        if _key(os.path.basename(scen)[:-5]) == want and ws in bests: found.append(bests[ws])
+    if not found: return None
+    s, t = max(found)
+    return s, dt.datetime.fromtimestamp(t).date().isoformat()

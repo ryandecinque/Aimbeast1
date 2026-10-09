@@ -69,7 +69,16 @@ table { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-nu
 th, td { text-align: right; padding: 5px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
 th { color: var(--dim); font-weight: 600; }
 th:first-child, td:first-child { text-align: left; }
-.practice h2 { font-size: 16px; margin: 0 0 6px; }
+.practice h2, .videos h2 { font-size: 16px; margin: 0 0 6px; }
+.vrow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 7px 0; border-bottom: 1px solid var(--line); }
+.vrow label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.vrow .name { font-weight: 600; }
+.vrow .meta { color: var(--dim); font-size: 13px; }
+.vrow .always { margin-left: auto; color: var(--dim); font-size: 13px; }
+.vrow .vs { color: var(--dim); font-size: 13px; min-width: 120px; text-align: right; }
+input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--accent); padding: 0; }
+button.ghost { background: transparent; color: var(--accent); border-color: var(--accent); font-weight: 600; }
+.companion { margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -117,7 +126,7 @@ function aimTrends(t) {
   return `<div class="l" style="color:var(--dim);font-size:13px;margin-top:10px">Aim numbers on each practice day (typical run)</div><div class="minis">
     ${mini(t.map(d => d.on_target), "On target", v => Math.round(v) + "%")}
     ${mini(t.map(d => d.swing_past), "Swing-past (lower is better)", v => Math.round(v) + "%")}
-    ${mini(t.map(d => d.pps), "Points per second", v => v.toFixed(1))}</div>`;
+    ${mini(t.map(d => d.pps), "Hits per second", v => v.toFixed(1))}</div>`;
 }
 
 function restText(r) {
@@ -128,12 +137,46 @@ function restText(r) {
 }
 
 function runTable(s) {
-  const rest = !!page.practice;
+  const rest = !!page.practice, hits = s.unit === "hits";
   return `<details><summary>All recorded runs (${s.runs_recorded}${s.runs_recorded > s.runs.length ? `, newest ${s.runs.length} shown` : ""})</summary><div class="tbl"><table>
-    <tr><th>Day</th><th>Time</th><th>Score</th><th>On target</th><th>Swing-past</th><th>Points/s</th>${rest ? "<th>Rest before</th>" : ""}</tr>
+    <tr><th>Day</th><th>Time</th><th>${hits ? "Hits" : "Score"}</th><th>On target</th><th>Swing-past</th><th>Hits/s</th>${rest ? "<th>Rest before</th>" : ""}</tr>
     ${s.runs.map(r => `<tr><td>${day(r.date)}</td><td>${esc(r.time)}</td><td>${r.score}</td><td>${Math.round(r.on_target)}%</td>
       <td>${r.swing_past != null ? Math.round(r.swing_past) + "%" : "–"}</td><td>${r.pps ?? "–"}</td>${rest ? `<td>${restText(r.rest)}</td>` : ""}</tr>`).join("")}
   </table></div></details>`;
+}
+
+function videosBox() {
+  const today = page.today || [], st = page.settings || { ticked: [], always: [] };
+  if (!today.length) return `<div class="box videos"><h2>Videos</h2><div class="cap">No tracking runs today yet. Once you've played, pick the scenarios you want a best-run clip for here.</div></div>`;
+  const first = !(st.ticked || []).length && !(st.always || []).length;
+  return `<div class="box videos"><h2>Videos</h2>
+    <div class="cap" style="margin-bottom:6px">${first ? "Pick the scenarios you want videos for." : "Ticked scenarios get today's best-run clip and a side by side of the same run, 20% better."}
+      Tick <b>Always</b> to have them made after every session without asking.</div>
+    ${today.map(t => `<div class="vrow" data-name="${esc(t.name)}">
+      <label><input type="checkbox" class="tick" ${(st.ticked || []).includes(t.name) ? "checked" : ""} onchange="saveTicks()">
+        <span class="name">${esc(t.title)}${t.ranked ? '<span class="chip">RANKED</span>' : ""}</span></label>
+      <span class="meta">${t.runs} run${t.runs === 1 ? "" : "s"} · best ${t.best}${t.unit === "hits" ? " hits" : ""}</span>
+      <label class="always"><input type="checkbox" ${(st.always || []).includes(t.name) ? "checked" : ""} onchange="setAlways(this)"> Always</label>
+      <span class="vs">${t.done ? "video made" : ""}</span></div>`).join("")}
+    <div style="margin-top:10px"><button onclick="makeVideos(this)">Make videos</button></div></div>`;
+}
+
+async function post(url, body) {
+  const r = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  return [r.ok, await r.json()];
+}
+function ticked() { return [...document.querySelectorAll(".vrow")].filter(r => $(".tick", r).checked).map(r => r.dataset.name); }
+async function saveTicks() { const [, st] = await post("/api/settings", { ticked: ticked() }); page.settings = st; }
+async function setAlways(box) { const [, st] = await post("/api/settings", { scenario: box.closest(".vrow").dataset.name, always: box.checked }); page.settings = st; }
+async function makeVideos(btn) {
+  const names = ticked();
+  if (!names.length) { alert("Tick at least one scenario first."); return; }
+  const [ok, r] = await post("/api/videos", { scenarios: names });
+  if (ok) { page.jobs = [...(page.jobs || []), ...r.queued]; renderJobs(); }
+}
+async function makeClip(btn) {
+  const [ok, j] = await post("/api/clip", { scenario: btn.closest(".scen").dataset.name });
+  if (ok && j.id) { page.jobs = [...(page.jobs || []), j]; renderJobs(); }
 }
 
 function practiceBox(p) {
@@ -167,10 +210,16 @@ function weekLine(w) {
 
 function card(s) {
   const n = s.last_day_numbers, dist = n.by_distance || {};
+  const hits = s.unit === "hits";                    // game scores didn't line up with the recording: show hits
   const bands = Object.keys(dist);
-  const clip = s.clip ? `<video src="${media("clips", s.clip.mp4)}" poster="${media("clips", s.clip.png)}" autoplay muted loop playsinline></video>
-      <div class="cap">Best run on ${day(s.clip.date || s.last_day)}: <b>${s.clip.score}</b>. These are its 8 seconds with the most hits, rebuilt from your aim data.</div>`
-    : `<div class="box cap">The best-run clip is being made…</div>`;
+  const m = s.clip && s.clip.model;
+  const makeBtn = s.clip_today ? "" : `<div style="margin-top:8px"><button class="ghost" onclick="makeClip(this)">Make clip for ${day(s.last_day)}</button> <span class="cap vjob"></span></div>`;
+  const clip = (s.clip ? `<video src="${media("clips", s.clip.mp4)}" poster="${media("clips", s.clip.png)}" autoplay muted loop playsinline></video>
+      <div class="cap">Best run on ${day(s.clip.date)}: <b>${s.clip.score}</b>. These are its 8 seconds with the most hits, rebuilt from your aim data.</div>`
+      + (m ? `<div class="companion"><video src="${media("clips", m.mp4)}" poster="${media("clips", m.png)}" autoplay muted loop playsinline></video>
+      <div class="cap">Same run, 20% better: something to model your aim on.${m.reached ? "" : ` The model reached ${m.model_score}, the closest it could get to ${m.target}.`}
+      Same bot movement and the same human reaction time; only the smoothness changes.</div></div>` : "")
+    : `<div class="box cap">No video for this scenario yet. Tick it under Videos at the top, or press Make clip.</div>`) + makeBtn;
   const swing = s.swing ? `<div class="gif"><img src="${media("gifs", s.swing.gif)}" alt="Swing-past moment" loading="lazy"></div>
       <div class="cap">From your ${esc(s.swing.time)} run on ${day(s.swing.date)}${s.swing.at != null ? `, ${Math.round(s.swing.at)} s in` : ""}: the bot kept going, your correction went through it and out the other side.
       ${s.swing.you != null ? `In this moment you were on the bot <b>${s.swing.you}%</b> of the time; a smooth follow with your same reaction time gets <b>${s.swing.smooth}%</b>.` : ""}</div>`
@@ -178,15 +227,15 @@ function card(s) {
   const runs = s.runs.map(r => `<option value="${esc(r.file)}">${day(r.date)} ${esc(r.time)}: ${r.score}</option>`).join("");
   return `<section class="scen" data-name="${esc(s.name)}">
     <h2>${esc(s.title)}${s.ranked ? '<span class="chip">RANKED</span>' : ""}</h2>
-    <div class="sub">Last played ${day(s.last_day)} · ${n.runs} run${n.runs === 1 ? "" : "s"} recorded that day · ${s.runs_recorded} recorded in total${s.all_time_best ? ` · all-time best ${s.all_time_best}` : ""}</div>
+    <div class="sub">Last played ${day(s.last_day)} · ${n.runs} run${n.runs === 1 ? "" : "s"} recorded that day · ${s.runs_recorded} recorded in total${s.best ? ` · ${s.best.since ? "best" : "all-time best"} ${s.best.score}${hits ? " hits" : ""}${s.best.since ? ` since ${day(s.best.since)}` : ""}` : ""}</div>
     <div class="grid">
       <div>${clip}</div>
       <div class="nums">
-        <div class="num"><div class="v">${n.best} <small>/ ${n.typical} typical</small></div><div class="l">Best score that day</div></div>
+        <div class="num"><div class="v">${n.best} <small>/ ${n.typical} typical</small></div><div class="l">${hits ? "Most hits that day (the game's score didn't match, so these are hits)" : "Best score that day"}</div></div>
         <div class="num"><div class="v">${n.on_target != null ? Math.round(n.on_target) + "%" : "–"}</div><div class="l">Time on target (typical run)</div></div>
         <div class="num"><div class="v">${n.swing_past != null ? Math.round(n.swing_past) + "%" : "–"}</div><div class="l">Misses where you swung past the bot</div></div>
         <div class="num"><div class="v">${n.reaction_ms != null ? Math.round(n.reaction_ms) + " ms" : "–"}</div><div class="l">Reaction when the bot changes direction</div></div>
-        ${bands.length > 1 ? `<div class="num wide"><div class="v" style="font-size:20px">${bands.map(b => `${b} <b>${dist[b]}</b>`).join(" · ")}</div><div class="l">Points per second by distance to the bot</div></div>` : ""}
+        ${bands.length > 1 ? `<div class="num wide"><div class="v" style="font-size:20px">${bands.map(b => `${b} <b>${dist[b]}</b>`).join(" · ")}</div><div class="l">Hits per second by distance to the bot</div></div>` : ""}
         <div class="num wide week">${weekLine(s.week)}${spark(s.trend)}${aimTrends(s.aim_trend)}</div>
       </div>
     </div>
@@ -206,12 +255,20 @@ function card(s) {
   </section>`;
 }
 
+function videoJobText(j) {
+  return j.status === "done" ? "video made" : j.status === "failed" ? (j.error || "failed") : j.status === "queued" ? "waiting…" : `${j.stage}… ${j.pct}%`;
+}
 function renderJobs() {
+  const vj = {};
+  (page.jobs || []).filter(j => j.kind === "videos").sort((a, b) => a.id - b.id).forEach(j => vj[j.scenario] = j);
+  document.querySelectorAll(".vrow").forEach(r => { const j = vj[r.dataset.name]; if (j) $(".vs", r).textContent = videoJobText(j); });
+  document.querySelectorAll(".scen").forEach(sec => { const j = vj[sec.dataset.name], el = $(".vjob", sec); if (j && el) el.textContent = videoJobText(j); });
+
   document.querySelectorAll(".scen").forEach(sec => {
     const files = [...sec.querySelectorAll("option")].map(o => o.value);
-    const js = (page.jobs || []).filter(j => files.includes(j.run)).sort((a, b) => b.id - a.id);
+    const js = (page.jobs || []).filter(j => j.kind !== "videos" && files.includes(j.run)).sort((a, b) => b.id - a.id);
     const el = $(".job", sec), j = js[0];
-    const busy = (page.jobs || []).some(x => x.status === "queued" || x.status === "running");
+    const busy = (page.jobs || []).some(x => x.kind !== "videos" && (x.status === "queued" || x.status === "running"));
     sec.querySelector("button").disabled = busy;
     if (!j) { el.innerHTML = ""; return; }
     const sig = j.id + j.status + j.pct;
@@ -249,6 +306,7 @@ function render() {
   if (ev.length) top.push(`<div class="box pb"><h2>${ev.length === 1 ? (ev[0].kind === "pb" ? "New personal best!" : "Best week yet!") : "New bests!"}</h2>
     <div class="cap" style="margin-bottom:10px">${ev.map(e => e.kind === "pb" ? `${esc(e.title)}: <b>${e.score}</b> (old best ${e.old})` : `${esc(e.title)}: typical score over 7 days <b>${e.median}</b> (was ${e.old})`).join(" · ")}. Click a card to save it and share it.</div>
     <div class="cards">${ev.map(e => `<a href="${media("pb", e.card)}" download><img src="${media("pb", e.card)}" alt="Share card"></a>`).join("")}</div></div>`);
+  top.push(videosBox());
   top.push(practiceBox(page.practice));
   $("#top").innerHTML = top.join("");
   const sc = page.scenarios || [];

@@ -5,7 +5,8 @@ What it is
 ----------
 AimStats records your Aimbeast tracking runs and shows you, after every session and without you doing
 anything:
-  - your best run per scenario as a short clip (the 8 seconds with the most hits, rebuilt from your aim)
+  - for the scenarios you pick: your best run as a short clip (the 8 seconds with the most hits, rebuilt
+    from your aim), next to the same run played 20% better by a model with your reaction time
   - a few clear numbers: time on target, how often you swing past the bot, points by distance
   - whether you're improving week to week
   - how long you rest between runs, and whether short or longer rests go with better scores
@@ -14,6 +15,9 @@ anything:
   - a banner and a share card when you set a new personal best or have your best week
   - on request: a target-score video. Pick a run, type a score (say 700), and you get a model run on the
     same bot movement that scores about that, on its own and side by side with yours.
+
+Videos are opt-in: tick scenarios in the Videos panel at the top of the page, or tick Always to have them
+made after every session.
 
 Tracking scenarios only for now. Switching and clicking scenarios are recorded but not analysed yet.
 No AI is involved anywhere: it's plain maths on your own recordings.

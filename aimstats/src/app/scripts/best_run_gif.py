@@ -36,3 +36,4 @@ ok, msg = config.run_script("pb_video.py", path, score, title.upper(), out, f"Be
 print(msg[-600:])
 if not ok: sys.exit(1)
 print(out, "best 8 s =", best, "hits from", round(S[a]["t"], 1), "s")
+print("WINDOW", a, b)
