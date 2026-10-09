@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-09 07:51",
- "updated_utc": "2026-10-09T00:51:19Z",
+ "updated": "2026-10-09 07:56",
+ "updated_utc": "2026-10-09T00:56:19Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
-   "RANK INT A": 20
+   "RANK INT A": 22
   }
  },
  "plan_start": "2026-10-07",
@@ -70,8 +70,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 842.0,
-   "median_14d": 662,
-   "runs_14d": 105,
+   "median_14d": 663,
+   "runs_14d": 107,
    "steps": [
     0.0,
     240.0,
@@ -437,9 +437,9 @@
     },
     {
      "date": "2026-10-09",
-     "median": 704,
+     "median": 728,
      "best": 764,
-     "runs": 2
+     "runs": 4
     }
    ]
   },
@@ -800,17 +800,17 @@
  "days": [
   {
    "date": "2026-10-09",
-   "runs": 20,
-   "restarts": 8,
-   "rest_median_s": 53,
+   "runs": 22,
+   "restarts": 13,
+   "rest_median_s": 55,
    "rest_longest_s": 336,
    "breaks": [],
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 20,
+     "runs": 22,
      "first": "07:05",
-     "last": "07:50"
+     "last": "07:54"
     }
    ],
    "scenarios": [
@@ -840,11 +840,11 @@
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
-     "runs": 2,
+     "runs": 4,
      "routine": "RANK INT A",
      "first": "07:47",
      "best": 764,
-     "median": 704
+     "median": 728
     }
    ]
   },
@@ -1381,7 +1381,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 212,
+  "runs": 214,
   "days": 4,
   "groups": [
    {
@@ -1396,7 +1396,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 76,
+    "runs": 78,
     "pct": 102.1
    },
    {
