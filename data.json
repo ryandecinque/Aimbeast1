@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-09 12:29",
- "updated_utc": "2026-10-09T05:29:11Z",
+ "updated": "2026-10-09 12:59",
+ "updated_utc": "2026-10-09T05:59:42Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
@@ -1818,7 +1818,8 @@
     "note": "Best of 8 today (median 740). My best since Sep 23 (was 842). All-time best is 878. The clip is its 8 seconds with the most hits.",
     "video": true,
     "model": {
-     "pending": "waiting for the bot-height fix for older flying-bot recordings"
+     "file": "model-spheres-2026-10-09",
+     "label": "Model: 943 (the closest it could get to 1024)"
     }
    },
    {
@@ -1834,7 +1835,8 @@
     "note": "Best of 8 today (median 482). The clip is its 8 seconds with the most hits.",
     "video": true,
     "model": {
-     "pending": "waiting for the bot-height fix for older flying-bot recordings"
+     "file": "model-airtrack-2026-10-09",
+     "label": "Model: 634"
     }
    },
    {
