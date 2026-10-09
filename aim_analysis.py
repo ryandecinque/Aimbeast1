@@ -8,6 +8,18 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "aim_summary.json")
 LOSS = 0.5            # seconds off target that count as "lost the target"
 
+def thin60(rows):
+    """Recorder phase 6 samples clicking runs at 120 a second. Tracking numbers assume even 60-a-second steps,
+    so keep only rows at least ~1/60 s apart (unchanged for 60-a-second files)."""
+    ts = [float(r["t"]) for r in rows]
+    gaps = [b - a for a, b in zip(ts, ts[1:])]
+    if not gaps or sum(g < 0.0095 for g in gaps) < 0.2 * len(gaps): return rows      # a normal 60-a-second file
+    out, last = [], None
+    for r in rows:
+        t = float(r["t"])
+        if last is None or t - last >= 1 / 60 - 0.002: out.append(r); last = t
+    return out
+
 def moving_ids(rows):
     """Bots that actually move during the run. Bots left over from earlier scenarios stay in the level standing still."""
     span = {}
@@ -62,6 +74,7 @@ def angles(r, ids=None, src=""):
 
 def analyse(path, size=None):
     rows = list(csv.DictReader((gzip.open(path, "rt", encoding="utf-8") if path.endswith(".gz") else open(path, encoding="utf-8"))))
+    rows = thin60(rows)
     ids = moving_ids(rows)
     live = lambda r: sum(1 for i in range(1, 9) if r.get(f"b{i}_x") not in (None, "", "0.0") and (r.get(f"b{i}_id") or str(i)) in ids)
     if len(ids) > 3 or max(live(r) for r in rows) > 2:     # switching / multi-bot: tracking numbers don't apply
