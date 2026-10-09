@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-09 10:41",
- "updated_utc": "2026-10-09T03:41:55Z",
+ "updated": "2026-10-09 10:46",
+ "updated_utc": "2026-10-09T03:46:19Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
    "RANK INT A": 26,
-   "ZEUS BUILDER": 8
+   "ZEUS BUILDER": 10
   }
  },
  "plan_start": "2026-10-07",
@@ -811,9 +811,9 @@
  "days": [
   {
    "date": "2026-10-09",
-   "runs": 34,
-   "restarts": 29,
-   "rest_median_s": 55,
+   "runs": 36,
+   "restarts": 31,
+   "rest_median_s": 53,
    "rest_longest_s": 794,
    "breaks": [
     {
@@ -821,6 +821,12 @@
      "before": "ZEUS BUILDER",
      "at": "08:16",
      "minutes": 95.2
+    },
+    {
+     "after": "ZEUS BUILDER",
+     "before": "ZEUS BUILDER",
+     "at": "10:26",
+     "minutes": 17.0
     }
    ],
    "playlists": [
@@ -832,9 +838,9 @@
     },
     {
      "name": "ZEUS BUILDER",
-     "runs": 8,
+     "runs": 10,
      "first": "09:52",
-     "last": "10:26"
+     "last": "10:45"
     }
    ],
    "scenarios": [
@@ -901,6 +907,14 @@
      "first": "10:24",
      "best": 630,
      "median": 588
+    },
+    {
+     "name": "SLOW ACCEL 'STT' SHORT",
+     "runs": 2,
+     "routine": "ZEUS BUILDER",
+     "first": "10:44",
+     "best": 300,
+     "median": 289
     }
    ]
   },
@@ -1437,18 +1451,18 @@
   }
  ],
  "rest_effect": {
-  "runs": 226,
+  "runs": 228,
   "days": 4,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 59,
-    "pct": 98.8
+    "runs": 60,
+    "pct": 98.6
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 61,
-    "pct": 99.5
+    "runs": 62,
+    "pct": 99.7
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -1457,8 +1471,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 15,
-    "pct": 99.2
+    "runs": 16,
+    "pct": 98.8
    }
   ]
  },
@@ -1554,6 +1568,16 @@
     "pps_by_distance": {
      "mid": 2.0,
      "close": 2.0
+    }
+   },
+   {
+    "scenario": "SLOW ACCEL STT SHORT",
+    "runs": 2,
+    "on_target": 28,
+    "reaction_ms": 117,
+    "overshoot_pct": 30,
+    "pps_by_distance": {
+     "mid": 4.8
     }
    },
    {
