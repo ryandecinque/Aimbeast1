@@ -4,17 +4,21 @@ import csv, math, sys
 from PIL import Image, ImageDraw, ImageFont
 
 path, score, label, out = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+from aim_analysis import moving_ids
 rows = list(csv.DictReader(open(path, encoding="utf-8")))
+IDS = moving_ids(rows)                            # skip bots left over from earlier scenarios (they never move)
 S = []
 for r in rows:
-    if r["b1_x"] in ("", "0.0"): S.append(None); continue
+    k = next((i for i in range(1, 9) if r.get(f"b{i}_x") not in (None, "", "0.0") and (r.get(f"b{i}_id") or str(i)) in IDS), None)
+    if k is None: S.append(None); continue
     y, p = float(r["yaw"]), float(r["pitch"])
-    dx, dy, dz = float(r["b1_x"]) - float(r["cam_x"]), float(r["b1_y"]) - float(r["cam_y"]), float(r["b1_z"]) - float(r["cam_z"])
+    dx, dy, dz = float(r[f"b{k}_x"]) - float(r["cam_x"]), float(r[f"b{k}_y"]) - float(r["cam_y"]), float(r[f"b{k}_z"]) - float(r["cam_z"])
     ex = (math.degrees(math.atan2(dy, dx)) - y + 180) % 360 - 180
     ey = math.degrees(math.atan2(dz, math.hypot(dx, dy))) - p
-    S.append(dict(ex=ex, ey=ey, hits=int(r["hits"]), t=float(r["t"])))
+    S.append(dict(ex=ex, ey=ey, d=math.sqrt(dx * dx + dy * dy + dz * dz), hits=int(r["hits"]), t=float(r["t"])))
 hits = [s["hits"] if s else None for s in S]
-first = next(i for i in range(1, len(S)) if hits[i] and hits[i - 1] is not None and hits[i] > hits[i - 1])
+resets = [i for i in range(1, len(S)) if hits[i] is not None and hits[i - 1] is not None and hits[i] < hits[i - 1]]   # run starts when the game zeroes the counter
+first = resets[-1] if resets else next(i for i in range(1, len(S)) if hits[i] and hits[i - 1] is not None and hits[i] > hits[i - 1])
 last = max(i for i in range(len(S)) if hits[i] is not None)
 WIN = 8 * 60
 best, a = -1, first
@@ -25,11 +29,20 @@ for i in range(first, last - WIN, 6):
 b = a + WIN
 total = hits[last] - hits[first]
 
+# the bot's real size and centre, from where the aim was when hits landed (in world units, so it grows as it comes close)
+import statistics as st
+hit_i = [i for i in range(first + 1, last) if S[i] and S[i - 1] and hits[i] > hits[i - 1]]
+U = lambda deg, d: math.tan(math.radians(deg)) * d
+OFF = st.median(U(S[i]["ey"], S[i]["d"]) for i in hit_i)                      # aim point vs the recorded bot position
+hw = sorted(abs(U(S[i]["ex"], S[i]["d"])) for i in hit_i)[int(.9 * len(hit_i))]
+hh = sorted(abs(U(S[i]["ey"], S[i]["d"]) - OFF) for i in hit_i)[int(.9 * len(hit_i))]
+hw = max(hw, 0.45 * hh)          # precise left-right aim underestimates width: keep a capsule shape
+D0 = st.median(S[i]["d"] for i in hit_i)
 W, H = 640, 360
 try: F = ImageFont.truetype("arialbd.ttf", 18); FS = ImageFont.truetype("arial.ttf", 13); FB = ImageFont.truetype("arialbd.ttf", 28)
 except Exception: F = FS = FB = ImageFont.load_default()
 BG, PANEL, INK, DIM, BOT, AIM, ACC = (22, 22, 21), (40, 40, 38), (244, 243, 238), (150, 149, 140), (90, 220, 210), (255, 70, 70), (240, 122, 69)
-SCALE = 11
+SCALE = 40 / math.degrees(math.atan(hh / D0))       # the bot is about 80 px tall at its typical distance
 frames = []
 for i in range(a, b, 2):                          # every other sample: 30 frames a second, real speed
     s = S[i]
@@ -38,8 +51,10 @@ for i in range(a, b, 2):                          # every other sample: 30 frame
     d.text((14, 10), label, fill=INK, font=F)
     cx, cy = W // 2, 160
     if s:
-        bx, by = cx + s["ex"] * SCALE, cy - s["ey"] * SCALE
-        d.rounded_rectangle([bx - 13, by - 24, bx + 13, by + 24], radius=13, fill=BOT)
+        cey = math.degrees(math.atan2(U(s["ey"], s["d"]) - OFF, s["d"]))     # aim error to the bot's centre
+        bx, by = cx + s["ex"] * SCALE, cy - cey * SCALE
+        rx, ry = math.degrees(math.atan(hw / s["d"])) * SCALE, math.degrees(math.atan(hh / s["d"])) * SCALE
+        d.rounded_rectangle([bx - rx, by - ry, bx + rx, by + ry], radius=min(rx, ry), fill=BOT)
     d.ellipse([cx - 4, cy - 4, cx + 4, cy + 4], fill=AIM)
     # hits in this clip (hits are the score)
     if s and hits[i] is not None:

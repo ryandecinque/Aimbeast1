@@ -432,7 +432,7 @@ function bestCard(x, date) {
   return `<div class="moment"><h3>Best recorded run: ${esc(nice(x.scenario))} ${x.score}</h3>` +
     `<img src="assets/aim/${esc(x.gif)}.${still ? "png" : "gif"}" data-gif="assets/aim/${esc(x.gif)}.gif" loading="lazy" width="640" height="360" alt="The 8 best seconds of my ${esc(nice(x.scenario))} run that scored ${x.score}">` +
     `<p class="score">Score <b>${x.score}</b>${x.best_14d ? ` · 14-day best ${x.best_14d}` : ""}${x.master3 ? ` · Master 3 is ${x.master3}` : ""}</p>` +
-    `<p class="score">On target ${x.on_target}% · reaction ${x.reaction_ms} ms · overshoot ${x.overshoot_pct}%</p>` +
+    `<p class="score">On target ${x.on_target}%${x.reaction_ms != null ? ` · reaction ${x.reaction_ms} ms` : ""} · overshoot ${x.overshoot_pct}%</p>` +
     `<p class="small">${esc(nd(date))}, ${esc(x.time)}. ${esc(x.note || "")}</p></div>`;
 }
 

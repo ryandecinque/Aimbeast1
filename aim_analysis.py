@@ -8,7 +8,19 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "aim_summary.json")
 LOSS = 0.5            # seconds off target that count as "lost the target"
 
-def angles(r):
+def moving_ids(rows):
+    """Bots that actually move during the run. Bots left over from earlier scenarios stay in the level standing still."""
+    span = {}
+    for r in rows:
+        for i in range(1, 9):
+            x, k = r.get(f"b{i}_x"), r.get(f"b{i}_id") or str(i)
+            if not x or x == "0.0": continue
+            p = (float(x), float(r[f"b{i}_y"]), float(r[f"b{i}_z"]))
+            lo, hi = span.get(k, (p, p))
+            span[k] = (tuple(map(min, lo, p)), tuple(map(max, hi, p)))
+    return {k for k, (lo, hi) in span.items() if max(b - a for a, b in zip(lo, hi)) > 50}
+
+def angles(r, ids=None):
     """Aim error to the nearest bot, in degrees: (left-right, up-down, distance). None if no bot."""
     best = None
     cx, cy, cz = float(r["cam_x"]), float(r["cam_y"]), float(r["cam_z"])
@@ -16,6 +28,7 @@ def angles(r):
     for i in range(1, 9):              # up to 8 bots (older files have 3)
         x = r.get(f"b{i}_x")
         if not x or x == "0.0": continue
+        if ids is not None and (r.get(f"b{i}_id") or str(i)) not in ids: continue
         dx, dy, dz = float(x) - cx, float(r[f"b{i}_y"]) - cy, float(r[f"b{i}_z"]) - cz
         d = math.sqrt(dx * dx + dy * dy + dz * dz)
         if d < 1: continue
@@ -26,11 +39,13 @@ def angles(r):
 
 def analyse(path, size=None):
     rows = list(csv.DictReader((gzip.open(path, "rt", encoding="utf-8") if path.endswith(".gz") else open(path, encoding="utf-8"))))
-    if max(int(r.get("bots") or 0) for r in rows) > 2:     # switching / multi-bot: tracking numbers don't apply
+    ids = moving_ids(rows)
+    live = lambda r: sum(1 for i in range(1, 9) if r.get(f"b{i}_x") not in (None, "", "0.0") and (r.get(f"b{i}_id") or str(i)) in ids)
+    if len(ids) > 3 or max(live(r) for r in rows) > 2:     # switching / multi-bot: tracking numbers don't apply
         return {"skipped": "switching or multi-bot scenario (not analysed yet)"}
     s = []
     for r in rows:
-        a = angles(r)
+        a = angles(r, ids)
         if a: s.append(dict(t=float(r["t"]), ex=a[0], ey=a[1], d=a[2], hits=int(r["hits"]), m1=r["m1"] == "1"))
     if len(s) < 600: return None
     # skip the countdown: start from the first hit (or 3 s in)
