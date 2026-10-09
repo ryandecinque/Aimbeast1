@@ -1,4 +1,4 @@
--- AimRecorder, phase 6: READ-ONLY recorder (up to 8 bots with id, health and visible body position, plus kills and misses). Never writes to the game, never changes scores.
+-- AimRecorder, phase 7: READ-ONLY recorder (up to 8 bots with id, health and visible body position, plus kills and misses). Never writes to the game, never changes scores.
 -- AimStats copy. During a run (ranked runs too) it samples 60 times a second (120 in clicking runs): camera aim
 -- and position, every bot's position, the hit counter and whether M1 is held. It only reads these values; it never
 -- sets scores, timers, bots or anything ranked. Samples stay in memory and are written once, when the run ends,
@@ -49,7 +49,7 @@ local function startRun()
     if not enabled then return end
     if scenario:find("RANKED", 1, true) and not RECORD_RANKED then log("skipping ranked run: " .. scenario); return end
     rec = { rows = {}, t = 0, acc = 0, bots = {}, cost = 0, ticks = 0, samples = 0, started = os.date("%Y-%m-%d_%H%M%S"),
-            rate = RATE, presses = 0, lastm1 = false, first = {}, moved = {} }
+            rate = RATE, presses = 0, lastm1 = false, first = {}, moved = {}, seen = {} }
 end
 
 local function sample(r)
@@ -75,7 +75,25 @@ local function sample(r)
     -- bots: re-find when any is gone, and every 30 samples so newly spawned bots are noticed
     local ok = #r.bots > 0 and (r.samples % 30) ~= 0
     for _, b in ipairs(r.bots) do if not b:IsValid() then ok = false end end
-    if not ok then r.bots = findBots() end
+    if not ok then
+        -- fill the 8 slots with bots that move first: leftover still bots from earlier scenarios can outnumber the live
+        -- ones (TAMTARGETSWITCH: 11 live bots + 6 leftovers, only 10 of 27 kills were recorded before this)
+        local all, moving, fresh, still = findBots(), {}, {}, {}
+        for _, b in ipairs(all) do
+            local okp, p = pcall(function() return b:K2_GetActorLocation() end)
+            local a = b:GetAddress()
+            if okp and p then
+                local f = r.first[a]
+                if not f then r.first[a] = { p.X, p.Y, p.Z }
+                elseif not r.moved[a] and math.abs(p.X - f[1]) + math.abs(p.Y - f[2]) + math.abs(p.Z - f[3]) > 50 then r.moved[a] = true end
+            end
+            if r.moved[a] then moving[#moving + 1] = b elseif (r.seen[a] or 0) < 4 then fresh[#fresh + 1] = b else still[#still + 1] = b end
+            r.seen[a] = (r.seen[a] or 0) + 1
+        end
+        r.bots = moving
+        for _, b in ipairs(fresh) do r.bots[#r.bots + 1] = b end
+        for _, b in ipairs(still) do r.bots[#r.bots + 1] = b end
+    end
     local parts = { string.format("%.4f,%.3f,%.3f,%.1f,%.1f,%.1f,%d,%d,%d,%d,%d", r.t, rot.Pitch, rot.Yaw, loc.X, loc.Y, loc.Z,
         pawn.Hits or 0, pawn["isMouseLeftDown?"] and 1 or 0, #r.bots, pawn.Kills or 0, pawn.Misses or 0) }
     for i = 1, math.min(#r.bots, MAXBOTS) do
@@ -162,4 +180,4 @@ RegisterKeyBind(Key.F7, function()
     log("recording " .. (enabled and "ON" or "OFF") .. " (F7)")
 end)
 RegisterHook("/Script/Engine.PlayerController:ClientRestart", function() tryHooks() end)
-log("loaded (phase 6 recorder, read-only, ranked " .. (RECORD_RANKED and "on" or "off") .. ")")
+log("loaded (phase 7 recorder, read-only, ranked " .. (RECORD_RANKED and "on" or "off") .. ")")
