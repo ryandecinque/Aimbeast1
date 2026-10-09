@@ -210,6 +210,12 @@ def build():
 
 
 def best_runs():
+    try:                                     # new best recorded runs get a card and GIF automatically (runs after aim_by_day)
+        import best_runs_auto
+        rk = ranks()
+        best_runs_auto.update({r["name"]: int(r["master3"]) for r in rk}, {r["name"]: int(r["best_14d"]) for r in rk if r.get("best_14d")})
+    except Exception as e:
+        print("best runs skipped:", e)
     p = os.path.join(HERE, "best_runs.json")
     return json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
 
@@ -257,7 +263,7 @@ def main():
         return
     if strip(new) != strip(old) or journal_changed:
         open(OUT, "w", encoding="utf-8").write(new)
-        git("add", "data.json")
+        git("add", "data.json", "best_runs.json", "assets/aim")
         c = git("commit", "-m", "Update practice data " + data["updated"])
         p = git("push")
         print(c.stdout.strip() or c.stderr.strip()); print(p.stderr.strip())

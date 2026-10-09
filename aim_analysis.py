@@ -58,10 +58,17 @@ def analyse(path, size=None):
         x["ex0"] = x["ex"]
         x["ex"] = math.degrees(math.atan(math.tan(math.radians(x["ex"])) * x["d"] / 1000))
         x["ey"] = math.degrees(math.atan(math.tan(math.radians(x["ey"])) * x["d"] / 1000))
+    # in some scenarios (Air Track, Sphere S) the bot's recorded height isn't where it is on screen: at hit moments the
+    # up-down error is far bigger than the left-right one. Then only left-right is measured.
+    hi_ = [i for i in range(1, len(s)) if s[i]["hits"] > s[i - 1]["hits"]]
+    lr_only = bool(hi_) and abs(st.median(s[i]["ey"] for i in hi_)) > 4 * sorted(abs(s[i]["ex"]) for i in hi_)[int(.9 * len(hi_))]
+    if lr_only:
+        for x in s: x["ey"] = 0.0
     hx = sorted(abs(s[i]["ex"]) for i in range(1, len(s)) if s[i]["hits"] > s[i - 1]["hits"])
     hy = sorted(abs(s[i]["ey"]) for i in range(1, len(s)) if s[i]["hits"] > s[i - 1]["hits"])
     if len(hx) < 20: return None
     wx, wy = size if size else (hx[int(.9 * len(hx))], hy[int(.9 * len(hy))])
+    if lr_only: wy = max(wy, 1.0)
     on = [abs(x["ex"]) <= wx and abs(x["ey"]) <= wy for x in s]
     dt_ = (s[-1]["t"] - s[0]["t"]) / (len(s) - 1)
     # off-target stretches
@@ -124,7 +131,7 @@ def analyse(path, size=None):
         reaction_ms=round(st.median(reacts)) if reacts else None, direction_changes=len(reacts),
         overshoot_pct=round(100 * over / max(len(real), 1)), misses=len(real),
         long_losses=sum(e["dur"] >= LOSS for e in real),
-        updown_pct=round(100 * sum(e["dur"] for e in real if e["axis"] == "ud") / offt),
+        updown_pct=None if lr_only else round(100 * sum(e["dur"] for e in real if e["axis"] == "ud") / offt), left_right_only=lr_only,
         m1_held=pct([x["m1"] for x in s]), hits=s[-1]["hits"] - s[0]["hits"], seconds=round(s[-1]["t"] - s[0]["t"], 1),
         target_deg=[round(wx, 2), round(wy, 2)], by_distance=bands)
 
