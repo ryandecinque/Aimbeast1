@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-09 09:10",
- "updated_utc": "2026-10-09T02:10:22Z",
+ "updated": "2026-10-09 09:11",
+ "updated_utc": "2026-10-09T02:11:19Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
@@ -759,7 +759,7 @@
   {
    "date": "2026-10-09",
    "author": "Claude",
-   "text": "Playlist: RANK INT A (26 runs including the 2 warm-up runs, 07:05–08:16)\nWhat happened: Your best A day so far. All three medians beat their pre-plan baselines: Smooth Thin 438 (baseline 429), Air Track 482 (447), Sphere S 740 (663). Sphere S hit 853, a new best above your old 842 and 27 short of Master 3 (880). On the Oct 7 morning these medians were 375, 360 and 557.\nAim recorder: In Sphere S and Smooth Thin, your best run was the one where you swung past the bot least. The 853 Sphere S run went past it on 1 in 4 corrections, against 1 in 3 to 2 in 5 on the other runs. The 473 Smooth Thin run was 1 in 5, against about 1 in 3. Air Track didn't follow the pattern (its 526 swung past as often as the rest). (Fix: Air Track and Sphere S were wrongly skipped at first because bots left over from earlier scenarios stand still in the level. The script now ignores bots that never move.)\nConditions: Unlike Oct 7 and Oct 8, you didn't play straight after waking. You warmed up first in R5Reloaded with all the Aimbeast ranked V1 tracking scenarios plus a couple of rounds of ranked, then did the Air Control Sphere warm-up (910 and 912). This is the first A day with that much warm-up, and the first with no cold start: Smooth Thin's first counted run was 449, not its usual low opener. As you said, one day can't separate the warm-up from just being further from waking, but it's worth repeating.\nRest: The median rest was 57 s, in the longer range that has scored better so far. One 13-minute break came mid-Sphere S, and the runs after it (726, 746) sat on the day's median, so the break didn't hurt.\nNext time: Repeat the same order (wake, R5Reloaded warm-up, then the playlist) on B tomorrow and note it, so we can see whether PASU 0.85x loses its cold start too. In-game, aim to stop on the bot after a correction instead of swinging through it. That separated your best runs today."
+   "text": "Playlist: RANK INT A (26 runs including the 2 warm-up runs, 07:05–08:16)\nWhat happened: Your best A day so far. All three medians beat their pre-plan baselines: Smooth Thin 438 (baseline 429), Air Track 482 (447), Sphere S 740 (663). Sphere S hit 853, your best since the score log started on Sep 23 (old best there 842). Your all-time best is still 878, and Master 3 is 880. On the Oct 7 morning these medians were 375, 360 and 557.\nAim recorder: In Sphere S and Smooth Thin, your best run was the one where you swung past the bot least. The 853 Sphere S run went past it on 1 in 4 corrections, against 1 in 3 to 2 in 5 on the other runs. The 473 Smooth Thin run was 1 in 5, against about 1 in 3. Air Track didn't follow the pattern (its 526 swung past as often as the rest). (Fix: Air Track and Sphere S were wrongly skipped at first because bots left over from earlier scenarios stand still in the level. The script now ignores bots that never move.)\nConditions: Unlike Oct 7 and Oct 8, you didn't play straight after waking. You warmed up first in R5Reloaded with all the Aimbeast ranked V1 tracking scenarios plus a couple of rounds of ranked, then did the Air Control Sphere warm-up (910 and 912). This is the first A day with that much warm-up, and the first with no cold start: Smooth Thin's first counted run was 449, not its usual low opener. As you said, one day can't separate the warm-up from just being further from waking, but it's worth repeating.\nRest: The median rest was 57 s, in the longer range that has scored better so far. One 13-minute break came mid-Sphere S, and the runs after it (726, 746) sat on the day's median, so the break didn't hurt.\nNext time: Repeat the same order (wake, R5Reloaded warm-up, then the playlist) on B tomorrow and note it, so we can see whether PASU 0.85x loses its cold start too. In-game, aim to stop on the bot after a correction instead of swinging through it. That separated your best runs today."
   },
   {
    "date": "2026-10-08",
@@ -1576,7 +1576,7 @@
     "overshoot_pct": 27,
     "best_14d": 853,
     "master3": 880,
-    "note": "Best of 8 today (median 740). A new best, above my old 842. The clip is its 8 seconds with the most hits."
+    "note": "Best of 8 today (median 740). My best since Sep 23 (was 842). All-time best is 878. The clip is its 8 seconds with the most hits."
    },
    {
     "scenario": "Air Track Smooth V3 150%",
