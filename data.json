@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-09 11:26",
- "updated_utc": "2026-10-09T04:26:20Z",
+ "updated": "2026-10-09 11:36",
+ "updated_utc": "2026-10-09T04:36:20Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
@@ -128,7 +128,7 @@
    "official_best": 580.0,
    "best_14d": 556.0,
    "median_14d": 472,
-   "runs_14d": 90,
+   "runs_14d": 91,
    "steps": [
     0.0,
     180.0,
@@ -569,6 +569,12 @@
      "median": 471,
      "best": 524,
      "runs": 8
+    },
+    {
+     "date": "2026-10-09",
+     "median": 436,
+     "best": 436,
+     "runs": 1
     }
    ]
   },
@@ -811,9 +817,9 @@
  "days": [
   {
    "date": "2026-10-09",
-   "runs": 52,
-   "restarts": 38,
-   "rest_median_s": 48,
+   "runs": 53,
+   "restarts": 42,
+   "rest_median_s": 49,
    "rest_longest_s": 794,
    "breaks": [
     {
@@ -850,9 +856,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 10,
+     "runs": 11,
      "first": "11:07",
-     "last": "11:23"
+     "last": "11:34"
     }
    ],
    "scenarios": [
@@ -975,6 +981,14 @@
      "first": "11:22",
      "best": 660,
      "median": 660
+    },
+    {
+     "name": "PASU TRACK XYZ - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "11:34",
+     "best": 436,
+     "median": 436
     }
    ]
   },
@@ -1511,13 +1525,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 244,
+  "runs": 245,
   "days": 4,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 69,
-    "pct": 98.4
+    "runs": 70,
+    "pct": 98.2
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1627,6 +1641,17 @@
     "overshoot_pct": 51,
     "pps_by_distance": {
      "close": 5.7
+    }
+   },
+   {
+    "scenario": "PASU TRACK XYZ - RANKED",
+    "runs": 1,
+    "on_target": 24,
+    "reaction_ms": 167,
+    "overshoot_pct": 32,
+    "pps_by_distance": {
+     "mid": 3.3,
+     "close": 4.1
     }
    },
    {
@@ -1800,6 +1825,19 @@
     "master3": 616,
     "note": "Best of 8 today (median 438). The clip is its 8 seconds with the most hits.",
     "video": true
+   },
+   {
+    "scenario": "PASU Track XYZ",
+    "score": 217,
+    "time": "11:33",
+    "gif": "best-pasuxyz-2026-10-09",
+    "video": true,
+    "on_target": 24,
+    "reaction_ms": 167,
+    "overshoot_pct": 32,
+    "best_14d": 556,
+    "master3": 660,
+    "note": "Best of 1 recorded today (median 217). The clip is its 8 seconds with the most hits."
    }
   ]
  },

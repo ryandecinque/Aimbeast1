@@ -53,6 +53,19 @@
    "master3": 616,
    "note": "Best of 8 today (median 438). The clip is its 8 seconds with the most hits.",
    "video": true
+  },
+  {
+   "scenario": "PASU Track XYZ",
+   "score": 217,
+   "time": "11:33",
+   "gif": "best-pasuxyz-2026-10-09",
+   "video": true,
+   "on_target": 24,
+   "reaction_ms": 167,
+   "overshoot_pct": 32,
+   "best_14d": 556,
+   "master3": 660,
+   "note": "Best of 1 recorded today (median 217). The clip is its 8 seconds with the most hits."
   }
  ]
 }
