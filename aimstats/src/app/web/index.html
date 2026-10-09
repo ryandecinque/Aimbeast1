@@ -57,6 +57,19 @@ button:disabled { opacity: .5; cursor: default; }
 .empty b { color: var(--ink); font-size: 18px; display: block; margin-bottom: 6px; }
 footer { color: var(--faint); font-size: 13px; margin-top: 30px; border-top: 1px solid var(--line); padding-top: 14px; }
 a { color: var(--bot); }
+.minis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 4px; }
+@media (max-width: 520px) { .minis { grid-template-columns: 1fr; } }
+.mini .l { color: var(--dim); font-size: 12px; }
+.mini .mv { font-weight: 700; font-size: 14px; color: var(--ink); font-variant-numeric: tabular-nums; }
+svg.spark.small { height: 34px; }
+details { margin-top: 16px; }
+summary { cursor: pointer; color: var(--dim); font-size: 13px; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-numeric: tabular-nums; margin-top: 8px; }
+th, td { text-align: right; padding: 5px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { color: var(--dim); font-weight: 600; }
+th:first-child, td:first-child { text-align: left; }
+.practice h2 { font-size: 16px; margin: 0 0 6px; }
 </style>
 </head>
 <body>
@@ -85,6 +98,62 @@ function spark(trend) {
     <polyline points="${pts.map(p => p.join(",")).join(" ")}" fill="none" stroke="#a19f96" stroke-width="2" vector-effect="non-scaling-stroke"/>
     <circle cx="${last[0]}" cy="${last[1]}" r="4" fill="#f07a45"/></svg>
     <div class="cap">Typical score on each of your last ${trend.length} practice days (${lo}–${hi}).</div>`;
+}
+
+function mini(vals, label, fmt) {
+  const xs = vals.filter(v => v != null);
+  if (xs.length < 2) return "";
+  const W = 200, H = 34, lo = Math.min(...xs), hi = Math.max(...xs), span = (hi - lo) || 1;
+  const pts = vals.map((v, i) => v == null ? null : [3 + (W - 6) * i / (vals.length - 1), H - 4 - (H - 8) * (v - lo) / span]).filter(Boolean);
+  const last = pts[pts.length - 1];
+  return `<div class="mini"><div class="l">${label}: <span class="mv">${fmt(xs[xs.length - 1])}</span></div>
+    <svg class="spark small" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-label="${label} per practice day">
+    <polyline points="${pts.map(p => p.join(",")).join(" ")}" fill="none" stroke="#a19f96" stroke-width="2" vector-effect="non-scaling-stroke"/>
+    <circle cx="${last[0]}" cy="${last[1]}" r="3.5" fill="#f07a45"/></svg></div>`;
+}
+
+function aimTrends(t) {
+  if (!t || t.length < 2) return `<div class="cap">Aim numbers over time show up after your second practice day.</div>`;
+  return `<div class="l" style="color:var(--dim);font-size:13px;margin-top:10px">Aim numbers on each practice day (typical run)</div><div class="minis">
+    ${mini(t.map(d => d.on_target), "On target", v => Math.round(v) + "%")}
+    ${mini(t.map(d => d.swing_past), "Swing-past (lower is better)", v => Math.round(v) + "%")}
+    ${mini(t.map(d => d.pps), "Points per second", v => v.toFixed(1))}</div>`;
+}
+
+function restText(r) {
+  if (!r) return "–";
+  const [kind, s] = r;
+  const dur = x => x < 60 ? `${x} s` : x < 3600 ? `${Math.floor(x / 60)} min ${x % 60 ? (x % 60) + " s" : ""}`.trim() : `${(x / 3600).toFixed(1)} h`;
+  return kind === "rest" ? dur(s) : kind === "break" ? `break, ${dur(s)}` : kind === "first" ? "first of the day" : "after a restart";
+}
+
+function runTable(s) {
+  const rest = !!page.practice;
+  return `<details><summary>All recorded runs (${s.runs_recorded}${s.runs_recorded > s.runs.length ? `, newest ${s.runs.length} shown` : ""})</summary><div class="tbl"><table>
+    <tr><th>Day</th><th>Time</th><th>Score</th><th>On target</th><th>Swing-past</th><th>Points/s</th>${rest ? "<th>Rest before</th>" : ""}</tr>
+    ${s.runs.map(r => `<tr><td>${day(r.date)}</td><td>${esc(r.time)}</td><td>${r.score}</td><td>${Math.round(r.on_target)}%</td>
+      <td>${r.swing_past != null ? Math.round(r.swing_past) + "%" : "–"}</td><td>${r.pps ?? "–"}</td>${rest ? `<td>${restText(r.rest)}</td>` : ""}</tr>`).join("")}
+  </table></div></details>`;
+}
+
+function practiceBox(p) {
+  if (!p || !p.days || !p.days.length) return "";
+  const c = p.compare;
+  let line = "";
+  if (c && c.enough) {
+    const d = c.diff_pct;
+    line = Math.abs(d) < 1
+      ? `After short rests (under 20 s) your scores are about the same as after rests of 20 s to 2 min.`
+      : `After short rests (under 20 s) your scores are typically <b>${Math.abs(d)}% ${d < 0 ? "lower" : "higher"}</b> than after rests of 20 s to 2 min.`;
+    line += ` <span class="cap">Based on ${c.short_runs} and ${c.long_runs} runs; the first try on each scenario is left out, since that's warm-up.</span>`;
+  } else if (c) {
+    line = `<span class="cap">Once you have ${c.need} runs after short rests (under 20 s) and ${c.need} after rests of 20 s to 2 min, this shows whether resting longer helps your score. So far: ${c.short_runs} and ${c.long_runs}.</span>`;
+  }
+  const dur = x => x == null ? "–" : x < 60 ? `${x} s` : `${Math.floor(x / 60)} min ${x % 60} s`;
+  return `<div class="box practice"><h2>Practice and rests</h2><div>${line}</div><div class="tbl"><table>
+    <tr><th>Day</th><th>Runs finished</th><th>Restarts</th><th>Typical rest</th><th>Breaks (15 min+)</th></tr>
+    ${p.days.slice(0, 7).map(d => `<tr><td>${day(d.date)}</td><td>${d.runs}</td><td>${d.restarts}</td><td>${dur(d.rest_typical_s)}</td><td>${d.breaks}</td></tr>`).join("")}
+  </table></div><div class="cap">A rest is the time from finishing a run to starting the next one. Gaps of 15 minutes or more, or switching playlist, count as breaks.</div></div>`;
 }
 
 function weekLine(w) {
@@ -118,7 +187,7 @@ function card(s) {
         <div class="num"><div class="v">${n.swing_past != null ? Math.round(n.swing_past) + "%" : "–"}</div><div class="l">Misses where you swung past the bot</div></div>
         <div class="num"><div class="v">${n.reaction_ms != null ? Math.round(n.reaction_ms) + " ms" : "–"}</div><div class="l">Reaction when the bot changes direction</div></div>
         ${bands.length > 1 ? `<div class="num wide"><div class="v" style="font-size:20px">${bands.map(b => `${b} <b>${dist[b]}</b>`).join(" · ")}</div><div class="l">Points per second by distance to the bot</div></div>` : ""}
-        <div class="num wide week">${weekLine(s.week)}${spark(s.trend)}</div>
+        <div class="num wide week">${weekLine(s.week)}${spark(s.trend)}${aimTrends(s.aim_trend)}</div>
       </div>
     </div>
     <div class="lower">
@@ -133,6 +202,7 @@ function card(s) {
         <div class="job"></div>
       </div>
     </div>
+    ${runTable(s)}
   </section>`;
 }
 
@@ -179,10 +249,11 @@ function render() {
   if (ev.length) top.push(`<div class="box pb"><h2>${ev.length === 1 ? (ev[0].kind === "pb" ? "New personal best!" : "Best week yet!") : "New bests!"}</h2>
     <div class="cap" style="margin-bottom:10px">${ev.map(e => e.kind === "pb" ? `${esc(e.title)}: <b>${e.score}</b> (old best ${e.old})` : `${esc(e.title)}: typical score over 7 days <b>${e.median}</b> (was ${e.old})`).join(" · ")}. Click a card to save it and share it.</div>
     <div class="cards">${ev.map(e => `<a href="${media("pb", e.card)}" download><img src="${media("pb", e.card)}" alt="Share card"></a>`).join("")}</div></div>`);
+  top.push(practiceBox(page.practice));
   $("#top").innerHTML = top.join("");
   const sc = page.scenarios || [];
   const keep = {};                                   // don't lose what someone is typing when new runs arrive
-  document.querySelectorAll(".scen").forEach(sec => { const f = $("form", sec); keep[sec.dataset.name] = [f.run.value, f.target.value]; });
+  document.querySelectorAll(".scen").forEach(sec => { const f = $("form", sec); keep[sec.dataset.name] = [f.run.value, f.target.value, !!$("details", sec)?.open]; });
   $("#scens").innerHTML = sc.length ? sc.map(card).join("") :
     `<div class="box empty"><b>No tracking runs yet</b>Start Aimbeast and play any tracking scenario. Your stats show up here about a minute after the run ends.</div>`;
   const sk = page.skipped || {};
@@ -191,7 +262,7 @@ function render() {
     Everything stays on this PC: nothing is uploaded, and the recorder only reads from the game. ${page.last_recording ? `Newest recording: ${day(page.last_recording.slice(0, 10))} ${page.last_recording.slice(11, 13)}:${page.last_recording.slice(13, 15)}.` : ""}`;
   document.querySelectorAll(".scen").forEach(sec => {
     const k = keep[sec.dataset.name], f = $("form", sec);
-    if (k) { if ([...f.run.options].some(o => o.value === k[0])) f.run.value = k[0]; f.target.value = k[1]; }
+    if (k) { if ([...f.run.options].some(o => o.value === k[0])) f.run.value = k[0]; f.target.value = k[1]; if (k[2]) $("details", sec).open = true; }
   });
   renderJobs();
 }

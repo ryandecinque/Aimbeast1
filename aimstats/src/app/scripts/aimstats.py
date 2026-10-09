@@ -5,9 +5,9 @@
 # Usage: python aimstats.py [--no-browser] [--once]
 import datetime as dt, glob, http.server, json, os, re, shutil, socket, statistics as st, sys, threading, time, traceback
 import urllib.parse, urllib.request, webbrowser
-import config, aim_analysis, pb_events
+import config, aim_analysis, pb_events, rests
 
-PORTS = range(8765, 8776)
+PORTS = [int(os.environ["AIMSTATS_PORT"])] if os.environ.get("AIMSTATS_PORT") else range(8765, 8776)   # AIMSTATS_PORT: for testing
 WEB = os.path.join(config.APP, "web")
 MEDIA = {"clips": os.path.join(config.DATA, "clips"), "gifs": os.path.join(config.DATA, "gifs"),
          "videos": os.path.join(config.DATA, "videos"), "pb": os.path.join(config.DATA, "pb")}
@@ -170,12 +170,21 @@ def work(first=False):
         if c.get("png"): stills[tag.split("|")[0]] = os.path.join(MEDIA["clips"], c["png"])
     pbs = pb_events.update({s: title_of(s)[0] for s in scen_names}, stills)
     save_json(WATCH, watch)
-    build_page(summ, track, hists, watch, pbs)
+    status["busy"] = "Reading rest times"
+    rest_info, practice = rests.summary()              # None, None when there's no practice_log.csv
+    build_page(summ, track, hists, watch, pbs, rest_info, practice)
     status["busy"] = ""
     status["last_check"] = time.time()
 
 
-def build_page(summ, track, hists, watch, pbs):
+def rest_of(rest_info, k):
+    """Rest before a recorded run, from the practice log: (kind, seconds) or None."""
+    try: when = dt.datetime.strptime(k[:17], "%Y-%m-%d_%H%M%S")
+    except ValueError: return None
+    return rests.rest_before(rest_info, when)
+
+
+def build_page(summ, track, hists, watch, pbs, rest_info=None, practice=None):
     today = dt.date.today()
     scen_out = []
     for scen in sorted({v["scenario"] for v in track.values()}):
@@ -185,7 +194,13 @@ def build_page(summ, track, hists, watch, pbs):
         rows = [dict(file=k, date=v["date"], time=v["time"][:5], score=score_for(v, h), on_target=v["on_target"],
                      swing_past=v.get("overshoot_pct"), reaction_ms=v.get("reaction_ms"),
                      by_distance={b: x["points_per_sec"] for b, x in (v.get("by_distance") or {}).items()},
-                     first20=v.get("first20"), last20=v.get("last20")) for k, v in runs]
+                     first20=v.get("first20"), last20=v.get("last20"),
+                     pps=round(v["hits"] / v["seconds"], 1) if v.get("seconds") else None,
+                     rest=rest_of(rest_info, k)) for k, v in runs]
+        aim_days = {}                                              # typical aim numbers per practice day
+        for r in rows: aim_days.setdefault(r["date"], []).append(r)
+        aim_trend = [dict(date=d, on_target=med(r["on_target"] for r in rs), swing_past=med(r["swing_past"] for r in rs),
+                          pps=med(r["pps"] for r in rs), runs=len(rs)) for d, rs in sorted(aim_days.items())][-30:]
         last_day = rows[-1]["date"]
         day_rows = [r for r in rows if r["date"] == last_day]
         dist = {}
@@ -211,7 +226,7 @@ def build_page(summ, track, hists, watch, pbs):
             week=dict(this=round(st.median(this_w)) if this_w else None, this_runs=len(this_w),
                       last=round(st.median(last_w)) if last_w else None, last_runs=len(last_w)),
             all_time_best=max([s for _, s in scores] + [r["score"] for r in rows]),
-            trend=trend,
+            trend=trend, aim_trend=aim_trend,
             clip=dict(clip, date=clip_date or (clip or {}).get("date")) if clip and clip.get("mp4") else None,
             swing=dict(watch["gifs"][gif_tag], date=gif_tag.split("|")[1]) if gif_tag else None,
             runs=rows[-40:][::-1]))
@@ -227,7 +242,8 @@ def build_page(summ, track, hists, watch, pbs):
     page = dict(game_found=bool(config.GAME),
                 recorder_installed=bool(config.MODS and os.path.isdir(os.path.join(config.MODS, "AimRecorder"))),
                 last_recording=last_run, warning=recorder_warning(last_run), scenarios=scen_out,
-                skipped={k: sorted(v) for k, v in skipped.items()}, events_recent=recent[::-1], events_all=pbs["events"][::-1][:30])
+                skipped={k: sorted(v) for k, v in skipped.items()}, events_recent=recent[::-1], events_all=pbs["events"][::-1][:30],
+                practice=practice)
     old = load_json(PAGE, {})
     old.pop("updated", None)
     if old != json.loads(json.dumps(page)):                       # only rewrite when something changed

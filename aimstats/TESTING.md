@@ -29,6 +29,18 @@ python build_zip.py --python python-3.11.9-embed-amd64.zip --ffmpeg imageio_ffmp
 - The target-score video was made from the page.
   - Example: Air Control Sphere S, a run of 746 with a target of 900. The model reached 833, and the page says that was the closest it got.
 
+## Added: rest times and aim numbers over time
+- **Rest times** come from PracticeLog's practice_log.csv (`src/app/scripts/rests.py`). The rules are the same as `publish.py` sessions_by_day().
+- Checked against `publish.py` on Ryan's log: runs, restarts, breaks, typical rest and longest rest are identical for 6 to 9 Oct. For example, 9 Oct: 34 runs, 29 restarts, typical rest 55 s.
+- **The page shows:**
+  - a "Practice and rests" box with the last 7 days
+  - a rest-before column in each scenario's run table, matched to the recording's start within 2 s
+  - the short-against-longer rest line, once there are 10+ runs in each group
+- On Ryan's data the line reads: after rests under 20 s, scores are typically 3.2% lower than after rests of 20 s to 2 min (55 and 63 runs, first tries left out).
+- Without practice_log.csv, the box and the rest column don't appear (checked).
+- **Aim numbers over time:** per tracking scenario, small trend lines for on target, swing-past and points per second, one point per practice day (the typical run). Below 2 days the page says when they'll appear.
+- Install tests re-run on the new zip: 5/5 PASS.
+
 ## Not tested yet (needs Ryan or a friend)
 - The game starting and recording with the installed files. That needs a real install, and the decision says nothing installs until Ryan says go.
 - A clean Windows account.
