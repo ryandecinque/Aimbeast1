@@ -133,7 +133,11 @@ class Run:
         self.BA = [None if BOT[i] is None else (self.bot_yaw(i), BP[i], self.hd(i)) for i in range(n)]
         self.real_on = sum(self.on(i, YAW[i], PIT[i]) for i in range(start, end)) or 1
         self.per_frame = real_score / self.real_on              # points per on-target frame, from the real run
-        self.floor = min(c[2] for c in CAM) - 350
+        self.floor = min(c[2] for c in CAM) - 350                # world-fixed floor below the lowest camera of the run
+        # the player isn't always still (Dodge moves them, Possession moves them for them): the model keeps the real
+        # camera path and only changes the aim, and the videos say so
+        span = max(max(c[i] for c in CAM[start:end]) - min(c[i] for c in CAM[start:end]) for i in (0, 1))
+        self.moves = span > 100 or any(w in self.title.upper() for w in ("DODGE", "POSS"))
         self.real_cum = [max(0, HITS[i] - HITS[start]) if i >= start else 0 for i in range(n)]
         if real_score and HITS[end] - HITS[start] > 0:          # game points per hit (some scenarios give 5)
             k = real_score / max(1, HITS[end] - HITS[start]); self.real_cum = [round(x * k) for x in self.real_cum]

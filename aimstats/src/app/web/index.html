@@ -230,7 +230,7 @@ function card(s) {
       <div class="cap">Best run on ${day(s.clip.date)}: <b>${s.clip.score}</b>. These are its 8 seconds with the most hits, rebuilt from your aim data.</div>`
       + (m ? `<div class="companion"><video src="${media("clips", m.mp4)}" poster="${media("clips", m.png)}" autoplay muted loop playsinline></video>
       <div class="cap">Same run, 20% better: something to model your aim on.${m.reached ? "" : ` The model reached ${m.model_score}, the closest it could get to ${m.target}.`}
-      Same bot movement and the same human reaction time; only the smoothness changes.</div></div>`
+      Same bot movement${m.moves ? ", same movement as your run" : ""} and the same human reaction time; only the aim changes.</div></div>`
          : (s.model && !s.model.ok ? noModel(s.model) : ""))
     : `<div class="box cap">No video for this scenario yet. Tick it under Videos at the top, or press Make clip.</div>`) + makeBtn;
   const swing = s.swing ? `<div class="gif"><img src="${media("gifs", s.swing.gif)}" alt="Over-aim moment" loading="lazy"></div>

@@ -333,10 +333,10 @@ def video_job(j):
     j.update(stage="Side by side, 20% better", pct=55)
     mout = out[:-4] + "-model.mp4"
     ok, msg = config.run_script("model_clip.py", run_path(k), score, m.group(1), m.group(2), mout, FACTOR)
-    mm = re.search(r'\{"model_score": (\d+), "target": (\d+), "reached": (true|false)\}', msg)
+    mm = re.search(r'\{"model_score": (\d+), "target": (\d+), "reached": (true|false), "moves": (true|false)\}', msg)
     if ok and mm:
         entry["model"] = {"mp4": os.path.basename(mout), "png": os.path.basename(mout)[:-4] + ".png", "model_score": int(mm.group(1)),
-                          "target": int(mm.group(2)), "reached": mm.group(3) == "true"}
+                          "target": int(mm.group(2)), "reached": mm.group(3) == "true", "moves": mm.group(4) == "true"}
     else: log(f"model clip failed for {k}: {msg[-300:]}")
     with clip_lock:
         clips = load_json(CLIPS, {}); clips[f"{scen}|{date}"] = entry

@@ -40,7 +40,7 @@ def write(name, Wd, Ht, frame_fn, p0, p1):
     print("wrote", name)
 
 
-MODEL = f"Model tuned to {target}" + (f" (closest it got: {R.sim_score})" if abs(R.sim_score - target) > 0.03 * target else "")
+MODEL = f"Model tuned to {target}" + (f" (closest it got: {R.sim_score})" if abs(R.sim_score - target) > 0.03 * target else "")     + (", same movement as your run" if R.moves else "")
 def solo(i, final=False):
     i = min(i, end - 1)
     return R.view(1280, 720, i, *R.sim[i], R.sim_score if final else R.sim_cum[i], MODEL, 0 if final else R.t_left(i))

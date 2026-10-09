@@ -21,6 +21,7 @@ R.tune(target)
 reached = abs(R.sim_score - target) <= 0.03 * target
 pct = round(100 * (factor - 1))
 label = f"Model, {'+' if pct >= 0 else ''}{pct}%: {R.sim_score}" if reached else f"Model reached {R.sim_score} (the closest it could get to {target})"
+if R.moves: label += ", same movement as your run"
 try: FT = ImageFont.truetype("arialbd.ttf", 18)
 except Exception: FT = ImageFont.load_default()
 PW, PH = 800, 450
@@ -42,4 +43,4 @@ for i in range(a, b, 2): p.stdin.write(frame(i).tobytes())
 p.stdin.close(); p.wait()
 frame((a + b) // 2).save(out[:-4] + ".png")
 print("wrote", out)
-print(json.dumps({"model_score": R.sim_score, "target": target, "reached": reached}))
+print(json.dumps({"model_score": R.sim_score, "target": target, "reached": reached, "moves": R.moves}))

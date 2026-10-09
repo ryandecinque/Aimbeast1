@@ -97,6 +97,12 @@ python build_zip.py --python python-3.11.9-embed-amd64.zip --ffmpeg imageio_ffmp
 - **Contrast:** the red is #ff7a7a on #2a1a1a, 6.5:1. The page is dark-only, so the light-theme value (#b91c1c on #fdf2f2, 5.9:1) is noted in the CSS for when a light theme exists.
 - Checked in the browser with one card of each kind.
 
+## Checked: no fixed-camera assumptions
+- Every angle, on-target test, distance band, swing/over-aim check and 3D frame uses that snapshot's own cam_x/y/z.
+- The drawn floor grid sits 350 units below the lowest camera height of the whole run and stays fixed in the world, so a player who drops after spawning (POPCORN - M: 425 to 362) is fine.
+- Model videos keep the real camera path and change only the aim.
+- When the player moves during the run (more than 100 units sideways, or a Dodge or Possession scenario), the model clip and the target-score video add "same movement as your run". Checked: a run under a Dodge name says moves = true; Zeus and Smooth Thin say moves = false.
+
 ## Not tested yet (needs Ryan or a friend)
 - The game starting and recording with the installed files. That needs a real install, and the decision says nothing installs until Ryan says go.
 - A clean Windows account.
