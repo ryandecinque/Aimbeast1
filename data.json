@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-09 11:06",
- "updated_utc": "2026-10-09T04:06:19Z",
+ "updated": "2026-10-09 11:11",
+ "updated_utc": "2026-10-09T04:11:19Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
@@ -811,9 +811,9 @@
  "days": [
   {
    "date": "2026-10-09",
-   "runs": 42,
-   "restarts": 35,
-   "rest_median_s": 57,
+   "runs": 46,
+   "restarts": 36,
+   "rest_median_s": 51,
    "rest_longest_s": 794,
    "breaks": [
     {
@@ -827,6 +827,12 @@
      "before": "ZEUS BUILDER",
      "at": "10:26",
      "minutes": 17.0
+    },
+    {
+     "after": "ZEUS BUILDER",
+     "before": "(single scenario)",
+     "at": "11:06",
+     "minutes": 0.3
     }
    ],
    "playlists": [
@@ -841,6 +847,12 @@
      "runs": 16,
      "first": "09:52",
      "last": "11:06"
+    },
+    {
+     "name": "(single scenario)",
+     "runs": 4,
+     "first": "11:07",
+     "last": "11:10"
     }
    ],
    "scenarios": [
@@ -939,6 +951,22 @@
      "first": "11:04",
      "best": 1650,
      "median": 1510
+    },
+    {
+     "name": "1 WALL 4 TARGETS - RANKED",
+     "runs": 2,
+     "routine": "(single scenario)",
+     "first": "11:07",
+     "best": 78,
+     "median": 76
+    },
+    {
+     "name": "STAR CLICKING V3 150% - RANKED",
+     "runs": 2,
+     "routine": "(single scenario)",
+     "first": "11:09",
+     "best": 40,
+     "median": 36
     }
    ]
   },
@@ -1475,18 +1503,18 @@
   }
  ],
  "rest_effect": {
-  "runs": 234,
+  "runs": 238,
   "days": 4,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 63,
-    "pct": 98.4
+    "runs": 65,
+    "pct": 98.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 62,
-    "pct": 99.7
+    "runs": 64,
+    "pct": 99.9
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
