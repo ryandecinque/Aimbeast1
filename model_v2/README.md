@@ -31,12 +31,15 @@ model's kill happens. The whole run ends sooner. Nothing is invented.
 - The spring is critically damped, so a flick to the next bot never goes past it.
 - It stays on each bot until it dies. The time on target a kill takes is Ryan's own: the median unbroken stretch he
   spent on each bot right before killing it.
-- It is never slower than Ryan on any single bot. If its steady pace would take longer than Ryan did (from his
-  previous kill to this one), it flicks harder and the kill lands at Ryan's own time. The end card says so.
-  Because of this, a bot's model life is never longer than its real one, so no bot is ever frozen or shown past
-  its recorded path (the script stops with an error if one would be).
-- Only the steady pace is tuned, until the total time is the real time ÷ factor. If that can't be reached, the
-  nearest factor is used and the label shows the real % ("Same bots, 22% faster").
+- Every kill lands with the dot on the bot, inside the bot's real recorded path. The script stops with an error if
+  any kill is off the bot or any bot is shown past its path.
+- It is never slower than Ryan on any single bot where it can help it. If its steady pace would take longer than
+  Ryan did (from his previous kill to this one), it flicks harder and the kill lands at Ryan's own time. If even that
+  can't put the dot on the bot in Ryan's time, it may take longer, but only while the bot's real path lasts. The
+  report counts these (`bots_given_more_than_ryans_time`). If a bot can't be reached at all, that setting is
+  thrown out and the tuning tries the next one.
+- Only the steady pace is tuned, until the total time is the real time ÷ factor. If that can't be reached with every
+  kill on its bot, the nearest factor that works is used and the label shows the real % ("Same bots, 30% faster").
 - Several bots can be alive at once. Each one keeps its own real path, shifted to its new spawn time, so the spacing
   between bots is approximate. The video says so.
 
@@ -47,19 +50,21 @@ Sitting on a 1-health bot until it dies is bad clicking technique (Ryan, 2026-10
 - On each bot it takes Ryan's own time from the last kill to his first click, then clicks with his own gaps between
   clicks on that bot. It keeps only a share of the clicks he missed there: each kept miss lands just beside the bot,
   and the last click is on the bot and kills it. Only that share is tuned to reach the factor.
-- Its aim matches the bot's speed as it settles, so it doesn't trail a moving bot. A kill waits until the dot is on
-  the bot, for as long as the bot's real path lasts. A miss waits until the dot is off it.
+- Its aim matches the bot's speed as it settles, so it doesn't trail a moving bot. The killing click waits until the
+  dot is on the bot. A miss waits until the dot is off it.
+- If the dot can't reach a bot in Ryan's own time, that bot gets no kept misses and a stiffer flick, and the killing
+  click comes as soon as the dot is on it. Tuning tries both "within Ryan's time first" and "within the bot's path"
+  for the kept misses, and keeps the closest result where every kill lands.
 - The dot shows a ring on every click, in both halves of the video. The end card counts clicks and misses for both.
-- The report gives `misses_kept`, `model_misses` vs `ryan_misses`, and `kills_with_dot_off_bot`. That last one should be
-  0. A non-zero count means the bot's real path ran out before the dot reached it, and the kill was forced.
+- The report gives `misses_kept`, `model_misses` vs `ryan_misses`, and `kills_off_bot`. `kills_off_bot` is always 0.
 
-## Samples at 1.2x (2026-10-09)
-- VOX TS BALANCED - 150% (switching, tracks each bot down): 1.20x (49.3 s vs 59.3 s; 35 of 69 bots matched to Ryan).
-- PASU XYZ (Bazhan, clicking, 11:38): 16/16 kills, 1.20x (45.8 s vs 55.0 s). It keeps 76% of Ryan's misses (37 of
-  53 clicks missed vs his 49 of 65), and every kill lands with the dot on the bot.
-- POPCORN - M (clicking): 1.21x (49.3 s vs 59.5 s), keeping 32% of Ryan's misses (7 vs 22). 3 kills are forced with
-  the dot off the bot.
-- PASU TRACK XYZ (tierem) is a tracking scenario, so it's refused.
+## Samples at 1.2x (2026-10-09, every kill on its bot)
+- VOX TS BALANCED - 150% (switching): 1.19x (49.8 s vs 59.3 s).
+- PASU XYZ (clicking, 11:38): 1.19x (46.1 s vs 55.0 s), 40 missed clicks vs Ryan's 49.
+- POPCORN - M 11:21 (clicking): 1.22x (48.3 s vs 58.7 s), 15 missed clicks vs Ryan's 25.
+- POPCORN - M 2026-10-08 22:54: 1.2x can't be done with every kill on its bot. The nearest that works is 1.30x
+  (45.8 s vs 59.5 s).
+- PASU TRACK XYZ is a tracking scenario, so it's refused.
 
 ## Older recordings
 - Files from before the kill counter (VOX 125%, TRM, SUMO, 2026-10-08 20:2x) can't be checked, so they're skipped.
