@@ -8,6 +8,8 @@ anything:
   - your best run per scenario as a short clip (the 8 seconds with the most hits, rebuilt from your aim)
   - a few clear numbers: time on target, how often you swing past the bot, points by distance
   - whether you're improving week to week
+  - how long you rest between runs, and whether short or longer rests go with better scores
+  - your aim numbers over time, one point per practice day
   - a "swing-past" moment from your session, next to a smooth version with your same reaction time
   - a banner and a share card when you set a new personal best or have your best week
   - on request: a target-score video. Pick a run, type a score (say 700), and you get a model run on the
