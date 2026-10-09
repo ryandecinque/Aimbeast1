@@ -104,7 +104,7 @@ topspeed = max([abs(x) for x in av[a:b] + bv[a:b] if x is not None] + [s[2] for 
 def phase(k):
     if k < i0 - 10: return "behind the bot"
     if k < i0: return "fast correction"
-    if k < i0 + 16: return "too far: past the bot"
+    if k < i0 + 16: return "over-aim: past the bot"
     return "correcting back"
 
 frames = []
@@ -129,7 +129,7 @@ for idx, k in enumerate(range(a, b)):
         d.rectangle([x0 + 85, sy0 + 4, x0 + 85 + bw(math.hypot(bv[k] or 0, bpv[k] or 0)), sy0 + 16], fill=BOT)
         d.rectangle([x0 + 85, sy0 + 30, x0 + 85 + bw(avel), sy0 + 42], fill=col)
     d.text((10, H - 44), "Your run: " + phase(k), fill=BAD if i0 - 10 <= k < i0 + 16 else INK, font=FT)
-    d.text((10, H - 22), "Smooth: same reaction time, eases in and matches the bot's speed. No swinging past it.  (half speed" + (", left-right only)" if LR_ONLY else ")"), fill=DIM, font=FS)
+    d.text((10, H - 22), "Smooth: same reaction time, eases in and matches the bot's speed. No over-aiming.  (half speed" + (", left-right only)" if LR_ONLY else ")"), fill=DIM, font=FS)
     frames.append(im.convert("P", palette=Image.ADAPTIVE, colors=32))
 frames += [frames[-1]] * 20
 frames[0].save(out, save_all=True, append_images=frames[1:], duration=33, loop=0, optimize=True)

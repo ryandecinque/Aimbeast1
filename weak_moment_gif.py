@@ -92,7 +92,7 @@ for idx, k in enumerate(range(a, b)):
         d.rectangle([x0 + 85, sy0 + 30, x0 + 85 + bw(avel), sy0 + 42], fill=col)
     msg = phase(k)
     d.text((10, H - 44), "Your run: " + msg, fill=BAD if k < s1 else INK, font=FT)
-    d.text((10, H - 22), "Smooth: same reaction time, eases in and matches the bot's speed. No overshoot, no hard stop.  (half speed)", fill=DIM, font=FS)
+    d.text((10, H - 22), "Smooth: same reaction time, eases in and matches the bot's speed. No over-aiming, no hard stop.  (half speed)", fill=DIM, font=FS)
     frames.append(im.convert("P", palette=Image.ADAPTIVE, colors=32))
 frames += [frames[-1]] * 20
 on = lambda ey, ep: abs(ey) < 1.9 and abs(ep) < 2.0

@@ -233,7 +233,7 @@ summary { min-height: 44px; align-items: center; }
     <ul class="sub">
       <li><span class="rt">RANK INT A</span>: Smooth Thin Track V2, Air Track Smooth V3 150%, Air Control Sphere - S. 8 runs each, after a 2-run warm-up on the easier Air Control Sphere.</li>
       <li><span class="rt">RANK INT B</span>: Pasu Track Evo (RCT) - 0.85X, Pasu Track XYZ, Zeus Track Evo - Noblink. 8 runs each, after a 2-run warm-up on the slower Pasu Track Evo (RCT) - 0.6X.</li>
-      <li><span class="rt">ZEUS BUILDER</span>: 7 drills, 2 runs each, that train the parts of Zeus Track, mostly its fast left-right direction changes and stopping on the bot without swinging past it, plus one drill for its up/down kicks. It starts with a 2-run warm-up on the easier Zeus Track Evo - Noblink (EZ).</li>
+      <li><span class="rt">ZEUS BUILDER</span>: 7 drills, 2 runs each, that train the parts of Zeus Track, mostly its fast left-right direction changes and stopping on the bot without over-aiming, plus one drill for its up/down kicks. It starts with a 2-run warm-up on the easier Zeus Track Evo - Noblink (EZ).</li>
       <li>A 2–3 minute break away from the screen at every scenario switch.</li>
     </ul>
   </section>
@@ -429,9 +429,9 @@ function journal(entries, days, aim, best) {
     ((best || {})[date] || []).forEach(x => g.appendChild(el("div", {}, bestCard(x, date))));
     const am = (aim || {})[date];
     if (am && am.length) g.appendChild(el("div", { className: "scroll" },
-      `<table class="jlog aimt"><tr><th>Aim</th><th>Runs</th><th title="Share of the run your crosshair was on the target">On target</th><th title="How fast you follow a direction change">Reaction</th><th title="Share of corrections that went past the target">Over&shy;shoot</th></tr>` +
+      `<table class="jlog aimt"><tr><th>Aim</th><th>Runs</th><th title="Share of the run your crosshair was on the target">On target</th><th title="How fast you follow a direction change">Reaction</th><th title="Share of corrections that went past the target">Over-aim</th></tr>` +
       am.map(x => `<tr><td>${esc(nice(x.scenario))}</td><td>${x.runs}</td><td>${x.on_target ?? "–"}%</td><td>${x.reaction_ms ?? "–"} ms</td><td>${x.overshoot_pct ?? "–"}%</td></tr>`).join("") +
-      `</table>` + am.filter(x => x.pps_by_distance && Object.keys(x.pps_by_distance).length > 1).map(x => `<p class="small"><b>${esc(nice(x.scenario))}, points per second by distance:</b> far ${x.pps_by_distance.far ?? "–"} · middle ${x.pps_by_distance.mid ?? "–"} · close ${x.pps_by_distance.close ?? "–"}</p>`).join("") + `<p class="small">On target: how much of the run your crosshair was on the bot. Reaction: how fast you turn after the bot changes direction (compare runs, not other people). Overshoot: how often a correction goes past the bot.</p>`));
+      `</table>` + am.filter(x => x.pps_by_distance && Object.keys(x.pps_by_distance).length > 1).map(x => `<p class="small"><b>${esc(nice(x.scenario))}, points per second by distance:</b> far ${x.pps_by_distance.far ?? "–"} · middle ${x.pps_by_distance.mid ?? "–"} · close ${x.pps_by_distance.close ?? "–"}</p>`).join("") + `<p class="small">On target: how much of the run your crosshair was on the bot. Reaction: how fast you turn after the bot changes direction (compare runs, not other people). Over-aim: how often a correction goes past the bot.</p>`));
     byDay[date].slice().sort((x, y) => isC(x) - isC(y)).forEach(e => {
       g.appendChild(el("div", { className: "jentry" + (isC(e) ? " claude" : "") }, `<div class="jwho">${esc(e.author)}${isC(e) ? " · review" : ""}</div>${body(e.text)}`));
     });
@@ -501,7 +501,7 @@ function bestCard(x, date) {
     (x.video ? `<video src="assets/aim/${esc(x.gif)}.mp4" poster="assets/aim/${esc(x.gif)}.png" width="960" height="540" muted loop playsinline preload="none" ${still ? "controls" : "autoplay"} aria-label="The 8 best seconds of my ${esc(nice(x.scenario))} run that scored ${x.score}, in my own view"></video>`
       : `<img src="assets/aim/${esc(x.gif)}.${still ? "png" : "gif"}" data-gif="assets/aim/${esc(x.gif)}.gif" loading="lazy" width="640" height="360" alt="The 8 best seconds of my ${esc(nice(x.scenario))} run that scored ${x.score}">`) +
     `<p class="score">Score <b>${x.score}</b>${x.best_14d ? ` · 14-day best ${x.best_14d}` : ""}${x.master3 ? ` · Master 3 is ${x.master3}` : ""}</p>` +
-    `<p class="score">On target ${x.on_target}%${x.reaction_ms != null ? ` · reaction ${x.reaction_ms} ms` : ""} · overshoot ${x.overshoot_pct}%</p>` +
+    `<p class="score">On target ${x.on_target}%${x.reaction_ms != null ? ` · reaction ${x.reaction_ms} ms` : ""} · over-aim ${x.overshoot_pct}%</p>` +
     `<p class="small">${esc(nd(date))}, ${esc(x.time)}. ${esc(x.note || "")}</p></div>`;
 }
 
