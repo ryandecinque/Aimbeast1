@@ -107,3 +107,15 @@ python build_zip.py --python python-3.11.9-embed-amd64.zip --ffmpeg imageio_ffmp
 - The game starting and recording with the installed files. That needs a real install, and the decision says nothing installs until Ryan says go.
 - A clean Windows account.
 - A friend's PC: see `src/TEST-CHECKLIST.txt`.
+
+## Real install on Ryan's PC (2026-10-09, passed)
+Live game folder (953 files), with UE4SS and all AimStats mods already present. Website task paused during the test and turned back on afterwards.
+- **Install:** found the game and left UE4SS and the 4 mods untouched ("Nothing needed adding"). Snapshot after install: IDENTICAL to before.
+- **Play:**
+  - The game started and loaded recorder phase 7 (12:14).
+  - Normal Zeus EZ run recorded, at 0.06 ms per frame.
+  - Ranked recording was already confirmed with the same files (PASU TRACK XYZ - RANKED, 11:34).
+  - The only changes were the expected ones from playing: the new run, log.txt, practice_log.csv, session_done, rank_data.txt and UE4SS.log.
+- **Uninstall:** "Removed 0 files". Snapshot after uninstall: IDENTICAL to after playing. Start vs end: only the play files above.
+
+Still to do: a clean Windows account (no mods, no Python) and one friend's PC.
