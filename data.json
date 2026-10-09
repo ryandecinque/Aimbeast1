@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-09 07:21",
- "updated_utc": "2026-10-09T00:21:19Z",
+ "updated": "2026-10-09 07:26",
+ "updated_utc": "2026-10-09T00:26:19Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
-   "RANK INT A": 5
+   "RANK INT A": 7
   }
  },
  "plan_start": "2026-10-07",
@@ -15,7 +15,7 @@
    "official_best": 555.0,
    "best_14d": 490.0,
    "median_14d": 426,
-   "runs_14d": 116,
+   "runs_14d": 118,
    "steps": [
     0.0,
     168.0,
@@ -261,9 +261,9 @@
     },
     {
      "date": "2026-10-09",
-     "median": 449,
+     "median": 424,
      "best": 474,
-     "runs": 3
+     "runs": 5
     }
    ]
   },
@@ -788,17 +788,17 @@
  "days": [
   {
    "date": "2026-10-09",
-   "runs": 5,
+   "runs": 7,
    "restarts": 1,
-   "rest_median_s": 32,
+   "rest_median_s": 57,
    "rest_longest_s": 336,
    "breaks": [],
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 5,
+     "runs": 7,
      "first": "07:05",
-     "last": "07:16"
+     "last": "07:24"
     }
    ],
    "scenarios": [
@@ -812,11 +812,11 @@
     },
     {
      "name": "SMOOTH THIN TRACK V2 - RANKED",
-     "runs": 3,
+     "runs": 5,
      "routine": "RANK INT A",
      "first": "07:08",
      "best": 474,
-     "median": 449
+     "median": 424
     }
    ]
   },
@@ -1353,7 +1353,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 197,
+  "runs": 199,
   "days": 4,
   "groups": [
    {
@@ -1363,8 +1363,8 @@
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 58,
-    "pct": 99.9
+    "runs": 59,
+    "pct": 100.0
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -1419,12 +1419,12 @@
    },
    {
     "scenario": "SMOOTH THIN TRACK V2 - RANKED",
-    "runs": 3,
+    "runs": 5,
     "on_target": 34,
     "reaction_ms": 133,
-    "overshoot_pct": 26,
+    "overshoot_pct": 33,
     "pps_by_distance": {
-     "mid": 7.4
+     "mid": 7.2
     }
    }
   ]
