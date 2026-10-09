@@ -21,6 +21,8 @@ model's kill happens. The whole run ends sooner. Nothing is invented.
 - The bot doesn't react to being hit: no blink or leap on hit, no event triggered "ON HIT", no size change with damage,
   and no healing (healing makes the kill time depend on how the damage was spread).
 - The kills found in the recording equal the game's kill counter.
+- At least 3 kills. With fewer, the time on target a kill takes comes from one or two stretches, and there are
+  too few kills to speed up. PASU TRACK XYZ (500 health, one bot) got 2 kills in 60 s on 2026-10-09, so it was refused.
 
 ## The model
 - Same as the other model videos: it reacts about 130 ms late and its aim follows a spring.

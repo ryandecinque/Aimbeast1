@@ -299,8 +299,10 @@ def make(path, out, factor=1.2, render=True):
                   game_kills=a["game_kills"], detected=a["detected"], kill_spawns=a["kill_spawns"], timer_spawns=a["timer_spawns"])
     if not a["has_kills"]: report["verdict"] = "older recording without a kill counter: can't check kills"; return report
     if not rules["ok"]: report["verdict"] = "scenario doesn't qualify: " + "; ".join(rules["why"]); return report
-    if a["detected"] != a["game_kills"] or a["detected"] < 3:
+    if a["detected"] != a["game_kills"]:
         report["verdict"] = f"kills found {a['detected']} vs game {a['game_kills']}: not safe to rebuild"; return report
+    if a["detected"] < 3:
+        report["verdict"] = f"only {a['detected']} kills: too few to take Ryan's time on target from, or to speed up"; return report
     if a["timer_spawns"] > 0.1 * max(1, a["kill_spawns"]):
         report["verdict"] = "new bots in this run don't only come after kills"; return report
     R, shape = radius(a)
