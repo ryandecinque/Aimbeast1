@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-09 10:26",
- "updated_utc": "2026-10-09T03:26:19Z",
+ "updated": "2026-10-09 10:41",
+ "updated_utc": "2026-10-09T03:41:55Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
@@ -1582,11 +1582,11 @@
  },
  "aim_moments": {
   "updated": "2026-10-09",
-  "focus": "Ease into the bot and match its speed. No hard stops, no swinging past it.",
+  "focus": "Ease into the bot and match its speed. No hard stops, no over-aiming.",
   "moments": [
    {
     "file": "zeus-overshoot",
-    "title": "Swinging past the bot",
+    "title": "Over-aim: Zeus Track",
     "scenario": "Zeus Track",
     "run": "Thu 8 Oct, 10:42",
     "text": "The bot keeps moving the same way, but my correction is so fast it goes straight through it and out the other side. Then I have to correct back.",
@@ -1613,7 +1613,7 @@
    },
    {
     "file": "spheres-overshoot",
-    "title": "Swinging past the bot: Sphere S",
+    "title": "Over-aim: Sphere S",
     "scenario": "Air Control Sphere - S",
     "run": "Fri 9 Oct, 07:53 (734)",
     "text": "The bot keeps going the same way, and my catch-up goes through it and out the other side. This scenario only shows left-right: the recorder can't see the bot's real height here.",
@@ -1622,7 +1622,7 @@
    },
    {
     "file": "airtrack-overshoot",
-    "title": "Swinging past the bot: Air Track",
+    "title": "Over-aim: Air Track",
     "scenario": "Air Track Smooth V3 150%",
     "run": "Fri 9 Oct, 07:37 (479)",
     "text": "Same habit on a flying bot: a fast correction that doesn't brake in time, then a correction back. Left-right only, for the same reason as Sphere S.",
@@ -1631,7 +1631,7 @@
    },
    {
     "file": "smooththin-overshoot",
-    "title": "Swinging past the bot: Smooth Thin",
+    "title": "Over-aim: Smooth Thin",
     "scenario": "Smooth Thin Track V2",
     "run": "Fri 9 Oct, 07:28 (436)",
     "text": "I'm close, speed up to close the gap, and end up on the far side of a thin bot. The smooth version eases in and just matches its speed.",
