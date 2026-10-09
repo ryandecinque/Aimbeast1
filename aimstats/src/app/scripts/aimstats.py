@@ -7,7 +7,7 @@
 # Usage: python aimstats.py [--no-browser] [--once]
 import datetime as dt, glob, http.server, json, os, queue, re, shutil, socket, statistics as st, sys, threading, time, traceback
 import urllib.parse, urllib.request, webbrowser
-import config, aim_analysis, pb_events, rests, scenario_profile
+import config, aim_analysis, pb_events, rests, scenario_profile, model_run
 
 PORTS = [int(os.environ["AIMSTATS_PORT"])] if os.environ.get("AIMSTATS_PORT") else range(8765, 8776)   # AIMSTATS_PORT: for testing
 WEB = os.path.join(config.APP, "web")
@@ -26,6 +26,7 @@ SETTINGS = os.path.join(config.DATA, "settings.json")   # {"ticked": [...], "alw
 clip_lock = threading.Lock()
 BEST = {}                   # (scenario, date) -> (score, run file), refreshed by every watcher pass
 FACTOR = 1.2                # the side-by-side companion's model run: 20% better
+MODEL_OK = {}               # scenario -> (ok, reason): model videos only where the bot ignores the player's hits
 
 
 def log(msg):
@@ -148,6 +149,7 @@ def work(first=False):
     for s in scen_names:          # the game's statistics, only where its score is the hit count the recorder sees
         h = pb_events.history(s); mine = [v for v in track.values() if v["scenario"] == s]
         SCALE[s] = find_scale(mine, h) if mine else None
+        if s not in MODEL_OK: MODEL_OK[s] = model_run.model_check(s)
         hists[s] = h if SCALE[s] else []
 
     by_sd = {}
@@ -257,6 +259,7 @@ def build_page(summ, track, hists, watch, pbs, rest_info=None, practice=None, cl
             week=dict(this=round(st.median(this_w)) if this_w else None, this_runs=len(this_w),
                       last=round(st.median(last_w)) if last_w else None, last_runs=len(last_w)),
             best=best_line(scen, ranked, h, rows), unit="score" if SCALE.get(scen) else "hits",
+            model=dict(ok=MODEL_OK.get(scen, (False, ""))[0], reason=MODEL_OK.get(scen, (False, ""))[1]),
             trend=trend, aim_trend=aim_trend,
             clip=dict(clips[tag], date=tag.split("|")[1]) if tag else None, clip_today=f"{scen}|{last_day}" in clips,
             swing=dict(watch["gifs"][gif_tag], date=gif_tag.split("|")[1]) if gif_tag else None,
@@ -319,6 +322,13 @@ def video_job(j):
     if not ok or not m:
         log(f"best-run clip failed for {k}: {msg[-300:]}"); return j.update(status="failed", error="The clip couldn't be made from this run.")
     entry = {"run": k, "score": score, "mp4": os.path.basename(out), "png": os.path.basename(out)[:-4] + ".png"}
+    ok_m, why = MODEL_OK.get(scen) or model_run.model_check(scen)
+    if not ok_m:                                   # the bot reacts to hits: no model run, just the clip
+        entry["model_na"] = why
+        with clip_lock:
+            clips = load_json(CLIPS, {}); clips[f"{scen}|{date}"] = entry
+            housekeeping(clips, scen); save_json(CLIPS, clips)
+        return j.update(status="done", stage="Done", pct=100, date=date)
     j.update(stage="Side by side, 20% better", pct=55)
     mout = out[:-4] + "-model.mp4"
     ok, msg = config.run_script("model_clip.py", run_path(k), score, m.group(1), m.group(2), mout, FACTOR)
@@ -444,8 +454,11 @@ class Handler(http.server.BaseHTTPRequestHandler):
             try: k, target = str(b["run"]), int(b["target"])
             except Exception: return self.send(400, {"error": "Pick a run and type a score."})
             if not (1 <= target <= 100000): return self.send(400, {"error": "Type a score between 1 and 100000."})
-            if not run_path(k) or "on_target" not in load_json(aim_analysis.OUT, {}).get(k, {}):
+            v = load_json(aim_analysis.OUT, {}).get(k, {})
+            if not run_path(k) or "on_target" not in v:
                 return self.send(400, {"error": "That run isn't available."})
+            if not (MODEL_OK.get(v["scenario"]) or model_run.model_check(v["scenario"]))[0]:
+                return self.send(400, {"error": model_run.NOT_AVAILABLE})
             with job_lock:
                 if any(j.get("kind") == "target" and j["status"] in ("queued", "running") for j in jobs.values()):
                     return self.send(409, {"error": "A target-score video is already being made. Wait for it to finish."})

@@ -68,6 +68,25 @@ python build_zip.py --python python-3.11.9-embed-amd64.zip --ffmpeg imageio_ffmp
   - On normal files it returns them untouched. The results are identical with and without it on Sphere S and Smooth Thin runs.
   - A test file at 120 a second (7345 rows) came back as 3669 rows; the original has 3673.
 
+## Added: model videos only where the bot ignores hits
+- **The check** is `model_check()` in `model_run.py`, used by `model_clip.py`, `target_video.py` and the server.
+  - A model video is allowed only for a tracking run whose .bot file shows a bot that can't be destroyed, doesn't blink or leap on hit, doesn't change size on damage or health, and has no event triggered by a hit, damage or destroy.
+  - Otherwise, the page shows "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does." instead of the button and the clip.
+  - Switching and clicking runs get none.
+- **Ryan's 6 ranked tracking scenarios:**
+  - PASS: Smooth Thin Track V2
+  - PASS: Air Track Smooth V3 150%
+  - PASS: Air Control Sphere - S
+  - PASS: Zeus Track Evo - Noblink. Its bot has a lifetime, but it can't be destroyed, so its resets are time-based.
+  - FAIL: PASU Track Evo (RCT) - 0.85X. Event 2 is "ON HIT: speed up/down", so each hit changes the bot's speed.
+  - FAIL: PASU Track XYZ. The bot can be destroyed and comes back after a kill; Ryan's stats show 2 kills a run.
+- **Every scenario Ryan has recorded passes.**
+- **Tested:**
+  - `model_clip.py` on a run named as PASU XYZ: refused (exit 3).
+  - `target_video.py` on a clicking run: refused.
+  - A normal run: still made.
+  - The page with one card blocked: no form, no model clip, the plain line shown; the other cards unchanged.
+
 ## Not tested yet (needs Ryan or a friend)
 - The game starting and recording with the installed files. That needs a real install, and the decision says nothing installs until Ryan says go.
 - A clean Windows account.

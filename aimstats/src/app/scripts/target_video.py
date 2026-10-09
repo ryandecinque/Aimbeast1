@@ -5,7 +5,7 @@
 import json, os, subprocess, sys
 from PIL import Image
 import config
-from model_run import Run
+from model_run import Run, model_check, tracking_run, NOT_AVAILABLE
 
 path, real_score, target, out = sys.argv[1], int(sys.argv[2]), int(sys.argv[3]), sys.argv[4]
 PROGRESS = os.environ.get("AIMSTATS_PROGRESS")
@@ -14,6 +14,10 @@ def progress(stage, pct):
         try: json.dump({"stage": stage, "pct": pct}, open(PROGRESS, "w"))
         except OSError: pass
 
+ok, why = model_check(os.path.basename(path)[18:].replace(".gz", "").replace(".csv", ""))
+if not ok:                                          # the bot reacts to hits: the recorded movement can't be reused
+    print(NOT_AVAILABLE, f"({why})"); sys.exit(3)
+if not tracking_run(path): print("Not available: model videos are for tracking runs only."); sys.exit(3)
 R = Run(path, real_score)
 progress("Tuning the model", 2)
 R.tune(target, lambda f: progress("Tuning the model", 2 + int(18 * f)))

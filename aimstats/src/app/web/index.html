@@ -97,6 +97,7 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": 
 const day = d => { if (!d) return ""; const [y, m, dd] = d.split("-").map(Number); return new Date(y, m - 1, dd).toLocaleDateString(undefined, { day: "numeric", month: "short" }); };
 const media = (kind, f) => `/media/${kind}/${encodeURIComponent(f)}`;
 let lastSig = "", page = null, chosen = {};
+const NA = "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does.";
 
 function spark(trend) {
   if (!trend || trend.length < 2) return "";
@@ -212,13 +213,14 @@ function card(s) {
   const n = s.last_day_numbers, dist = n.by_distance || {};
   const hits = s.unit === "hits";                    // game scores didn't line up with the recording: show hits
   const bands = Object.keys(dist);
-  const m = s.clip && s.clip.model;
+  const m = s.clip && s.model && s.model.ok && s.clip.model;      // never show a model run where the bot reacts to hits
   const makeBtn = s.clip_today ? "" : `<div style="margin-top:8px"><button class="ghost" onclick="makeClip(this)">Make clip for ${day(s.last_day)}</button> <span class="cap vjob"></span></div>`;
   const clip = (s.clip ? `<video src="${media("clips", s.clip.mp4)}" poster="${media("clips", s.clip.png)}" autoplay muted loop playsinline></video>
       <div class="cap">Best run on ${day(s.clip.date)}: <b>${s.clip.score}</b>. These are its 8 seconds with the most hits, rebuilt from your aim data.</div>`
       + (m ? `<div class="companion"><video src="${media("clips", m.mp4)}" poster="${media("clips", m.png)}" autoplay muted loop playsinline></video>
       <div class="cap">Same run, 20% better: something to model your aim on.${m.reached ? "" : ` The model reached ${m.model_score}, the closest it could get to ${m.target}.`}
-      Same bot movement and the same human reaction time; only the smoothness changes.</div></div>` : "")
+      Same bot movement and the same human reaction time; only the smoothness changes.</div></div>`
+         : (s.model && !s.model.ok ? `<div class="cap" style="margin-top:8px">${NA}</div>` : ""))
     : `<div class="box cap">No video for this scenario yet. Tick it under Videos at the top, or press Make clip.</div>`) + makeBtn;
   const swing = s.swing ? `<div class="gif"><img src="${media("gifs", s.swing.gif)}" alt="Over-aim moment" loading="lazy"></div>
       <div class="cap">From your ${esc(s.swing.time)} run on ${day(s.swing.date)}${s.swing.at != null ? `, ${Math.round(s.swing.at)} s in` : ""}: the bot kept going and you over-aimed, going through it and out the other side.
@@ -242,13 +244,13 @@ function card(s) {
     <div class="lower">
       <div><h3>Over-aim moment</h3>${swing}</div>
       <div class="target"><h3>Target-score video</h3>
-        <div class="cap" style="margin:0 0 8px">Pick a run and type a score. You get a model run on the same bot movement that would score that, on its own and side by side with yours. Takes about a minute.</div>
+        ${s.model && s.model.ok ? `<div class="cap" style="margin:0 0 8px">Pick a run and type a score. You get a model run on the same bot movement that would score that, on its own and side by side with yours. Takes about a minute.</div>
         <form onsubmit="return makeVideo(event, this)">
           <select name="run">${runs}</select>
           <input name="target" type="number" min="1" max="100000" placeholder="e.g. 700" required>
           <button type="submit">Make video</button>
         </form>
-        <div class="job"></div>
+        <div class="job"></div>` : `<div class="cap">${NA}</div>`}
       </div>
     </div>
     ${runTable(s)}
@@ -268,8 +270,9 @@ function renderJobs() {
     const files = [...sec.querySelectorAll("option")].map(o => o.value);
     const js = (page.jobs || []).filter(j => j.kind !== "videos" && files.includes(j.run)).sort((a, b) => b.id - a.id);
     const el = $(".job", sec), j = js[0];
+    if (!el) return;
     const busy = (page.jobs || []).some(x => x.kind !== "videos" && (x.status === "queued" || x.status === "running"));
-    sec.querySelector("button").disabled = busy;
+    const tb = sec.querySelector("form button"); if (tb) tb.disabled = busy;
     if (!j) { el.innerHTML = ""; return; }
     const sig = j.id + j.status + j.pct;
     if (el.dataset.sig === sig) return;
@@ -311,7 +314,7 @@ function render() {
   $("#top").innerHTML = top.join("");
   const sc = page.scenarios || [];
   const keep = {};                                   // don't lose what someone is typing when new runs arrive
-  document.querySelectorAll(".scen").forEach(sec => { const f = $("form", sec); keep[sec.dataset.name] = [f.run.value, f.target.value, !!$("details", sec)?.open]; });
+  document.querySelectorAll(".scen").forEach(sec => { const f = $("form", sec); keep[sec.dataset.name] = [f ? f.run.value : "", f ? f.target.value : "", !!$("details", sec)?.open]; });
   $("#scens").innerHTML = sc.length ? sc.map(card).join("") :
     `<div class="box empty"><b>No tracking runs yet</b>Start Aimbeast and play any tracking scenario. Your stats show up here about a minute after the run ends.</div>`;
   const sk = page.skipped || {};
@@ -320,7 +323,7 @@ function render() {
     Everything stays on this PC: nothing is uploaded, and the recorder only reads from the game. ${page.last_recording ? `Newest recording: ${day(page.last_recording.slice(0, 10))} ${page.last_recording.slice(11, 13)}:${page.last_recording.slice(13, 15)}.` : ""}`;
   document.querySelectorAll(".scen").forEach(sec => {
     const k = keep[sec.dataset.name], f = $("form", sec);
-    if (k) { if ([...f.run.options].some(o => o.value === k[0])) f.run.value = k[0]; f.target.value = k[1]; if (k[2]) $("details", sec).open = true; }
+    if (k) { if (f) { if ([...f.run.options].some(o => o.value === k[0])) f.run.value = k[0]; f.target.value = k[1]; } if (k[2]) $("details", sec).open = true; }
   });
   renderJobs();
 }

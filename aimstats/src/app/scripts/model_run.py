@@ -16,6 +16,46 @@ except Exception: FB = FM = FS = ImageFont.load_default()
 BG_TOP, BG_BOT, GRID, BOTC, AIMC, INK, DIM = (44, 46, 48), (30, 31, 32), (78, 80, 82), (90, 225, 215), (255, 60, 60), (240, 240, 236), (170, 170, 164)
 
 
+NOT_AVAILABLE = ("Not available for this scenario yet: the bot reacts to your hits, so a better run would change "
+                 "what the bot does.")
+HIT_WORDS = ("HIT", "DAMAGE", "DESTROY", "KILL", "HEALTH", "DEATH", "SHOT")
+
+
+def model_check(scenario):
+    """Can a model run be shown for this scenario? Only when the bot's path doesn't depend on the player's hits, so the
+    model can reuse the recorded bot movement. Returns (ok, reason). Checks the scenario's .bot file:
+      - the bot can't be destroyed (Invincible?), or LifeTime? is off and it has nothing to die from
+      - no blink or leap on hit
+      - no size shifting that ends on damage or health, and no other health- or damage-based size setting
+      - no event triggered by a hit, damage, destroy or kill (TIMER, ON LANDED and the like are fine)
+    Any check failing, or no readable .bot file, means no."""
+    p = scenario_profile.bot_profile(scenario)
+    if not p: return False, "the bot file couldn't be read"
+    if not p.get("Invincible?"):
+        # a bot that can be destroyed comes back after a kill, and when that happens depends on the player's hits
+        return False, "the bot can be destroyed, and it comes back after a kill" + ("" if not p.get("LifeTime?") else " or when its time runs out")
+    if p.get("BlinkOnHit?"): return False, "the bot blinks when hit"
+    if p.get("LeapOnHit?"): return False, "the bot leaps when hit"
+    if p.get("EnableSizeShifting?") and any(w in str(p.get("SizeShiftEndTrigger", "")).upper() for w in HIT_WORDS):
+        return False, f"the bot changes size on {str(p.get('SizeShiftEndTrigger')).lower()}"
+    for k, v in p.items():
+        if k.endswith("?") and v is True and "SIZE" in k.upper() and any(w in k.upper() for w in ("HEALTH", "DAMAGE", "HIT")):
+            return False, f"the bot changes size with its health ({k})"
+    for k, v in p.items():
+        if k.startswith("EventTrigger_") and any(w in str(v).upper() for w in HIT_WORDS):
+            n = k.split("_")[1]
+            return False, f"event {n} is triggered {str(v).lower()} ({str(p.get('EventTriggered_' + n, '')).lower()})"
+    return True, ""
+
+
+def tracking_run(path):
+    """Model videos are for tracking runs only (one moving bot, analysed); switching and clicking get none in v1."""
+    import aim_analysis
+    try: res = aim_analysis.analyse(path)
+    except Exception: return False
+    return bool(res) and "on_target" in res
+
+
 class Run:
     def __init__(self, path, real_score):
         self.real_score = real_score

@@ -4,14 +4,18 @@
 # If the target is out of reach, the model uses the closest score it gets and the clip says so.
 # Looping MP4 at real speed, plus a poster PNG next to it. Prints a JSON line: {"model_score", "target", "reached"}.
 # Usage: python model_clip.py <run csv> <real score> <first sample> <last sample> <out.mp4> [factor]
-import json, subprocess, sys
+import json, os, subprocess, sys
 from PIL import Image, ImageDraw, ImageFont
 import config
-from model_run import Run
+from model_run import Run, model_check, tracking_run, NOT_AVAILABLE
 
 path, real, a, b, out = sys.argv[1], int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]), sys.argv[5]
 factor = float(sys.argv[6]) if len(sys.argv) > 6 else 1.2
 target = round(factor * real)
+ok, why = model_check(os.path.basename(path)[18:].replace(".gz", "").replace(".csv", ""))
+if not ok:                                          # the bot reacts to hits: the recorded movement can't be reused
+    print(NOT_AVAILABLE, f"({why})"); sys.exit(3)
+if not tracking_run(path): print("Not available: model videos are for tracking runs only."); sys.exit(3)
 R = Run(path, real)
 R.tune(target)
 reached = abs(R.sim_score - target) <= 0.03 * target
