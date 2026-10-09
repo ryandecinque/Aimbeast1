@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-09 07:31",
- "updated_utc": "2026-10-09T00:31:19Z",
+ "updated": "2026-10-09 07:35",
+ "updated_utc": "2026-10-09T00:35:31Z",
  "today": {
   "date": "2026-10-09",
   "progress": {
-   "RANK INT A": 10
+   "RANK INT A": 12
   }
  },
  "plan_start": "2026-10-07",
@@ -43,7 +43,7 @@
    "official_best": 548.0,
    "best_14d": 545.0,
    "median_14d": 447,
-   "runs_14d": 104,
+   "runs_14d": 106,
    "steps": [
     0.0,
     180.0,
@@ -346,6 +346,12 @@
      "median": 404,
      "best": 537,
      "runs": 16
+    },
+    {
+     "date": "2026-10-09",
+     "median": 487,
+     "best": 488,
+     "runs": 2
     }
    ]
   },
@@ -788,17 +794,17 @@
  "days": [
   {
    "date": "2026-10-09",
-   "runs": 10,
-   "restarts": 2,
-   "rest_median_s": 53,
+   "runs": 12,
+   "restarts": 4,
+   "rest_median_s": 49,
    "rest_longest_s": 336,
    "breaks": [],
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 10,
+     "runs": 12,
      "first": "07:05",
-     "last": "07:30"
+     "last": "07:34"
     }
    ],
    "scenarios": [
@@ -817,6 +823,14 @@
      "first": "07:08",
      "best": 474,
      "median": 438
+    },
+    {
+     "name": "AIR TRACK SMOOTH V3 150% - RANKED",
+     "runs": 2,
+     "routine": "RANK INT A",
+     "first": "07:32",
+     "best": 488,
+     "median": 487
     }
    ]
   },
@@ -1353,13 +1367,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 202,
+  "runs": 204,
   "days": 4,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 53,
-    "pct": 98.8
+    "runs": 54,
+    "pct": 99.0
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1368,8 +1382,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 69,
-    "pct": 102.6
+    "runs": 70,
+    "pct": 102.4
    },
    {
     "label": "First run after a break of 15 min+",
