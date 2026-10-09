@@ -1,11 +1,10 @@
 {
- "updated": "2026-10-08 23:01",
- "updated_utc": "2026-10-08T16:01:19Z",
+ "updated": "2026-10-09 07:06",
+ "updated_utc": "2026-10-09T00:06:19Z",
  "today": {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "progress": {
-   "RANK INT B": 26,
-   "ZEUS BUILDER": 16
+   "RANK INT A": 1
   }
  },
  "plan_start": "2026-10-07",
@@ -16,7 +15,7 @@
    "official_best": 555.0,
    "best_14d": 490.0,
    "median_14d": 426,
-   "runs_14d": 116,
+   "runs_14d": 113,
    "steps": [
     0.0,
     168.0,
@@ -44,7 +43,7 @@
    "official_best": 548.0,
    "best_14d": 545.0,
    "median_14d": 447,
-   "runs_14d": 107,
+   "runs_14d": 104,
    "steps": [
     0.0,
     180.0,
@@ -71,8 +70,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 842.0,
-   "median_14d": 661,
-   "runs_14d": 105,
+   "median_14d": 662,
+   "runs_14d": 103,
    "steps": [
     0.0,
     240.0,
@@ -782,6 +781,32 @@
  ],
  "days": [
   {
+   "date": "2026-10-09",
+   "runs": 1,
+   "restarts": 0,
+   "rest_median_s": 7,
+   "rest_longest_s": 7,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "RANK INT A",
+     "runs": 1,
+     "first": "07:05",
+     "last": "07:05"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "AIR CONTROL SPHERE",
+     "runs": 1,
+     "routine": "RANK INT A",
+     "first": "07:05",
+     "best": 912,
+     "median": 912
+    }
+   ]
+  },
+  {
    "date": "2026-10-08",
    "runs": 71,
    "restarts": 58,
@@ -1314,13 +1339,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 192,
-  "days": 3,
+  "runs": 193,
+  "days": 4,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 51,
-    "pct": 97.3
+    "runs": 52,
+    "pct": 98.0
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1363,6 +1388,19 @@
      "far": 7.6,
      "mid": 10.2,
      "close": 8.9
+    }
+   }
+  ],
+  "2026-10-09": [
+   {
+    "scenario": "AIR CONTROL SPHERE",
+    "runs": 1,
+    "on_target": 45,
+    "reaction_ms": null,
+    "overshoot_pct": 28,
+    "pps_by_distance": {
+     "mid": 13.8,
+     "close": 16.2
     }
    }
   ]
