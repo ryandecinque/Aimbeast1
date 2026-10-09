@@ -10,14 +10,14 @@
 <style>
 :root {
   --bg: #f6f6f3; --surface: #fcfcfb; --ink: #141413; --ink-2: #52514e; --ink-3: #8a8983;
-  --rule: #e2e1dc; --accent: #d9581f; --track: #ebeae5;
+  --rule: #e2e1dc; --accent: #d9581f; --track: #ebeae5; --bad: #b91c1c; --bad-bg: #fdf2f2;
   --display: "Barlow Condensed", "Arial Narrow", sans-serif;
   --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --bg: #121211; --surface: #1a1a19; --ink: #f4f3ee; --ink-2: #c3c2b7; --ink-3: #8f8e86; --rule: #2e2e2b; --accent: #f07a45; --track: #2a2a27; color-scheme: dark; }
+  :root:not([data-theme="light"]) { --bg: #121211; --surface: #1a1a19; --ink: #f4f3ee; --ink-2: #c3c2b7; --ink-3: #8f8e86; --rule: #2e2e2b; --accent: #f07a45; --track: #2a2a27; --bad: #ff7a7a; --bad-bg: #2a1716; color-scheme: dark; }
 }
-:root[data-theme="dark"] { --bg: #121211; --surface: #1a1a19; --ink: #f4f3ee; --ink-2: #c3c2b7; --ink-3: #8f8e86; --rule: #2e2e2b; --accent: #f07a45; --track: #2a2a27; color-scheme: dark; }
+:root[data-theme="dark"] { --bg: #121211; --surface: #1a1a19; --ink: #f4f3ee; --ink-2: #c3c2b7; --ink-3: #8f8e86; --rule: #2e2e2b; --accent: #f07a45; --track: #2a2a27; --bad: #ff7a7a; --bad-bg: #2a1716; color-scheme: dark; }
 * { box-sizing: border-box; }
 html, body { overflow-x: hidden; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 var(--body); padding: 28px 16px 64px; }
@@ -83,6 +83,8 @@ ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 
 .alist { overflow-y: auto; overflow-x: hidden; padding: 12px 18px 28px; display: flex; flex-direction: column; gap: 18px; width: 100%; max-width: 68ch; margin: 0 auto; }
 .alist .focus { border-left: 3px solid var(--accent); padding: 6px 12px; background: var(--track); border-radius: 0 6px 6px 0; }
 .moment { display: flex; flex-direction: column; gap: 6px; }
+.nomodel { border-left: 3px solid var(--bad); background: var(--bad-bg); color: var(--ink); border-radius: 4px; padding: 8px 10px; font-size: 13px; }
+.nomodel b { color: var(--bad); }
 .moment video { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--rule); background: #161615; display: block; }
 .moment img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--rule); cursor: pointer; background: #161615; }
 .moment h3 { margin: 0; font: 700 17px var(--display); text-transform: uppercase; letter-spacing: .03em; }
@@ -501,6 +503,9 @@ function bestCard(x, date) {
   return `<div class="moment"><h3>Best recorded run: ${esc(nice(x.scenario))} ${x.score}</h3>` +
     (x.video ? `<video src="assets/aim/${esc(x.gif)}.mp4" poster="assets/aim/${esc(x.gif)}.png" width="960" height="540" muted loop playsinline preload="none" ${still ? "controls" : "autoplay"} aria-label="The 8 best seconds of my ${esc(nice(x.scenario))} run that scored ${x.score}, in my own view"></video>`
       : `<img src="assets/aim/${esc(x.gif)}.${still ? "png" : "gif"}" data-gif="assets/aim/${esc(x.gif)}.gif" loading="lazy" width="640" height="360" alt="The 8 best seconds of my ${esc(nice(x.scenario))} run that scored ${x.score}">`) +
+    (x.model && x.model.file ? `<p class="small" style="margin-top:4px"><b>Same run, 20% better:</b> something to model your aim on. Same bot movement, same reaction time. ${esc(x.model.label)}.</p>` +
+      `<video src="assets/aim/${esc(x.model.file)}.mp4" poster="assets/aim/${esc(x.model.file)}.png" muted loop playsinline preload="none" ${still ? "controls" : "autoplay"} aria-label="My run next to a model of the same run that scores 20% more"></video>`
+      : x.model && x.model.none ? `<p class="nomodel" role="note"><b>⊘ No 20% better video.</b> ${esc(x.model.none.replace(/^No 20% better video:\s*/, ""))}</p>` : "") +
     `<p class="score">Score <b>${x.score}</b>${x.best_14d ? ` · 14-day best ${x.best_14d}` : ""}${x.master3 ? ` · Master 3 is ${x.master3}` : ""}</p>` +
     `<p class="score">On target ${x.on_target}%${x.reaction_ms != null ? ` · reaction ${x.reaction_ms} ms` : ""} · over-aim ${x.overshoot_pct}%</p>` +
     `<p class="small">${esc(nd(date))}, ${esc(x.time)}. ${esc(x.note || "")}</p></div>`;

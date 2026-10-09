@@ -226,6 +226,11 @@ def best_runs():
                               {r["name"]: int(r["official_best"]) for r in rk if r.get("official_best")})
     except Exception as e:
         print("best runs skipped:", e)
+    try:                                     # "same run, 20% better" clips for new best runs (AimStats' model_clip.py)
+        import model_best
+        model_best.update()
+    except Exception as e:
+        print("20% clips skipped:", e)
     p = os.path.join(HERE, "best_runs.json")
     return json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
 
