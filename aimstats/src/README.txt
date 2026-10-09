@@ -19,7 +19,10 @@ anything:
 Videos are opt-in: tick scenarios in the Videos panel at the top of the page, or tick Always to have them
 made after every session.
 
-Tracking scenarios only for now. Switching and clicking scenarios are recorded but not analysed yet.
+Tracking scenarios get the full set of numbers. Switching and clicking scenarios show kills (checked against
+the game's own kill counter), time per kill, missed shots and the best run's clip. Where the bots only come back
+when killed and don't react to hits, you can also get "Same bots, 20% faster": the same bots, in the same order,
+on their real paths, killed sooner by a model with your reaction time.
 No AI is involved anywhere: it's plain maths on your own recordings.
 
 How to use it

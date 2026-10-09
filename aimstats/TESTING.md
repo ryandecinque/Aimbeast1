@@ -103,6 +103,26 @@ python build_zip.py --python python-3.11.9-embed-amd64.zip --ffmpeg imageio_ffmp
 - Model videos keep the real camera path and change only the aim.
 - When the player moves during the run (more than 100 units sideways, or a Dodge or Possession scenario), the model clip and the target-score video add "same movement as your run". Checked: a run under a Dodge name says moves = true; Zeus and Smooth Thin say moves = false.
 
+## Added: switching and clicking cards, and "Same bots, 20% faster"
+- **Files:** model_v2's `lives.py`, `scen_rules.py` and `fast_clip.py` are copied into the app's scripts.
+  - They use AimStats' config: FOV from Config.cfg, the Workshop folder, AimStats' data folder, the bundled ffmpeg, and no console windows.
+  - `kill_stats.py` gives each run's kills (checked against the game's kill counter), time per kill and missed shots.
+  - `real_clip.py` makes the best 8 seconds with every bot drawn.
+- **Which card a scenario gets:** it's a switching/clicking scenario when at least half its runs are. This stops TAMTARGETSWITCH from splitting across two cards: two of its runs were recorded before phase 7 and read as tracking.
+- **"Same bots, 20% faster"** is offered only where `scen_rules` allows it.
+  - The label shows the factor fast_clip actually reached.
+  - fast_clip's hard checks are untouched. If it stops, the card says the run failed its safety checks.
+  - Other refusals (kills not matching the game, too few kills, bots not only coming after kills, an old recording) each get a plain line.
+- **Tested on Ryan's real runs from today**, with the packaged app on a scratch copy of the data:
+  - POPCORN - M 11:21: card with 33 kills (matches the game) and 1.8 s per kill. Same bots, 22% faster: 48.3 s against 58.7 s.
+  - PASU XYZ 11:38: 16 kills (matches the game). Same bots, 19% faster: 46.1 s against 55.0 s.
+  - VOX TS BALANCED - 150% (8 Oct): 69 kills. Same bots, 19% faster: 49.8 s against 59.3 s.
+  - TAMTARGETSWITCH 11:18: 30 kills, matching the game. Its card shows the clip and the red notice, because the scenario is scored on time on target and the bot heals.
+  - The two runs from before phase 7 are marked "game: different".
+  - PASU TRACK XYZ stays a tracking card with its red notice; the "coming" line is gone.
+  - The "failed its safety checks" notice was checked in the browser.
+- `aimstats/FOR-YOUR-FRIEND.txt`: the message for a friend, 227 words.
+
 ## Not tested yet (needs Ryan or a friend)
 - The game starting and recording with the installed files. That needs a real install, and the decision says nothing installs until Ryan says go.
 - A clean Windows account.

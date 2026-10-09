@@ -104,9 +104,10 @@ const day = d => { if (!d) return ""; const [y, m, dd] = d.split("-").map(Number
 const media = (kind, f) => `/media/${kind}/${encodeURIComponent(f)}`;
 let lastSig = "", page = null, chosen = {};
 const NA = "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does.";
-function noModel(mo) {                               // red notice where the model videos would be (icon + words, not colour alone)
-  return `<div class="nomodel" role="note"><div class="lab"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none"
-    stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M5.5 5.5l13 13"/></svg>No 20% better video</div>
+const ICON = `<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2"
+  stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M5.5 5.5l13 13"/></svg>`;
+function noModel(mo, label) {                        // red notice where the model videos would be (icon + words, not colour alone)
+  return `<div class="nomodel" role="note"><div class="lab">${ICON}${label || "No 20% better video"}</div>
     <p>${esc(mo.text || NA)}</p>${mo.coming ? `<p class="coming">${esc(mo.coming)}</p>` : ""}</div>`;
 }
 
@@ -167,7 +168,7 @@ function videosBox() {
     ${today.map(t => `<div class="vrow" data-name="${esc(t.name)}">
       <label><input type="checkbox" class="tick" ${(st.ticked || []).includes(t.name) ? "checked" : ""} onchange="saveTicks()">
         <span class="name">${esc(t.title)}${t.ranked ? '<span class="chip">RANKED</span>' : ""}</span></label>
-      <span class="meta">${t.runs} run${t.runs === 1 ? "" : "s"} · best ${t.best}${t.unit === "hits" ? " hits" : ""}</span>
+      <span class="meta">${t.runs} run${t.runs === 1 ? "" : "s"} · best ${t.best}${t.unit === "hits" ? " hits" : t.unit === "kills" ? " kills" : ""}${t.v2 ? " · plus same bots, 20% faster" : ""}</span>
       <label class="always"><input type="checkbox" ${(st.always || []).includes(t.name) ? "checked" : ""} onchange="setAlways(this)"> Always</label>
       <span class="vs">${t.done ? "video made" : ""}</span></div>`).join("")}
     <div style="margin-top:10px"><button onclick="makeVideos(this)">Make videos</button></div></div>`;
@@ -220,7 +221,44 @@ function weekLine(w) {
   return `This week your typical score is <b>${w.this}</b> (${w.this_runs} runs), last week <b>${w.last}</b>: ${word}.`;
 }
 
+function killCard(s) {                               // switching and clicking: kills, time per kill, misses
+  const n = s.last_day_numbers, c = s.clip, v = c && c.v2, rest = !!page.practice;
+  const pct = f => Math.round(100 * (f - 1));
+  const makeBtn = s.clip_today ? "" : `<div style="margin-top:8px"><button class="ghost" onclick="makeClip(this)">Make clip${s.v2.ok ? " and 20% faster videos" : ""} for ${day(s.last_day)}</button> <span class="cap vjob"></span></div>`;
+  const clip = (c ? `<video src="${media("clips", c.mp4)}" poster="${media("clips", c.png)}" autoplay muted loop playsinline></video>
+      <div class="cap">Best run on ${day(c.date)}: <b>${c.score} kills</b>. These are its 8 seconds with the most kills, rebuilt from your aim data.</div>` +
+      (v ? `<div class="companion"><h3 style="margin-top:6px">Same bots, ${pct(v.factor)}% faster</h3>
+        <video src="${media("clips", v.side)}" poster="${media("clips", v.png)}" controls playsinline></video>
+        <div class="cap">Your run on the left; on the right a model kills the same bots, in the same order, on their real paths, sooner:
+        done in ${v.model_s}s instead of ${v.real_s}s.${v.reached ? "" : ` 20% wasn't possible with every kill landing on its bot, so this is the closest that was.`}
+        <a href="${media("clips", v.solo)}" target="_blank">Model run on its own</a></div></div>`
+       : c.v2_failed ? `<div class="nomodel" role="note"><div class="lab">${ICON}No 20% faster video for this run</div><p>${esc(c.v2_failed)}</p></div>`
+       : !s.v2.ok ? noModel({ text: s.v2.text, coming: "" }, "No 20% faster video") : "")
+    : `<div class="box cap">No video for this scenario yet. Tick it under Videos at the top, or press Make clip.</div>`
+      + (!s.v2.ok ? noModel({ text: s.v2.text, coming: "" }, "No 20% faster video") : "")) + makeBtn;
+  return `<section class="scen" data-name="${esc(s.name)}">
+    <h2>${esc(s.title)}${s.ranked ? '<span class="chip">RANKED</span>' : ""}</h2>
+    <div class="sub">Last played ${day(s.last_day)} · ${n.runs} run${n.runs === 1 ? "" : "s"} recorded that day · ${s.runs_recorded} recorded in total</div>
+    <div class="grid">
+      <div>${clip}</div>
+      <div class="nums">
+        <div class="num"><div class="v">${n.best} <small>/ ${n.typical} typical</small></div><div class="l">Most kills in a run that day</div></div>
+        <div class="num"><div class="v">${n.time_per_kill != null ? n.time_per_kill.toFixed(1) + " s" : "–"}</div><div class="l">Time per kill (typical run)</div></div>
+        <div class="num"><div class="v">${n.misses != null ? Math.round(n.misses) : "–"}</div><div class="l">Missed shots (typical run)</div></div>
+        <div class="num"><div class="v">${n.matched}/${n.runs}</div><div class="l">Runs where the kills found matched the game's kill counter</div></div>
+        <div class="num wide week">${spark(s.trend).replace(/Typical score/g, "Typical kills")}</div>
+      </div>
+    </div>
+    <details><summary>All recorded runs (${s.runs_recorded}${s.runs_recorded > s.runs.length ? `, newest ${s.runs.length} shown` : ""})</summary><div class="tbl"><table>
+      <tr><th>Day</th><th>Time</th><th>Kills</th><th>Time per kill</th><th>Missed shots</th>${rest ? "<th>Rest before</th>" : ""}</tr>
+      ${s.runs.map(r => `<tr><td>${day(r.date)}</td><td>${esc(r.time)}</td><td>${r.kills}${r.match ? "" : " (game: different)"}</td>
+        <td>${r.time_per_kill != null ? r.time_per_kill.toFixed(2) + " s" : "–"}</td><td>${r.misses ?? "–"}</td>${rest ? `<td>${restText(r.rest)}</td>` : ""}</tr>`).join("")}
+    </table></div></details>
+  </section>`;
+}
+
 function card(s) {
+  if (s.kind === "kills") return killCard(s);
   const n = s.last_day_numbers, dist = n.by_distance || {};
   const hits = s.unit === "hits";                    // game scores didn't line up with the recording: show hits
   const bands = Object.keys(dist);
@@ -330,7 +368,7 @@ function render() {
     `<div class="box empty"><b>No tracking runs yet</b>Start Aimbeast and play any tracking scenario. Your stats show up here about a minute after the run ends.</div>`;
   const sk = page.skipped || {};
   const skipped = [...(sk.switching || []), ...(sk.clicking || [])];
-  $("#foot").innerHTML = `Tracking scenarios only for now. Switching and clicking scenarios are recorded but not analysed yet${skipped.length ? ` (you've played ${skipped.length}: ${skipped.slice(0, 6).map(esc).join(", ")}${skipped.length > 6 ? "…" : ""})` : ""}.<br>
+  $("#foot").innerHTML = `Tracking scenarios get the full set of numbers; switching and clicking scenarios show kills, time per kill and missed shots.${skipped.length ? ` Recordings from before the kill counter can't be counted (${skipped.slice(0, 6).map(esc).join(", ")}${skipped.length > 6 ? "…" : ""}).` : ""}<br>
     Everything stays on this PC: nothing is uploaded, and the recorder only reads from the game. ${page.last_recording ? `Newest recording: ${day(page.last_recording.slice(0, 10))} ${page.last_recording.slice(11, 13)}:${page.last_recording.slice(13, 15)}.` : ""}`;
   document.querySelectorAll(".scen").forEach(sec => {
     const k = keep[sec.dataset.name], f = $("form", sec);

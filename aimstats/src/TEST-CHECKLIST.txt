@@ -17,6 +17,7 @@ Play
 [ ] Start Aimbeast. It starts normally, with no extra windows.
 [ ] Play one normal tracking run to the end (any tracking scenario).
 [ ] Play one RANKED tracking run to the end.
+[ ] Play one switching or clicking run to the end (for example a target-switching or Popcorn scenario).
 [ ] FPS is the same as before (roughly).
 
 Stats page
@@ -25,6 +26,7 @@ Stats page
 [ ] In the Videos panel at the top, tick a scenario and press Make videos: a best-run clip and a
     "20% better" side by side appear on its card within a minute or two.
 [ ] The ranked run shows up too (with a RANKED tag).
+[ ] The switching or clicking run shows kills and time per kill, and says the kills matched the game's counter.
 [ ] Stop playing for a few minutes: an over-aim moment appears under the scenario.
 [ ] Target-score video: pick a run, type a score a bit above it, press Make video.
     It finishes in a minute or two and both videos play.

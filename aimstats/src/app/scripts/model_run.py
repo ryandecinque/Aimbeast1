@@ -63,7 +63,7 @@ def model_notice(scenario):
                     "sure a better run wouldn't change what the bot does.")
     if not p.get("Invincible?"):
         return dict(ok=False, kind="dies", text="This bot can die, so a better run would need bots that weren't in your recording.",
-                    coming="A 'same bots, killed sooner' version is coming.")
+                    coming="")     # the "same bots, killed sooner" model is for switching and clicking, not tracking
     what = None
     if p.get("BlinkOnHit?"): what = "it blinks away when hit"
     elif p.get("LeapOnHit?"): what = "it leaps when hit"
