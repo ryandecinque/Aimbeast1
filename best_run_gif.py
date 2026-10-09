@@ -36,7 +36,10 @@ U = lambda deg, d: math.tan(math.radians(deg)) * d
 OFF = st.median(U(S[i]["ey"], S[i]["d"]) for i in hit_i)                      # aim point vs the recorded bot position
 hw = sorted(abs(U(S[i]["ex"], S[i]["d"])) for i in hit_i)[int(.9 * len(hit_i))]
 hh = sorted(abs(U(S[i]["ey"], S[i]["d"]) - OFF) for i in hit_i)[int(.9 * len(hit_i))]
-hw = max(hw, 0.45 * hh)          # precise left-right aim underestimates width: keep a capsule shape
+hw = max(hw, 0.45 * hh)
+LR_ONLY = abs(OFF) > 4 * sorted(abs(U(S[i]["ex"], S[i]["d"])) for i in hit_i)[int(.9 * len(hit_i))]   # recorded height unreliable (flying bots)
+if LR_ONLY: hh = 2.2 * hw
+if "SPHERE" in label.upper(): hh = hw = max(hw, sorted(abs(U(S[i]["ex"], S[i]["d"])) for i in hit_i)[int(.98 * len(hit_i))])   # a ball, not a capsule          # precise left-right aim underestimates width: keep a capsule shape
 D0 = st.median(S[i]["d"] for i in hit_i)
 W, H = 640, 360
 try: F = ImageFont.truetype("arialbd.ttf", 18); FS = ImageFont.truetype("arial.ttf", 13); FB = ImageFont.truetype("arialbd.ttf", 28)
@@ -51,7 +54,7 @@ for i in range(a, b, 2):                          # every other sample: 30 frame
     d.text((14, 10), label, fill=INK, font=F)
     cx, cy = W // 2, 160
     if s:
-        cey = math.degrees(math.atan2(U(s["ey"], s["d"]) - OFF, s["d"]))     # aim error to the bot's centre
+        cey = 0.0 if LR_ONLY else math.degrees(math.atan2(U(s["ey"], s["d"]) - OFF, s["d"]))     # aim error to the bot's centre
         bx, by = cx + s["ex"] * SCALE, cy - cey * SCALE
         rx, ry = math.degrees(math.atan(hw / s["d"])) * SCALE, math.degrees(math.atan(hh / s["d"])) * SCALE
         d.rounded_rectangle([bx - rx, by - ry, bx + rx, by + ry], radius=min(rx, ry), fill=BOT)
@@ -67,7 +70,7 @@ for i in range(a, b, 2):                          # every other sample: 30 frame
     d.rectangle([X(a), ty, X(b), ty + 8], fill=(90, 90, 84))
     d.rectangle([X(first), ty, X(i), ty + 8], fill=ACC)
     d.text((tx0, ty + 14), "the full 60-second run: this clip is the 8 seconds with the most hits", fill=DIM, font=FS)
-    d.text((tx0, ty + 34), f"Final score {score}.  Real speed.", fill=DIM, font=FS)
+    d.text((tx0, ty + 34), f"Final score {score}.  Real speed." + ("  Left-right only." if LR_ONLY else ""), fill=DIM, font=FS)
     frames.append(im.convert("P", palette=Image.ADAPTIVE, colors=24))
 frames += [frames[-1]] * 15
 frames[0].save(out, save_all=True, append_images=frames[1:], duration=33, loop=0, optimize=True)

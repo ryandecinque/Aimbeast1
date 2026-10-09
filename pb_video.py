@@ -44,7 +44,8 @@ if EST:   # bot height from the aim at hit moments, linearly interpolated, light
     BP = [st.mean(BP[max(0, k - 3):k + 4]) for k in range(n)]
 else:
     BP = [raw_pitch(i) - math.degrees(math.atan(OFFU / hd(i))) if BOT[i] else None for i in range(n)]
-HH = 2.2 * HW
+SPHERE = "SPHERE" in title.upper()               # Air Control Sphere scenarios use a ball, not a capsule
+HH = HW if SPHERE else 2.2 * HW
 BOTW = []   # visible bot centre in world space
 for i in range(n):
     if BOT[i] is None: BOTW.append(None); continue
@@ -92,7 +93,7 @@ def frame(i, final=False):
         c = proj(*BOTW[i])
         if c:
             fz = math.hypot(BOTW[i][0] - cx0, BOTW[i][1] - cy0)
-            rx, ry = max(3, HW / fz * f), max(6, HH / fz * f)
+            rx, ry = max(3, HW / fz * f), max(3 if SPHERE else 6, HH / fz * f)
             d.rounded_rectangle([c[0] - rx, c[1] - ry, c[0] + rx, c[1] + ry], radius=rx, fill=BOTC)
     d.ellipse([Wd / 2 - 3, Ht / 2 - 3, Wd / 2 + 3, Ht / 2 + 3], fill=AIMC)
     run_len = (end - start) * DT
