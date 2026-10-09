@@ -57,7 +57,7 @@ os.makedirs(os.path.join(OUT, "data"))
 
 # check the bundled Python can import everything, with nothing from this PC on its path
 r = subprocess.run([os.path.join(py, "python.exe"), "-c", "import PIL.Image, winreg, http.server, gzip, csv, statistics, webbrowser;"
-                    "import config, aim_analysis, scenario_profile, pb_events, installer; print('imports ok', PIL.__version__)"],
+                    "import config, aim_analysis, scenario_profile, pb_events, installer, rests, model_run, lives, scen_rules, fast_clip, kill_stats; print('imports ok', PIL.__version__)"],
                    capture_output=True, text=True, env={"SYSTEMROOT": os.environ.get("SYSTEMROOT", r"C:\Windows")}, cwd=OUT)
 print(r.stdout.strip(), r.stderr.strip()[-500:])
 if r.returncode: sys.exit("bundled Python check failed")

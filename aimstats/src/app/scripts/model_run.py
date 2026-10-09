@@ -63,7 +63,7 @@ def model_notice(scenario):
                     "sure a better run wouldn't change what the bot does.")
     if not p.get("Invincible?"):
         return dict(ok=False, kind="dies", text="This bot can die, so a better run would need bots that weren't in your recording.",
-                    coming="A 'same bots, killed sooner' version is coming.")
+                    coming="")     # the "same bots, killed sooner" model is for switching and clicking, not tracking
     what = None
     if p.get("BlinkOnHit?"): what = "it blinks away when hit"
     elif p.get("LeapOnHit?"): what = "it leaps when hit"
@@ -166,7 +166,8 @@ class Run:
                 vy += ay * DT; vp += ap * DT
             else: vy *= 0.9; vp *= 0.9                        # no bot on screen: ease to a stop
             sy += vy * DT; sp += vp * DT
-            if self.EST: sp, vp = self.PIT[i], 0.0             # height not measured: the model only works left-right
+            # older recordings of flying bots: the target height is the one estimated from the hits (self.BP), the same
+            # height the bot is drawn at, so the model's dot sits on the drawn bot (on target is still judged left-right)
             out.append((sy, sp))
         return out
 

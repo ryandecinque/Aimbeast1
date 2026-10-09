@@ -1,0 +1,18 @@
+Hey! I made a small tool for Aimbeast called AimStats. Want to try it?
+
+What it is: after each session it shows your stats in your browser: your best run per scenario as a short clip, time on target, over-aim, kills and time per kill, how long you rest between runs, and whether you're improving week to week. For some scenarios it also shows the same run played about 20% better, so you can see what to aim for. No AI, just maths on your own runs.
+
+It's read-only: it only reads where you aim and where the bots are, and never changes scores, ranked or anything in the game. Nothing is uploaded. It all stays on your PC.
+
+How to use it:
+1. Unzip AimStats somewhere (not in the game folder). Close Aimbeast and double-click Install.bat.
+2. Play Aimbeast as normal.
+3. Double-click "Open AimStats.bat". Your stats open in your browser.
+
+After a run your numbers show up within about a minute. Tick the scenarios you want videos for in the Videos box at the top.
+
+To remove it: close Aimbeast and double-click Uninstall.bat. It puts the game back exactly as it was.
+
+Antivirus: it might flag dwmapi.dll. That's UE4SS, the free open-source mod loader the recorder runs on (github.com/UE4SS-RE/RE-UE4SS).
+
+Please go through TEST-CHECKLIST.txt in the folder and send me your notes, plus anything confusing. Thanks!

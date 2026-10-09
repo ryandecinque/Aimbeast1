@@ -103,6 +103,34 @@ python build_zip.py --python python-3.11.9-embed-amd64.zip --ffmpeg imageio_ffmp
 - Model videos keep the real camera path and change only the aim.
 - When the player moves during the run (more than 100 units sideways, or a Dodge or Possession scenario), the model clip and the target-score video add "same movement as your run". Checked: a run under a Dodge name says moves = true; Zeus and Smooth Thin say moves = false.
 
+## Added: switching and clicking cards, and "Same bots, 20% faster"
+- **Files:** model_v2's `lives.py`, `scen_rules.py` and `fast_clip.py` are copied into the app's scripts.
+  - They use AimStats' config: FOV from Config.cfg, the Workshop folder, AimStats' data folder, the bundled ffmpeg, and no console windows.
+  - `kill_stats.py` gives each run's kills (checked against the game's kill counter), time per kill and missed shots.
+  - `real_clip.py` makes the best 8 seconds with every bot drawn.
+- **Which card a scenario gets:** it's a switching/clicking scenario when at least half its runs are. This stops TAMTARGETSWITCH from splitting across two cards: two of its runs were recorded before phase 7 and read as tracking.
+- **"Same bots, 20% faster"** is offered only where `scen_rules` allows it.
+  - The label shows the factor fast_clip actually reached.
+  - fast_clip's hard checks are untouched. If it stops, the card says the run failed its safety checks.
+  - Other refusals (kills not matching the game, too few kills, bots not only coming after kills, an old recording) each get a plain line.
+- **Tested on Ryan's real runs from today**, with the packaged app on a scratch copy of the data:
+  - POPCORN - M 11:21: card with 33 kills (matches the game) and 1.8 s per kill. Same bots, 22% faster: 48.3 s against 58.7 s.
+  - PASU XYZ 11:38: 16 kills (matches the game). Same bots, 19% faster: 46.1 s against 55.0 s.
+  - VOX TS BALANCED - 150% (8 Oct): 69 kills. Same bots, 19% faster: 49.8 s against 59.3 s.
+  - TAMTARGETSWITCH 11:18: 30 kills, matching the game. Its card shows the clip and the red notice, because the scenario is scored on time on target and the bot heals.
+  - The two runs from before phase 7 are marked "game: different".
+  - PASU TRACK XYZ stays a tracking card with its red notice; the "coming" line is gone.
+  - The "failed its safety checks" notice was checked in the browser.
+- `aimstats/FOR-YOUR-FRIEND.txt`: the message for a friend, 227 words.
+
+## Fixed: flying bots in older recordings (before phase 5)
+- `model_run.py` already took a flying bot's visible height from the aim at each hit, joined up in between and lightly smoothed, whenever the root height was clearly wrong.
+  - On the Air Track 526 and Sphere S 853 runs from 9 Oct this was active, and the drawn ball sat on the crosshair at hits.
+- **Change:** the model's aim now also follows that estimated height. Before, it copied the player's pitch. Model clips and target-score videos now say "Bot height estimated from hits".
+- **Re-made with best_run_gif's 8-second windows:**
+  - **Air Track (window 2379–2859):** at its 85 hits the ball centre is a median 0.11° from the crosshair. The model's dot is 0.63° from the centre while on target, against a ball radius of about 2.8°. +20% reached: 634 against a target of 631.
+  - **Sphere S (2776–3256):** 0.02° at its 154 hits. The model's dot is 0.19° from the centre, against a radius of about 0.8°. +20% wasn't reachable (943 against 1024), and the clip says so.
+
 ## Not tested yet (needs Ryan or a friend)
 - The game starting and recording with the installed files. That needs a real install, and the decision says nothing installs until Ryan says go.
 - A clean Windows account.

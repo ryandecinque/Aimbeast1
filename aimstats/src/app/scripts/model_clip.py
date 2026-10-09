@@ -22,6 +22,7 @@ reached = abs(R.sim_score - target) <= 0.03 * target
 pct = round(100 * (factor - 1))
 label = f"Model, {'+' if pct >= 0 else ''}{pct}%: {R.sim_score}" if reached else f"Model reached {R.sim_score} (the closest it could get to {target})"
 if R.moves: label += ", same movement as your run"
+NOTE = "Bot height estimated from hits" if R.EST else ""
 try: FT = ImageFont.truetype("arialbd.ttf", 18)
 except Exception: FT = ImageFont.load_default()
 PW, PH = 800, 450
@@ -32,6 +33,7 @@ def frame(i):
     im = Image.new("RGB", (2 * PW + 30, PH + 20), (14, 14, 13))
     im.paste(R.view(PW, PH, i, R.YAW[i], R.PIT[i], R.real_cum[i], f"You: {real}", R.t_left(i)), (10, 10))
     im.paste(R.view(PW, PH, i, *R.sim[i], R.sim_cum[i], label, R.t_left(i)), (PW + 20, 10))
+    if NOTE: ImageDraw.Draw(im).text((W - 16, H - 14), NOTE, fill=(150, 150, 146), font=FT, anchor="rd")
     return im
 
 

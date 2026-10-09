@@ -7,7 +7,7 @@
 # Usage: python aimstats.py [--no-browser] [--once]
 import datetime as dt, glob, http.server, json, os, queue, re, shutil, socket, statistics as st, sys, threading, time, traceback
 import urllib.parse, urllib.request, webbrowser
-import config, aim_analysis, pb_events, rests, scenario_profile, model_run
+import config, aim_analysis, pb_events, rests, scenario_profile, model_run, kill_stats, scen_rules
 
 PORTS = [int(os.environ["AIMSTATS_PORT"])] if os.environ.get("AIMSTATS_PORT") else range(8765, 8776)   # AIMSTATS_PORT: for testing
 WEB = os.path.join(config.APP, "web")
@@ -28,6 +28,9 @@ BEST = {}                   # (scenario, date) -> (score, run file), refreshed b
 FACTOR = 1.2                # the side-by-side companion's model run: 20% better
 MODEL_OK = {}               # scenario -> (ok, reason): model videos only where the bot ignores the player's hits
 MODEL_NOTE = {}             # scenario -> plain-words notice for the page
+KILLS = os.path.join(config.DATA, "kills.json")         # switching / clicking runs: kills, time per kill, misses
+KILL_SCENS = set()          # scenarios shown as kill cards (switching and clicking)
+V2 = {}                     # scenario -> scen_rules verdict: can it get "same bots, 20% faster" videos?
 
 
 def log(msg):
@@ -144,7 +147,14 @@ def work(first=False):
         status["busy"] = "Analysing new runs"
         aim_analysis.update()
     summ = load_json(aim_analysis.OUT, {})
-    track = {k: v for k, v in summ.items() if "on_target" in v}
+    # switching / clicking scenarios: at least half their runs are, so a few runs read as tracking (older recorder
+    # versions missed bots) don't split a scenario across two cards
+    votes = {}
+    for v in summ.values():
+        if "on_target" in v or "not analysed" in str(v.get("skipped", "")):
+            votes.setdefault(v["scenario"], []).append("on_target" not in v)
+    kill_names = {s_ for s_, vs in votes.items() if sum(vs) >= 0.5 * len(vs)}
+    track = {k: v for k, v in summ.items() if "on_target" in v and v["scenario"] not in kill_names}
     scen_names = sorted({v["scenario"] for v in track.values()})
     hists = {}
     for s in scen_names:          # the game's statistics, only where its score is the hit count the recorder sees
@@ -156,7 +166,25 @@ def work(first=False):
     by_sd = {}
     for k, v in track.items():
         by_sd.setdefault((v["scenario"], v["date"]), []).append((score_for(v, hists[v["scenario"]]), k, v))
-    BEST.clear(); BEST.update({sd: max(runs, key=lambda x: x[0])[:2] for sd, runs in by_sd.items()})
+    # switching and clicking runs: kills found in the recording, checked against the game's kill counter
+    kcache = load_json(KILLS, {})
+    for k, v in summ.items():
+        if v["scenario"] not in kill_names or not ("on_target" in v or "not analysed" in str(v.get("skipped", ""))): continue
+        if k in kcache or not run_path(k): continue
+        status["busy"] = "Counting kills in " + title_of(v["scenario"])[0]
+        try: kcache[k] = kill_stats.summarize(run_path(k))
+        except Exception as e: kcache[k] = {"error": str(e)[:200]}
+        save_json(KILLS, kcache)
+    kill = {k: dict(summ[k], **kcache[k]) for k in kcache if k in summ and kcache[k].get("kills")}
+    KILL_SCENS.clear(); KILL_SCENS.update(v["scenario"] for v in kill.values())
+    for s_ in KILL_SCENS:
+        if s_ not in V2:
+            r = scen_rules.rules(s_); V2[s_] = dict(ok=r["ok"], why=r["why"])
+    kill_sd = {}
+    for k, v in kill.items(): kill_sd.setdefault((v["scenario"], v["date"]), []).append((v["kills"], k, v))
+    BEST.clear()
+    BEST.update({sd: max(runs, key=lambda x: (x[0], -x[2].get("seconds", 0)))[:2] for sd, runs in kill_sd.items()})
+    BEST.update({sd: max(runs, key=lambda x: x[0])[:2] for sd, runs in by_sd.items()})
     # videos are opt-in: only scenarios set to Always get them on their own, once the session has gone quiet
     if time.time() - watch.get("last_new", 0) > QUIET:
         always = set(load_json(SETTINGS, {}).get("always", [])); clips = load_json(CLIPS, {})
@@ -195,7 +223,7 @@ def work(first=False):
     save_json(WATCH, watch)
     status["busy"] = "Reading rest times"
     rest_info, practice = rests.summary()              # None, None when there's no practice_log.csv
-    build_page(summ, track, hists, watch, pbs, rest_info, practice, clips)
+    build_page(summ, track, hists, watch, pbs, rest_info, practice, clips, kill)
     status["busy"] = ""
     status["last_check"] = time.time()
 
@@ -211,6 +239,49 @@ def best_line(scen, ranked, h, rows):
     return dict(score=known, since=first)
 
 
+PLAIN = [("tracking scenario", "This scenario is scored on time on target, not kills, so killing bots sooner isn't a better run here."),
+         ("heals", "This bot heals over time, so how long a kill takes depends on how the damage was spread out."),
+         ("invincible", "These bots can't die, so there are no kills to make sooner."),
+         ("timer", "Bots also disappear on a timer, not only when killed, so a faster run would change which bots appear."),
+         ("wait", "New bots wait after a kill, so killing sooner can't bring the next bot in sooner."),
+         ("not found", "This scenario's files couldn't be found, so there's no way to check it."),
+         ("no bot file", "This scenario's bot file couldn't be read, so there's no way to check it.")]
+
+
+def plain_why(why):
+    """scen_rules' reasons, in plain words for the red notice."""
+    out = []
+    for w in why:
+        if w.startswith("bot reacts to hits"):
+            out.append(f"This bot reacts to your hits ({w.split(': ', 1)[1].lower()}), so a better run would change what the bot does.")
+            continue
+        out.append(next((t for k, t in PLAIN if k in w), w[:1].upper() + w[1:] + "."))
+    return " ".join(dict.fromkeys(out))
+
+
+def kill_card(scen, kill, clips, rest_info):
+    """A switching or clicking scenario: kills, time per kill, misses, the best run's clip, and the
+    "same bots, 20% faster" videos where the scenario allows them."""
+    title, ranked = title_of(scen)
+    runs = sorted(((k, v) for k, v in kill.items() if v["scenario"] == scen), key=lambda kv: kv[0])
+    rows = [dict(file=k, date=v["date"], time=v["time"][:5], kills=v["kills"], match=v["match"], time_per_kill=v["time_per_kill"],
+                 misses=v["misses"] if v.get("type") != "TRACKING" else None, clicks=v["clicks"], rest=rest_of(rest_info, k)) for k, v in runs]
+    last_day = rows[-1]["date"]
+    day_rows = [r for r in rows if r["date"] == last_day]
+    daily = {}
+    for r in rows: daily.setdefault(r["date"], []).append(r["kills"])
+    tag = next((t for t in ([f"{scen}|{last_day}"] + sorted(clips, reverse=True)) if t in clips and t.startswith(scen + "|")
+                and clips[t].get("mp4")), None)
+    v2 = V2.get(scen) or {"ok": False, "why": []}
+    return dict(kind="kills", name=scen, title=title, ranked=ranked, last_day=last_day, runs_recorded=len(rows), unit="kills",
+                last_day_numbers=dict(runs=len(day_rows), best=max(r["kills"] for r in day_rows), typical=round(st.median(r["kills"] for r in day_rows)),
+                                      time_per_kill=med(r["time_per_kill"] for r in day_rows), misses=med(r["misses"] for r in day_rows),
+                                      matched=sum(r["match"] for r in day_rows)),
+                trend=[{"date": d, "median": round(st.median(v)), "best": max(v), "runs": len(v)} for d, v in sorted(daily.items())][-30:],
+                clip=dict(clips[tag], date=tag.split("|")[1]) if tag else None, clip_today=f"{scen}|{last_day}" in clips,
+                v2=dict(ok=v2["ok"], text="" if v2["ok"] else plain_why(v2["why"])), runs=rows[-40:][::-1])
+
+
 def rest_of(rest_info, k):
     """Rest before a recorded run, from the practice log: (kind, seconds) or None."""
     try: when = dt.datetime.strptime(k[:17], "%Y-%m-%d_%H%M%S")
@@ -218,8 +289,8 @@ def rest_of(rest_info, k):
     return rests.rest_before(rest_info, when)
 
 
-def build_page(summ, track, hists, watch, pbs, rest_info=None, practice=None, clips=None):
-    clips = clips or {}
+def build_page(summ, track, hists, watch, pbs, rest_info=None, practice=None, clips=None, kill=None):
+    clips = clips or {}; kill = kill or {}
     today = dt.date.today()
     scen_out = []
     for scen in sorted({v["scenario"] for v in track.values()}):
@@ -265,10 +336,11 @@ def build_page(summ, track, hists, watch, pbs, rest_info=None, practice=None, cl
             clip=dict(clips[tag], date=tag.split("|")[1]) if tag else None, clip_today=f"{scen}|{last_day}" in clips,
             swing=dict(watch["gifs"][gif_tag], date=gif_tag.split("|")[1]) if gif_tag else None,
             runs=rows[-40:][::-1]))
+    scen_out += [kill_card(scen, kill, clips, rest_info) for scen in sorted(KILL_SCENS) if scen not in {x["name"] for x in scen_out}]
     scen_out.sort(key=lambda s: s["last_day"] + max(r["time"] for r in s["runs"] if r["date"] == s["last_day"]), reverse=True)
     skipped = {}
     for v in summ.values():
-        if "skipped" in v and "not analysed" in v["skipped"]:
+        if "skipped" in v and "not analysed" in v["skipped"] and v["scenario"] not in KILL_SCENS:   # no card (older recordings)
             kind = "clicking" if "clicking" in v["skipped"] else "switching"
             skipped.setdefault(kind, set()).add(v["scenario"])
     last_run = max(summ.keys())[:17] if summ else None
@@ -276,7 +348,7 @@ def build_page(summ, track, hists, watch, pbs, rest_info=None, practice=None, cl
     recent = [e for e in pbs["events"] if now - dt.datetime.strptime(e["seen_utc"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=dt.timezone.utc) < dt.timedelta(hours=24)]
     today = dt.date.today().isoformat()
     played_today = [dict(name=s_["name"], title=s_["title"], ranked=s_["ranked"], runs=s_["last_day_numbers"]["runs"],
-                         best=s_["last_day_numbers"]["best"], unit=s_["unit"], done=s_["clip_today"])
+                         best=s_["last_day_numbers"]["best"], unit=s_["unit"], done=s_["clip_today"], v2=bool((s_.get("v2") or {}).get("ok")))
                     for s_ in scen_out if s_["last_day"] == today]
     page = dict(game_found=bool(config.GAME), today=played_today,
                 recorder_installed=bool(config.MODS and os.path.isdir(os.path.join(config.MODS, "AimRecorder"))),
@@ -315,6 +387,7 @@ def video_job(j):
     if not days: return j.update(status="failed", error="No recorded runs for this scenario.")
     date = days[-1]; score, k = BEST[(scen, date)]
     title, _ = title_of(scen)
+    if scen in KILL_SCENS: return kill_video_job(j, scen, date, k, title)
     os.makedirs(MEDIA["clips"], exist_ok=True)
     out = os.path.join(MEDIA["clips"], f"{slug(scen)}-{date}.mp4")
     j.update(status="running", stage="Best-run clip", pct=10)
@@ -344,6 +417,44 @@ def video_job(j):
     j.update(status="done", stage="Done", pct=100, date=date)
 
 
+def kill_video_job(j, scen, date, k, title):
+    """Switching / clicking: the best run's 8 seconds with every bot, then "same bots, 20% faster" (side by side and
+    solo) where the scenario allows it. fast_clip.py's hard checks stay on: it stops if any kill is off the bot or any
+    bot is shown past its recorded path, and then the card says so."""
+    os.makedirs(MEDIA["clips"], exist_ok=True)
+    out = os.path.join(MEDIA["clips"], f"{slug(scen)}-{date}.mp4")
+    j.update(status="running", stage="Best-run clip", pct=10)
+    ok, msg = config.run_script("real_clip.py", run_path(k), title, out)
+    if not ok:
+        log(f"best-run clip failed for {k}: {msg[-300:]}"); return j.update(status="failed", error="The clip couldn't be made from this run.")
+    entry = {"run": k, "score": BEST[(scen, date)][0], "mp4": os.path.basename(out), "png": os.path.basename(out)[:-4] + ".png"}
+    if (V2.get(scen) or {}).get("ok"):
+        j.update(stage="Same bots, 20% faster", pct=40)
+        prefix = out[:-4] + "-faster"
+        ok, msg = config.run_script("fast_clip.py", run_path(k), prefix, FACTOR, timeout=1800)
+        try: rep_ = json.loads(msg[msg.index("{"):]) if "{" in msg else {}
+        except ValueError: rep_ = {}
+        if ok and rep_.get("factor") and os.path.exists(prefix + "_side.mp4"):
+            entry["v2"] = dict(side=os.path.basename(prefix) + "_side.mp4", solo=os.path.basename(prefix) + "_solo.mp4",
+                               png=os.path.basename(prefix) + "_solo.png", factor=rep_["factor"], real_s=rep_.get("real_s"),
+                               model_s=rep_.get("model_s"), reached=rep_.get("verdict") == "ok")
+        elif not ok:                                    # a hard check stopped it: never show a doubtful video
+            log(f"fast_clip stopped for {k}: {msg[-300:]}")
+            entry["v2_failed"] = ("The 20% faster video for this run failed its safety checks (every kill must land on the bot, "
+                                  "and no bot may go past its recorded path), so it wasn't made.")
+        else:
+            v = str(rep_.get("verdict", ""))
+            entry["v2_failed"] = ("The kills found in this run didn't match the game's kill counter, so it wasn't safe to rebuild." if "kills found" in v
+                                  else "This run has too few kills to speed up." if "too few" in v
+                                  else "In this run new bots didn't only come after kills, so it can't be rebuilt." if "only come after" in v
+                                  else "This recording is from before the kill counter, so its kills can't be checked." if "older recording" in v
+                                  else "The 20% faster video couldn't be made from this run.")
+    with clip_lock:
+        clips = load_json(CLIPS, {}); clips[f"{scen}|{date}"] = entry
+        housekeeping(clips, scen); save_json(CLIPS, clips)
+    j.update(status="done", stage="Done", pct=100, date=date)
+
+
 def housekeeping(clips, scen):
     """Per scenario keep only the latest day's clip and the best run's clip; delete the others (AimStats' own files)."""
     tags = [t for t in clips if t.startswith(scen + "|") and clips[t].get("mp4")]
@@ -352,7 +463,9 @@ def housekeeping(clips, scen):
     for t in tags:
         if t in keep: continue
         c = clips.pop(t)
-        for f in (c.get("mp4"), c.get("png"), (c.get("model") or {}).get("mp4"), (c.get("model") or {}).get("png")):
+        v2 = c.get("v2") or {}
+        for f in (c.get("mp4"), c.get("png"), (c.get("model") or {}).get("mp4"), (c.get("model") or {}).get("png"),
+                  v2.get("side"), v2.get("solo"), v2.get("png")):
             if f and os.path.basename(f) == f:
                 try: os.remove(os.path.join(MEDIA["clips"], f))
                 except OSError: pass
