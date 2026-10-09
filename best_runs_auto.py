@@ -29,7 +29,7 @@ def scores():
     return out
 
 
-def update(master3=None, best_14d=None):
+def update(master3=None, best_14d=None, official=None):
     if not os.path.exists(SUMMARY): return
     summ = json.load(open(SUMMARY, encoding="utf-8"))
     best = json.load(open(BEST, encoding="utf-8")) if os.path.exists(BEST) else {}
@@ -60,7 +60,9 @@ def update(master3=None, best_14d=None):
             im.convert("RGB").save(os.path.join(HERE, "assets", "aim", gif + ".png"))
             before = [s for (d, i), L in sc.items() if i == wid and d < date for s in L]
             note = f"Best of {len(runs)} recorded today (median {round(st.median(x[1]['hits'] for x in runs))})."
-            if before and score > max(before): note += f" A new best, above my old {max(before)}."
+            ob = (official or {}).get(rname)
+            if ob and score > ob: note += f" A new all-time best, above my old {ob}."
+            elif before and score > max(before): note += f" My best since the score log started (was {max(before)}). All-time best is {ob}."
             new = dict(scenario=title, score=score, time=v["time"][:5], gif=gif, on_target=round(v["on_target"]),
                        reaction_ms=v.get("reaction_ms"), overshoot_pct=v.get("overshoot_pct"),
                        best_14d=(best_14d or {}).get(rname), master3=(master3 or {}).get(rname),

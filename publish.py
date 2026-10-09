@@ -213,7 +213,8 @@ def best_runs():
     try:                                     # new best recorded runs get a card and GIF automatically (runs after aim_by_day)
         import best_runs_auto
         rk = ranks()
-        best_runs_auto.update({r["name"]: int(r["master3"]) for r in rk}, {r["name"]: int(r["best_14d"]) for r in rk if r.get("best_14d")})
+        best_runs_auto.update({r["name"]: int(r["master3"]) for r in rk}, {r["name"]: int(r["best_14d"]) for r in rk if r.get("best_14d")},
+                              {r["name"]: int(r["official_best"]) for r in rk if r.get("official_best")})
     except Exception as e:
         print("best runs skipped:", e)
     p = os.path.join(HERE, "best_runs.json")
