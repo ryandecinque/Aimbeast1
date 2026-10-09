@@ -67,6 +67,9 @@ def rules(scenario):
         except Exception: pass
     why, ok = [], True
     if not bots: return dict(ok=False, why=["no bot file next to the scenario"], settings=s, bot={})
+    if s.get("ScenarioType") == "TRACKING":
+        # tracking is scored on time on target, not kills: killing sooner isn't what a better run looks like
+        ok = False; why.append("tracking scenario: the score is time on target, not kills (use ideal_run_video.py)")
     for b in bots:
         if b.get("Invincible?"): ok = False; why.append("bots can't die (invincible)")
         if b.get("LifeTime?"): ok = False; why.append(f"bots also vanish on a {b.get('LifeTime')}s timer (not only when killed)")

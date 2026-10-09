@@ -16,13 +16,15 @@ model's kill happens. The whole run ends sooner. Nothing is invented.
   `<out>_solo.mp4` and a still `<out>_solo.png`, and prints a report. `NO_RENDER=1` prints the report only.
 
 ## When a scenario qualifies
+- Not a tracking scenario. Tracking is scored on time on target, so killing bots sooner isn't a better run; the
+  tracking model video (`ideal_run_video.py`) covers those. PASU TRACK XYZ has 500-health bots that can die, but it's tracking.
 - Bots die (not invincible) and come back only when killed: no lifetime timer, no long spawn delay. The recording must agree:
   every new bot shows up within 0.3 s of a kill.
 - The bot doesn't react to being hit: no blink or leap on hit, no event triggered "ON HIT", no size change with damage,
   and no healing (healing makes the kill time depend on how the damage was spread).
 - The kills found in the recording equal the game's kill counter.
 - At least 3 kills. With fewer, the time on target a kill takes comes from one or two stretches, and there are
-  too few kills to speed up. PASU TRACK XYZ (500 health, one bot) got 2 kills in 60 s on 2026-10-09, so it was refused.
+  too few kills to speed up.
 
 ## The model
 - Same as the other model videos: it reacts about 130 ms late and its aim follows a spring.
