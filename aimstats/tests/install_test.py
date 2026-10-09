@@ -78,7 +78,9 @@ print("   settings: GuiConsoleEnabled = 0:", "GuiConsoleEnabled = 0" in ini, "| 
       "| EnableDumping = 0:", "EnableDumping = 0" in ini)
 print("   mods.txt:", open(os.path.join(wA, "ue4ss", "Mods", "mods.txt")).read().strip().replace("\n", " | "))
 rec = open(os.path.join(wA, "ue4ss", "Mods", "AimRecorder", "Scripts", "main.lua")).read()
-print("   recorder: phase 6:", "phase 6" in rec, "| 120/s clicking:", "CLICK_RATE = 1 / 120" in rec, "| RECORD_RANKED = true:", "local RECORD_RANKED = true" in rec)
+import re as _re
+phase = int((_re.search(r"phase (\d+)", rec) or [0, 0])[1])
+print(f"   recorder: phase {phase} (6 or later: {phase >= 6})", "| 120/s clicking:", "CLICK_RATE = 1 / 120" in rec, "| RECORD_RANKED = true:", "local RECORD_RANKED = true" in rec)
 listed = sorted(f["path"] for f in man["created_files"]) == d["extra"]
 print("   manifest lists exactly the added files:", listed)
 # pretend the game ran: a recording, the practice log and UE4SS's log
@@ -91,7 +93,7 @@ after = snap(wA)
 print(f"   after uninstall, {len(before)} files compared:", "IDENTICAL" if same(before, after) else diff(before, after))
 saved = os.path.exists(os.path.join(p, "data", "saved_from_game", "ue4ss", "Mods", "AimRecorder", "runs", "2026-10-09_120000_TEST.csv"))
 print("   recording copied to data\\saved_from_game:", saved)
-results["A clean game"] = same(before, after) and listed and saved and found
+results["A clean game"] = same(before, after) and listed and saved and found and phase >= 6
 
 print("\nB. Existing UE4SS with other mods, AimRecorder and PracticeLog missing")
 wB = game_copy(os.path.join(T, "B_lib"), True, drop_mods=("AimRecorder", "PracticeLog"))
