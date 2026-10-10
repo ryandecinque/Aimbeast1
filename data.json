@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-10 10:06",
- "updated_utc": "2026-10-10T03:06:07Z",
+ "updated": "2026-10-10 10:10",
+ "updated_utc": "2026-10-10T03:10:37Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
@@ -777,8 +777,13 @@
  "journal": [
   {
    "date": "2026-10-10",
+   "author": "Ryan",
+   "text": "Didn't do the R5Reloaded warm-up today. I had been up a few hours already."
+  },
+  {
+   "date": "2026-10-10",
    "author": "Claude",
-   "text": "Playlist: RANK INT B (26 runs, 08:51–09:49)\nWhat happened: Your best B day so far on PASU XYZ: a median of 486 (baseline 472) and a best of 532. Zeus held at its usual level, 498 (baseline 491), and PASU 0.85x sat right on its baseline, 335 (340), with a best of 385.\nConditions: The cold start is still there despite the two PASU 0.6x warm-up runs (430 and 440). PASU 0.85x opened 302, 302, then climbed into the 330s and 385. PASU XYZ opened 398 and 434, then 516, 532 and 522. So in both PASU scenarios the first two runs are the low ones, the same pattern as Oct 8. No note from you today on waking time or the R5Reloaded warm-up, so I can't tell whether this morning matched yesterday's routine.\nRest: The median rest was 69 s, the longest yet, in the range that has scored better so far. 44 restarts, though, the most of any day. If most were early quits on bad starts, they don't hurt, but they do add time.\nAim recorder: Zeus over-aim stayed at about 4 in 10 corrections, the same as Oct 8, and far-away points are still the weakest (about 7 a second, against 8–9 up close). PASU XYZ's best runs (516–532) had over-aim at 3 in 10 or less. The 398 opener was at 5 in 10.\nNext time: Make the PASU warm-up count. Instead of 2 runs of 0.6x, try 2 relaxed runs of PASU 0.85x itself before the ranked ones start (they'd count as ranked runs, so do them in Normal mode). And jot down whether you did the R5Reloaded warm-up, because yesterday's no-cold-start A day might have come from it."
+   "text": "Playlist: RANK INT B (26 runs, 08:51–09:49)\nWhat happened: Your best B day so far on PASU XYZ: a median of 486 (baseline 472) and a best of 532. Zeus held at its usual level, 498 (baseline 491), and PASU 0.85x sat right on its baseline, 335 (340), with a best of 385.\nConditions: The cold start is still there despite the two PASU 0.6x warm-up runs (430 and 440). PASU 0.85x opened 302, 302, then climbed into the 330s and 385. PASU XYZ opened 398 and 434, then 516, 532 and 522. So in both PASU scenarios the first two runs are the low ones, the same pattern as Oct 8. You didn't do the R5Reloaded warm-up today, and you'd been up a few hours already, so being awake longer didn't remove the cold start on its own. Yesterday's A day had both (R5Reloaded first, not straight after waking) and no cold start, which points at the R5Reloaded warm-up rather than time awake. Two days isn't proof, though.\nRest: The median rest was 69 s, the longest yet, in the range that has scored better so far. 44 restarts, though, the most of any day. If most were early quits on bad starts, they don't hurt, but they do add time.\nAim recorder: Zeus over-aim stayed at about 4 in 10 corrections, the same as Oct 8, and far-away points are still the weakest (about 7 a second, against 8–9 up close). PASU XYZ's best runs (516–532) had over-aim at 3 in 10 or less. The 398 opener was at 5 in 10.\nNext time: The B playlist now opens with 2 relaxed Normal-mode runs of PASU 0.85x itself instead of 0.6x. They don't count toward ranked. On the next B day, see whether the first ranked PASU runs still start low, and note whether you did R5Reloaded first."
   },
   {
    "date": "2026-10-09",
