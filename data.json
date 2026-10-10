@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-10 22:26",
- "updated_utc": "2026-10-10T15:26:19Z",
+ "updated": "2026-10-10 22:31",
+ "updated_utc": "2026-10-10T15:31:19Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
@@ -859,8 +859,8 @@
  "days": [
   {
    "date": "2026-10-10",
-   "runs": 57,
-   "restarts": 88,
+   "runs": 59,
+   "restarts": 89,
    "rest_median_s": 82,
    "rest_longest_s": 511,
    "breaks": [
@@ -910,9 +910,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 3,
+     "runs": 5,
      "first": "22:18",
-     "last": "22:25"
+     "last": "22:28"
     }
    ],
    "scenarios": [
@@ -974,11 +974,19 @@
     },
     {
      "name": "SCX CLOSE STRAFES",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS WEAKNESS",
      "first": "22:19",
-     "best": 580,
-     "median": 576
+     "best": 584,
+     "median": 580
+    },
+    {
+     "name": "CLOSELY STRAFING KYTAN",
+     "runs": 1,
+     "routine": "ZEUS WEAKNESS",
+     "first": "22:28",
+     "best": 497,
+     "median": 497
     }
    ]
   },
@@ -1706,23 +1714,23 @@
   }
  ],
  "rest_effect": {
-  "runs": 288,
+  "runs": 290,
   "days": 5,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 82,
+    "runs": 83,
     "pct": 99.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 65,
+    "runs": 66,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
     "runs": 110,
-    "pct": 102.2
+    "pct": 102.1
    },
    {
     "label": "First run after a break of 15 min+",
@@ -1915,6 +1923,16 @@
     }
    },
    {
+    "scenario": "CLOSELY STRAFING KYTAN",
+    "runs": 1,
+    "on_target": 24,
+    "reaction_ms": 156,
+    "overshoot_pct": 57,
+    "pps_by_distance": {
+     "close": 8.2
+    }
+   },
+   {
     "scenario": "PASU TRACK EVO RCT - 0.6X",
     "runs": 2,
     "on_target": 31,
@@ -1949,12 +1967,12 @@
    },
    {
     "scenario": "SCX CLOSE STRAFES",
-    "runs": 2,
-    "on_target": 40,
-    "reaction_ms": 142,
-    "overshoot_pct": 28,
+    "runs": 3,
+    "on_target": 41,
+    "reaction_ms": 150,
+    "overshoot_pct": 31,
     "pps_by_distance": {
-     "close": 9.6
+     "close": 9.7
     }
    },
    {
