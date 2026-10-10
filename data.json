@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-10 09:06",
- "updated_utc": "2026-10-10T02:06:19Z",
+ "updated": "2026-10-10 09:11",
+ "updated_utc": "2026-10-10T02:11:19Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
-   "RANK INT B": 8
+   "RANK INT B": 10
   }
  },
  "plan_start": "2026-10-07",
@@ -99,7 +99,7 @@
    "official_best": 398.0,
    "best_14d": 398.0,
    "median_14d": 339,
-   "runs_14d": 81,
+   "runs_14d": 83,
    "steps": [
     0.0,
     138.0,
@@ -507,9 +507,9 @@
     },
     {
      "date": "2026-10-10",
-     "median": 334,
+     "median": 335,
      "best": 385,
-     "runs": 6
+     "runs": 8
     }
    ]
   },
@@ -822,17 +822,17 @@
  "days": [
   {
    "date": "2026-10-10",
-   "runs": 8,
-   "restarts": 13,
-   "rest_median_s": 40,
-   "rest_longest_s": 96,
+   "runs": 10,
+   "restarts": 15,
+   "rest_median_s": 48,
+   "rest_longest_s": 103,
    "breaks": [],
    "playlists": [
     {
      "name": "RANK INT B",
-     "runs": 8,
+     "runs": 10,
      "first": "08:51",
-     "last": "09:05"
+     "last": "09:09"
     }
    ],
    "scenarios": [
@@ -846,11 +846,11 @@
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
-     "runs": 6,
+     "runs": 8,
      "routine": "RANK INT B",
      "first": "08:54",
      "best": 385,
-     "median": 334
+     "median": 335
     }
    ]
   },
@@ -1578,7 +1578,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 255,
+  "runs": 257,
   "days": 5,
   "groups": [
    {
@@ -1593,7 +1593,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 93,
+    "runs": 95,
     "pct": 102.6
    },
    {
@@ -1776,13 +1776,13 @@
    },
    {
     "scenario": "PASU TRACK EVO RCT - 0.85X",
-    "runs": 6,
-    "on_target": 25,
+    "runs": 8,
+    "on_target": 26,
     "reaction_ms": 167,
-    "overshoot_pct": 33,
+    "overshoot_pct": 32,
     "pps_by_distance": {
-     "far": 3.3,
-     "mid": 5.4
+     "far": 4.2,
+     "mid": 5.5
     }
    }
   ]
