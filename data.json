@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-10 23:01",
- "updated_utc": "2026-10-10T16:01:19Z",
+ "updated": "2026-10-10 23:06",
+ "updated_utc": "2026-10-10T16:06:19Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
@@ -154,8 +154,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 553.0,
-   "median_14d": 495,
-   "runs_14d": 145,
+   "median_14d": 494,
+   "runs_14d": 147,
    "steps": [
     0.0,
     198.0,
@@ -767,9 +767,9 @@
     },
     {
      "date": "2026-10-10",
-     "median": 498,
+     "median": 497,
      "best": 526,
-     "runs": 16
+     "runs": 18
     }
    ]
   }
@@ -864,8 +864,8 @@
  "days": [
   {
    "date": "2026-10-10",
-   "runs": 68,
-   "restarts": 97,
+   "runs": 70,
+   "restarts": 101,
    "rest_median_s": 82,
    "rest_longest_s": 511,
    "breaks": [
@@ -915,9 +915,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 14,
+     "runs": 16,
      "first": "22:18",
-     "last": "22:59"
+     "last": "23:05"
     }
    ],
    "scenarios": [
@@ -947,11 +947,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 16,
+     "runs": 18,
      "routine": "RANK INT B",
      "first": "09:33",
      "best": 526,
-     "median": 498
+     "median": 497
     },
     {
      "name": "AIR TRACK SMOOTH V3 - RANKED",
@@ -1751,13 +1751,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 299,
+  "runs": 301,
   "days": 5,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 87,
-    "pct": 99.1
+    "runs": 88,
+    "pct": 99.0
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1766,8 +1766,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 112,
-    "pct": 102.1
+    "runs": 113,
+    "pct": 101.9
    },
    {
     "label": "First run after a break of 15 min+",
@@ -2046,7 +2046,7 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 16,
+    "runs": 18,
     "on_target": 35,
     "reaction_ms": 133,
     "overshoot_pct": 40,
