@@ -1,6 +1,6 @@
 # Zeus teacher video
 
-A 2:15 lesson showing Ryan's three Zeus Track weaknesses. Each one is drawn onto his own runs and set next to a smooth version of the same moment.
+A 2:24 lesson showing Ryan's three Zeus Track weaknesses. Each one is drawn onto his own runs and set next to a smooth version of the same moment.
 
 ## Files
 - **Outputs**
@@ -27,5 +27,5 @@ npx remotion render Zeus out/zeus_teacher_1080p.mp4 --concurrency=6 --crf=18
 To render storyboard stills: `node stills.mjs <seconds...>`, then `python tools/sheet.py main`.
 
 ## Notes
-- **Bot size** comes from the bot file: capsule radius 0.75 and height 0.3, which makes a near-round pill (32 × 35 half-size, matching his hits). The older clips draw it 2.2× too tall.
+- **Bot size**: a capsule of half-width 31.5 and half-height 49.5. The game uses the bot file's Min fields: radius 0.75 × 42 = 31.5, which matches his hits. The 1.57 height-to-width ratio comes from the stream footage (56 × 88 px). See the revision in the QnA.
 - **The smooth version** follows `weak_moment_auto.py`: the same 133 ms reaction, it eases in and aims where the bot will be. It's a model, and the video says so.

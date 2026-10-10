@@ -142,36 +142,48 @@ export const Game: React.FC<{
   );
 };
 
-/** Hand-drawn speed graph: the bot's speed (cyan) and an aim speed (amber = Ryan, green = smooth), drawn up to sample s. */
-export const SpeedGraph: React.FC<{ c: Clip; s: number; a: number; b: number; x: number; y: number; w: number; h: number; who?: "you" | "smooth"; top?: number }> = ({
-  c, s, a, b, x, y, w, h, who = "you", top,
+/** Hand-drawn speed graph, labelled in plain words: higher = moving faster. The bot's line (cyan) can be drawn whole
+ *  first (botReveal 0..1) so there is something to compare with; the aim line (amber = Ryan, green = smooth) draws up to s. */
+export const SpeedGraph: React.FC<{ c: Clip; s: number; a: number; b: number; x: number; y: number; w: number; h: number; who?: "you" | "smooth"; top?: number; botReveal?: number; axisOn?: number; size?: number }> = ({
+  c, s, a, b, x, y, w, h, who = "you", top, botReveal, axisOn = 1, size = 28,
 }) => {
   const ys = (who === "you" ? c.aimspd : (c.smoothspd ?? []).map((v) => v ?? 0)).slice(a, b);
-  const mx = top ?? Math.max(...c.aimspd.slice(a, b), ...c.botspd.slice(a, b)) * 1.08;
+  const mx = top ?? graphTop(c, a, b);
   const X = (k: number) => x + ((k - a) / (b - a)) * w;
   const Y = (v: number) => y + h - (Math.min(v, mx) / mx) * h;
   const end = Math.min(b - 1, Math.floor(s));
-  const pts = (arr: number[]) => {
+  const botEnd = botReveal === undefined ? end : a + Math.floor((b - 1 - a) * botReveal);
+  const pts = (arr: number[], e: number) => {
     const o: [number, number][] = [];
-    for (let k = a; k <= end; k += 2) o.push([X(k), Y(arr[k - a] ?? 0)]);
+    for (let k = a; k <= e; k += 2) o.push([X(k), Y(arr[k - a] ?? 0)]);
     return o;
   };
-  const botP = useBoil(41, 1.6, pts(c.botspd.slice(a, b)));
-  const aimP = useBoil(43, 1.6, pts(ys));
+  const botP = useBoil(41, 1.6, pts(c.botspd.slice(a, b), botEnd));
+  const aimP = useBoil(43, 1.6, pts(ys, end));
   const axis = useBoil(47, 1.4, [[x, y - 8], [x, y + h], [x + w, y + h]]);
+  const col = who === "you" ? C.amber : C.green;
+  const t = { fill: C.ink, fontFamily: SANS, fontWeight: 600, fontSize: size } as const;
   return (
     <g>
-      <path d={smooth(axis)} stroke={C.dim} strokeWidth={3} fill="none" strokeLinecap="round" />
-      <text x={x + 12} y={y + 4} fill={C.dim} fontFamily={SANS} fontWeight={600} fontSize={22}>speed</text>
-      {botP.length > 1 && <path d={smooth(botP)} stroke={C.bot} strokeWidth={5} fill="none" strokeLinecap="round" />}
-      {aimP.length > 1 && <path d={smooth(aimP)} stroke={who === "you" ? C.amber : C.green} strokeWidth={5} fill="none" strokeLinecap="round" />}
-      <text x={x + w} y={y + h + 34} textAnchor="end" fill={C.dim} fontFamily={SANS} fontWeight={600} fontSize={22}>
-        <tspan fill={C.bot}>bot</tspan>  ·  <tspan fill={who === "you" ? C.amber : C.green}>{who === "you" ? "your aim" : "smooth aim"}</tspan>
-      </text>
+      <g opacity={axisOn}>
+        <path d={smooth(axis)} stroke={C.dim} strokeWidth={3} fill="none" strokeLinecap="round" />
+        <text x={x - 14} y={y + size * 0.4} textAnchor="end" {...t} fill={C.dim}>fast</text>
+        <text x={x - 14} y={y + h} textAnchor="end" {...t} fill={C.dim}>still</text>
+        <text x={x + w} y={y + h + size * 1.3} textAnchor="end" {...t} fill={C.dim}>time →</text>
+      </g>
+      {botP.length > 1 && <path d={smooth(botP)} stroke={C.bot} strokeWidth={6} fill="none" strokeLinecap="round" />}
+      {aimP.length > 1 && <path d={smooth(aimP)} stroke={col} strokeWidth={6} fill="none" strokeLinecap="round" />}
+      {botP.length > 1 && (
+        <g>
+          <line x1={x + w + 18} x2={x + w + 50} y1={botP[botP.length - 1][1]} y2={botP[botP.length - 1][1]} stroke={C.bot} strokeWidth={6} strokeLinecap="round" opacity={botEnd >= b - 3 ? 1 : 0} />
+          <text x={x + w + 60} y={botP[botP.length - 1][1] + size * 0.35} {...t} opacity={botEnd >= b - 3 ? 1 : 0}>the bot</text>
+        </g>
+      )}
     </g>
   );
 };
+export const graphTop = (c: Clip, a: number, b: number) => Math.max(...c.aimspd.slice(a, b), ...c.botspd.slice(a, b)) * 1.08;
 export const graphPoint = (c: Clip, k: number, a: number, b: number, x: number, y: number, w: number, h: number, top?: number): [number, number] => {
-  const mx = top ?? Math.max(...c.aimspd.slice(a, b), ...c.botspd.slice(a, b)) * 1.08;
+  const mx = top ?? graphTop(c, a, b);
   return [x + ((k - a) / (b - a)) * w, y + h - (Math.min(c.aimspd[k], mx) / mx) * h];
 };

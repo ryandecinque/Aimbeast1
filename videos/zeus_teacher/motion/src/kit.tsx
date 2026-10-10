@@ -154,11 +154,13 @@ export const Note: React.FC<{ x: number; y: number; t: number; size?: number; co
   if (op <= 0) return null;
   const chars = lines.join("").length;
   const p = ramp(now, t, dur ?? Math.min(1.2, 0.25 + chars * 0.025), (k) => k);
-  const wMax = Math.max(...lines.map((l) => l.length)) * size * 0.62 + 40;
+  const wMax = Math.max(...lines.map((l) => l.length)) * size * 0.56 + 40;
   const x0 = anchor === "start" ? x - 20 : anchor === "middle" ? x - wMax / 2 : x - wMax;
   const id = `note${Math.round(t * 100)}_${Math.round(x)}_${Math.round(y)}`;
   return (
     <g opacity={op}>
+      {/* dark card behind the writing so it reads on any background */}
+      <rect x={x0} y={y - size * 1.08} width={wMax * Math.min(1, p * 1.05)} height={size * 1.25 * (lines.length - 1) + size * 1.5} rx={14} fill={C.dark} opacity={0.78} />
       <clipPath id={id}>
         <rect x={x0} y={y - size * 1.4} width={wMax * p} height={size * 1.25 * lines.length + size * 0.8} />
       </clipPath>

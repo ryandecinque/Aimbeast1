@@ -71,7 +71,11 @@ class Run:
         self.HH = sorted(abs(o - self.OFF) for o in offs)[int(.98 * len(offs))]
         self.hit_i = hit_i
         self.HW_hits, self.HH_hits = self.HW, self.HH
-        self.HW, self.HH = 32.0, 35.0     # fixed: the bot file has fixed capsule size (radius 0.75, height 0.3 -> a near-round pill); 32/35 = its size from Ryan's hits
+        # Fixed capsule size. The game uses the bot file's Min fields when CapsuleRandomDimensions? is False (the XL/EZ/70%/50%
+        # Zeus bots differ only in CapsuleRadiusMin, and EZ's 0.9/0.75 matches its 1.17x wider hits). Radius 0.75 x 42 = 31.5,
+        # matching the hits' half-width (~32). Height: the stream footage showed the capsule 56 x 88 px (1.57 x taller than
+        # wide), so half-height ~50. (Hits only reach ~35 up-down because he aims at the middle.)
+        self.HW, self.HH = 31.5, 49.5
         # centre pitch of the visible body
         self.CZ = [None if self.D[i] is None else math.degrees(math.atan2(U(self.BZ[i], self.D[i]) - self.OFF, self.D[i])) for i in range(n)]
         # errors in bot half-widths (1.0 = edge of the bot)

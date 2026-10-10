@@ -1,6 +1,6 @@
 import React from "react";
 import { Bracket, C, Chapter, Label, Loop, Marker, Note, SANS, Tick, life, ramp, useBoil, smooth, useNow } from "./kit";
-import { botScreen, Clip, D, distAt, Game, graphPoint, Panel, projAim, SpeedGraph, view, aimAt } from "./game";
+import { botScreen, Clip, D, distAt, Game, graphPoint, graphTop, Panel, projAim, SpeedGraph, view, aimAt } from "./game";
 
 // Piecewise playback: [scene time, sample] knots; holds before the first and after the last (a freeze).
 const play = (t: number, knots: [number, number][]) => {
@@ -113,19 +113,19 @@ export const Lesson1: React.FC = () => {
     <g>
       <Fade t={t} a={0} b={3.25}>
         <Game c={c} s={sA} p={FULL} />
-        <Label x={1890} y={1050} anchor="end" text={`Real speed · ${secs(c, 20)}`} />
+        <Label x={1890} y={1040} anchor="end" text={`Real speed · ${secs(c, 20)}`} />
       </Fade>
       <Fade t={t} a={2.95} b={16.7}>
         <Game c={c} s={sB} p={Z} trail={36} botTrail />
-        <Label x={1890} y={1050} anchor="end" t={3.0} text={t < tFreeze ? "¼ speed · zoomed 2.5×" : "paused · zoomed 2.5×"} />
+        <Label x={1890} y={1040} anchor="end" t={3.0} text={t < tFreeze ? "¼ speed · zoomed 2.5×" : "paused · zoomed 2.5×"} />
         <Marker pts={[[fB.b.x - dir[0] * 20, fB.b.y + fB.b.ry + 60], [fB.b.x + dir[0] * 180, fB.b.y + fB.b.ry + 60]]} t={tFreeze + 0.3} dur={0.4} head color={C.bot} w={8} />
         <Note x={fB.b.x + dir[0] * 40} y={fB.b.y + fB.b.ry + 140} t={tFreeze + 0.6} anchor="middle" lines={["It turned."]} />
         <Marker pts={[[fB.aim[0] - (ad[0] / al) * 160, fB.aim[1] - 120], [fB.aim[0] + (ad[0] / al) * 40, fB.aim[1] - 120]]} t={tFreeze + 1.9} dur={0.4} head color={C.amber} w={8} />
         <Note x={fB.aim[0]} y={fB.aim[1] - 170} t={tFreeze + 2.1} anchor="middle" lines={["You kept going."]} />
         <Loop cx={fB.aim[0]} cy={fB.aim[1]} rx={42} t={tFreeze + 3.4} color={C.red} />
         <Bracket a={[edge(fB.b, fB.aim[0])[0], fB.aim[1] + 70]} b={[fB.aim[0], fB.aim[1] + 70]} t={tFreeze + 3.9} color={C.red} />
-        <Note x={960} y={930} t={tFreeze + 4.4} anchor="middle" lines={["Through it, and out the other side."]} />
-        <Note x={960} y={1010} t={tFreeze + 6.6} anchor="middle" size={40} color={C.ink} lines={["This happens on about 4 in 10 turns, in all 21 of your runs."]} />
+        <Note x={960} y={230} t={tFreeze + 4.4} anchor="middle" lines={["Through it, and out the other side."]} />
+        <Note x={960} y={940} t={tFreeze + 6.6} anchor="middle" size={40} color={C.ink} lines={["This happens on about 4 in 10 turns, in all 21 of your runs."]} />
       </Fade>
       <Fade t={t} a={16.5} b={99}>
         <rect width={1920} height={1080} fill={C.dark} />
@@ -136,8 +136,8 @@ export const Lesson1: React.FC = () => {
         <Label x={960} y={870} anchor="middle" text={t > tC2 && t < tC2 + 4.2 ? "paused · zoomed 3.5×" : "⅓ speed · zoomed 3.5×"} />
         <Bracket a={[eL[0], fL.aim[1] + 60]} b={[fL.aim[0], fL.aim[1] + 60]} t={tC2 + 0.3} out={tC2 + 4.2} color={C.red} />
         <Bracket a={[eR[0], fR.aim[1] + 60]} b={[fR.aim[0], fR.aim[1] + 60]} t={tC2 + 0.9} out={tC2 + 4.2} color={C.green} />
-        <Note x={960} y={960} t={tC2 + 1.3} anchor="middle" lines={["Same reaction. Half as far past…"]} />
-        <Note x={960} y={1035} t={tC2 + 4.6} anchor="middle" size={42} lines={["…and back on the bot sooner."]} />
+        <Note x={960} y={930} t={tC2 + 1.3} anchor="middle" lines={["Same reaction. Half as far past…"]} out={tC2 + 4.4} />
+        <Note x={960} y={930} t={tC2 + 4.6} anchor="middle" lines={["…and back on the bot sooner."]} />
       </Fade>
       <Chapter n={1} title="When it turns" />
     </g>
@@ -150,48 +150,54 @@ export const Lesson2: React.FC = () => {
   const c = D.brake;
   const { sprint, brake } = c.mark;
   const a = sprint - 30, b = brake + 30;
-  const Z: Panel = { x: 0, y: 0, w: 1920, h: 760, zoom: 2.5 };
+  const Z: Panel = { x: 0, y: 0, w: 1920, h: 700, zoom: 2.5 };
   const sA = play(t, [[0.3, 20], [2.9, 136]]);
-  const tF = 3.2 + (brake + 8 - a) / 15;
-  const sB = play(t, [[3.2, a], [tF, brake + 8]]);
-  const GX = 260, GY = 800, GW = 1400, GH = 200;
+  // explain the graph first, then play
+  const tP = 8.6, tF = tP + (brake + 8 - a) / 15;
+  const sB = play(t, [[tP, a], [tF, brake + 8]]);
+  const GX = 300, GY = 770, GW = 1250, GH = 170;
   const pS = graphPoint(c, sprint, a, b, GX, GY, GW, GH), pB = graphPoint(c, brake, a, b, GX, GY, GW, GH);
   const fB = aimVsBot(c, brake + 8, Z);
   const dir = botDir(c, brake + 8, Z);
   // side by side
-  const L: Panel = { x: 40, y: 150, w: 900, h: 560, zoom: 3 }, R: Panel = { x: 980, y: 150, w: 900, h: 560, zoom: 3 };
-  const tC = 17.4;
+  const L: Panel = { x: 40, y: 150, w: 900, h: 520, zoom: 3 }, R: Panel = { x: 980, y: 150, w: 900, h: 520, zoom: 3 };
+  const tC = tF + 10.6;
   const sC = play(t, [[tC, a], [tC + (b - a) / 15, b]]);
+  const top = graphTop(c, a, b);
   return (
     <g>
       <Fade t={t} a={0} b={3.25}>
         <Game c={c} s={sA} p={FULL} />
-        <Label x={1890} y={1050} anchor="end" text={`Real speed · ${secs(c, 20)}`} />
+        <Label x={1890} y={1040} anchor="end" text={`Real speed · ${secs(c, 20)}`} />
       </Fade>
-      <Fade t={t} a={2.95} b={17.5}>
+      <Fade t={t} a={2.95} b={tC + 0.1}>
         <rect width={1920} height={1080} fill={C.dark} />
         <Game c={c} s={sB} p={Z} trail={30} botTrail frame={false} />
-        <Label x={1890} y={740} anchor="end" text={t < tF ? "¼ speed · zoomed 2.5×" : "paused · zoomed 2.5×"} />
-        <SpeedGraph c={c} s={sB} a={a} b={b} x={GX} y={GY} w={GW} h={GH} />
+        <Label x={1890} y={680} anchor="end" text={t < tP ? "zoomed 2.5×" : t < tF ? "¼ speed · zoomed 2.5×" : "paused · zoomed 2.5×"} />
+        <SpeedGraph c={c} s={sB} a={a} b={b} x={GX} y={GY} w={GW} h={GH} botReveal={ramp(t, 4.9, 1.2)} axisOn={ramp(t, 3.3, 0.4)} />
+        <Note x={960} y={620} t={3.4} anchor="middle" lines={["This graph is speed. Higher = moving faster."]} out={4.8} />
+        <Note x={960} y={620} t={5.0} anchor="middle" lines={["Cyan line: how fast the bot moves. Pretty steady."]} out={7.7} />
+        <Note x={960} y={620} t={7.8} anchor="middle" lines={["Orange line: how fast your crosshair moves."]} out={tP + 1.5} />
         <Loop cx={pS[0]} cy={pS[1]} rx={46} ry={36} t={tF + 0.3} color={C.red} />
-        <Note x={pS[0] + 60} y={pS[1] - 12} t={tF + 0.6} size={42} lines={["sprint to catch up…"]} />
-        <Loop cx={pB[0]} cy={pB[1]} rx={46} ry={36} t={tF + 2.2} color={C.red} seed={8} />
-        <Note x={pB[0] + 60} y={pB[1] + 10} t={tF + 2.5} size={42} lines={["…then brake."]} />
-        <Marker pts={[[fB.b.x - dir[0] * 20, fB.b.y - fB.b.ry - 50], [fB.b.x + dir[0] * 170, fB.b.y - fB.b.ry - 50]]} t={tF + 4.0} dur={0.4} head color={C.bot} w={8} out={tF + 7.4} />
-        <Note x={fB.b.x + dir[0] * 60} y={fB.b.y - fB.b.ry - 90} t={tF + 4.2} anchor="middle" lines={["It never stopped."]} out={tF + 7.4} />
-        <Bracket a={[fB.aim[0], fB.aim[1] + 60]} b={[fB.b.x - Math.sign(fB.b.x - fB.aim[0]) * fB.b.rx, fB.aim[1] + 60]} t={tF + 5.4} color={C.red} out={tF + 7.4} />
-        <Note x={fB.aim[0]} y={fB.aim[1] + 140} t={tF + 5.7} anchor="middle" lines={["Behind it again."]} out={tF + 7.4} />
-        <Note x={960} y={610} t={tF + 7.7} anchor="middle" size={50} lines={["When you're off the bot,", "9 times in 10 you're behind it, not past it."]} />
+        <Note x={pS[0] + 70} y={pS[1] + 4} t={tF + 0.6} size={42} lines={["too fast: catching up"]} />
+        <Loop cx={pB[0]} cy={pB[1]} rx={46} ry={36} t={tF + 2.0} color={C.red} seed={8} />
+        <Note x={pB[0] + 70} y={pB[1] - 40} t={tF + 2.3} size={42} lines={["too slow: braking"]} />
+        <Marker pts={[[fB.b.x - dir[0] * 20, fB.b.y - fB.b.ry - 50], [fB.b.x + dir[0] * 170, fB.b.y - fB.b.ry - 50]]} t={tF + 3.8} dur={0.4} head color={C.bot} w={8} out={tF + 7.2} />
+        <Note x={fB.b.x + dir[0] * 60} y={fB.b.y - fB.b.ry - 90} t={tF + 4.0} anchor="middle" lines={["It never slowed down."]} out={tF + 7.2} />
+        <Bracket a={[fB.aim[0], fB.aim[1] + 60]} b={[fB.b.x - Math.sign(fB.b.x - fB.aim[0]) * fB.b.rx, fB.aim[1] + 60]} t={tF + 5.0} color={C.red} out={tF + 7.2} />
+        <Note x={fB.aim[0]} y={fB.aim[1] + 140} t={tF + 5.3} anchor="middle" lines={["So you're behind it again."]} out={tF + 7.2} />
+        <Note x={960} y={560} t={tF + 7.4} anchor="middle" size={50} lines={["When you're off the bot,", "9 times in 10 you're behind it, not past it."]} />
       </Fade>
-      <Fade t={t} a={17.3} b={99}>
+      <Fade t={t} a={tC - 0.2} b={99}>
         <rect width={1920} height={1080} fill={C.dark} />
         <Game c={c} s={sC} p={L} trail={30} botTrail />
         <Game c={c} s={sC} p={R} who="smooth" trail={30} trailFrom={a} botTrail />
         <text x={L.x} y={130} fill={C.amber} fontFamily={SANS} fontWeight={700} fontSize={34}>YOU</text>
         <text x={R.x} y={130} fill={C.green} fontFamily={SANS} fontWeight={700} fontSize={34}>SMOOTH VERSION <tspan fill={C.dim} fontSize={24}>same 133 ms reaction</tspan></text>
-        <SpeedGraph c={c} s={sC} a={a} b={b} x={L.x + 30} y={760} w={840} h={170} />
-        <SpeedGraph c={c} s={sC} a={a} b={b} x={R.x + 30} y={760} w={840} h={170} who="smooth" top={Math.max(...c.aimspd.slice(a, b), ...c.botspd.slice(a, b)) * 1.08} />
-        <Note x={1410} y={1050} t={tC + (b - a) / 15 + 0.4} anchor="middle" size={42} lines={["Matches its speed. No sprint, no brake."]} />
+        <SpeedGraph c={c} s={sC} a={a} b={b} x={L.x + 90} y={730} w={650} h={150} size={24} top={top} botReveal={1} />
+        <SpeedGraph c={c} s={sC} a={a} b={b} x={R.x + 90} y={730} w={650} h={150} size={24} who="smooth" top={top} botReveal={1} />
+        <Note x={1430} y={600} t={tC + (b - a) / 15 + 0.3} anchor="middle" size={42} lines={["Green stays on cyan:", "same speed as the bot."]} />
+        <Note x={490} y={600} t={tC + (b - a) / 15 + 2.0} anchor="middle" size={42} lines={["Orange jumps above", "and below it."]} />
       </Fade>
       <Chapter n={2} title="Behind: sprint, then brake" />
     </g>
@@ -199,20 +205,19 @@ export const Lesson2: React.FC = () => {
 };
 
 // ================================================================ lesson 3: the far start
+// Bars per 5 s of a round (average of all 21 runs), with the bot drawn at its real on-screen size under each.
 export const Lesson3: React.FC = () => {
   const t = useNow();
   const c = D.far;
   const ch = D.chart;
-  // chart: points a second through a round, all 21 runs
-  const CX = 330, CY = 260, CW = 1260, CH = 520, top = 12;
-  const X = (s: number) => CX + (s / 19) * CW, Y = (v: number) => CY + CH - (v / top) * CH;
-  const linePts = ch.map((q) => [X(q.s + 0.5 > 19 ? 19 : q.s + 0.5), Y(q.pps)] as [number, number]);
-  const avg = (a: number, b: number) => ch.filter((q) => q.s >= a && q.s < b).reduce((s, q) => s + q.pps, 0) / ch.filter((q) => q.s >= a && q.s < b).length;
-  const early = avg(0, 5), late = avg(10, 20);
+  const avg = (a: number, b: number, k: "pps" | "dist") => ch.filter((q) => q.s >= a && q.s < b).reduce((s, q) => s + q[k], 0) / ch.filter((q) => q.s >= a && q.s < b).length;
+  const blocks = [0, 5, 10, 15].map((s0) => ({ s0, pps: avg(s0, s0 + 5, "pps"), dist: avg(s0, s0 + 5, "dist") }));
+  const X0 = 560, BW = 300, BASE = 650, PX = 34;
+  const F = 960 / Math.tan((51.5 * Math.PI) / 180); // Ryan's 103° view on a 1920-wide screen
   // the far moment
   const freeze = 84;
   const Z: Panel = { x: 0, y: 0, w: 1920, h: 1080, zoom: 4 };
-  const t1 = 10.5;
+  const t1 = 14.3;
   const sA = play(t, [[t1, 30], [t1 + 2.0, 150]]);
   const t2 = t1 + 2.35, tF = t2 + (freeze - 40) / 24;
   const sB = play(t, [[t2, 40], [tF, freeze]]);
@@ -220,32 +225,49 @@ export const Lesson3: React.FC = () => {
   const L: Panel = { x: 40, y: 170, w: 900, h: 660, zoom: 5 }, R: Panel = { x: 980, y: 170, w: 900, h: 660, zoom: 5 };
   const tC = tF + 7.2;
   const sC = play(t, [[tC, 40], [tC + 100 / 24, 140]]);
+  const lab = { fill: C.ink, fontFamily: SANS, fontWeight: 600, fontSize: 28 } as const;
+  const b0 = BASE - blocks[0].pps * PX;
   return (
     <g>
       <Fade t={t} a={0} b={t1 + 0.1}>
         <rect width={1920} height={1080} fill={C.dark} />
-        <Marker pts={[[CX, CY - 20], [CX, CY + CH], [CX + CW + 20, CY + CH]]} t={0.3} dur={0.5} color={C.dim} w={4} />
-        {[0, 5, 10, 15].map((s) => <text key={s} x={X(s)} y={CY + CH + 44} textAnchor="middle" fill={C.dim} fontFamily={SANS} fontWeight={600} fontSize={26}>{`${s} s`}</text>)}
-        <text x={CX + CW} y={CY + CH + 90} textAnchor="end" fill={C.dim} fontFamily={SANS} fontWeight={600} fontSize={26}>seconds into the round · bot far → close</text>
-        {[0, 5, 10].map((v) => <text key={v} x={CX - 20} y={Y(v) + 9} textAnchor="end" fill={C.dim} fontFamily={SANS} fontWeight={600} fontSize={26}>{v}</text>)}
-        <text x={CX} y={CY - 44} fill={C.dim} fontFamily={SANS} fontWeight={600} fontSize={26}>points a second · average of your 21 Zeus runs</text>
-        <Marker pts={linePts} t={0.9} dur={1.6} color={C.amber} w={6} seed={4} />
-        <Loop cx={X(3)} cy={Y(early) + 10} rx={140} ry={70} t={3.2} color={C.red} />
-        <Note x={X(0.2)} y={Y(early) + 150} t={3.5} anchor="start" lines={[`First 5 s: about ${Math.round(early)} a second`]} />
-        <Note x={X(14.5)} y={Y(late) - 50} t={5.6} anchor="middle" lines={[`Later: about ${Math.round(late)}`]} />
-        <Note x={960} y={1010} t={7.4} anchor="middle" size={42} lines={["That's the start of every round, 3 times a run."]} />
+        <Marker pts={[[X0 - 10, BASE], [X0 + 4 * BW + 10, BASE]]} t={0.3} dur={0.5} color={C.dim} w={4} />
+        {[0, 5, 10, 15, 20].map((s, k) => <text key={s} x={X0 + k * BW} y={BASE + 42} textAnchor="middle" {...lab} fill={C.dim} opacity={ramp(t, 0.5, 0.3)}>{`${s} s`}</text>)}
+        <text x={X0 - 40} y={BASE + 42} textAnchor="end" {...lab} opacity={ramp(t, 0.5, 0.3)}>time in the round</text>
+        <text x={X0 - 40} y={820} textAnchor="end" {...lab} opacity={ramp(t, 1.6, 0.3)}>how big it looks</text>
+        <text x={X0 - 40} y={440} textAnchor="end" {...lab} opacity={ramp(t, 5.8, 0.3)}>points each second</text>
+        {blocks.map((q, k) => {
+          const cx = X0 + k * BW + BW / 2;
+          const rx = (31.5 / q.dist) * F, ry = (49.5 / q.dist) * F;
+          const pop = ramp(t, 1.8 + k * 0.35, 0.3);
+          const grow = ramp(t, 5.9 + k * 0.3, 0.5);
+          const hgt = q.pps * PX * grow;
+          return (
+            <g key={k}>
+              <rect x={cx - rx} y={810 - ry} width={2 * rx} height={2 * ry} rx={rx} fill={C.bot} opacity={pop} />
+              <rect x={cx - 90} y={BASE - hgt} width={180} height={hgt} rx={4} fill={k === 0 ? C.amber : "#8C7A5E"} />
+              <text x={cx} y={BASE - hgt - 18} textAnchor="middle" fill={C.ink} fontFamily={SANS} fontWeight={700} fontSize={48} opacity={grow >= 1 ? 1 : 0}>{Math.round(q.pps)}</text>
+            </g>
+          );
+        })}
+        <Note x={960} y={170} t={0.4} anchor="middle" lines={["Each round lasts 20 seconds."]} out={2.9} />
+        <Note x={960} y={170} t={3.0} anchor="middle" lines={["It starts far away (small) and walks in (big)."]} out={5.6} />
+        <Note x={960} y={170} t={5.8} anchor="middle" lines={["How many points you score each second", "(average of your 21 runs)"]} out={8.6} />
+        <Loop cx={X0 + BW / 2} cy={(b0 - 70 + 860) / 2} rx={150} ry={(860 - b0 + 70) / 2} t={8.8} color={C.red} />
+        <Note x={960} y={170} t={9.0} anchor="middle" lines={["Far away, you score the least."]} out={11.6} />
+        <Note x={960} y={170} t={11.8} anchor="middle" lines={["That's the start of every round, 3 times a run."]} />
       </Fade>
       <Fade t={t} a={t1} b={t2 + 0.05}>
         <Game c={c} s={sA} p={FULL} />
-        <Label x={1890} y={1050} anchor="end" text={`Real speed · ${secs(c, 30)}`} />
+        <Label x={1890} y={1040} anchor="end" text={`Real speed · ${secs(c, 30)}`} />
       </Fade>
       <Fade t={t} a={t2 - 0.3} b={tC + 0.1}>
         <Game c={c} s={sB} p={Z} trail={40} botTrail />
-        <Label x={1890} y={1050} anchor="end" text={t < tF ? "0.4× speed · zoomed 4×" : "paused · zoomed 4×"} />
+        <Label x={1890} y={1040} anchor="end" text={t < tF ? "0.4× speed · zoomed 4×" : "paused · zoomed 4×"} />
         <Loop cx={fB.b.x} cy={fB.b.y} rx={fB.b.rx + 34} ry={fB.b.ry + 34} t={tF + 0.3} color={C.bot} seed={6} />
         <Note x={fB.b.x} y={fB.b.y - fB.b.ry - 60} t={tF + 0.6} anchor="middle" lines={["Far away it's tiny."]} />
         <Loop cx={fB.aim[0]} cy={fB.aim[1]} rx={36} t={tF + 2.1} color={C.red} seed={2} />
-        <Note x={960} y={900} t={tF + 2.5} anchor="middle" size={52} lines={["Same wobble as up close. Smaller bot."]} />
+        <Note x={960} y={860} t={tF + 2.5} anchor="middle" size={52} lines={["Same wobble as up close. Smaller bot."]} />
       </Fade>
       <Fade t={t} a={tC - 0.2} b={99}>
         <rect width={1920} height={1080} fill={C.dark} />
@@ -254,7 +276,7 @@ export const Lesson3: React.FC = () => {
         <text x={L.x} y={150} fill={C.amber} fontFamily={SANS} fontWeight={700} fontSize={34}>YOU</text>
         <text x={R.x} y={150} fill={C.green} fontFamily={SANS} fontWeight={700} fontSize={34}>SMOOTH VERSION <tspan fill={C.dim} fontSize={24}>same 133 ms reaction</tspan></text>
         <Label x={960} y={870} anchor="middle" text="0.4× speed · zoomed 5×" />
-        <Note x={1430} y={960} t={tC + 1.6} anchor="middle" lines={["Small, slow, steady. It stays on."]} />
+        <Note x={1430} y={930} t={tC + 1.6} anchor="middle" lines={["Small, slow, steady. It stays on."]} />
       </Fade>
       <Chapter n={3} title="The far start" />
     </g>
@@ -272,7 +294,7 @@ export const Fine: React.FC = () => {
       <Tick x={330} y={430} t={1.2} />
       <Note x={390} y={448} t={1.4} lines={["Reaction: 133 ms, the same every run."]} />
       <Tick x={330} y={560} t={3.6} />
-      <Note x={390} y={578} t={3.8} lines={["Up-down hops: about 1 in 10 misses."]} />
+      <Note x={390} y={578} t={3.8} lines={["Up-down hops: almost never why you miss."]} />
       <Note x={390} y={650} t={5.2} size={40} color={C.dim} lines={["Leave them for now."]} />
     </g>
   );
@@ -323,7 +345,7 @@ export const ToDo: React.FC = () => {
           <Note x={560} y={418 + k * 190} t={1.2 + k * 3.2} size={50} lines={[`${k + 1}. ${q}`]} />
         </g>
       ))}
-      <Note x={560} y={980} t={11.2} size={36} color={C.dim} lines={["Cue 1 is your own note from Oct 8: land on the near edge."]} />
+      <Note x={560} y={920} t={11.2} size={36} color={C.dim} lines={["Cue 1 is your own note from Oct 8: land on the near edge."]} />
     </g>
   );
 };
