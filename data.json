@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-10 21:53",
- "updated_utc": "2026-10-10T14:53:25Z",
+ "updated": "2026-10-10 21:54",
+ "updated_utc": "2026-10-10T14:54:53Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
@@ -789,6 +789,11 @@
    "date": "2026-10-10",
    "author": "Claude",
    "text": "Playlist: Extra practice outside the plan: Air Track Smooth V3 Advanced (ranked, 10:23), Zeus visualisation video, and ANY STRAFES - HS from the 143 GROUND BENCHMARK routine (19:32)\nWhat happened: Air Track Advanced scored 312 (your best there is 330). You were on the ball 26% of the time. Keeping up wasn't the problem: you didn't trail the ball. The points went on over-aim, about 101 times a minute, and on shake while on the ball, which slid you off it. Your middle 20 seconds were the weakest part of the run (19% on the ball, against 25% at the start and 34% at the end). Any Strafes scored 705 at 25% accuracy (it only counts headshots).\nHow I measured it: The aim recorder logged the run, and time on the ball was matched to the game's own accuracy. Videos made for watching: your run 20% better (378), and a 20% better version of your best recorded Zeus this week (537 on Oct 8, shown at 643) to practise visualising.\nConditions: Two plan changes today. The RANK INT B warm-up is now 2 Normal-mode runs of PASU 0.85x instead of 0.6x, because the cold start kept happening. The aim recorder's phase 7 is live: it fills its bot slots with moving bots first, records clicking runs 120 times a second, and sees the real height of flying bots.\nNext time: Over-aim is the same thing that separated your best runs on Zeus, PASU XYZ and Sphere S. On tomorrow's A day, on Air Track, make smaller corrections and settle on the ball, and keep it up through the middle of the run, where today's run dropped."
+  },
+  {
+   "date": "2026-10-10",
+   "author": "Claude",
+   "text": "Playlist: RANK INT B, second play (2 warm-up runs + 24 ranked, 20:01–21:50)\nWhat happened: All three scenarios held their usual level. PASU 0.85x median 335 (best 377), the same as this morning. PASU XYZ 467 (best 514), a little under this morning's 486 and close to its baseline of 472. Zeus 492 (best 523), on its baseline of 491.\nConditions: First session with the new warm-up, 2 Normal-mode runs of PASU 0.85x (293 and 304). The cold start was milder. The first ranked 0.85x runs were 316 and 334, against 302 and 302 this morning, and PASU XYZ opened at 484 instead of 398. A 27-minute break came partway through PASU 0.85x, and the runs after it (336, 349, 335, 319, 377) were slightly better than the ones before.\nAim recorder: Zeus over-aim was still about 4 in 10 corrections. Your best Zeus run, the 523 that closed the session, was also your most time on target (39%) and had one of the lowest over-aim rates (about 1 in 3).\nNext time: Keep the new warm-up on the next B day. One session isn't enough to say it fixed the cold start."
   },
   {
    "date": "2026-10-09",
