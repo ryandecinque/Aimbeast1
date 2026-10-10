@@ -4,15 +4,16 @@
 # Bot shape and size come from the scenario's bot profile (scenario_profile.py); capsule size falls back to the hits.
 # Usage: python pb_video.py <run csv> <score> <scenario title> <out.mp4|out.gif> [caption]
 #   .gif output: set CLIP=<first sample>,<last sample> for a short full-view clip (640x360, real speed)
-import csv, math, subprocess, sys, statistics as st
+import csv, json, math, os, subprocess, sys, statistics as st
 from PIL import Image, ImageDraw, ImageFont
-from aim_analysis import moving_ids
+from aim_analysis import moving_ids, height_source, thin60
 
 path, score, title, out = sys.argv[1], int(sys.argv[2]), sys.argv[3], sys.argv[4]
 caption = sys.argv[5] if len(sys.argv) > 5 else ""
 HFOV, DT = 103.0, 1 / 60
-rows = list(csv.DictReader(open(path, encoding="utf-8")))
+rows = thin60(list(csv.DictReader(open(path, encoding="utf-8"))))
 IDS = moving_ids(rows)
+SRC = height_source(rows, IDS)          # "m"/"s": the visible body (recorder phase 5+); "": the bot's root (older files)
 T, CAM, YAW, PIT, BOT, HITS = [], [], [], [], [], []
 acc = prev = None
 for r in rows:
@@ -20,7 +21,8 @@ for r in rows:
     T.append(float(r["t"])); YAW.append(acc); PIT.append(float(r["pitch"])); HITS.append(int(r["hits"]))
     CAM.append((float(r["cam_x"]), float(r["cam_y"]), float(r["cam_z"])))
     k = next((i for i in range(1, 9) if r.get(f"b{i}_x") not in (None, "", "0.0") and (r.get(f"b{i}_id") or str(i)) in IDS), None)
-    BOT.append(None if k is None else (float(r[f"b{k}_x"]), float(r[f"b{k}_y"]), float(r[f"b{k}_z"])))
+    c = SRC if (k is not None and SRC and r.get(f"b{k}_{SRC}z")) else ""
+    BOT.append(None if k is None else (float(r[f"b{k}_{c}x"]), float(r[f"b{k}_{c}y"]), float(r[f"b{k}_{c}z"])))
 n = len(T)
 resets = [i for i in range(1, n) if HITS[i] < HITS[i - 1]]
 start = resets[-1] if resets else next(i for i in range(1, n) if HITS[i] > HITS[i - 1])
@@ -58,6 +60,21 @@ for i in range(n):
     c, b = CAM[i], BOT[i]
     BOTW.append((b[0], b[1], c[2] + math.tan(math.radians(BP[i])) * hd(i)))
 FLOOR = min(c[2] for c in CAM) - 350
+# optional: replace the aim with another player's measured aim pattern (offset from the ball, in ball radii, one value
+# per 1/60 s from the run start), scaled by "scale" (<1 = tighter). The score counts frames on the ball x points per frame.
+if os.environ.get("AIM_PATTERN"):
+    P = json.load(open(os.environ["AIM_PATTERN"], encoding="utf-8"))
+    ex, ey, sc, ppf = P["ex"], P["ey"], P["scale"], P["points_per_frame"]
+    acc_on = 0.0
+    for i in range(start, end):
+        j = i - start
+        if BOTW[i] is None or j >= len(ex) or ex[j] is None: HITS[i] = HITS[i - 1]; continue
+        rad = math.degrees(math.atan(HW / math.dist(BOTW[i], CAM[i])))
+        YAW[i] = bot_yaw(i) + sc * ex[j] * rad
+        PIT[i] = BP[i] - sc * ey[j] * rad              # pattern's +y = crosshair below the ball
+        if math.hypot(sc * ex[j], sc * ey[j]) <= 1.0: acc_on += ppf
+        HITS[i] = HITS[start] + round(acc_on)
+    for i in range(end, n): YAW[i], PIT[i], HITS[i] = YAW[end - 1], PIT[end - 1], HITS[end - 1]
 print(f"bot half-width {HW:.0f} units, height {'estimated from hits' if EST else 'recorded'}; run {T[end] - T[start]:.1f}s")
 
 try:
@@ -120,7 +137,7 @@ if out.lower().endswith(".mp4") and os.environ.get("CLIP"):    # short full-view
     a, b = (int(x) for x in os.environ["CLIP"].split(","))
     p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{Wd}x{Ht}", "-r", "30", "-i", "-",
                           "-vf", "scale=960:540", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "24", "-preset", "medium", "-movflags", "+faststart", "-an", out],
-                         stdin=subprocess.PIPE)
+                         stdin=subprocess.PIPE, creationflags=0x08000000)   # no console window popping up over the game
     for i in range(a, b, 2): p.stdin.write(frame(i).tobytes())
     p.stdin.close(); p.wait()
     frame((a + b) // 2).resize((960, 540), Image.LANCZOS).save(out[:-4] + ".png")
@@ -134,7 +151,7 @@ if out.lower().endswith(".gif"):
     frames[len(frames) // 2].convert("RGB").save(out[:-4] + ".png")
     print("wrote", out, len(frames), "frames"); sys.exit()
 p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{Wd}x{Ht}", "-r", "30", "-i", "-",
-                      "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "21", "-preset", "medium", "-movflags", "+faststart", out], stdin=subprocess.PIPE)
+                      "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "21", "-preset", "medium", "-movflags", "+faststart", out], stdin=subprocess.PIPE, creationflags=0x08000000)   # no console window popping up over the game
 lead = frame(start).tobytes()
 for _ in range(60): p.stdin.write(lead)                 # 2 s still of the start
 for i in range(start, end, 2): p.stdin.write(frame(i).tobytes())
