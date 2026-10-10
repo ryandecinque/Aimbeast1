@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-10 08:56",
- "updated_utc": "2026-10-10T01:56:20Z",
+ "updated": "2026-10-10 09:01",
+ "updated_utc": "2026-10-10T02:01:19Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
-   "RANK INT B": 3
+   "RANK INT B": 6
   }
  },
  "plan_start": "2026-10-07",
@@ -99,7 +99,7 @@
    "official_best": 398.0,
    "best_14d": 398.0,
    "median_14d": 339,
-   "runs_14d": 76,
+   "runs_14d": 79,
    "steps": [
     0.0,
     138.0,
@@ -507,9 +507,9 @@
     },
     {
      "date": "2026-10-10",
-     "median": 302,
-     "best": 302,
-     "runs": 1
+     "median": 320,
+     "best": 340,
+     "runs": 4
     }
    ]
   },
@@ -822,17 +822,17 @@
  "days": [
   {
    "date": "2026-10-10",
-   "runs": 3,
-   "restarts": 5,
-   "rest_median_s": 33,
-   "rest_longest_s": 53,
+   "runs": 6,
+   "restarts": 6,
+   "rest_median_s": 45,
+   "rest_longest_s": 96,
    "breaks": [],
    "playlists": [
     {
      "name": "RANK INT B",
-     "runs": 3,
+     "runs": 6,
      "first": "08:51",
-     "last": "08:54"
+     "last": "09:01"
     }
    ],
    "scenarios": [
@@ -846,11 +846,11 @@
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
-     "runs": 1,
+     "runs": 4,
      "routine": "RANK INT B",
      "first": "08:54",
-     "best": 302,
-     "median": 302
+     "best": 340,
+     "median": 320
     }
    ]
   },
@@ -1578,7 +1578,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 250,
+  "runs": 253,
   "days": 5,
   "groups": [
    {
@@ -1593,7 +1593,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 88,
+    "runs": 91,
     "pct": 102.6
    },
    {
@@ -1776,13 +1776,13 @@
    },
    {
     "scenario": "PASU TRACK EVO RCT - 0.85X",
-    "runs": 1,
-    "on_target": 23,
-    "reaction_ms": 155,
-    "overshoot_pct": 31,
+    "runs": 4,
+    "on_target": 24,
+    "reaction_ms": 167,
+    "overshoot_pct": 33,
     "pps_by_distance": {
-     "far": 8.1,
-     "mid": 4.9
+     "far": 2.4,
+     "mid": 5.3
     }
    }
   ]
@@ -1939,16 +1939,16 @@
   "2026-10-10": [
    {
     "scenario": "PASU Track Evo (RCT) - 0.85X",
-    "score": 302,
-    "time": "08:53",
+    "score": 340,
+    "time": "08:57",
     "gif": "best-pasu085-2026-10-10",
     "video": true,
-    "on_target": 23,
-    "reaction_ms": 155,
-    "overshoot_pct": 31,
+    "on_target": 26,
+    "reaction_ms": 167,
+    "overshoot_pct": 29,
     "best_14d": 398,
     "master3": 506,
-    "note": "Best of 1 recorded today (median 302). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 4 recorded today (median 320). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (event 2 is triggered on hit (speed up/down))"
     }
