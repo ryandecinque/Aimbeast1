@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-10 22:31",
- "updated_utc": "2026-10-10T15:31:19Z",
+ "updated": "2026-10-10 22:35",
+ "updated_utc": "2026-10-10T15:35:30Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
@@ -796,6 +796,11 @@
    "text": "Playlist: RANK INT B, second play (2 warm-up runs + 24 ranked, 20:01–21:50)\nWhat happened: All three scenarios held their usual level. PASU 0.85x median 335 (best 377), the same as this morning. PASU XYZ 467 (best 514), a little under this morning's 486 and close to its baseline of 472. Zeus 492 (best 523), on its baseline of 491.\nConditions: First session with the new warm-up, 2 Normal-mode runs of PASU 0.85x (293 and 304). The cold start was milder. The first ranked 0.85x runs were 316 and 334, against 302 and 302 this morning, and PASU XYZ opened at 484 instead of 398. A 27-minute break came partway through PASU 0.85x, and the runs after it (336, 349, 335, 319, 377) were slightly better than the ones before.\nAim recorder: Zeus over-aim was still about 4 in 10 corrections. Your best Zeus run, the 523 that closed the session, was also your most time on target (39%) and had one of the lowest over-aim rates (about 1 in 3).\nNext time: Keep the new warm-up on the next B day. One session isn't enough to say it fixed the cold start."
   },
   {
+   "date": "2026-10-10",
+   "author": "Claude",
+   "text": "Playlist change: Zeus Weakness replaces Zeus Builder as the A-day Zeus playlist\nWhat changed: A new 17-run playlist, Zeus Weakness, now takes Zeus Builder's place on A days, in the in-game plan banner and on this site. It starts with 1 run of Zeus Track Evo - Noblink (EZ). Most runs go to close-range drills: SCX Close Strafes 3, Pennytracking 3, Thin Fast 2, Closely Strafing Kytan 1. Then Slow Accel 'STT' Short 2 for mid distance, Zeus Track Far BZN Edition 2 for the far start of each round, and 3 ranked Zeus Track runs to finish. Zeus Builder isn't deleted and can come back any time.\nWhy: Zeus is my main focus because it's my weakest ranked tracking scenario, so its playlist should train only the parts of Zeus where I lose points. The aim recorder's 21 ranked Zeus runs (Oct 8 and 10) show where those are:\n- The moment the bot changes direction. About 8 in 10 of my off-target moments are on the side the bot just left: late, or still moving the old way.\n- Over-aim after those turns. About 4 in 10 corrections go through the bot, the same far, mid and close.\n- The close part of each round, about half of every run. My best runs score well over a point a second more there than my worst. The far start is my lowest-scoring part, but it's about the same on good and bad runs, so it gets fewer runs.\n- Not problems: reaction (about 130 ms every run), up-down aim, and losing the bot for long stretches.\nWhat was kept and dropped: Five Zeus Builder drills stay because they train those turns: Zeus EZ, Kytan, Pennytracking, Thin Fast and Slow Accel 'STT' Short. Three are dropped because they train slow tracking, floating jumps and target switching, which the data says aren't Zeus problems: Ground Plaza FS No UFO, Controlsphere OW Test and TAMTargetSwitch Smooth Easy VSB. Two are new: SCX Close Strafes, for turns at Zeus's exact close distance, and Zeus Track Far BZN Edition, for the far start on its own. Each drill's run count matches how many points its weak spot costs.\nNext time: The two new drills will climb at first just from learning them, so the test is Zeus Track's own median, not the drill scores. On every drill, after each turn, make a smaller correction and land on the near edge of the bot. Being slightly behind costs less than going through it."
+  },
+  {
    "date": "2026-10-09",
    "author": "Ryan",
    "text": "Played my first Aimbeast session of the day. It was pretty good, and it felt like I was slowly returning to baseline. I got a new personal best on Air Control, which I didn't expect. One difference: I didn't play as soon as I woke up. After waking, I played imported versions of all the Aimbeast ranked V1 tracking scenarios in R5Reloaded, the aim trainer, and then a couple of rounds of ranked. I felt like that warmed me up for Aimbeast, but I don't know if that's actually true. It's correlation, not causation. I'm going to take a bit of a break before my next session."
@@ -859,9 +864,9 @@
  "days": [
   {
    "date": "2026-10-10",
-   "runs": 59,
-   "restarts": 89,
-   "rest_median_s": 82,
+   "runs": 61,
+   "restarts": 92,
+   "rest_median_s": 81,
    "rest_longest_s": 511,
    "breaks": [
     {
@@ -910,9 +915,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 5,
+     "runs": 7,
      "first": "22:18",
-     "last": "22:28"
+     "last": "22:34"
     }
    ],
    "scenarios": [
@@ -987,6 +992,14 @@
      "first": "22:28",
      "best": 497,
      "median": 497
+    },
+    {
+     "name": "PENNYTRACKING",
+     "runs": 2,
+     "routine": "ZEUS WEAKNESS",
+     "first": "22:32",
+     "best": 565,
+     "median": 552
     }
    ]
   },
@@ -1714,17 +1727,17 @@
   }
  ],
  "rest_effect": {
-  "runs": 290,
+  "runs": 292,
   "days": 5,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 83,
+    "runs": 84,
     "pct": 99.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 66,
+    "runs": 67,
     "pct": 100.0
    },
    {
@@ -1963,6 +1976,17 @@
     "pps_by_distance": {
      "mid": 3.8,
      "close": 4.2
+    }
+   },
+   {
+    "scenario": "PENNYTRACKING",
+    "runs": 2,
+    "on_target": 11,
+    "reaction_ms": 167,
+    "overshoot_pct": 54,
+    "pps_by_distance": {
+     "mid": 4.1,
+     "close": 1.8
     }
    },
    {
