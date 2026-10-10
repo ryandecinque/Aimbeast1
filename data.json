@@ -1,11 +1,9 @@
 {
- "updated": "2026-10-10 23:37",
- "updated_utc": "2026-10-10T16:37:26Z",
+ "updated": "2026-10-11 01:11",
+ "updated_utc": "2026-10-10T18:11:19Z",
  "today": {
-  "date": "2026-10-10",
-  "progress": {
-   "RANK INT B": 52
-  }
+  "date": "2026-10-11",
+  "progress": {}
  },
  "plan_start": "2026-10-07",
  "ranks": [
@@ -15,7 +13,7 @@
    "official_best": 555.0,
    "best_14d": 490.0,
    "median_14d": 428,
-   "runs_14d": 106,
+   "runs_14d": 103,
    "steps": [
     0.0,
     168.0,
@@ -42,8 +40,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 545.0,
-   "median_14d": 448,
-   "runs_14d": 97,
+   "median_14d": 451,
+   "runs_14d": 94,
    "steps": [
     0.0,
     180.0,
@@ -70,8 +68,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 853.0,
-   "median_14d": 674,
-   "runs_14d": 96,
+   "median_14d": 676,
+   "runs_14d": 94,
    "steps": [
     0.0,
     240.0,
@@ -867,6 +865,32 @@
   }
  ],
  "days": [
+  {
+   "date": "2026-10-11",
+   "runs": 1,
+   "restarts": 0,
+   "rest_median_s": null,
+   "rest_longest_s": null,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "ZEUS WEAKNESS 3",
+     "runs": 1,
+     "first": "01:09",
+     "last": "01:09"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "SCX CLOSE STRAFES",
+     "runs": 1,
+     "routine": "ZEUS WEAKNESS 3",
+     "first": "01:09",
+     "best": 533,
+     "median": 533
+    }
+   ]
+  },
   {
    "date": "2026-10-10",
    "runs": 72,
@@ -1768,8 +1792,8 @@
   }
  ],
  "rest_effect": {
-  "runs": 303,
-  "days": 5,
+  "runs": 304,
+  "days": 6,
   "groups": [
    {
     "label": "First attempt on a scenario",
@@ -1800,7 +1824,7 @@
     "runs": 5,
     "on_target": 34,
     "reaction_ms": 133,
-    "overshoot_pct": 38,
+    "overshoot_pct": 35,
     "pps_by_distance": {
      "far": 7.2,
      "mid": 9.3,
@@ -1810,9 +1834,9 @@
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK EZ",
     "runs": 1,
-    "on_target": 39,
+    "on_target": 40,
     "reaction_ms": 133,
-    "overshoot_pct": 43,
+    "overshoot_pct": 41,
     "pps_by_distance": {
      "far": 7.6,
      "mid": 10.2,
@@ -1824,9 +1848,9 @@
    {
     "scenario": "AIR CONTROL SPHERE",
     "runs": 3,
-    "on_target": 52,
+    "on_target": 51,
     "reaction_ms": 101,
-    "overshoot_pct": 29,
+    "overshoot_pct": 32,
     "pps_by_distance": {
      "mid": 13.8,
      "close": 15.9
@@ -1860,7 +1884,7 @@
     "runs": 2,
     "on_target": 22,
     "reaction_ms": 150,
-    "overshoot_pct": 63,
+    "overshoot_pct": 62,
     "pps_by_distance": {
      "close": 8.0
     }
@@ -1889,9 +1913,9 @@
    {
     "scenario": "PASU TRACK XYZ - RANKED",
     "runs": 1,
-    "on_target": 24,
+    "on_target": 23,
     "reaction_ms": 167,
-    "overshoot_pct": 33,
+    "overshoot_pct": 34,
     "pps_by_distance": {
      "mid": 3.3,
      "close": 4.1
@@ -1900,9 +1924,9 @@
    {
     "scenario": "PENNYTRACKING",
     "runs": 2,
-    "on_target": 10,
+    "on_target": 16,
     "reaction_ms": 167,
-    "overshoot_pct": 43,
+    "overshoot_pct": 65,
     "pps_by_distance": {
      "mid": 2.0,
      "close": 2.0
@@ -1911,9 +1935,9 @@
    {
     "scenario": "SLOW ACCEL STT SHORT",
     "runs": 2,
-    "on_target": 28,
+    "on_target": 27,
     "reaction_ms": 117,
-    "overshoot_pct": 30,
+    "overshoot_pct": 31,
     "pps_by_distance": {
      "mid": 4.8
     }
@@ -1944,7 +1968,7 @@
     "runs": 4,
     "on_target": 36,
     "reaction_ms": 133,
-    "overshoot_pct": 36,
+    "overshoot_pct": 34,
     "pps_by_distance": {
      "far": 8.4,
      "mid": 9.9,
@@ -1956,12 +1980,12 @@
    {
     "scenario": "143 ANY STRAFES",
     "runs": 1,
-    "on_target": 26,
-    "reaction_ms": 156,
-    "overshoot_pct": 55,
+    "on_target": 24,
+    "reaction_ms": 167,
+    "overshoot_pct": 57,
     "pps_by_distance": {
      "mid": 8.4,
-     "close": 5.8
+     "close": 5.7
     }
    },
    {
@@ -1980,8 +2004,8 @@
     "scenario": "CLOSELY STRAFING KYTAN",
     "runs": 1,
     "on_target": 24,
-    "reaction_ms": 156,
-    "overshoot_pct": 57,
+    "reaction_ms": 150,
+    "overshoot_pct": 60,
     "pps_by_distance": {
      "close": 8.2
     }
@@ -1989,11 +2013,11 @@
    {
     "scenario": "PASU TRACK EVO RCT - 0.6X",
     "runs": 2,
-    "on_target": 31,
-    "reaction_ms": 172,
-    "overshoot_pct": 32,
+    "on_target": 30,
+    "reaction_ms": 167,
+    "overshoot_pct": 36,
     "pps_by_distance": {
-     "far": 5.0,
+     "far": 4.5,
      "mid": 7.2
     }
    },
@@ -2002,7 +2026,7 @@
     "runs": 18,
     "on_target": 25,
     "reaction_ms": 167,
-    "overshoot_pct": 33,
+    "overshoot_pct": 34,
     "pps_by_distance": {
      "far": 2.6,
      "mid": 5.5
@@ -2013,7 +2037,7 @@
     "runs": 16,
     "on_target": 26,
     "reaction_ms": 167,
-    "overshoot_pct": 34,
+    "overshoot_pct": 36,
     "pps_by_distance": {
      "mid": 3.8,
      "close": 4.2
@@ -2022,9 +2046,9 @@
    {
     "scenario": "PENNYTRACKING",
     "runs": 3,
-    "on_target": 4,
+    "on_target": 17,
     "reaction_ms": 167,
-    "overshoot_pct": 42,
+    "overshoot_pct": 66,
     "pps_by_distance": {
      "mid": 4.1,
      "close": 1.7
@@ -2033,9 +2057,9 @@
    {
     "scenario": "SCX CLOSE STRAFES",
     "runs": 4,
-    "on_target": 44,
+    "on_target": 42,
     "reaction_ms": 142,
-    "overshoot_pct": 28,
+    "overshoot_pct": 26,
     "pps_by_distance": {
      "close": 9.7
     }
@@ -2043,9 +2067,9 @@
    {
     "scenario": "SLOW ACCEL STT SHORT",
     "runs": 2,
-    "on_target": 33,
+    "on_target": 31,
     "reaction_ms": null,
-    "overshoot_pct": 24,
+    "overshoot_pct": 26,
     "pps_by_distance": {
      "mid": 5.3
     }
@@ -2053,9 +2077,9 @@
    {
     "scenario": "THIN FAST",
     "runs": 2,
-    "on_target": 16,
-    "reaction_ms": 176,
-    "overshoot_pct": 49,
+    "on_target": 15,
+    "reaction_ms": 179,
+    "overshoot_pct": 52,
     "pps_by_distance": {
      "mid": 4.0,
      "close": 4.0
@@ -2064,9 +2088,9 @@
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
     "runs": 19,
-    "on_target": 34,
+    "on_target": 35,
     "reaction_ms": 133,
-    "overshoot_pct": 40,
+    "overshoot_pct": 39,
     "pps_by_distance": {
      "far": 7.4,
      "mid": 8.5,
@@ -2078,7 +2102,7 @@
     "runs": 1,
     "on_target": 37,
     "reaction_ms": 133,
-    "overshoot_pct": 47,
+    "overshoot_pct": 46,
     "pps_by_distance": {
      "far": 8.6,
      "mid": 7.1,
@@ -2093,6 +2117,18 @@
     "overshoot_pct": 30,
     "pps_by_distance": {
      "far": 17.6
+    }
+   }
+  ],
+  "2026-10-11": [
+   {
+    "scenario": "SCX CLOSE STRAFES",
+    "runs": 1,
+    "on_target": 36,
+    "reaction_ms": 134,
+    "overshoot_pct": 34,
+    "pps_by_distance": {
+     "close": 8.9
     }
    }
   ]
