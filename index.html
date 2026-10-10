@@ -235,7 +235,7 @@ summary { min-height: 44px; align-items: center; }
     <ul class="sub">
       <li><span class="rt">RANK INT A</span>: Smooth Thin Track V2, Air Track Smooth V3 150%, Air Control Sphere - S. 8 runs each, after a 2-run warm-up on the easier Air Control Sphere.</li>
       <li><span class="rt">RANK INT B</span>: Pasu Track Evo (RCT) - 0.85X, Pasu Track XYZ, Zeus Track Evo - Noblink. 8 runs each, after a 2-run warm-up on Pasu Track Evo (RCT) - 0.85X itself in Normal mode, so the first ranked runs aren't cold (changed Oct 10: the slower 0.6X warm-up didn't stop the cold start).</li>
-      <li><span class="rt">ZEUS WEAKNESS</span> (replaced Zeus Builder on Oct 10): 17 runs aimed only at the parts of Zeus Track the aim recorder shows are weakest. Those are the moment the bot changes direction, over-aiming after it, and the close part of each round, which decides good runs from bad. It starts with 1 run of the easier Zeus Track Evo - Noblink (EZ). Most runs go to close-range drills: SCX Close Strafes 3, Pennytracking 3, Thin Fast 2, Closely Strafing Kytan 1. Then Slow Accel 'STT' Short 2 for mid distance, Zeus Track Far BZN Edition 2 for the far start, and 3 ranked Zeus Track runs to finish.</li>
+      <li><span class="rt">ZEUS WEAKNESS</span> (replaced Zeus Builder on Oct 10): 13 runs aimed only at the parts of Zeus Track the aim recorder shows are weakest. Those are the moment the bot changes direction, over-aiming after it, and the close part of each round, which decides good runs from bad. Most runs go to close-range drills: SCX Close Strafes 3, Pennytracking 3, Thin Fast 2, Closely Strafing Kytan 1. Then Slow Accel 'STT' Short 2 for mid distance and Zeus Track Far BZN Edition 2 for the far start. Zeus Track itself (regular or EZ) isn't in it, so the drills don't turn into more of the same scenario. It's played in the ranked playlist instead.</li>
       <li>A 2–3 minute break away from the screen at every scenario switch.</li>
     </ul>
   </section>
@@ -555,7 +555,7 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   const ago = isNaN(mins) ? d.updated + " (Cambodia time)" : mins < 1 ? "just now" : mins < 60 ? mins + " min ago" : mins < 1440 ? Math.round(mins / 60) + " h ago" : Math.round(mins / 1440) + " days ago";
   document.getElementById("updated").textContent = "Updated " + ago + (mins > 1440 ? " · may be out of date" : "");
   const prog = Object.entries(d.today.progress || {});
-  document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 16 : k === "ZEUS WEAKNESS" ? 17 : 26)} of ${k === "ZEUS BUILDER" ? 16 : k === "ZEUS WEAKNESS" ? 17 : 26} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
+  document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 16 : k === "ZEUS WEAKNESS" ? 13 : 26)} of ${k === "ZEUS BUILDER" ? 16 : k === "ZEUS WEAKNESS" ? 13 : 26} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
   TODAY = d.today.date;
   PBS = d.pbs || PBS; (PBS.events || []).forEach(e => PBDAYS[e.date] = 1);
   pbBanner(PBS, d.days);

@@ -7,7 +7,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import publish as P
 
-SIZES = {"RANK INT A": 26, "RANK INT B": 26, "ZEUS BUILDER": 16, "ZEUS WEAKNESS": 17}   # A and B include a 2-run warm-up (since 2026-10-08); ZEUS WEAKNESS replaced ZEUS BUILDER on 2026-10-10
+SIZES = {"RANK INT A": 26, "RANK INT B": 26, "ZEUS BUILDER": 16, "ZEUS WEAKNESS": 13}   # A and B include a 2-run warm-up (since 2026-10-08); ZEUS WEAKNESS replaced ZEUS BUILDER on 2026-10-10
 REVIEWS = os.path.join(HERE, "reviews")
 STATE = os.path.join(REVIEWS, "state.json")
 LOG = os.path.join(REVIEWS, "log.txt")
@@ -75,7 +75,7 @@ def packet(day, pl, k, xs):
         "day": {k2: day_stats.get(k2) for k2 in ("runs", "restarts", "rest_median_s", "breaks", "playlists")},
         "ryans_notes_today": [e["text"] for e in entries if e["author"].lower() != "claude"],
         "earlier_claude_reviews_today": [e["text"] for e in entries if e["author"].lower() == "claude"],
-        "plan": "Goal: Master 3 on 6 Intermediate ranked tracking scenarios. Daily: RANK INT A or B (24 runs), optional ZEUS WEAKNESS on A days (17 runs since 2026-10-10, replacing ZEUS BUILDER: Zeus EZ warm-up, close-range turn drills weighted most, a mid-distance drill, a far-only Zeus, then 3 ranked Zeus runs; it targets Zeus's weak spots: direction changes, over-aim, the close and mid part of each round) and the main playlist again. Plan started 2026-10-07.",
+        "plan": "Goal: Master 3 on 6 Intermediate ranked tracking scenarios. Daily: RANK INT A or B (24 runs), optional ZEUS WEAKNESS on A days (13 runs since 2026-10-10, replacing ZEUS BUILDER: close-range turn drills weighted most, a mid-distance drill and a far-only Zeus; no regular or EZ Zeus Track inside it, because Ryan felt he was getting too used to Zeus; it targets Zeus's weak spots: direction changes, over-aim, the close and mid part of each round) and the main playlist again. Plan started 2026-10-07.",
         "known_findings": "Rest data so far: first attempt on each scenario scores about 3% below usual, first run after a 15+ minute break about 6% below (warm-up). Short rests (20 s-2 min) inside a scenario look slightly better than none, tentative.",
     }
 
