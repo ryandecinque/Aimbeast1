@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-10 20:26",
- "updated_utc": "2026-10-10T13:26:19Z",
+ "updated": "2026-10-10 20:51",
+ "updated_utc": "2026-10-10T13:51:19Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
-   "RANK INT B": 31
+   "RANK INT B": 32
   }
  },
  "plan_start": "2026-10-07",
@@ -98,8 +98,8 @@
    "master3": 506.0,
    "official_best": 398.0,
    "best_14d": 398.0,
-   "median_14d": 338,
-   "runs_14d": 88,
+   "median_14d": 336,
+   "runs_14d": 89,
    "steps": [
     0.0,
     138.0,
@@ -507,9 +507,9 @@
     },
     {
      "date": "2026-10-10",
-     "median": 331,
+     "median": 333,
      "best": 385,
-     "runs": 11
+     "runs": 12
     }
    ]
   },
@@ -849,9 +849,9 @@
  "days": [
   {
    "date": "2026-10-10",
-   "runs": 33,
-   "restarts": 53,
-   "rest_median_s": 71,
+   "runs": 34,
+   "restarts": 57,
+   "rest_median_s": 70,
    "rest_longest_s": 511,
    "breaks": [
     {
@@ -871,14 +871,20 @@
      "before": "RANK INT B",
      "at": "19:33",
      "minutes": 27.8
+    },
+    {
+     "after": "RANK INT B",
+     "before": "RANK INT B",
+     "at": "20:22",
+     "minutes": 26.5
     }
    ],
    "playlists": [
     {
      "name": "RANK INT B",
-     "runs": 31,
+     "runs": 32,
      "first": "08:51",
-     "last": "20:22"
+     "last": "20:50"
     },
     {
      "name": "(single scenario)",
@@ -898,7 +904,7 @@
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
-     "runs": 13,
+     "runs": 14,
      "routine": "RANK INT B",
      "first": "08:54",
      "best": 305,
@@ -1677,12 +1683,12 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 101,
+    "runs": 100,
     "pct": 102.6
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 19,
+    "runs": 20,
     "pct": 99.2
    }
   ]
@@ -1883,13 +1889,13 @@
    },
    {
     "scenario": "PASU TRACK EVO RCT - 0.85X",
-    "runs": 13,
+    "runs": 14,
     "on_target": 25,
     "reaction_ms": 167,
     "overshoot_pct": 33,
     "pps_by_distance": {
      "far": 4.2,
-     "mid": 5.3
+     "mid": 5.4
     }
    },
    {
