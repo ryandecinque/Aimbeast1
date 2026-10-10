@@ -86,5 +86,23 @@
     "none": "This bot can die, so a better run would need bots that weren't in your recording."
    }
   }
+ ],
+ "2026-10-10": [
+  {
+   "scenario": "PASU Track Evo (RCT) - 0.85X",
+   "score": 302,
+   "time": "08:53",
+   "gif": "best-pasu085-2026-10-10",
+   "video": true,
+   "on_target": 23,
+   "reaction_ms": 155,
+   "overshoot_pct": 31,
+   "best_14d": 398,
+   "master3": 506,
+   "note": "Best of 1 recorded today (median 302). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (event 2 is triggered on hit (speed up/down))"
+   }
+  }
  ]
 }

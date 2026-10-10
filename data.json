@@ -1,11 +1,10 @@
 {
- "updated": "2026-10-09 12:59",
- "updated_utc": "2026-10-09T05:59:42Z",
+ "updated": "2026-10-10 08:56",
+ "updated_utc": "2026-10-10T01:56:20Z",
  "today": {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "progress": {
-   "RANK INT A": 26,
-   "ZEUS BUILDER": 16
+   "RANK INT B": 3
   }
  },
  "plan_start": "2026-10-07",
@@ -15,8 +14,8 @@
    "master3": 616.0,
    "official_best": 555.0,
    "best_14d": 490.0,
-   "median_14d": 427,
-   "runs_14d": 121,
+   "median_14d": 428,
+   "runs_14d": 106,
    "steps": [
     0.0,
     168.0,
@@ -44,7 +43,7 @@
    "official_best": 548.0,
    "best_14d": 545.0,
    "median_14d": 448,
-   "runs_14d": 112,
+   "runs_14d": 97,
    "steps": [
     0.0,
     180.0,
@@ -71,8 +70,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 853.0,
-   "median_14d": 666,
-   "runs_14d": 111,
+   "median_14d": 674,
+   "runs_14d": 96,
    "steps": [
     0.0,
     240.0,
@@ -100,7 +99,7 @@
    "official_best": 398.0,
    "best_14d": 398.0,
    "median_14d": 339,
-   "runs_14d": 90,
+   "runs_14d": 76,
    "steps": [
     0.0,
     138.0,
@@ -126,9 +125,9 @@
    "name": "PASU TRACK XYZ",
    "master3": 660.0,
    "official_best": 580.0,
-   "best_14d": 556.0,
+   "best_14d": 536.0,
    "median_14d": 472,
-   "runs_14d": 91,
+   "runs_14d": 76,
    "steps": [
     0.0,
     180.0,
@@ -155,8 +154,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 553.0,
-   "median_14d": 493,
-   "runs_14d": 141,
+   "median_14d": 494,
+   "runs_14d": 129,
    "steps": [
     0.0,
     198.0,
@@ -505,6 +504,12 @@
      "median": 302,
      "best": 354,
      "runs": 8
+    },
+    {
+     "date": "2026-10-10",
+     "median": 302,
+     "best": 302,
+     "runs": 1
     }
    ]
   },
@@ -815,6 +820,40 @@
   }
  ],
  "days": [
+  {
+   "date": "2026-10-10",
+   "runs": 3,
+   "restarts": 5,
+   "rest_median_s": 33,
+   "rest_longest_s": 53,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "RANK INT B",
+     "runs": 3,
+     "first": "08:51",
+     "last": "08:54"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "PASU TRACK EVO (RCT) - 0.6X",
+     "runs": 2,
+     "routine": "RANK INT B",
+     "first": "08:51",
+     "best": 440,
+     "median": 430
+    },
+    {
+     "name": "PASU TRACK EVO (RCT) - 0.85X",
+     "runs": 1,
+     "routine": "RANK INT B",
+     "first": "08:54",
+     "best": 302,
+     "median": 302
+    }
+   ]
+  },
   {
    "date": "2026-10-09",
    "runs": 55,
@@ -1539,18 +1578,18 @@
   }
  ],
  "rest_effect": {
-  "runs": 247,
-  "days": 4,
+  "runs": 250,
+  "days": 5,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 72,
+    "runs": 74,
     "pct": 98.6
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 64,
-    "pct": 99.9
+    "runs": 65,
+    "pct": 100.0
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -1722,6 +1761,30 @@
      "close": 9.2
     }
    }
+  ],
+  "2026-10-10": [
+   {
+    "scenario": "PASU TRACK EVO RCT - 0.6X",
+    "runs": 2,
+    "on_target": 31,
+    "reaction_ms": 172,
+    "overshoot_pct": 32,
+    "pps_by_distance": {
+     "far": 5.0,
+     "mid": 7.2
+    }
+   },
+   {
+    "scenario": "PASU TRACK EVO RCT - 0.85X",
+    "runs": 1,
+    "on_target": 23,
+    "reaction_ms": 155,
+    "overshoot_pct": 31,
+    "pps_by_distance": {
+     "far": 8.1,
+     "mid": 4.9
+    }
+   }
   ]
  },
  "aim_moments": {
@@ -1870,6 +1933,24 @@
     "note": "Best of 1 recorded today (median 217). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "This bot can die, so a better run would need bots that weren't in your recording."
+    }
+   }
+  ],
+  "2026-10-10": [
+   {
+    "scenario": "PASU Track Evo (RCT) - 0.85X",
+    "score": 302,
+    "time": "08:53",
+    "gif": "best-pasu085-2026-10-10",
+    "video": true,
+    "on_target": 23,
+    "reaction_ms": 155,
+    "overshoot_pct": 31,
+    "best_14d": 398,
+    "master3": 506,
+    "note": "Best of 1 recorded today (median 302). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (event 2 is triggered on hit (speed up/down))"
     }
    }
   ]
