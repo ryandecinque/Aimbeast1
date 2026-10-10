@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-10 10:26",
- "updated_utc": "2026-10-10T03:26:19Z",
+ "updated": "2026-10-10 19:36",
+ "updated_utc": "2026-10-10T12:36:19Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
@@ -849,8 +849,8 @@
  "days": [
   {
    "date": "2026-10-10",
-   "runs": 27,
-   "restarts": 46,
+   "runs": 28,
+   "restarts": 50,
    "rest_median_s": 69,
    "rest_longest_s": 175,
    "breaks": [
@@ -859,6 +859,12 @@
      "before": "(single scenario)",
      "at": "09:49",
      "minutes": 34.4
+    },
+    {
+     "after": "(single scenario)",
+     "before": "(single scenario)",
+     "at": "10:24",
+     "minutes": 547.7
     }
    ],
    "playlists": [
@@ -870,9 +876,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 1,
+     "runs": 2,
      "first": "10:24",
-     "last": "10:24"
+     "last": "19:33"
     }
    ],
    "scenarios": [
@@ -915,6 +921,14 @@
      "first": "10:24",
      "best": 312,
      "median": 312
+    },
+    {
+     "name": "143 ANY STRAFES",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "19:33",
+     "best": 705,
+     "median": 705
     }
    ]
   },
@@ -1642,13 +1656,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 274,
+  "runs": 275,
   "days": 5,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 77,
-    "pct": 98.4
+    "runs": 78,
+    "pct": 98.6
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1662,7 +1676,7 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 18,
+    "runs": 19,
     "pct": 99.2
    }
   ]
@@ -1827,6 +1841,17 @@
    }
   ],
   "2026-10-10": [
+   {
+    "scenario": "143 ANY STRAFES",
+    "runs": 1,
+    "on_target": 26,
+    "reaction_ms": 156,
+    "overshoot_pct": 55,
+    "pps_by_distance": {
+     "mid": 8.4,
+     "close": 5.8
+    }
+   },
    {
     "scenario": "AIR TRACK SMOOTH V3 - RANKED",
     "runs": 1,
