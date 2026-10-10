@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-10 09:51",
- "updated_utc": "2026-10-10T02:51:19Z",
+ "updated": "2026-10-10 10:06",
+ "updated_utc": "2026-10-10T03:06:07Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
@@ -776,6 +776,11 @@
  ],
  "journal": [
   {
+   "date": "2026-10-10",
+   "author": "Claude",
+   "text": "Playlist: RANK INT B (26 runs, 08:51–09:49)\nWhat happened: Your best B day so far on PASU XYZ: a median of 486 (baseline 472) and a best of 532. Zeus held at its usual level, 498 (baseline 491), and PASU 0.85x sat right on its baseline, 335 (340), with a best of 385.\nConditions: The cold start is still there despite the two PASU 0.6x warm-up runs (430 and 440). PASU 0.85x opened 302, 302, then climbed into the 330s and 385. PASU XYZ opened 398 and 434, then 516, 532 and 522. So in both PASU scenarios the first two runs are the low ones, the same pattern as Oct 8. No note from you today on waking time or the R5Reloaded warm-up, so I can't tell whether this morning matched yesterday's routine.\nRest: The median rest was 69 s, the longest yet, in the range that has scored better so far. 44 restarts, though, the most of any day. If most were early quits on bad starts, they don't hurt, but they do add time.\nAim recorder: Zeus over-aim stayed at about 4 in 10 corrections, the same as Oct 8, and far-away points are still the weakest (about 7 a second, against 8–9 up close). PASU XYZ's best runs (516–532) had over-aim at 3 in 10 or less. The 398 opener was at 5 in 10.\nNext time: Make the PASU warm-up count. Instead of 2 runs of 0.6x, try 2 relaxed runs of PASU 0.85x itself before the ranked ones start (they'd count as ranked runs, so do them in Normal mode). And jot down whether you did the R5Reloaded warm-up, because yesterday's no-cold-start A day might have come from it."
+  },
+  {
    "date": "2026-10-09",
    "author": "Ryan",
    "text": "Played my first Aimbeast session of the day. It was pretty good, and it felt like I was slowly returning to baseline. I got a new personal best on Air Control, which I didn't expect. One difference: I didn't play as soon as I woke up. After waking, I played imported versions of all the Aimbeast ranked V1 tracking scenarios in R5Reloaded, the aim trainer, and then a couple of rounds of ranked. I felt like that warmed me up for Aimbeast, but I don't know if that's actually true. It's correlation, not causation. I'm going to take a bit of a break before my next session."
@@ -784,6 +789,11 @@
    "date": "2026-10-09",
    "author": "Claude",
    "text": "Playlist: RANK INT A (26 runs including the 2 warm-up runs, 07:05–08:16)\nWhat happened: Your best A day so far. All three medians beat their pre-plan baselines: Smooth Thin 438 (baseline 429), Air Track 482 (447), Sphere S 740 (663). Sphere S hit 853, your best since the score log started on Sep 23 (old best there 842). Your all-time best is still 878, and Master 3 is 880. On the Oct 7 morning these medians were 375, 360 and 557.\nAim recorder: In Sphere S and Smooth Thin, your best run was the one where you swung past the bot least. The 853 Sphere S run went past it on 1 in 4 corrections, against 1 in 3 to 2 in 5 on the other runs. The 473 Smooth Thin run was 1 in 5, against about 1 in 3. Air Track didn't follow the pattern (its 526 swung past as often as the rest). (Fix: Air Track and Sphere S were wrongly skipped at first because bots left over from earlier scenarios stand still in the level. The script now ignores bots that never move.)\nConditions: Unlike Oct 7 and Oct 8, you didn't play straight after waking. You warmed up first in R5Reloaded with all the Aimbeast ranked V1 tracking scenarios plus a couple of rounds of ranked, then did the Air Control Sphere warm-up (910 and 912). This is the first A day with that much warm-up, and the first with no cold start: Smooth Thin's first counted run was 449, not its usual low opener. As you said, one day can't separate the warm-up from just being further from waking, but it's worth repeating.\nRest: The median rest was 57 s, in the longer range that has scored better so far. One 13-minute break came mid-Sphere S, and the runs after it (726, 746) sat on the day's median, so the break didn't hurt.\nNext time: Repeat the same order (wake, R5Reloaded warm-up, then the playlist) on B tomorrow and note it, so we can see whether PASU 0.85x loses its cold start too. In-game, aim to stop on the bot after a correction instead of swinging through it. That separated your best runs today."
+  },
+  {
+   "date": "2026-10-09",
+   "author": "Claude",
+   "text": "Playlist: ZEUS BUILDER, first play of the new version (16 runs, 09:52–11:06), plus test runs for the recorder (11:07–12:16)\nWhat happened: Two drill bests. Pennytracking 630 (old best 575) and Thin Fast 1650 (old best 1565). The other repeat drills held steady against Oct 8: Slow Accel 289 (294), Kytan 485 (484), and Ground Plaza slipped a little to 342 (355). The two new left-right and over-aim drills set their starting marks: Controlsphere OW 6422 and 6804, and TAMTargetSwitch 31 and 32 kills.\nConditions: Played 95 minutes after finishing RANK INT A, with one 17-minute break mid-playlist. The runs after 11:07 (1 Wall 4 Targets, Star Clicking, Popcorn, PASU XYZ, a Sphere and a Zeus EZ run) were tests of the recorder, not practice, so they aren't judged here.\nHow I measured it: The recorder was upgraded today, and this is the first data with the changes.\n- It now sees the real height of flying bots. In Sphere S and Air Track the game moves the ball's body, not the bot itself.\n- It fills its 8 bot slots with moving bots first. Leftover bots from earlier scenarios were taking slots, and TAMTargetSwitch went from 10 of 27 kills caught to 30 of 30.\n- Clicking runs switch to 120 snapshots a second.\n- It costs about 0.07 ms per frame on tracking, so no FPS loss.\nNext time: Keep the new version as it is until the Oct 25 check-in. Today counts as its first data point."
   },
   {
    "date": "2026-10-08",
