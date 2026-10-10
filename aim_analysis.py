@@ -9,15 +9,20 @@ OUT = os.path.join(HERE, "aim_summary.json")
 LOSS = 0.5            # seconds off target that count as "lost the target"
 
 def thin60(rows):
-    """Recorder phase 6 samples clicking runs at 120 a second. Tracking numbers assume even 60-a-second steps,
-    so keep only rows at least ~1/60 s apart (unchanged for 60-a-second files)."""
+    """Recorder phase 6+ samples at 120 a second (every scenario from phase 8). Tracking numbers assume even
+    60-a-second steps, so take the nearest row to each point on an exact 1/60 s grid (unchanged for 60-a-second files).
+    The game samples on frame boundaries (about 6 ms apart at 165 FPS), so a simple 'skip until 1/60 s' rule leaves
+    uneven ~45-a-second data; the grid keeps it even."""
     ts = [float(r["t"]) for r in rows]
     gaps = [b - a for a, b in zip(ts, ts[1:])]
     if not gaps or sum(g < 0.0095 for g in gaps) < 0.2 * len(gaps): return rows      # a normal 60-a-second file
-    out, last = [], None
-    for r in rows:
-        t = float(r["t"])
-        if last is None or t - last >= 1 / 60 - 0.002: out.append(r); last = t
+    out, j, k = [], 0, 0
+    while True:
+        target = ts[0] + k / 60
+        if target > ts[-1]: break
+        while j + 1 < len(ts) and abs(ts[j + 1] - target) <= abs(ts[j] - target): j += 1
+        if not out or out[-1] is not rows[j]: out.append(rows[j])
+        k += 1
     return out
 
 def moving_ids(rows):

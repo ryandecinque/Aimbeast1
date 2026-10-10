@@ -11,7 +11,15 @@ from aim_analysis import moving_ids, height_source, thin60
 path, score, title, out = sys.argv[1], int(sys.argv[2]), sys.argv[3], sys.argv[4]
 caption = sys.argv[5] if len(sys.argv) > 5 else ""
 HFOV, DT = 103.0, 1 / 60
-rows = thin60(list(csv.DictReader(open(path, encoding="utf-8"))))
+import os
+OUT_FPS = int(os.environ.get("OUT_FPS", "30"))           # video frame rate: 30 (default), 60 or 120
+RAW = list(csv.DictReader(open(path, encoding="utf-8")))
+ROWS60 = thin60(RAW)
+CLIP_T = None
+if os.environ.get("CLIP"):                                # CLIP is given in 60-a-second sample numbers: turn it into times
+    _a, _b = (int(x) for x in os.environ["CLIP"].split(","))
+    CLIP_T = (float(ROWS60[_a]["t"]), float(ROWS60[min(_b, len(ROWS60) - 1)]["t"]))
+rows = RAW if (OUT_FPS > 60 and not os.environ.get("AIM_PATTERN")) else ROWS60
 IDS = moving_ids(rows)
 SRC = height_source(rows, IDS)          # "m"/"s": the visible body (recorder phase 5+); "": the bot's root (older files)
 T, CAM, YAW, PIT, BOT, HITS = [], [], [], [], [], []
@@ -119,8 +127,8 @@ def frame(i, final=False):
             rx, ry = max(3, HW / fz * f), max(3 if SPHERE else 6, HH / fz * f)
             d.rounded_rectangle([c[0] - rx, c[1] - ry, c[0] + rx, c[1] + ry], radius=rx, fill=BOTC)
     d.ellipse([Wd / 2 - 3, Ht / 2 - 3, Wd / 2 + 3, Ht / 2 + 3], fill=AIMC)
-    run_len = (end - start) * DT
-    t_left = 0 if final else 60 - max(0, (i - start) * DT) * 60 / run_len
+    run_len = T[end] - T[start]
+    t_left = 0 if final else 60 - max(0, T[i] - T[start]) * 60 / run_len
     tl_ = max(0, math.ceil(t_left - 1e-6)) if not final else 0
     d.text((Wd / 2, 32), f"{tl_ // 60}:{tl_ % 60:02d}", fill=INK, font=FB, anchor="mm")
     sc = score if final else (max(0, HITS[i] - HITS[start]) if i >= start else 0)
@@ -132,30 +140,40 @@ def frame(i, final=False):
         d.text((Wd / 2, Ht / 2 - 90), f"{score}", fill=ACC, font=FBIG, anchor="mm")
     return im
 
-import os
+import bisect
+_gaps = sorted(T[i + 1] - T[i] for i in range(n - 1) if T[i + 1] > T[i])
+REC_FPS = (120 if len(T) / max(1e-9, T[-1] - T[0]) > 90 else 60) if n > 1 else 60     # recorder writes 60 or 120 a second
+FPS = min(OUT_FPS, max(30, REC_FPS))
+if FPS < OUT_FPS: print(f"note: this recording has {REC_FPS} snapshots a second, so the video is {FPS} fps, not {OUT_FPS}")
+def frames_between(t0, t1):
+    k, out_ = 0, []
+    while t0 + k / FPS <= t1:
+        out_.append(min(n - 1, bisect.bisect_left(T, t0 + k / FPS))); k += 1
+    return out_
+
 if out.lower().endswith(".mp4") and os.environ.get("CLIP"):    # short full-view clip: real speed, loops on the site
-    a, b = (int(x) for x in os.environ["CLIP"].split(","))
-    p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{Wd}x{Ht}", "-r", "30", "-i", "-",
+    a, b = bisect.bisect_left(T, CLIP_T[0]), bisect.bisect_left(T, CLIP_T[1])
+    p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{Wd}x{Ht}", "-r", str(FPS), "-i", "-",
                           "-vf", "scale=960:540", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "24", "-preset", "medium", "-movflags", "+faststart", "-an", out],
                          stdin=subprocess.PIPE, creationflags=0x08000000)   # no console window popping up over the game
-    for i in range(a, b, 2): p.stdin.write(frame(i).tobytes())
+    for i in frames_between(T[a], T[b]): p.stdin.write(frame(i).tobytes())
     p.stdin.close(); p.wait()
     frame((a + b) // 2).resize((960, 540), Image.LANCZOS).save(out[:-4] + ".png")
     print("wrote", out); sys.exit()
 if out.lower().endswith(".gif"):
     import os
-    a, b = (int(x) for x in os.environ["CLIP"].split(","))
-    frames = [frame(i).resize((640, 360), Image.LANCZOS).convert("P", palette=Image.ADAPTIVE, colors=48) for i in range(a, b, 2)]
+    a, b = bisect.bisect_left(T, CLIP_T[0]), bisect.bisect_left(T, CLIP_T[1])
+    frames = [frame(i).resize((640, 360), Image.LANCZOS).convert("P", palette=Image.ADAPTIVE, colors=48) for i in frames_between(T[a], T[b])[::max(1, FPS // 30)]]
     frames += [frames[-1]] * 12
     frames[0].save(out, save_all=True, append_images=frames[1:], duration=33, loop=0, optimize=True)
     frames[len(frames) // 2].convert("RGB").save(out[:-4] + ".png")
     print("wrote", out, len(frames), "frames"); sys.exit()
-p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{Wd}x{Ht}", "-r", "30", "-i", "-",
+p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{Wd}x{Ht}", "-r", str(FPS), "-i", "-",
                       "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "21", "-preset", "medium", "-movflags", "+faststart", out], stdin=subprocess.PIPE, creationflags=0x08000000)   # no console window popping up over the game
 lead = frame(start).tobytes()
-for _ in range(60): p.stdin.write(lead)                 # 2 s still of the start
-for i in range(start, end, 2): p.stdin.write(frame(i).tobytes())
+for _ in range(2 * FPS): p.stdin.write(lead)                 # 2 s still of the start
+for i in frames_between(T[start], T[end - 1]): p.stdin.write(frame(i).tobytes())
 last = frame(end - 1, final=True).tobytes()
-for _ in range(75): p.stdin.write(last)                 # hold the final score 2.5 s
+for _ in range(int(2.5 * FPS)): p.stdin.write(last)                 # hold the final score 2.5 s
 p.stdin.close(); p.wait()
-print("wrote", out)
+print("wrote", out, f"({FPS} fps)")

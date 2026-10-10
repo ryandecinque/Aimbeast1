@@ -381,6 +381,38 @@ def queue_videos(scen):
     return jobs[jid]
 
 
+def queue_export(scen):
+    """Queue a full-run export at 120 fps of the best run shown on this scenario's card."""
+    with job_lock:
+        if any(j["kind"] == "export" and j["scenario"] == scen and j["status"] in ("queued", "running") for j in jobs.values()): return None
+        jid = str(int(time.time() * 1000)) + str(len(jobs))
+        jobs[jid] = dict(id=jid, kind="export", scenario=scen, status="queued", stage="Waiting", pct=0)
+    work_q.put(jid)
+    return jobs[jid]
+
+
+def export_job(j):
+    """The whole best run in the player's own view at up to 120 fps (capped at the recording's own rate)."""
+    scen = j["scenario"]
+    clips = load_json(CLIPS, {})
+    tags = sorted(t for t in clips if t.startswith(scen + "|") and clips[t].get("run"))
+    if not tags: return j.update(status="failed", error="Make the best-run clip first.")
+    tag = tags[-1]; c = clips[tag]; date = tag.split("|")[1]
+    title, _ = title_of(scen)
+    os.makedirs(MEDIA["videos"], exist_ok=True)
+    out = os.path.join(MEDIA["videos"], f"{slug(scen)}-{date}-best-120fps.mp4")
+    j.update(status="running", stage="Full run at 120 fps (takes a few minutes)", pct=20)
+    ok, msg = config.run_script("pb_video.py", run_path(c["run"]), c["score"], title.upper(), out, f"{title}: {c['score']}",
+                                env={"OUT_FPS": "120"}, timeout=3600)
+    m = re.search(r"\((\d+) fps\)", msg)
+    if not ok or not m or not os.path.exists(out):
+        log(f"120 fps export failed for {c['run']}: {msg[-300:]}"); return j.update(status="failed", error="The export couldn't be made from this run.")
+    with clip_lock:
+        clips = load_json(CLIPS, {})
+        if tag in clips: clips[tag]["export"] = {"mp4": os.path.basename(out), "fps": int(m.group(1))}; save_json(CLIPS, clips)
+    j.update(status="done", stage="Done", pct=100, fps=int(m.group(1)))
+
+
 def video_job(j):
     scen = j["scenario"]
     days = sorted(d for s_, d in BEST if s_ == scen)
@@ -476,6 +508,7 @@ def worker():
         jid = work_q.get(); j = jobs.get(jid)
         try:
             if j["kind"] == "videos": video_job(j)
+            elif j["kind"] == "export": export_job(j)
             else: target_job(jid, j["run"], j["target"])
         except Exception as e:
             log("video error:\n" + traceback.format_exc()); j.update(status="failed", error=str(e))
@@ -594,6 +627,9 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 st_["always"] = sorted(al)
             save_json(SETTINGS, st_)
             return self.send(200, st_)
+        if self.path == "/api/export":                         # "Export full run at 120 fps" on a card
+            if b.get("scenario") not in known: return self.send(400, {"error": "Unknown scenario."})
+            return self.send(200, queue_export(b["scenario"]) or {"status": "queued"})
         if self.path == "/api/clip":                           # one-off "Make clip" on a card
             if b.get("scenario") not in known: return self.send(400, {"error": "Unknown scenario."})
             return self.send(200, queue_videos(b["scenario"]) or {"status": "queued"})

@@ -187,6 +187,16 @@ async function makeVideos(btn) {
   const [ok, r] = await post("/api/videos", { scenarios: names });
   if (ok) { page.jobs = [...(page.jobs || []), ...r.queued]; renderJobs(); }
 }
+async function exportRun(btn) {
+  const [ok, j] = await post("/api/export", { scenario: btn.closest(".scen").dataset.name });
+  if (ok && j.id) { page.jobs = [...(page.jobs || []), j]; renderJobs(); }
+}
+function exportBox(c) {                              // full best run at 120 fps: download link once made, else a button
+  if (!c) return "";
+  return `<div style="margin-top:6px">` + (c.export
+    ? `<a href="${media("videos", c.export.mp4)}" download>Download the full run (${c.export.fps} fps)</a>${c.export.fps < 120 ? ` <span class="cap">(this run was recorded at ${c.export.fps} snapshots a second, so that's its smoothest)</span>` : ""}`
+    : `<button class="ghost" onclick="exportRun(this)">Export full run at 120 fps</button>`) + ` <span class="cap xjob"></span></div>`;
+}
 async function makeClip(btn) {
   const [ok, j] = await post("/api/clip", { scenario: btn.closest(".scen").dataset.name });
   if (ok && j.id) { page.jobs = [...(page.jobs || []), j]; renderJobs(); }
@@ -226,7 +236,7 @@ function killCard(s) {                               // switching and clicking: 
   const pct = f => Math.round(100 * (f - 1));
   const makeBtn = s.clip_today ? "" : `<div style="margin-top:8px"><button class="ghost" onclick="makeClip(this)">Make clip${s.v2.ok ? " and 20% faster videos" : ""} for ${day(s.last_day)}</button> <span class="cap vjob"></span></div>`;
   const clip = (c ? `<video src="${media("clips", c.mp4)}" poster="${media("clips", c.png)}" autoplay muted loop playsinline></video>
-      <div class="cap">Best run on ${day(c.date)}: <b>${c.score} kills</b>. These are its 8 seconds with the most kills, rebuilt from your aim data.</div>` +
+      <div class="cap">Best run on ${day(c.date)}: <b>${c.score} kills</b>. These are its 8 seconds with the most kills, rebuilt from your aim data.</div>` + exportBox(c) +
       (v ? `<div class="companion"><h3 style="margin-top:6px">Same bots, ${pct(v.factor)}% faster</h3>
         <video src="${media("clips", v.side)}" poster="${media("clips", v.png)}" controls playsinline></video>
         <div class="cap">Your run on the left; on the right a model kills the same bots, in the same order, on their real paths, sooner:
@@ -265,7 +275,7 @@ function card(s) {
   const m = s.clip && s.model && s.model.ok && s.clip.model;      // never show a model run where the bot reacts to hits
   const makeBtn = s.clip_today ? "" : `<div style="margin-top:8px"><button class="ghost" onclick="makeClip(this)">Make clip for ${day(s.last_day)}</button> <span class="cap vjob"></span></div>`;
   const clip = (s.clip ? `<video src="${media("clips", s.clip.mp4)}" poster="${media("clips", s.clip.png)}" autoplay muted loop playsinline></video>
-      <div class="cap">Best run on ${day(s.clip.date)}: <b>${s.clip.score}</b>. These are its 8 seconds with the most hits, rebuilt from your aim data.</div>`
+      <div class="cap">Best run on ${day(s.clip.date)}: <b>${s.clip.score}</b>. These are its 8 seconds with the most hits, rebuilt from your aim data.</div>` + exportBox(s.clip)
       + (m ? `<div class="companion"><video src="${media("clips", m.mp4)}" poster="${media("clips", m.png)}" autoplay muted loop playsinline></video>
       <div class="cap">Same run, 20% better: something to model your aim on.${m.reached ? "" : ` The model reached ${m.model_score}, the closest it could get to ${m.target}.`}
       Same bot movement${m.moves ? ", same movement as your run" : ""} and the same human reaction time; only the aim changes.</div></div>`
@@ -314,10 +324,14 @@ function renderJobs() {
   (page.jobs || []).filter(j => j.kind === "videos").sort((a, b) => a.id - b.id).forEach(j => vj[j.scenario] = j);
   document.querySelectorAll(".vrow").forEach(r => { const j = vj[r.dataset.name]; if (j) $(".vs", r).textContent = videoJobText(j); });
   document.querySelectorAll(".scen").forEach(sec => { const j = vj[sec.dataset.name], el = $(".vjob", sec); if (j && el) el.textContent = videoJobText(j); });
+  const xj = {};
+  (page.jobs || []).filter(j => j.kind === "export").sort((a, b) => a.id - b.id).forEach(j => xj[j.scenario] = j);
+  document.querySelectorAll(".scen").forEach(sec => { const j = xj[sec.dataset.name], el = $(".xjob", sec);
+    if (j && el) el.textContent = j.status === "done" ? "Done: reload the page for the download link." : j.status === "failed" ? (j.error || "Failed.") : (j.stage || "Waiting") + "…"; });
 
   document.querySelectorAll(".scen").forEach(sec => {
     const files = [...sec.querySelectorAll("option")].map(o => o.value);
-    const js = (page.jobs || []).filter(j => j.kind !== "videos" && files.includes(j.run)).sort((a, b) => b.id - a.id);
+    const js = (page.jobs || []).filter(j => j.kind !== "videos" && j.kind !== "export" && files.includes(j.run)).sort((a, b) => b.id - a.id);
     const el = $(".job", sec), j = js[0];
     if (!el) return;
     const busy = (page.jobs || []).some(x => x.kind !== "videos" && (x.status === "queued" || x.status === "running"));

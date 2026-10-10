@@ -1,4 +1,4 @@
--- AimRecorder, phase 7: READ-ONLY recorder (up to 8 bots with id, health and visible body position, plus kills and misses). Never writes to the game, never changes scores.
+-- AimRecorder, phase 8: READ-ONLY recorder (up to 8 bots with id, health and visible body position, plus kills and misses). Never writes to the game, never changes scores.
 -- AimStats copy. During a run (ranked runs too) it samples 60 times a second (120 in clicking runs): camera aim
 -- and position, every bot's position, the hit counter and whether M1 is held. It only reads these values; it never
 -- sets scores, timers, bots or anything ranked. Samples stay in memory and are written once, when the run ends,
@@ -9,8 +9,8 @@ local DIR = "ue4ss/Mods/AimRecorder/"
 local HUD = "/Game/Aimbeast/UI/HUD/T_HUD.T_HUD_C"
 local PAWN = "/Game/Aimbeast/Player/Trainer/AB_C_Trainer.AB_C_Trainer_C"
 local MAIN_GI = "/Game/Aimbeast/Main_GI.Main_GI_C"
-local RATE = 1 / 60
-local CLICK_RATE = 1 / 120       -- clicking runs (6+ separate clicks) switch to 120 snapshots a second for click timing
+local RATE = 1 / 120              -- every scenario at 120 snapshots a second; limited by the game's frame rate
+local CLICK_RATE = 1 / 120       -- clicking runs are still detected (6+ separate clicks) and marked in the log
 local CLICK_PRESSES = 6
 local MAXBOTS = 8                  -- switching scenarios have 4-6 bots at once (phase 3, 2026-10-08)
 local RECORD_RANKED = true         -- ranked runs are recorded too. Still read-only.
@@ -129,7 +129,7 @@ local function endRun(reason)
         f:write(table.concat(r.rows, "\n")); f:write("\n"); f:close()
     end
     log(string.format("%s: %s%s, %d samples over %.1f s, cost %.3f ms per sample, %.4f ms per frame (%d frames) -> %s",
-        reason, scenario, r.clicking and " (clicking, 120/s)" or "", r.samples, r.t, r.samples > 0 and 1000 * r.cost / r.samples or 0, r.ticks > 0 and 1000 * r.cost / r.ticks or 0, r.ticks, path))
+        reason, scenario, r.clicking and " (clicking)" or "", r.samples, r.t, r.samples > 0 and 1000 * r.cost / r.samples or 0, r.ticks > 0 and 1000 * r.cost / r.ticks or 0, r.ticks, path))
 end
 
 local hooked = { hud = false, pawn = false, gi = false }
@@ -180,4 +180,4 @@ RegisterKeyBind(Key.F7, function()
     log("recording " .. (enabled and "ON" or "OFF") .. " (F7)")
 end)
 RegisterHook("/Script/Engine.PlayerController:ClientRestart", function() tryHooks() end)
-log("loaded (phase 7 recorder, read-only, ranked " .. (RECORD_RANKED and "on" or "off") .. ")")
+log("loaded (phase 8 recorder, read-only, ranked " .. (RECORD_RANKED and "on" or "off") .. ")")
