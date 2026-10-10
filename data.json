@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-10 21:21",
- "updated_utc": "2026-10-10T14:21:19Z",
+ "updated": "2026-10-10 21:26",
+ "updated_utc": "2026-10-10T14:26:19Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
-   "RANK INT B": 41
+   "RANK INT B": 43
   }
  },
  "plan_start": "2026-10-07",
@@ -127,7 +127,7 @@
    "official_best": 580.0,
    "best_14d": 536.0,
    "median_14d": 472,
-   "runs_14d": 89,
+   "runs_14d": 91,
    "steps": [
     0.0,
     180.0,
@@ -583,9 +583,9 @@
     },
     {
      "date": "2026-10-10",
-     "median": 476,
+     "median": 462,
      "best": 532,
-     "runs": 13
+     "runs": 15
     }
    ]
   },
@@ -849,7 +849,7 @@
  "days": [
   {
    "date": "2026-10-10",
-   "runs": 43,
+   "runs": 45,
    "restarts": 65,
    "rest_median_s": 82,
    "rest_longest_s": 511,
@@ -882,9 +882,9 @@
    "playlists": [
     {
      "name": "RANK INT B",
-     "runs": 41,
+     "runs": 43,
      "first": "08:51",
-     "last": "21:19"
+     "last": "21:25"
     },
     {
      "name": "(single scenario)",
@@ -912,11 +912,11 @@
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
-     "runs": 13,
+     "runs": 15,
      "routine": "RANK INT B",
      "first": "09:11",
      "best": 532,
-     "median": 476
+     "median": 462
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -1668,7 +1668,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 274,
+  "runs": 276,
   "days": 5,
   "groups": [
    {
@@ -1683,8 +1683,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 103,
-    "pct": 102.6
+    "runs": 104,
+    "pct": 102.4
    },
    {
     "label": "First run after a break of 15 min+",
@@ -1900,12 +1900,12 @@
    },
    {
     "scenario": "PASU TRACK XYZ - RANKED",
-    "runs": 13,
-    "on_target": 27,
+    "runs": 15,
+    "on_target": 26,
     "reaction_ms": 167,
     "overshoot_pct": 34,
     "pps_by_distance": {
-     "mid": 3.8,
+     "mid": 3.7,
      "close": 4.2
     }
    },
