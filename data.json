@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-10 22:51",
- "updated_utc": "2026-10-10T15:51:19Z",
+ "updated": "2026-10-10 22:56",
+ "updated_utc": "2026-10-10T15:56:19Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
@@ -864,7 +864,7 @@
  "days": [
   {
    "date": "2026-10-10",
-   "runs": 65,
+   "runs": 66,
    "restarts": 97,
    "rest_median_s": 82,
    "rest_longest_s": 511,
@@ -915,9 +915,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 11,
+     "runs": 12,
      "first": "22:18",
-     "last": "22:49"
+     "last": "22:54"
     }
    ],
    "scenarios": [
@@ -1011,11 +1011,11 @@
     },
     {
      "name": "SLOW ACCEL 'STT' SHORT",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS WEAKNESS",
      "first": "22:49",
-     "best": 293,
-     "median": 293
+     "best": 352,
+     "median": 322
     }
    ]
   },
@@ -1743,13 +1743,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 296,
+  "runs": 297,
   "days": 5,
   "groups": [
    {
     "label": "First attempt on a scenario",
     "runs": 86,
-    "pct": 99.3
+    "pct": 99.1
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2017,12 +2017,12 @@
    },
    {
     "scenario": "SLOW ACCEL STT SHORT",
-    "runs": 1,
-    "on_target": 32,
+    "runs": 2,
+    "on_target": 33,
     "reaction_ms": null,
-    "overshoot_pct": 27,
+    "overshoot_pct": 24,
     "pps_by_distance": {
-     "mid": 4.8
+     "mid": 5.3
     }
    },
    {
