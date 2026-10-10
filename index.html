@@ -228,14 +228,14 @@ summary { min-height: 44px; align-items: center; }
     <div class="card scroll">
       <table>
         <tr><th>Day</th><th>Main hour</th><th>Optional, later</th></tr>
-        <tr><td>A days</td><td class="rt">RANK INT A</td><td><span class="rt">ZEUS BUILDER</span>, then <span class="rt">RANK INT A</span> again</td></tr>
+        <tr><td>A days</td><td class="rt">RANK INT A</td><td><span class="rt">ZEUS WEAKNESS</span>, then <span class="rt">RANK INT A</span> again</td></tr>
         <tr><td>B days</td><td class="rt">RANK INT B</td><td><span class="rt">RANK INT B</span> again</td></tr>
       </table>
     </div>
     <ul class="sub">
       <li><span class="rt">RANK INT A</span>: Smooth Thin Track V2, Air Track Smooth V3 150%, Air Control Sphere - S. 8 runs each, after a 2-run warm-up on the easier Air Control Sphere.</li>
       <li><span class="rt">RANK INT B</span>: Pasu Track Evo (RCT) - 0.85X, Pasu Track XYZ, Zeus Track Evo - Noblink. 8 runs each, after a 2-run warm-up on Pasu Track Evo (RCT) - 0.85X itself in Normal mode, so the first ranked runs aren't cold (changed Oct 10: the slower 0.6X warm-up didn't stop the cold start).</li>
-      <li><span class="rt">ZEUS BUILDER</span>: 7 drills, 2 runs each, that train the parts of Zeus Track, mostly its fast left-right direction changes and stopping on the bot without over-aiming, plus one drill for its up/down kicks. It starts with a 2-run warm-up on the easier Zeus Track Evo - Noblink (EZ).</li>
+      <li><span class="rt">ZEUS WEAKNESS</span> (replaced Zeus Builder on Oct 10): 17 runs aimed only at the parts of Zeus Track the aim recorder shows are weakest. Those are the moment the bot changes direction, over-aiming after it, and the close part of each round, which decides good runs from bad. It starts with 1 run of the easier Zeus Track Evo - Noblink (EZ). Most runs go to close-range drills: SCX Close Strafes 3, Pennytracking 3, Thin Fast 2, Closely Strafing Kytan 1. Then Slow Accel 'STT' Short 2 for mid distance, Zeus Track Far BZN Edition 2 for the far start, and 3 ranked Zeus Track runs to finish.</li>
       <li>A 2–3 minute break away from the screen at every scenario switch.</li>
     </ul>
   </section>
@@ -247,8 +247,8 @@ summary { min-height: 44px; align-items: center; }
       <li><b>Spread out, not crammed.</b> Each scenario gets 8 runs every other practice day, so there's a full day of rest between practising the same thing.</li>
       <li><b>Missed a day? Pick up where you left off.</b> The plan follows the playlists, not the calendar. The next playlist is always the opposite of the last one finished in full. A playlist stopped halfway is played again next time.</li>
       <li><b>The slowest scenario decides the finish.</b> All six need to reach Master 3, so extra time goes to the ones furthest away.</li>
-      <li><b>Zeus Track gets its own practice.</b> It sat at the same weekly median for five weeks despite hundreds of runs, so its parts are trained separately. It's a trial: if Zeus hasn't moved by Oct 25, that time goes back to the Advanced playlist.</li>
-      <li><b>Intermediate only, for now.</b> There's no evidence yet that Advanced practice speeds up Intermediate, so all extra time goes to the six target scenarios and Zeus Builder. Advanced comes back after the Oct 25 check-in if a scenario stalls, or once all six reach Master 3.</li>
+      <li><b>Zeus Track gets its own practice.</b> It sat at the same weekly median for five weeks despite hundreds of runs, so its weakest parts are trained separately. The aim recorder picks the drills, and the playlist changes as the data does.</li>
+      <li><b>Intermediate only, for now.</b> There's no evidence yet that Advanced practice speeds up Intermediate, so all extra time goes to the six target scenarios and Zeus Weakness. Advanced comes back after the Oct 25 check-in if a scenario stalls, or once all six reach Master 3.</li>
       <li><b>Ranked runs come first.</b> Extra practice happens later in the day, so attempts at new ranks are always fresh.</li>
       <li><b>Honest timeline.</b> On current form every scenario is 5–7 ranks short of Master 3. That's months, not weeks, so progress is judged by the weekly trend.</li>
     </ul>
@@ -269,7 +269,7 @@ summary { min-height: 44px; align-items: center; }
 const nice = n => String(n).toLowerCase().replace(/(^|[\s(\-])([a-z])/g, (m, a, c) => a + c.toUpperCase()).replace(/\b(rct|xyz|stt|fs|ufo|ez)\b/gi, w => w.toUpperCase()).replace(/\b(V\d|0\.85x)\b/gi, w => w.toUpperCase()).replace(/ - S$/, " - S");
 const WD = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], MO = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const nd = iso => { const [y, m, d] = iso.split("-").map(Number); const t = new Date(y, m - 1, d); return `${WD[t.getDay()]} ${d} ${MO[m - 1]}`; };
-const plain = r => r.replace(/^RANK INT ([AB])$/, "playlist $1").replace(/^RANK ADV ([AB])$/, "advanced playlist $1").replace(/^ZEUS BUILDER$/, "Zeus Builder");
+const plain = r => r.replace(/^RANK INT ([AB])$/, "playlist $1").replace(/^RANK ADV ([AB])$/, "advanced playlist $1").replace(/^ZEUS BUILDER$/, "Zeus Builder").replace(/^ZEUS WEAKNESS$/, "Zeus Weakness");
 const fmtS = s => s == null ? "–" : (s >= 90 ? (s / 60).toFixed(1) + " min" : s + " s");
 const el = (tag, attrs = {}, html = "") => Object.assign(document.createElement(tag), attrs, html ? { innerHTML: html } : {});
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -555,7 +555,7 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   const ago = isNaN(mins) ? d.updated + " (Cambodia time)" : mins < 1 ? "just now" : mins < 60 ? mins + " min ago" : mins < 1440 ? Math.round(mins / 60) + " h ago" : Math.round(mins / 1440) + " days ago";
   document.getElementById("updated").textContent = "Updated " + ago + (mins > 1440 ? " · may be out of date" : "");
   const prog = Object.entries(d.today.progress || {});
-  document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 16 : 26)} of ${k === "ZEUS BUILDER" ? 16 : 26} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
+  document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 16 : k === "ZEUS WEAKNESS" ? 17 : 26)} of ${k === "ZEUS BUILDER" ? 16 : k === "ZEUS WEAKNESS" ? 17 : 26} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
   TODAY = d.today.date;
   PBS = d.pbs || PBS; (PBS.events || []).forEach(e => PBDAYS[e.date] = 1);
   pbBanner(PBS, d.days);
