@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-10 09:01",
- "updated_utc": "2026-10-10T02:01:19Z",
+ "updated": "2026-10-10 09:06",
+ "updated_utc": "2026-10-10T02:06:19Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
-   "RANK INT B": 6
+   "RANK INT B": 8
   }
  },
  "plan_start": "2026-10-07",
@@ -99,7 +99,7 @@
    "official_best": 398.0,
    "best_14d": 398.0,
    "median_14d": 339,
-   "runs_14d": 79,
+   "runs_14d": 81,
    "steps": [
     0.0,
     138.0,
@@ -507,9 +507,9 @@
     },
     {
      "date": "2026-10-10",
-     "median": 320,
-     "best": 340,
-     "runs": 4
+     "median": 334,
+     "best": 385,
+     "runs": 6
     }
    ]
   },
@@ -822,17 +822,17 @@
  "days": [
   {
    "date": "2026-10-10",
-   "runs": 6,
-   "restarts": 6,
-   "rest_median_s": 45,
+   "runs": 8,
+   "restarts": 13,
+   "rest_median_s": 40,
    "rest_longest_s": 96,
    "breaks": [],
    "playlists": [
     {
      "name": "RANK INT B",
-     "runs": 6,
+     "runs": 8,
      "first": "08:51",
-     "last": "09:01"
+     "last": "09:05"
     }
    ],
    "scenarios": [
@@ -846,11 +846,11 @@
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
-     "runs": 4,
+     "runs": 6,
      "routine": "RANK INT B",
      "first": "08:54",
-     "best": 340,
-     "median": 320
+     "best": 385,
+     "median": 334
     }
    ]
   },
@@ -1578,13 +1578,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 253,
+  "runs": 255,
   "days": 5,
   "groups": [
    {
     "label": "First attempt on a scenario",
     "runs": 74,
-    "pct": 98.6
+    "pct": 98.2
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1593,7 +1593,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 91,
+    "runs": 93,
     "pct": 102.6
    },
    {
@@ -1776,13 +1776,13 @@
    },
    {
     "scenario": "PASU TRACK EVO RCT - 0.85X",
-    "runs": 4,
-    "on_target": 24,
+    "runs": 6,
+    "on_target": 25,
     "reaction_ms": 167,
     "overshoot_pct": 33,
     "pps_by_distance": {
-     "far": 2.4,
-     "mid": 5.3
+     "far": 3.3,
+     "mid": 5.4
     }
    }
   ]
@@ -1939,16 +1939,16 @@
   "2026-10-10": [
    {
     "scenario": "PASU Track Evo (RCT) - 0.85X",
-    "score": 340,
-    "time": "08:57",
+    "score": 385,
+    "time": "09:04",
     "gif": "best-pasu085-2026-10-10",
     "video": true,
-    "on_target": 26,
-    "reaction_ms": 167,
-    "overshoot_pct": 29,
+    "on_target": 28,
+    "reaction_ms": 154,
+    "overshoot_pct": 31,
     "best_14d": 398,
     "master3": 506,
-    "note": "Best of 4 recorded today (median 320). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 6 recorded today (median 334). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (event 2 is triggered on hit (speed up/down))"
     }
@@ -2020,6 +2020,13 @@
      "title": "Air Control Sphere - S",
      "score": 853,
      "old": 780
+    }
+   ],
+   "2026-10-10": [
+    {
+     "title": "PASU Track Evo (RCT) - 0.85X",
+     "score": 385,
+     "old": 354
     }
    ]
   }
