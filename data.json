@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-10 22:36",
- "updated_utc": "2026-10-10T15:36:19Z",
+ "updated": "2026-10-10 22:41",
+ "updated_utc": "2026-10-10T15:41:19Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
@@ -864,9 +864,9 @@
  "days": [
   {
    "date": "2026-10-10",
-   "runs": 62,
-   "restarts": 92,
-   "rest_median_s": 81,
+   "runs": 63,
+   "restarts": 93,
+   "rest_median_s": 80,
    "rest_longest_s": 511,
    "breaks": [
     {
@@ -915,9 +915,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 8,
+     "runs": 9,
      "first": "22:18",
-     "last": "22:36"
+     "last": "22:37"
     }
    ],
    "scenarios": [
@@ -1000,6 +1000,14 @@
      "first": "22:32",
      "best": 565,
      "median": 540
+    },
+    {
+     "name": "THIN FAST",
+     "runs": 1,
+     "routine": "ZEUS WEAKNESS",
+     "first": "22:37",
+     "best": 1175,
+     "median": 1175
     }
    ]
   },
@@ -1727,12 +1735,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 293,
+  "runs": 294,
   "days": 5,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 84,
+    "runs": 85,
     "pct": 99.1
    },
    {
@@ -1997,6 +2005,17 @@
     "overshoot_pct": 31,
     "pps_by_distance": {
      "close": 9.7
+    }
+   },
+   {
+    "scenario": "THIN FAST",
+    "runs": 1,
+    "on_target": 20,
+    "reaction_ms": 175,
+    "overshoot_pct": 59,
+    "pps_by_distance": {
+     "mid": 4.0,
+     "close": 3.8
     }
    },
    {
