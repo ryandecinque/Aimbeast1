@@ -470,7 +470,7 @@ def draw(a, R, shape, est, M, sim, factor, out):
     def write(name, Wd, Ht, frames):
         p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{Wd}x{Ht}", "-r", "30", "-i", "-",
                               "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "21", "-preset", "medium", "-movflags", "+faststart", "-an", name],
-                             stdin=subprocess.PIPE)
+                             stdin=subprocess.PIPE, creationflags=0x08000000)   # no console window popping up over the game
         for im in frames: p.stdin.write(im.tobytes())
         p.stdin.close(); p.wait(); print("wrote", name)
 

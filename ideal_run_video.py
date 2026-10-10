@@ -147,7 +147,7 @@ for i in range(n):
 
 def write(name, Wd, Ht, frame_fn):
     p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{Wd}x{Ht}", "-r", "30", "-i", "-",
-                          "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20", "-preset", "medium", "-movflags", "+faststart", name], stdin=subprocess.PIPE)
+                          "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20", "-preset", "medium", "-movflags", "+faststart", name], stdin=subprocess.PIPE, creationflags=0x08000000)   # no console window popping up over the game
     lead = frame_fn(VIEW0).tobytes()                     # 3 s still of the start position (no countdown footage)
     for _ in range(90): p.stdin.write(lead)
     for i in range(VIEW0, end, 2):                       # the run, 30 fps
