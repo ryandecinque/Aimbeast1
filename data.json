@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-10 23:09",
- "updated_utc": "2026-10-10T16:09:53Z",
+ "updated": "2026-10-10 23:16",
+ "updated_utc": "2026-10-10T16:16:19Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
@@ -864,7 +864,7 @@
  "days": [
   {
    "date": "2026-10-10",
-   "runs": 71,
+   "runs": 72,
    "restarts": 104,
    "rest_median_s": 83,
    "rest_longest_s": 511,
@@ -898,6 +898,12 @@
      "before": "ZEUS WEAKNESS",
      "at": "21:50",
      "minutes": 27.2
+    },
+    {
+     "after": "ZEUS WEAKNESS",
+     "before": "ZEUS WEAKNESS 3",
+     "at": "23:08",
+     "minutes": 3.2
     }
    ],
    "playlists": [
@@ -918,6 +924,12 @@
      "runs": 17,
      "first": "22:18",
      "last": "23:08"
+    },
+    {
+     "name": "ZEUS WEAKNESS 3",
+     "runs": 1,
+     "first": "23:12",
+     "last": "23:12"
     }
    ],
    "scenarios": [
@@ -979,11 +991,11 @@
     },
     {
      "name": "SCX CLOSE STRAFES",
-     "runs": 3,
+     "runs": 4,
      "routine": "ZEUS WEAKNESS",
      "first": "22:19",
-     "best": 584,
-     "median": 580
+     "best": 648,
+     "median": 582
     },
     {
      "name": "CLOSELY STRAFING KYTAN",
@@ -1751,13 +1763,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 302,
+  "runs": 303,
   "days": 5,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 88,
-    "pct": 99.1
+    "runs": 89,
+    "pct": 99.2
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2015,10 +2027,10 @@
    },
    {
     "scenario": "SCX CLOSE STRAFES",
-    "runs": 3,
-    "on_target": 41,
-    "reaction_ms": 150,
-    "overshoot_pct": 31,
+    "runs": 4,
+    "on_target": 44,
+    "reaction_ms": 142,
+    "overshoot_pct": 28,
     "pps_by_distance": {
      "close": 9.7
     }
