@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-10 22:21",
- "updated_utc": "2026-10-10T15:21:19Z",
+ "updated": "2026-10-10 22:26",
+ "updated_utc": "2026-10-10T15:26:19Z",
  "today": {
   "date": "2026-10-10",
   "progress": {
@@ -859,7 +859,7 @@
  "days": [
   {
    "date": "2026-10-10",
-   "runs": 56,
+   "runs": 57,
    "restarts": 88,
    "rest_median_s": 82,
    "rest_longest_s": 511,
@@ -910,9 +910,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 2,
+     "runs": 3,
      "first": "22:18",
-     "last": "22:19"
+     "last": "22:25"
     }
    ],
    "scenarios": [
@@ -974,11 +974,11 @@
     },
     {
      "name": "SCX CLOSE STRAFES",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS WEAKNESS",
      "first": "22:19",
      "best": 580,
-     "median": 580
+     "median": 576
     }
    ]
   },
@@ -1706,7 +1706,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 287,
+  "runs": 288,
   "days": 5,
   "groups": [
    {
@@ -1949,12 +1949,12 @@
    },
    {
     "scenario": "SCX CLOSE STRAFES",
-    "runs": 1,
-    "on_target": 41,
-    "reaction_ms": 133,
-    "overshoot_pct": 30,
+    "runs": 2,
+    "on_target": 40,
+    "reaction_ms": 142,
+    "overshoot_pct": 28,
     "pps_by_distance": {
-     "close": 9.7
+     "close": 9.6
     }
    },
    {
