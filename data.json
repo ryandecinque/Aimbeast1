@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-11 08:36",
- "updated_utc": "2026-10-11T01:36:19Z",
+ "updated": "2026-10-11 08:41",
+ "updated_utc": "2026-10-11T01:41:19Z",
  "today": {
   "date": "2026-10-11",
   "progress": {}
@@ -873,9 +873,9 @@
  "days": [
   {
    "date": "2026-10-11",
-   "runs": 12,
-   "restarts": 13,
-   "rest_median_s": 52,
+   "runs": 14,
+   "restarts": 15,
+   "rest_median_s": 51,
    "rest_longest_s": 839,
    "breaks": [
     {
@@ -906,9 +906,9 @@
    "playlists": [
     {
      "name": "ZEUS WEAKNESS 3",
-     "runs": 9,
+     "runs": 11,
      "first": "01:09",
-     "last": "08:34"
+     "last": "08:38"
     },
     {
      "name": "(single scenario)",
@@ -944,10 +944,10 @@
     },
     {
      "name": "ZEUS TRACK FAR BZN EDITION",
-     "runs": 2,
+     "runs": 4,
      "routine": "(single scenario)",
      "first": "07:59",
-     "best": 1095,
+     "best": 1107,
      "median": 1082
     }
    ]
@@ -1853,17 +1853,17 @@
   }
  ],
  "rest_effect": {
-  "runs": 315,
+  "runs": 317,
   "days": 6,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 98,
-    "pct": 99.4
+    "runs": 99,
+    "pct": 99.3
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 68,
+    "runs": 69,
     "pct": 100.0
    },
    {
@@ -2217,7 +2217,7 @@
    },
    {
     "scenario": "ZEUS TRACK FAR BZN EDITION",
-    "runs": 2,
+    "runs": 4,
     "on_target": 43,
     "reaction_ms": null,
     "overshoot_pct": 28,
