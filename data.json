@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-12 01:51",
- "updated_utc": "2026-10-11T18:51:19Z",
+ "updated": "2026-10-12 01:56",
+ "updated_utc": "2026-10-11T18:56:19Z",
  "today": {
   "date": "2026-10-12",
   "progress": {}
@@ -873,17 +873,17 @@
  "days": [
   {
    "date": "2026-10-12",
-   "runs": 3,
-   "restarts": 6,
-   "rest_median_s": 15,
+   "runs": 5,
+   "restarts": 8,
+   "rest_median_s": 18,
    "rest_longest_s": 104,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS WEAKNESS 3",
-     "runs": 3,
+     "runs": 5,
      "first": "01:46",
-     "last": "01:49"
+     "last": "01:53"
     }
    ],
    "scenarios": [
@@ -897,11 +897,19 @@
     },
     {
      "name": "PENNYTRACKING",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS WEAKNESS 3",
      "first": "01:47",
      "best": 605,
-     "median": 545
+     "median": 580
+    },
+    {
+     "name": "ZEUS TRACK FAR BZN EDITION",
+     "runs": 1,
+     "routine": "ZEUS WEAKNESS 3",
+     "first": "01:53",
+     "best": 1060,
+     "median": 1060
     }
    ]
   },
@@ -1899,13 +1907,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 344,
+  "runs": 346,
   "days": 7,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 110,
-    "pct": 99.6
+    "runs": 111,
+    "pct": 99.5
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1914,7 +1922,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 123,
+    "runs": 124,
     "pct": 101.2
    },
    {
@@ -2275,13 +2283,13 @@
   "2026-10-12": [
    {
     "scenario": "PENNYTRACKING",
-    "runs": 2,
-    "on_target": 16,
+    "runs": 3,
+    "on_target": 15,
     "reaction_ms": 167,
     "overshoot_pct": 64,
     "pps_by_distance": {
-     "mid": 2.7,
-     "close": 1.8
+     "mid": 2.8,
+     "close": 1.9
     }
    },
    {
@@ -2292,6 +2300,16 @@
     "overshoot_pct": 32,
     "pps_by_distance": {
      "close": 10.2
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK FAR BZN EDITION",
+    "runs": 1,
+    "on_target": 44,
+    "reaction_ms": null,
+    "overshoot_pct": 32,
+    "pps_by_distance": {
+     "far": 17.4
     }
    }
   ]
