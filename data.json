@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-12 01:26",
- "updated_utc": "2026-10-11T18:26:20Z",
+ "updated": "2026-10-12 01:51",
+ "updated_utc": "2026-10-11T18:51:19Z",
  "today": {
   "date": "2026-10-12",
   "progress": {}
@@ -871,6 +871,40 @@
   }
  ],
  "days": [
+  {
+   "date": "2026-10-12",
+   "runs": 3,
+   "restarts": 6,
+   "rest_median_s": 15,
+   "rest_longest_s": 104,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "ZEUS WEAKNESS 3",
+     "runs": 3,
+     "first": "01:46",
+     "last": "01:49"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "SCX CLOSE STRAFES",
+     "runs": 1,
+     "routine": "ZEUS WEAKNESS 3",
+     "first": "01:46",
+     "best": 616,
+     "median": 616
+    },
+    {
+     "name": "PENNYTRACKING",
+     "runs": 2,
+     "routine": "ZEUS WEAKNESS 3",
+     "first": "01:47",
+     "best": 605,
+     "median": 545
+    }
+   ]
+  },
   {
    "date": "2026-10-11",
    "runs": 38,
@@ -1865,17 +1899,17 @@
   }
  ],
  "rest_effect": {
-  "runs": 341,
-  "days": 6,
+  "runs": 344,
+  "days": 7,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 108,
-    "pct": 99.5
+    "runs": 110,
+    "pct": 99.6
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 71,
+    "runs": 72,
     "pct": 99.9
    },
    {
@@ -2235,6 +2269,29 @@
     "overshoot_pct": 26,
     "pps_by_distance": {
      "far": 17.9
+    }
+   }
+  ],
+  "2026-10-12": [
+   {
+    "scenario": "PENNYTRACKING",
+    "runs": 2,
+    "on_target": 16,
+    "reaction_ms": 167,
+    "overshoot_pct": 64,
+    "pps_by_distance": {
+     "mid": 2.7,
+     "close": 1.8
+    }
+   },
+   {
+    "scenario": "SCX CLOSE STRAFES",
+    "runs": 1,
+    "on_target": 41,
+    "reaction_ms": 150,
+    "overshoot_pct": 32,
+    "pps_by_distance": {
+     "close": 10.2
     }
    }
   ]
