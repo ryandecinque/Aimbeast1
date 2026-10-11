@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-11 08:31",
- "updated_utc": "2026-10-11T01:31:19Z",
+ "updated": "2026-10-11 08:36",
+ "updated_utc": "2026-10-11T01:36:19Z",
  "today": {
   "date": "2026-10-11",
   "progress": {}
@@ -873,9 +873,9 @@
  "days": [
   {
    "date": "2026-10-11",
-   "runs": 9,
-   "restarts": 11,
-   "rest_median_s": 131,
+   "runs": 12,
+   "restarts": 13,
+   "rest_median_s": 52,
    "rest_longest_s": 839,
    "breaks": [
     {
@@ -906,9 +906,9 @@
    "playlists": [
     {
      "name": "ZEUS WEAKNESS 3",
-     "runs": 6,
+     "runs": 9,
      "first": "01:09",
-     "last": "08:30"
+     "last": "08:34"
     },
     {
      "name": "(single scenario)",
@@ -920,11 +920,11 @@
    "scenarios": [
     {
      "name": "SCX CLOSE STRAFES",
-     "runs": 3,
+     "runs": 5,
      "routine": "ZEUS WEAKNESS 3",
      "first": "01:09",
      "best": 649,
-     "median": 583
+     "median": 617
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -936,11 +936,11 @@
     },
     {
      "name": "PENNYTRACKING",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS WEAKNESS 3",
      "first": "07:45",
-     "best": 620,
-     "median": 595
+     "best": 635,
+     "median": 620
     },
     {
      "name": "ZEUS TRACK FAR BZN EDITION",
@@ -1853,17 +1853,17 @@
   }
  ],
  "rest_effect": {
-  "runs": 312,
+  "runs": 315,
   "days": 6,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 96,
-    "pct": 99.3
+    "runs": 98,
+    "pct": 99.4
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 67,
+    "runs": 68,
     "pct": 100.0
    },
    {
@@ -2184,23 +2184,23 @@
   "2026-10-11": [
    {
     "scenario": "PENNYTRACKING",
-    "runs": 2,
+    "runs": 3,
     "on_target": 19,
-    "reaction_ms": 154,
-    "overshoot_pct": 67,
+    "reaction_ms": 159,
+    "overshoot_pct": 66,
     "pps_by_distance": {
-     "mid": 3.7,
-     "close": 1.9
+     "mid": 3.0,
+     "close": 2.0
     }
    },
    {
     "scenario": "SCX CLOSE STRAFES",
-    "runs": 3,
-    "on_target": 39,
+    "runs": 5,
+    "on_target": 55,
     "reaction_ms": 134,
-    "overshoot_pct": 34,
+    "overshoot_pct": 38,
     "pps_by_distance": {
-     "close": 9.7
+     "close": 10.3
     }
    },
    {
