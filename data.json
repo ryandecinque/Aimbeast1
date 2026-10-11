@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-11 09:21",
- "updated_utc": "2026-10-11T02:21:19Z",
+ "updated": "2026-10-11 09:26",
+ "updated_utc": "2026-10-11T02:26:21Z",
  "today": {
   "date": "2026-10-11",
   "progress": {}
@@ -873,9 +873,9 @@
  "days": [
   {
    "date": "2026-10-11",
-   "runs": 23,
-   "restarts": 23,
-   "rest_median_s": 80,
+   "runs": 25,
+   "restarts": 26,
+   "rest_median_s": 58,
    "rest_longest_s": 839,
    "breaks": [
     {
@@ -912,9 +912,9 @@
    "playlists": [
     {
      "name": "ZEUS WEAKNESS 3",
-     "runs": 20,
+     "runs": 22,
      "first": "01:09",
-     "last": "09:18"
+     "last": "09:24"
     },
     {
      "name": "(single scenario)",
@@ -942,7 +942,7 @@
     },
     {
      "name": "PENNYTRACKING",
-     "runs": 7,
+     "runs": 9,
      "routine": "ZEUS WEAKNESS 3",
      "first": "07:45",
      "best": 685,
@@ -1859,7 +1859,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 326,
+  "runs": 328,
   "days": 6,
   "groups": [
    {
@@ -1874,7 +1874,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 114,
+    "runs": 115,
     "pct": 102.2
    },
    {
@@ -2190,12 +2190,12 @@
   "2026-10-11": [
    {
     "scenario": "PENNYTRACKING",
-    "runs": 7,
+    "runs": 9,
     "on_target": 19,
     "reaction_ms": 150,
     "overshoot_pct": 66,
     "pps_by_distance": {
-     "mid": 3.0,
+     "mid": 2.8,
      "close": 2.0
     }
    },
