@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-11 08:01",
- "updated_utc": "2026-10-11T01:01:19Z",
+ "updated": "2026-10-11 08:16",
+ "updated_utc": "2026-10-11T01:16:19Z",
  "today": {
   "date": "2026-10-11",
   "progress": {}
@@ -873,9 +873,9 @@
  "days": [
   {
    "date": "2026-10-11",
-   "runs": 6,
-   "restarts": 7,
-   "rest_median_s": 250,
+   "runs": 8,
+   "restarts": 9,
+   "rest_median_s": 131,
    "rest_longest_s": 368,
    "breaks": [
     {
@@ -895,14 +895,20 @@
      "before": "(single scenario)",
      "at": "07:45",
      "minutes": 12.9
+    },
+    {
+     "after": "(single scenario)",
+     "before": "ZEUS WEAKNESS 3",
+     "at": "07:59",
+     "minutes": 12.6
     }
    ],
    "playlists": [
     {
      "name": "ZEUS WEAKNESS 3",
-     "runs": 3,
+     "runs": 5,
      "first": "01:09",
-     "last": "07:45"
+     "last": "08:15"
     },
     {
      "name": "(single scenario)",
@@ -914,11 +920,11 @@
    "scenarios": [
     {
      "name": "SCX CLOSE STRAFES",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS WEAKNESS 3",
      "first": "01:09",
-     "best": 583,
-     "median": 558
+     "best": 649,
+     "median": 583
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -930,11 +936,11 @@
     },
     {
      "name": "PENNYTRACKING",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS WEAKNESS 3",
      "first": "07:45",
-     "best": 570,
-     "median": 570
+     "best": 620,
+     "median": 595
     },
     {
      "name": "ZEUS TRACK FAR BZN EDITION",
@@ -1847,13 +1853,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 309,
+  "runs": 311,
   "days": 6,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 93,
-    "pct": 99.2
+    "runs": 95,
+    "pct": 99.5
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2178,23 +2184,23 @@
   "2026-10-11": [
    {
     "scenario": "PENNYTRACKING",
-    "runs": 1,
+    "runs": 2,
     "on_target": 19,
-    "reaction_ms": 150,
-    "overshoot_pct": 64,
+    "reaction_ms": 154,
+    "overshoot_pct": 67,
     "pps_by_distance": {
      "mid": 3.7,
-     "close": 1.8
+     "close": 1.9
     }
    },
    {
     "scenario": "SCX CLOSE STRAFES",
-    "runs": 2,
-    "on_target": 37,
-    "reaction_ms": 142,
-    "overshoot_pct": 28,
+    "runs": 3,
+    "on_target": 39,
+    "reaction_ms": 134,
+    "overshoot_pct": 34,
     "pps_by_distance": {
-     "close": 9.3
+     "close": 9.7
     }
    },
    {
