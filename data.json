@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-11 01:31",
- "updated_utc": "2026-10-10T18:31:19Z",
+ "updated": "2026-10-11 07:41",
+ "updated_utc": "2026-10-11T00:41:19Z",
  "today": {
   "date": "2026-10-11",
   "progress": {}
@@ -873,8 +873,8 @@
  "days": [
   {
    "date": "2026-10-11",
-   "runs": 3,
-   "restarts": 2,
+   "runs": 4,
+   "restarts": 4,
    "rest_median_s": 131,
    "rest_longest_s": 131,
    "breaks": [
@@ -883,14 +883,20 @@
      "before": "(single scenario)",
      "at": "01:09",
      "minutes": 15.7
+    },
+    {
+     "after": "(single scenario)",
+     "before": "ZEUS WEAKNESS 3",
+     "at": "01:29",
+     "minutes": 367.9
     }
    ],
    "playlists": [
     {
      "name": "ZEUS WEAKNESS 3",
-     "runs": 1,
+     "runs": 2,
      "first": "01:09",
-     "last": "01:09"
+     "last": "07:38"
     },
     {
      "name": "(single scenario)",
@@ -902,11 +908,11 @@
    "scenarios": [
     {
      "name": "SCX CLOSE STRAFES",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS WEAKNESS 3",
      "first": "01:09",
-     "best": 533,
-     "median": 533
+     "best": 583,
+     "median": 558
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -1819,13 +1825,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 306,
+  "runs": 307,
   "days": 6,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 90,
-    "pct": 99.1
+    "runs": 91,
+    "pct": 99.2
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1839,8 +1845,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 21,
-    "pct": 98.5
+    "runs": 22,
+    "pct": 98.8
    }
   ]
  },
@@ -2150,12 +2156,12 @@
   "2026-10-11": [
    {
     "scenario": "SCX CLOSE STRAFES",
-    "runs": 1,
-    "on_target": 36,
-    "reaction_ms": 134,
-    "overshoot_pct": 34,
+    "runs": 2,
+    "on_target": 37,
+    "reaction_ms": 142,
+    "overshoot_pct": 28,
     "pps_by_distance": {
-     "close": 8.9
+     "close": 9.3
     }
    },
    {
