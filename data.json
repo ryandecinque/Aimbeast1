@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-13 02:06",
- "updated_utc": "2026-10-12T19:06:19Z",
+ "updated": "2026-10-13 02:11",
+ "updated_utc": "2026-10-12T19:11:20Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
-   "RANK INT A": 10
+   "RANK INT A": 11
   }
  },
  "plan_start": "2026-10-07",
@@ -70,8 +70,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 853.0,
-   "median_14d": 678,
-   "runs_14d": 80,
+   "median_14d": 675,
+   "runs_14d": 81,
    "steps": [
     0.0,
     240.0,
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 491,
-   "runs_14d": 145,
+   "runs_14d": 146,
    "steps": [
     0.0,
     198.0,
@@ -461,9 +461,9 @@
     },
     {
      "date": "2026-10-13",
-     "median": 640,
+     "median": 625,
      "best": 802,
-     "runs": 7
+     "runs": 8
     }
    ]
   },
@@ -800,6 +800,12 @@
      "median": 485,
      "best": 509,
      "runs": 15
+    },
+    {
+     "date": "2026-10-13",
+     "median": 481,
+     "best": 481,
+     "runs": 1
     }
    ]
   }
@@ -899,9 +905,9 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 10,
-   "restarts": 15,
-   "rest_median_s": 39,
+   "runs": 12,
+   "restarts": 23,
+   "rest_median_s": 36,
    "rest_longest_s": 165,
    "breaks": [
     {
@@ -909,14 +915,26 @@
      "before": "RANK INT A",
      "at": "00:04",
      "minutes": 107.4
+    },
+    {
+     "after": "RANK INT A",
+     "before": "(single scenario)",
+     "at": "02:06",
+     "minutes": 2.5
     }
    ],
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 10,
+     "runs": 11,
      "first": "00:00",
-     "last": "02:05"
+     "last": "02:06"
+    },
+    {
+     "name": "(single scenario)",
+     "runs": 1,
+     "first": "02:10",
+     "last": "02:10"
     }
    ],
    "scenarios": [
@@ -930,11 +948,19 @@
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
-     "runs": 7,
+     "runs": 8,
      "routine": "RANK INT A",
      "first": "01:53",
      "best": 802,
-     "median": 640
+     "median": 625
+    },
+    {
+     "name": "ZEUS TRACK EVO - NOBLINK",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "02:10",
+     "best": 481,
+     "median": 481
     }
    ]
   },
@@ -2011,23 +2037,23 @@
   }
  ],
  "rest_effect": {
-  "runs": 371,
+  "runs": 373,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 115,
-    "pct": 99.3
+    "runs": 116,
+    "pct": 99.2
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 75,
-    "pct": 99.9
+    "runs": 76,
+    "pct": 99.7
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
     "runs": 138,
-    "pct": 101.3
+    "pct": 101.4
    },
    {
     "label": "First run after a break of 15 min+",
@@ -2453,13 +2479,13 @@
   "2026-10-13": [
    {
     "scenario": "AIR CONTROL SPHERE - S - RANKED",
-    "runs": 7,
+    "runs": 8,
     "on_target": 41,
     "reaction_ms": null,
-    "overshoot_pct": 29,
+    "overshoot_pct": 31,
     "pps_by_distance": {
-     "mid": 11.4,
-     "close": 10.4
+     "mid": 10.2,
+     "close": 10.2
     }
    },
    {
@@ -2472,6 +2498,18 @@
      "far": 5.7,
      "mid": 7.8,
      "close": 6.7
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - NOBLINK",
+    "runs": 1,
+    "on_target": 33,
+    "reaction_ms": 150,
+    "overshoot_pct": 40,
+    "pps_by_distance": {
+     "far": 7.8,
+     "mid": 8.7,
+     "close": 7.7
     }
    }
   ]
@@ -2764,6 +2802,23 @@
     "model": {
      "file": "model-spheres-2026-10-13",
      "label": "Model: 962"
+    }
+   },
+   {
+    "scenario": "Zeus Track Evo - Noblink",
+    "score": 481,
+    "time": "02:09",
+    "gif": "best-zeus-2026-10-13",
+    "video": true,
+    "on_target": 33,
+    "reaction_ms": 150,
+    "overshoot_pct": 40,
+    "best_14d": 553,
+    "master3": 726,
+    "note": "Best of 1 recorded today (median 480). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "file": "model-zeus-2026-10-13",
+     "label": "Model: 577"
     }
    }
   ]
