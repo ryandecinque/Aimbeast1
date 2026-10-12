@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-12 23:46",
- "updated_utc": "2026-10-12T16:46:19Z",
+ "updated": "2026-10-12 23:51",
+ "updated_utc": "2026-10-12T16:51:19Z",
  "today": {
   "date": "2026-10-12",
   "progress": {
-   "RANK INT A": 9
+   "RANK INT A": 11
   }
  },
  "plan_start": "2026-10-07",
@@ -15,7 +15,7 @@
    "official_best": 555.0,
    "best_14d": 482.0,
    "median_14d": 428,
-   "runs_14d": 98,
+   "runs_14d": 99,
    "steps": [
     0.0,
     168.0,
@@ -43,7 +43,7 @@
    "official_best": 548.0,
    "best_14d": 545.0,
    "median_14d": 448,
-   "runs_14d": 85,
+   "runs_14d": 86,
    "steps": [
     0.0,
     180.0,
@@ -267,9 +267,9 @@
     },
     {
      "date": "2026-10-12",
-     "median": 443,
+     "median": 450,
      "best": 476,
-     "runs": 7
+     "runs": 8
     }
    ]
   },
@@ -358,6 +358,12 @@
      "median": 482,
      "best": 526,
      "runs": 8
+    },
+    {
+     "date": "2026-10-12",
+     "median": 461,
+     "best": 461,
+     "runs": 1
     }
    ]
   },
@@ -881,9 +887,9 @@
  "days": [
   {
    "date": "2026-10-12",
-   "runs": 14,
-   "restarts": 21,
-   "rest_median_s": 58,
+   "runs": 16,
+   "restarts": 25,
+   "rest_median_s": 63,
    "rest_longest_s": 412,
    "breaks": [
     {
@@ -902,9 +908,9 @@
     },
     {
      "name": "RANK INT A",
-     "runs": 9,
+     "runs": 11,
      "first": "23:20",
-     "last": "23:42"
+     "last": "23:48"
     }
    ],
    "scenarios": [
@@ -942,11 +948,19 @@
     },
     {
      "name": "SMOOTH THIN TRACK V2 - RANKED",
-     "runs": 7,
+     "runs": 8,
      "routine": "RANK INT A",
      "first": "23:24",
      "best": 476,
-     "median": 443
+     "median": 450
+    },
+    {
+     "name": "AIR TRACK SMOOTH V3 150% - RANKED",
+     "runs": 1,
+     "routine": "RANK INT A",
+     "first": "23:48",
+     "best": 461,
+     "median": 461
     }
    ]
   },
@@ -1944,13 +1958,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 355,
+  "runs": 357,
   "days": 7,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 113,
-    "pct": 99.3
+    "runs": 114,
+    "pct": 99.4
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1960,7 +1974,7 @@
    {
     "label": "Later attempts, rest 20 s to 2 min",
     "runs": 129,
-    "pct": 101.2
+    "pct": 101.3
    },
    {
     "label": "First run after a break of 15 min+",
@@ -2330,6 +2344,18 @@
     }
    },
    {
+    "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
+    "runs": 1,
+    "on_target": 30,
+    "reaction_ms": 117,
+    "overshoot_pct": 21,
+    "pps_by_distance": {
+     "far": 5.9,
+     "mid": 8.2,
+     "close": 6.6
+    }
+   },
+   {
     "scenario": "PENNYTRACKING",
     "runs": 3,
     "on_target": 15,
@@ -2352,12 +2378,12 @@
    },
    {
     "scenario": "SMOOTH THIN TRACK V2 - RANKED",
-    "runs": 7,
+    "runs": 8,
     "on_target": 35,
     "reaction_ms": 133,
-    "overshoot_pct": 35,
+    "overshoot_pct": 34,
     "pps_by_distance": {
-     "mid": 7.4
+     "mid": 7.5
     }
    },
    {
@@ -2607,6 +2633,23 @@
     "model": {
      "file": "model-smooththin-2026-10-12",
      "label": "Model: 571"
+    }
+   },
+   {
+    "scenario": "Air Track Smooth V3 150%",
+    "score": 461,
+    "time": "23:47",
+    "gif": "best-airtrack-2026-10-12",
+    "video": true,
+    "on_target": 30,
+    "reaction_ms": 117,
+    "overshoot_pct": 21,
+    "best_14d": 545,
+    "master3": 660,
+    "note": "Best of 1 recorded today (median 461). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "file": "model-airtrack-2026-10-12",
+     "label": "Model: 555"
     }
    }
   ]
