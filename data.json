@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-12 23:26",
- "updated_utc": "2026-10-12T16:26:19Z",
+ "updated": "2026-10-12 23:36",
+ "updated_utc": "2026-10-12T16:36:19Z",
  "today": {
   "date": "2026-10-12",
   "progress": {
-   "RANK INT A": 3
+   "RANK INT A": 5
   }
  },
  "plan_start": "2026-10-07",
@@ -15,7 +15,7 @@
    "official_best": 555.0,
    "best_14d": 482.0,
    "median_14d": 426,
-   "runs_14d": 92,
+   "runs_14d": 94,
    "steps": [
     0.0,
     168.0,
@@ -267,9 +267,9 @@
     },
     {
      "date": "2026-10-12",
-     "median": 383,
-     "best": 383,
-     "runs": 1
+     "median": 402,
+     "best": 427,
+     "runs": 3
     }
    ]
   },
@@ -881,10 +881,10 @@
  "days": [
   {
    "date": "2026-10-12",
-   "runs": 8,
-   "restarts": 12,
-   "rest_median_s": 20,
-   "rest_longest_s": 110,
+   "runs": 10,
+   "restarts": 15,
+   "rest_median_s": 57,
+   "rest_longest_s": 412,
    "breaks": [
     {
      "after": "ZEUS WEAKNESS 3",
@@ -902,9 +902,9 @@
     },
     {
      "name": "RANK INT A",
-     "runs": 3,
+     "runs": 5,
      "first": "23:20",
-     "last": "23:24"
+     "last": "23:34"
     }
    ],
    "scenarios": [
@@ -942,11 +942,11 @@
     },
     {
      "name": "SMOOTH THIN TRACK V2 - RANKED",
-     "runs": 1,
+     "runs": 3,
      "routine": "RANK INT A",
      "first": "23:24",
-     "best": 383,
-     "median": 383
+     "best": 427,
+     "median": 402
     }
    ]
   },
@@ -1944,7 +1944,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 349,
+  "runs": 351,
   "days": 7,
   "groups": [
    {
@@ -1959,7 +1959,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 124,
+    "runs": 125,
     "pct": 101.2
    },
    {
@@ -2352,12 +2352,12 @@
    },
    {
     "scenario": "SMOOTH THIN TRACK V2 - RANKED",
-    "runs": 1,
-    "on_target": 32,
+    "runs": 3,
+    "on_target": 34,
     "reaction_ms": 133,
     "overshoot_pct": 36,
     "pps_by_distance": {
-     "mid": 6.3
+     "mid": 6.6
     }
    },
    {
@@ -2594,19 +2594,19 @@
   "2026-10-12": [
    {
     "scenario": "Smooth Thin Track V2",
-    "score": 383,
-    "time": "23:23",
+    "score": 427,
+    "time": "23:33",
     "gif": "best-smooththin-2026-10-12",
     "video": true,
-    "on_target": 32,
+    "on_target": 34,
     "reaction_ms": 133,
-    "overshoot_pct": 36,
+    "overshoot_pct": 35,
     "best_14d": 482,
     "master3": 616,
-    "note": "Best of 1 recorded today (median 382). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 3 recorded today (median 402). The clip is its 8 seconds with the most hits.",
     "model": {
      "file": "model-smooththin-2026-10-12",
-     "label": "Model: 460"
+     "label": "Model: 512"
     }
    }
   ]
