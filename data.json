@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-12 23:21",
- "updated_utc": "2026-10-12T16:21:19Z",
+ "updated": "2026-10-12 23:26",
+ "updated_utc": "2026-10-12T16:26:19Z",
  "today": {
   "date": "2026-10-12",
   "progress": {
-   "RANK INT A": 1
+   "RANK INT A": 3
   }
  },
  "plan_start": "2026-10-07",
@@ -14,8 +14,8 @@
    "master3": 616.0,
    "official_best": 555.0,
    "best_14d": 482.0,
-   "median_14d": 427,
-   "runs_14d": 91,
+   "median_14d": 426,
+   "runs_14d": 92,
    "steps": [
     0.0,
     168.0,
@@ -264,6 +264,12 @@
      "median": 438,
      "best": 474,
      "runs": 8
+    },
+    {
+     "date": "2026-10-12",
+     "median": 383,
+     "best": 383,
+     "runs": 1
     }
    ]
   },
@@ -875,10 +881,10 @@
  "days": [
   {
    "date": "2026-10-12",
-   "runs": 6,
-   "restarts": 9,
-   "rest_median_s": 15,
-   "rest_longest_s": 104,
+   "runs": 8,
+   "restarts": 12,
+   "rest_median_s": 20,
+   "rest_longest_s": 110,
    "breaks": [
     {
      "after": "ZEUS WEAKNESS 3",
@@ -896,9 +902,9 @@
     },
     {
      "name": "RANK INT A",
-     "runs": 1,
+     "runs": 3,
      "first": "23:20",
-     "last": "23:20"
+     "last": "23:24"
     }
    ],
    "scenarios": [
@@ -928,11 +934,19 @@
     },
     {
      "name": "AIR CONTROL SPHERE",
-     "runs": 1,
+     "runs": 2,
      "routine": "RANK INT A",
      "first": "23:20",
-     "best": 784,
-     "median": 784
+     "best": 836,
+     "median": 810
+    },
+    {
+     "name": "SMOOTH THIN TRACK V2 - RANKED",
+     "runs": 1,
+     "routine": "RANK INT A",
+     "first": "23:24",
+     "best": 383,
+     "median": 383
     }
    ]
   },
@@ -1930,18 +1944,18 @@
   }
  ],
  "rest_effect": {
-  "runs": 347,
+  "runs": 349,
   "days": 7,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 112,
+    "runs": 113,
     "pct": 99.3
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 72,
-    "pct": 99.9
+    "runs": 73,
+    "pct": 100.0
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -2306,13 +2320,13 @@
   "2026-10-12": [
    {
     "scenario": "AIR CONTROL SPHERE",
-    "runs": 1,
+    "runs": 2,
     "on_target": 46,
     "reaction_ms": null,
-    "overshoot_pct": 24,
+    "overshoot_pct": 29,
     "pps_by_distance": {
      "mid": 11.3,
-     "close": 14.6
+     "close": 15.1
     }
    },
    {
@@ -2334,6 +2348,16 @@
     "overshoot_pct": 32,
     "pps_by_distance": {
      "close": 10.2
+    }
+   },
+   {
+    "scenario": "SMOOTH THIN TRACK V2 - RANKED",
+    "runs": 1,
+    "on_target": 32,
+    "reaction_ms": 133,
+    "overshoot_pct": 36,
+    "pps_by_distance": {
+     "mid": 6.3
     }
    },
    {
@@ -2564,6 +2588,25 @@
     "model": {
      "file": "model-zeus-2026-10-11",
      "label": "Model: 611"
+    }
+   }
+  ],
+  "2026-10-12": [
+   {
+    "scenario": "Smooth Thin Track V2",
+    "score": 383,
+    "time": "23:23",
+    "gif": "best-smooththin-2026-10-12",
+    "video": true,
+    "on_target": 32,
+    "reaction_ms": 133,
+    "overshoot_pct": 36,
+    "best_14d": 482,
+    "master3": 616,
+    "note": "Best of 1 recorded today (median 382). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "file": "model-smooththin-2026-10-12",
+     "label": "Model: 460"
     }
    }
   ]
