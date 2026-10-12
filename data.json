@@ -1,9 +1,11 @@
 {
- "updated": "2026-10-12 01:56",
- "updated_utc": "2026-10-11T18:56:19Z",
+ "updated": "2026-10-12 23:21",
+ "updated_utc": "2026-10-12T16:21:19Z",
  "today": {
   "date": "2026-10-12",
-  "progress": {}
+  "progress": {
+   "RANK INT A": 1
+  }
  },
  "plan_start": "2026-10-07",
  "ranks": [
@@ -873,17 +875,30 @@
  "days": [
   {
    "date": "2026-10-12",
-   "runs": 5,
-   "restarts": 8,
-   "rest_median_s": 18,
+   "runs": 6,
+   "restarts": 9,
+   "rest_median_s": 15,
    "rest_longest_s": 104,
-   "breaks": [],
+   "breaks": [
+    {
+     "after": "ZEUS WEAKNESS 3",
+     "before": "RANK INT A",
+     "at": "01:53",
+     "minutes": 1285.6
+    }
+   ],
    "playlists": [
     {
      "name": "ZEUS WEAKNESS 3",
      "runs": 5,
      "first": "01:46",
      "last": "01:53"
+    },
+    {
+     "name": "RANK INT A",
+     "runs": 1,
+     "first": "23:20",
+     "last": "23:20"
     }
    ],
    "scenarios": [
@@ -910,6 +925,14 @@
      "first": "01:53",
      "best": 1060,
      "median": 1060
+    },
+    {
+     "name": "AIR CONTROL SPHERE",
+     "runs": 1,
+     "routine": "RANK INT A",
+     "first": "23:20",
+     "best": 784,
+     "median": 784
     }
    ]
   },
@@ -1907,13 +1930,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 346,
+  "runs": 347,
   "days": 7,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 111,
-    "pct": 99.5
+    "runs": 112,
+    "pct": 99.3
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -1927,8 +1950,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 23,
-    "pct": 98.5
+    "runs": 24,
+    "pct": 97.2
    }
   ]
  },
@@ -2281,6 +2304,17 @@
    }
   ],
   "2026-10-12": [
+   {
+    "scenario": "AIR CONTROL SPHERE",
+    "runs": 1,
+    "on_target": 46,
+    "reaction_ms": null,
+    "overshoot_pct": 24,
+    "pps_by_distance": {
+     "mid": 11.3,
+     "close": 14.6
+    }
+   },
    {
     "scenario": "PENNYTRACKING",
     "runs": 3,
