@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-13 00:01",
- "updated_utc": "2026-10-12T17:01:19Z",
+ "updated": "2026-10-13 00:06",
+ "updated_utc": "2026-10-12T17:06:19Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
-   "RANK INT A": 1
+   "RANK INT A": 3
   }
  },
  "plan_start": "2026-10-07",
@@ -43,7 +43,7 @@
    "official_best": 548.0,
    "best_14d": 545.0,
    "median_14d": 461,
-   "runs_14d": 79,
+   "runs_14d": 81,
    "steps": [
     0.0,
     180.0,
@@ -368,8 +368,8 @@
     {
      "date": "2026-10-13",
      "median": 458,
-     "best": 458,
-     "runs": 1
+     "best": 477,
+     "runs": 3
     }
    ]
   },
@@ -893,26 +893,26 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 1,
-   "restarts": 1,
-   "rest_median_s": 39,
-   "rest_longest_s": 39,
+   "runs": 3,
+   "restarts": 5,
+   "rest_median_s": 50,
+   "rest_longest_s": 60,
    "breaks": [],
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 1,
+     "runs": 3,
      "first": "00:00",
-     "last": "00:00"
+     "last": "00:04"
     }
    ],
    "scenarios": [
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
-     "runs": 1,
+     "runs": 3,
      "routine": "RANK INT A",
      "first": "00:00",
-     "best": 458,
+     "best": 477,
      "median": 458
     }
    ]
@@ -1990,7 +1990,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 362,
+  "runs": 364,
   "days": 8,
   "groups": [
    {
@@ -2005,7 +2005,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 133,
+    "runs": 135,
     "pct": 101.2
    },
    {
@@ -2428,6 +2428,20 @@
      "far": 17.4
     }
    }
+  ],
+  "2026-10-13": [
+   {
+    "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
+    "runs": 2,
+    "on_target": 29,
+    "reaction_ms": 83,
+    "overshoot_pct": 14,
+    "pps_by_distance": {
+     "far": 5.7,
+     "mid": 7.8,
+     "close": 6.7
+    }
+   }
   ]
  },
  "aim_moments": {
@@ -2682,6 +2696,25 @@
     "model": {
      "file": "model-airtrack-2026-10-12",
      "label": "Model: 555"
+    }
+   }
+  ],
+  "2026-10-13": [
+   {
+    "scenario": "Air Track Smooth V3 150%",
+    "score": 477,
+    "time": "00:01",
+    "gif": "best-airtrack-2026-10-13",
+    "video": true,
+    "on_target": 31,
+    "reaction_ms": 83,
+    "overshoot_pct": 17,
+    "best_14d": 545,
+    "master3": 660,
+    "note": "Best of 2 recorded today (median 444). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "file": "model-airtrack-2026-10-13",
+     "label": "Model: 567"
     }
    }
   ]

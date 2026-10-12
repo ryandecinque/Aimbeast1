@@ -192,5 +192,24 @@
     "label": "Model: 555"
    }
   }
+ ],
+ "2026-10-13": [
+  {
+   "scenario": "Air Track Smooth V3 150%",
+   "score": 477,
+   "time": "00:01",
+   "gif": "best-airtrack-2026-10-13",
+   "video": true,
+   "on_target": 31,
+   "reaction_ms": 83,
+   "overshoot_pct": 17,
+   "best_14d": 545,
+   "master3": 660,
+   "note": "Best of 2 recorded today (median 444). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "file": "model-airtrack-2026-10-13",
+    "label": "Model: 567"
+   }
+  }
  ]
 }
