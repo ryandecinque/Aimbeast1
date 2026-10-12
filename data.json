@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-13 01:56",
- "updated_utc": "2026-10-12T18:56:19Z",
+ "updated": "2026-10-13 02:01",
+ "updated_utc": "2026-10-12T19:01:19Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
-   "RANK INT A": 5
+   "RANK INT A": 7
   }
  },
  "plan_start": "2026-10-07",
@@ -70,8 +70,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 853.0,
-   "median_14d": 680,
-   "runs_14d": 75,
+   "median_14d": 675,
+   "runs_14d": 77,
    "steps": [
     0.0,
     240.0,
@@ -461,9 +461,9 @@
     },
     {
      "date": "2026-10-13",
-     "median": 608,
+     "median": 625,
      "best": 640,
-     "runs": 2
+     "runs": 4
     }
    ]
   },
@@ -899,9 +899,9 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 5,
-   "restarts": 11,
-   "rest_median_s": 50,
+   "runs": 7,
+   "restarts": 12,
+   "rest_median_s": 41,
    "rest_longest_s": 71,
    "breaks": [
     {
@@ -914,9 +914,9 @@
    "playlists": [
     {
      "name": "RANK INT A",
-     "runs": 5,
+     "runs": 7,
      "first": "00:00",
-     "last": "01:54"
+     "last": "01:59"
     }
    ],
    "scenarios": [
@@ -930,11 +930,11 @@
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
-     "runs": 2,
+     "runs": 4,
      "routine": "RANK INT A",
      "first": "01:53",
      "best": 640,
-     "median": 608
+     "median": 625
     }
    ]
   },
@@ -2011,7 +2011,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 366,
+  "runs": 368,
   "days": 8,
   "groups": [
    {
@@ -2026,8 +2026,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 135,
-    "pct": 101.4
+    "runs": 137,
+    "pct": 101.2
    },
    {
     "label": "First run after a break of 15 min+",
@@ -2453,13 +2453,13 @@
   "2026-10-13": [
    {
     "scenario": "AIR CONTROL SPHERE - S - RANKED",
-    "runs": 2,
+    "runs": 4,
     "on_target": 41,
     "reaction_ms": null,
-    "overshoot_pct": 31,
+    "overshoot_pct": 35,
     "pps_by_distance": {
-     "mid": 8.8,
-     "close": 11.1
+     "mid": 10.2,
+     "close": 10.1
     }
    },
    {
