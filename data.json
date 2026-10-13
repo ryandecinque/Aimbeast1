@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-13 08:31",
- "updated_utc": "2026-10-13T01:31:20Z",
+ "updated": "2026-10-13 08:36",
+ "updated_utc": "2026-10-13T01:36:20Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
-   "ZEUS WEAKNESS": 4,
+   "ZEUS WEAKNESS": 6,
    "RANK INT A": 11
   }
  },
@@ -906,9 +906,9 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 17,
-   "restarts": 29,
-   "rest_median_s": 40,
+   "runs": 19,
+   "restarts": 32,
+   "rest_median_s": 39,
    "rest_longest_s": 487,
    "breaks": [
     {
@@ -945,9 +945,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 4,
+     "runs": 6,
      "first": "07:30",
-     "last": "08:30"
+     "last": "08:33"
     }
    ],
    "scenarios": [
@@ -990,6 +990,14 @@
      "first": "08:30",
      "best": 431,
      "median": 431
+    },
+    {
+     "name": "PENNYTRACKING",
+     "runs": 2,
+     "routine": "ZEUS WEAKNESS",
+     "first": "08:32",
+     "best": 545,
+     "median": 522
     }
    ]
   },
@@ -2066,23 +2074,23 @@
   }
  ],
  "rest_effect": {
-  "runs": 378,
+  "runs": 380,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 118,
-    "pct": 99.2
+    "runs": 119,
+    "pct": 99.3
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 76,
-    "pct": 99.7
+    "runs": 77,
+    "pct": 99.5
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
     "runs": 140,
-    "pct": 101.5
+    "pct": 101.6
    },
    {
     "label": "First run after a break of 15 min+",
@@ -2537,6 +2545,17 @@
     "overshoot_pct": 70,
     "pps_by_distance": {
      "close": 7.1
+    }
+   },
+   {
+    "scenario": "PENNYTRACKING",
+    "runs": 2,
+    "on_target": 17,
+    "reaction_ms": 158,
+    "overshoot_pct": 67,
+    "pps_by_distance": {
+     "mid": 2.7,
+     "close": 1.7
     }
    },
    {
