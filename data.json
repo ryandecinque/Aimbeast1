@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-13 08:26",
- "updated_utc": "2026-10-13T01:26:20Z",
+ "updated": "2026-10-13 08:31",
+ "updated_utc": "2026-10-13T01:31:20Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
-   "ZEUS WEAKNESS": 3,
+   "ZEUS WEAKNESS": 4,
    "RANK INT A": 11
   }
  },
@@ -906,10 +906,10 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 16,
-   "restarts": 27,
+   "runs": 17,
+   "restarts": 29,
    "rest_median_s": 40,
-   "rest_longest_s": 165,
+   "rest_longest_s": 487,
    "breaks": [
     {
      "after": "RANK INT A",
@@ -945,9 +945,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 3,
+     "runs": 4,
      "first": "07:30",
-     "last": "08:21"
+     "last": "08:30"
     }
    ],
    "scenarios": [
@@ -982,6 +982,14 @@
      "first": "07:30",
      "best": 586,
      "median": 527
+    },
+    {
+     "name": "CLOSELY STRAFING KYTAN",
+     "runs": 1,
+     "routine": "ZEUS WEAKNESS",
+     "first": "08:30",
+     "best": 431,
+     "median": 431
     }
    ]
   },
@@ -2058,12 +2066,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 377,
+  "runs": 378,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 117,
+    "runs": 118,
     "pct": 99.2
    },
    {
@@ -2074,7 +2082,7 @@
    {
     "label": "Later attempts, rest 20 s to 2 min",
     "runs": 140,
-    "pct": 101.4
+    "pct": 101.5
    },
    {
     "label": "First run after a break of 15 min+",
@@ -2519,6 +2527,16 @@
      "far": 5.7,
      "mid": 7.8,
      "close": 6.7
+    }
+   },
+   {
+    "scenario": "CLOSELY STRAFING KYTAN",
+    "runs": 1,
+    "on_target": 20,
+    "reaction_ms": 150,
+    "overshoot_pct": 70,
+    "pps_by_distance": {
+     "close": 7.1
     }
    },
    {
