@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-13 10:16",
- "updated_utc": "2026-10-13T03:16:20Z",
+ "updated": "2026-10-13 11:16",
+ "updated_utc": "2026-10-13T04:16:20Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
@@ -906,9 +906,9 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 51,
-   "restarts": 69,
-   "rest_median_s": 40,
+   "runs": 52,
+   "restarts": 70,
+   "rest_median_s": 39,
    "rest_longest_s": 727,
    "breaks": [
     {
@@ -934,6 +934,12 @@
      "before": "ZEUS TRIO",
      "at": "09:44",
      "minutes": 2.0
+    },
+    {
+     "after": "ZEUS TRIO",
+     "before": "DYNAMIC INTERMEDIATE RANK",
+     "at": "10:16",
+     "minutes": 58.0
     }
    ],
    "playlists": [
@@ -960,6 +966,12 @@
      "runs": 12,
      "first": "09:47",
      "last": "10:16"
+    },
+    {
+     "name": "DYNAMIC INTERMEDIATE RANK",
+     "runs": 1,
+     "first": "11:15",
+     "last": "11:15"
     }
    ],
    "scenarios": [
@@ -1050,6 +1062,14 @@
      "first": "09:52",
      "best": 306,
      "median": 258
+    },
+    {
+     "name": "SNOWFLAKES INTERMEDIATE - RANKED",
+     "runs": 1,
+     "routine": "DYNAMIC INTERMEDIATE RANK",
+     "first": "11:15",
+     "best": 520,
+     "median": 520
     }
    ]
   },
@@ -2126,12 +2146,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 412,
+  "runs": 413,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 148,
+    "runs": 149,
     "pct": 99.5
    },
    {
@@ -2146,8 +2166,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 26,
-    "pct": 94.4
+    "runs": 27,
+    "pct": 94.6
    }
   ]
  },
