@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-13 10:01",
- "updated_utc": "2026-10-13T03:01:20Z",
+ "updated": "2026-10-13 10:06",
+ "updated_utc": "2026-10-13T03:06:19Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
@@ -906,8 +906,8 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 47,
-   "restarts": 64,
+   "runs": 48,
+   "restarts": 65,
    "rest_median_s": 39,
    "rest_longest_s": 727,
    "breaks": [
@@ -957,9 +957,9 @@
     },
     {
      "name": "ZEUS TRIO",
-     "runs": 8,
+     "runs": 9,
      "first": "09:47",
-     "last": "10:00"
+     "last": "10:02"
     }
    ],
    "scenarios": [
@@ -1045,11 +1045,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK 50%",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS TRIO",
      "first": "09:52",
      "best": 306,
-     "median": 276
+     "median": 269
     }
    ]
   },
@@ -2126,13 +2126,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 408,
+  "runs": 409,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 144,
-    "pct": 99.5
+    "runs": 145,
+    "pct": 99.6
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2655,14 +2655,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK 50",
-    "runs": 2,
-    "on_target": 23,
+    "runs": 3,
+    "on_target": 22,
     "reaction_ms": 150,
-    "overshoot_pct": 40,
+    "overshoot_pct": 42,
     "pps_by_distance": {
-     "far": 4.5,
-     "mid": 5.2,
-     "close": 4.2
+     "far": 3.9,
+     "mid": 5.8,
+     "close": 4.1
     }
    },
    {
