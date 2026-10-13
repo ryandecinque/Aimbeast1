@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-13 09:16",
- "updated_utc": "2026-10-13T02:16:20Z",
+ "updated": "2026-10-13 09:21",
+ "updated_utc": "2026-10-13T02:21:20Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
-   "ZEUS WEAKNESS": 19,
+   "ZEUS WEAKNESS": 21,
    "RANK INT A": 11
   }
  },
@@ -906,9 +906,9 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 32,
-   "restarts": 50,
-   "rest_median_s": 34,
+   "runs": 34,
+   "restarts": 51,
+   "rest_median_s": 36,
    "rest_longest_s": 668,
    "breaks": [
     {
@@ -945,9 +945,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 19,
+     "runs": 21,
      "first": "07:30",
-     "last": "09:16"
+     "last": "09:19"
     }
    ],
    "scenarios": [
@@ -993,19 +993,19 @@
     },
     {
      "name": "PENNYTRACKING",
-     "runs": 5,
+     "runs": 6,
      "routine": "ZEUS WEAKNESS",
      "first": "08:32",
-     "best": 635,
-     "median": 545
+     "best": 670,
+     "median": 560
     },
     {
      "name": "THIN FAST",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS WEAKNESS",
      "first": "08:48",
      "best": 1440,
-     "median": 1425
+     "median": 1410
     },
     {
      "name": "SLOW ACCEL 'STT' SHORT",
@@ -2098,13 +2098,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 393,
+  "runs": 395,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 129,
-    "pct": 99.5
+    "runs": 131,
+    "pct": 99.3
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2573,13 +2573,13 @@
    },
    {
     "scenario": "PENNYTRACKING",
-    "runs": 5,
+    "runs": 6,
     "on_target": 18,
-    "reaction_ms": 151,
+    "reaction_ms": 159,
     "overshoot_pct": 64,
     "pps_by_distance": {
-     "mid": 2.7,
-     "close": 1.8
+     "mid": 2.9,
+     "close": 1.9
     }
    },
    {
@@ -2604,10 +2604,10 @@
    },
    {
     "scenario": "THIN FAST",
-    "runs": 2,
-    "on_target": 13,
-    "reaction_ms": 176,
-    "overshoot_pct": 43,
+    "runs": 3,
+    "on_target": 11,
+    "reaction_ms": 167,
+    "overshoot_pct": 40,
     "pps_by_distance": {
      "mid": 4.3,
      "close": 5.0
