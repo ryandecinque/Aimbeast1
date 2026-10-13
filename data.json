@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-13 09:21",
- "updated_utc": "2026-10-13T02:21:20Z",
+ "updated": "2026-10-13 09:36",
+ "updated_utc": "2026-10-13T02:36:19Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
-   "ZEUS WEAKNESS": 21,
+   "ZEUS WEAKNESS": 23,
    "RANK INT A": 11
   }
  },
@@ -906,10 +906,10 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 34,
-   "restarts": 51,
+   "runs": 36,
+   "restarts": 52,
    "rest_median_s": 36,
-   "rest_longest_s": 668,
+   "rest_longest_s": 727,
    "breaks": [
     {
      "after": "RANK INT A",
@@ -945,9 +945,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 21,
+     "runs": 23,
      "first": "07:30",
-     "last": "09:19"
+     "last": "09:33"
     }
    ],
    "scenarios": [
@@ -1009,19 +1009,19 @@
     },
     {
      "name": "SLOW ACCEL 'STT' SHORT",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS WEAKNESS",
      "first": "08:55",
      "best": 312,
-     "median": 304
+     "median": 297
     },
     {
      "name": "ZEUS TRACK FAR BZN EDITION",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS WEAKNESS",
      "first": "08:56",
-     "best": 1078,
-     "median": 1072
+     "best": 1128,
+     "median": 1078
     }
    ]
   },
@@ -2098,12 +2098,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 395,
+  "runs": 397,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 131,
+    "runs": 133,
     "pct": 99.3
    },
    {
@@ -2119,7 +2119,7 @@
    {
     "label": "First run after a break of 15 min+",
     "runs": 26,
-    "pct": 94.4
+    "pct": 94.8
    }
   ]
  },
@@ -2594,12 +2594,12 @@
    },
    {
     "scenario": "SLOW ACCEL STT SHORT",
-    "runs": 2,
-    "on_target": 29,
-    "reaction_ms": 133,
-    "overshoot_pct": 28,
+    "runs": 3,
+    "on_target": 28,
+    "reaction_ms": 125,
+    "overshoot_pct": 25,
     "pps_by_distance": {
-     "mid": 5.1
+     "mid": 4.9
     }
    },
    {
@@ -2627,12 +2627,12 @@
    },
    {
     "scenario": "ZEUS TRACK FAR BZN EDITION",
-    "runs": 2,
-    "on_target": 45,
+    "runs": 3,
+    "on_target": 46,
     "reaction_ms": null,
     "overshoot_pct": 32,
     "pps_by_distance": {
-     "far": 17.8
+     "far": 17.9
     }
    }
   ]
