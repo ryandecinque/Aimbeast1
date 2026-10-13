@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-13 10:11",
- "updated_utc": "2026-10-13T03:11:20Z",
+ "updated": "2026-10-13 10:16",
+ "updated_utc": "2026-10-13T03:16:20Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
@@ -156,7 +156,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 492,
-   "runs_14d": 150,
+   "runs_14d": 151,
    "steps": [
     0.0,
     198.0,
@@ -804,9 +804,9 @@
     },
     {
      "date": "2026-10-13",
-     "median": 506,
+     "median": 500,
      "best": 550,
-     "runs": 5
+     "runs": 6
     }
    ]
   }
@@ -906,8 +906,8 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 49,
-   "restarts": 66,
+   "runs": 51,
+   "restarts": 69,
    "rest_median_s": 40,
    "rest_longest_s": 727,
    "breaks": [
@@ -957,9 +957,9 @@
     },
     {
      "name": "ZEUS TRIO",
-     "runs": 10,
+     "runs": 12,
      "first": "09:47",
-     "last": "10:07"
+     "last": "10:16"
     }
    ],
    "scenarios": [
@@ -981,11 +981,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 5,
+     "runs": 6,
      "routine": "(single scenario)",
      "first": "02:10",
      "best": 550,
-     "median": 506
+     "median": 500
     },
     {
      "name": "SCX CLOSE STRAFES",
@@ -1045,11 +1045,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK 50%",
-     "runs": 3,
+     "runs": 4,
      "routine": "ZEUS TRIO",
      "first": "09:52",
      "best": 306,
-     "median": 269
+     "median": 258
     }
    ]
   },
@@ -2126,12 +2126,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 410,
+  "runs": 412,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 146,
+    "runs": 148,
     "pct": 99.5
    },
    {
@@ -2643,26 +2643,26 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 5,
-    "on_target": 37,
+    "runs": 6,
+    "on_target": 35,
     "reaction_ms": 133,
     "overshoot_pct": 34,
     "pps_by_distance": {
-     "far": 7.8,
+     "far": 8.2,
      "mid": 8.7,
-     "close": 7.9
+     "close": 7.8
     }
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK 50",
-    "runs": 3,
+    "runs": 4,
     "on_target": 22,
-    "reaction_ms": 150,
-    "overshoot_pct": 42,
+    "reaction_ms": 146,
+    "overshoot_pct": 40,
     "pps_by_distance": {
      "far": 3.9,
-     "mid": 5.8,
-     "close": 4.1
+     "mid": 5.2,
+     "close": 4.2
     }
    },
    {
