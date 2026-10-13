@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-13 11:21",
- "updated_utc": "2026-10-13T04:21:20Z",
+ "updated": "2026-10-13 11:26",
+ "updated_utc": "2026-10-13T04:26:20Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
@@ -906,9 +906,9 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 55,
+   "runs": 57,
    "restarts": 70,
-   "rest_median_s": 39,
+   "rest_median_s": 42,
    "rest_longest_s": 727,
    "breaks": [
     {
@@ -969,9 +969,9 @@
     },
     {
      "name": "DYNAMIC INTERMEDIATE RANK",
-     "runs": 4,
+     "runs": 6,
      "first": "11:15",
-     "last": "11:21"
+     "last": "11:24"
     }
    ],
    "scenarios": [
@@ -1094,6 +1094,22 @@
      "first": "11:21",
      "best": 670,
      "median": 670
+    },
+    {
+     "name": "テ LEAP CLICK - L - RANKED",
+     "runs": 1,
+     "routine": "DYNAMIC INTERMEDIATE RANK",
+     "first": "11:22",
+     "best": 490,
+     "median": 490
+    },
+    {
+     "name": "テ BARREL CLICK (EZ) - RANKED",
+     "runs": 1,
+     "routine": "DYNAMIC INTERMEDIATE RANK",
+     "first": "11:24",
+     "best": 500,
+     "median": 500
     }
    ]
   },
@@ -2170,13 +2186,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 416,
+  "runs": 418,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 152,
-    "pct": 99.6
+    "runs": 154,
+    "pct": 99.8
    },
    {
     "label": "Later attempts, rest under 20 s",
