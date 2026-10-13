@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-13 09:06",
- "updated_utc": "2026-10-13T02:06:20Z",
+ "updated": "2026-10-13 09:16",
+ "updated_utc": "2026-10-13T02:16:20Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
-   "ZEUS WEAKNESS": 17,
+   "ZEUS WEAKNESS": 19,
    "RANK INT A": 11
   }
  },
@@ -906,8 +906,8 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 30,
-   "restarts": 45,
+   "runs": 32,
+   "restarts": 50,
    "rest_median_s": 34,
    "rest_longest_s": 668,
    "breaks": [
@@ -945,9 +945,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 17,
+     "runs": 19,
      "first": "07:30",
-     "last": "09:05"
+     "last": "09:16"
     }
    ],
    "scenarios": [
@@ -977,11 +977,11 @@
     },
     {
      "name": "SCX CLOSE STRAFES",
-     "runs": 5,
+     "runs": 6,
      "routine": "ZEUS WEAKNESS",
      "first": "07:30",
      "best": 658,
-     "median": 586
+     "median": 598
     },
     {
      "name": "CLOSELY STRAFING KYTAN",
@@ -993,11 +993,11 @@
     },
     {
      "name": "PENNYTRACKING",
-     "runs": 4,
+     "runs": 5,
      "routine": "ZEUS WEAKNESS",
      "first": "08:32",
      "best": 635,
-     "median": 535
+     "median": 545
     },
     {
      "name": "THIN FAST",
@@ -2098,12 +2098,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 391,
+  "runs": 393,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 128,
+    "runs": 129,
     "pct": 99.5
    },
    {
@@ -2114,12 +2114,12 @@
    {
     "label": "Later attempts, rest 20 s to 2 min",
     "runs": 140,
-    "pct": 101.6
+    "pct": 101.5
    },
    {
     "label": "First run after a break of 15 min+",
     "runs": 26,
-    "pct": 94.7
+    "pct": 94.4
    }
   ]
  },
@@ -2573,23 +2573,23 @@
    },
    {
     "scenario": "PENNYTRACKING",
-    "runs": 4,
-    "on_target": 17,
-    "reaction_ms": 158,
-    "overshoot_pct": 67,
+    "runs": 5,
+    "on_target": 18,
+    "reaction_ms": 151,
+    "overshoot_pct": 64,
     "pps_by_distance": {
-     "mid": 2.5,
+     "mid": 2.7,
      "close": 1.8
     }
    },
    {
     "scenario": "SCX CLOSE STRAFES",
-    "runs": 5,
-    "on_target": 51,
+    "runs": 6,
+    "on_target": 47,
     "reaction_ms": 134,
-    "overshoot_pct": 38,
+    "overshoot_pct": 35,
     "pps_by_distance": {
-     "close": 9.7
+     "close": 9.9
     }
    },
    {
