@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-13 08:56",
- "updated_utc": "2026-10-13T01:56:19Z",
+ "updated": "2026-10-13 09:01",
+ "updated_utc": "2026-10-13T02:01:20Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
-   "ZEUS WEAKNESS": 10,
+   "ZEUS WEAKNESS": 14,
    "RANK INT A": 11
   }
  },
@@ -906,9 +906,9 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 23,
-   "restarts": 39,
-   "rest_median_s": 42,
+   "runs": 27,
+   "restarts": 44,
+   "rest_median_s": 39,
    "rest_longest_s": 668,
    "breaks": [
     {
@@ -945,9 +945,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 10,
+     "runs": 14,
      "first": "07:30",
-     "last": "08:55"
+     "last": "09:01"
     }
    ],
    "scenarios": [
@@ -977,11 +977,11 @@
     },
     {
      "name": "SCX CLOSE STRAFES",
-     "runs": 3,
+     "runs": 4,
      "routine": "ZEUS WEAKNESS",
      "first": "07:30",
-     "best": 586,
-     "median": 527
+     "best": 658,
+     "median": 556
     },
     {
      "name": "CLOSELY STRAFING KYTAN",
@@ -1009,11 +1009,19 @@
     },
     {
      "name": "SLOW ACCEL 'STT' SHORT",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS WEAKNESS",
      "first": "08:55",
-     "best": 297,
-     "median": 297
+     "best": 312,
+     "median": 304
+    },
+    {
+     "name": "ZEUS TRACK FAR BZN EDITION",
+     "runs": 2,
+     "routine": "ZEUS WEAKNESS",
+     "first": "08:56",
+     "best": 1078,
+     "median": 1072
     }
    ]
   },
@@ -2090,12 +2098,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 384,
+  "runs": 388,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 121,
+    "runs": 125,
     "pct": 99.3
    },
    {
@@ -2111,7 +2119,7 @@
    {
     "label": "First run after a break of 15 min+",
     "runs": 26,
-    "pct": 95.9
+    "pct": 94.4
    }
   ]
  },
@@ -2576,22 +2584,22 @@
    },
    {
     "scenario": "SCX CLOSE STRAFES",
-    "runs": 3,
-    "on_target": 39,
+    "runs": 4,
+    "on_target": 45,
     "reaction_ms": 134,
-    "overshoot_pct": 32,
+    "overshoot_pct": 37,
     "pps_by_distance": {
-     "close": 8.6
+     "close": 9.1
     }
    },
    {
     "scenario": "SLOW ACCEL STT SHORT",
-    "runs": 1,
-    "on_target": 30,
-    "reaction_ms": null,
-    "overshoot_pct": 34,
+    "runs": 2,
+    "on_target": 29,
+    "reaction_ms": 133,
+    "overshoot_pct": 28,
     "pps_by_distance": {
-     "mid": 4.9
+     "mid": 5.1
     }
    },
    {
@@ -2615,6 +2623,16 @@
      "far": 7.3,
      "mid": 7.8,
      "close": 7.7
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK FAR BZN EDITION",
+    "runs": 2,
+    "on_target": 45,
+    "reaction_ms": null,
+    "overshoot_pct": 32,
+    "pps_by_distance": {
+     "far": 17.8
     }
    }
   ]
