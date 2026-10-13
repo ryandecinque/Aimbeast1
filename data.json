@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-13 08:51",
- "updated_utc": "2026-10-13T01:51:20Z",
+ "updated": "2026-10-13 08:56",
+ "updated_utc": "2026-10-13T01:56:19Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
-   "ZEUS WEAKNESS": 8,
+   "ZEUS WEAKNESS": 10,
    "RANK INT A": 11
   }
  },
@@ -906,9 +906,9 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 21,
-   "restarts": 34,
-   "rest_median_s": 41,
+   "runs": 23,
+   "restarts": 39,
+   "rest_median_s": 42,
    "rest_longest_s": 668,
    "breaks": [
     {
@@ -945,9 +945,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 8,
+     "runs": 10,
      "first": "07:30",
-     "last": "08:48"
+     "last": "08:55"
     }
    ],
    "scenarios": [
@@ -1001,11 +1001,19 @@
     },
     {
      "name": "THIN FAST",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS WEAKNESS",
      "first": "08:48",
-     "best": 1410,
-     "median": 1410
+     "best": 1440,
+     "median": 1425
+    },
+    {
+     "name": "SLOW ACCEL 'STT' SHORT",
+     "runs": 1,
+     "routine": "ZEUS WEAKNESS",
+     "first": "08:55",
+     "best": 297,
+     "median": 297
     }
    ]
   },
@@ -2082,13 +2090,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 382,
+  "runs": 384,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 120,
-    "pct": 99.2
+    "runs": 121,
+    "pct": 99.3
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2103,7 +2111,7 @@
    {
     "label": "First run after a break of 15 min+",
     "runs": 26,
-    "pct": 96.4
+    "pct": 95.9
    }
   ]
  },
@@ -2577,14 +2585,24 @@
     }
    },
    {
-    "scenario": "THIN FAST",
+    "scenario": "SLOW ACCEL STT SHORT",
     "runs": 1,
-    "on_target": 14,
-    "reaction_ms": 167,
-    "overshoot_pct": 46,
+    "on_target": 30,
+    "reaction_ms": null,
+    "overshoot_pct": 34,
+    "pps_by_distance": {
+     "mid": 4.9
+    }
+   },
+   {
+    "scenario": "THIN FAST",
+    "runs": 2,
+    "on_target": 13,
+    "reaction_ms": 176,
+    "overshoot_pct": 43,
     "pps_by_distance": {
      "mid": 4.3,
-     "close": 5.1
+     "close": 5.0
     }
    },
    {
