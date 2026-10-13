@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-13 08:46",
- "updated_utc": "2026-10-13T01:46:20Z",
+ "updated": "2026-10-13 08:51",
+ "updated_utc": "2026-10-13T01:51:20Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
-   "ZEUS WEAKNESS": 7,
+   "ZEUS WEAKNESS": 8,
    "RANK INT A": 11
   }
  },
@@ -906,9 +906,9 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 20,
+   "runs": 21,
    "restarts": 34,
-   "rest_median_s": 40,
+   "rest_median_s": 41,
    "rest_longest_s": 668,
    "breaks": [
     {
@@ -945,9 +945,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 7,
+     "runs": 8,
      "first": "07:30",
-     "last": "08:46"
+     "last": "08:48"
     }
    ],
    "scenarios": [
@@ -998,6 +998,14 @@
      "first": "08:32",
      "best": 545,
      "median": 525
+    },
+    {
+     "name": "THIN FAST",
+     "runs": 1,
+     "routine": "ZEUS WEAKNESS",
+     "first": "08:48",
+     "best": 1410,
+     "median": 1410
     }
    ]
   },
@@ -2074,13 +2082,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 381,
+  "runs": 382,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 119,
-    "pct": 99.3
+    "runs": 120,
+    "pct": 99.2
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2566,6 +2574,17 @@
     "overshoot_pct": 32,
     "pps_by_distance": {
      "close": 8.6
+    }
+   },
+   {
+    "scenario": "THIN FAST",
+    "runs": 1,
+    "on_target": 14,
+    "reaction_ms": 167,
+    "overshoot_pct": 46,
+    "pps_by_distance": {
+     "mid": 4.3,
+     "close": 5.1
     }
    },
    {
