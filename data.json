@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-13 09:36",
- "updated_utc": "2026-10-13T02:36:19Z",
+ "updated": "2026-10-13 09:41",
+ "updated_utc": "2026-10-13T02:41:19Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
-   "ZEUS WEAKNESS": 23,
+   "ZEUS WEAKNESS": 24,
    "RANK INT A": 11
   }
  },
@@ -906,9 +906,9 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 36,
+   "runs": 37,
    "restarts": 52,
-   "rest_median_s": 36,
+   "rest_median_s": 39,
    "rest_longest_s": 727,
    "breaks": [
     {
@@ -945,9 +945,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 23,
+     "runs": 24,
      "first": "07:30",
-     "last": "09:33"
+     "last": "09:38"
     }
    ],
    "scenarios": [
@@ -1001,11 +1001,11 @@
     },
     {
      "name": "THIN FAST",
-     "runs": 3,
+     "runs": 4,
      "routine": "ZEUS WEAKNESS",
      "first": "08:48",
      "best": 1440,
-     "median": 1410
+     "median": 1365
     },
     {
      "name": "SLOW ACCEL 'STT' SHORT",
@@ -2098,13 +2098,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 397,
+  "runs": 398,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 133,
-    "pct": 99.3
+    "runs": 134,
+    "pct": 99.4
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2604,13 +2604,13 @@
    },
    {
     "scenario": "THIN FAST",
-    "runs": 3,
-    "on_target": 11,
-    "reaction_ms": 167,
-    "overshoot_pct": 40,
+    "runs": 4,
+    "on_target": 10,
+    "reaction_ms": 175,
+    "overshoot_pct": 38,
     "pps_by_distance": {
-     "mid": 4.3,
-     "close": 5.0
+     "mid": 4.2,
+     "close": 4.8
     }
    },
    {
