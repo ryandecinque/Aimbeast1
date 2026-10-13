@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-13 11:26",
- "updated_utc": "2026-10-13T04:26:20Z",
+ "updated": "2026-10-13 11:31",
+ "updated_utc": "2026-10-13T04:31:20Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
@@ -906,9 +906,9 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 57,
-   "restarts": 70,
-   "rest_median_s": 42,
+   "runs": 60,
+   "restarts": 75,
+   "rest_median_s": 41,
    "rest_longest_s": 727,
    "breaks": [
     {
@@ -969,9 +969,9 @@
     },
     {
      "name": "DYNAMIC INTERMEDIATE RANK",
-     "runs": 6,
+     "runs": 9,
      "first": "11:15",
-     "last": "11:24"
+     "last": "11:30"
     }
    ],
    "scenarios": [
@@ -1065,27 +1065,27 @@
     },
     {
      "name": "SNOWFLAKES INTERMEDIATE - RANKED",
-     "runs": 1,
+     "runs": 2,
      "routine": "DYNAMIC INTERMEDIATE RANK",
      "first": "11:15",
-     "best": 520,
-     "median": 520
+     "best": 690,
+     "median": 605
     },
     {
      "name": "STARFALL INTERMEDIATE - RANKED",
-     "runs": 1,
+     "runs": 2,
      "routine": "DYNAMIC INTERMEDIATE RANK",
      "first": "11:16",
-     "best": 470,
-     "median": 470
+     "best": 520,
+     "median": 495
     },
     {
      "name": "BALLOONS INTERMEDIATE - RANKED",
-     "runs": 1,
+     "runs": 2,
      "routine": "DYNAMIC INTERMEDIATE RANK",
      "first": "11:19",
      "best": 670,
-     "median": 670
+     "median": 635
     },
     {
      "name": "テ LEAVES CLICKING - L - RANKED",
@@ -2186,13 +2186,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 418,
+  "runs": 421,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 154,
-    "pct": 99.8
+    "runs": 157,
+    "pct": 99.6
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2207,7 +2207,7 @@
    {
     "label": "First run after a break of 15 min+",
     "runs": 27,
-    "pct": 94.6
+    "pct": 94.2
    }
   ]
  },
