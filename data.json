@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-13 11:36",
- "updated_utc": "2026-10-13T04:36:20Z",
+ "updated": "2026-10-13 11:41",
+ "updated_utc": "2026-10-13T04:41:20Z",
  "today": {
   "date": "2026-10-13",
   "progress": {
@@ -906,9 +906,9 @@
  "days": [
   {
    "date": "2026-10-13",
-   "runs": 64,
+   "runs": 68,
    "restarts": 77,
-   "rest_median_s": 39,
+   "rest_median_s": 36,
    "rest_longest_s": 727,
    "breaks": [
     {
@@ -969,9 +969,9 @@
     },
     {
      "name": "DYNAMIC INTERMEDIATE RANK",
-     "runs": 13,
+     "runs": 17,
      "first": "11:15",
-     "last": "11:35"
+     "last": "11:40"
     }
    ],
    "scenarios": [
@@ -1073,35 +1073,35 @@
     },
     {
      "name": "STARFALL INTERMEDIATE - RANKED",
-     "runs": 2,
+     "runs": 3,
      "routine": "DYNAMIC INTERMEDIATE RANK",
      "first": "11:16",
      "best": 520,
-     "median": 495
+     "median": 480
     },
     {
      "name": "BALLOONS INTERMEDIATE - RANKED",
-     "runs": 2,
+     "runs": 3,
      "routine": "DYNAMIC INTERMEDIATE RANK",
      "first": "11:19",
-     "best": 670,
-     "median": 635
+     "best": 720,
+     "median": 670
     },
     {
      "name": "テ LEAVES CLICKING - L - RANKED",
-     "runs": 2,
+     "runs": 3,
      "routine": "DYNAMIC INTERMEDIATE RANK",
      "first": "11:21",
-     "best": 690,
-     "median": 680
+     "best": 750,
+     "median": 690
     },
     {
      "name": "テ LEAP CLICK - L - RANKED",
-     "runs": 2,
+     "runs": 3,
      "routine": "DYNAMIC INTERMEDIATE RANK",
      "first": "11:22",
      "best": 570,
-     "median": 530
+     "median": 490
     },
     {
      "name": "テ BARREL CLICK (EZ) - RANKED",
@@ -2186,13 +2186,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 425,
+  "runs": 429,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 161,
-    "pct": 99.5
+    "runs": 165,
+    "pct": 99.9
    },
    {
     "label": "Later attempts, rest under 20 s",
