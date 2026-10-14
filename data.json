@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-14 14:26",
- "updated_utc": "2026-10-14T07:26:19Z",
+ "updated": "2026-10-14 16:26",
+ "updated_utc": "2026-10-14T09:26:19Z",
  "today": {
   "date": "2026-10-14",
   "progress": {}
@@ -97,7 +97,7 @@
    "official_best": 398.0,
    "best_14d": 398.0,
    "median_14d": 332,
-   "runs_14d": 64,
+   "runs_14d": 65,
    "steps": [
     0.0,
     138.0,
@@ -535,9 +535,9 @@
     },
     {
      "date": "2026-10-14",
-     "median": 314,
-     "best": 347,
-     "runs": 10
+     "median": 315,
+     "best": 351,
+     "runs": 11
     }
    ]
   },
@@ -921,7 +921,7 @@
  "days": [
   {
    "date": "2026-10-14",
-   "runs": 28,
+   "runs": 29,
    "restarts": 47,
    "rest_median_s": 17,
    "rest_longest_s": 753,
@@ -931,24 +931,30 @@
      "before": "1",
      "at": "10:30",
      "minutes": 216.0
+    },
+    {
+     "after": "1",
+     "before": "1",
+     "at": "14:23",
+     "minutes": 121.2
     }
    ],
    "playlists": [
     {
      "name": "1",
-     "runs": 28,
+     "runs": 29,
      "first": "09:27",
-     "last": "14:23"
+     "last": "16:26"
     }
    ],
    "scenarios": [
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
-     "runs": 10,
+     "runs": 11,
      "routine": "1",
      "first": "09:27",
-     "best": 347,
-     "median": 314
+     "best": 351,
+     "median": 315
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
@@ -2250,13 +2256,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 458,
+  "runs": 459,
   "days": 9,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 193,
-    "pct": 99.9
+    "runs": 194,
+    "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2270,8 +2276,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 28,
-    "pct": 94.4
+    "runs": 29,
+    "pct": 94.6
    }
   ]
  },
@@ -2815,8 +2821,8 @@
   "2026-10-14": [
    {
     "scenario": "PASU TRACK EVO RCT - 0.85X",
-    "runs": 10,
-    "on_target": 23,
+    "runs": 11,
+    "on_target": 24,
     "reaction_ms": 167,
     "overshoot_pct": 34,
     "pps_by_distance": {
@@ -3159,22 +3165,6 @@
   ],
   "2026-10-14": [
    {
-    "scenario": "PASU Track Evo (RCT) - 0.85X",
-    "score": 347,
-    "time": "09:55",
-    "gif": "best-pasu085-2026-10-14",
-    "video": true,
-    "on_target": 26,
-    "reaction_ms": 150,
-    "overshoot_pct": 31,
-    "best_14d": 398,
-    "master3": 506,
-    "note": "Best of 5 recorded today (median 314). The clip is its 8 seconds with the most hits.",
-    "model": {
-     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (event 2 is triggered on hit (speed up/down))"
-    }
-   },
-   {
     "scenario": "PASU Track XYZ",
     "score": 261,
     "time": "14:13",
@@ -3205,6 +3195,22 @@
     "model": {
      "file": "model-zeus-2026-10-14",
      "label": "Model: 622"
+    }
+   },
+   {
+    "scenario": "PASU Track Evo (RCT) - 0.85X",
+    "score": 351,
+    "time": "16:24",
+    "gif": "best-pasu085-2026-10-14",
+    "video": true,
+    "on_target": 25,
+    "reaction_ms": 167,
+    "overshoot_pct": 34,
+    "best_14d": 398,
+    "master3": 506,
+    "note": "Best of 11 recorded today (median 314). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (event 2 is triggered on hit (speed up/down))"
     }
    }
   ]
