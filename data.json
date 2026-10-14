@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-14 17:26",
- "updated_utc": "2026-10-14T10:26:19Z",
+ "updated": "2026-10-14 17:31",
+ "updated_utc": "2026-10-14T10:31:19Z",
  "today": {
   "date": "2026-10-14",
   "progress": {}
@@ -921,9 +921,9 @@
  "days": [
   {
    "date": "2026-10-14",
-   "runs": 54,
-   "restarts": 69,
-   "rest_median_s": 17,
+   "runs": 57,
+   "restarts": 71,
+   "rest_median_s": 19,
    "rest_longest_s": 846,
    "breaks": [
     {
@@ -955,6 +955,12 @@
      "before": "ZEUS WEAKNESS 3",
      "at": "17:25",
      "minutes": 0.7
+    },
+    {
+     "after": "ZEUS WEAKNESS 3",
+     "before": "(single scenario)",
+     "at": "17:30",
+     "minutes": 0.3
     }
    ],
    "playlists": [
@@ -966,9 +972,9 @@
     },
     {
      "name": "ZEUS WEAKNESS 3",
-     "runs": 6,
+     "runs": 9,
      "first": "16:49",
-     "last": "17:11"
+     "last": "17:30"
     },
     {
      "name": "ZEUS TRIO",
@@ -1004,27 +1010,27 @@
     },
     {
      "name": "SCX CLOSE STRAFES",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS WEAKNESS 3",
      "first": "16:49",
      "best": 716,
-     "median": 662
+     "median": 627
     },
     {
      "name": "PENNYTRACKING",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS WEAKNESS 3",
      "first": "16:52",
      "best": 575,
-     "median": 548
+     "median": 545
     },
     {
      "name": "ZEUS TRACK FAR BZN EDITION",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS WEAKNESS 3",
      "first": "17:07",
      "best": 1213,
-     "median": 1134
+     "median": 1133
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK (EZ)",
@@ -2326,13 +2332,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 484,
+  "runs": 487,
   "days": 9,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 219,
-    "pct": 100.0
+    "runs": 222,
+    "pct": 99.9
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2913,23 +2919,23 @@
    },
    {
     "scenario": "PENNYTRACKING",
-    "runs": 2,
-    "on_target": 20,
-    "reaction_ms": 158,
-    "overshoot_pct": 66,
+    "runs": 3,
+    "on_target": 19,
+    "reaction_ms": 167,
+    "overshoot_pct": 68,
     "pps_by_distance": {
-     "mid": 1.9,
+     "mid": 2.5,
      "close": 1.8
     }
    },
    {
     "scenario": "SCX CLOSE STRAFES",
-    "runs": 2,
-    "on_target": 52,
+    "runs": 3,
+    "on_target": 56,
     "reaction_ms": 133,
-    "overshoot_pct": 34,
+    "overshoot_pct": 36,
     "pps_by_distance": {
-     "close": 11.0
+     "close": 10.5
     }
    },
    {
@@ -2970,10 +2976,10 @@
    },
    {
     "scenario": "ZEUS TRACK FAR BZN EDITION",
-    "runs": 2,
+    "runs": 3,
     "on_target": 47,
     "reaction_ms": null,
-    "overshoot_pct": 27,
+    "overshoot_pct": 24,
     "pps_by_distance": {
      "far": 18.9
     }
