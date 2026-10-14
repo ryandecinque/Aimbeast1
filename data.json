@@ -1,12 +1,9 @@
 {
- "updated": "2026-10-13 11:41",
- "updated_utc": "2026-10-13T04:41:20Z",
+ "updated": "2026-10-14 09:23",
+ "updated_utc": "2026-10-14T02:23:46Z",
  "today": {
-  "date": "2026-10-13",
-  "progress": {
-   "ZEUS WEAKNESS": 26,
-   "RANK INT A": 11
-  }
+  "date": "2026-10-14",
+  "progress": {}
  },
  "plan_start": "2026-10-07",
  "ranks": [
@@ -16,7 +13,7 @@
    "official_best": 555.0,
    "best_14d": 479.0,
    "median_14d": 427,
-   "runs_14d": 87,
+   "runs_14d": 69,
    "steps": [
     0.0,
     168.0,
@@ -43,8 +40,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 545.0,
-   "median_14d": 461,
-   "runs_14d": 81,
+   "median_14d": 445,
+   "runs_14d": 63,
    "steps": [
     0.0,
     180.0,
@@ -71,8 +68,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 853.0,
-   "median_14d": 675,
-   "runs_14d": 81,
+   "median_14d": 662,
+   "runs_14d": 63,
    "steps": [
     0.0,
     240.0,
@@ -99,8 +96,8 @@
    "master3": 506.0,
    "official_best": 398.0,
    "best_14d": 398.0,
-   "median_14d": 336,
-   "runs_14d": 72,
+   "median_14d": 335,
+   "runs_14d": 54,
    "steps": [
     0.0,
     138.0,
@@ -127,8 +124,8 @@
    "master3": 660.0,
    "official_best": 580.0,
    "best_14d": 536.0,
-   "median_14d": 472,
-   "runs_14d": 74,
+   "median_14d": 468,
+   "runs_14d": 53,
    "steps": [
     0.0,
     180.0,
@@ -155,8 +152,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 553.0,
-   "median_14d": 492,
-   "runs_14d": 151,
+   "median_14d": 493,
+   "runs_14d": 130,
    "steps": [
     0.0,
     198.0,
@@ -905,10 +902,20 @@
  ],
  "days": [
   {
+   "date": "2026-10-14",
+   "runs": 0,
+   "restarts": 1,
+   "rest_median_s": null,
+   "rest_longest_s": null,
+   "breaks": [],
+   "playlists": [],
+   "scenarios": []
+  },
+  {
    "date": "2026-10-13",
-   "runs": 68,
-   "restarts": 77,
-   "rest_median_s": 36,
+   "runs": 69,
+   "restarts": 78,
+   "rest_median_s": 38,
    "rest_longest_s": 727,
    "breaks": [
     {
@@ -969,9 +976,9 @@
     },
     {
      "name": "DYNAMIC INTERMEDIATE RANK",
-     "runs": 17,
+     "runs": 18,
      "first": "11:15",
-     "last": "11:40"
+     "last": "11:43"
     }
    ],
    "scenarios": [
@@ -1105,11 +1112,11 @@
     },
     {
      "name": "テ BARREL CLICK (EZ) - RANKED",
-     "runs": 2,
+     "runs": 3,
      "routine": "DYNAMIC INTERMEDIATE RANK",
      "first": "11:24",
-     "best": 580,
-     "median": 540
+     "best": 660,
+     "median": 580
     }
    ]
   },
@@ -2186,13 +2193,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 429,
+  "runs": 430,
   "days": 8,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 165,
-    "pct": 99.9
+    "runs": 166,
+    "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
