@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-14 17:11",
- "updated_utc": "2026-10-14T10:11:19Z",
+ "updated": "2026-10-14 17:16",
+ "updated_utc": "2026-10-14T10:16:19Z",
  "today": {
   "date": "2026-10-14",
   "progress": {}
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 493,
-   "runs_14d": 143,
+   "runs_14d": 144,
    "steps": [
     0.0,
     198.0,
@@ -819,9 +819,9 @@
     },
     {
      "date": "2026-10-14",
-     "median": 486,
-     "best": 524,
-     "runs": 13
+     "median": 492,
+     "best": 548,
+     "runs": 14
     }
    ]
   }
@@ -921,8 +921,8 @@
  "days": [
   {
    "date": "2026-10-14",
-   "runs": 45,
-   "restarts": 62,
+   "runs": 49,
+   "restarts": 63,
    "rest_median_s": 18,
    "rest_longest_s": 846,
    "breaks": [
@@ -943,6 +943,12 @@
      "before": "ZEUS WEAKNESS 3",
      "at": "16:48",
      "minutes": 0.5
+    },
+    {
+     "after": "ZEUS WEAKNESS 3",
+     "before": "ZEUS TRIO",
+     "at": "17:11",
+     "minutes": 0.3
     }
    ],
    "playlists": [
@@ -954,9 +960,15 @@
     },
     {
      "name": "ZEUS WEAKNESS 3",
-     "runs": 5,
+     "runs": 6,
      "first": "16:49",
-     "last": "17:10"
+     "last": "17:11"
+    },
+    {
+     "name": "ZEUS TRIO",
+     "runs": 3,
+     "first": "17:13",
+     "last": "17:15"
     }
    ],
    "scenarios": [
@@ -978,11 +990,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 13,
+     "runs": 14,
      "routine": "1",
      "first": "09:30",
-     "best": 524,
-     "median": 486
+     "best": 548,
+     "median": 492
     },
     {
      "name": "SCX CLOSE STRAFES",
@@ -1002,11 +1014,27 @@
     },
     {
      "name": "ZEUS TRACK FAR BZN EDITION",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS WEAKNESS 3",
      "first": "17:07",
      "best": 1213,
-     "median": 1213
+     "median": 1134
+    },
+    {
+     "name": "ZEUS TRACK EVO - NOBLINK (EZ)",
+     "runs": 1,
+     "routine": "ZEUS TRIO",
+     "first": "17:13",
+     "best": 560,
+     "median": 560
+    },
+    {
+     "name": "ZEUS TRACK EVO - NOBLINK 50%",
+     "runs": 1,
+     "routine": "ZEUS TRIO",
+     "first": "17:15",
+     "best": 231,
+     "median": 231
     }
    ]
   },
@@ -2292,13 +2320,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 475,
+  "runs": 479,
   "days": 9,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 210,
-    "pct": 99.9
+    "runs": 214,
+    "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2900,10 +2928,10 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 13,
+    "runs": 14,
     "on_target": 35,
     "reaction_ms": 133,
-    "overshoot_pct": 35,
+    "overshoot_pct": 34,
     "pps_by_distance": {
      "far": 7.1,
      "mid": 9.1,
@@ -2911,13 +2939,37 @@
     }
    },
    {
-    "scenario": "ZEUS TRACK FAR BZN EDITION",
+    "scenario": "ZEUS TRACK EVO - NOBLINK 50",
     "runs": 1,
-    "on_target": 51,
-    "reaction_ms": null,
-    "overshoot_pct": 24,
+    "on_target": 19,
+    "reaction_ms": 150,
+    "overshoot_pct": 50,
     "pps_by_distance": {
-     "far": 20.2
+     "far": 3.5,
+     "mid": 3.9,
+     "close": 3.9
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - NOBLINK EZ",
+    "runs": 1,
+    "on_target": 38,
+    "reaction_ms": 133,
+    "overshoot_pct": 42,
+    "pps_by_distance": {
+     "far": 7.7,
+     "mid": 9.3,
+     "close": 10.2
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK FAR BZN EDITION",
+    "runs": 2,
+    "on_target": 47,
+    "reaction_ms": null,
+    "overshoot_pct": 27,
+    "pps_by_distance": {
+     "far": 18.9
     }
    }
   ]
@@ -3265,19 +3317,19 @@
    },
    {
     "scenario": "Zeus Track Evo - Noblink",
-    "score": 524,
-    "time": "16:28",
+    "score": 548,
+    "time": "17:13",
     "gif": "best-zeus-2026-10-14",
     "video": true,
     "on_target": 38,
     "reaction_ms": 133,
-    "overshoot_pct": 38,
+    "overshoot_pct": 30,
     "best_14d": 553,
     "master3": 726,
-    "note": "Best of 10 recorded today (median 494). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 14 recorded today (median 492). The clip is its 8 seconds with the most hits.",
     "model": {
      "file": "model-zeus-2026-10-14",
-     "label": "Model: 629"
+     "label": "Model: 658"
     }
    }
   ]
