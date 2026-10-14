@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-14 17:31",
- "updated_utc": "2026-10-14T10:31:19Z",
+ "updated": "2026-10-15 05:16",
+ "updated_utc": "2026-10-14T22:16:19Z",
  "today": {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "progress": {}
  },
  "plan_start": "2026-10-07",
@@ -12,8 +12,8 @@
    "master3": 616.0,
    "official_best": 555.0,
    "best_14d": 479.0,
-   "median_14d": 427,
-   "runs_14d": 69,
+   "median_14d": 428,
+   "runs_14d": 66,
    "steps": [
     0.0,
     168.0,
@@ -40,8 +40,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 545.0,
-   "median_14d": 445,
-   "runs_14d": 63,
+   "median_14d": 452,
+   "runs_14d": 60,
    "steps": [
     0.0,
     180.0,
@@ -68,8 +68,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 853.0,
-   "median_14d": 662,
-   "runs_14d": 63,
+   "median_14d": 664,
+   "runs_14d": 60,
    "steps": [
     0.0,
     240.0,
@@ -921,8 +921,8 @@
  "days": [
   {
    "date": "2026-10-14",
-   "runs": 57,
-   "restarts": 71,
+   "runs": 59,
+   "restarts": 73,
    "rest_median_s": 19,
    "rest_longest_s": 846,
    "breaks": [
@@ -981,6 +981,12 @@
      "runs": 8,
      "first": "17:13",
      "last": "17:25"
+    },
+    {
+     "name": "(single scenario)",
+     "runs": 2,
+     "first": "17:31",
+     "last": "17:34"
     }
    ],
    "scenarios": [
@@ -1018,11 +1024,11 @@
     },
     {
      "name": "PENNYTRACKING",
-     "runs": 3,
+     "runs": 5,
      "routine": "ZEUS WEAKNESS 3",
      "first": "16:52",
-     "best": 575,
-     "median": 545
+     "best": 635,
+     "median": 575
     },
     {
      "name": "ZEUS TRACK FAR BZN EDITION",
@@ -2332,12 +2338,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 487,
+  "runs": 489,
   "days": 9,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 222,
+    "runs": 223,
     "pct": 99.9
    },
    {
@@ -2347,8 +2353,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 140,
-    "pct": 101.8
+    "runs": 141,
+    "pct": 101.9
    },
    {
     "label": "First run after a break of 15 min+",
@@ -2919,13 +2925,13 @@
    },
    {
     "scenario": "PENNYTRACKING",
-    "runs": 3,
+    "runs": 5,
     "on_target": 19,
     "reaction_ms": 167,
     "overshoot_pct": 68,
     "pps_by_distance": {
      "mid": 2.5,
-     "close": 1.8
+     "close": 1.9
     }
    },
    {
