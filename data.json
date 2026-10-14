@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-15 05:16",
- "updated_utc": "2026-10-14T22:16:19Z",
+ "updated": "2026-10-15 06:31",
+ "updated_utc": "2026-10-14T23:31:21Z",
  "today": {
   "date": "2026-10-15",
   "progress": {}
@@ -827,6 +827,21 @@
   }
  ],
  "journal": [
+  {
+   "date": "2026-10-13",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS WEAKNESS\nBelow your usual on three of six scenarios, above on two. SCX Close Strafes was the weak spot, a typical 527 against your 14-day typical of 617.\nOver-aim rose on Far BZN: 32% of corrections went through the bot, more than your last 14 days.\nOne thing to try: after each turn, the correction is landing past the bot. Use a smaller input from the wrist and fingers and aim to stop on the bot's near side. It should feel quiet, almost too small."
+  },
+  {
+   "date": "2026-10-13",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS WEAKNESS, second play of the day\nFar BZN hit 1183, your best since the score log started. Above your usual on three of six scenarios, below on two.\nOn SCX Close Strafes, 38% of your corrections went past the bot (over-aim), more than your usual 32%.\nOne thing to try: too much arm in each correction carries the crosshair past the bot. Correct with wrist and fingers only, and smaller than feels natural. It should feel calm and slightly behind, not like a swing."
+  },
+  {
+   "date": "2026-10-12",
+   "author": "AimJournal",
+   "text": "Playlist: RANK INT A\nAbove your usual on one of three scenarios, below on one. Sphere S was the weak spot, a typical 625 against your 14-day typical of 678.\nNothing slipped clearly against your last 14 days: over-aim, mouse movement and rests were all close to usual or better.\nOne thing to try: the extra input comes from chasing every small change. Let small bot moves go and reduce your input to the bot's real path. It should feel slower and steadier."
+  },
   {
    "date": "2026-10-10",
    "author": "Ryan",
