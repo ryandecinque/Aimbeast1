@@ -282,16 +282,16 @@
   },
   {
    "scenario": "PASU Track Evo (RCT) - 0.85X",
-   "score": 330,
-   "time": "09:48",
+   "score": 347,
+   "time": "09:55",
    "gif": "best-pasu085-2026-10-14",
    "video": true,
-   "on_target": 24,
-   "reaction_ms": 167,
-   "overshoot_pct": 34,
+   "on_target": 26,
+   "reaction_ms": 150,
+   "overshoot_pct": 31,
    "best_14d": 398,
    "master3": 506,
-   "note": "Best of 3 recorded today (median 314). The clip is its 8 seconds with the most hits.",
+   "note": "Best of 5 recorded today (median 314). The clip is its 8 seconds with the most hits.",
    "model": {
     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (event 2 is triggered on hit (speed up/down))"
    }
