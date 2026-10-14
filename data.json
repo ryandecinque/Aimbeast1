@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-14 14:21",
- "updated_utc": "2026-10-14T07:21:19Z",
+ "updated": "2026-10-14 14:26",
+ "updated_utc": "2026-10-14T07:26:19Z",
  "today": {
   "date": "2026-10-14",
   "progress": {}
@@ -97,7 +97,7 @@
    "official_best": 398.0,
    "best_14d": 398.0,
    "median_14d": 332,
-   "runs_14d": 63,
+   "runs_14d": 64,
    "steps": [
     0.0,
     138.0,
@@ -125,7 +125,7 @@
    "official_best": 580.0,
    "best_14d": 536.0,
    "median_14d": 466,
-   "runs_14d": 61,
+   "runs_14d": 62,
    "steps": [
     0.0,
     180.0,
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 493,
-   "runs_14d": 138,
+   "runs_14d": 139,
    "steps": [
     0.0,
     198.0,
@@ -535,9 +535,9 @@
     },
     {
      "date": "2026-10-14",
-     "median": 315,
+     "median": 314,
      "best": 347,
-     "runs": 9
+     "runs": 10
     }
    ]
   },
@@ -617,9 +617,9 @@
     },
     {
      "date": "2026-10-14",
-     "median": 440,
+     "median": 456,
      "best": 522,
-     "runs": 8
+     "runs": 9
     }
    ]
   },
@@ -819,9 +819,9 @@
     },
     {
      "date": "2026-10-14",
-     "median": 494,
+     "median": 486,
      "best": 518,
-     "runs": 8
+     "runs": 9
     }
    ]
   }
@@ -921,9 +921,9 @@
  "days": [
   {
    "date": "2026-10-14",
-   "runs": 25,
-   "restarts": 44,
-   "rest_median_s": 18,
+   "runs": 28,
+   "restarts": 47,
+   "rest_median_s": 17,
    "rest_longest_s": 753,
    "breaks": [
     {
@@ -936,35 +936,35 @@
    "playlists": [
     {
      "name": "1",
-     "runs": 25,
+     "runs": 28,
      "first": "09:27",
-     "last": "14:20"
+     "last": "14:23"
     }
    ],
    "scenarios": [
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
-     "runs": 9,
+     "runs": 10,
      "routine": "1",
      "first": "09:27",
      "best": 347,
-     "median": 315
+     "median": 314
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
-     "runs": 8,
+     "runs": 9,
      "routine": "1",
      "first": "09:28",
      "best": 522,
-     "median": 440
+     "median": 456
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 8,
+     "runs": 9,
      "routine": "1",
      "first": "09:30",
      "best": 518,
-     "median": 494
+     "median": 486
     }
    ]
   },
@@ -2250,13 +2250,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 455,
+  "runs": 458,
   "days": 9,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 190,
-    "pct": 100.0
+    "runs": 193,
+    "pct": 99.9
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2266,7 +2266,7 @@
    {
     "label": "Later attempts, rest 20 s to 2 min",
     "runs": 140,
-    "pct": 101.7
+    "pct": 101.8
    },
    {
     "label": "First run after a break of 15 min+",
@@ -2815,7 +2815,7 @@
   "2026-10-14": [
    {
     "scenario": "PASU TRACK EVO RCT - 0.85X",
-    "runs": 9,
+    "runs": 10,
     "on_target": 23,
     "reaction_ms": 167,
     "overshoot_pct": 34,
@@ -2826,23 +2826,23 @@
    },
    {
     "scenario": "PASU TRACK XYZ - RANKED",
-    "runs": 8,
-    "on_target": 24,
+    "runs": 9,
+    "on_target": 25,
     "reaction_ms": 167,
     "overshoot_pct": 32,
     "pps_by_distance": {
-     "mid": 3.5,
-     "close": 4.0
+     "mid": 3.4,
+     "close": 4.2
     }
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 8,
+    "runs": 9,
     "on_target": 35,
     "reaction_ms": 134,
     "overshoot_pct": 36,
     "pps_by_distance": {
-     "far": 7.2,
+     "far": 7.1,
      "mid": 9.1,
      "close": 8.1
     }
