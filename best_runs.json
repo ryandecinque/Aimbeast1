@@ -264,23 +264,6 @@
    }
   },
   {
-   "scenario": "Zeus Track Evo - Noblink",
-   "score": 518,
-   "time": "14:15",
-   "gif": "best-zeus-2026-10-14",
-   "video": true,
-   "on_target": 38,
-   "reaction_ms": 134,
-   "overshoot_pct": 28,
-   "best_14d": 553,
-   "master3": 726,
-   "note": "Best of 7 recorded today (median 502). The clip is its 8 seconds with the most hits.",
-   "model": {
-    "file": "model-zeus-2026-10-14",
-    "label": "Model: 622"
-   }
-  },
-  {
    "scenario": "PASU Track Evo (RCT) - 0.85X",
    "score": 351,
    "time": "16:24",
@@ -294,6 +277,23 @@
    "note": "Best of 11 recorded today (median 314). The clip is its 8 seconds with the most hits.",
    "model": {
     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (event 2 is triggered on hit (speed up/down))"
+   }
+  },
+  {
+   "scenario": "Zeus Track Evo - Noblink",
+   "score": 524,
+   "time": "16:28",
+   "gif": "best-zeus-2026-10-14",
+   "video": true,
+   "on_target": 38,
+   "reaction_ms": 133,
+   "overshoot_pct": 38,
+   "best_14d": 553,
+   "master3": 726,
+   "note": "Best of 10 recorded today (median 494). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "file": "model-zeus-2026-10-14",
+    "label": "Model: 629"
    }
   }
  ]
