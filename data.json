@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-14 16:46",
- "updated_utc": "2026-10-14T09:46:19Z",
+ "updated": "2026-10-14 16:51",
+ "updated_utc": "2026-10-14T09:51:19Z",
  "today": {
   "date": "2026-10-14",
   "progress": {}
@@ -124,8 +124,8 @@
    "master3": 660.0,
    "official_best": 580.0,
    "best_14d": 536.0,
-   "median_14d": 466,
-   "runs_14d": 65,
+   "median_14d": 464,
+   "runs_14d": 66,
    "steps": [
     0.0,
     180.0,
@@ -152,8 +152,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 553.0,
-   "median_14d": 492,
-   "runs_14d": 142,
+   "median_14d": 493,
+   "runs_14d": 143,
    "steps": [
     0.0,
     198.0,
@@ -617,9 +617,9 @@
     },
     {
      "date": "2026-10-14",
-     "median": 443,
+     "median": 430,
      "best": 524,
-     "runs": 12
+     "runs": 13
     }
    ]
   },
@@ -819,9 +819,9 @@
     },
     {
      "date": "2026-10-14",
-     "median": 482,
+     "median": 486,
      "best": 524,
-     "runs": 12
+     "runs": 13
     }
    ]
   }
@@ -921,8 +921,8 @@
  "days": [
   {
    "date": "2026-10-14",
-   "runs": 38,
-   "restarts": 59,
+   "runs": 41,
+   "restarts": 60,
    "rest_median_s": 17,
    "rest_longest_s": 753,
    "breaks": [
@@ -937,14 +937,26 @@
      "before": "1",
      "at": "14:23",
      "minutes": 121.2
+    },
+    {
+     "after": "1",
+     "before": "ZEUS WEAKNESS 3",
+     "at": "16:48",
+     "minutes": 0.5
     }
    ],
    "playlists": [
     {
      "name": "1",
-     "runs": 38,
+     "runs": 40,
      "first": "09:27",
-     "last": "16:45"
+     "last": "16:48"
+    },
+    {
+     "name": "ZEUS WEAKNESS 3",
+     "runs": 1,
+     "first": "16:49",
+     "last": "16:49"
     }
    ],
    "scenarios": [
@@ -958,19 +970,27 @@
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
-     "runs": 12,
+     "runs": 13,
      "routine": "1",
      "first": "09:28",
      "best": 524,
-     "median": 443
+     "median": 430
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 12,
+     "runs": 13,
      "routine": "1",
      "first": "09:30",
      "best": 524,
-     "median": 482
+     "median": 486
+    },
+    {
+     "name": "SCX CLOSE STRAFES",
+     "runs": 1,
+     "routine": "ZEUS WEAKNESS 3",
+     "first": "16:49",
+     "best": 609,
+     "median": 609
     }
    ]
   },
@@ -2256,13 +2276,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 468,
+  "runs": 471,
   "days": 9,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 203,
-    "pct": 99.9
+    "runs": 206,
+    "pct": 99.8
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2277,7 +2297,7 @@
    {
     "label": "First run after a break of 15 min+",
     "runs": 29,
-    "pct": 94.6
+    "pct": 95.1
    }
   ]
  },
@@ -2832,25 +2852,35 @@
    },
    {
     "scenario": "PASU TRACK XYZ - RANKED",
-    "runs": 12,
+    "runs": 13,
     "on_target": 25,
     "reaction_ms": 167,
     "overshoot_pct": 32,
     "pps_by_distance": {
-     "mid": 3.5,
-     "close": 4.0
+     "mid": 3.4,
+     "close": 3.9
+    }
+   },
+   {
+    "scenario": "SCX CLOSE STRAFES",
+    "runs": 1,
+    "on_target": 41,
+    "reaction_ms": 133,
+    "overshoot_pct": 27,
+    "pps_by_distance": {
+     "close": 10.1
     }
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 12,
-    "on_target": 34,
-    "reaction_ms": 134,
-    "overshoot_pct": 36,
+    "runs": 13,
+    "on_target": 35,
+    "reaction_ms": 133,
+    "overshoot_pct": 35,
     "pps_by_distance": {
      "far": 7.1,
      "mid": 9.1,
-     "close": 8.1
+     "close": 8.2
     }
    }
   ]
