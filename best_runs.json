@@ -329,6 +329,23 @@
    "model": {
     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (the bot can be destroyed, and it comes back after a kill)"
    }
+  },
+  {
+   "scenario": "Zeus Track Evo - Noblink",
+   "score": 504,
+   "time": "12:53",
+   "gif": "best-zeus-2026-10-15",
+   "video": true,
+   "on_target": 34,
+   "reaction_ms": 150,
+   "overshoot_pct": 37,
+   "best_14d": 553,
+   "master3": 726,
+   "note": "Best of 2 recorded today (median 484). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "file": "model-zeus-2026-10-15",
+    "label": "Model: 605"
+   }
   }
  ]
 }
