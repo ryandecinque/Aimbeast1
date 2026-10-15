@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-15 15:16",
- "updated_utc": "2026-10-15T08:16:21Z",
+ "updated": "2026-10-15 15:21",
+ "updated_utc": "2026-10-15T08:21:21Z",
  "today": {
   "date": "2026-10-15",
   "progress": {
@@ -962,9 +962,9 @@
  "days": [
   {
    "date": "2026-10-15",
-   "runs": 48,
-   "restarts": 41,
-   "rest_median_s": 54,
+   "runs": 50,
+   "restarts": 42,
+   "rest_median_s": 64,
    "rest_longest_s": 713,
    "breaks": [
     {
@@ -1013,9 +1013,9 @@
     },
     {
      "name": "AIMBEAST 1 BEGINNER TRACKING",
-     "runs": 13,
+     "runs": 15,
      "first": "14:48",
-     "last": "15:14"
+     "last": "15:19"
     }
    ],
    "scenarios": [
@@ -1101,7 +1101,7 @@
     },
     {
      "name": "PASU TRACK XYZ (EZ) - RANKED",
-     "runs": 1,
+     "runs": 3,
      "routine": "AIMBEAST 1 BEGINNER TRACKING",
      "first": "15:14"
     }
@@ -3248,13 +3248,13 @@
    },
    {
     "scenario": "PASU TRACK XYZ EZ - RANKED",
-    "runs": 1,
-    "on_target": 27,
+    "runs": 3,
+    "on_target": 26,
     "reaction_ms": 183,
-    "overshoot_pct": 25,
+    "overshoot_pct": 34,
     "pps_by_distance": {
      "mid": 2.8,
-     "close": 3.1
+     "close": 3.2
     }
    },
    {
