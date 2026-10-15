@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-15 14:41",
- "updated_utc": "2026-10-15T07:41:20Z",
+ "updated": "2026-10-15 14:51",
+ "updated_utc": "2026-10-15T07:51:23Z",
  "today": {
   "date": "2026-10-15",
   "progress": {
@@ -962,8 +962,8 @@
  "days": [
   {
    "date": "2026-10-15",
-   "runs": 35,
-   "restarts": 38,
+   "runs": 36,
+   "restarts": 40,
    "rest_median_s": 71,
    "rest_longest_s": 713,
    "breaks": [
@@ -990,6 +990,12 @@
      "before": "ZEUS WEAKNESS",
      "at": "13:58",
      "minutes": 20.9
+    },
+    {
+     "after": "ZEUS WEAKNESS",
+     "before": "AIMBEAST 1 INTERMEDIATE",
+     "at": "14:32",
+     "minutes": 14.5
     }
    ],
    "playlists": [
@@ -1004,6 +1010,12 @@
      "runs": 9,
      "first": "13:21",
      "last": "14:32"
+    },
+    {
+     "name": "AIMBEAST 1 BEGINNER TRACKING",
+     "runs": 1,
+     "first": "14:48",
+     "last": "14:48"
     }
    ],
    "scenarios": [
@@ -1062,6 +1074,12 @@
      "first": "14:20",
      "best": 1100,
      "median": 1070
+    },
+    {
+     "name": "SMOOTH THIN TRACK V2 (EZ) - RANK",
+     "runs": 1,
+     "routine": "AIMBEAST 1 BEGINNER TRACKING",
+     "first": "14:48"
     }
    ]
   },
@@ -3189,6 +3207,16 @@
     "overshoot_pct": 42,
     "pps_by_distance": {
      "close": 11.0
+    }
+   },
+   {
+    "scenario": "SMOOTH THIN TRACK V2 EZ - RANK",
+    "runs": 1,
+    "on_target": 34,
+    "reaction_ms": 143,
+    "overshoot_pct": 26,
+    "pps_by_distance": {
+     "mid": 3.0
     }
    },
    {
