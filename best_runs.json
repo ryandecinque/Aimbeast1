@@ -316,16 +316,16 @@
   },
   {
    "scenario": "PASU Track XYZ",
-   "score": 201,
-   "time": "07:38",
+   "score": 211,
+   "time": "07:44",
    "gif": "best-pasuxyz-2026-10-15",
    "video": true,
-   "on_target": 22,
-   "reaction_ms": 167,
-   "overshoot_pct": 30,
+   "on_target": 23,
+   "reaction_ms": 175,
+   "overshoot_pct": 37,
    "best_14d": 536,
    "master3": 660,
-   "note": "Best of 1 recorded today (median 201). The clip is its 8 seconds with the most hits.",
+   "note": "Best of 3 recorded today (median 201). The clip is its 8 seconds with the most hits.",
    "model": {
     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (the bot can be destroyed, and it comes back after a kill)"
    }

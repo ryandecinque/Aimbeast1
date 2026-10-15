@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-15 07:41",
- "updated_utc": "2026-10-15T00:41:22Z",
+ "updated": "2026-10-15 07:46",
+ "updated_utc": "2026-10-15T00:46:22Z",
  "today": {
   "date": "2026-10-15",
   "progress": {
-   "RANK INT B": 11
+   "RANK INT B": 13
   }
  },
  "plan_start": "2026-10-07",
@@ -127,7 +127,7 @@
    "official_best": 580.0,
    "best_14d": 536.0,
    "median_14d": 462,
-   "runs_14d": 67,
+   "runs_14d": 69,
    "steps": [
     0.0,
     180.0,
@@ -632,8 +632,8 @@
     {
      "date": "2026-10-15",
      "median": 404,
-     "best": 404,
-     "runs": 1
+     "best": 422,
+     "runs": 3
     }
    ]
   },
@@ -950,17 +950,17 @@
  "days": [
   {
    "date": "2026-10-15",
-   "runs": 11,
-   "restarts": 19,
-   "rest_median_s": 53,
+   "runs": 13,
+   "restarts": 21,
+   "rest_median_s": 47,
    "rest_longest_s": 443,
    "breaks": [],
    "playlists": [
     {
      "name": "RANK INT B",
-     "runs": 11,
+     "runs": 13,
      "first": "07:13",
-     "last": "07:39"
+     "last": "07:45"
     }
    ],
    "scenarios": [
@@ -974,10 +974,10 @@
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
-     "runs": 1,
+     "runs": 3,
      "routine": "RANK INT B",
      "first": "07:39",
-     "best": 404,
+     "best": 422,
      "median": 404
     }
    ]
@@ -2401,13 +2401,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 492,
+  "runs": 494,
   "days": 10,
   "groups": [
    {
     "label": "First attempt on a scenario",
     "runs": 225,
-    "pct": 99.9
+    "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2416,8 +2416,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 141,
-    "pct": 101.9
+    "runs": 143,
+    "pct": 101.6
    },
    {
     "label": "First run after a break of 15 min+",
@@ -3068,7 +3068,7 @@
    },
    {
     "scenario": "PASU TRACK XYZ - RANKED",
-    "runs": 1,
+    "runs": 3,
     "on_target": 22,
     "reaction_ms": 167,
     "overshoot_pct": 30,
@@ -3457,16 +3457,16 @@
    },
    {
     "scenario": "PASU Track XYZ",
-    "score": 201,
-    "time": "07:38",
+    "score": 211,
+    "time": "07:44",
     "gif": "best-pasuxyz-2026-10-15",
     "video": true,
-    "on_target": 22,
-    "reaction_ms": 167,
-    "overshoot_pct": 30,
+    "on_target": 23,
+    "reaction_ms": 175,
+    "overshoot_pct": 37,
     "best_14d": 536,
     "master3": 660,
-    "note": "Best of 1 recorded today (median 201). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 3 recorded today (median 201). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (the bot can be destroyed, and it comes back after a kill)"
     }
