@@ -4,6 +4,7 @@ Usage:
   python publish.py            # build data.json; commit + push if it changed
   python publish.py --dry-run  # build and print a summary, no git
   python publish.py --if-marker  # only run when the PracticeLog mod left a session_done marker (for the scheduled task)
+  python publish.py --no-journal # skip the AimJournal reviews (aimjournal.py), which otherwise run before the build
 
 Only scenario names, times, run counts and scores are published. No Steam name, no file paths.
 """
@@ -264,9 +265,25 @@ def git(*args):
     return subprocess.run(["git", *args], cwd=HERE, capture_output=True, text=True, creationflags=0x08000000)
 
 
+def aimjournal_entries(dry):
+    """Rule-based AimJournal reviews for newly completed playlists (aimjournal.py). Never stops the publish."""
+    try:
+        import aimjournal
+        aimjournal.run(dry_run=dry)
+    except Exception as e:
+        print("aimjournal skipped:", e)
+        try:
+            with open(os.path.join(HERE, "reviews", "aimjournal_log.txt"), "a", encoding="utf-8") as f:
+                f.write(dt.datetime.now().strftime("%Y-%m-%d %H:%M ") + f"publish: aimjournal failed: {e!r}\n")
+        except Exception: pass
+
+
 def main():
-    journal_changed = os.path.exists(JOURNAL) and (not os.path.exists(OUT) or os.path.getmtime(JOURNAL) > os.path.getmtime(OUT))
-    if "--if-marker" in sys.argv and not os.path.exists(MARKER) and not journal_changed: return
+    journal_changed = lambda: os.path.exists(JOURNAL) and (not os.path.exists(OUT) or os.path.getmtime(JOURNAL) > os.path.getmtime(OUT))
+    # --if-marker: skip quiet ticks, but a session marker (or a new note) still lets AimJournal run before the build
+    if "--if-marker" in sys.argv and not os.path.exists(MARKER) and not journal_changed(): return
+    if "--no-journal" not in sys.argv: aimjournal_entries("--dry-run" in sys.argv)
+    journal_changed = journal_changed()
     data = build()
     new = json.dumps(data, indent=1, ensure_ascii=False)
     old = open(OUT, encoding="utf-8").read() if os.path.exists(OUT) else ""

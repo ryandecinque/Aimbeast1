@@ -1,2 +1,6 @@
 __pycache__/
 QnA*.md
+reviews/
+
+# Private transcript collection, never publish
+Aim Knowledge/

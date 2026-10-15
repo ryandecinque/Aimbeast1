@@ -118,6 +118,8 @@ summary { min-height: 44px; align-items: center; }
 .jdayhead a { font: 700 18px var(--display); text-transform: uppercase; color: var(--ink); }
 .jday .jentry { border-top: 0; padding: 0; line-height: 1.65; }
 .jday .jentry.claude { margin: 0; padding: 10px 12px; border-left: 3px solid var(--ink-3); border-radius: 0; }
+.jday .jentry.aimj { background: none; border-left: 3px dashed var(--rule); }
+.jauto { display: inline-block; margin-left: 6px; padding: 0 6px; border: 1px solid var(--rule); border-radius: 999px; font: 500 11px/16px var(--body); letter-spacing: .02em; text-transform: none; color: var(--ink-3); vertical-align: 1px; }
 .jwho { font: 700 12px var(--display); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); margin-bottom: 2px; }
 .jclose { min-height: 44px; min-width: 64px; }
 .jtab small { font-variant-numeric: tabular-nums; }
@@ -229,13 +231,15 @@ summary { min-height: 44px; align-items: center; }
       <table>
         <tr><th>Day</th><th>Main hour</th><th>Optional, later</th></tr>
         <tr><td>A days</td><td class="rt">RANK INT A</td><td><span class="rt">ZEUS WEAKNESS</span>, then <span class="rt">RANK INT A</span> again</td></tr>
-        <tr><td>B days</td><td class="rt">RANK INT B</td><td><span class="rt">RANK INT B</span> again</td></tr>
+        <tr><td>B days</td><td class="rt">RANK INT B</td><td><span class="rt">RANK INT B2</span> (no Zeus)</td></tr>
       </table>
     </div>
     <ul class="sub">
       <li><span class="rt">RANK INT A</span>: Smooth Thin Track V2, Air Track Smooth V3 150%, Air Control Sphere - S. 8 runs each, after a 2-run warm-up on the easier Air Control Sphere.</li>
-      <li><span class="rt">RANK INT B</span>: Pasu Track Evo (RCT) - 0.85X, Pasu Track XYZ, Zeus Track Evo - Noblink. 8 runs each, after a 2-run warm-up on Pasu Track Evo (RCT) - 0.85X itself in Normal mode, so the first ranked runs aren't cold (changed Oct 10: the slower 0.6X warm-up didn't stop the cold start).</li>
-      <li><span class="rt">ZEUS WEAKNESS</span> (replaced Zeus Builder on Oct 10): 13 runs aimed only at the parts of Zeus Track the aim recorder shows are weakest. Those are the moment the bot changes direction, over-aiming after it, and the close part of each round, which decides good runs from bad. Most runs go to close-range drills: SCX Close Strafes 3, Pennytracking 3, Thin Fast 2, Closely Strafing Kytan 1. Then Slow Accel 'STT' Short 2 for mid distance and Zeus Track Far BZN Edition 2 for the far start. Zeus Track itself (regular or EZ) isn't in it, so the drills don't turn into more of the same scenario. It's played in the ranked playlist instead.</li>
+      <li><span class="rt">RANK INT B</span>: Pasu Track Evo (RCT) - 0.85X, Pasu Track XYZ, Zeus Track Evo - Noblink. 8 runs each, after a 2-run warm-up on Pasu Track Evo (RCT) - 0.85X itself in Normal mode, so the first ranked runs aren't cold (changed Oct 10: the slower 0.6X warm-up didn't stop the cold start). Since Oct 15, a 6-run slow-turn block (Controlsphere OW, Air Easy Invincible 4, Mixed XYZ Strafes Slow Accel, 2 each, Normal mode) comes right before the 8 Zeus runs. 32 runs in all.</li>
+      <li><span class="rt">RANK INT B2</span> (since Oct 15): Pasu Track Evo (RCT) - 0.85X, Pasu Track XYZ, Air Control Sphere - S, 8 runs each. The second B pass, with no Zeus: ranked Zeus is capped at 8 runs per sitting, because more Zeus in a day never raised the typical score, and Sphere S is the closest to Master 3.</li>
+      <li><span class="rt">ZEUS WEAKNESS</span> (replaced Zeus Builder on Oct 10, changed Oct 15): 15 runs. It opens with an 8-run slow-turn block: Controlsphere OW 2, Mixed XYZ Strafes Slow Accel 2, Reactive Adjustments Strafes 2, Slow Accel 'STT' Short 2. Then the Zeus-distance drills: SCX Close Strafes 3, Thin Fast 2, Zeus Track Far BZN Edition 2. Pennytracking and Closely Strafing Kytan were dropped: on those two, about 2 in 3 corrections went past the bot.</li>
+      <li><b>How to play the slow-turn block:</b> no hurry and no score-chasing. After each turn, let the bot come to you, then make one short, smooth correction onto its near edge, never through it. Use a small burst from the wrist or fingers to catch up, then let go. It should feel slow and a little behind. If a scenario feels too hard (you hit well under half your shots), swap in an easier version. On ranked Zeus, one cue: trust the strafe, land short.</li>
       <li>A 2–3 minute break away from the screen at every scenario switch.</li>
     </ul>
   </section>
@@ -269,7 +273,7 @@ summary { min-height: 44px; align-items: center; }
 const nice = n => String(n).toLowerCase().replace(/(^|[\s(\-])([a-z])/g, (m, a, c) => a + c.toUpperCase()).replace(/\b(rct|xyz|stt|fs|ufo|ez)\b/gi, w => w.toUpperCase()).replace(/\b(V\d|0\.85x)\b/gi, w => w.toUpperCase()).replace(/ - S$/, " - S");
 const WD = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], MO = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const nd = iso => { const [y, m, d] = iso.split("-").map(Number); const t = new Date(y, m - 1, d); return `${WD[t.getDay()]} ${d} ${MO[m - 1]}`; };
-const plain = r => r.replace(/^RANK INT ([AB])$/, "playlist $1").replace(/^RANK ADV ([AB])$/, "advanced playlist $1").replace(/^ZEUS BUILDER$/, "Zeus Builder").replace(/^ZEUS WEAKNESS$/, "Zeus Weakness");
+const plain = r => r.replace(/^RANK INT B2$/, "playlist B2").replace(/^RANK INT ([AB])$/, "playlist $1").replace(/^RANK ADV ([AB])$/, "advanced playlist $1").replace(/^ZEUS BUILDER$/, "Zeus Builder").replace(/^ZEUS WEAKNESS$/, "Zeus Weakness");
 const fmtS = s => s == null ? "–" : (s >= 90 ? (s / 60).toFixed(1) + " min" : s + " s");
 const el = (tag, attrs = {}, html = "") => Object.assign(document.createElement(tag), attrs, html ? { innerHTML: html } : {});
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -409,8 +413,9 @@ function journal(entries, days, aim, best) {
   const byDay = {};
   (days || []).forEach(x => byDay[x.date] = byDay[x.date] || []);
   entries.forEach(e => (byDay[e.date] = byDay[e.date] || []).push(e));
-  const body = t => esc(t).replace(/^(What happened|How I measured it|Conditions|Rest|Playlist|Next time):/gm, "<b>$1:</b>");
-  const isC = e => e.author.toLowerCase() === "claude";
+  const body = t => esc(t).replace(/^(What happened|How I measured it|Conditions|Rest|Playlist|Next time|One thing to try):/gm, "<b>$1:</b>");
+  const isA = e => e.author.toLowerCase() === "aimjournal";   // rule-based reviews written by aimjournal.py
+  const isC = e => e.author.toLowerCase() === "claude" || isA(e);
   const dates = Object.keys(byDay).sort();
   const months = [...new Set(dates.map(d => d.slice(0, 7)))];
   const pad = n => String(n).padStart(2, "0");
@@ -436,7 +441,7 @@ function journal(entries, days, aim, best) {
       am.map(x => `<tr><td>${esc(nice(x.scenario))}</td><td>${x.runs}</td><td>${x.on_target ?? "–"}%</td><td>${x.reaction_ms ?? "–"} ms</td><td>${x.overshoot_pct ?? "–"}%</td></tr>`).join("") +
       `</table>` + am.filter(x => x.pps_by_distance && Object.keys(x.pps_by_distance).length > 1).map(x => `<p class="small"><b>${esc(nice(x.scenario))}, points per second by distance:</b> far ${x.pps_by_distance.far ?? "–"} · middle ${x.pps_by_distance.mid ?? "–"} · close ${x.pps_by_distance.close ?? "–"}</p>`).join("") + `<p class="small">On target: how much of the run your crosshair was on the bot. Reaction: how fast you turn after the bot changes direction (compare runs, not other people). Over-aim: how often a correction goes past the bot.</p>`));
     byDay[date].slice().sort((x, y) => isC(x) - isC(y)).forEach(e => {
-      g.appendChild(el("div", { className: "jentry" + (isC(e) ? " claude" : "") }, `<div class="jwho">${esc(e.author)}${isC(e) ? " · review" : ""}</div>${body(e.text)}`));
+      g.appendChild(el("div", { className: "jentry" + (isA(e) ? " claude aimj" : isC(e) ? " claude" : "") }, `<div class="jwho">${esc(e.author)}${isA(e) ? ' <span class="jauto" title="Written automatically from the run data, no AI">auto</span>' : isC(e) ? " · review" : ""}</div>${body(e.text)}`));
     });
     if (!byDay[date].length) g.appendChild(el("p", { className: "small" }, "No notes for this day."));
     return g;
@@ -463,7 +468,7 @@ function journal(entries, days, aim, best) {
       `<div class="jnav"><button class="jbtn" data-month="${months[mi - 1] || ""}" ${mi > 0 ? "" : "disabled"} aria-label="Previous month">‹</button>` +
       `<span class="jmonth">${esc(name)}</span><button class="jbtn" data-month="${months[mi + 1] || ""}" ${mi < months.length - 1 ? "" : "disabled"} aria-label="Next month">›</button></div>` +
       `<div class="cgrid" role="group" aria-label="${esc(name)}">${["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map(w => `<span class="cwd">${w}</span>`).join("")}${cells}</div>` +
-      `<p class="small clegend"><span><b class="cnum-k">24</b> runs that day</span><span><i class="mnote"></i> Ryan's note</span><span><i class="mrev"></i> Claude's review</span><span><i class="mpb"></i> new best</span></p>` +
+      `<p class="small clegend"><span><b class="cnum-k">24</b> runs that day</span><span><i class="mnote"></i> Ryan's note</span><span><i class="mrev"></i> review</span><span><i class="mpb"></i> new best</span></p>` +
       `<p class="small">Tap a day to see its runs, notes and reviews.</p>`);
   }
 
@@ -555,7 +560,7 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   const ago = isNaN(mins) ? d.updated + " (Cambodia time)" : mins < 1 ? "just now" : mins < 60 ? mins + " min ago" : mins < 1440 ? Math.round(mins / 60) + " h ago" : Math.round(mins / 1440) + " days ago";
   document.getElementById("updated").textContent = "Updated " + ago + (mins > 1440 ? " · may be out of date" : "");
   const prog = Object.entries(d.today.progress || {});
-  document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 16 : k === "ZEUS WEAKNESS" ? 13 : 26)} of ${k === "ZEUS BUILDER" ? 16 : k === "ZEUS WEAKNESS" ? 13 : 26} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
+  document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 16 : k === "ZEUS WEAKNESS" ? 15 : k === "RANK INT B" ? 32 : k === "RANK INT B2" ? 24 : 26)} of ${k === "ZEUS BUILDER" ? 16 : k === "ZEUS WEAKNESS" ? 15 : k === "RANK INT B" ? 32 : k === "RANK INT B2" ? 24 : 26} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
   TODAY = d.today.date;
   PBS = d.pbs || PBS; (PBS.events || []).forEach(e => PBDAYS[e.date] = 1);
   pbBanner(PBS, d.days);
