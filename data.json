@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-15 15:01",
- "updated_utc": "2026-10-15T08:01:22Z",
+ "updated": "2026-10-15 15:06",
+ "updated_utc": "2026-10-15T08:06:22Z",
  "today": {
   "date": "2026-10-15",
   "progress": {
@@ -962,9 +962,9 @@
  "days": [
   {
    "date": "2026-10-15",
-   "runs": 40,
+   "runs": 43,
    "restarts": 41,
-   "rest_median_s": 67,
+   "rest_median_s": 54,
    "rest_longest_s": 713,
    "breaks": [
     {
@@ -1013,9 +1013,9 @@
     },
     {
      "name": "AIMBEAST 1 BEGINNER TRACKING",
-     "runs": 5,
+     "runs": 8,
      "first": "14:48",
-     "last": "15:00"
+     "last": "15:05"
     }
    ],
    "scenarios": [
@@ -1083,9 +1083,15 @@
     },
     {
      "name": "AIR TRACK SMOOTH V3 (EZ) - RANKED",
-     "runs": 2,
+     "runs": 3,
      "routine": "AIMBEAST 1 BEGINNER TRACKING",
      "first": "14:59"
+    },
+    {
+     "name": "AIR CONTROL SPHERE - RANKED",
+     "runs": 2,
+     "routine": "AIMBEAST 1 BEGINNER TRACKING",
+     "first": "15:03"
     }
    ]
   },
@@ -3163,15 +3169,26 @@
   ],
   "2026-10-15": [
    {
-    "scenario": "AIR TRACK SMOOTH V3 EZ - RANKED",
+    "scenario": "AIR CONTROL SPHERE - RANKED",
     "runs": 2,
-    "on_target": 35,
-    "reaction_ms": 116,
-    "overshoot_pct": 20,
+    "on_target": 27,
+    "reaction_ms": null,
+    "overshoot_pct": 26,
     "pps_by_distance": {
-     "far": 1.0,
-     "mid": 3.3,
-     "close": 3.3
+     "mid": 2.5,
+     "close": 2.4
+    }
+   },
+   {
+    "scenario": "AIR TRACK SMOOTH V3 EZ - RANKED",
+    "runs": 3,
+    "on_target": 34,
+    "reaction_ms": 133,
+    "overshoot_pct": 21,
+    "pps_by_distance": {
+     "far": 1.4,
+     "mid": 3.5,
+     "close": 2.9
     }
    },
    {
