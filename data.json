@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-15 15:06",
- "updated_utc": "2026-10-15T08:06:22Z",
+ "updated": "2026-10-15 15:11",
+ "updated_utc": "2026-10-15T08:11:22Z",
  "today": {
   "date": "2026-10-15",
   "progress": {
@@ -962,9 +962,9 @@
  "days": [
   {
    "date": "2026-10-15",
-   "runs": 43,
+   "runs": 46,
    "restarts": 41,
-   "rest_median_s": 54,
+   "rest_median_s": 52,
    "rest_longest_s": 713,
    "breaks": [
     {
@@ -1013,9 +1013,9 @@
     },
     {
      "name": "AIMBEAST 1 BEGINNER TRACKING",
-     "runs": 8,
+     "runs": 11,
      "first": "14:48",
-     "last": "15:05"
+     "last": "15:09"
     }
    ],
    "scenarios": [
@@ -1089,9 +1089,15 @@
     },
     {
      "name": "AIR CONTROL SPHERE - RANKED",
-     "runs": 2,
+     "runs": 3,
      "routine": "AIMBEAST 1 BEGINNER TRACKING",
      "first": "15:03"
+    },
+    {
+     "name": "PASU TRACK EVO (RCT) - 0.6X",
+     "runs": 2,
+     "routine": "AIMBEAST 1 BEGINNER TRACKING",
+     "first": "15:08"
     }
    ]
   },
@@ -3170,13 +3176,13 @@
   "2026-10-15": [
    {
     "scenario": "AIR CONTROL SPHERE - RANKED",
-    "runs": 2,
-    "on_target": 27,
+    "runs": 3,
+    "on_target": 28,
     "reaction_ms": null,
-    "overshoot_pct": 26,
+    "overshoot_pct": 24,
     "pps_by_distance": {
      "mid": 2.5,
-     "close": 2.4
+     "close": 2.6
     }
    },
    {
@@ -3199,6 +3205,17 @@
     "overshoot_pct": 66,
     "pps_by_distance": {
      "close": 8.4
+    }
+   },
+   {
+    "scenario": "PASU TRACK EVO RCT - 0.6X",
+    "runs": 2,
+    "on_target": 29,
+    "reaction_ms": 200,
+    "overshoot_pct": 39,
+    "pps_by_distance": {
+     "far": 2.4,
+     "mid": 3.1
     }
    },
    {
