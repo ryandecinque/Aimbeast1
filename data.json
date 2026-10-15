@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-15 13:06",
- "updated_utc": "2026-10-15T06:06:21Z",
+ "updated": "2026-10-15 13:21",
+ "updated_utc": "2026-10-15T06:21:22Z",
  "today": {
   "date": "2026-10-15",
   "progress": {
-   "RANK INT B": 24
+   "RANK INT B": 26
   }
  },
  "plan_start": "2026-10-07",
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 493,
-   "runs_14d": 152,
+   "runs_14d": 154,
    "steps": [
     0.0,
     198.0,
@@ -840,8 +840,8 @@
     {
      "date": "2026-10-15",
      "median": 488,
-     "best": 504,
-     "runs": 6
+     "best": 524,
+     "runs": 8
     }
    ]
   }
@@ -956,24 +956,30 @@
  "days": [
   {
    "date": "2026-10-15",
-   "runs": 24,
-   "restarts": 35,
-   "rest_median_s": 60,
-   "rest_longest_s": 567,
+   "runs": 26,
+   "restarts": 37,
+   "rest_median_s": 71,
+   "rest_longest_s": 713,
    "breaks": [
     {
      "after": "RANK INT B",
      "before": "RANK INT B",
      "at": "08:08",
      "minutes": 283.4
+    },
+    {
+     "after": "RANK INT B",
+     "before": "ZEUS WEAKNESS",
+     "at": "13:18",
+     "minutes": 1.8
     }
    ],
    "playlists": [
     {
      "name": "RANK INT B",
-     "runs": 24,
+     "runs": 26,
      "first": "07:13",
-     "last": "13:03"
+     "last": "13:18"
     }
    ],
    "scenarios": [
@@ -995,10 +1001,10 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 6,
+     "runs": 8,
      "routine": "RANK INT B",
      "first": "12:52",
-     "best": 504,
+     "best": 524,
      "median": 488
     }
    ]
@@ -2422,7 +2428,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 505,
+  "runs": 507,
   "days": 10,
   "groups": [
    {
@@ -2437,7 +2443,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 148,
+    "runs": 149,
     "pct": 101.8
    },
    {
@@ -3100,12 +3106,12 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 6,
+    "runs": 8,
     "on_target": 34,
     "reaction_ms": 142,
     "overshoot_pct": 37,
     "pps_by_distance": {
-     "far": 7.6,
+     "far": 7.2,
      "mid": 8.5,
      "close": 8.0
     }
@@ -3506,19 +3512,19 @@
    },
    {
     "scenario": "Zeus Track Evo - Noblink",
-    "score": 504,
-    "time": "12:53",
+    "score": 524,
+    "time": "13:17",
     "gif": "best-zeus-2026-10-15",
     "video": true,
-    "on_target": 34,
-    "reaction_ms": 150,
-    "overshoot_pct": 37,
+    "on_target": 38,
+    "reaction_ms": 134,
+    "overshoot_pct": 31,
     "best_14d": 553,
     "master3": 726,
-    "note": "Best of 2 recorded today (median 484). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 8 recorded today (median 488). The clip is its 8 seconds with the most hits.",
     "model": {
      "file": "model-zeus-2026-10-15",
-     "label": "Model: 605"
+     "label": "Model: 630"
     }
    }
   ]
