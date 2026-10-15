@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-15 15:21",
- "updated_utc": "2026-10-15T08:21:21Z",
+ "updated": "2026-10-15 15:26",
+ "updated_utc": "2026-10-15T08:26:21Z",
  "today": {
   "date": "2026-10-15",
   "progress": {
@@ -962,7 +962,7 @@
  "days": [
   {
    "date": "2026-10-15",
-   "runs": 50,
+   "runs": 52,
    "restarts": 42,
    "rest_median_s": 64,
    "rest_longest_s": 713,
@@ -1013,9 +1013,9 @@
     },
     {
      "name": "AIMBEAST 1 BEGINNER TRACKING",
-     "runs": 15,
+     "runs": 17,
      "first": "14:48",
-     "last": "15:19"
+     "last": "15:22"
     }
    ],
    "scenarios": [
@@ -1104,6 +1104,12 @@
      "runs": 3,
      "routine": "AIMBEAST 1 BEGINNER TRACKING",
      "first": "15:14"
+    },
+    {
+     "name": "ZEUS TRACK EVO - NOBLINK (EZ)",
+     "runs": 2,
+     "routine": "AIMBEAST 1 BEGINNER TRACKING",
+     "first": "15:21"
     }
    ]
   },
@@ -3309,6 +3315,18 @@
      "far": 7.2,
      "mid": 8.5,
      "close": 8.0
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - NOBLINK EZ",
+    "runs": 2,
+    "on_target": 33,
+    "reaction_ms": 158,
+    "overshoot_pct": 42,
+    "pps_by_distance": {
+     "far": 2.9,
+     "mid": 3.1,
+     "close": 3.5
     }
    }
   ]
