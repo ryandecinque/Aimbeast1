@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-15 13:26",
- "updated_utc": "2026-10-15T06:26:22Z",
+ "updated": "2026-10-15 13:36",
+ "updated_utc": "2026-10-15T06:36:22Z",
  "today": {
   "date": "2026-10-15",
   "progress": {
-   "ZEUS WEAKNESS": 3,
+   "ZEUS WEAKNESS": 5,
    "RANK INT B": 26
   }
  },
@@ -957,9 +957,9 @@
  "days": [
   {
    "date": "2026-10-15",
-   "runs": 29,
+   "runs": 31,
    "restarts": 37,
-   "rest_median_s": 60,
+   "rest_median_s": 71,
    "rest_longest_s": 713,
    "breaks": [
     {
@@ -984,9 +984,9 @@
     },
     {
      "name": "ZEUS WEAKNESS",
-     "runs": 3,
+     "runs": 5,
      "first": "13:21",
-     "last": "13:25"
+     "last": "13:35"
     }
    ],
    "scenarios": [
@@ -1021,6 +1021,22 @@
      "first": "13:21",
      "best": 693,
      "median": 663
+    },
+    {
+     "name": "CLOSELY STRAFING KYTAN",
+     "runs": 1,
+     "routine": "ZEUS WEAKNESS",
+     "first": "13:33",
+     "best": 505,
+     "median": 505
+    },
+    {
+     "name": "PENNYTRACKING",
+     "runs": 1,
+     "routine": "ZEUS WEAKNESS",
+     "first": "13:35",
+     "best": 760,
+     "median": 760
     }
    ]
   },
@@ -2443,12 +2459,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 510,
+  "runs": 512,
   "days": 10,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 227,
+    "runs": 229,
     "pct": 100.0
    },
    {
@@ -3098,6 +3114,16 @@
   ],
   "2026-10-15": [
    {
+    "scenario": "CLOSELY STRAFING KYTAN",
+    "runs": 1,
+    "on_target": 23,
+    "reaction_ms": 150,
+    "overshoot_pct": 66,
+    "pps_by_distance": {
+     "close": 8.4
+    }
+   },
+   {
     "scenario": "PASU TRACK EVO RCT - 0.85X",
     "runs": 10,
     "on_target": 21,
@@ -3117,6 +3143,17 @@
     "pps_by_distance": {
      "mid": 3.1,
      "close": 3.6
+    }
+   },
+   {
+    "scenario": "PENNYTRACKING",
+    "runs": 1,
+    "on_target": 23,
+    "reaction_ms": 150,
+    "overshoot_pct": 62,
+    "pps_by_distance": {
+     "mid": 2.7,
+     "close": 2.5
     }
    },
    {
