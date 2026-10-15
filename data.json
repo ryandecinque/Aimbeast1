@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-15 15:11",
- "updated_utc": "2026-10-15T08:11:22Z",
+ "updated": "2026-10-15 15:16",
+ "updated_utc": "2026-10-15T08:16:21Z",
  "today": {
   "date": "2026-10-15",
   "progress": {
@@ -962,9 +962,9 @@
  "days": [
   {
    "date": "2026-10-15",
-   "runs": 46,
+   "runs": 48,
    "restarts": 41,
-   "rest_median_s": 52,
+   "rest_median_s": 54,
    "rest_longest_s": 713,
    "breaks": [
     {
@@ -1013,9 +1013,9 @@
     },
     {
      "name": "AIMBEAST 1 BEGINNER TRACKING",
-     "runs": 11,
+     "runs": 13,
      "first": "14:48",
-     "last": "15:09"
+     "last": "15:14"
     }
    ],
    "scenarios": [
@@ -1095,9 +1095,15 @@
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.6X",
-     "runs": 2,
+     "runs": 3,
      "routine": "AIMBEAST 1 BEGINNER TRACKING",
      "first": "15:08"
+    },
+    {
+     "name": "PASU TRACK XYZ (EZ) - RANKED",
+     "runs": 1,
+     "routine": "AIMBEAST 1 BEGINNER TRACKING",
+     "first": "15:14"
     }
    ]
   },
@@ -3209,13 +3215,13 @@
    },
    {
     "scenario": "PASU TRACK EVO RCT - 0.6X",
-    "runs": 2,
-    "on_target": 29,
+    "runs": 3,
+    "on_target": 30,
     "reaction_ms": 200,
-    "overshoot_pct": 39,
+    "overshoot_pct": 38,
     "pps_by_distance": {
      "far": 2.4,
-     "mid": 3.1
+     "mid": 3.3
     }
    },
    {
@@ -3238,6 +3244,17 @@
     "pps_by_distance": {
      "mid": 3.1,
      "close": 3.6
+    }
+   },
+   {
+    "scenario": "PASU TRACK XYZ EZ - RANKED",
+    "runs": 1,
+    "on_target": 27,
+    "reaction_ms": 183,
+    "overshoot_pct": 25,
+    "pps_by_distance": {
+     "mid": 2.8,
+     "close": 3.1
     }
    },
    {
