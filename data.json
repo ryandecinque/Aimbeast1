@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-15 14:56",
- "updated_utc": "2026-10-15T07:56:21Z",
+ "updated": "2026-10-15 15:01",
+ "updated_utc": "2026-10-15T08:01:22Z",
  "today": {
   "date": "2026-10-15",
   "progress": {
@@ -962,9 +962,9 @@
  "days": [
   {
    "date": "2026-10-15",
-   "runs": 37,
+   "runs": 40,
    "restarts": 41,
-   "rest_median_s": 71,
+   "rest_median_s": 67,
    "rest_longest_s": 713,
    "breaks": [
     {
@@ -1013,9 +1013,9 @@
     },
     {
      "name": "AIMBEAST 1 BEGINNER TRACKING",
-     "runs": 2,
+     "runs": 5,
      "first": "14:48",
-     "last": "14:55"
+     "last": "15:00"
     }
    ],
    "scenarios": [
@@ -1077,9 +1077,15 @@
     },
     {
      "name": "SMOOTH THIN TRACK V2 (EZ) - RANK",
-     "runs": 2,
+     "runs": 3,
      "routine": "AIMBEAST 1 BEGINNER TRACKING",
      "first": "14:48"
+    },
+    {
+     "name": "AIR TRACK SMOOTH V3 (EZ) - RANKED",
+     "runs": 2,
+     "routine": "AIMBEAST 1 BEGINNER TRACKING",
+     "first": "14:59"
     }
    ]
   },
@@ -3157,6 +3163,18 @@
   ],
   "2026-10-15": [
    {
+    "scenario": "AIR TRACK SMOOTH V3 EZ - RANKED",
+    "runs": 2,
+    "on_target": 35,
+    "reaction_ms": 116,
+    "overshoot_pct": 20,
+    "pps_by_distance": {
+     "far": 1.0,
+     "mid": 3.3,
+     "close": 3.3
+    }
+   },
+   {
     "scenario": "CLOSELY STRAFING KYTAN",
     "runs": 1,
     "on_target": 23,
@@ -3211,12 +3229,12 @@
    },
    {
     "scenario": "SMOOTH THIN TRACK V2 EZ - RANK",
-    "runs": 2,
-    "on_target": 35,
-    "reaction_ms": 147,
-    "overshoot_pct": 26,
+    "runs": 3,
+    "on_target": 36,
+    "reaction_ms": 150,
+    "overshoot_pct": 23,
     "pps_by_distance": {
-     "mid": 3.1
+     "mid": 3.2
     }
    },
    {
