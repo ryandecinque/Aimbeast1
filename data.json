@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-16 16:11",
- "updated_utc": "2026-10-16T09:11:22Z",
+ "updated": "2026-10-16 16:16",
+ "updated_utc": "2026-10-16T09:16:21Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
@@ -990,7 +990,7 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 58,
+   "runs": 59,
    "restarts": 43,
    "rest_median_s": 56,
    "rest_longest_s": 859,
@@ -1047,9 +1047,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 14,
+     "runs": 15,
      "first": "15:12",
-     "last": "16:10"
+     "last": "16:11"
     }
    ],
    "scenarios": [
@@ -1195,7 +1195,7 @@
     },
     {
      "name": "テ PLAYFUL SPHERE EVO - L - RANKED",
-     "runs": 1,
+     "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "16:10"
     }
@@ -3672,14 +3672,14 @@
    },
    {
     "scenario": "PLAYFUL SPHERE EVO - L - RANKED",
-    "runs": 1,
+    "runs": 2,
     "on_target": 31,
     "reaction_ms": 133,
-    "overshoot_pct": 27,
+    "overshoot_pct": 21,
     "pps_by_distance": {
-     "far": 3.2,
-     "mid": 2.5,
-     "close": 2.5
+     "far": 2.4,
+     "mid": 2.9,
+     "close": 2.6
     }
    },
    {
