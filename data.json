@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-16 15:56",
- "updated_utc": "2026-10-16T08:56:22Z",
+ "updated": "2026-10-16 16:01",
+ "updated_utc": "2026-10-16T09:01:24Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
@@ -990,9 +990,9 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 52,
+   "runs": 55,
    "restarts": 43,
-   "rest_median_s": 57,
+   "rest_median_s": 56,
    "rest_longest_s": 859,
    "breaks": [
     {
@@ -1047,9 +1047,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 8,
+     "runs": 11,
      "first": "15:12",
-     "last": "15:54"
+     "last": "15:59"
     }
    ],
    "scenarios": [
@@ -1177,9 +1177,15 @@
     },
     {
      "name": "LR XYZ STRAFES SLOW ACCEL",
-     "runs": 2,
+     "runs": 3,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "15:52"
+    },
+    {
+     "name": "CONTROLSPHERE MODERN - S",
+     "runs": 2,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "15:58"
     }
    ]
   },
@@ -3588,6 +3594,16 @@
     }
    },
    {
+    "scenario": "CONTROLSPHERE MODERN - S",
+    "runs": 2,
+    "on_target": 27,
+    "reaction_ms": null,
+    "overshoot_pct": 26,
+    "pps_by_distance": {
+     "close": 2.3
+    }
+   },
+   {
     "scenario": "CONTROLSPHERE OW - TEST",
     "runs": 2,
     "on_target": 27,
@@ -3620,14 +3636,14 @@
    },
    {
     "scenario": "LR XYZ STRAFES SLOW ACCEL",
-    "runs": 2,
+    "runs": 3,
     "on_target": 34,
     "reaction_ms": null,
-    "overshoot_pct": 20,
+    "overshoot_pct": 21,
     "pps_by_distance": {
-     "far": 2.5,
-     "mid": 3.0,
-     "close": 3.2
+     "far": 2.4,
+     "mid": 2.9,
+     "close": 2.3
     }
    },
    {
