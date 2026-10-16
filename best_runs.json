@@ -350,23 +350,6 @@
  ],
  "2026-10-16": [
   {
-   "scenario": "Zeus Track Evo - Noblink",
-   "score": 530,
-   "time": "13:18",
-   "gif": "best-zeus-2026-10-16",
-   "video": true,
-   "on_target": 38,
-   "reaction_ms": 133,
-   "overshoot_pct": 30,
-   "best_14d": 553,
-   "master3": 726,
-   "note": "Best of 2 recorded today (median 514). The clip is its 8 seconds with the most hits.",
-   "model": {
-    "file": "model-zeus-2026-10-16",
-    "label": "Model: 636"
-   }
-  },
-  {
    "scenario": "Air Control Sphere - S",
    "score": 861,
    "time": "14:10",
@@ -398,6 +381,23 @@
    "model": {
     "file": "model-airtrack-2026-10-16",
     "label": "Model: 594"
+   }
+  },
+  {
+   "scenario": "Zeus Track Evo - Noblink",
+   "score": 533,
+   "time": "14:25",
+   "gif": "best-zeus-2026-10-16",
+   "video": true,
+   "on_target": 36,
+   "reaction_ms": 133,
+   "overshoot_pct": 34,
+   "best_14d": 553,
+   "master3": 726,
+   "note": "Best of 10 recorded today (median 486). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "file": "model-zeus-2026-10-16",
+    "label": "Model: 639"
    }
   }
  ]
