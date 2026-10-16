@@ -1,12 +1,10 @@
 {
- "updated": "2026-10-16 18:21",
- "updated_utc": "2026-10-16T11:21:21Z",
+ "updated": "2026-10-17 06:46",
+ "updated_utc": "2026-10-16T23:46:26Z",
  "today": {
-  "date": "2026-10-16",
+  "date": "2026-10-17",
   "progress": {
-   "ZEUS DAILY": 29,
-   "OTHERS 1": 10,
-   "ZEUS SECOND": 3
+   "ZEUS DAILY": 2
   }
  },
  "plan_start": "2026-10-07",
@@ -17,7 +15,7 @@
    "official_best": 555.0,
    "best_14d": 476.0,
    "median_14d": 427,
-   "runs_14d": 47,
+   "runs_14d": 42,
    "steps": [
     0.0,
     168.0,
@@ -44,8 +42,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 545.0,
-   "median_14d": 460,
-   "runs_14d": 52,
+   "median_14d": 463,
+   "runs_14d": 47,
    "steps": [
     0.0,
     180.0,
@@ -72,8 +70,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 861.0,
-   "median_14d": 683,
-   "runs_14d": 52,
+   "median_14d": 680,
+   "runs_14d": 47,
    "steps": [
     0.0,
     240.0,
@@ -101,7 +99,7 @@
    "official_best": 398.0,
    "best_14d": 392.0,
    "median_14d": 328,
-   "runs_14d": 65,
+   "runs_14d": 60,
    "steps": [
     0.0,
     138.0,
@@ -128,8 +126,8 @@
    "master3": 660.0,
    "official_best": 580.0,
    "best_14d": 532.0,
-   "median_14d": 455,
-   "runs_14d": 62,
+   "median_14d": 457,
+   "runs_14d": 58,
    "steps": [
     0.0,
     180.0,
@@ -156,8 +154,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 553.0,
-   "median_14d": 494,
-   "runs_14d": 156,
+   "median_14d": 493,
+   "runs_14d": 142,
    "steps": [
     0.0,
     198.0,
@@ -990,9 +988,35 @@
  ],
  "days": [
   {
+   "date": "2026-10-17",
+   "runs": 2,
+   "restarts": 3,
+   "rest_median_s": 105,
+   "rest_longest_s": 105,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "ZEUS DAILY",
+     "runs": 2,
+     "first": "06:41",
+     "last": "06:44"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "SCX CLOSE STRAFES",
+     "runs": 2,
+     "routine": "ZEUS DAILY",
+     "first": "06:41",
+     "best": 596,
+     "median": 564
+    }
+   ]
+  },
+  {
    "date": "2026-10-16",
    "runs": 72,
-   "restarts": 72,
+   "restarts": 89,
    "rest_median_s": 56,
    "rest_longest_s": 882,
    "breaks": [
@@ -2828,12 +2852,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 563,
-  "days": 11,
+  "runs": 565,
+  "days": 12,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 247,
+    "runs": 248,
     "pct": 100.0
    },
    {
@@ -2843,7 +2867,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 174,
+    "runs": 175,
     "pct": 101.8
    },
    {
@@ -3893,6 +3917,18 @@
     "overshoot_pct": 25,
     "pps_by_distance": {
      "far": 18.4
+    }
+   }
+  ],
+  "2026-10-17": [
+   {
+    "scenario": "SCX CLOSE STRAFES",
+    "runs": 2,
+    "on_target": 35,
+    "reaction_ms": 150,
+    "overshoot_pct": 17,
+    "pps_by_distance": {
+     "close": 9.4
     }
    }
   ]
