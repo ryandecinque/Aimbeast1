@@ -365,6 +365,23 @@
     "file": "model-zeus-2026-10-16",
     "label": "Model: 636"
    }
+  },
+  {
+   "scenario": "Air Control Sphere - S",
+   "score": 799,
+   "time": "14:04",
+   "gif": "best-spheres-2026-10-16",
+   "video": true,
+   "on_target": 49,
+   "reaction_ms": null,
+   "overshoot_pct": 21,
+   "best_14d": 853,
+   "master3": 880,
+   "note": "Best of 2 recorded today (median 759). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "file": "model-spheres-2026-10-16",
+    "label": "Model: 959"
+   }
   }
  ]
 }
