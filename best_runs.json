@@ -367,20 +367,37 @@
    }
   },
   {
+   "scenario": "Air Track Smooth V3 150%",
+   "score": 460,
+   "time": "14:12",
+   "gif": "best-airtrack-2026-10-16",
+   "video": true,
+   "on_target": 28,
+   "reaction_ms": 100,
+   "overshoot_pct": 7,
+   "best_14d": 545,
+   "master3": 660,
+   "note": "Best of 1 recorded today (median 460). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "file": "model-airtrack-2026-10-16",
+    "label": "Model: 555"
+   }
+  },
+  {
    "scenario": "Air Control Sphere - S",
-   "score": 799,
-   "time": "14:04",
+   "score": 861,
+   "time": "14:10",
    "gif": "best-spheres-2026-10-16",
    "video": true,
-   "on_target": 49,
+   "on_target": 50,
    "reaction_ms": null,
-   "overshoot_pct": 21,
-   "best_14d": 853,
+   "overshoot_pct": 27,
+   "best_14d": 861,
    "master3": 880,
-   "note": "Best of 2 recorded today (median 759). The clip is its 8 seconds with the most hits.",
+   "note": "Best of 5 recorded today (median 739). My best since the score log started (was 853). All-time best is 878. The clip is its 8 seconds with the most hits.",
    "model": {
     "file": "model-spheres-2026-10-16",
-    "label": "Model: 959"
+    "label": "Model: 898 (the closest it could get to 1033)"
    }
   }
  ]

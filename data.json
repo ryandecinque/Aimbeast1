@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-16 14:11",
- "updated_utc": "2026-10-16T07:11:21Z",
+ "updated": "2026-10-16 14:16",
+ "updated_utc": "2026-10-16T07:16:21Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
-   "OTHERS 1": 4,
+   "OTHERS 1": 6,
    "ZEUS DAILY": 29
   }
  },
@@ -43,8 +43,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 545.0,
-   "median_14d": 445,
-   "runs_14d": 47,
+   "median_14d": 452,
+   "runs_14d": 48,
    "steps": [
     0.0,
     180.0,
@@ -70,9 +70,9 @@
    "name": "AIR CONTROL SPHERE - S",
    "master3": 880.0,
    "official_best": 878.0,
-   "best_14d": 853.0,
-   "median_14d": 680,
-   "runs_14d": 51,
+   "best_14d": 861.0,
+   "median_14d": 683,
+   "runs_14d": 52,
    "steps": [
     0.0,
     240.0,
@@ -371,6 +371,12 @@
      "median": 458,
      "best": 477,
      "runs": 3
+    },
+    {
+     "date": "2026-10-16",
+     "median": 460,
+     "best": 460,
+     "runs": 1
     }
    ]
   },
@@ -468,9 +474,9 @@
     },
     {
      "date": "2026-10-16",
-     "median": 730,
-     "best": 799,
-     "runs": 4
+     "median": 740,
+     "best": 861,
+     "runs": 5
     }
    ]
   },
@@ -979,8 +985,8 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 33,
-   "restarts": 23,
+   "runs": 35,
+   "restarts": 24,
    "rest_median_s": 56,
    "rest_longest_s": 859,
    "breaks": [
@@ -1006,9 +1012,9 @@
     },
     {
      "name": "OTHERS 1",
-     "runs": 4,
+     "runs": 6,
      "first": "14:04",
-     "last": "14:09"
+     "last": "14:13"
     }
    ],
    "scenarios": [
@@ -1094,11 +1100,19 @@
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
-     "runs": 4,
+     "runs": 5,
      "routine": "OTHERS 1",
      "first": "14:04",
-     "best": 799,
-     "median": 730
+     "best": 861,
+     "median": 740
+    },
+    {
+     "name": "AIR TRACK SMOOTH V3 150% - RANKED",
+     "runs": 1,
+     "routine": "OTHERS 1",
+     "first": "14:13",
+     "best": 460,
+     "median": 460
     }
    ]
   },
@@ -2674,12 +2688,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 549,
+  "runs": 551,
   "days": 11,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 241,
+    "runs": 242,
     "pct": 100.0
    },
    {
@@ -2689,7 +2703,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 166,
+    "runs": 167,
     "pct": 101.8
    },
    {
@@ -3475,13 +3489,13 @@
   "2026-10-16": [
    {
     "scenario": "AIR CONTROL SPHERE - S - RANKED",
-    "runs": 4,
+    "runs": 5,
     "on_target": 45,
     "reaction_ms": null,
-    "overshoot_pct": 28,
+    "overshoot_pct": 27,
     "pps_by_distance": {
      "mid": 11.9,
-     "close": 12.2
+     "close": 12.6
     }
    },
    {
@@ -3492,6 +3506,18 @@
     "overshoot_pct": 36,
     "pps_by_distance": {
      "close": 10.6
+    }
+   },
+   {
+    "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
+    "runs": 1,
+    "on_target": 28,
+    "reaction_ms": 100,
+    "overshoot_pct": 7,
+    "pps_by_distance": {
+     "far": 9.4,
+     "mid": 7.7,
+     "close": 6.7
     }
    },
    {
@@ -4011,20 +4037,37 @@
     }
    },
    {
+    "scenario": "Air Track Smooth V3 150%",
+    "score": 460,
+    "time": "14:12",
+    "gif": "best-airtrack-2026-10-16",
+    "video": true,
+    "on_target": 28,
+    "reaction_ms": 100,
+    "overshoot_pct": 7,
+    "best_14d": 545,
+    "master3": 660,
+    "note": "Best of 1 recorded today (median 460). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "file": "model-airtrack-2026-10-16",
+     "label": "Model: 555"
+    }
+   },
+   {
     "scenario": "Air Control Sphere - S",
-    "score": 799,
-    "time": "14:04",
+    "score": 861,
+    "time": "14:10",
     "gif": "best-spheres-2026-10-16",
     "video": true,
-    "on_target": 49,
+    "on_target": 50,
     "reaction_ms": null,
-    "overshoot_pct": 21,
-    "best_14d": 853,
+    "overshoot_pct": 27,
+    "best_14d": 861,
     "master3": 880,
-    "note": "Best of 2 recorded today (median 759). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 5 recorded today (median 739). My best since the score log started (was 853). All-time best is 878. The clip is its 8 seconds with the most hits.",
     "model": {
      "file": "model-spheres-2026-10-16",
-     "label": "Model: 959"
+     "label": "Model: 898 (the closest it could get to 1033)"
     }
    }
   ]
@@ -4101,6 +4144,13 @@
      "title": "Smooth Thin Track V2",
      "score": 476,
      "old": 474
+    }
+   ],
+   "2026-10-16": [
+    {
+     "title": "Air Control Sphere - S",
+     "score": 861,
+     "old": 853
     }
    ],
    "2026-10-10": [
