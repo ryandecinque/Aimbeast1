@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-16 12:16",
- "updated_utc": "2026-10-16T05:16:21Z",
+ "updated": "2026-10-16 12:21",
+ "updated_utc": "2026-10-16T05:21:21Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
-   "ZEUS DAILY": 15
+   "ZEUS DAILY": 17
   }
  },
  "plan_start": "2026-10-07",
@@ -961,17 +961,17 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 15,
-   "restarts": 9,
-   "rest_median_s": 56,
+   "runs": 17,
+   "restarts": 10,
+   "rest_median_s": 53,
    "rest_longest_s": 216,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS DAILY",
-     "runs": 15,
+     "runs": 17,
      "first": "11:43",
-     "last": "12:14"
+     "last": "12:18"
     }
    ],
    "scenarios": [
@@ -1022,6 +1022,14 @@
      "first": "12:13",
      "best": 6102,
      "median": 5922
+    },
+    {
+     "name": "MIXED XYZ STRAFES SLOW ACCEL",
+     "runs": 2,
+     "routine": "ZEUS DAILY",
+     "first": "12:16",
+     "best": 291,
+     "median": 270
     }
    ]
   },
@@ -2597,13 +2605,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 531,
+  "runs": 533,
   "days": 11,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 236,
-    "pct": 100.0
+    "runs": 237,
+    "pct": 99.9
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2612,7 +2620,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 159,
+    "runs": 160,
     "pct": 101.8
    },
    {
@@ -3405,6 +3413,18 @@
     "pps_by_distance": {
      "mid": 10.3,
      "close": 11.8
+    }
+   },
+   {
+    "scenario": "MIXED XYZ STRAFES SLOW ACCEL",
+    "runs": 2,
+    "on_target": 24,
+    "reaction_ms": 50,
+    "overshoot_pct": 20,
+    "pps_by_distance": {
+     "far": 4.7,
+     "mid": 4.0,
+     "close": 2.7
     }
    },
    {
