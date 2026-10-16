@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-16 16:31",
- "updated_utc": "2026-10-16T09:31:22Z",
+ "updated": "2026-10-16 16:36",
+ "updated_utc": "2026-10-16T09:36:21Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
@@ -990,8 +990,8 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 62,
-   "restarts": 45,
+   "runs": 63,
+   "restarts": 46,
    "rest_median_s": 56,
    "rest_longest_s": 882,
    "breaks": [
@@ -1047,9 +1047,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 18,
+     "runs": 19,
      "first": "15:12",
-     "last": "16:29"
+     "last": "16:35"
     }
    ],
    "scenarios": [
@@ -1210,6 +1210,12 @@
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "16:28"
+    },
+    {
+     "name": "CAGED CONTROLSPHERE - 25% EASIER",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "16:35"
     }
    ]
   },
@@ -3626,6 +3632,17 @@
     "pps_by_distance": {
      "far": 2.2,
      "mid": 1.9
+    }
+   },
+   {
+    "scenario": "CAGED CONTROLSPHERE - 25 EASIER",
+    "runs": 1,
+    "on_target": 26,
+    "reaction_ms": null,
+    "overshoot_pct": 17,
+    "pps_by_distance": {
+     "far": 2.1,
+     "mid": 3.3
     }
    },
    {
