@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-16 17:36",
- "updated_utc": "2026-10-16T10:36:21Z",
+ "updated": "2026-10-16 17:41",
+ "updated_utc": "2026-10-16T10:41:21Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
@@ -990,7 +990,7 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 68,
+   "runs": 69,
    "restarts": 52,
    "rest_median_s": 56,
    "rest_longest_s": 882,
@@ -1053,9 +1053,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 24,
+     "runs": 25,
      "first": "15:12",
-     "last": "17:32"
+     "last": "17:38"
     }
    ],
    "scenarios": [
@@ -1234,6 +1234,12 @@
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "17:19"
+    },
+    {
+     "name": "SYW - S",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "17:38"
     }
    ]
   },
@@ -3821,6 +3827,16 @@
     "overshoot_pct": 29,
     "pps_by_distance": {
      "mid": 3.2
+    }
+   },
+   {
+    "scenario": "SYW - S",
+    "runs": 1,
+    "on_target": 39,
+    "reaction_ms": 200,
+    "overshoot_pct": 26,
+    "pps_by_distance": {
+     "mid": 2.6
     }
    },
    {
