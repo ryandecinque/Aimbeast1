@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-16 14:21",
- "updated_utc": "2026-10-16T07:21:21Z",
+ "updated": "2026-10-16 14:26",
+ "updated_utc": "2026-10-16T07:26:23Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
-   "OTHERS 1": 8,
+   "OTHERS 1": 10,
    "ZEUS DAILY": 29
   }
  },
@@ -43,8 +43,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 545.0,
-   "median_14d": 459,
-   "runs_14d": 50,
+   "median_14d": 460,
+   "runs_14d": 52,
    "steps": [
     0.0,
     180.0,
@@ -156,7 +156,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 494,
-   "runs_14d": 154,
+   "runs_14d": 155,
    "steps": [
     0.0,
     198.0,
@@ -374,9 +374,9 @@
     },
     {
      "date": "2026-10-16",
-     "median": 491,
+     "median": 489,
      "best": 497,
-     "runs": 3
+     "runs": 5
     }
    ]
   },
@@ -858,9 +858,9 @@
     },
     {
      "date": "2026-10-16",
-     "median": 484,
+     "median": 473,
      "best": 530,
-     "runs": 8
+     "runs": 9
     }
    ]
   }
@@ -870,6 +870,11 @@
    "date": "2026-10-16",
    "author": "AimJournal",
    "text": "Playlist: ZEUS DAILY\nAbove your usual on three of five scenarios, below on one. Thin Fast stood out: a typical 1628, against 1360 over the last 14 days.\nOne thing to try: after each turn, the correction is landing past the bot. Use a smaller input from the wrist and fingers and aim to stop on the bot's near side. It should feel quiet, almost too small."
+  },
+  {
+   "date": "2026-10-16",
+   "author": "AimJournal",
+   "text": "Playlist: OTHERS 1\nBest moment: Sphere S at 861, your best since the score log started. Every scenario beat your usual.\nNothing slipped clearly against your last 14 days: over-aim, mouse movement and rests were all close to usual or better.\nOne thing to try: the long pauses cost your warm-up. Start the next run within a minute or two. It should feel like one steady block, not a series of fresh starts."
   },
   {
    "date": "2026-10-15",
@@ -985,8 +990,8 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 37,
-   "restarts": 25,
+   "runs": 40,
+   "restarts": 34,
    "rest_median_s": 56,
    "rest_longest_s": 859,
    "breaks": [
@@ -1001,6 +1006,12 @@
      "before": "OTHERS 1",
      "at": "14:00",
      "minutes": 2.8
+    },
+    {
+     "after": "OTHERS 1",
+     "before": "(single scenario)",
+     "at": "14:23",
+     "minutes": 0.5
     }
    ],
    "playlists": [
@@ -1012,9 +1023,15 @@
     },
     {
      "name": "OTHERS 1",
-     "runs": 8,
+     "runs": 10,
      "first": "14:04",
-     "last": "14:19"
+     "last": "14:23"
+    },
+    {
+     "name": "(single scenario)",
+     "runs": 1,
+     "first": "14:25",
+     "last": "14:25"
     }
    ],
    "scenarios": [
@@ -1092,11 +1109,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 8,
+     "runs": 9,
      "routine": "ZEUS DAILY",
      "first": "13:05",
      "best": 530,
-     "median": 484
+     "median": 473
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
@@ -1108,11 +1125,11 @@
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
-     "runs": 3,
+     "runs": 5,
      "routine": "OTHERS 1",
      "first": "14:13",
      "best": 497,
-     "median": 491
+     "median": 489
     }
    ]
   },
@@ -2688,13 +2705,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 553,
+  "runs": 556,
   "days": 11,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 242,
-    "pct": 100.0
+    "runs": 243,
+    "pct": 99.9
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -2703,13 +2720,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 169,
-    "pct": 101.8
+    "runs": 171,
+    "pct": 101.9
    },
    {
     "label": "First run after a break of 15 min+",
     "runs": 33,
-    "pct": 93.9
+    "pct": 94.0
    }
   ]
  },
@@ -3510,14 +3527,14 @@
    },
    {
     "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
-    "runs": 3,
+    "runs": 5,
     "on_target": 30,
     "reaction_ms": 83,
     "overshoot_pct": 14,
     "pps_by_distance": {
-     "far": 8.5,
+     "far": 6.9,
      "mid": 8.2,
-     "close": 7.5
+     "close": 7.6
     }
    },
    {
@@ -3586,13 +3603,13 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 8,
-    "on_target": 36,
+    "runs": 9,
+    "on_target": 35,
     "reaction_ms": 133,
     "overshoot_pct": 36,
     "pps_by_distance": {
-     "far": 7.1,
-     "mid": 8.4,
+     "far": 7.0,
+     "mid": 8.2,
      "close": 8.5
     }
    },
