@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-16 13:26",
- "updated_utc": "2026-10-16T06:26:27Z",
+ "updated": "2026-10-16 13:51",
+ "updated_utc": "2026-10-16T06:51:24Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
-   "ZEUS DAILY": 25
+   "ZEUS DAILY": 27
   }
  },
  "plan_start": "2026-10-07",
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 494,
-   "runs_14d": 150,
+   "runs_14d": 152,
    "steps": [
     0.0,
     198.0,
@@ -847,7 +847,7 @@
      "date": "2026-10-16",
      "median": 484,
      "best": 530,
-     "runs": 4
+     "runs": 6
     }
    ]
   }
@@ -967,17 +967,24 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 25,
-   "restarts": 14,
-   "rest_median_s": 58,
+   "runs": 27,
+   "restarts": 18,
+   "rest_median_s": 56,
    "rest_longest_s": 859,
-   "breaks": [],
+   "breaks": [
+    {
+     "after": "ZEUS DAILY",
+     "before": "ZEUS DAILY",
+     "at": "13:23",
+     "minutes": 24.4
+    }
+   ],
    "playlists": [
     {
      "name": "ZEUS DAILY",
-     "runs": 25,
+     "runs": 27,
      "first": "11:43",
-     "last": "13:23"
+     "last": "13:50"
     }
    ],
    "scenarios": [
@@ -1055,7 +1062,7 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 4,
+     "runs": 6,
      "routine": "ZEUS DAILY",
      "first": "13:05",
      "best": 530,
@@ -2635,7 +2642,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 541,
+  "runs": 543,
   "days": 11,
   "groups": [
    {
@@ -2645,7 +2652,7 @@
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 80,
+    "runs": 81,
     "pct": 99.5
    },
    {
@@ -2655,8 +2662,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 32,
-    "pct": 94.0
+    "runs": 33,
+    "pct": 93.9
    }
   ]
  },
@@ -3510,14 +3517,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 4,
+    "runs": 6,
     "on_target": 36,
     "reaction_ms": 133,
     "overshoot_pct": 33,
     "pps_by_distance": {
      "far": 7.1,
      "mid": 8.4,
-     "close": 9.0
+     "close": 8.8
     }
    },
    {
