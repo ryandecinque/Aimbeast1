@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-16 18:01",
- "updated_utc": "2026-10-16T11:01:23Z",
+ "updated": "2026-10-16 18:21",
+ "updated_utc": "2026-10-16T11:21:21Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
    "ZEUS DAILY": 29,
    "OTHERS 1": 10,
-   "ZEUS SECOND": 2
+   "ZEUS SECOND": 3
   }
  },
  "plan_start": "2026-10-07",
@@ -991,8 +991,8 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 71,
-   "restarts": 55,
+   "runs": 72,
+   "restarts": 72,
    "rest_median_s": 56,
    "rest_longest_s": 882,
    "breaks": [
@@ -1066,9 +1066,9 @@
     },
     {
      "name": "ZEUS SECOND",
-     "runs": 2,
+     "runs": 3,
      "first": "17:46",
-     "last": "18:00"
+     "last": "18:16"
     }
    ],
    "scenarios": [
@@ -1130,11 +1130,11 @@
     },
     {
      "name": "REACTIVE ADJUSTMENTS STRAFES",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS DAILY",
      "first": "12:29",
      "best": 1757,
-     "median": 1646
+     "median": 1662
     },
     {
      "name": "AIR EASY INVINCIBLE 4 VSB - TEST",
@@ -2828,12 +2828,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 562,
+  "runs": 563,
   "days": 11,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 246,
+    "runs": 247,
     "pct": 100.0
    },
    {
@@ -3783,12 +3783,12 @@
    },
    {
     "scenario": "REACTIVE ADJUSTMENTS STRAFES",
-    "runs": 2,
-    "on_target": 40,
+    "runs": 3,
+    "on_target": 37,
     "reaction_ms": null,
-    "overshoot_pct": 35,
+    "overshoot_pct": 34,
     "pps_by_distance": {
-     "mid": 18.9
+     "mid": 19.0
     }
    },
    {
