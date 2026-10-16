@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-16 13:51",
- "updated_utc": "2026-10-16T06:51:24Z",
+ "updated": "2026-10-16 14:01",
+ "updated_utc": "2026-10-16T07:01:42Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
-   "ZEUS DAILY": 27
+   "ZEUS DAILY": 29
   }
  },
  "plan_start": "2026-10-07",
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 494,
-   "runs_14d": 152,
+   "runs_14d": 154,
    "steps": [
     0.0,
     198.0,
@@ -847,12 +847,17 @@
      "date": "2026-10-16",
      "median": 484,
      "best": 530,
-     "runs": 6
+     "runs": 8
     }
    ]
   }
  ],
  "journal": [
+  {
+   "date": "2026-10-16",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS DAILY\nAbove your usual on three of five scenarios, below on one. Thin Fast stood out: a typical 1628, against 1360 over the last 14 days.\nOne thing to try: after each turn, the correction is landing past the bot. Use a smaller input from the wrist and fingers and aim to stop on the bot's near side. It should feel quiet, almost too small."
+  },
   {
    "date": "2026-10-15",
    "author": "Claude",
@@ -967,8 +972,8 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 27,
-   "restarts": 18,
+   "runs": 29,
+   "restarts": 19,
    "rest_median_s": 56,
    "rest_longest_s": 859,
    "breaks": [
@@ -982,9 +987,9 @@
    "playlists": [
     {
      "name": "ZEUS DAILY",
-     "runs": 27,
+     "runs": 29,
      "first": "11:43",
-     "last": "13:50"
+     "last": "14:00"
     }
    ],
    "scenarios": [
@@ -1062,7 +1067,7 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 6,
+     "runs": 8,
      "routine": "ZEUS DAILY",
      "first": "13:05",
      "best": 530,
@@ -2642,7 +2647,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 543,
+  "runs": 545,
   "days": 11,
   "groups": [
    {
@@ -2657,7 +2662,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 162,
+    "runs": 163,
     "pct": 101.8
    },
    {
@@ -3517,14 +3522,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 6,
+    "runs": 8,
     "on_target": 36,
     "reaction_ms": 133,
-    "overshoot_pct": 33,
+    "overshoot_pct": 36,
     "pps_by_distance": {
      "far": 7.1,
      "mid": 8.4,
-     "close": 8.8
+     "close": 8.5
     }
    },
    {
