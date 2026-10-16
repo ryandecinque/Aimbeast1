@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-16 15:36",
- "updated_utc": "2026-10-16T08:36:22Z",
+ "updated": "2026-10-16 15:41",
+ "updated_utc": "2026-10-16T08:41:24Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
@@ -990,7 +990,7 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 49,
+   "runs": 50,
    "restarts": 41,
    "rest_median_s": 56,
    "rest_longest_s": 859,
@@ -1047,9 +1047,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 5,
+     "runs": 6,
      "first": "15:12",
-     "last": "15:36"
+     "last": "15:38"
     }
    ],
    "scenarios": [
@@ -1171,7 +1171,7 @@
     },
     {
      "name": "FLAT ARENA POSS - THIN",
-     "runs": 1,
+     "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "15:36"
     }
@@ -3594,12 +3594,12 @@
    },
    {
     "scenario": "FLAT ARENA POSS - THIN",
-    "runs": 1,
-    "on_target": 20,
+    "runs": 2,
+    "on_target": 19,
     "reaction_ms": 150,
     "overshoot_pct": 58,
     "pps_by_distance": {
-     "close": 1.4
+     "close": 1.5
     }
    },
    {
