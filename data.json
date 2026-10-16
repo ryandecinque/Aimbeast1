@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-16 12:11",
- "updated_utc": "2026-10-16T05:11:20Z",
+ "updated": "2026-10-16 12:16",
+ "updated_utc": "2026-10-16T05:16:21Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
-   "ZEUS DAILY": 12
+   "ZEUS DAILY": 15
   }
  },
  "plan_start": "2026-10-07",
@@ -961,17 +961,17 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 12,
-   "restarts": 8,
+   "runs": 15,
+   "restarts": 9,
    "rest_median_s": 56,
    "rest_longest_s": 216,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS DAILY",
-     "runs": 12,
+     "runs": 15,
      "first": "11:43",
-     "last": "12:10"
+     "last": "12:14"
     }
    ],
    "scenarios": [
@@ -1009,11 +1009,19 @@
     },
     {
      "name": "ZEUS TRACK EVO NOBLINK EZ BURST",
-     "runs": 3,
+     "runs": 4,
      "routine": "ZEUS DAILY",
      "first": "12:03",
      "best": 12,
      "median": 10
+    },
+    {
+     "name": "CONTROLSPHERE OW - TEST",
+     "runs": 2,
+     "routine": "ZEUS DAILY",
+     "first": "12:13",
+     "best": 6102,
+     "median": 5922
     }
    ]
   },
@@ -2589,22 +2597,22 @@
   }
  ],
  "rest_effect": {
-  "runs": 528,
+  "runs": 531,
   "days": 11,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 235,
-    "pct": 99.9
+    "runs": 236,
+    "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 79,
+    "runs": 80,
     "pct": 99.5
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 158,
+    "runs": 159,
     "pct": 101.8
    },
    {
@@ -2689,9 +2697,9 @@
    {
     "scenario": "CONTROLSPHERE OW - TEST",
     "runs": 2,
-    "on_target": 30,
+    "on_target": 31,
     "reaction_ms": 192,
-    "overshoot_pct": 26,
+    "overshoot_pct": 25,
     "pps_by_distance": {
      "mid": 10.8,
      "close": 12.9
@@ -3388,6 +3396,17 @@
    }
   ],
   "2026-10-16": [
+   {
+    "scenario": "CONTROLSPHERE OW - TEST",
+    "runs": 2,
+    "on_target": 27,
+    "reaction_ms": 183,
+    "overshoot_pct": 25,
+    "pps_by_distance": {
+     "mid": 10.3,
+     "close": 11.8
+    }
+   },
    {
     "scenario": "SCX CLOSE STRAFES",
     "runs": 3,
