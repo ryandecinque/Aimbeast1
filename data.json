@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-16 11:46",
- "updated_utc": "2026-10-16T04:46:29Z",
+ "updated": "2026-10-16 11:51",
+ "updated_utc": "2026-10-16T04:51:21Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
-   "ZEUS DAILY": 2
+   "ZEUS DAILY": 5
   }
  },
  "plan_start": "2026-10-07",
@@ -961,27 +961,35 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 2,
-   "restarts": 0,
-   "rest_median_s": 51,
+   "runs": 5,
+   "restarts": 1,
+   "rest_median_s": 33,
    "rest_longest_s": 67,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS DAILY",
-     "runs": 2,
+     "runs": 5,
      "first": "11:43",
-     "last": "11:45"
+     "last": "11:50"
     }
    ],
    "scenarios": [
     {
      "name": "SCX CLOSE STRAFES",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS DAILY",
      "first": "11:43",
-     "best": 612,
-     "median": 606
+     "best": 633,
+     "median": 612
+    },
+    {
+     "name": "ZEUS TRACK FAR BZN EDITION",
+     "runs": 2,
+     "routine": "ZEUS DAILY",
+     "first": "11:48",
+     "best": 1108,
+     "median": 1106
     }
    ]
   },
@@ -2557,12 +2565,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 518,
+  "runs": 521,
   "days": 11,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 231,
+    "runs": 232,
     "pct": 100.0
    },
    {
@@ -2572,7 +2580,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 153,
+    "runs": 155,
     "pct": 101.8
    },
    {
@@ -3358,12 +3366,22 @@
   "2026-10-16": [
    {
     "scenario": "SCX CLOSE STRAFES",
-    "runs": 2,
+    "runs": 3,
     "on_target": 55,
-    "reaction_ms": 142,
-    "overshoot_pct": 42,
+    "reaction_ms": 133,
+    "overshoot_pct": 40,
     "pps_by_distance": {
-     "close": 10.1
+     "close": 10.2
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK FAR BZN EDITION",
+    "runs": 2,
+    "on_target": 45,
+    "reaction_ms": null,
+    "overshoot_pct": 25,
+    "pps_by_distance": {
+     "far": 18.4
     }
    }
   ]
