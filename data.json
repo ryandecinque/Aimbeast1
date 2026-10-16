@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-16 16:01",
- "updated_utc": "2026-10-16T09:01:24Z",
+ "updated": "2026-10-16 16:11",
+ "updated_utc": "2026-10-16T09:11:22Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
@@ -990,7 +990,7 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 55,
+   "runs": 58,
    "restarts": 43,
    "rest_median_s": 56,
    "rest_longest_s": 859,
@@ -1047,9 +1047,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 11,
+     "runs": 14,
      "first": "15:12",
-     "last": "15:59"
+     "last": "16:10"
     }
    ],
    "scenarios": [
@@ -1186,6 +1186,18 @@
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "15:58"
+    },
+    {
+     "name": "WARCHTRACK",
+     "runs": 2,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "16:07"
+    },
+    {
+     "name": "テ PLAYFUL SPHERE EVO - L - RANKED",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "16:10"
     }
    ]
   },
@@ -3659,6 +3671,18 @@
     }
    },
    {
+    "scenario": "PLAYFUL SPHERE EVO - L - RANKED",
+    "runs": 1,
+    "on_target": 31,
+    "reaction_ms": 133,
+    "overshoot_pct": 27,
+    "pps_by_distance": {
+     "far": 3.2,
+     "mid": 2.5,
+     "close": 2.5
+    }
+   },
+   {
     "scenario": "REACTIVE ADJUSTMENTS STRAFES",
     "runs": 2,
     "on_target": 40,
@@ -3718,6 +3742,16 @@
     "pps_by_distance": {
      "mid": 5.4,
      "close": 5.5
+    }
+   },
+   {
+    "scenario": "WARCHTRACK",
+    "runs": 2,
+    "on_target": 30,
+    "reaction_ms": 183,
+    "overshoot_pct": 16,
+    "pps_by_distance": {
+     "far": 2.8
     }
    },
    {
