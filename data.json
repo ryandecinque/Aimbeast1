@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-16 15:21",
- "updated_utc": "2026-10-16T08:21:23Z",
+ "updated": "2026-10-16 15:36",
+ "updated_utc": "2026-10-16T08:36:22Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
@@ -990,8 +990,8 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 46,
-   "restarts": 39,
+   "runs": 49,
+   "restarts": 41,
    "rest_median_s": 56,
    "rest_longest_s": 859,
    "breaks": [
@@ -1047,9 +1047,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 2,
+     "runs": 5,
      "first": "15:12",
-     "last": "15:21"
+     "last": "15:36"
     }
    ],
    "scenarios": [
@@ -1162,6 +1162,18 @@
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "15:12"
+    },
+    {
+     "name": "INFINITYTRACK V2",
+     "runs": 2,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "15:32"
+    },
+    {
+     "name": "FLAT ARENA POSS - THIN",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "15:36"
     }
    ]
   },
@@ -3578,6 +3590,26 @@
     "pps_by_distance": {
      "mid": 10.3,
      "close": 11.8
+    }
+   },
+   {
+    "scenario": "FLAT ARENA POSS - THIN",
+    "runs": 1,
+    "on_target": 20,
+    "reaction_ms": 150,
+    "overshoot_pct": 58,
+    "pps_by_distance": {
+     "close": 1.4
+    }
+   },
+   {
+    "scenario": "INFINITYTRACK V2",
+    "runs": 2,
+    "on_target": 29,
+    "reaction_ms": null,
+    "overshoot_pct": 23,
+    "pps_by_distance": {
+     "far": 3.0
     }
    },
    {
