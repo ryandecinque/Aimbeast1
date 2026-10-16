@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-16 17:21",
- "updated_utc": "2026-10-16T10:21:21Z",
+ "updated": "2026-10-16 17:36",
+ "updated_utc": "2026-10-16T10:36:21Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
@@ -990,8 +990,8 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 67,
-   "restarts": 49,
+   "runs": 68,
+   "restarts": 52,
    "rest_median_s": 56,
    "rest_longest_s": 882,
    "breaks": [
@@ -1053,9 +1053,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 23,
+     "runs": 24,
      "first": "15:12",
-     "last": "17:19"
+     "last": "17:32"
     }
    ],
    "scenarios": [
@@ -1231,7 +1231,7 @@
     },
     {
      "name": "SHORT STRAFES (LMP)",
-     "runs": 1,
+     "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "17:19"
     }
@@ -3784,10 +3784,10 @@
    },
    {
     "scenario": "SHORT STRAFES LMP",
-    "runs": 1,
+    "runs": 2,
     "on_target": 22,
-    "reaction_ms": 183,
-    "overshoot_pct": 58,
+    "reaction_ms": 166,
+    "overshoot_pct": 52,
     "pps_by_distance": {
      "mid": 2.3
     }
