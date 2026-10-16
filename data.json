@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-16 16:16",
- "updated_utc": "2026-10-16T09:16:21Z",
+ "updated": "2026-10-16 16:31",
+ "updated_utc": "2026-10-16T09:31:22Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
@@ -990,10 +990,10 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 59,
-   "restarts": 43,
+   "runs": 62,
+   "restarts": 45,
    "rest_median_s": 56,
-   "rest_longest_s": 859,
+   "rest_longest_s": 882,
    "breaks": [
     {
      "after": "ZEUS DAILY",
@@ -1047,9 +1047,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 15,
+     "runs": 18,
      "first": "15:12",
-     "last": "16:11"
+     "last": "16:29"
     }
    ],
    "scenarios": [
@@ -1198,6 +1198,18 @@
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "16:10"
+    },
+    {
+     "name": "ARCHTRACK",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "16:27"
+    },
+    {
+     "name": "NEEDLETRACK MS",
+     "runs": 2,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "16:28"
     }
    ]
   },
@@ -3606,6 +3618,17 @@
     }
    },
    {
+    "scenario": "ARCHTRACK",
+    "runs": 1,
+    "on_target": 23,
+    "reaction_ms": 183,
+    "overshoot_pct": 4,
+    "pps_by_distance": {
+     "far": 2.2,
+     "mid": 1.9
+    }
+   },
+   {
     "scenario": "CONTROLSPHERE MODERN - S",
     "runs": 2,
     "on_target": 27,
@@ -3668,6 +3691,16 @@
      "far": 4.7,
      "mid": 4.0,
      "close": 2.7
+    }
+   },
+   {
+    "scenario": "NEEDLETRACK MS",
+    "runs": 2,
+    "on_target": 32,
+    "reaction_ms": null,
+    "overshoot_pct": 41,
+    "pps_by_distance": {
+     "mid": 1.9
     }
    },
    {
