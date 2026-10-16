@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-16 12:21",
- "updated_utc": "2026-10-16T05:21:21Z",
+ "updated": "2026-10-16 12:31",
+ "updated_utc": "2026-10-16T05:31:21Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
-   "ZEUS DAILY": 17
+   "ZEUS DAILY": 18
   }
  },
  "plan_start": "2026-10-07",
@@ -961,17 +961,17 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 17,
+   "runs": 18,
    "restarts": 10,
-   "rest_median_s": 53,
-   "rest_longest_s": 216,
+   "rest_median_s": 56,
+   "rest_longest_s": 589,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS DAILY",
-     "runs": 17,
+     "runs": 18,
      "first": "11:43",
-     "last": "12:18"
+     "last": "12:29"
     }
    ],
    "scenarios": [
@@ -1030,6 +1030,14 @@
      "first": "12:16",
      "best": 291,
      "median": 270
+    },
+    {
+     "name": "REACTIVE ADJUSTMENTS STRAFES",
+     "runs": 1,
+     "routine": "ZEUS DAILY",
+     "first": "12:29",
+     "best": 1757,
+     "median": 1757
     }
    ]
   },
@@ -2605,13 +2613,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 533,
+  "runs": 534,
   "days": 11,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 237,
-    "pct": 99.9
+    "runs": 238,
+    "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -3425,6 +3433,16 @@
      "far": 4.7,
      "mid": 4.0,
      "close": 2.7
+    }
+   },
+   {
+    "scenario": "REACTIVE ADJUSTMENTS STRAFES",
+    "runs": 1,
+    "on_target": 41,
+    "reaction_ms": null,
+    "overshoot_pct": 42,
+    "pps_by_distance": {
+     "mid": 19.0
     }
    },
    {
