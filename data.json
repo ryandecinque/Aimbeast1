@@ -1,11 +1,12 @@
 {
- "updated": "2026-10-16 17:41",
- "updated_utc": "2026-10-16T10:41:21Z",
+ "updated": "2026-10-16 17:51",
+ "updated_utc": "2026-10-16T10:51:23Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
+   "ZEUS DAILY": 29,
    "OTHERS 1": 10,
-   "ZEUS DAILY": 29
+   "ZEUS SECOND": 1
   }
  },
  "plan_start": "2026-10-07",
@@ -990,8 +991,8 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 69,
-   "restarts": 52,
+   "runs": 70,
+   "restarts": 54,
    "rest_median_s": 56,
    "rest_longest_s": 882,
    "breaks": [
@@ -1024,6 +1025,12 @@
      "before": "BAZHAN MEDIUM TRACKING",
      "at": "16:40",
      "minutes": 37.7
+    },
+    {
+     "after": "BAZHAN MEDIUM TRACKING",
+     "before": "ZEUS SECOND",
+     "at": "17:38",
+     "minutes": 7.1
     }
    ],
    "playlists": [
@@ -1056,6 +1063,12 @@
      "runs": 25,
      "first": "15:12",
      "last": "17:38"
+    },
+    {
+     "name": "ZEUS SECOND",
+     "runs": 1,
+     "first": "17:46",
+     "last": "17:46"
     }
    ],
    "scenarios": [
@@ -1101,11 +1114,11 @@
     },
     {
      "name": "CONTROLSPHERE OW - TEST",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS DAILY",
      "first": "12:13",
-     "best": 6102,
-     "median": 5922
+     "best": 7056,
+     "median": 6102
     },
     {
      "name": "MIXED XYZ STRAFES SLOW ACCEL",
@@ -2815,12 +2828,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 560,
+  "runs": 561,
   "days": 11,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 244,
+    "runs": 245,
     "pct": 99.9
    },
    {
@@ -3681,13 +3694,13 @@
    },
    {
     "scenario": "CONTROLSPHERE OW - TEST",
-    "runs": 2,
-    "on_target": 27,
+    "runs": 3,
+    "on_target": 28,
     "reaction_ms": 183,
-    "overshoot_pct": 25,
+    "overshoot_pct": 23,
     "pps_by_distance": {
-     "mid": 10.3,
-     "close": 11.8
+     "mid": 10.4,
+     "close": 12.2
     }
    },
    {
