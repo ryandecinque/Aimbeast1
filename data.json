@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-16 14:31",
- "updated_utc": "2026-10-16T07:31:21Z",
+ "updated": "2026-10-16 15:11",
+ "updated_utc": "2026-10-16T08:11:22Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
@@ -990,8 +990,8 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 41,
-   "restarts": 34,
+   "runs": 44,
+   "restarts": 39,
    "rest_median_s": 56,
    "rest_longest_s": 859,
    "breaks": [
@@ -1012,6 +1012,12 @@
      "before": "(single scenario)",
      "at": "14:23",
      "minutes": 0.5
+    },
+    {
+     "after": "(single scenario)",
+     "before": "BEGINNER TRACKING BURST",
+     "at": "14:26",
+     "minutes": 38.6
     }
    ],
    "playlists": [
@@ -1032,6 +1038,12 @@
      "runs": 2,
      "first": "14:25",
      "last": "14:26"
+    },
+    {
+     "name": "BEGINNER TRACKING BURST",
+     "runs": 3,
+     "first": "15:06",
+     "last": "15:09"
     }
    ],
    "scenarios": [
@@ -1130,6 +1142,14 @@
      "first": "14:13",
      "best": 497,
      "median": 489
+    },
+    {
+     "name": "SMOOTH THIN TRACK V2 (EZ) BURST",
+     "runs": 3,
+     "routine": "BEGINNER TRACKING BURST",
+     "first": "15:06",
+     "best": 202,
+     "median": 193
     }
    ]
   },
@@ -2705,12 +2725,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 557,
+  "runs": 560,
   "days": 11,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 243,
+    "runs": 244,
     "pct": 99.9
    },
    {
@@ -2720,12 +2740,12 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 172,
+    "runs": 174,
     "pct": 101.8
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 33,
+    "runs": 34,
     "pct": 93.9
    }
   ]
@@ -3588,6 +3608,16 @@
     "overshoot_pct": 29,
     "pps_by_distance": {
      "mid": 5.1
+    }
+   },
+   {
+    "scenario": "SMOOTH THIN TRACK V2 EZ BURST",
+    "runs": 3,
+    "on_target": 35,
+    "reaction_ms": 133,
+    "overshoot_pct": 29,
+    "pps_by_distance": {
+     "mid": 3.2
     }
    },
    {
