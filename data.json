@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-16 15:41",
- "updated_utc": "2026-10-16T08:41:24Z",
+ "updated": "2026-10-16 15:56",
+ "updated_utc": "2026-10-16T08:56:22Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
@@ -990,9 +990,9 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 50,
-   "restarts": 41,
-   "rest_median_s": 56,
+   "runs": 52,
+   "restarts": 43,
+   "rest_median_s": 57,
    "rest_longest_s": 859,
    "breaks": [
     {
@@ -1047,9 +1047,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 6,
+     "runs": 8,
      "first": "15:12",
-     "last": "15:38"
+     "last": "15:54"
     }
    ],
    "scenarios": [
@@ -1174,6 +1174,12 @@
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "15:36"
+    },
+    {
+     "name": "LR XYZ STRAFES SLOW ACCEL",
+     "runs": 2,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "15:52"
     }
    ]
   },
@@ -3610,6 +3616,18 @@
     "overshoot_pct": 23,
     "pps_by_distance": {
      "far": 3.0
+    }
+   },
+   {
+    "scenario": "LR XYZ STRAFES SLOW ACCEL",
+    "runs": 2,
+    "on_target": 34,
+    "reaction_ms": null,
+    "overshoot_pct": 20,
+    "pps_by_distance": {
+     "far": 2.5,
+     "mid": 3.0,
+     "close": 3.2
     }
    },
    {
