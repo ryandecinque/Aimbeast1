@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-16 16:36",
- "updated_utc": "2026-10-16T09:36:21Z",
+ "updated": "2026-10-16 16:41",
+ "updated_utc": "2026-10-16T09:41:22Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
@@ -990,8 +990,8 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 63,
-   "restarts": 46,
+   "runs": 66,
+   "restarts": 48,
    "rest_median_s": 56,
    "rest_longest_s": 882,
    "breaks": [
@@ -1047,9 +1047,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 19,
+     "runs": 22,
      "first": "15:12",
-     "last": "16:35"
+     "last": "16:40"
     }
    ],
    "scenarios": [
@@ -1213,9 +1213,15 @@
     },
     {
      "name": "CAGED CONTROLSPHERE - 25% EASIER",
-     "runs": 1,
+     "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "16:35"
+    },
+    {
+     "name": "GLIDING SMOOTHBOT",
+     "runs": 2,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "16:39"
     }
    ]
   },
@@ -3636,12 +3642,12 @@
    },
    {
     "scenario": "CAGED CONTROLSPHERE - 25 EASIER",
-    "runs": 1,
-    "on_target": 26,
+    "runs": 2,
+    "on_target": 25,
     "reaction_ms": null,
-    "overshoot_pct": 17,
+    "overshoot_pct": 18,
     "pps_by_distance": {
-     "far": 2.1,
+     "far": 1.9,
      "mid": 3.3
     }
    },
@@ -3674,6 +3680,18 @@
     "overshoot_pct": 58,
     "pps_by_distance": {
      "close": 1.5
+    }
+   },
+   {
+    "scenario": "GLIDING SMOOTHBOT",
+    "runs": 2,
+    "on_target": 26,
+    "reaction_ms": 30,
+    "overshoot_pct": 27,
+    "pps_by_distance": {
+     "far": 2.2,
+     "mid": 3.0,
+     "close": 1.0
     }
    },
    {
