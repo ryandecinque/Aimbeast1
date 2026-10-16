@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-16 12:36",
- "updated_utc": "2026-10-16T05:36:23Z",
+ "updated": "2026-10-16 12:51",
+ "updated_utc": "2026-10-16T05:51:22Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
-   "ZEUS DAILY": 19
+   "ZEUS DAILY": 20
   }
  },
  "plan_start": "2026-10-07",
@@ -961,17 +961,17 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 19,
-   "restarts": 10,
+   "runs": 20,
+   "restarts": 11,
    "rest_median_s": 56,
-   "rest_longest_s": 589,
+   "rest_longest_s": 859,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS DAILY",
-     "runs": 19,
+     "runs": 20,
      "first": "11:43",
-     "last": "12:32"
+     "last": "12:47"
     }
    ],
    "scenarios": [
@@ -1038,6 +1038,14 @@
      "first": "12:29",
      "best": 1757,
      "median": 1646
+    },
+    {
+     "name": "AIR EASY INVINCIBLE 4 VSB - TEST",
+     "runs": 1,
+     "routine": "ZEUS DAILY",
+     "first": "12:47",
+     "best": 1869,
+     "median": 1869
     }
    ]
   },
@@ -2613,12 +2621,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 535,
+  "runs": 536,
   "days": 11,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 238,
+    "runs": 239,
     "pct": 100.0
    },
    {
@@ -3412,6 +3420,16 @@
    }
   ],
   "2026-10-16": [
+   {
+    "scenario": "AIR EASY INVINCIBLE 4 VSB - TEST",
+    "runs": 1,
+    "on_target": 28,
+    "reaction_ms": 100,
+    "overshoot_pct": 37,
+    "pps_by_distance": {
+     "close": 10.3
+    }
+   },
    {
     "scenario": "CONTROLSPHERE OW - TEST",
     "runs": 2,
