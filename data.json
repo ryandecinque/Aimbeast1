@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-16 12:06",
- "updated_utc": "2026-10-16T05:06:21Z",
+ "updated": "2026-10-16 12:11",
+ "updated_utc": "2026-10-16T05:11:20Z",
  "today": {
   "date": "2026-10-16",
   "progress": {
-   "ZEUS DAILY": 11
+   "ZEUS DAILY": 12
   }
  },
  "plan_start": "2026-10-07",
@@ -961,7 +961,7 @@
  "days": [
   {
    "date": "2026-10-16",
-   "runs": 11,
+   "runs": 12,
    "restarts": 8,
    "rest_median_s": 56,
    "rest_longest_s": 216,
@@ -969,9 +969,9 @@
    "playlists": [
     {
      "name": "ZEUS DAILY",
-     "runs": 11,
+     "runs": 12,
      "first": "11:43",
-     "last": "12:05"
+     "last": "12:10"
     }
    ],
    "scenarios": [
@@ -1009,11 +1009,11 @@
     },
     {
      "name": "ZEUS TRACK EVO NOBLINK EZ BURST",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS DAILY",
      "first": "12:03",
      "best": 12,
-     "median": 11
+     "median": 10
     }
    ]
   },
@@ -2589,13 +2589,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 527,
+  "runs": 528,
   "days": 11,
   "groups": [
    {
     "label": "First attempt on a scenario",
     "runs": 235,
-    "pct": 99.8
+    "pct": 99.9
    },
    {
     "label": "Later attempts, rest under 20 s",
