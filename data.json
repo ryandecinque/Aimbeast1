@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-17 20:06",
- "updated_utc": "2026-10-17T13:06:56Z",
+ "updated": "2026-10-17 20:16",
+ "updated_utc": "2026-10-17T13:16:56Z",
  "today": {
   "date": "2026-10-17",
   "progress": {
@@ -1007,7 +1007,7 @@
  "days": [
   {
    "date": "2026-10-17",
-   "runs": 58,
+   "runs": 59,
    "restarts": 164,
    "rest_median_s": 72,
    "rest_longest_s": 594,
@@ -1076,9 +1076,9 @@
     },
     {
      "name": "1",
-     "runs": 17,
+     "runs": 18,
      "first": "14:08",
-     "last": "20:03"
+     "last": "20:15"
     }
    ],
    "scenarios": [
@@ -1208,11 +1208,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK (EZ)",
-     "runs": 9,
+     "runs": 10,
      "routine": "1",
      "first": "14:48",
      "best": 557,
-     "median": 496
+     "median": 495
     }
    ]
   },
@@ -3055,7 +3055,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 611,
+  "runs": 612,
   "days": 12,
   "groups": [
    {
@@ -4267,13 +4267,13 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK EZ",
-    "runs": 9,
+    "runs": 10,
     "on_target": 34,
     "reaction_ms": 150,
-    "overshoot_pct": 41,
+    "overshoot_pct": 40,
     "pps_by_distance": {
-     "far": 7.4,
-     "mid": 8.3,
+     "far": 7.6,
+     "mid": 8.4,
      "close": 7.8
     }
    },
