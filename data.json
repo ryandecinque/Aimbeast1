@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-17 08:11",
- "updated_utc": "2026-10-17T01:11:23Z",
+ "updated": "2026-10-17 08:21",
+ "updated_utc": "2026-10-17T01:21:22Z",
  "today": {
   "date": "2026-10-17",
   "progress": {
-   "ZEUS DAILY": 16
+   "ZEUS DAILY": 17
   }
  },
  "plan_start": "2026-10-07",
@@ -989,10 +989,10 @@
  "days": [
   {
    "date": "2026-10-17",
-   "runs": 16,
-   "restarts": 15,
+   "runs": 17,
+   "restarts": 17,
    "rest_median_s": 87,
-   "rest_longest_s": 235,
+   "rest_longest_s": 594,
    "breaks": [
     {
      "after": "ZEUS DAILY",
@@ -1004,9 +1004,9 @@
    "playlists": [
     {
      "name": "ZEUS DAILY",
-     "runs": 16,
+     "runs": 17,
      "first": "06:41",
-     "last": "08:09"
+     "last": "08:20"
     }
    ],
    "scenarios": [
@@ -1060,11 +1060,11 @@
     },
     {
      "name": "MIXED XYZ STRAFES SLOW ACCEL",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS DAILY",
      "first": "08:09",
-     "best": 236,
-     "median": 236
+     "best": 267,
+     "median": 252
     }
    ]
   },
@@ -2907,7 +2907,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 579,
+  "runs": 580,
   "days": 12,
   "groups": [
    {
@@ -3989,13 +3989,13 @@
    },
    {
     "scenario": "MIXED XYZ STRAFES SLOW ACCEL",
-    "runs": 1,
-    "on_target": 21,
+    "runs": 2,
+    "on_target": 22,
     "reaction_ms": 0,
-    "overshoot_pct": 38,
+    "overshoot_pct": 28,
     "pps_by_distance": {
-     "far": 3.9,
-     "mid": 4.3
+     "far": 4.1,
+     "mid": 4.9
     }
    },
    {
