@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-17 08:26",
- "updated_utc": "2026-10-17T01:26:22Z",
+ "updated": "2026-10-17 08:36",
+ "updated_utc": "2026-10-17T01:36:23Z",
  "today": {
   "date": "2026-10-17",
   "progress": {
-   "ZEUS DAILY": 18
+   "ZEUS DAILY": 20
   }
  },
  "plan_start": "2026-10-07",
@@ -989,9 +989,9 @@
  "days": [
   {
    "date": "2026-10-17",
-   "runs": 18,
-   "restarts": 17,
-   "rest_median_s": 87,
+   "runs": 20,
+   "restarts": 18,
+   "rest_median_s": 105,
    "rest_longest_s": 594,
    "breaks": [
     {
@@ -1004,9 +1004,9 @@
    "playlists": [
     {
      "name": "ZEUS DAILY",
-     "runs": 18,
+     "runs": 20,
      "first": "06:41",
-     "last": "08:22"
+     "last": "08:34"
     }
    ],
    "scenarios": [
@@ -1068,11 +1068,19 @@
     },
     {
      "name": "REACTIVE ADJUSTMENTS STRAFES",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS DAILY",
      "first": "08:22",
      "best": 1649,
-     "median": 1649
+     "median": 1648
+    },
+    {
+     "name": "AIR EASY INVINCIBLE 4 VSB - TEST",
+     "runs": 1,
+     "routine": "ZEUS DAILY",
+     "first": "08:34",
+     "best": 2019,
+     "median": 2019
     }
    ]
   },
@@ -2915,12 +2923,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 581,
+  "runs": 583,
   "days": 12,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 255,
+    "runs": 256,
     "pct": 100.0
    },
    {
@@ -3985,6 +3993,16 @@
   ],
   "2026-10-17": [
    {
+    "scenario": "AIR EASY INVINCIBLE 4 VSB - TEST",
+    "runs": 1,
+    "on_target": 30,
+    "reaction_ms": 117,
+    "overshoot_pct": 39,
+    "pps_by_distance": {
+     "close": 11.2
+    }
+   },
+   {
     "scenario": "CONTROLSPHERE OW - TEST",
     "runs": 2,
     "on_target": 24,
@@ -4008,12 +4026,12 @@
    },
    {
     "scenario": "REACTIVE ADJUSTMENTS STRAFES",
-    "runs": 1,
-    "on_target": 36,
+    "runs": 2,
+    "on_target": 34,
     "reaction_ms": null,
-    "overshoot_pct": 34,
+    "overshoot_pct": 33,
     "pps_by_distance": {
-     "mid": 19.0
+     "mid": 19.1
     }
    },
    {
