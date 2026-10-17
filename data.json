@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-17 09:16",
- "updated_utc": "2026-10-17T02:16:24Z",
+ "updated": "2026-10-17 09:21",
+ "updated_utc": "2026-10-17T02:21:23Z",
  "today": {
   "date": "2026-10-17",
   "progress": {
@@ -1007,9 +1007,9 @@
  "days": [
   {
    "date": "2026-10-17",
-   "runs": 34,
+   "runs": 37,
    "restarts": 34,
-   "rest_median_s": 88,
+   "rest_median_s": 72,
    "rest_longest_s": 594,
    "breaks": [
     {
@@ -1043,6 +1043,12 @@
      "runs": 5,
      "first": "09:03",
      "last": "09:16"
+    },
+    {
+     "name": "BAZHAN MEDIUM TRACKING",
+     "runs": 3,
+     "first": "09:17",
+     "last": "09:19"
     }
    ],
    "scenarios": [
@@ -1133,6 +1139,28 @@
      "first": "09:03",
      "best": 424,
      "median": 388
+    },
+    {
+     "name": "TORNADO COW (MICRO)",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:17"
+    },
+    {
+     "name": "REACTIVE STRAFER 2",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:18",
+     "best": 1119,
+     "median": 1119
+    },
+    {
+     "name": "CONTROLTRACK",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:19",
+     "best": 912,
+     "median": 912
     }
    ]
   },
@@ -2975,12 +3003,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 597,
+  "runs": 599,
   "days": 12,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 258,
+    "runs": 260,
     "pct": 100.0
    },
    {
@@ -2996,7 +3024,7 @@
    {
     "label": "First run after a break of 15 min+",
     "runs": 35,
-    "pct": 94.1
+    "pct": 94.2
    }
   ]
  },
@@ -4066,6 +4094,17 @@
     }
    },
    {
+    "scenario": "CONTROLTRACK",
+    "runs": 1,
+    "on_target": 30,
+    "reaction_ms": null,
+    "overshoot_pct": 32,
+    "pps_by_distance": {
+     "far": 11.5,
+     "mid": 13.2
+    }
+   },
+   {
     "scenario": "MIXED XYZ STRAFES SLOW ACCEL",
     "runs": 2,
     "on_target": 22,
@@ -4084,6 +4123,17 @@
     "overshoot_pct": 33,
     "pps_by_distance": {
      "mid": 19.1
+    }
+   },
+   {
+    "scenario": "REACTIVE STRAFER 2",
+    "runs": 1,
+    "on_target": 32,
+    "reaction_ms": 267,
+    "overshoot_pct": 44,
+    "pps_by_distance": {
+     "mid": 12.6,
+     "close": 12.5
     }
    },
    {
