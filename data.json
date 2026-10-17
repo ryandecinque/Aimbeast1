@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-17 09:21",
- "updated_utc": "2026-10-17T02:21:23Z",
+ "updated": "2026-10-17 09:26",
+ "updated_utc": "2026-10-17T02:26:25Z",
  "today": {
   "date": "2026-10-17",
   "progress": {
@@ -1007,8 +1007,8 @@
  "days": [
   {
    "date": "2026-10-17",
-   "runs": 37,
-   "restarts": 34,
+   "runs": 39,
+   "restarts": 39,
    "rest_median_s": 72,
    "rest_longest_s": 594,
    "breaks": [
@@ -1029,6 +1029,12 @@
      "before": "BAZHAN MEDIUM TRACKING",
      "at": "09:16",
      "minutes": 0.2
+    },
+    {
+     "after": "BAZHAN MEDIUM TRACKING",
+     "before": "(single scenario)",
+     "at": "09:24",
+     "minutes": 0.2
     }
    ],
    "playlists": [
@@ -1046,9 +1052,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 3,
+     "runs": 5,
      "first": "09:17",
-     "last": "09:19"
+     "last": "09:24"
     }
    ],
    "scenarios": [
@@ -1156,11 +1162,19 @@
     },
     {
      "name": "CONTROLTRACK",
-     "runs": 1,
+     "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "09:19",
-     "best": 912,
-     "median": 912
+     "best": 1004,
+     "median": 958
+    },
+    {
+     "name": "テ PRECISETRACK (EZ) - RANKED",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:24",
+     "best": 968,
+     "median": 968
     }
    ]
   },
@@ -3003,12 +3017,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 599,
+  "runs": 601,
   "days": 12,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 260,
+    "runs": 261,
     "pct": 100.0
    },
    {
@@ -3018,13 +3032,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 186,
-    "pct": 102.4
+    "runs": 187,
+    "pct": 102.3
    },
    {
     "label": "First run after a break of 15 min+",
     "runs": 35,
-    "pct": 94.2
+    "pct": 94.1
    }
   ]
  },
@@ -4095,13 +4109,13 @@
    },
    {
     "scenario": "CONTROLTRACK",
-    "runs": 1,
-    "on_target": 30,
+    "runs": 2,
+    "on_target": 32,
     "reaction_ms": null,
-    "overshoot_pct": 32,
+    "overshoot_pct": 28,
     "pps_by_distance": {
-     "far": 11.5,
-     "mid": 13.2
+     "far": 12.2,
+     "mid": 14.0
     }
    },
    {
@@ -4113,6 +4127,18 @@
     "pps_by_distance": {
      "far": 4.1,
      "mid": 4.9
+    }
+   },
+   {
+    "scenario": "PRECISETRACK EZ - RANKED",
+    "runs": 1,
+    "on_target": 42,
+    "reaction_ms": null,
+    "overshoot_pct": 13,
+    "pps_by_distance": {
+     "far": 13.7,
+     "mid": 15.8,
+     "close": 19.9
     }
    },
    {
