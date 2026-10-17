@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-17 08:36",
- "updated_utc": "2026-10-17T01:36:23Z",
+ "updated": "2026-10-17 08:41",
+ "updated_utc": "2026-10-17T01:41:23Z",
  "today": {
   "date": "2026-10-17",
   "progress": {
-   "ZEUS DAILY": 20
+   "ZEUS DAILY": 22
   }
  },
  "plan_start": "2026-10-07",
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 493,
-   "runs_14d": 142,
+   "runs_14d": 143,
    "steps": [
     0.0,
     198.0,
@@ -860,6 +860,12 @@
      "median": 486,
      "best": 533,
      "runs": 10
+    },
+    {
+     "date": "2026-10-17",
+     "median": 449,
+     "best": 449,
+     "runs": 1
     }
    ]
   }
@@ -989,9 +995,9 @@
  "days": [
   {
    "date": "2026-10-17",
-   "runs": 20,
-   "restarts": 18,
-   "rest_median_s": 105,
+   "runs": 22,
+   "restarts": 21,
+   "rest_median_s": 87,
    "rest_longest_s": 594,
    "breaks": [
     {
@@ -1004,9 +1010,9 @@
    "playlists": [
     {
      "name": "ZEUS DAILY",
-     "runs": 20,
+     "runs": 22,
      "first": "06:41",
-     "last": "08:34"
+     "last": "08:38"
     }
    ],
    "scenarios": [
@@ -1076,11 +1082,19 @@
     },
     {
      "name": "AIR EASY INVINCIBLE 4 VSB - TEST",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS DAILY",
      "first": "08:34",
      "best": 2019,
-     "median": 2019
+     "median": 1998
+    },
+    {
+     "name": "ZEUS TRACK EVO - NOBLINK",
+     "runs": 1,
+     "routine": "ZEUS DAILY",
+     "first": "08:38",
+     "best": 449,
+     "median": 449
     }
    ]
   },
@@ -2923,12 +2937,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 583,
+  "runs": 585,
   "days": 12,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 256,
+    "runs": 257,
     "pct": 100.0
    },
    {
@@ -2938,13 +2952,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 178,
-    "pct": 101.8
+    "runs": 179,
+    "pct": 101.9
    },
    {
     "label": "First run after a break of 15 min+",
     "runs": 35,
-    "pct": 93.9
+    "pct": 94.0
    }
   ]
  },
@@ -3994,12 +4008,12 @@
   "2026-10-17": [
    {
     "scenario": "AIR EASY INVINCIBLE 4 VSB - TEST",
-    "runs": 1,
-    "on_target": 30,
+    "runs": 2,
+    "on_target": 29,
     "reaction_ms": 117,
-    "overshoot_pct": 39,
+    "overshoot_pct": 40,
     "pps_by_distance": {
-     "close": 11.2
+     "close": 11.1
     }
    },
    {
@@ -4063,6 +4077,18 @@
     "pps_by_distance": {
      "mid": 3.8,
      "close": 3.9
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - NOBLINK",
+    "runs": 1,
+    "on_target": 30,
+    "reaction_ms": 133,
+    "overshoot_pct": 42,
+    "pps_by_distance": {
+     "far": 5.8,
+     "mid": 9.6,
+     "close": 7.5
     }
    },
    {
@@ -4537,6 +4563,25 @@
     "model": {
      "file": "model-zeus-2026-10-16",
      "label": "Model: 639"
+    }
+   }
+  ],
+  "2026-10-17": [
+   {
+    "scenario": "Zeus Track Evo - Noblink",
+    "score": 449,
+    "time": "08:37",
+    "gif": "best-zeus-2026-10-17",
+    "video": true,
+    "on_target": 30,
+    "reaction_ms": 133,
+    "overshoot_pct": 42,
+    "best_14d": 553,
+    "master3": 726,
+    "note": "Best of 1 recorded today (median 449). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "file": "model-zeus-2026-10-17",
+     "label": "Model: 539"
     }
    }
   ]
