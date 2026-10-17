@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-17 07:01",
- "updated_utc": "2026-10-17T00:01:22Z",
+ "updated": "2026-10-17 07:06",
+ "updated_utc": "2026-10-17T00:06:22Z",
  "today": {
   "date": "2026-10-17",
   "progress": {
-   "ZEUS DAILY": 6
+   "ZEUS DAILY": 7
   }
  },
  "plan_start": "2026-10-07",
@@ -989,17 +989,17 @@
  "days": [
   {
    "date": "2026-10-17",
-   "runs": 6,
-   "restarts": 6,
-   "rest_median_s": 148,
-   "rest_longest_s": 216,
+   "runs": 7,
+   "restarts": 7,
+   "rest_median_s": 158,
+   "rest_longest_s": 235,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS DAILY",
-     "runs": 6,
+     "runs": 7,
      "first": "06:41",
-     "last": "06:58"
+     "last": "07:03"
     }
    ],
    "scenarios": [
@@ -1021,11 +1021,11 @@
     },
     {
      "name": "THIN FAST",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS DAILY",
      "first": "06:58",
-     "best": 1040,
-     "median": 1040
+     "best": 1260,
+     "median": 1150
     }
    ]
   },
@@ -2868,7 +2868,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 569,
+  "runs": 570,
   "days": 12,
   "groups": [
    {
@@ -3949,13 +3949,13 @@
    },
    {
     "scenario": "THIN FAST",
-    "runs": 1,
-    "on_target": 20,
+    "runs": 2,
+    "on_target": 21,
     "reaction_ms": 200,
     "overshoot_pct": 61,
     "pps_by_distance": {
-     "mid": 3.3,
-     "close": 3.6
+     "mid": 3.8,
+     "close": 3.9
     }
    },
    {
