@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-17 07:11",
- "updated_utc": "2026-10-17T00:11:22Z",
+ "updated": "2026-10-17 07:56",
+ "updated_utc": "2026-10-17T00:56:22Z",
  "today": {
   "date": "2026-10-17",
   "progress": {
-   "ZEUS DAILY": 8
+   "ZEUS DAILY": 9
   }
  },
  "plan_start": "2026-10-07",
@@ -989,17 +989,24 @@
  "days": [
   {
    "date": "2026-10-17",
-   "runs": 8,
-   "restarts": 11,
+   "runs": 9,
+   "restarts": 13,
    "rest_median_s": 168,
    "rest_longest_s": 235,
-   "breaks": [],
+   "breaks": [
+    {
+     "after": "ZEUS DAILY",
+     "before": "ZEUS DAILY",
+     "at": "07:07",
+     "minutes": 47.2
+    }
+   ],
    "playlists": [
     {
      "name": "ZEUS DAILY",
-     "runs": 8,
+     "runs": 9,
      "first": "06:41",
-     "last": "07:07"
+     "last": "07:56"
     }
    ],
    "scenarios": [
@@ -1029,11 +1036,11 @@
     },
     {
      "name": "SLOW ACCEL 'STT' SHORT",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS DAILY",
      "first": "07:07",
      "best": 275,
-     "median": 275
+     "median": 257
     }
    ]
   },
@@ -2876,7 +2883,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 571,
+  "runs": 572,
   "days": 12,
   "groups": [
    {
@@ -2892,11 +2899,11 @@
    {
     "label": "Later attempts, rest 20 s to 2 min",
     "runs": 176,
-    "pct": 101.8
+    "pct": 101.9
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 34,
+    "runs": 35,
     "pct": 93.9
    }
   ]
@@ -3957,12 +3964,12 @@
    },
    {
     "scenario": "SLOW ACCEL STT SHORT",
-    "runs": 1,
-    "on_target": 24,
-    "reaction_ms": null,
-    "overshoot_pct": 31,
+    "runs": 2,
+    "on_target": 22,
+    "reaction_ms": 75,
+    "overshoot_pct": 30,
     "pps_by_distance": {
-     "mid": 4.6
+     "mid": 4.3
     }
    },
    {
