@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-17 21:06",
- "updated_utc": "2026-10-17T14:06:58Z",
+ "updated": "2026-10-17 22:26",
+ "updated_utc": "2026-10-17T15:26:49Z",
  "today": {
   "date": "2026-10-17",
   "progress": {
@@ -896,7 +896,12 @@
   {
    "date": "2026-10-15",
    "author": "Claude",
-   "text": "Playlist change: a slow-turn block before Zeus, and two drills dropped\nWhat changed: ZEUS WEAKNESS is now 15 runs. It opens with 8 slow-turn runs (Controlsphere OW, Mixed XYZ Strafes Slow Accel, Reactive Adjustments Strafes and Slow Accel 'STT' Short, 2 each), then SCX Close Strafes 3, Thin Fast 2 and Far BZN 2. Pennytracking and Closely Strafing Kytan are out. RANK INT B is now 32 runs: 6 slow-turn runs in Normal mode (Controlsphere OW, Air Easy Invincible 4, Mixed XYZ Strafes Slow Accel) sit right before the 8 ranked Zeus runs. Ranked Zeus is still 8 per sitting.\nWhy: over-aim on ranked Zeus has been 34–39% of corrections on every recorded day since Oct 8, even with the \"land short\" cue. On Pennytracking and Kytan, about 2 in 3 corrections went past the bot. Those drills were teaching the snap-back, even while their scores rose.\nHow to play the block: no hurry and no score-chasing. After each turn, let the bot come to you, then make one short, smooth correction onto its near edge. Use a small burst from the wrist or fingers, then let go. Lower scores here are fine. If you hit well under half your shots, swap in an easier version. On ranked Zeus, one cue: trust the strafe, land short.\nWhat to watch: ranked Zeus over-aim (about 36% now). Working means about 32% or lower over a week. Score comes after that and may dip at first. If over-aim hasn't moved by about Nov 5, the next test is drills at a different sensitivity. Write your current cm/360 in the journal once, so that test has a starting point."
+   "text": "Playlist change: a slow-turn block before Zeus, and two drills dropped\nWhat changed: ZEUS WEAKNESS is now 15 runs. It opens with 8 slow-turn runs (Controlsphere OW, Mixed XYZ Strafes Slow Accel, Reactive Adjustments Strafes and Slow Accel 'STT' Short, 2 each), then SCX Close Strafes 3, Thin Fast 2 and Far BZN 2. Pennytracking and Closely Strafing Kytan are out. RANK INT B is now 32 runs: 6 slow-turn runs in Normal mode (Controlsphere OW, Air Easy Invincible 4, Mixed XYZ Strafes Slow Accel) sit right before the 8 ranked Zeus runs. Ranked Zeus is still 8 per sitting.\nWhy: over-aim on ranked Zeus has been 34–39% of corrections on every recorded day since Oct 8, even with the \"land short\" cue. On Pennytracking and Kytan, about 2 in 3 corrections went past the bot. Those drills were teaching the snap-back, even while their scores rose.\nHow to play the block: no hurry and no score-chasing. After each turn, let the bot come to you, then make one short, smooth correction onto its near edge. Use a small burst from the wrist or fingers, then let go. Lower scores here are fine. If you hit well under half your shots, swap in an easier version. On ranked Zeus, one cue: trust the strafe, land short.\nWhat to watch: ranked Zeus over-aim (about 36% now). Working means about 32% or lower over a week. Score comes after that and may dip at first. If over-aim hasn't moved by about Nov 5, the next test is drills at a different sensitivity."
+  },
+  {
+   "date": "2026-10-15",
+   "author": "Claude",
+   "text": "Goal change: Zeus Track first\nThe end goal is the same: Master 3 on all 6 Intermediate ranked tracking scenarios. What changed is the main focus. From Oct 16 the plan pushes the weakest of the six, Zeus Track, with about 80% of practice time, and the other five keep a short daily block so they still move.\nWhy Zeus: it's the furthest behind for the work put in. Its typical score has sat at 486–498 for 7 weeks over 516 ranked runs, and its best (591) is from early September. Master 3 is 726. The other five rose or held on about a third of the practice.\nHow the 80% is spent: not on more ranked Zeus. Days with 17+ ranked Zeus runs scored no better than days with 1–8 (490 against 500). The time goes to the habit that separates good Zeus runs from bad ones: over-aim after turns (34% of corrections on good runs, 41% on bad, stuck at 34–39% every day).\nNew daily order: ZEUS DAILY (Zeus-distance drills, Zeus EZ Burst, the slow-turn block, then 8 ranked Zeus), then one OTHERS playlist (two of the other five, 5 runs each, rotating 1, 2, 3). ZEUS SECOND (3 slow-turn runs and 8 ranked Zeus) is optional a few hours later, and logged separately to test whether spaced sittings help.\nCheck around Nov 5: ranked Zeus over-aim clearly below 34%, and the other five not dropping more than about 3%. If over-aim hasn't moved, the next trial is more ranked Zeus in spaced sittings."
   },
   {
    "date": "2026-10-13",
@@ -1008,7 +1013,7 @@
   {
    "date": "2026-10-17",
    "runs": 64,
-   "restarts": 175,
+   "restarts": 190,
    "rest_median_s": 74,
    "rest_longest_s": 594,
    "breaks": [
@@ -1053,6 +1058,12 @@
      "before": "1",
      "at": "20:42",
      "minutes": 20.9
+    },
+    {
+     "after": "1",
+     "before": "(single scenario)",
+     "at": "21:05",
+     "minutes": 8.0
     }
    ],
    "playlists": [
