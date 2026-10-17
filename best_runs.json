@@ -403,23 +403,6 @@
  ],
  "2026-10-17": [
   {
-   "scenario": "Zeus Track Evo - Noblink",
-   "score": 470,
-   "time": "08:41",
-   "gif": "best-zeus-2026-10-17",
-   "video": true,
-   "on_target": 32,
-   "reaction_ms": 133,
-   "overshoot_pct": 39,
-   "best_14d": 553,
-   "master3": 726,
-   "note": "Best of 3 recorded today (median 452). The clip is its 8 seconds with the most hits.",
-   "model": {
-    "file": "model-zeus-2026-10-17",
-    "label": "Model: 566"
-   }
-  },
-  {
    "scenario": "Smooth Thin Track V2",
    "score": 424,
    "time": "09:13",
@@ -434,6 +417,23 @@
    "model": {
     "file": "model-smooththin-2026-10-17",
     "label": "Model: 509"
+   }
+  },
+  {
+   "scenario": "Zeus Track Evo - Noblink",
+   "score": 507,
+   "time": "09:31",
+   "gif": "best-zeus-2026-10-17",
+   "video": true,
+   "on_target": 37,
+   "reaction_ms": 133,
+   "overshoot_pct": 34,
+   "best_14d": 553,
+   "master3": 726,
+   "note": "Best of 9 recorded today (median 449). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "file": "model-zeus-2026-10-17",
+    "label": "Model: 608"
    }
   }
  ]
