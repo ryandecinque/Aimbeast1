@@ -418,6 +418,23 @@
     "file": "model-zeus-2026-10-17",
     "label": "Model: 566"
    }
+  },
+  {
+   "scenario": "Smooth Thin Track V2",
+   "score": 407,
+   "time": "09:02",
+   "gif": "best-smooththin-2026-10-17",
+   "video": true,
+   "on_target": 33,
+   "reaction_ms": 133,
+   "overshoot_pct": 34,
+   "best_14d": 476,
+   "master3": 616,
+   "note": "Best of 1 recorded today (median 407). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "file": "model-smooththin-2026-10-17",
+    "label": "Model: 497"
+   }
   }
  ]
 }

@@ -1,9 +1,10 @@
 {
- "updated": "2026-10-17 09:01",
- "updated_utc": "2026-10-17T02:01:34Z",
+ "updated": "2026-10-17 09:06",
+ "updated_utc": "2026-10-17T02:06:26Z",
  "today": {
   "date": "2026-10-17",
   "progress": {
+   "OTHERS 2": 1,
    "ZEUS DAILY": 29
   }
  },
@@ -15,7 +16,7 @@
    "official_best": 555.0,
    "best_14d": 476.0,
    "median_14d": 427,
-   "runs_14d": 42,
+   "runs_14d": 43,
    "steps": [
     0.0,
     168.0,
@@ -270,6 +271,12 @@
      "median": 450,
      "best": 476,
      "runs": 8
+    },
+    {
+     "date": "2026-10-17",
+     "median": 407,
+     "best": 407,
+     "runs": 1
     }
    ]
   },
@@ -1000,8 +1007,8 @@
  "days": [
   {
    "date": "2026-10-17",
-   "runs": 29,
-   "restarts": 31,
+   "runs": 30,
+   "restarts": 32,
    "rest_median_s": 88,
    "rest_longest_s": 594,
    "breaks": [
@@ -1010,6 +1017,12 @@
      "before": "ZEUS DAILY",
      "at": "07:07",
      "minutes": 47.2
+    },
+    {
+     "after": "ZEUS DAILY",
+     "before": "OTHERS 2",
+     "at": "08:57",
+     "minutes": 5.4
     }
    ],
    "playlists": [
@@ -1018,6 +1031,12 @@
      "runs": 29,
      "first": "06:41",
      "last": "08:57"
+    },
+    {
+     "name": "OTHERS 2",
+     "runs": 1,
+     "first": "09:03",
+     "last": "09:03"
     }
    ],
    "scenarios": [
@@ -1100,6 +1119,14 @@
      "first": "08:38",
      "best": 470,
      "median": 449
+    },
+    {
+     "name": "SMOOTH THIN TRACK V2 - RANKED",
+     "runs": 1,
+     "routine": "OTHERS 2",
+     "first": "09:03",
+     "best": 407,
+     "median": 407
     }
    ]
   },
@@ -2942,12 +2969,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 592,
+  "runs": 593,
   "days": 12,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 257,
+    "runs": 258,
     "pct": 100.0
    },
    {
@@ -4074,6 +4101,16 @@
     }
    },
    {
+    "scenario": "SMOOTH THIN TRACK V2 - RANKED",
+    "runs": 1,
+    "on_target": 33,
+    "reaction_ms": 133,
+    "overshoot_pct": 34,
+    "pps_by_distance": {
+     "mid": 6.8
+    }
+   },
+   {
     "scenario": "THIN FAST",
     "runs": 2,
     "on_target": 21,
@@ -4588,6 +4625,23 @@
      "file": "model-zeus-2026-10-17",
      "label": "Model: 566"
     }
+   },
+   {
+    "scenario": "Smooth Thin Track V2",
+    "score": 407,
+    "time": "09:02",
+    "gif": "best-smooththin-2026-10-17",
+    "video": true,
+    "on_target": 33,
+    "reaction_ms": 133,
+    "overshoot_pct": 34,
+    "best_14d": 476,
+    "master3": 616,
+    "note": "Best of 1 recorded today (median 407). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "file": "model-smooththin-2026-10-17",
+     "label": "Model: 497"
+    }
    }
   ]
  },
@@ -4643,6 +4697,32 @@
      683
     ],
     "card": "2026-10-09-spheres-week.png"
+   },
+   {
+    "kind": "week",
+    "ws": "2793300284",
+    "name": "SMOOTH THIN TRACK V2",
+    "title": "Smooth Thin Track V2",
+    "median": 443,
+    "old": 430,
+    "date": "2026-10-17",
+    "seen_utc": "2026-10-17T02:06:48Z",
+    "master3": 616,
+    "trend": [
+     422,
+     428,
+     430,
+     428,
+     427,
+     429,
+     429,
+     430,
+     426,
+     425,
+     426,
+     443
+    ],
+    "card": "2026-10-17-smooththin-week.png"
    }
   ],
   "plan_bests": {
