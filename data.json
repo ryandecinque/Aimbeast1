@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-17 14:16",
- "updated_utc": "2026-10-17T07:16:56Z",
+ "updated": "2026-10-17 14:26",
+ "updated_utc": "2026-10-17T07:26:46Z",
  "today": {
   "date": "2026-10-17",
   "progress": {
@@ -1007,9 +1007,9 @@
  "days": [
   {
    "date": "2026-10-17",
-   "runs": 43,
-   "restarts": 102,
-   "rest_median_s": 88,
+   "runs": 45,
+   "restarts": 105,
+   "rest_median_s": 87,
    "rest_longest_s": 594,
    "breaks": [
     {
@@ -1064,9 +1064,9 @@
     },
     {
      "name": "1",
-     "runs": 2,
+     "runs": 4,
      "first": "14:08",
-     "last": "14:12"
+     "last": "14:26"
     }
    ],
    "scenarios": [
@@ -1190,7 +1190,7 @@
     },
     {
      "name": "AIR TRACK SMOOTH V3 (EZ) - RANKED",
-     "runs": 2,
+     "runs": 4,
      "routine": "1",
      "first": "14:08"
     }
@@ -4116,13 +4116,13 @@
    },
    {
     "scenario": "AIR TRACK SMOOTH V3 EZ - RANKED",
-    "runs": 2,
-    "on_target": 23,
+    "runs": 4,
+    "on_target": 26,
     "reaction_ms": 133,
-    "overshoot_pct": 26,
+    "overshoot_pct": 20,
     "pps_by_distance": {
-     "far": 5.6,
-     "mid": 6.1,
+     "far": 5.9,
+     "mid": 6.8,
      "close": 6.0
     }
    },
