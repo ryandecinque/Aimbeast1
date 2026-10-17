@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-17 08:56",
- "updated_utc": "2026-10-17T01:56:23Z",
+ "updated": "2026-10-17 09:01",
+ "updated_utc": "2026-10-17T02:01:34Z",
  "today": {
   "date": "2026-10-17",
   "progress": {
-   "ZEUS DAILY": 28
+   "ZEUS DAILY": 29
   }
  },
  "plan_start": "2026-10-07",
@@ -154,8 +154,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 553.0,
-   "median_14d": 491,
-   "runs_14d": 149,
+   "median_14d": 490,
+   "runs_14d": 150,
    "steps": [
     0.0,
     198.0,
@@ -865,12 +865,17 @@
      "date": "2026-10-17",
      "median": 449,
      "best": 470,
-     "runs": 7
+     "runs": 8
     }
    ]
   }
  ],
  "journal": [
+  {
+   "date": "2026-10-17",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS DAILY\nBelow your usual on seven of nine scenarios, the rest about level. Thin Fast was the weak spot, a typical 1150 against your 14-day typical of 1378.\nThin Fast had more over-aim than your last 14 days: 61% of corrections went past the bot.\nOne thing to try: the over-aim comes from corrections that are bigger than the bot's move. Make them with your wrist and fingers, and make them smaller. It should feel like a nudge that stops on the near edge of the bot, a little late rather than through it."
+  },
   {
    "date": "2026-10-16",
    "author": "AimJournal",
@@ -995,7 +1000,7 @@
  "days": [
   {
    "date": "2026-10-17",
-   "runs": 28,
+   "runs": 29,
    "restarts": 31,
    "rest_median_s": 88,
    "rest_longest_s": 594,
@@ -1010,9 +1015,9 @@
    "playlists": [
     {
      "name": "ZEUS DAILY",
-     "runs": 28,
+     "runs": 29,
      "first": "06:41",
-     "last": "08:55"
+     "last": "08:57"
     }
    ],
    "scenarios": [
@@ -1090,7 +1095,7 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 7,
+     "runs": 8,
      "routine": "ZEUS DAILY",
      "first": "08:38",
      "best": 470,
@@ -2937,7 +2942,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 591,
+  "runs": 592,
   "days": 12,
   "groups": [
    {
@@ -2952,8 +2957,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 184,
-    "pct": 102.2
+    "runs": 185,
+    "pct": 102.5
    },
    {
     "label": "First run after a break of 15 min+",
@@ -4081,7 +4086,7 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 7,
+    "runs": 8,
     "on_target": 31,
     "reaction_ms": 133,
     "overshoot_pct": 38,
