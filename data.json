@@ -1,11 +1,10 @@
 {
- "updated": "2026-10-17 23:21",
- "updated_utc": "2026-10-17T16:21:45Z",
+ "updated": "2026-10-18 08:51",
+ "updated_utc": "2026-10-18T01:51:49Z",
  "today": {
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "progress": {
-   "OTHERS 2": 5,
-   "ZEUS DAILY": 29
+   "ZEUS FOCUS": 2
   }
  },
  "plan_start": "2026-10-07",
@@ -15,8 +14,8 @@
    "master3": 616.0,
    "official_best": 555.0,
    "best_14d": 476.0,
-   "median_14d": 424,
-   "runs_14d": 47,
+   "median_14d": 421,
+   "runs_14d": 37,
    "steps": [
     0.0,
     168.0,
@@ -42,9 +41,9 @@
    "name": "AIR TRACK SMOOTH V3 150%",
    "master3": 660.0,
    "official_best": 548.0,
-   "best_14d": 545.0,
-   "median_14d": 463,
-   "runs_14d": 47,
+   "best_14d": 537.0,
+   "median_14d": 461,
+   "runs_14d": 37,
    "steps": [
     0.0,
     180.0,
@@ -71,8 +70,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 861.0,
-   "median_14d": 680,
-   "runs_14d": 47,
+   "median_14d": 672,
+   "runs_14d": 37,
    "steps": [
     0.0,
     240.0,
@@ -98,9 +97,9 @@
    "name": "PASU TRACK EVO (RCT) - 0.85X",
    "master3": 506.0,
    "official_best": 398.0,
-   "best_14d": 392.0,
-   "median_14d": 328,
-   "runs_14d": 60,
+   "best_14d": 385.0,
+   "median_14d": 316,
+   "runs_14d": 50,
    "steps": [
     0.0,
     138.0,
@@ -127,8 +126,8 @@
    "master3": 660.0,
    "official_best": 580.0,
    "best_14d": 532.0,
-   "median_14d": 457,
-   "runs_14d": 58,
+   "median_14d": 453,
+   "runs_14d": 46,
    "steps": [
     0.0,
     180.0,
@@ -155,8 +154,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 553.0,
-   "median_14d": 492,
-   "runs_14d": 152,
+   "median_14d": 488,
+   "runs_14d": 124,
    "steps": [
     0.0,
     198.0,
@@ -1010,6 +1009,32 @@
   }
  ],
  "days": [
+  {
+   "date": "2026-10-18",
+   "runs": 2,
+   "restarts": 1,
+   "rest_median_s": 171,
+   "rest_longest_s": 171,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "ZEUS FOCUS",
+     "runs": 2,
+     "first": "08:47",
+     "last": "08:51"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "SCX CLOSE STRAFES",
+     "runs": 2,
+     "routine": "ZEUS FOCUS",
+     "first": "08:47",
+     "best": 626,
+     "median": 590
+    }
+   ]
+  },
   {
    "date": "2026-10-17",
    "runs": 65,
@@ -3080,12 +3105,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 618,
-  "days": 12,
+  "runs": 619,
+  "days": 13,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 264,
+    "runs": 265,
     "pct": 100.0
    },
    {
@@ -4320,6 +4345,18 @@
     "overshoot_pct": 30,
     "pps_by_distance": {
      "far": 17.0
+    }
+   }
+  ],
+  "2026-10-18": [
+   {
+    "scenario": "SCX CLOSE STRAFES",
+    "runs": 2,
+    "on_target": 45,
+    "reaction_ms": 133,
+    "overshoot_pct": 30,
+    "pps_by_distance": {
+     "close": 9.8
     }
    }
   ]
