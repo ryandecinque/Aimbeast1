@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-18 09:22",
- "updated_utc": "2026-10-18T02:22:10Z",
+ "updated": "2026-10-18 09:32",
+ "updated_utc": "2026-10-18T02:32:04Z",
  "today": {
   "date": "2026-10-18",
   "progress": {
-   "ZEUS FOCUS": 9
+   "ZEUS FOCUS": 12
   }
  },
  "plan_start": "2026-10-07",
@@ -1011,17 +1011,17 @@
  "days": [
   {
    "date": "2026-10-18",
-   "runs": 9,
-   "restarts": 8,
-   "rest_median_s": 130,
+   "runs": 12,
+   "restarts": 10,
+   "rest_median_s": 90,
    "rest_longest_s": 421,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 9,
+     "runs": 12,
      "first": "08:47",
-     "last": "09:20"
+     "last": "09:31"
     }
    ],
    "scenarios": [
@@ -1035,18 +1035,18 @@
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 0.85X",
-     "runs": 4,
+     "runs": 5,
      "routine": "ZEUS FOCUS",
      "first": "08:57",
-     "best": 556,
-     "median": 548
+     "best": 574,
+     "median": 552
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE",
-     "runs": 1,
+     "runs": 3,
      "routine": "ZEUS FOCUS",
      "first": "09:14",
-     "best": 542,
+     "best": 558,
      "median": 542
     }
    ]
@@ -3121,12 +3121,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 626,
+  "runs": 629,
   "days": 13,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 267,
+    "runs": 268,
     "pct": 100.0
    },
    {
@@ -3136,7 +3136,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 194,
+    "runs": 195,
     "pct": 102.0
    },
    {
@@ -4377,9 +4377,9 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - CLOSE",
-    "runs": 1,
-    "on_target": 38,
-    "reaction_ms": 134,
+    "runs": 3,
+    "on_target": 39,
+    "reaction_ms": 133,
     "overshoot_pct": 39,
     "pps_by_distance": {
      "close": 9.1
@@ -4387,12 +4387,12 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - CLOSE 0.85X",
-    "runs": 4,
+    "runs": 5,
     "on_target": 46,
     "reaction_ms": 100,
-    "overshoot_pct": 30,
+    "overshoot_pct": 32,
     "pps_by_distance": {
-     "close": 10.7
+     "close": 10.8
     }
    }
   ]
