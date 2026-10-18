@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-18 11:46",
- "updated_utc": "2026-10-18T04:46:50Z",
+ "updated": "2026-10-18 11:56",
+ "updated_utc": "2026-10-18T04:56:55Z",
  "today": {
   "date": "2026-10-18",
   "progress": {
-   "ZEUS FOCUS": 20
+   "ZEUS FOCUS": 22
   }
  },
  "plan_start": "2026-10-07",
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 490,
-   "runs_14d": 128,
+   "runs_14d": 130,
    "steps": [
     0.0,
     198.0,
@@ -875,14 +875,19 @@
     },
     {
      "date": "2026-10-18",
-     "median": 506,
+     "median": 504,
      "best": 530,
-     "runs": 4
+     "runs": 6
     }
    ]
   }
  ],
  "journal": [
+  {
+   "date": "2026-10-18",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS\nAbove your usual on one of two scenarios, the rest about level. Zeus led the way, a typical 506 against your 14-day typical of 488.\nNothing slipped clearly against your last 14 days: over-aim, far-away scoring, mouse movement and rests were all close to usual or better.\nOne thing to try: the long pauses cost your warm-up. Start the next run within a minute or two. It should feel like one steady block, not a series of fresh starts."
+  },
   {
    "date": "2026-10-17",
    "author": "AimJournal",
@@ -1017,9 +1022,9 @@
  "days": [
   {
    "date": "2026-10-18",
-   "runs": 20,
-   "restarts": 66,
-   "rest_median_s": 90,
+   "runs": 22,
+   "restarts": 73,
+   "rest_median_s": 93,
    "rest_longest_s": 421,
    "breaks": [
     {
@@ -1038,9 +1043,9 @@
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 20,
+     "runs": 22,
      "first": "08:47",
-     "last": "11:46"
+     "last": "11:56"
     }
    ],
    "scenarios": [
@@ -1070,11 +1075,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 4,
+     "runs": 6,
      "routine": "ZEUS FOCUS",
      "first": "10:53",
      "best": 530,
-     "median": 506
+     "median": 504
     }
    ]
   },
@@ -3148,7 +3153,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 636,
+  "runs": 638,
   "days": 13,
   "groups": [
    {
@@ -4424,13 +4429,13 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 4,
+    "runs": 6,
     "on_target": 36,
     "reaction_ms": 133,
     "overshoot_pct": 36,
     "pps_by_distance": {
      "far": 7.8,
-     "mid": 9.3,
+     "mid": 9.2,
      "close": 8.3
     }
    }
