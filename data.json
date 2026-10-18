@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-18 09:11",
- "updated_utc": "2026-10-18T02:11:45Z",
+ "updated": "2026-10-18 09:17",
+ "updated_utc": "2026-10-18T02:17:00Z",
  "today": {
   "date": "2026-10-18",
   "progress": {
-   "ZEUS FOCUS": 5
+   "ZEUS FOCUS": 7
   }
  },
  "plan_start": "2026-10-07",
@@ -1011,17 +1011,17 @@
  "days": [
   {
    "date": "2026-10-18",
-   "runs": 5,
-   "restarts": 4,
-   "rest_median_s": 234,
+   "runs": 7,
+   "restarts": 7,
+   "rest_median_s": 233,
    "rest_longest_s": 421,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 5,
+     "runs": 7,
      "first": "08:47",
-     "last": "09:08"
+     "last": "09:15"
     }
    ],
    "scenarios": [
@@ -1035,11 +1035,19 @@
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 0.85X",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS FOCUS",
      "first": "08:57",
-     "best": 566,
-     "median": 566
+     "best": 547,
+     "median": 547
+    },
+    {
+     "name": "ZEUS TRACK EVO - CLOSE",
+     "runs": 1,
+     "routine": "ZEUS FOCUS",
+     "first": "09:14",
+     "best": 542,
+     "median": 542
     }
    ]
   },
@@ -3113,7 +3121,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 623,
+  "runs": 624,
   "days": 13,
   "groups": [
    {
@@ -4314,9 +4322,9 @@
    {
     "scenario": "ZEUS TRACK EVO - CLOSE",
     "runs": 1,
-    "on_target": 32,
+    "on_target": 31,
     "reaction_ms": 150,
-    "overshoot_pct": 41,
+    "overshoot_pct": 44,
     "pps_by_distance": {
      "close": 7.2
     }
@@ -4368,13 +4376,23 @@
     }
    },
    {
-    "scenario": "ZEUS TRACK EVO - CLOSE 0.85X",
+    "scenario": "ZEUS TRACK EVO - CLOSE",
     "runs": 1,
+    "on_target": 38,
+    "reaction_ms": 134,
+    "overshoot_pct": 39,
+    "pps_by_distance": {
+     "close": 9.1
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - CLOSE 0.85X",
+    "runs": 2,
     "on_target": 46,
     "reaction_ms": 100,
-    "overshoot_pct": 34,
+    "overshoot_pct": 32,
     "pps_by_distance": {
-     "close": 11.1
+     "close": 10.8
     }
    }
   ]
