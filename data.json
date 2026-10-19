@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-19 17:01",
- "updated_utc": "2026-10-19T10:01:48Z",
+ "updated": "2026-10-19 17:06",
+ "updated_utc": "2026-10-19T10:06:49Z",
  "today": {
   "date": "2026-10-19",
   "progress": {
-   "ZEUS FOCUS": 47
+   "ZEUS FOCUS": 49
   }
  },
  "plan_start": "2026-10-07",
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 550.0,
    "median_14d": 495,
-   "runs_14d": 135,
+   "runs_14d": 137,
    "steps": [
     0.0,
     198.0,
@@ -881,9 +881,9 @@
     },
     {
      "date": "2026-10-19",
-     "median": 513,
+     "median": 515,
      "best": 543,
-     "runs": 11
+     "runs": 13
     }
    ]
   }
@@ -1033,8 +1033,8 @@
  "days": [
   {
    "date": "2026-10-19",
-   "runs": 47,
-   "restarts": 75,
+   "runs": 49,
+   "restarts": 76,
    "rest_median_s": 111,
    "rest_longest_s": 867,
    "breaks": [
@@ -1066,9 +1066,9 @@
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 47,
+     "runs": 49,
      "first": "08:53",
-     "last": "16:57"
+     "last": "17:05"
     }
    ],
    "scenarios": [
@@ -1106,11 +1106,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 11,
+     "runs": 13,
      "routine": "ZEUS FOCUS",
      "first": "10:00",
      "best": 543,
-     "median": 513
+     "median": 515
     }
    ]
   },
@@ -3273,7 +3273,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 706,
+  "runs": 708,
   "days": 14,
   "groups": [
    {
@@ -3288,7 +3288,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 225,
+    "runs": 226,
     "pct": 101.4
    },
    {
@@ -4613,14 +4613,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 11,
+    "runs": 13,
     "on_target": 37,
     "reaction_ms": 133,
     "overshoot_pct": 37,
     "pps_by_distance": {
      "far": 7.9,
      "mid": 9.5,
-     "close": 8.4
+     "close": 8.5
     }
    }
   ]
@@ -5241,6 +5241,32 @@
      443
     ],
     "card": "2026-10-17-smooththin-week.png"
+   },
+   {
+    "kind": "week",
+    "ws": "2795094492",
+    "name": "ZEUS TRACK EVO - NOBLINK",
+    "title": "Zeus Track Evo - Noblink",
+    "median": 499,
+    "old": 498,
+    "date": "2026-10-19",
+    "seen_utc": "2026-10-19T10:07:19Z",
+    "master3": 726,
+    "trend": [
+     494,
+     490,
+     495,
+     495,
+     488,
+     495,
+     495,
+     489,
+     489,
+     485,
+     493,
+     499
+    ],
+    "card": "2026-10-19-zeus-week.png"
    }
   ],
   "plan_bests": {
