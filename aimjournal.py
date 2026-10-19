@@ -37,7 +37,7 @@ RUNS_DIR = r"C:/Program Files (x86)/Steam/steamapps/common/Aimbeast/Aimbeast/Bin
 AUTHOR = "AimJournal"
 START = "2026-10-11"             # plays before this were reviewed by hand
 PLAN = {"RANK INT A": 26, "RANK INT B": 32, "ZEUS BUILDER": 16, "ZEUS WEAKNESS": 15, "RANK INT B2": 24,
-        "ZEUS DAILY": 29, "ZEUS FOCUS": 20, "ZEUS SECOND": 11, "OTHERS 1": 10, "OTHERS 2": 10, "OTHERS 3": 10}   # fallback sizes
+        "ZEUS DAILY": 29, "ZEUS FOCUS": 26, "ZEUS SECOND": 11, "OTHERS 1": 10, "OTHERS 2": 10, "OTHERS 3": 10}   # fallback sizes
 WARMUP = {"RANK INT A": 2, "RANK INT B": 2}   # the first runs of each play are warm-ups (B's are Normal mode)
 WINDOW = 14                      # "your usual" = the 14 days before the play's day
 SESSION_GAP = 3 * 3600
