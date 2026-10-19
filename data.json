@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-19 11:26",
- "updated_utc": "2026-10-19T04:26:57Z",
+ "updated": "2026-10-19 15:01",
+ "updated_utc": "2026-10-19T08:01:50Z",
  "today": {
   "date": "2026-10-19",
   "progress": {
-   "ZEUS FOCUS": 26
+   "ZEUS FOCUS": 27
   }
  },
  "plan_start": "2026-10-07",
@@ -1033,9 +1033,9 @@
  "days": [
   {
    "date": "2026-10-19",
-   "runs": 26,
-   "restarts": 43,
-   "rest_median_s": 111,
+   "runs": 27,
+   "restarts": 44,
+   "rest_median_s": 110,
    "rest_longest_s": 633,
    "breaks": [
     {
@@ -1049,24 +1049,30 @@
      "before": "ZEUS FOCUS",
      "at": "10:42",
      "minutes": 31.1
+    },
+    {
+     "after": "ZEUS FOCUS",
+     "before": "ZEUS FOCUS",
+     "at": "11:26",
+     "minutes": 212.6
     }
    ],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 26,
+     "runs": 27,
      "first": "08:53",
-     "last": "11:26"
+     "last": "14:59"
     }
    ],
    "scenarios": [
     {
      "name": "SCX CLOSE STRAFES",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS FOCUS",
      "first": "08:53",
-     "best": 653,
-     "median": 641
+     "best": 671,
+     "median": 653
     },
     {
      "name": "ZEUS TRACK EVO - FAR",
@@ -3261,12 +3267,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 685,
+  "runs": 686,
   "days": 14,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 278,
+    "runs": 279,
     "pct": 100.0
    },
    {
@@ -3281,8 +3287,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 42,
-    "pct": 94.2
+    "runs": 43,
+    "pct": 94.0
    }
   ]
  },
@@ -4561,12 +4567,12 @@
   "2026-10-19": [
    {
     "scenario": "SCX CLOSE STRAFES",
-    "runs": 2,
-    "on_target": 44,
+    "runs": 3,
+    "on_target": 45,
     "reaction_ms": 133,
-    "overshoot_pct": 24,
+    "overshoot_pct": 25,
     "pps_by_distance": {
-     "close": 10.7
+     "close": 10.8
     }
    },
    {
