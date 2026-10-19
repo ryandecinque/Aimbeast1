@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-19 11:21",
- "updated_utc": "2026-10-19T04:21:57Z",
+ "updated": "2026-10-19 11:26",
+ "updated_utc": "2026-10-19T04:26:57Z",
  "today": {
   "date": "2026-10-19",
   "progress": {
-   "ZEUS FOCUS": 25
+   "ZEUS FOCUS": 26
   }
  },
  "plan_start": "2026-10-07",
@@ -154,8 +154,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 550.0,
-   "median_14d": 493,
-   "runs_14d": 131,
+   "median_14d": 494,
+   "runs_14d": 132,
    "steps": [
     0.0,
     198.0,
@@ -881,14 +881,19 @@
     },
     {
      "date": "2026-10-19",
-     "median": 515,
+     "median": 514,
      "best": 543,
-     "runs": 7
+     "runs": 8
     }
    ]
   }
  ],
  "journal": [
+  {
+   "date": "2026-10-19",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS\nBest moment: Zeus Track Evo - Close at 620, your best since the score log started. Above your usual on three of five scenarios, the rest about level.\nOne thing to try: long gaps between runs let your hand cool down. Keep rests to a minute or two so you stay warm. Each run should feel like it carries on from the last."
+  },
   {
    "date": "2026-10-18",
    "author": "AimJournal",
@@ -1028,9 +1033,9 @@
  "days": [
   {
    "date": "2026-10-19",
-   "runs": 25,
-   "restarts": 40,
-   "rest_median_s": 110,
+   "runs": 26,
+   "restarts": 43,
+   "rest_median_s": 111,
    "rest_longest_s": 633,
    "breaks": [
     {
@@ -1049,9 +1054,9 @@
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 25,
+     "runs": 26,
      "first": "08:53",
-     "last": "11:21"
+     "last": "11:26"
     }
    ],
    "scenarios": [
@@ -1089,11 +1094,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 7,
+     "runs": 8,
      "routine": "ZEUS FOCUS",
      "first": "10:00",
      "best": 543,
-     "median": 515
+     "median": 514
     }
    ]
   },
@@ -3256,7 +3261,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 684,
+  "runs": 685,
   "days": 14,
   "groups": [
    {
@@ -4596,14 +4601,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 7,
-    "on_target": 38,
+    "runs": 8,
+    "on_target": 37,
     "reaction_ms": 133,
-    "overshoot_pct": 35,
+    "overshoot_pct": 36,
     "pps_by_distance": {
-     "far": 7.9,
-     "mid": 9.3,
-     "close": 8.5
+     "far": 8.1,
+     "mid": 9.4,
+     "close": 8.4
     }
    }
   ]
