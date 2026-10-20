@@ -1,11 +1,9 @@
 {
- "updated": "2026-10-19 17:11",
- "updated_utc": "2026-10-19T10:11:48Z",
+ "updated": "2026-10-20 12:47",
+ "updated_utc": "2026-10-20T05:47:26Z",
  "today": {
-  "date": "2026-10-19",
-  "progress": {
-   "ZEUS FOCUS": 51
-  }
+  "date": "2026-10-20",
+  "progress": {}
  },
  "plan_start": "2026-10-07",
  "ranks": [
@@ -154,8 +152,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 550.0,
-   "median_14d": 495,
-   "runs_14d": 139,
+   "median_14d": 497,
+   "runs_14d": 130,
    "steps": [
     0.0,
     198.0,
@@ -1031,6 +1029,56 @@
   }
  ],
  "days": [
+  {
+   "date": "2026-10-20",
+   "runs": 4,
+   "restarts": 2,
+   "rest_median_s": 38,
+   "rest_longest_s": 59,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "(single scenario)",
+     "runs": 4,
+     "first": "12:42",
+     "last": "12:46"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "HIVE CLICK HARD - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "12:42",
+     "best": 23,
+     "median": 23
+    },
+    {
+     "name": "PASU 2 TARGETS HARD - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "12:43",
+     "best": 33,
+     "median": 33
+    },
+    {
+     "name": "STAR CLICKING V3 - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "12:45",
+     "best": 22,
+     "median": 22
+    },
+    {
+     "name": "PASU 5TGS SMOOTH V2 - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "12:46",
+     "best": 36,
+     "median": 36
+    }
+   ]
+  },
   {
    "date": "2026-10-19",
    "runs": 51,
@@ -3273,12 +3321,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 710,
-  "days": 14,
+  "runs": 713,
+  "days": 15,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 283,
+    "runs": 286,
     "pct": 100.0
    },
    {
@@ -4621,6 +4669,18 @@
      "far": 7.9,
      "mid": 9.5,
      "close": 8.5
+    }
+   }
+  ],
+  "2026-10-20": [
+   {
+    "scenario": "PASU 2 TARGETS HARD - RANKED",
+    "runs": 1,
+    "on_target": 91,
+    "reaction_ms": 175,
+    "overshoot_pct": 0,
+    "pps_by_distance": {
+     "mid": 0.6
     }
    }
   ]
