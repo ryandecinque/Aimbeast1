@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-20 12:51",
- "updated_utc": "2026-10-20T05:51:51Z",
+ "updated": "2026-10-20 12:57",
+ "updated_utc": "2026-10-20T05:57:00Z",
  "today": {
   "date": "2026-10-20",
   "progress": {}
@@ -1031,17 +1031,17 @@
  "days": [
   {
    "date": "2026-10-20",
-   "runs": 6,
-   "restarts": 2,
+   "runs": 10,
+   "restarts": 3,
    "rest_median_s": 38,
    "rest_longest_s": 89,
    "breaks": [],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 6,
+     "runs": 10,
      "first": "12:42",
-     "last": "12:50"
+     "last": "12:56"
     }
    ],
    "scenarios": [
@@ -1092,6 +1092,38 @@
      "first": "12:50",
      "best": 62,
      "median": 62
+    },
+    {
+     "name": "cisA VOX2CL Dodge Advanced",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "12:52",
+     "best": 1400,
+     "median": 1400
+    },
+    {
+     "name": "cisA PRESSURE DODGE Advanced",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "12:53",
+     "best": 2600,
+     "median": 2600
+    },
+    {
+     "name": "テ LEAVES CLICKING - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "12:54",
+     "best": 510,
+     "median": 510
+    },
+    {
+     "name": "テ LEAP CLICK - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "12:56",
+     "best": 310,
+     "median": 310
     }
    ]
   },
@@ -3337,12 +3369,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 716,
+  "runs": 720,
   "days": 15,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 289,
+    "runs": 293,
     "pct": 100.0
    },
    {
