@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-20 20:36",
- "updated_utc": "2026-10-20T13:36:57Z",
+ "updated": "2026-10-20 20:42",
+ "updated_utc": "2026-10-20T13:42:08Z",
  "today": {
   "date": "2026-10-20",
   "progress": {
-   "ZEUS FOCUS": 25
+   "ZEUS FOCUS": 27
   }
  },
  "plan_start": "2026-10-07",
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 570.0,
    "median_14d": 497,
-   "runs_14d": 137,
+   "runs_14d": 138,
    "steps": [
     0.0,
     198.0,
@@ -887,14 +887,19 @@
     },
     {
      "date": "2026-10-20",
-     "median": 515,
+     "median": 512,
      "best": 570,
-     "runs": 7
+     "runs": 8
     }
    ]
   }
  ],
  "journal": [
+  {
+   "date": "2026-10-20",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS\nAbove your usual on two of five scenarios, the rest about level. Zeus Track Evo - Far stood out: a typical 442, against 427 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim, far-away scoring, mouse movement and rests were all close to usual or better.\nOne thing to try: extra mouse movement on top of the bot's path costs points. Move less overall, only as far as the bot goes. It should feel calmer than usual, like you're under-doing it."
+  },
   {
    "date": "2026-10-19",
    "author": "AimJournal",
@@ -1039,9 +1044,9 @@
  "days": [
   {
    "date": "2026-10-20",
-   "runs": 43,
+   "runs": 45,
    "restarts": 54,
-   "rest_median_s": 42,
+   "rest_median_s": 44,
    "rest_longest_s": 193,
    "breaks": [
     {
@@ -1060,9 +1065,9 @@
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 25,
+     "runs": 27,
      "first": "19:43",
-     "last": "20:33"
+     "last": "20:40"
     }
    ],
    "scenarios": [
@@ -1204,10 +1209,10 @@
     },
     {
      "name": "SCX CLOSE STRAFES",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS FOCUS",
      "first": "19:43",
-     "best": 618,
+     "best": 683,
      "median": 618
     },
     {
@@ -1236,11 +1241,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 7,
+     "runs": 8,
      "routine": "ZEUS FOCUS",
      "first": "20:17",
      "best": 570,
-     "median": 515
+     "median": 512
     }
    ]
   },
@@ -3486,12 +3491,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 753,
+  "runs": 755,
   "days": 15,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 305,
+    "runs": 306,
     "pct": 100.0
    },
    {
@@ -3507,7 +3512,7 @@
    {
     "label": "First run after a break of 15 min+",
     "runs": 45,
-    "pct": 94.3
+    "pct": 94.2
    }
   ]
  },
@@ -4850,12 +4855,12 @@
    },
    {
     "scenario": "SCX CLOSE STRAFES",
-    "runs": 2,
-    "on_target": 46,
+    "runs": 3,
+    "on_target": 56,
     "reaction_ms": 150,
-    "overshoot_pct": 34,
+    "overshoot_pct": 32,
     "pps_by_distance": {
-     "close": 10.2
+     "close": 10.3
     }
    },
    {
@@ -4890,14 +4895,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 7,
-    "on_target": 36,
+    "runs": 8,
+    "on_target": 37,
     "reaction_ms": 133,
     "overshoot_pct": 34,
     "pps_by_distance": {
-     "far": 8.2,
+     "far": 8.3,
      "mid": 8.9,
-     "close": 8.5
+     "close": 8.4
     }
    }
   ]
