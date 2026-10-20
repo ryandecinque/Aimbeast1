@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-20 20:42",
- "updated_utc": "2026-10-20T13:42:08Z",
+ "updated": "2026-10-20 20:46",
+ "updated_utc": "2026-10-20T13:46:56Z",
  "today": {
   "date": "2026-10-20",
   "progress": {
-   "ZEUS FOCUS": 27
+   "ZEUS FOCUS": 30
   }
  },
  "plan_start": "2026-10-07",
@@ -1044,9 +1044,9 @@
  "days": [
   {
    "date": "2026-10-20",
-   "runs": 45,
-   "restarts": 54,
-   "rest_median_s": 44,
+   "runs": 48,
+   "restarts": 58,
+   "rest_median_s": 43,
    "rest_longest_s": 193,
    "breaks": [
     {
@@ -1065,9 +1065,9 @@
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 27,
+     "runs": 30,
      "first": "19:43",
-     "last": "20:40"
+     "last": "20:46"
     }
    ],
    "scenarios": [
@@ -1209,18 +1209,18 @@
     },
     {
      "name": "SCX CLOSE STRAFES",
-     "runs": 3,
+     "runs": 4,
      "routine": "ZEUS FOCUS",
      "first": "19:43",
-     "best": 683,
-     "median": 618
+     "best": 710,
+     "median": 650
     },
     {
      "name": "ZEUS TRACK EVO - FAR",
-     "runs": 6,
+     "runs": 8,
      "routine": "ZEUS FOCUS",
      "first": "19:46",
-     "best": 462,
+     "best": 466,
      "median": 442
     },
     {
@@ -3491,12 +3491,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 755,
+  "runs": 758,
   "days": 15,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 306,
+    "runs": 307,
     "pct": 100.0
    },
    {
@@ -3506,13 +3506,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 248,
-    "pct": 101.5
+    "runs": 250,
+    "pct": 101.4
    },
    {
     "label": "First run after a break of 15 min+",
     "runs": 45,
-    "pct": 94.2
+    "pct": 94.1
    }
   ]
  },
@@ -4855,12 +4855,12 @@
    },
    {
     "scenario": "SCX CLOSE STRAFES",
-    "runs": 3,
-    "on_target": 56,
-    "reaction_ms": 150,
-    "overshoot_pct": 32,
+    "runs": 4,
+    "on_target": 59,
+    "reaction_ms": 142,
+    "overshoot_pct": 36,
     "pps_by_distance": {
-     "close": 10.3
+     "close": 10.9
     }
    },
    {
@@ -4885,9 +4885,9 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - FAR",
-    "runs": 6,
+    "runs": 8,
     "on_target": 32,
-    "reaction_ms": null,
+    "reaction_ms": 117,
     "overshoot_pct": 36,
     "pps_by_distance": {
      "far": 7.2
