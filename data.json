@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-20 13:07",
- "updated_utc": "2026-10-20T06:07:01Z",
+ "updated": "2026-10-20 13:11",
+ "updated_utc": "2026-10-20T06:11:52Z",
  "today": {
   "date": "2026-10-20",
   "progress": {}
@@ -1031,17 +1031,17 @@
  "days": [
   {
    "date": "2026-10-20",
-   "runs": 15,
+   "runs": 17,
    "restarts": 6,
    "rest_median_s": 39,
-   "rest_longest_s": 90,
+   "rest_longest_s": 160,
    "breaks": [],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 15,
+     "runs": 17,
      "first": "12:42",
-     "last": "13:06"
+     "last": "13:08"
     }
    ],
    "scenarios": [
@@ -1156,6 +1156,22 @@
      "first": "13:06",
      "best": 440,
      "median": 440
+    },
+    {
+     "name": "143 WAVY CLICK",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "13:07",
+     "best": 416,
+     "median": 416
+    },
+    {
+     "name": "143 STRAFING HEADS CLICKING",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "13:08",
+     "best": 39,
+     "median": 39
     }
    ]
   },
@@ -3401,12 +3417,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 725,
+  "runs": 727,
   "days": 15,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 297,
+    "runs": 299,
     "pct": 100.0
    },
    {
