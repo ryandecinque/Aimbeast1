@@ -1,9 +1,11 @@
 {
- "updated": "2026-10-20 13:11",
- "updated_utc": "2026-10-20T06:11:52Z",
+ "updated": "2026-10-20 19:47",
+ "updated_utc": "2026-10-20T12:47:11Z",
  "today": {
   "date": "2026-10-20",
-  "progress": {}
+  "progress": {
+   "ZEUS FOCUS": 3
+  }
  },
  "plan_start": "2026-10-07",
  "ranks": [
@@ -1031,17 +1033,30 @@
  "days": [
   {
    "date": "2026-10-20",
-   "runs": 17,
-   "restarts": 6,
-   "rest_median_s": 39,
+   "runs": 21,
+   "restarts": 21,
+   "rest_median_s": 36,
    "rest_longest_s": 160,
-   "breaks": [],
+   "breaks": [
+    {
+     "after": "(single scenario)",
+     "before": "(single scenario)",
+     "at": "13:12",
+     "minutes": 149.0
+    }
+   ],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 17,
+     "runs": 18,
      "first": "12:42",
-     "last": "13:08"
+     "last": "13:12"
+    },
+    {
+     "name": "ZEUS FOCUS",
+     "runs": 3,
+     "first": "19:43",
+     "last": "19:46"
     }
    ],
    "scenarios": [
@@ -1172,6 +1187,30 @@
      "first": "13:08",
      "best": 39,
      "median": 39
+    },
+    {
+     "name": "143 MICRO EVASIVE",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "13:12",
+     "best": 51,
+     "median": 51
+    },
+    {
+     "name": "SCX CLOSE STRAFES",
+     "runs": 2,
+     "routine": "ZEUS FOCUS",
+     "first": "19:43",
+     "best": 618,
+     "median": 618
+    },
+    {
+     "name": "ZEUS TRACK EVO - FAR",
+     "runs": 1,
+     "routine": "ZEUS FOCUS",
+     "first": "19:46",
+     "best": 411,
+     "median": 411
     }
    ]
   },
@@ -3417,12 +3456,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 727,
+  "runs": 731,
   "days": 15,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 299,
+    "runs": 302,
     "pct": 100.0
    },
    {
@@ -3432,13 +3471,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 229,
+    "runs": 230,
     "pct": 101.4
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 44,
-    "pct": 94.1
+    "runs": 45,
+    "pct": 94.3
    }
   ]
  },
@@ -4777,6 +4816,26 @@
     "overshoot_pct": 0,
     "pps_by_distance": {
      "mid": 0.6
+    }
+   },
+   {
+    "scenario": "SCX CLOSE STRAFES",
+    "runs": 2,
+    "on_target": 46,
+    "reaction_ms": 150,
+    "overshoot_pct": 34,
+    "pps_by_distance": {
+     "close": 10.2
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - FAR",
+    "runs": 1,
+    "on_target": 31,
+    "reaction_ms": null,
+    "overshoot_pct": 36,
+    "pps_by_distance": {
+     "far": 6.7
     }
    }
   ]
