@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-20 13:02",
- "updated_utc": "2026-10-20T06:02:00Z",
+ "updated": "2026-10-20 13:07",
+ "updated_utc": "2026-10-20T06:07:01Z",
  "today": {
   "date": "2026-10-20",
   "progress": {}
@@ -1031,17 +1031,17 @@
  "days": [
   {
    "date": "2026-10-20",
-   "runs": 13,
-   "restarts": 4,
-   "rest_median_s": 38,
-   "rest_longest_s": 89,
+   "runs": 15,
+   "restarts": 6,
+   "rest_median_s": 39,
+   "rest_longest_s": 90,
    "breaks": [],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 13,
+     "runs": 15,
      "first": "12:42",
-     "last": "13:01"
+     "last": "13:06"
     }
    ],
    "scenarios": [
@@ -1140,6 +1140,22 @@
      "first": "13:01",
      "best": 410,
      "median": 410
+    },
+    {
+     "name": "STARFALL ADVANCED - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "13:04",
+     "best": 270,
+     "median": 270
+    },
+    {
+     "name": "QUICK SHOT ADVANCED - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "13:06",
+     "best": 440,
+     "median": 440
     }
    ]
   },
@@ -3385,12 +3401,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 722,
+  "runs": 725,
   "days": 15,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 294,
+    "runs": 297,
     "pct": 100.0
    },
    {
