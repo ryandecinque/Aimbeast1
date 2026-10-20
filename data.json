@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-20 12:57",
- "updated_utc": "2026-10-20T05:57:00Z",
+ "updated": "2026-10-20 13:02",
+ "updated_utc": "2026-10-20T06:02:00Z",
  "today": {
   "date": "2026-10-20",
   "progress": {}
@@ -1031,17 +1031,17 @@
  "days": [
   {
    "date": "2026-10-20",
-   "runs": 10,
-   "restarts": 3,
+   "runs": 13,
+   "restarts": 4,
    "rest_median_s": 38,
    "rest_longest_s": 89,
    "breaks": [],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 10,
+     "runs": 13,
      "first": "12:42",
-     "last": "12:56"
+     "last": "13:01"
     }
    ],
    "scenarios": [
@@ -1124,6 +1124,22 @@
      "first": "12:56",
      "best": 310,
      "median": 310
+    },
+    {
+     "name": "テ BARREL CLICK - RANKED",
+     "runs": 2,
+     "routine": "(single scenario)",
+     "first": "12:58",
+     "best": 400,
+     "median": 380
+    },
+    {
+     "name": "PRECISE SHOT ADVANCED - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "13:01",
+     "best": 410,
+     "median": 410
     }
    ]
   },
@@ -3369,12 +3385,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 720,
+  "runs": 722,
   "days": 15,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 293,
+    "runs": 294,
     "pct": 100.0
    },
    {
@@ -3384,7 +3400,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 228,
+    "runs": 229,
     "pct": 101.4
    },
    {
