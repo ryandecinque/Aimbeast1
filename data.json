@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-21 18:41",
- "updated_utc": "2026-10-21T11:41:47Z",
+ "updated": "2026-10-21 22:16",
+ "updated_utc": "2026-10-21T15:16:50Z",
  "today": {
   "date": "2026-10-21",
   "progress": {
-   "ZEUS FOCUS": 24
+   "ZEUS FOCUS": 26
   }
  },
  "plan_start": "2026-10-07",
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 570.0,
    "median_14d": 497,
-   "runs_14d": 151,
+   "runs_14d": 153,
    "steps": [
     0.0,
     198.0,
@@ -893,9 +893,9 @@
     },
     {
      "date": "2026-10-21",
-     "median": 500,
+     "median": 498,
      "best": 545,
-     "runs": 6
+     "runs": 8
     }
    ]
   }
@@ -1050,9 +1050,9 @@
  "days": [
   {
    "date": "2026-10-21",
-   "runs": 24,
-   "restarts": 41,
-   "rest_median_s": 47,
+   "runs": 26,
+   "restarts": 48,
+   "rest_median_s": 43,
    "rest_longest_s": 715,
    "breaks": [
     {
@@ -1071,9 +1071,9 @@
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 24,
+     "runs": 26,
      "first": "15:01",
-     "last": "18:38"
+     "last": "22:13"
     }
    ],
    "scenarios": [
@@ -1111,11 +1111,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 6,
+     "runs": 8,
      "routine": "ZEUS FOCUS",
      "first": "18:27",
      "best": 545,
-     "median": 500
+     "median": 498
     }
    ]
   },
@@ -3574,7 +3574,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 803,
+  "runs": 805,
   "days": 16,
   "groups": [
    {
@@ -3589,8 +3589,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 278,
-    "pct": 101.2
+    "runs": 280,
+    "pct": 101.1
    },
    {
     "label": "First run after a break of 15 min+",
@@ -5032,14 +5032,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 6,
-    "on_target": 37,
+    "runs": 8,
+    "on_target": 36,
     "reaction_ms": 133,
-    "overshoot_pct": 39,
+    "overshoot_pct": 38,
     "pps_by_distance": {
-     "far": 7.8,
+     "far": 8.1,
      "mid": 8.1,
-     "close": 8.6
+     "close": 8.2
     }
    }
   ]
