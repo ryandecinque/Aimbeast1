@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-21 17:36",
- "updated_utc": "2026-10-21T10:36:52Z",
+ "updated": "2026-10-21 18:16",
+ "updated_utc": "2026-10-21T11:16:49Z",
  "today": {
   "date": "2026-10-21",
   "progress": {
-   "ZEUS FOCUS": 16
+   "ZEUS FOCUS": 17
   }
  },
  "plan_start": "2026-10-07",
@@ -1044,8 +1044,8 @@
  "days": [
   {
    "date": "2026-10-21",
-   "runs": 16,
-   "restarts": 17,
+   "runs": 17,
+   "restarts": 19,
    "rest_median_s": 51,
    "rest_longest_s": 165,
    "breaks": [
@@ -1054,14 +1054,20 @@
      "before": "ZEUS FOCUS",
      "at": "15:27",
      "minutes": 121.7
+    },
+    {
+     "after": "ZEUS FOCUS",
+     "before": "ZEUS FOCUS",
+     "at": "17:34",
+     "minutes": 35.8
     }
    ],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 16,
+     "runs": 17,
      "first": "15:01",
-     "last": "17:34"
+     "last": "18:11"
     }
    ],
    "scenarios": [
@@ -1091,11 +1097,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE",
-     "runs": 4,
+     "runs": 5,
      "routine": "ZEUS FOCUS",
      "first": "15:27",
-     "best": 564,
-     "median": 550
+     "best": 565,
+     "median": 557
     }
    ]
   },
@@ -3554,7 +3560,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 795,
+  "runs": 796,
   "days": 16,
   "groups": [
    {
@@ -3574,8 +3580,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 47,
-    "pct": 94.2
+    "runs": 48,
+    "pct": 95.5
    }
   ]
  },
@@ -4982,12 +4988,12 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - CLOSE",
-    "runs": 4,
-    "on_target": 40,
+    "runs": 5,
+    "on_target": 42,
     "reaction_ms": 133,
-    "overshoot_pct": 36,
+    "overshoot_pct": 35,
     "pps_by_distance": {
-     "close": 9.1
+     "close": 9.2
     }
    },
    {
