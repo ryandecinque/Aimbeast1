@@ -1,11 +1,9 @@
 {
- "updated": "2026-10-21 22:16",
- "updated_utc": "2026-10-21T15:16:50Z",
+ "updated": "2026-10-22 00:01",
+ "updated_utc": "2026-10-21T17:01:59Z",
  "today": {
-  "date": "2026-10-21",
-  "progress": {
-   "ZEUS FOCUS": 26
-  }
+  "date": "2026-10-22",
+  "progress": {}
  },
  "plan_start": "2026-10-07",
  "ranks": [
@@ -14,8 +12,8 @@
    "master3": 616.0,
    "official_best": 555.0,
    "best_14d": 476.0,
-   "median_14d": 421,
-   "runs_14d": 37,
+   "median_14d": 427,
+   "runs_14d": 21,
    "steps": [
     0.0,
     168.0,
@@ -41,9 +39,9 @@
    "name": "AIR TRACK SMOOTH V3 150%",
    "master3": 660.0,
    "official_best": 548.0,
-   "best_14d": 537.0,
-   "median_14d": 461,
-   "runs_14d": 37,
+   "best_14d": 526.0,
+   "median_14d": 477,
+   "runs_14d": 21,
    "steps": [
     0.0,
     180.0,
@@ -70,8 +68,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 861.0,
-   "median_14d": 672,
-   "runs_14d": 37,
+   "median_14d": 721,
+   "runs_14d": 21,
    "steps": [
     0.0,
     240.0,
@@ -1049,9 +1047,35 @@
  ],
  "days": [
   {
+   "date": "2026-10-22",
+   "runs": 1,
+   "restarts": 0,
+   "rest_median_s": null,
+   "rest_longest_s": null,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "(single scenario)",
+     "runs": 1,
+     "first": "00:00",
+     "last": "00:00"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "143 FALER TRACK FAR",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "00:00",
+     "best": 412,
+     "median": 412
+    }
+   ]
+  },
+  {
    "date": "2026-10-21",
-   "runs": 26,
-   "restarts": 48,
+   "runs": 28,
+   "restarts": 50,
    "rest_median_s": 43,
    "rest_longest_s": 715,
    "breaks": [
@@ -1066,6 +1090,12 @@
      "before": "ZEUS FOCUS",
      "at": "17:34",
      "minutes": 35.8
+    },
+    {
+     "after": "ZEUS FOCUS",
+     "before": "(single scenario)",
+     "at": "22:13",
+     "minutes": 102.4
     }
    ],
    "playlists": [
@@ -1074,6 +1104,12 @@
      "runs": 26,
      "first": "15:01",
      "last": "22:13"
+    },
+    {
+     "name": "(single scenario)",
+     "runs": 2,
+     "first": "23:57",
+     "last": "23:59"
     }
    ],
    "scenarios": [
@@ -1116,6 +1152,22 @@
      "first": "18:27",
      "best": 545,
      "median": 498
+    },
+    {
+     "name": "143 CLOVER CONTROL",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "23:57",
+     "best": 3339,
+     "median": 3339
+    },
+    {
+     "name": "143 DOMISPHERE",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "23:59",
+     "best": 2565,
+     "median": 2565
     }
    ]
   },
@@ -3574,12 +3626,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 805,
-  "days": 16,
+  "runs": 808,
+  "days": 17,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 315,
+    "runs": 318,
     "pct": 100.0
    },
    {
@@ -3594,8 +3646,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 48,
-    "pct": 95.4
+    "runs": 49,
+    "pct": 96.6
    }
   ]
  },
@@ -4990,6 +5042,37 @@
    }
   ],
   "2026-10-21": [
+   {
+    "scenario": "143 CLOVER CONTROL",
+    "runs": 1,
+    "on_target": 16,
+    "reaction_ms": null,
+    "overshoot_pct": 26,
+    "pps_by_distance": {
+     "far": 6.2
+    }
+   },
+   {
+    "scenario": "143 DOMISPHERE",
+    "runs": 1,
+    "on_target": 23,
+    "reaction_ms": null,
+    "overshoot_pct": 22,
+    "pps_by_distance": {
+     "mid": 8.2,
+     "close": 9.1
+    }
+   },
+   {
+    "scenario": "143 FALER TRACK FAR",
+    "runs": 1,
+    "on_target": 22,
+    "reaction_ms": null,
+    "overshoot_pct": 40,
+    "pps_by_distance": {
+     "far": 6.8
+    }
+   },
    {
     "scenario": "SCX CLOSE STRAFES",
     "runs": 2,
