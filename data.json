@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-21 15:16",
- "updated_utc": "2026-10-21T08:16:50Z",
+ "updated": "2026-10-21 15:21",
+ "updated_utc": "2026-10-21T08:21:49Z",
  "today": {
   "date": "2026-10-21",
   "progress": {
-   "ZEUS FOCUS": 6
+   "ZEUS FOCUS": 10
   }
  },
  "plan_start": "2026-10-07",
@@ -1044,17 +1044,17 @@
  "days": [
   {
    "date": "2026-10-21",
-   "runs": 6,
-   "restarts": 9,
-   "rest_median_s": 90,
+   "runs": 10,
+   "restarts": 11,
+   "rest_median_s": 51,
    "rest_longest_s": 165,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 6,
+     "runs": 10,
      "first": "15:01",
-     "last": "15:13"
+     "last": "15:21"
     }
    ],
    "scenarios": [
@@ -1068,11 +1068,19 @@
     },
     {
      "name": "ZEUS TRACK EVO - FAR",
-     "runs": 4,
+     "runs": 6,
      "routine": "ZEUS FOCUS",
      "first": "15:05",
-     "best": 493,
-     "median": 468
+     "best": 500,
+     "median": 484
+    },
+    {
+     "name": "ZEUS TRACK EVO - CLOSE 0.85X",
+     "runs": 2,
+     "routine": "ZEUS FOCUS",
+     "first": "15:20",
+     "best": 551,
+     "median": 545
     }
    ]
   },
@@ -3531,12 +3539,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 785,
+  "runs": 788,
   "days": 16,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 312,
+    "runs": 313,
     "pct": 100.0
    },
    {
@@ -3546,7 +3554,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 267,
+    "runs": 268,
     "pct": 101.4
    },
    {
@@ -4958,13 +4966,23 @@
     }
    },
    {
-    "scenario": "ZEUS TRACK EVO - FAR",
-    "runs": 4,
-    "on_target": 34,
-    "reaction_ms": 125,
-    "overshoot_pct": 32,
+    "scenario": "ZEUS TRACK EVO - CLOSE 0.85X",
+    "runs": 2,
+    "on_target": 45,
+    "reaction_ms": 100,
+    "overshoot_pct": 34,
     "pps_by_distance": {
-     "far": 7.7
+     "close": 10.6
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - FAR",
+    "runs": 6,
+    "on_target": 35,
+    "reaction_ms": 125,
+    "overshoot_pct": 30,
+    "pps_by_distance": {
+     "far": 8.0
     }
    }
   ]
