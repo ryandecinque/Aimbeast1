@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-22 16:32",
- "updated_utc": "2026-10-22T09:32:23Z",
+ "updated": "2026-10-22 16:37",
+ "updated_utc": "2026-10-22T09:37:01Z",
  "today": {
   "date": "2026-10-22",
   "progress": {}
@@ -1059,9 +1059,9 @@
  "days": [
   {
    "date": "2026-10-22",
-   "runs": 14,
-   "restarts": 41,
-   "rest_median_s": 109,
+   "runs": 16,
+   "restarts": 44,
+   "rest_median_s": 96,
    "rest_longest_s": 432,
    "breaks": [
     {
@@ -1086,9 +1086,9 @@
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 14,
+     "runs": 16,
      "first": "00:00",
-     "last": "16:30"
+     "last": "16:35"
     }
    ],
    "scenarios": [
@@ -1110,19 +1110,19 @@
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 115%",
-     "runs": 4,
+     "runs": 5,
      "routine": "(single scenario)",
      "first": "10:14",
-     "best": 454,
-     "median": 182
+     "best": 478,
+     "median": 365
     },
     {
      "name": "ZEUS TRACK EVO - FAR 115%",
-     "runs": 2,
+     "runs": 3,
      "routine": "(single scenario)",
      "first": "10:16",
-     "best": 324,
-     "median": 162
+     "best": 362,
+     "median": 324
     },
     {
      "name": "VT SNAKE TRACK ADVANCED S5 (PORT)",
@@ -3688,12 +3688,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 821,
+  "runs": 823,
   "days": 17,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 324,
+    "runs": 326,
     "pct": 100.0
    },
    {
@@ -5201,23 +5201,23 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - CLOSE 115",
-    "runs": 3,
-    "on_target": 28,
+    "runs": 4,
+    "on_target": 31,
     "reaction_ms": 150,
-    "overshoot_pct": 47,
+    "overshoot_pct": 45,
     "pps_by_distance": {
      "far": 15.1,
-     "close": 6.8
+     "close": 7.5
     }
    },
    {
     "scenario": "ZEUS TRACK EVO - FAR 115",
-    "runs": 1,
-    "on_target": 25,
-    "reaction_ms": 150,
-    "overshoot_pct": 39,
+    "runs": 2,
+    "on_target": 27,
+    "reaction_ms": 154,
+    "overshoot_pct": 40,
     "pps_by_distance": {
-     "far": 5.3
+     "far": 5.6
     }
    },
    {
