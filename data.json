@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-22 16:21",
- "updated_utc": "2026-10-22T09:21:21Z",
+ "updated": "2026-10-22 16:32",
+ "updated_utc": "2026-10-22T09:32:23Z",
  "today": {
   "date": "2026-10-22",
   "progress": {}
@@ -1059,9 +1059,9 @@
  "days": [
   {
    "date": "2026-10-22",
-   "runs": 12,
-   "restarts": 39,
-   "rest_median_s": 83,
+   "runs": 14,
+   "restarts": 41,
+   "rest_median_s": 109,
    "rest_longest_s": 432,
    "breaks": [
     {
@@ -1086,9 +1086,9 @@
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 12,
+     "runs": 14,
      "first": "00:00",
-     "last": "16:19"
+     "last": "16:30"
     }
    ],
    "scenarios": [
@@ -1118,11 +1118,19 @@
     },
     {
      "name": "ZEUS TRACK EVO - FAR 115%",
-     "runs": 1,
+     "runs": 2,
      "routine": "(single scenario)",
      "first": "10:16",
-     "best": 0,
-     "median": 0
+     "best": 324,
+     "median": 162
+    },
+    {
+     "name": "VT SNAKE TRACK ADVANCED S5 (PORT)",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "16:30",
+     "best": 844,
+     "median": 844
     }
    ]
   },
@@ -3679,7 +3687,32 @@
    ]
   }
  ],
- "rest_effect": null,
+ "rest_effect": {
+  "runs": 821,
+  "days": 17,
+  "groups": [
+   {
+    "label": "First attempt on a scenario",
+    "runs": 324,
+    "pct": 100.0
+   },
+   {
+    "label": "Later attempts, rest under 20 s",
+    "runs": 90,
+    "pct": 99.3
+   },
+   {
+    "label": "Later attempts, rest 20 s to 2 min",
+    "runs": 284,
+    "pct": 101.2
+   },
+   {
+    "label": "First run after a break of 15 min+",
+    "runs": 52,
+    "pct": 95.4
+   }
+  ]
+ },
  "aim": {
   "2026-10-08": [
    {
@@ -5157,6 +5190,16 @@
   ],
   "2026-10-22": [
    {
+    "scenario": "VT SNAKE TRACK ADVANCED S5 PORT",
+    "runs": 1,
+    "on_target": 18,
+    "reaction_ms": null,
+    "overshoot_pct": 44,
+    "pps_by_distance": {
+     "far": 14.2
+    }
+   },
+   {
     "scenario": "ZEUS TRACK EVO - CLOSE 115",
     "runs": 3,
     "on_target": 28,
@@ -5165,6 +5208,16 @@
     "pps_by_distance": {
      "far": 15.1,
      "close": 6.8
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - FAR 115",
+    "runs": 1,
+    "on_target": 25,
+    "reaction_ms": 150,
+    "overshoot_pct": 39,
+    "pps_by_distance": {
+     "far": 5.3
     }
    },
    {
