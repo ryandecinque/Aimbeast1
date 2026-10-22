@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-22 11:31",
- "updated_utc": "2026-10-22T04:31:20Z",
+ "updated": "2026-10-22 14:36",
+ "updated_utc": "2026-10-22T07:36:21Z",
  "today": {
   "date": "2026-10-22",
   "progress": {}
@@ -1059,7 +1059,7 @@
  "days": [
   {
    "date": "2026-10-22",
-   "runs": 9,
+   "runs": 10,
    "restarts": 35,
    "rest_median_s": 96,
    "rest_longest_s": 432,
@@ -1069,14 +1069,20 @@
      "before": "(single scenario)",
      "at": "00:40",
      "minutes": 573.1
+    },
+    {
+     "after": "(single scenario)",
+     "before": "(single scenario)",
+     "at": "10:16",
+     "minutes": 257.1
     }
    ],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 9,
+     "runs": 10,
      "first": "00:00",
-     "last": "10:16"
+     "last": "14:34"
     }
    ],
    "scenarios": [
@@ -1098,7 +1104,7 @@
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 115%",
-     "runs": 1,
+     "runs": 2,
      "routine": "(single scenario)",
      "first": "10:14",
      "best": 0,
