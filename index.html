@@ -87,6 +87,7 @@ ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 
 .nomodel b { color: var(--bad); }
 .moment video { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--rule); background: #161615; display: block; }
 .moment img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--rule); cursor: pointer; background: #161615; }
+h3.minor { margin: 22px 0 8px; font-size: 16px; letter-spacing: .03em; }
 .moment h3 { margin: 0; font: 700 17px var(--display); text-transform: uppercase; letter-spacing: .03em; }
 .moment .score { font-size: 14px; font-variant-numeric: tabular-nums; }
 @media (min-width: 1100px) { body.aopen main { margin-left: 400px; } body.aopen .atab { display: none; } }
@@ -228,7 +229,7 @@ summary { min-height: 44px; align-items: center; }
 
   <section id="plan-sec">
     <h2>The plan</h2>
-    <p class="small">Since Oct 16 the main goal is pushing Zeus Track, the weakest of the six, on the way to Master 3 on all six. About 80% of practice goes to Zeus, and the other 5 ranked scenarios keep a short daily block.</p>
+    <p class="small">The end goal is still Master 3 on all six. Since Oct 16 the main push is Zeus Track, the weakest of the six: about 80% of practice goes to it, and the other five keep a short daily block.</p>
     <div class="card scroll">
       <table>
         <tr><th>Every day</th><th>Playlist</th><th>What</th></tr>
@@ -237,15 +238,49 @@ summary { min-height: 44px; align-items: center; }
         <tr><td>Optional, a few hours later</td><td class="rt">ZEUS SECOND</td><td>3 slow-turn runs, then 8 ranked Zeus (11 runs)</td></tr>
       </table>
     </div>
+
+    <h3 class="minor">What the data says about Zeus (Oct 22)</h3>
     <ul class="sub">
-      <li><span class="rt">ZEUS FOCUS</span> (since Oct 17): built around close range, the part of each Zeus run that separates good runs from bad (8.9 vs 7.7 points a second). <b>Zeus Close</b> is a copy of ranked Zeus (same map, bot and movement) with the bot spawning about 600 units away, in front of the wall where it normally stops, so the whole minute is close range. <b>Zeus Close 0.85X</b> is the same at 85% speed for slow, short corrections. Two slow Zeus Close runs open the session as a warm-up on the real Zeus bot (SCX Close Strafes, a different bot, was dropped on Oct 22), and 8 ranked Zeus close it. <b>Zeus Far</b> (added Oct 18) is the same idea at long range: the wall the bot stops at is moved out, so it stays about 2,400 units away, the far part of a ranked run, which turned out to be where good runs pull ahead most. Thin Fast, Air Easy 4 and Zeus EZ were dropped: they drew more over-aim than ranked Zeus.</li>
-      <li><b>115% versions</b> (added Oct 22): the same Zeus bot with its own time scale at 1.15, so it moves and turns 15% faster but keeps the normal strafe rhythm. Each strafe is a longer, faster stretch to match its speed, which is where good runs pull ahead. Each 115% block comes right before its normal version. <b>When it changes:</b> after 5–10 Zeus Close runs. Still under 35% time on the bot means switch to 0.85X ×10. At 35%+ with fewer long losses means 0.85X ×2 and Zeus Close ×8. Ranked stays at 8 so the Nov 5 test stays clean.</li>
-      <li><span class="rt">OTHERS 1</span>: Air Control Sphere - S 5, Air Track Smooth V3 150% 5. <span class="rt">OTHERS 2</span>: Smooth Thin Track V2 5, Pasu Track XYZ 5. <span class="rt">OTHERS 3</span>: Air Control Sphere - S 5, Pasu Track Evo (RCT) - 0.85X 5. Sphere S comes up twice in the rotation because it's the closest to Master 3.</li>
-      <li><b>How to play the slow-turn block:</b> no hurry and no score-chasing. After each turn, let the bot come to you, then make one short, smooth correction onto its near edge, never through it. It should feel slow and a little behind. On ranked Zeus, one cue: trust the strafe, land short.</li>
-      <li><b>Ranked Zeus: at most 8 per sitting.</b> More Zeus in a day never raised the typical score (days with 1–8 runs: 500; 17+: 490).</li>
-      <li><b>Check around Nov 5:</b> success is ranked Zeus over-aim clearly below 34% (it's been 34–39% every day). If not, the next trial is more ranked Zeus in spaced sittings. The second-sitting runs are logged separately to test that idea now.</li>
-      <li>A 2–3 minute break away from the screen at every scenario switch. Keep whole sessions under about 2 hours.</li>
+      <li><b>Every run was split into parts by what the bot is doing:</b> just turned, catching up, settled in a strafe, walking toward or away, respawning. That covers about 140 recorded ranked Zeus runs plus the Zeus Close and Zeus Far drills.</li>
+      <li><b>The weakest moment is the first 0.15 s after the bot turns</b> (on the bot only 10–15% of that time). But it's reaction time, and good and bad runs are equally weak there, so it barely moves the score.</li>
+      <li><b>What separates good runs from bad is the settled strafe:</b> once caught up, staying on the bot at its speed. In the top quarter of runs that's worth about 68 more points than in the bottom quarter. Catching up in the 0.15–0.3 s after a turn adds another 12.</li>
+      <li><b>When off the bot, it's almost always behind it (more than 9 times in 10), not past it.</b> The aim falls back during the strafe; it doesn't overshoot.</li>
+      <li><b>Ranked Zeus since Zeus Focus started:</b> typical score 489 before Oct 17, 502 since (62 runs). Small, early, and worth confirming.</li>
     </ul>
+
+    <h3 class="minor">The scenarios</h3>
+    <ul class="sub">
+      <li><b>Zeus Close</b> and <b>Zeus Far</b>: copies of ranked Zeus (same map, bot, movement and weapon). Close spawns the bot about 600 units away; Far moves the wall the bot stops at, so it stays about 2,400 away. Each trains one half of a ranked run for the whole minute.</li>
+      <li><b>Zeus Close 0.85X</b>: Zeus Close at 85% game speed, for slow, short corrections. Two runs open the session as a warm-up on the real Zeus bot.</li>
+      <li><b>Zeus Far 115% and Zeus Close 115%</b>: the same Zeus bot with its own time scale at 1.15. In test runs it moved 15% faster (top speed 600 → about 695) and turned 15% quicker (212 → 182 ms), with the same strafe rhythm. So every strafe is a longer, faster stretch of matching its speed, the part that decides runs. Each comes right before its normal version, so normal speed feels slower afterwards.</li>
+      <li><b>Ranked Zeus ×8</b> closes the session, never more than 8 per sitting: more Zeus in a day never raised the typical score.</li>
+    </ul>
+
+    <h3 class="minor">How to play it</h3>
+    <ul class="sub">
+      <li><b>One cue for everything: catch up, then glide.</b> After each turn, get back on fast, then lock onto the bot's speed and keep the hand moving at that one pace until the next turn. No stop-and-go.</li>
+      <li><b>Slow runs (0.85X):</b> no score-chasing. One short, smooth correction onto the bot's near edge.</li>
+      <li>A 2–3 minute break away from the screen at every scenario switch. Whole sessions under about 2 hours.</li>
+    </ul>
+
+    <h3 class="minor">How it's checked</h3>
+    <ul class="sub">
+      <li><b>Weekly:</b> the part-by-part breakdown again. Working means the settled-strafe time on the bot in ranked Zeus climbs from about 63%.</li>
+      <li><b>Around Nov 5:</b> ranked Zeus over-aim on 40+ runs against the Oct 8–15 baseline (36.4%), plus long losses, close-range points per second and the typical score. If nothing moves, the next trial is ranked Zeus in short, spaced sittings.</li>
+    </ul>
+
+    <h3 class="minor">Plan changes so far</h3>
+    <div class="card scroll">
+      <table>
+        <tr><th>Date</th><th>Change</th><th>Why</th></tr>
+        <tr><td>Oct 15</td><td>Ranked Zeus capped at 8 per sitting; a slow-turn block added</td><td>516 ranked runs over 7 weeks never moved the typical score, and runs per day made no difference</td></tr>
+        <tr><td>Oct 15–16</td><td>Main focus becomes Zeus Track (about 80% of practice); the other five rotate in a short daily block</td><td>Zeus is the weakest of the six and had been flat for 7 weeks</td></tr>
+        <tr><td>Oct 17</td><td>ZEUS FOCUS built around Zeus Close (a close-range-only copy of ranked Zeus)</td><td>Close range looked like what decided runs</td></tr>
+        <tr><td>Oct 18</td><td>Zeus Far added</td><td>With all 96 recorded runs, far turned out to matter as much as close</td></tr>
+        <tr><td>Oct 22</td><td>SCX Close Strafes replaced by a Zeus Close 0.85X warm-up</td><td>SCX is a different bot, and a warm-up doesn't carry from one scenario to the next</td></tr>
+        <tr><td>Oct 22</td><td>Zeus Far 115% and Zeus Close 115% added before their normal versions</td><td>The part-by-part breakdown showed the settled strafe decides runs; faster bots make that stretch harder</td></tr>
+      </table>
+    </div>
   </section>
 
   <section>
@@ -256,7 +291,7 @@ summary { min-height: 44px; align-items: center; }
       <li><b>Missed a day? Pick up where you left off.</b> The OTHERS rotation follows playlists, not the calendar: the next one is always the one after the last finished, and a half-finished one comes back first.</li>
       <li><b>The slowest scenario decides the finish.</b> All six need to reach Master 3, so extra time goes to the ones furthest away.</li>
       <li><b>Zeus Track gets its own practice.</b> It sat at the same weekly median for five weeks despite hundreds of runs, so its weakest parts are trained separately. The aim recorder picks the drills, and the playlist changes as the data does.</li>
-      <li><b>Zeus first, by choice.</b> Ryan made Zeus Track the top priority on Oct 15. The extra Zeus time goes to the measured weak spot (over-aim after turns) through drills and slow turns, not to more ranked Zeus, which never moved the score. Full reasoning: two debates on Oct 15, with the Aim Knowledge transcripts as sources.</li>
+      <li><b>Zeus first, by choice.</b> Ryan made Zeus Track the top priority on Oct 15. The extra Zeus time goes to drills built from the ranked Zeus files and aimed at what the recordings show decides runs, not to more ranked Zeus, which never moved the score. Full reasoning: two debates on Oct 15, with the Aim Knowledge transcripts as sources.</li>
       <li><b>Ranked runs come first.</b> Extra practice happens later in the day, so attempts at new ranks are always fresh.</li>
       <li><b>Honest timeline.</b> On current form every scenario is 5–7 ranks short of Master 3. That's months, not weeks, so progress is judged by the weekly trend.</li>
     </ul>
