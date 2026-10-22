@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-22 17:57",
- "updated_utc": "2026-10-22T10:57:04Z",
+ "updated": "2026-10-22 18:26",
+ "updated_utc": "2026-10-22T11:26:56Z",
  "today": {
   "date": "2026-10-22",
   "progress": {}
@@ -1059,7 +1059,7 @@
  "days": [
   {
    "date": "2026-10-22",
-   "runs": 22,
+   "runs": 23,
    "restarts": 54,
    "rest_median_s": 103,
    "rest_longest_s": 432,
@@ -1087,14 +1087,20 @@
      "before": "(single scenario)",
      "at": "16:57",
      "minutes": 53.7
+    },
+    {
+     "after": "(single scenario)",
+     "before": "(single scenario)",
+     "at": "17:51",
+     "minutes": 33.1
     }
    ],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 22,
+     "runs": 23,
      "first": "00:00",
-     "last": "17:51"
+     "last": "18:26"
     }
    ],
    "scenarios": [
@@ -1132,11 +1138,11 @@
     },
     {
      "name": "VT SNAKE TRACK ADVANCED S5 (PORT)",
-     "runs": 2,
+     "runs": 3,
      "routine": "(single scenario)",
      "first": "16:30",
-     "best": 943,
-     "median": 894
+     "best": 1040,
+     "median": 943
     }
    ]
   },
@@ -3694,7 +3700,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 829,
+  "runs": 830,
   "days": 17,
   "groups": [
    {
@@ -3714,8 +3720,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 53,
-    "pct": 94.2
+    "runs": 54,
+    "pct": 95.4
    }
   ]
  },
@@ -5197,12 +5203,13 @@
   "2026-10-22": [
    {
     "scenario": "VT SNAKE TRACK ADVANCED S5 PORT",
-    "runs": 2,
+    "runs": 3,
     "on_target": 20,
     "reaction_ms": null,
     "overshoot_pct": 48,
     "pps_by_distance": {
-     "far": 15.0
+     "far": 15.8,
+     "mid": 16.7
     }
    },
    {
