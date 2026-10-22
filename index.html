@@ -239,7 +239,7 @@ summary { min-height: 44px; align-items: center; }
     <div class="card scroll">
       <table>
         <tr><th>Every day</th><th>Playlist</th><th>What</th></tr>
-        <tr><td>1</td><td class="rt">ZEUS FOCUS</td><td>Zeus Close 0.85X 2 (warm-up), Zeus Far 115% 3, Zeus Far 3, Zeus Close 0.85X 4, Zeus Close 115% 3, Zeus Close 3, then 8 ranked Zeus (26 runs)</td></tr>
+        <tr><td>1</td><td class="rt">ZEUS FOCUS</td><td>Zeus Far 115% 4, Zeus Close 115% 4, then 6 ranked Zeus (14 runs)</td></tr>
         <tr><td>2</td><td class="rt">OTHERS 1 / 2 / 3</td><td>Two of the other five, 5 runs each, rotating day to day (10 runs)</td></tr>
         <tr><td>Optional, a few hours later</td><td class="rt">ZEUS SECOND</td><td>3 slow-turn runs, then 8 ranked Zeus (11 runs)</td></tr>
       </table>
@@ -257,16 +257,14 @@ summary { min-height: 44px; align-items: center; }
     <h3 class="minor">The scenarios</h3>
     <ul class="sub">
       <li><b>Zeus Close</b> and <b>Zeus Far</b>: copies of ranked Zeus (same map, bot, movement and weapon). Close spawns the bot about 600 units away; Far moves the wall the bot stops at, so it stays about 2,400 away. Each trains one half of a ranked run for the whole minute.</li>
-      <li><b>Zeus Close 0.85X</b>: Zeus Close at 85% game speed, for slow, short corrections. Two runs open the session as a warm-up on the real Zeus bot.</li>
-      <li><b>Zeus Far 115% and Zeus Close 115%</b>: the same Zeus bot with its own time scale at 1.15. In test runs it moved 15% faster (top speed 600 → about 695) and turned 15% quicker (212 → 182 ms), with the same strafe rhythm. So every strafe is a longer, faster stretch of matching its speed, the part that decides runs. Each comes right before its normal version, so normal speed feels slower afterwards.</li>
-      <li><b>Ranked Zeus ×8</b> closes the session, never more than 8 per sitting: more Zeus in a day never raised the typical score.</li>
+            <li><b>Zeus Far 115% and Zeus Close 115%</b>: the same Zeus bot with its own time scale at 1.15. In test runs it moved 15% faster (top speed 600 → about 695) and turned 15% quicker (212 → 182 ms), with the same strafe rhythm. So every strafe is a longer, faster stretch of matching its speed, the part that decides runs. Ranked Zeus at normal speed comes straight after, so it feels slower.</li>
+      <li><b>Ranked Zeus ×6</b> closes the session.</li>
     </ul>
 
     <h3 class="minor">How to play it</h3>
     <ul class="sub">
       <li><b>One cue for everything: catch up, then glide.</b> After each turn, get back on fast, then lock onto the bot's speed and keep the hand moving at that one pace until the next turn. No stop-and-go.</li>
-      <li><b>Slow runs (0.85X):</b> no score-chasing. One short, smooth correction onto the bot's near edge.</li>
-      <li>A 2–3 minute break away from the screen at every scenario switch. Whole sessions under about 2 hours.</li>
+            <li>A 2–3 minute break away from the screen at every scenario switch. Whole sessions under about 2 hours.</li>
     </ul>
 
     <h3 class="minor">How it's checked</h3>
@@ -285,6 +283,7 @@ summary { min-height: 44px; align-items: center; }
         <tr><td>Oct 18</td><td>Zeus Far added</td><td>With all 96 recorded runs, far turned out to matter as much as close</td></tr>
         <tr><td>Oct 22</td><td>SCX Close Strafes replaced by a Zeus Close 0.85X warm-up</td><td>SCX is a different bot, and a warm-up doesn't carry from one scenario to the next</td></tr>
         <tr><td>Oct 22</td><td>Zeus Far 115% and Zeus Close 115% added before their normal versions</td><td>The part-by-part breakdown showed the settled strafe decides runs; faster bots make that stretch harder</td></tr>
+        <tr><td>Oct 22</td><td>Ryan's own ZEUS FOCUS: Zeus Far 115% 4, Zeus Close 115% 4, ranked Zeus 6 (14 runs). Ryan plans ZEUS FOCUS himself from now on</td><td>Ryan's call</td></tr>
       </table>
     </div>
   </section>
@@ -605,7 +604,7 @@ fetch("data.json?" + Date.now()).then(r => r.json()).then(d => {
   const ago = isNaN(mins) ? d.updated + " (Cambodia time)" : mins < 1 ? "just now" : mins < 60 ? mins + " min ago" : mins < 1440 ? Math.round(mins / 60) + " h ago" : Math.round(mins / 1440) + " days ago";
   document.getElementById("updated").textContent = "Updated " + ago + (mins > 1440 ? " · may be out of date" : "");
   const prog = Object.entries(d.today.progress || {});
-  document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 16 : k === "ZEUS WEAKNESS" ? 15 : k === "RANK INT B" ? 32 : k === "RANK INT B2" ? 24 : k === "ZEUS DAILY" ? 29 : k === "ZEUS FOCUS" ? 26 : k === "ZEUS SECOND" ? 11 : /^OTHERS /.test(k) ? 10 : 26)} of ${k === "ZEUS BUILDER" ? 16 : k === "ZEUS WEAKNESS" ? 15 : k === "RANK INT B" ? 32 : k === "RANK INT B2" ? 24 : k === "ZEUS DAILY" ? 29 : k === "ZEUS FOCUS" ? 26 : k === "ZEUS SECOND" ? 11 : /^OTHERS /.test(k) ? 10 : 26} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
+  document.getElementById("today").textContent = prog.length ? "Today: " + prog.map(([k, v]) => `${plain(k)}, ${Math.min(v, k === "ZEUS BUILDER" ? 16 : k === "ZEUS WEAKNESS" ? 15 : k === "RANK INT B" ? 32 : k === "RANK INT B2" ? 24 : k === "ZEUS DAILY" ? 29 : k === "ZEUS FOCUS" ? 14 : k === "ZEUS SECOND" ? 11 : /^OTHERS /.test(k) ? 10 : 26)} of ${k === "ZEUS BUILDER" ? 16 : k === "ZEUS WEAKNESS" ? 15 : k === "RANK INT B" ? 32 : k === "RANK INT B2" ? 24 : k === "ZEUS DAILY" ? 29 : k === "ZEUS FOCUS" ? 14 : k === "ZEUS SECOND" ? 11 : /^OTHERS /.test(k) ? 10 : 26} runs done`).join(" · ") + " · " : "Today: no runs yet · ";
   TODAY = d.today.date;
   PBS = d.pbs || PBS; (PBS.events || []).forEach(e => PBDAYS[e.date] = 1);
   pbBanner(PBS, d.days);
