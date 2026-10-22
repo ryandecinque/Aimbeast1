@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-22 10:16",
- "updated_utc": "2026-10-22T03:16:22Z",
+ "updated": "2026-10-22 11:31",
+ "updated_utc": "2026-10-22T04:31:20Z",
  "today": {
   "date": "2026-10-22",
   "progress": {}
@@ -906,6 +906,11 @@
  ],
  "journal": [
   {
+   "date": "2026-10-22",
+   "author": "Claude",
+   "text": "Plan update: what decides Zeus runs, and two faster drills\nEvery ranked Zeus run (about 140) plus the Zeus Close and Zeus Far drills was split into parts by what the bot is doing: just turned, catching up, settled in a strafe, walking toward or away, respawning.\nWhat it showed: the first 0.15 s after the bot turns is the weakest moment (on the bot only 10–15% of the time), but it's reaction time and good and bad runs are equally weak there. What separates good runs from bad is the settled strafe: once caught up, staying on the bot at its speed. That's about 68 points between the top and bottom quarter of runs, with catching up adding 12. When off the bot, the aim is behind it more than 9 times in 10, not past it.\nChanges: SCX Close Strafes is out of ZEUS FOCUS (a different bot; a warm-up doesn't carry over) and two Zeus Close 0.85X runs open the session instead. New Zeus Far 115% and Zeus Close 115% use the Zeus bot with its own time scale at 1.15: in test runs it moved 15% faster (600 to about 695) and turned 15% quicker (212 to 182 ms), with the same strafe rhythm. Three runs of each come right before their normal versions. Ranked stays at 8.\nSo far: ranked Zeus typical score 489 before Oct 17, 502 since (62 runs). Small and early.\nOne thing to try: catch up, then glide. After each turn get back on, then lock onto the bot's speed and keep the hand moving at that one pace until the next turn."
+  },
+  {
    "date": "2026-10-20",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS\nAbove your usual on two of five scenarios, the rest about level. Zeus Track Evo - Far stood out: a typical 442, against 427 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim, far-away scoring, mouse movement and rests were all close to usual or better.\nOne thing to try: extra mouse movement on top of the bot's path costs points. Move less overall, only as far as the bot goes. It should feel calmer than usual, like you're under-doing it."
@@ -1054,7 +1059,7 @@
  "days": [
   {
    "date": "2026-10-22",
-   "runs": 8,
+   "runs": 9,
    "restarts": 35,
    "rest_median_s": 96,
    "rest_longest_s": 432,
@@ -1069,9 +1074,9 @@
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 8,
+     "runs": 9,
      "first": "00:00",
-     "last": "10:14"
+     "last": "10:16"
     }
    ],
    "scenarios": [
@@ -1096,6 +1101,14 @@
      "runs": 1,
      "routine": "(single scenario)",
      "first": "10:14",
+     "best": 0,
+     "median": 0
+    },
+    {
+     "name": "ZEUS TRACK EVO - FAR 115%",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "10:16",
      "best": 0,
      "median": 0
     }
