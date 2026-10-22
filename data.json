@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-22 14:36",
- "updated_utc": "2026-10-22T07:36:21Z",
+ "updated": "2026-10-22 16:21",
+ "updated_utc": "2026-10-22T09:21:21Z",
  "today": {
   "date": "2026-10-22",
   "progress": {}
@@ -1059,9 +1059,9 @@
  "days": [
   {
    "date": "2026-10-22",
-   "runs": 10,
-   "restarts": 35,
-   "rest_median_s": 96,
+   "runs": 12,
+   "restarts": 39,
+   "rest_median_s": 83,
    "rest_longest_s": 432,
    "breaks": [
     {
@@ -1075,14 +1075,20 @@
      "before": "(single scenario)",
      "at": "10:16",
      "minutes": 257.1
+    },
+    {
+     "after": "(single scenario)",
+     "before": "(single scenario)",
+     "at": "14:34",
+     "minutes": 91.3
     }
    ],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 10,
+     "runs": 12,
      "first": "00:00",
-     "last": "14:34"
+     "last": "16:19"
     }
    ],
    "scenarios": [
@@ -1104,11 +1110,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 115%",
-     "runs": 2,
+     "runs": 4,
      "routine": "(single scenario)",
      "first": "10:14",
-     "best": 0,
-     "median": 0
+     "best": 454,
+     "median": 182
     },
     {
      "name": "ZEUS TRACK EVO - FAR 115%",
@@ -5150,6 +5156,17 @@
    }
   ],
   "2026-10-22": [
+   {
+    "scenario": "ZEUS TRACK EVO - CLOSE 115",
+    "runs": 3,
+    "on_target": 28,
+    "reaction_ms": 150,
+    "overshoot_pct": 47,
+    "pps_by_distance": {
+     "far": 15.1,
+     "close": 6.8
+    }
+   },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
     "runs": 6,
