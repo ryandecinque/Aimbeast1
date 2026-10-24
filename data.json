@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-24 13:52",
- "updated_utc": "2026-10-24T06:52:07Z",
+ "updated": "2026-10-24 13:57",
+ "updated_utc": "2026-10-24T06:57:30Z",
  "today": {
   "date": "2026-10-24",
   "progress": {
-   "ZEUS FOCUS": 9
+   "ZEUS FOCUS": 10
   }
  },
  "plan_start": "2026-10-07",
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 570.0,
    "median_14d": 498,
-   "runs_14d": 141,
+   "runs_14d": 142,
    "steps": [
     0.0,
     198.0,
@@ -905,14 +905,19 @@
     },
     {
      "date": "2026-10-24",
-     "median": 503,
+     "median": 504,
      "best": 508,
-     "runs": 3
+     "runs": 4
     }
    ]
   }
  ],
  "journal": [
+  {
+   "date": "2026-10-24",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS\nAbove your usual on one of three scenarios, below on one. Zeus Track Evo - Close 115% stood out: a typical 438, against 408 over the last 14 days.\nThe far-away part of Zeus Track Evo - Far 115% was the weak spot: 5.3 points a second, under your last 14 days.\nOne thing to try: the far part is where small moves matter most. Anchor your arm and follow with the wrist only, in small motions. It should feel like barely moving."
+  },
   {
    "date": "2026-10-22",
    "author": "Claude",
@@ -987,6 +992,11 @@
    "date": "2026-10-18",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS, third play of the day\nA typical play: scores matched your usual. SCX Close Strafes sat right on your usual: a typical 616, against 616 over the last 14 days.\nRests between runs stretched to about 153 seconds, longer than your last 14 days.\nOne thing to try: long gaps between runs let your hand cool down. Keep rests to a minute or two so you stay warm. Each run should feel like it carries on from the last."
+  },
+  {
+   "date": "2026-10-18",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, fourth play of the day\nNot enough earlier runs of these scenarios in the last 14 days to compare scores.\nNothing slipped clearly against your last 14 days: rests were all close to usual or better.\nOne thing to try: long gaps between runs let your hand cool down. Keep rests to a minute or two so you stay warm. Each run should feel like it carries on from the last."
   },
   {
    "date": "2026-10-17",
@@ -1122,17 +1132,17 @@
  "days": [
   {
    "date": "2026-10-24",
-   "runs": 9,
-   "restarts": 19,
+   "runs": 10,
+   "restarts": 21,
    "rest_median_s": 67,
    "rest_longest_s": 195,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 9,
+     "runs": 10,
      "first": "13:23",
-     "last": "13:47"
+     "last": "13:53"
     }
    ],
    "scenarios": [
@@ -1154,11 +1164,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 3,
+     "runs": 4,
      "routine": "ZEUS FOCUS",
      "first": "13:38",
      "best": 508,
-     "median": 503
+     "median": 504
     }
    ]
   },
@@ -3805,7 +3815,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 842,
+  "runs": 843,
   "days": 18,
   "groups": [
    {
@@ -5375,13 +5385,13 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 3,
-    "on_target": 38,
+    "runs": 4,
+    "on_target": 37,
     "reaction_ms": 133,
     "overshoot_pct": 34,
     "pps_by_distance": {
-     "far": 7.1,
-     "mid": 8.6,
+     "far": 7.2,
+     "mid": 9.1,
      "close": 8.4
     }
    }
