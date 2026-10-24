@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-25 02:12",
- "updated_utc": "2026-10-24T19:12:06Z",
+ "updated": "2026-10-25 02:17",
+ "updated_utc": "2026-10-24T19:17:19Z",
  "today": {
   "date": "2026-10-25",
   "progress": {
-   "ZEUS FOCUS": 15
+   "ZEUS FOCUS": 17
   }
  },
  "plan_start": "2026-10-07",
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 570.0,
    "median_14d": 499,
-   "runs_14d": 126,
+   "runs_14d": 128,
    "steps": [
     0.0,
     198.0,
@@ -911,9 +911,9 @@
     },
     {
      "date": "2026-10-25",
-     "median": 502,
+     "median": 501,
      "best": 506,
-     "runs": 3
+     "runs": 5
     }
    ]
   }
@@ -1143,8 +1143,8 @@
  "days": [
   {
    "date": "2026-10-25",
-   "runs": 15,
-   "restarts": 24,
+   "runs": 17,
+   "restarts": 32,
    "rest_median_s": 46,
    "rest_longest_s": 420,
    "breaks": [
@@ -1158,9 +1158,9 @@
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 15,
+     "runs": 17,
      "first": "01:15",
-     "last": "02:07"
+     "last": "02:16"
     }
    ],
    "scenarios": [
@@ -1182,11 +1182,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 3,
+     "runs": 5,
      "routine": "ZEUS FOCUS",
      "first": "01:26",
      "best": 506,
-     "median": 502
+     "median": 501
     }
    ]
   },
@@ -3882,12 +3882,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 859,
+  "runs": 860,
   "days": 19,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 337,
+    "runs": 338,
     "pct": 100.0
    },
    {
@@ -5486,12 +5486,12 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 3,
-    "on_target": 38,
+    "runs": 5,
+    "on_target": 37,
     "reaction_ms": 133,
-    "overshoot_pct": 38,
+    "overshoot_pct": 37,
     "pps_by_distance": {
-     "far": 7.3,
+     "far": 7.5,
      "mid": 8.5,
      "close": 8.7
     }
@@ -6114,7 +6114,7 @@
   "2026-10-25": [
    {
     "scenario": "Zeus Track Evo - Noblink",
-    "score": 506,
+    "score": 508,
     "time": "01:29",
     "gif": "best-zeus-2026-10-25",
     "video": true,
@@ -6123,10 +6123,10 @@
     "overshoot_pct": 38,
     "best_14d": 570,
     "master3": 726,
-    "note": "Best of 3 recorded today (median 502). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 5 recorded today (median 501). The clip is its 8 seconds with the most hits.",
     "model": {
      "file": "model-zeus-2026-10-25",
-     "label": "Model: 609"
+     "label": "Model: 611"
     }
    }
   ]
