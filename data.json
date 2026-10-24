@@ -1,9 +1,11 @@
 {
- "updated": "2026-10-22 18:46",
- "updated_utc": "2026-10-22T11:46:59Z",
+ "updated": "2026-10-24 13:27",
+ "updated_utc": "2026-10-24T06:27:34Z",
  "today": {
-  "date": "2026-10-22",
-  "progress": {}
+  "date": "2026-10-24",
+  "progress": {
+   "ZEUS FOCUS": 3
+  }
  },
  "plan_start": "2026-10-07",
  "ranks": [
@@ -12,8 +14,8 @@
    "master3": 616.0,
    "official_best": 555.0,
    "best_14d": 476.0,
-   "median_14d": 427,
-   "runs_14d": 21,
+   "median_14d": 424,
+   "runs_14d": 13,
    "steps": [
     0.0,
     168.0,
@@ -39,9 +41,9 @@
    "name": "AIR TRACK SMOOTH V3 150%",
    "master3": 660.0,
    "official_best": 548.0,
-   "best_14d": 526.0,
-   "median_14d": 477,
-   "runs_14d": 21,
+   "best_14d": 497.0,
+   "median_14d": 461,
+   "runs_14d": 13,
    "steps": [
     0.0,
     180.0,
@@ -68,8 +70,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 861.0,
-   "median_14d": 721,
-   "runs_14d": 21,
+   "median_14d": 672,
+   "runs_14d": 13,
    "steps": [
     0.0,
     240.0,
@@ -96,8 +98,8 @@
    "master3": 506.0,
    "official_best": 398.0,
    "best_14d": 385.0,
-   "median_14d": 316,
-   "runs_14d": 50,
+   "median_14d": 318,
+   "runs_14d": 42,
    "steps": [
     0.0,
     138.0,
@@ -124,8 +126,8 @@
    "master3": 660.0,
    "official_best": 580.0,
    "best_14d": 532.0,
-   "median_14d": 453,
-   "runs_14d": 46,
+   "median_14d": 446,
+   "runs_14d": 37,
    "steps": [
     0.0,
     180.0,
@@ -153,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 570.0,
    "median_14d": 498,
-   "runs_14d": 161,
+   "runs_14d": 138,
    "steps": [
     0.0,
     198.0,
@@ -911,9 +913,39 @@
    "text": "Plan update: what decides Zeus runs, and two faster drills\nEvery ranked Zeus run (about 140) plus the Zeus Close and Zeus Far drills was split into parts by what the bot is doing: just turned, catching up, settled in a strafe, walking toward or away, respawning.\nWhat it showed: the first 0.15 s after the bot turns is the weakest moment (on the bot only 10–15% of the time), but it's reaction time and good and bad runs are equally weak there. What separates good runs from bad is the settled strafe: once caught up, staying on the bot at its speed. That's about 68 points between the top and bottom quarter of runs, with catching up adding 12. When off the bot, the aim is behind it more than 9 times in 10, not past it.\nChanges: SCX Close Strafes is out of ZEUS FOCUS (a different bot; a warm-up doesn't carry over) and two Zeus Close 0.85X runs open the session instead. New Zeus Far 115% and Zeus Close 115% use the Zeus bot with its own time scale at 1.15: in test runs it moved 15% faster (600 to about 695) and turned 15% quicker (212 to 182 ms), with the same strafe rhythm. Three runs of each come right before their normal versions. Ranked stays at 8.\nSo far: ranked Zeus typical score 489 before Oct 17, 502 since (62 runs). Small and early.\nOne thing to try: catch up, then glide. After each turn get back on, then lock onto the bot's speed and keep the hand moving at that one pace until the next turn."
   },
   {
+   "date": "2026-10-21",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS\nBest moment: Zeus Track Evo - Far at 500, your best since the score log started. Above your usual on two of three scenarios, below on one.\nZeus Track Evo - Close 0.85X had more over-aim than your usual 29%: 34% of corrections went past the bot.\nOne thing to try: after each turn, the correction is landing past the bot. Use a smaller input from the wrist and fingers and aim to stop on the bot's near side. It should feel quiet, almost too small."
+  },
+  {
+   "date": "2026-10-21",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, second play of the day\nAbove your usual on one of three scenarios, below on one. Zeus Track Evo - Close 0.85X was the weak spot, a typical 540 against your 14-day typical of 564.\nZeus had more over-aim than your last 14 days: 42% of corrections went past the bot.\nOne thing to try: too much arm in each correction carries the crosshair past the bot. Correct with wrist and fingers only, and smaller than feels natural. It should feel calm and slightly behind, not like a swing."
+  },
+  {
    "date": "2026-10-20",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS\nAbove your usual on two of five scenarios, the rest about level. Zeus Track Evo - Far stood out: a typical 442, against 427 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim, far-away scoring, mouse movement and rests were all close to usual or better.\nOne thing to try: extra mouse movement on top of the bot's path costs points. Move less overall, only as far as the bot goes. It should feel calmer than usual, like you're under-doing it."
+  },
+  {
+   "date": "2026-10-20",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, second play of the day\nA typical play: scores matched your usual. Zeus sat right on your usual: a typical 505, against 497 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim, far-away scoring, mouse movement and rests were all close to usual or better.\nOne thing to try: your aim is moving more than the bot does, and every extra move needs a fix later. Reduce your overall input: follow the bot's path and add nothing on top. It should feel lazy and smooth."
+  },
+  {
+   "date": "2026-10-20",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, third play of the day\nEvery scenario beat your usual. Clearest gain: SCX Close Strafes, a typical 696 against 624 over the last 14 days.\nOne thing to try: extra mouse movement on top of the bot's path costs points. Move less overall, only as far as the bot goes. It should feel calmer than usual, like you're under-doing it."
+  },
+  {
+   "date": "2026-10-20",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, fourth play of the day\nZeus Track Evo - Far reached 493, your best since the score log started. Above your usual on two of three scenarios, the rest about level.\nNothing slipped clearly against your last 14 days: over-aim, far-away scoring, mouse movement and rests were all close to usual or better.\nOne thing to try: rests this short don't give your hand time to reset. Take about a minute between runs: let go of the mouse and loosen your hand, then start. The next run should feel fresh, not rushed."
+  },
+  {
+   "date": "2026-10-20",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, 5th play of the day\nA typical play: scores matched your usual. Zeus Track Evo - Close sat right on your usual: a typical 554, against 544 over the last 14 days.\nOne thing to try: the long pauses cost your warm-up. Start the next run within a minute or two. It should feel like one steady block, not a series of fresh starts."
   },
   {
    "date": "2026-10-19",
@@ -921,9 +953,34 @@
    "text": "Playlist: ZEUS FOCUS\nBest moment: Zeus Track Evo - Close at 620, your best since the score log started. Above your usual on three of five scenarios, the rest about level.\nOne thing to try: long gaps between runs let your hand cool down. Keep rests to a minute or two so you stay warm. Each run should feel like it carries on from the last."
   },
   {
+   "date": "2026-10-19",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, second play of the day\nZeus Track Evo - Close reached 620, your best since the score log started. Above your usual on one of three scenarios, the rest about level.\nNothing slipped clearly against your last 14 days: over-aim, far-away scoring, mouse movement and rests were all close to usual or better.\nOne thing to try: after each turn, the correction is landing past the bot. Use a smaller input from the wrist and fingers and aim to stop on the bot's near side. It should feel quiet, almost too small."
+  },
+  {
+   "date": "2026-10-19",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, third play of the day\nZeus Track Evo - Close 0.85X hit 598, your best since the score log started. All of it was above your usual.\nSCX Close Strafes had more over-aim than your usual 34%: 42% of corrections went past the bot.\nOne thing to try: too much arm in each correction carries the crosshair past the bot. Correct with wrist and fingers only, and smaller than feels natural. It should feel calm and slightly behind, not like a swing."
+  },
+  {
+   "date": "2026-10-19",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, fourth play of the day\nAbove your usual on two of three scenarios, the rest about level. Zeus stood out: a typical 516, against 490 over the last 14 days.\nYour rests between runs ran long, about 130 seconds, longer than your last 14 days.\nOne thing to try: the long pauses cost your warm-up. Start the next run within a minute or two. It should feel like one steady block, not a series of fresh starts."
+  },
+  {
    "date": "2026-10-18",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS\nAbove your usual on one of two scenarios, the rest about level. Zeus led the way, a typical 506 against your 14-day typical of 488.\nNothing slipped clearly against your last 14 days: over-aim, far-away scoring, mouse movement and rests were all close to usual or better.\nOne thing to try: the long pauses cost your warm-up. Start the next run within a minute or two. It should feel like one steady block, not a series of fresh starts."
+  },
+  {
+   "date": "2026-10-18",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, second play of the day\nAbove your usual on every scenario. Zeus stood out: a typical 506, against 488 over the last 14 days.\nOne thing to try: the long pauses cost your warm-up. Start the next run within a minute or two. It should feel like one steady block, not a series of fresh starts."
+  },
+  {
+   "date": "2026-10-18",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, third play of the day\nA typical play: scores matched your usual. SCX Close Strafes sat right on your usual: a typical 616, against 616 over the last 14 days.\nRests between runs stretched to about 153 seconds, longer than your last 14 days.\nOne thing to try: long gaps between runs let your hand cool down. Keep rests to a minute or two so you stay warm. Each run should feel like it carries on from the last."
   },
   {
    "date": "2026-10-17",
@@ -1058,9 +1115,35 @@
  ],
  "days": [
   {
+   "date": "2026-10-24",
+   "runs": 3,
+   "restarts": 3,
+   "rest_median_s": 38,
+   "rest_longest_s": 43,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "ZEUS FOCUS",
+     "runs": 3,
+     "first": "13:23",
+     "last": "13:27"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "ZEUS TRACK EVO - FAR 115%",
+     "runs": 3,
+     "routine": "ZEUS FOCUS",
+     "first": "13:23",
+     "best": 346,
+     "median": 323
+    }
+   ]
+  },
+  {
    "date": "2026-10-22",
    "runs": 26,
-   "restarts": 56,
+   "restarts": 57,
    "rest_median_s": 114,
    "rest_longest_s": 432,
    "breaks": [
@@ -3700,12 +3783,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 832,
-  "days": 17,
+  "runs": 835,
+  "days": 18,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 329,
+    "runs": 330,
     "pct": 100.0
    },
    {
@@ -3715,13 +3798,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 286,
-    "pct": 101.2
+    "runs": 287,
+    "pct": 101.1
    },
    {
     "label": "First run after a break of 15 min+",
     "runs": 54,
-    "pct": 94.1
+    "pct": 93.9
    }
   ]
  },
@@ -5244,6 +5327,18 @@
      "far": 7.5,
      "mid": 9.9,
      "close": 8.2
+    }
+   }
+  ],
+  "2026-10-24": [
+   {
+    "scenario": "ZEUS TRACK EVO - FAR 115",
+    "runs": 3,
+    "on_target": 25,
+    "reaction_ms": 138,
+    "overshoot_pct": 39,
+    "pps_by_distance": {
+     "far": 5.3
     }
    }
   ]
