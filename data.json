@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-25 01:27",
- "updated_utc": "2026-10-24T18:27:01Z",
+ "updated": "2026-10-25 01:32",
+ "updated_utc": "2026-10-24T18:32:07Z",
  "today": {
   "date": "2026-10-25",
   "progress": {
-   "ZEUS FOCUS": 7
+   "ZEUS FOCUS": 9
   }
  },
  "plan_start": "2026-10-07",
@@ -154,8 +154,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 570.0,
-   "median_14d": 498,
-   "runs_14d": 124,
+   "median_14d": 499,
+   "runs_14d": 126,
    "steps": [
     0.0,
     198.0,
@@ -911,14 +911,19 @@
     },
     {
      "date": "2026-10-25",
-     "median": 501,
-     "best": 501,
-     "runs": 1
+     "median": 502,
+     "best": 506,
+     "runs": 3
     }
    ]
   }
  ],
  "journal": [
+  {
+   "date": "2026-10-25",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS\nAbove your usual on two of three scenarios, the rest about level. Zeus Track Evo - Far 115% stood out: a typical 373, against 335 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim, far-away scoring, mouse movement and rests were all close to usual or better.\nOne thing to try: rests this short don't give your hand time to reset. Take about a minute between runs: let go of the mouse and loosen your hand, then start. The next run should feel fresh, not rushed."
+  },
   {
    "date": "2026-10-24",
    "author": "AimJournal",
@@ -1138,17 +1143,17 @@
  "days": [
   {
    "date": "2026-10-25",
-   "runs": 7,
-   "restarts": 9,
-   "rest_median_s": 40,
+   "runs": 9,
+   "restarts": 14,
+   "rest_median_s": 42,
    "rest_longest_s": 67,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 7,
+     "runs": 9,
      "first": "01:15",
-     "last": "01:26"
+     "last": "01:30"
     }
    ],
    "scenarios": [
@@ -1170,11 +1175,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 1,
+     "runs": 3,
      "routine": "ZEUS FOCUS",
      "first": "01:26",
-     "best": 501,
-     "median": 501
+     "best": 506,
+     "median": 502
     }
    ]
   },
@@ -3870,12 +3875,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 850,
+  "runs": 853,
   "days": 19,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 334,
+    "runs": 335,
     "pct": 100.0
    },
    {
@@ -3885,8 +3890,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 294,
-    "pct": 101.2
+    "runs": 296,
+    "pct": 101.0
    },
    {
     "label": "First run after a break of 15 min+",
@@ -5474,13 +5479,13 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 1,
+    "runs": 3,
     "on_target": 38,
     "reaction_ms": 133,
-    "overshoot_pct": 39,
+    "overshoot_pct": 38,
     "pps_by_distance": {
-     "far": 6.9,
-     "mid": 8.7,
+     "far": 7.3,
+     "mid": 8.5,
      "close": 8.7
     }
    }
@@ -6102,19 +6107,19 @@
   "2026-10-25": [
    {
     "scenario": "Zeus Track Evo - Noblink",
-    "score": 501,
-    "time": "01:25",
+    "score": 506,
+    "time": "01:29",
     "gif": "best-zeus-2026-10-25",
     "video": true,
-    "on_target": 38,
-    "reaction_ms": 133,
-    "overshoot_pct": 39,
+    "on_target": 39,
+    "reaction_ms": 150,
+    "overshoot_pct": 38,
     "best_14d": 570,
     "master3": 726,
-    "note": "Best of 1 recorded today (median 501). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 3 recorded today (median 502). The clip is its 8 seconds with the most hits.",
     "model": {
      "file": "model-zeus-2026-10-25",
-     "label": "Model: 599"
+     "label": "Model: 609"
     }
    }
   ]
