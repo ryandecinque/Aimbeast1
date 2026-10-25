@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-25 21:17",
- "updated_utc": "2026-10-25T14:17:10Z",
+ "updated": "2026-10-25 21:22",
+ "updated_utc": "2026-10-25T14:22:02Z",
  "today": {
   "date": "2026-10-25",
   "progress": {
-   "ZEUS FOCUS": 20
+   "ZEUS FOCUS": 22
   }
  },
  "plan_start": "2026-10-07",
@@ -1143,9 +1143,9 @@
  "days": [
   {
    "date": "2026-10-25",
-   "runs": 20,
-   "restarts": 48,
-   "rest_median_s": 46,
+   "runs": 22,
+   "restarts": 51,
+   "rest_median_s": 42,
    "rest_longest_s": 420,
    "breaks": [
     {
@@ -1164,27 +1164,27 @@
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 20,
+     "runs": 22,
      "first": "01:15",
-     "last": "21:15"
+     "last": "21:20"
     }
    ],
    "scenarios": [
     {
      "name": "ZEUS TRACK EVO - FAR 115%",
-     "runs": 8,
+     "runs": 9,
      "routine": "ZEUS FOCUS",
      "first": "01:15",
      "best": 431,
-     "median": 391
+     "median": 402
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 115%",
-     "runs": 6,
+     "runs": 7,
      "routine": "ZEUS FOCUS",
      "first": "01:22",
      "best": 539,
-     "median": 466
+     "median": 461
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -3888,12 +3888,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 864,
+  "runs": 866,
   "days": 19,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 339,
+    "runs": 340,
     "pct": 100.0
    },
    {
@@ -3903,7 +3903,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 300,
+    "runs": 301,
     "pct": 101.0
    },
    {
@@ -5472,22 +5472,22 @@
   "2026-10-25": [
    {
     "scenario": "ZEUS TRACK EVO - CLOSE 115",
-    "runs": 6,
+    "runs": 7,
     "on_target": 34,
     "reaction_ms": 133,
-    "overshoot_pct": 40,
+    "overshoot_pct": 39,
     "pps_by_distance": {
-     "close": 7.6
+     "close": 7.5
     }
    },
    {
     "scenario": "ZEUS TRACK EVO - FAR 115",
-    "runs": 8,
+    "runs": 9,
     "on_target": 31,
-    "reaction_ms": 162,
+    "reaction_ms": 167,
     "overshoot_pct": 40,
     "pps_by_distance": {
-     "far": 6.4
+     "far": 6.6
     }
    },
    {
