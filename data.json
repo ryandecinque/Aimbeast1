@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-25 21:22",
- "updated_utc": "2026-10-25T14:22:02Z",
+ "updated": "2026-10-25 21:32",
+ "updated_utc": "2026-10-25T14:32:14Z",
  "today": {
   "date": "2026-10-25",
   "progress": {
-   "ZEUS FOCUS": 22
+   "ZEUS FOCUS": 23
   }
  },
  "plan_start": "2026-10-07",
@@ -1143,10 +1143,10 @@
  "days": [
   {
    "date": "2026-10-25",
-   "runs": 22,
+   "runs": 23,
    "restarts": 51,
-   "rest_median_s": 42,
-   "rest_longest_s": 420,
+   "rest_median_s": 46,
+   "rest_longest_s": 537,
    "breaks": [
     {
      "after": "ZEUS FOCUS",
@@ -1164,9 +1164,9 @@
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 22,
+     "runs": 23,
      "first": "01:15",
-     "last": "21:20"
+     "last": "21:30"
     }
    ],
    "scenarios": [
@@ -1180,11 +1180,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 115%",
-     "runs": 7,
+     "runs": 8,
      "routine": "ZEUS FOCUS",
      "first": "01:22",
      "best": 539,
-     "median": 461
+     "median": 458
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -3888,7 +3888,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 866,
+  "runs": 867,
   "days": 19,
   "groups": [
    {
@@ -5472,7 +5472,7 @@
   "2026-10-25": [
    {
     "scenario": "ZEUS TRACK EVO - CLOSE 115",
-    "runs": 7,
+    "runs": 8,
     "on_target": 34,
     "reaction_ms": 133,
     "overshoot_pct": 39,
