@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-25 22:12",
- "updated_utc": "2026-10-25T15:12:27Z",
+ "updated": "2026-10-25 22:17",
+ "updated_utc": "2026-10-25T15:17:00Z",
  "today": {
   "date": "2026-10-25",
   "progress": {
-   "ZEUS FOCUS": 27
+   "ZEUS FOCUS": 28
   }
  },
  "plan_start": "2026-10-07",
@@ -1143,8 +1143,8 @@
  "days": [
   {
    "date": "2026-10-25",
-   "runs": 27,
-   "restarts": 56,
+   "runs": 28,
+   "restarts": 63,
    "rest_median_s": 52,
    "rest_longest_s": 647,
    "breaks": [
@@ -1164,9 +1164,9 @@
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 27,
+     "runs": 28,
      "first": "01:15",
-     "last": "22:06"
+     "last": "22:15"
     }
    ],
    "scenarios": [
@@ -1201,6 +1201,14 @@
      "first": "21:48",
      "best": 439,
      "median": 415
+    },
+    {
+     "name": "ZEUS TRACK EVO - FAR 130%",
+     "runs": 1,
+     "routine": "ZEUS FOCUS",
+     "first": "22:15",
+     "best": 309,
+     "median": 309
     }
    ]
   },
@@ -3896,12 +3904,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 871,
+  "runs": 872,
   "days": 19,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 341,
+    "runs": 342,
     "pct": 100.0
    },
    {
@@ -5506,6 +5514,16 @@
     "overshoot_pct": 40,
     "pps_by_distance": {
      "far": 6.6
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - FAR 130",
+    "runs": 1,
+    "on_target": 25,
+    "reaction_ms": 167,
+    "overshoot_pct": 42,
+    "pps_by_distance": {
+     "far": 5.1
     }
    },
    {
