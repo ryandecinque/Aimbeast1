@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-26 01:07",
- "updated_utc": "2026-10-25T18:07:06Z",
+ "updated": "2026-10-26 18:27",
+ "updated_utc": "2026-10-26T11:27:10Z",
  "today": {
   "date": "2026-10-26",
   "progress": {
-   "ZEUS FOCUS": 10
+   "ZEUS FOCUS": 13
   }
  },
  "plan_start": "2026-10-07",
@@ -1263,8 +1263,8 @@
  "days": [
   {
    "date": "2026-10-26",
-   "runs": 10,
-   "restarts": 41,
+   "runs": 13,
+   "restarts": 56,
    "rest_median_s": 42,
    "rest_longest_s": 90,
    "breaks": [
@@ -1273,24 +1273,30 @@
      "before": "ZEUS FOCUS",
      "at": "00:21",
      "minutes": 37.7
+    },
+    {
+     "after": "ZEUS FOCUS",
+     "before": "ZEUS FOCUS",
+     "at": "01:02",
+     "minutes": 1037.9
     }
    ],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 10,
+     "runs": 13,
      "first": "00:04",
-     "last": "01:02"
+     "last": "18:26"
     }
    ],
    "scenarios": [
     {
      "name": "ZEUS TRACK EVO - FAR 115%",
-     "runs": 2,
+     "runs": 5,
      "routine": "ZEUS FOCUS",
      "first": "00:04",
      "best": 430,
-     "median": 411
+     "median": 388
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 115%",
@@ -4071,12 +4077,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 888,
+  "runs": 890,
   "days": 20,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 345,
+    "runs": 346,
     "pct": 100.0
    },
    {
@@ -4086,13 +4092,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 313,
+    "runs": 314,
     "pct": 100.9
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 59,
-    "pct": 94.2
+    "runs": 60,
+    "pct": 95.4
    }
   ]
  },
@@ -5719,12 +5725,12 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - FAR 115",
-    "runs": 2,
-    "on_target": 30,
-    "reaction_ms": 158,
-    "overshoot_pct": 32,
+    "runs": 5,
+    "on_target": 29,
+    "reaction_ms": 142,
+    "overshoot_pct": 33,
     "pps_by_distance": {
-     "far": 6.8
+     "far": 6.4
     }
    }
   ]
