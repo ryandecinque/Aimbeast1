@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 00:52",
- "updated_utc": "2026-10-26T17:52:04Z",
+ "updated": "2026-10-27 00:57",
+ "updated_utc": "2026-10-26T17:57:01Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -1271,17 +1271,17 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 12,
-   "restarts": 1,
-   "rest_median_s": 83,
+   "runs": 13,
+   "restarts": 2,
+   "rest_median_s": 97,
    "rest_longest_s": 674,
    "breaks": [],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 12,
+     "runs": 13,
      "first": "00:01",
-     "last": "00:50"
+     "last": "00:53"
     }
    ],
    "scenarios": [
@@ -1362,6 +1362,14 @@
      "first": "00:50",
      "best": 359,
      "median": 359
+    },
+    {
+     "name": "TRACKSTOP CLOSE 4 - MORE STOPS",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "00:53",
+     "best": 310,
+     "median": 310
     }
    ]
   },
@@ -4299,12 +4307,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 931,
+  "runs": 932,
   "days": 21,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 376,
+    "runs": 377,
     "pct": 100.0
    },
    {
@@ -6160,6 +6168,16 @@
     "overshoot_pct": 67,
     "pps_by_distance": {
      "close": 6.4
+    }
+   },
+   {
+    "scenario": "TRACKSTOP CLOSE 4 - MORE STOPS",
+    "runs": 1,
+    "on_target": 18,
+    "reaction_ms": 150,
+    "overshoot_pct": 71,
+    "pps_by_distance": {
+     "close": 5.1
     }
    },
    {
