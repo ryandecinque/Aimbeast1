@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-26 19:27",
- "updated_utc": "2026-10-26T12:27:58Z",
+ "updated": "2026-10-26 22:33",
+ "updated_utc": "2026-10-26T15:33:44Z",
  "today": {
   "date": "2026-10-26",
   "progress": {
@@ -1273,9 +1273,9 @@
  "days": [
   {
    "date": "2026-10-26",
-   "runs": 24,
-   "restarts": 97,
-   "rest_median_s": 62,
+   "runs": 26,
+   "restarts": 117,
+   "rest_median_s": 61,
    "rest_longest_s": 872,
    "breaks": [
     {
@@ -1297,6 +1297,12 @@
      "runs": 24,
      "first": "00:04",
      "last": "19:25"
+    },
+    {
+     "name": "(single scenario)",
+     "runs": 2,
+     "first": "22:29",
+     "last": "22:31"
     }
    ],
    "scenarios": [
@@ -1331,6 +1337,22 @@
      "first": "19:19",
      "best": 334,
      "median": 318
+    },
+    {
+     "name": "ZEUS TRACK EVO - CLOSE CATCH-UP",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "22:29",
+     "best": 452,
+     "median": 452
+    },
+    {
+     "name": "ZEUS TRACK EVO - CLOSE LONG STRAFES",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "22:31",
+     "best": 658,
+     "median": 658
     }
    ]
   },
@@ -4103,12 +4125,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 902,
+  "runs": 903,
   "days": 20,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 349,
+    "runs": 350,
     "pct": 100.0
    },
    {
@@ -5757,6 +5779,26 @@
     "overshoot_pct": 40,
     "pps_by_distance": {
      "close": 6.5
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - CLOSE CATCH-UP",
+    "runs": 1,
+    "on_target": 33,
+    "reaction_ms": 134,
+    "overshoot_pct": 34,
+    "pps_by_distance": {
+     "close": 7.5
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - CLOSE LONG STRAFES",
+    "runs": 1,
+    "on_target": 47,
+    "reaction_ms": 118,
+    "overshoot_pct": 26,
+    "pps_by_distance": {
+     "close": 10.8
     }
    },
    {
