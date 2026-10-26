@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 00:42",
- "updated_utc": "2026-10-26T17:42:00Z",
+ "updated": "2026-10-27 00:52",
+ "updated_utc": "2026-10-26T17:52:04Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -1271,17 +1271,17 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 11,
-   "restarts": 0,
-   "rest_median_s": 52,
+   "runs": 12,
+   "restarts": 1,
+   "rest_median_s": 83,
    "rest_longest_s": 674,
    "breaks": [],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 11,
+     "runs": 12,
      "first": "00:01",
-     "last": "00:39"
+     "last": "00:50"
     }
    ],
    "scenarios": [
@@ -1354,6 +1354,14 @@
      "first": "00:39",
      "best": 390,
      "median": 390
+    },
+    {
+     "name": "TRACKSTOP FAR 3 - STOPS",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "00:50",
+     "best": 359,
+     "median": 359
     }
    ]
   },
@@ -4291,12 +4299,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 930,
+  "runs": 931,
   "days": 21,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 375,
+    "runs": 376,
     "pct": 100.0
    },
    {
@@ -6152,6 +6160,17 @@
     "overshoot_pct": 67,
     "pps_by_distance": {
      "close": 6.4
+    }
+   },
+   {
+    "scenario": "TRACKSTOP FAR 3 - STOPS",
+    "runs": 2,
+    "on_target": 20,
+    "reaction_ms": 248,
+    "overshoot_pct": 58,
+    "pps_by_distance": {
+     "mid": 6.0,
+     "close": 7.6
     }
    },
    {
