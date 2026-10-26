@@ -1,11 +1,9 @@
 {
- "updated": "2026-10-26 23:57",
- "updated_utc": "2026-10-26T16:57:03Z",
+ "updated": "2026-10-27 00:01",
+ "updated_utc": "2026-10-26T17:01:59Z",
  "today": {
-  "date": "2026-10-26",
-  "progress": {
-   "ZEUS FOCUS": 24
-  }
+  "date": "2026-10-27",
+  "progress": {}
  },
  "plan_start": "2026-10-07",
  "ranks": [
@@ -13,9 +11,9 @@
    "name": "SMOOTH THIN TRACK V2",
    "master3": 616.0,
    "official_best": 555.0,
-   "best_14d": 476.0,
-   "median_14d": 424,
-   "runs_14d": 13,
+   "best_14d": 424.0,
+   "median_14d": 388,
+   "runs_14d": 5,
    "steps": [
     0.0,
     168.0,
@@ -42,8 +40,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 497.0,
-   "median_14d": 461,
-   "runs_14d": 13,
+   "median_14d": 480,
+   "runs_14d": 8,
    "steps": [
     0.0,
     180.0,
@@ -1272,10 +1270,36 @@
  ],
  "days": [
   {
+   "date": "2026-10-27",
+   "runs": 1,
+   "restarts": 0,
+   "rest_median_s": null,
+   "rest_longest_s": null,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "(single scenario)",
+     "runs": 1,
+     "first": "00:01",
+     "last": "00:01"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "TRACKSTOP PART 1 - CLOSE 260-400",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "00:01",
+     "best": 377,
+     "median": 377
+    }
+   ]
+  },
+  {
    "date": "2026-10-26",
-   "runs": 41,
+   "runs": 42,
    "restarts": 129,
-   "rest_median_s": 62,
+   "rest_median_s": 63,
    "rest_longest_s": 872,
    "breaks": [
     {
@@ -1300,9 +1324,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 17,
+     "runs": 18,
      "first": "22:29",
-     "last": "23:53"
+     "last": "23:58"
     }
    ],
    "scenarios": [
@@ -1425,6 +1449,14 @@
      "first": "23:53",
      "best": 469,
      "median": 469
+    },
+    {
+     "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "23:58",
+     "best": 720,
+     "median": 720
     }
    ]
   },
@@ -4197,12 +4229,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 919,
+  "runs": 920,
   "days": 20,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 364,
+    "runs": 365,
     "pct": 100.0
    },
    {
@@ -5928,6 +5960,16 @@
     }
    },
    {
+    "scenario": "ZEUS PART 9 - CLOSE LONG STRAFES",
+    "runs": 1,
+    "on_target": 50,
+    "reaction_ms": 117,
+    "overshoot_pct": 20,
+    "pps_by_distance": {
+     "close": 12.0
+    }
+   },
+   {
     "scenario": "ZEUS TRACK EVO - CLOSE 115",
     "runs": 12,
     "on_target": 35,
@@ -5995,6 +6037,18 @@
     "overshoot_pct": 19,
     "pps_by_distance": {
      "far": 24.8
+    }
+   }
+  ],
+  "2026-10-27": [
+   {
+    "scenario": "TRACKSTOP PART 1 - CLOSE 260-400",
+    "runs": 1,
+    "on_target": 20,
+    "reaction_ms": 150,
+    "overshoot_pct": 69,
+    "pps_by_distance": {
+     "close": 6.3
     }
    }
   ]
