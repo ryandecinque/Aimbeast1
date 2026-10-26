@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 00:01",
- "updated_utc": "2026-10-26T17:01:59Z",
+ "updated": "2026-10-27 00:06",
+ "updated_utc": "2026-10-26T17:06:58Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -1271,17 +1271,17 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 1,
+   "runs": 3,
    "restarts": 0,
-   "rest_median_s": null,
-   "rest_longest_s": null,
+   "rest_median_s": 59,
+   "rest_longest_s": 97,
    "breaks": [],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 1,
+     "runs": 3,
      "first": "00:01",
-     "last": "00:01"
+     "last": "00:05"
     }
    ],
    "scenarios": [
@@ -1292,6 +1292,22 @@
      "first": "00:01",
      "best": 377,
      "median": 377
+    },
+    {
+     "name": "TRACKSTOP PART 2 - CLOSE 400-530",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "00:03",
+     "best": 348,
+     "median": 348
+    },
+    {
+     "name": "TRACKSTOP PART 3 - MID 620-760",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "00:05",
+     "best": 338,
+     "median": 338
     }
    ]
   },
@@ -4229,12 +4245,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 920,
-  "days": 20,
+  "runs": 923,
+  "days": 21,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 365,
+    "runs": 368,
     "pct": 100.0
    },
    {
@@ -6049,6 +6065,26 @@
     "overshoot_pct": 69,
     "pps_by_distance": {
      "close": 6.3
+    }
+   },
+   {
+    "scenario": "TRACKSTOP PART 2 - CLOSE 400-530",
+    "runs": 1,
+    "on_target": 20,
+    "reaction_ms": 150,
+    "overshoot_pct": 65,
+    "pps_by_distance": {
+     "close": 5.8
+    }
+   },
+   {
+    "scenario": "TRACKSTOP PART 3 - MID 620-760",
+    "runs": 1,
+    "on_target": 17,
+    "reaction_ms": 150,
+    "overshoot_pct": 71,
+    "pps_by_distance": {
+     "close": 5.7
     }
    }
   ]
