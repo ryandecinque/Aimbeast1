@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 00:11",
- "updated_utc": "2026-10-26T17:11:58Z",
+ "updated": "2026-10-27 00:22",
+ "updated_utc": "2026-10-26T17:22:00Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -1271,17 +1271,17 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 4,
+   "runs": 6,
    "restarts": 0,
-   "rest_median_s": 83,
-   "rest_longest_s": 97,
+   "rest_median_s": 52,
+   "rest_longest_s": 674,
    "breaks": [],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 4,
+     "runs": 6,
      "first": "00:01",
-     "last": "00:08"
+     "last": "00:21"
     }
    ],
    "scenarios": [
@@ -1316,6 +1316,22 @@
      "first": "00:08",
      "best": 348,
      "median": 348
+    },
+    {
+     "name": "TRACKSTOP CLOSE 1 - SHORT STRAFES",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "00:20",
+     "best": 420,
+     "median": 420
+    },
+    {
+     "name": "TRACKSTOP CLOSE 2 - LONG STRAFES",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "00:21",
+     "best": 832,
+     "median": 832
     }
    ]
   },
@@ -4253,12 +4269,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 924,
+  "runs": 925,
   "days": 21,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 369,
+    "runs": 370,
     "pct": 100.0
    },
    {
@@ -6065,6 +6081,26 @@
    }
   ],
   "2026-10-27": [
+   {
+    "scenario": "TRACKSTOP CLOSE 1 - SHORT STRAFES",
+    "runs": 1,
+    "on_target": 20,
+    "reaction_ms": 150,
+    "overshoot_pct": 61,
+    "pps_by_distance": {
+     "close": 7.0
+    }
+   },
+   {
+    "scenario": "TRACKSTOP CLOSE 2 - LONG STRAFES",
+    "runs": 1,
+    "on_target": 36,
+    "reaction_ms": 133,
+    "overshoot_pct": 33,
+    "pps_by_distance": {
+     "close": 13.9
+    }
+   },
    {
     "scenario": "TRACKSTOP PART 1 - CLOSE 260-400",
     "runs": 1,
