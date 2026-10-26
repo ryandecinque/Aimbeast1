@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-26 22:33",
- "updated_utc": "2026-10-26T15:33:44Z",
+ "updated": "2026-10-26 22:57",
+ "updated_utc": "2026-10-26T15:57:21Z",
  "today": {
   "date": "2026-10-26",
   "progress": {
@@ -1273,9 +1273,9 @@
  "days": [
   {
    "date": "2026-10-26",
-   "runs": 26,
-   "restarts": 117,
-   "rest_median_s": 61,
+   "runs": 31,
+   "restarts": 125,
+   "rest_median_s": 58,
    "rest_longest_s": 872,
    "breaks": [
     {
@@ -1300,9 +1300,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 2,
+     "runs": 7,
      "first": "22:29",
-     "last": "22:31"
+     "last": "22:56"
     }
    ],
    "scenarios": [
@@ -1348,11 +1348,43 @@
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE LONG STRAFES",
-     "runs": 1,
+     "runs": 2,
      "routine": "(single scenario)",
      "first": "22:31",
-     "best": 658,
-     "median": 658
+     "best": 661,
+     "median": 660
+    },
+    {
+     "name": "ZEUS PART 1 - FAR 2600",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "22:52",
+     "best": 333,
+     "median": 333
+    },
+    {
+     "name": "ZEUS PART 2 - 2100",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "22:53",
+     "best": 369,
+     "median": 369
+    },
+    {
+     "name": "ZEUS PART 3 - 1600",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "22:55",
+     "best": 408,
+     "median": 408
+    },
+    {
+     "name": "ZEUS PART 4 - 1100",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "22:56",
+     "best": 490,
+     "median": 490
     }
    ]
   },
@@ -4125,12 +4157,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 903,
+  "runs": 908,
   "days": 20,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 350,
+    "runs": 354,
     "pct": 100.0
    },
    {
@@ -5762,6 +5794,48 @@
   ],
   "2026-10-26": [
    {
+    "scenario": "ZEUS PART 1 - FAR 2600",
+    "runs": 1,
+    "on_target": 25,
+    "reaction_ms": null,
+    "overshoot_pct": 41,
+    "pps_by_distance": {
+     "far": 5.5
+    }
+   },
+   {
+    "scenario": "ZEUS PART 2 - 2100",
+    "runs": 1,
+    "on_target": 26,
+    "reaction_ms": 167,
+    "overshoot_pct": 40,
+    "pps_by_distance": {
+     "far": 6.2
+    }
+   },
+   {
+    "scenario": "ZEUS PART 3 - 1600",
+    "runs": 1,
+    "on_target": 30,
+    "reaction_ms": 150,
+    "overshoot_pct": 38,
+    "pps_by_distance": {
+     "far": 5.8,
+     "mid": 7.2
+    }
+   },
+   {
+    "scenario": "ZEUS PART 4 - 1100",
+    "runs": 1,
+    "on_target": 34,
+    "reaction_ms": 150,
+    "overshoot_pct": 40,
+    "pps_by_distance": {
+     "mid": 7.3,
+     "close": 9.9
+    }
+   },
+   {
     "scenario": "ZEUS TRACK EVO - CLOSE 115",
     "runs": 12,
     "on_target": 35,
@@ -5793,12 +5867,12 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - CLOSE LONG STRAFES",
-    "runs": 1,
+    "runs": 2,
     "on_target": 47,
-    "reaction_ms": 118,
-    "overshoot_pct": 26,
+    "reaction_ms": 123,
+    "overshoot_pct": 24,
     "pps_by_distance": {
-     "close": 10.8
+     "close": 10.9
     }
    },
    {
@@ -5819,6 +5893,16 @@
     "overshoot_pct": 33,
     "pps_by_distance": {
      "far": 5.2
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - PART 2 2100-1600",
+    "runs": 1,
+    "on_target": 66,
+    "reaction_ms": null,
+    "overshoot_pct": 19,
+    "pps_by_distance": {
+     "far": 24.8
     }
    }
   ]
