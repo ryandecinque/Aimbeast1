@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 00:22",
- "updated_utc": "2026-10-26T17:22:00Z",
+ "updated": "2026-10-27 00:37",
+ "updated_utc": "2026-10-26T17:37:04Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -1271,17 +1271,17 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 6,
+   "runs": 10,
    "restarts": 0,
-   "rest_median_s": 52,
+   "rest_median_s": 21,
    "rest_longest_s": 674,
    "breaks": [],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 6,
+     "runs": 10,
      "first": "00:01",
-     "last": "00:21"
+     "last": "00:33"
     }
    ],
    "scenarios": [
@@ -1319,19 +1319,35 @@
     },
     {
      "name": "TRACKSTOP CLOSE 1 - SHORT STRAFES",
-     "runs": 1,
+     "runs": 2,
      "routine": "(single scenario)",
      "first": "00:20",
-     "best": 420,
-     "median": 420
+     "best": 469,
+     "median": 444
     },
     {
      "name": "TRACKSTOP CLOSE 2 - LONG STRAFES",
-     "runs": 1,
+     "runs": 2,
      "routine": "(single scenario)",
      "first": "00:21",
      "best": 832,
-     "median": 832
+     "median": 786
+    },
+    {
+     "name": "TRACKSTOP CLOSE 3 - STOPS",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "00:22",
+     "best": 464,
+     "median": 464
+    },
+    {
+     "name": "TRACKSTOP CLOSE 3 - STOPS (RANKED)",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "00:33",
+     "best": 378,
+     "median": 378
     }
    ]
   },
@@ -4269,12 +4285,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 925,
+  "runs": 930,
   "days": 21,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 370,
+    "runs": 375,
     "pct": 100.0
    },
    {
@@ -6083,22 +6099,42 @@
   "2026-10-27": [
    {
     "scenario": "TRACKSTOP CLOSE 1 - SHORT STRAFES",
-    "runs": 1,
-    "on_target": 20,
-    "reaction_ms": 150,
-    "overshoot_pct": 61,
+    "runs": 2,
+    "on_target": 22,
+    "reaction_ms": 154,
+    "overshoot_pct": 64,
     "pps_by_distance": {
-     "close": 7.0
+     "close": 7.5
     }
    },
    {
     "scenario": "TRACKSTOP CLOSE 2 - LONG STRAFES",
-    "runs": 1,
-    "on_target": 36,
+    "runs": 2,
+    "on_target": 35,
     "reaction_ms": 133,
-    "overshoot_pct": 33,
+    "overshoot_pct": 38,
     "pps_by_distance": {
-     "close": 13.9
+     "close": 13.2
+    }
+   },
+   {
+    "scenario": "TRACKSTOP CLOSE 3 - STOPS",
+    "runs": 1,
+    "on_target": 22,
+    "reaction_ms": 183,
+    "overshoot_pct": 60,
+    "pps_by_distance": {
+     "close": 7.7
+    }
+   },
+   {
+    "scenario": "TRACKSTOP CLOSE 3 - STOPS RANKED",
+    "runs": 1,
+    "on_target": 20,
+    "reaction_ms": 150,
+    "overshoot_pct": 67,
+    "pps_by_distance": {
+     "close": 6.4
     }
    },
    {
