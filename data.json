@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-26 23:22",
- "updated_utc": "2026-10-26T16:22:03Z",
+ "updated": "2026-10-26 23:27",
+ "updated_utc": "2026-10-26T16:27:00Z",
  "today": {
   "date": "2026-10-26",
   "progress": {
@@ -1273,9 +1273,9 @@
  "days": [
   {
    "date": "2026-10-26",
-   "runs": 35,
+   "runs": 38,
    "restarts": 128,
-   "rest_median_s": 61,
+   "rest_median_s": 56,
    "rest_longest_s": 872,
    "breaks": [
     {
@@ -1300,9 +1300,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 11,
+     "runs": 14,
      "first": "22:29",
-     "last": "23:21"
+     "last": "23:26"
     }
    ],
    "scenarios": [
@@ -1372,19 +1372,19 @@
     },
     {
      "name": "ZEUS PART 3 - 1600",
-     "runs": 1,
+     "runs": 2,
      "routine": "(single scenario)",
      "first": "22:55",
      "best": 408,
-     "median": 408
+     "median": 327
     },
     {
      "name": "ZEUS PART 4 - 1100",
-     "runs": 1,
+     "runs": 2,
      "routine": "(single scenario)",
      "first": "22:56",
      "best": 490,
-     "median": 490
+     "median": 372
     },
     {
      "name": "143 TRACKSTOP DISTANCE EVO",
@@ -1393,6 +1393,14 @@
      "first": "23:00",
      "best": 373,
      "median": 360
+    },
+    {
+     "name": "ZEUS PART 5 - CLOSE 600",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "23:26",
+     "best": 529,
+     "median": 529
     }
    ]
   },
@@ -4165,12 +4173,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 912,
+  "runs": 915,
   "days": 20,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 357,
+    "runs": 360,
     "pct": 100.0
    },
    {
@@ -5835,24 +5843,34 @@
    },
    {
     "scenario": "ZEUS PART 3 - 1600",
-    "runs": 1,
-    "on_target": 30,
-    "reaction_ms": 150,
-    "overshoot_pct": 38,
+    "runs": 2,
+    "on_target": 25,
+    "reaction_ms": 142,
+    "overshoot_pct": 34,
     "pps_by_distance": {
-     "far": 5.8,
-     "mid": 7.2
+     "far": 4.2,
+     "mid": 5.8
     }
    },
    {
     "scenario": "ZEUS PART 4 - 1100",
-    "runs": 1,
-    "on_target": 34,
+    "runs": 2,
+    "on_target": 26,
     "reaction_ms": 150,
     "overshoot_pct": 40,
     "pps_by_distance": {
-     "mid": 7.3,
-     "close": 9.9
+     "mid": 6.6,
+     "close": 6.3
+    }
+   },
+   {
+    "scenario": "ZEUS PART 5 - CLOSE 600",
+    "runs": 1,
+    "on_target": 38,
+    "reaction_ms": 133,
+    "overshoot_pct": 38,
+    "pps_by_distance": {
+     "close": 8.9
     }
    },
    {
