@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-26 23:27",
- "updated_utc": "2026-10-26T16:27:00Z",
+ "updated": "2026-10-26 23:41",
+ "updated_utc": "2026-10-26T16:41:59Z",
  "today": {
   "date": "2026-10-26",
   "progress": {
@@ -1273,9 +1273,9 @@
  "days": [
   {
    "date": "2026-10-26",
-   "runs": 38,
-   "restarts": 128,
-   "rest_median_s": 56,
+   "runs": 39,
+   "restarts": 129,
+   "rest_median_s": 58,
    "rest_longest_s": 872,
    "breaks": [
     {
@@ -1300,9 +1300,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 14,
+     "runs": 15,
      "first": "22:29",
-     "last": "23:26"
+     "last": "23:40"
     }
    ],
    "scenarios": [
@@ -1401,6 +1401,14 @@
      "first": "23:26",
      "best": 529,
      "median": 529
+    },
+    {
+     "name": "ZEUS PART 6 - FAR CATCH-UP",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "23:40",
+     "best": 225,
+     "median": 225
     }
    ]
   },
@@ -4173,12 +4181,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 915,
+  "runs": 917,
   "days": 20,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 360,
+    "runs": 362,
     "pct": 100.0
    },
    {
@@ -5871,6 +5879,16 @@
     "overshoot_pct": 38,
     "pps_by_distance": {
      "close": 8.9
+    }
+   },
+   {
+    "scenario": "ZEUS PART 6 - FAR CATCH-UP",
+    "runs": 1,
+    "on_target": 21,
+    "reaction_ms": null,
+    "overshoot_pct": 39,
+    "pps_by_distance": {
+     "far": 3.7
     }
    },
    {
