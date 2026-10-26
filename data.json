@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-26 22:57",
- "updated_utc": "2026-10-26T15:57:21Z",
+ "updated": "2026-10-26 23:03",
+ "updated_utc": "2026-10-26T16:03:12Z",
  "today": {
   "date": "2026-10-26",
   "progress": {
@@ -1273,9 +1273,9 @@
  "days": [
   {
    "date": "2026-10-26",
-   "runs": 31,
-   "restarts": 125,
-   "rest_median_s": 58,
+   "runs": 32,
+   "restarts": 127,
+   "rest_median_s": 61,
    "rest_longest_s": 872,
    "breaks": [
     {
@@ -1300,9 +1300,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 7,
+     "runs": 8,
      "first": "22:29",
-     "last": "22:56"
+     "last": "23:00"
     }
    ],
    "scenarios": [
@@ -1385,6 +1385,14 @@
      "first": "22:56",
      "best": 490,
      "median": 490
+    },
+    {
+     "name": "143 TRACKSTOP DISTANCE EVO",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "23:00",
+     "best": 348,
+     "median": 348
     }
    ]
   },
@@ -4157,12 +4165,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 908,
+  "runs": 910,
   "days": 20,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 354,
+    "runs": 356,
     "pct": 100.0
    },
    {
@@ -5793,6 +5801,17 @@
    }
   ],
   "2026-10-26": [
+   {
+    "scenario": "143 TRACKSTOP DISTANCE EVO",
+    "runs": 1,
+    "on_target": 22,
+    "reaction_ms": 150,
+    "overshoot_pct": 68,
+    "pps_by_distance": {
+     "mid": 5.6,
+     "close": 6.0
+    }
+   },
    {
     "scenario": "ZEUS PART 1 - FAR 2600",
     "runs": 1,
