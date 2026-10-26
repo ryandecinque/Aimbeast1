@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-26 18:32",
- "updated_utc": "2026-10-26T11:32:34Z",
+ "updated": "2026-10-26 18:42",
+ "updated_utc": "2026-10-26T11:42:13Z",
  "today": {
   "date": "2026-10-26",
   "progress": {
-   "ZEUS FOCUS": 14
+   "ZEUS FOCUS": 16
   }
  },
  "plan_start": "2026-10-07",
@@ -925,6 +925,11 @@
    "text": "Playlist: ZEUS FOCUS\nAbove your usual on every scenario. Zeus Track Evo - Close 115% stood out: a typical 475, against 454 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim and mouse movement were all close to usual or better.\nOne thing to try: too much arm in each correction carries the crosshair past the bot. Correct with wrist and fingers only, and smaller than feels natural. It should feel calm and slightly behind, not like a swing."
   },
   {
+   "date": "2026-10-26",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, second play of the day\nEvery scenario beat your usual. Clearest gain: Zeus Track Evo - Far 115%, a typical 384 against 375 over the last 14 days.\nOne thing to try: the extra input comes from chasing every small change. Let small bot moves go and reduce your input to the bot's real path. It should feel slower and steadier."
+  },
+  {
    "date": "2026-10-25",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS\nAbove your usual on two of three scenarios, the rest about level. Zeus Track Evo - Far 115% stood out: a typical 373, against 335 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim, far-away scoring, mouse movement and rests were all close to usual or better.\nOne thing to try: rests this short don't give your hand time to reset. Take about a minute between runs: let go of the mouse and loosen your hand, then start. The next run should feel fresh, not rushed."
@@ -1263,10 +1268,10 @@
  "days": [
   {
    "date": "2026-10-26",
-   "runs": 14,
-   "restarts": 64,
-   "rest_median_s": 42,
-   "rest_longest_s": 90,
+   "runs": 16,
+   "restarts": 70,
+   "rest_median_s": 48,
+   "rest_longest_s": 489,
    "breaks": [
     {
      "after": "ZEUS FOCUS",
@@ -1284,9 +1289,9 @@
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 14,
+     "runs": 16,
      "first": "00:04",
-     "last": "18:29"
+     "last": "18:40"
     }
    ],
    "scenarios": [
@@ -1300,10 +1305,10 @@
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 115%",
-     "runs": 8,
+     "runs": 10,
      "routine": "ZEUS FOCUS",
      "first": "00:09",
-     "best": 501,
+     "best": 506,
      "median": 478
     }
    ]
@@ -4077,12 +4082,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 892,
+  "runs": 894,
   "days": 20,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 346,
+    "runs": 347,
     "pct": 100.0
    },
    {
@@ -4092,8 +4097,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 316,
-    "pct": 101.0
+    "runs": 317,
+    "pct": 101.1
    },
    {
     "label": "First run after a break of 15 min+",
@@ -5715,10 +5720,10 @@
   "2026-10-26": [
    {
     "scenario": "ZEUS TRACK EVO - CLOSE 115",
-    "runs": 8,
+    "runs": 10,
     "on_target": 35,
     "reaction_ms": 146,
-    "overshoot_pct": 40,
+    "overshoot_pct": 39,
     "pps_by_distance": {
      "close": 8.0
     }
