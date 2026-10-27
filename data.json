@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 20:57",
- "updated_utc": "2026-10-27T13:57:07Z",
+ "updated": "2026-10-27 21:02",
+ "updated_utc": "2026-10-27T14:02:02Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -1277,9 +1277,9 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 56,
-   "restarts": 69,
-   "rest_median_s": 77,
+   "runs": 59,
+   "restarts": 71,
+   "rest_median_s": 72,
    "rest_longest_s": 847,
    "breaks": [
     {
@@ -1322,9 +1322,9 @@
     },
     {
      "name": "ZEUS VARIANTS",
-     "runs": 38,
+     "runs": 41,
      "first": "15:36",
-     "last": "20:55"
+     "last": "21:00"
     }
    ],
    "scenarios": [
@@ -1424,19 +1424,19 @@
     },
     {
      "name": "ZEUS PART 2 - 2100",
-     "runs": 5,
+     "runs": 7,
      "routine": "ZEUS VARIANTS",
      "first": "15:44",
-     "best": 332,
-     "median": 304
+     "best": 334,
+     "median": 318
     },
     {
      "name": "ZEUS PART 3 - 1600",
-     "runs": 4,
+     "runs": 5,
      "routine": "ZEUS VARIANTS",
      "first": "16:12",
-     "best": 369,
-     "median": 328
+     "best": 379,
+     "median": 338
     },
     {
      "name": "ZEUS PART 4 - 1100",
@@ -4430,12 +4430,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 975,
+  "runs": 978,
   "days": 21,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 390,
+    "runs": 391,
     "pct": 100.0
    },
    {
@@ -4445,7 +4445,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 336,
+    "runs": 338,
     "pct": 101.1
    },
    {
@@ -6367,24 +6367,24 @@
    },
    {
     "scenario": "ZEUS PART 2 - 2100",
-    "runs": 5,
-    "on_target": 24,
-    "reaction_ms": 169,
+    "runs": 7,
+    "on_target": 25,
+    "reaction_ms": 151,
     "overshoot_pct": 42,
     "pps_by_distance": {
-     "far": 5.2,
+     "far": 5.4,
      "mid": 2.7
     }
    },
    {
     "scenario": "ZEUS PART 3 - 1600",
-    "runs": 4,
+    "runs": 5,
     "on_target": 25,
-    "reaction_ms": 143,
+    "reaction_ms": 150,
     "overshoot_pct": 44,
     "pps_by_distance": {
-     "far": 2.6,
-     "mid": 6.5
+     "far": 2.7,
+     "mid": 6.8
     }
    },
    {
