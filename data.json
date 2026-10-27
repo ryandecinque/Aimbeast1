@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 01:01",
- "updated_utc": "2026-10-26T18:01:56Z",
+ "updated": "2026-10-27 15:42",
+ "updated_utc": "2026-10-27T08:42:32Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -1271,17 +1271,30 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 14,
-   "restarts": 3,
-   "rest_median_s": 97,
+   "runs": 17,
+   "restarts": 10,
+   "rest_median_s": 86,
    "rest_longest_s": 674,
-   "breaks": [],
+   "breaks": [
+    {
+     "after": "(single scenario)",
+     "before": "ZEUS VARIANTS",
+     "at": "00:58",
+     "minutes": 877.7
+    }
+   ],
    "playlists": [
     {
      "name": "(single scenario)",
      "runs": 14,
      "first": "00:01",
      "last": "00:58"
+    },
+    {
+     "name": "ZEUS VARIANTS",
+     "runs": 3,
+     "first": "15:36",
+     "last": "15:40"
     }
    ],
    "scenarios": [
@@ -1370,6 +1383,14 @@
      "first": "00:53",
      "best": 389,
      "median": 350
+    },
+    {
+     "name": "ZEUS PART 1 - FAR 2600",
+     "runs": 3,
+     "routine": "ZEUS VARIANTS",
+     "first": "15:36",
+     "best": 264,
+     "median": 256
     }
    ]
   },
@@ -4307,28 +4328,28 @@
   }
  ],
  "rest_effect": {
-  "runs": 933,
+  "runs": 936,
   "days": 21,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 377,
+    "runs": 378,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 91,
-    "pct": 99.4
+    "runs": 92,
+    "pct": 99.5
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 321,
+    "runs": 322,
     "pct": 101.1
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 60,
-    "pct": 95.3
+    "runs": 61,
+    "pct": 96.3
    }
   ]
  },
@@ -6230,6 +6251,16 @@
     "pps_by_distance": {
      "mid": 5.8,
      "close": 6.6
+    }
+   },
+   {
+    "scenario": "ZEUS PART 1 - FAR 2600",
+    "runs": 3,
+    "on_target": 24,
+    "reaction_ms": null,
+    "overshoot_pct": 36,
+    "pps_by_distance": {
+     "far": 4.2
     }
    }
   ]
