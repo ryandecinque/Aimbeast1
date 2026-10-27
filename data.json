@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 22:27",
- "updated_utc": "2026-10-27T15:27:13Z",
+ "updated": "2026-10-27 22:32",
+ "updated_utc": "2026-10-27T15:32:08Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -1277,9 +1277,9 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 80,
-   "restarts": 102,
-   "rest_median_s": 62,
+   "runs": 82,
+   "restarts": 107,
+   "rest_median_s": 63,
    "rest_longest_s": 847,
    "breaks": [
     {
@@ -1328,9 +1328,9 @@
     },
     {
      "name": "ZEUS VARIANTS",
-     "runs": 62,
+     "runs": 64,
      "first": "15:36",
-     "last": "22:26"
+     "last": "22:30"
     }
    ],
    "scenarios": [
@@ -1486,11 +1486,11 @@
     },
     {
      "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
-     "runs": 2,
+     "runs": 4,
      "routine": "ZEUS VARIANTS",
      "first": "20:13",
      "best": 800,
-     "median": 768
+     "median": 750
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -4436,12 +4436,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 999,
+  "runs": 1001,
   "days": 21,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 397,
+    "runs": 398,
     "pct": 100.0
    },
    {
@@ -4451,7 +4451,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 349,
+    "runs": 350,
     "pct": 101.1
    },
    {
@@ -6446,12 +6446,12 @@
    },
    {
     "scenario": "ZEUS PART 9 - CLOSE LONG STRAFES",
-    "runs": 2,
-    "on_target": 53,
+    "runs": 4,
+    "on_target": 52,
     "reaction_ms": 125,
-    "overshoot_pct": 9,
+    "overshoot_pct": 13,
     "pps_by_distance": {
-     "close": 12.8
+     "close": 12.4
     }
    },
    {
