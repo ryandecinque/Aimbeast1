@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 17:07",
- "updated_utc": "2026-10-27T10:07:02Z",
+ "updated": "2026-10-27 17:11",
+ "updated_utc": "2026-10-27T10:11:58Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -1271,9 +1271,9 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 34,
+   "runs": 36,
    "restarts": 20,
-   "rest_median_s": 90,
+   "rest_median_s": 86,
    "rest_longest_s": 847,
    "breaks": [
     {
@@ -1292,9 +1292,9 @@
     },
     {
      "name": "ZEUS VARIANTS",
-     "runs": 20,
+     "runs": 22,
      "first": "15:36",
-     "last": "17:05"
+     "last": "17:08"
     }
    ],
    "scenarios": [
@@ -1426,11 +1426,19 @@
     },
     {
      "name": "ZEUS PART 6 - FAR CATCH-UP",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS VARIANTS",
      "first": "17:03",
      "best": 274,
-     "median": 270
+     "median": 274
+    },
+    {
+     "name": "ZEUS PART 7 - FAR LONG STRAFES",
+     "runs": 1,
+     "routine": "ZEUS VARIANTS",
+     "first": "17:08",
+     "best": 392,
+     "median": 392
     }
    ]
   },
@@ -4368,18 +4376,18 @@
   }
  ],
  "rest_effect": {
-  "runs": 953,
+  "runs": 955,
   "days": 21,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 383,
+    "runs": 384,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 93,
-    "pct": 99.4
+    "runs": 94,
+    "pct": 99.5
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -6083,7 +6091,7 @@
     "runs": 1,
     "on_target": 28,
     "reaction_ms": 133,
-    "overshoot_pct": 27,
+    "overshoot_pct": 28,
     "pps_by_distance": {
      "far": 5.3
     }
@@ -6348,12 +6356,22 @@
    },
    {
     "scenario": "ZEUS PART 6 - FAR CATCH-UP",
-    "runs": 2,
+    "runs": 3,
     "on_target": 24,
-    "reaction_ms": null,
-    "overshoot_pct": 41,
+    "reaction_ms": 83,
+    "overshoot_pct": 38,
     "pps_by_distance": {
      "far": 4.5
+    }
+   },
+   {
+    "scenario": "ZEUS PART 7 - FAR LONG STRAFES",
+    "runs": 1,
+    "on_target": 33,
+    "reaction_ms": null,
+    "overshoot_pct": 20,
+    "pps_by_distance": {
+     "far": 6.5
     }
    }
   ]
