@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 22:52",
- "updated_utc": "2026-10-27T15:52:06Z",
+ "updated": "2026-10-27 22:57",
+ "updated_utc": "2026-10-27T15:57:03Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -1277,8 +1277,8 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 89,
-   "restarts": 127,
+   "runs": 91,
+   "restarts": 129,
    "rest_median_s": 69,
    "rest_longest_s": 847,
    "breaks": [
@@ -1328,9 +1328,9 @@
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 24,
+     "runs": 26,
      "first": "00:01",
-     "last": "22:51"
+     "last": "22:54"
     },
     {
      "name": "ZEUS VARIANTS",
@@ -1505,6 +1505,14 @@
      "first": "20:18",
      "best": 552,
      "median": 516
+    },
+    {
+     "name": "LSI VERY FAR DODGE L2",
+     "runs": 2,
+     "routine": "(single scenario)",
+     "first": "22:52",
+     "best": 497,
+     "median": 491
     }
    ]
   },
@@ -4442,12 +4450,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1007,
+  "runs": 1010,
   "days": 21,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 399,
+    "runs": 400,
     "pct": 100.0
    },
    {
@@ -4457,8 +4465,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 354,
-    "pct": 101.1
+    "runs": 356,
+    "pct": 101.0
    },
    {
     "label": "First run after a break of 15 min+",
@@ -6263,6 +6271,16 @@
     "pps_by_distance": {
      "mid": 5.9,
      "close": 7.1
+    }
+   },
+   {
+    "scenario": "LSI VERY FAR DODGE L2",
+    "runs": 2,
+    "on_target": 34,
+    "reaction_ms": 88,
+    "overshoot_pct": 42,
+    "pps_by_distance": {
+     "far": 8.1
     }
    },
    {
