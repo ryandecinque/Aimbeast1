@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 22:32",
- "updated_utc": "2026-10-27T15:32:08Z",
+ "updated": "2026-10-27 22:37",
+ "updated_utc": "2026-10-27T15:37:07Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 570.0,
    "median_14d": 502,
-   "runs_14d": 121,
+   "runs_14d": 122,
    "steps": [
     0.0,
     198.0,
@@ -915,9 +915,9 @@
     },
     {
      "date": "2026-10-27",
-     "median": 533,
-     "best": 545,
-     "runs": 4
+     "median": 535,
+     "best": 552,
+     "runs": 5
     }
    ]
   }
@@ -1277,9 +1277,9 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 82,
-   "restarts": 107,
-   "rest_median_s": 63,
+   "runs": 84,
+   "restarts": 113,
+   "rest_median_s": 64,
    "rest_longest_s": 847,
    "breaks": [
     {
@@ -1317,20 +1317,26 @@
      "before": "ZEUS VARIANTS",
      "at": "21:11",
      "minutes": 31.8
+    },
+    {
+     "after": "ZEUS VARIANTS",
+     "before": "(single scenario)",
+     "at": "22:32",
+     "minutes": 0.2
     }
    ],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 18,
+     "runs": 19,
      "first": "00:01",
-     "last": "20:31"
+     "last": "22:34"
     },
     {
      "name": "ZEUS VARIANTS",
-     "runs": 64,
+     "runs": 65,
      "first": "15:36",
-     "last": "22:30"
+     "last": "22:32"
     }
    ],
    "scenarios": [
@@ -1486,19 +1492,19 @@
     },
     {
      "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
-     "runs": 4,
+     "runs": 5,
      "routine": "ZEUS VARIANTS",
      "first": "20:13",
      "best": 800,
-     "median": 750
+     "median": 757
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 4,
+     "runs": 5,
      "routine": "(single scenario)",
      "first": "20:18",
-     "best": 545,
-     "median": 533
+     "best": 552,
+     "median": 535
     }
    ]
   },
@@ -4436,12 +4442,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1001,
+  "runs": 1003,
   "days": 21,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 398,
+    "runs": 399,
     "pct": 100.0
    },
    {
@@ -4451,7 +4457,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 350,
+    "runs": 351,
     "pct": 101.1
    },
    {
@@ -6446,24 +6452,24 @@
    },
    {
     "scenario": "ZEUS PART 9 - CLOSE LONG STRAFES",
-    "runs": 4,
+    "runs": 5,
     "on_target": 52,
-    "reaction_ms": 125,
-    "overshoot_pct": 13,
+    "reaction_ms": 117,
+    "overshoot_pct": 16,
     "pps_by_distance": {
-     "close": 12.4
+     "close": 12.5
     }
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 4,
-    "on_target": 38,
+    "runs": 5,
+    "on_target": 39,
     "reaction_ms": 133,
-    "overshoot_pct": 36,
+    "overshoot_pct": 34,
     "pps_by_distance": {
-     "far": 8.0,
-     "mid": 9.8,
-     "close": 8.8
+     "far": 8.5,
+     "mid": 9.3,
+     "close": 9.2
     }
    }
   ]
@@ -7103,19 +7109,19 @@
   "2026-10-27": [
    {
     "scenario": "Zeus Track Evo - Noblink",
-    "score": 545,
-    "time": "20:29",
+    "score": 552,
+    "time": "22:33",
     "gif": "best-zeus-2026-10-27",
     "video": true,
-    "on_target": 39,
-    "reaction_ms": 117,
-    "overshoot_pct": 33,
+    "on_target": 42,
+    "reaction_ms": 133,
+    "overshoot_pct": 34,
     "best_14d": 570,
     "master3": 726,
-    "note": "Best of 4 recorded today (median 533). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 5 recorded today (median 535). The clip is its 8 seconds with the most hits.",
     "model": {
      "file": "model-zeus-2026-10-27",
-     "label": "Model: 654"
+     "label": "Model: 662"
     }
    }
   ]
