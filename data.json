@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-28 02:37",
- "updated_utc": "2026-10-27T19:37:17Z",
+ "updated": "2026-10-28 02:47",
+ "updated_utc": "2026-10-27T19:47:36Z",
  "today": {
   "date": "2026-10-28",
   "progress": {}
@@ -1277,17 +1277,17 @@
  "days": [
   {
    "date": "2026-10-28",
-   "runs": 6,
-   "restarts": 3,
+   "runs": 9,
+   "restarts": 5,
    "rest_median_s": 28,
    "rest_longest_s": 468,
    "breaks": [],
    "playlists": [
     {
      "name": "1",
-     "runs": 6,
+     "runs": 9,
      "first": "02:15",
-     "last": "02:36"
+     "last": "02:44"
     }
    ],
    "scenarios": [
@@ -1301,11 +1301,19 @@
     },
     {
      "name": "LSI VERY FAR DODGE L2 - 2X STRAFES",
-     "runs": 1,
+     "runs": 2,
      "routine": "1",
      "first": "02:36",
-     "best": 511,
-     "median": 511
+     "best": 542,
+     "median": 526
+    },
+    {
+     "name": "LSI FAR DODGE L3",
+     "runs": 2,
+     "routine": "1",
+     "first": "02:42",
+     "best": 409,
+     "median": 404
     }
    ]
   },
@@ -4492,18 +4500,18 @@
   }
  ],
  "rest_effect": {
-  "runs": 1016,
+  "runs": 1020,
   "days": 22,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 402,
+    "runs": 404,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 98,
-    "pct": 99.0
+    "runs": 100,
+    "pct": 99.3
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -6545,6 +6553,16 @@
   ],
   "2026-10-28": [
    {
+    "scenario": "LSI FAR DODGE L3",
+    "runs": 2,
+    "on_target": 31,
+    "reaction_ms": 75,
+    "overshoot_pct": 50,
+    "pps_by_distance": {
+     "far": 6.7
+    }
+   },
+   {
     "scenario": "LSI VERY FAR DODGE L2",
     "runs": 4,
     "on_target": 29,
@@ -6556,12 +6574,12 @@
    },
    {
     "scenario": "LSI VERY FAR DODGE L2 - 2X STRAFES",
-    "runs": 1,
-    "on_target": 39,
-    "reaction_ms": 67,
+    "runs": 2,
+    "on_target": 43,
+    "reaction_ms": 71,
     "overshoot_pct": 41,
     "pps_by_distance": {
-     "far": 8.5
+     "far": 8.8
     }
    }
   ]
