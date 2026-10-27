@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-27 23:12",
- "updated_utc": "2026-10-27T16:12:05Z",
+ "updated": "2026-10-28 02:17",
+ "updated_utc": "2026-10-27T19:17:19Z",
  "today": {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "progress": {}
  },
  "plan_start": "2026-10-07",
@@ -40,8 +40,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 497.0,
-   "median_14d": 480,
-   "runs_14d": 8,
+   "median_14d": 489,
+   "runs_14d": 5,
    "steps": [
     0.0,
     180.0,
@@ -68,8 +68,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 861.0,
-   "median_14d": 672,
-   "runs_14d": 13,
+   "median_14d": 740,
+   "runs_14d": 5,
    "steps": [
     0.0,
     240.0,
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 570.0,
    "median_14d": 503,
-   "runs_14d": 127,
+   "runs_14d": 121,
    "steps": [
     0.0,
     198.0,
@@ -1275,6 +1275,32 @@
   }
  ],
  "days": [
+  {
+   "date": "2026-10-28",
+   "runs": 2,
+   "restarts": 0,
+   "rest_median_s": 28,
+   "rest_longest_s": 28,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "1",
+     "runs": 2,
+     "first": "02:15",
+     "last": "02:17"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "LSI VERY FAR DODGE L2",
+     "runs": 2,
+     "routine": "1",
+     "first": "02:15",
+     "best": 458,
+     "median": 458
+    }
+   ]
+  },
   {
    "date": "2026-10-27",
    "runs": 93,
@@ -6506,6 +6532,18 @@
      "far": 7.7,
      "mid": 9.5,
      "close": 8.8
+    }
+   }
+  ],
+  "2026-10-28": [
+   {
+    "scenario": "LSI VERY FAR DODGE L2",
+    "runs": 1,
+    "on_target": 31,
+    "reaction_ms": 100,
+    "overshoot_pct": 37,
+    "pps_by_distance": {
+     "far": 7.6
     }
    }
   ]
