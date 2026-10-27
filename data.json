@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 16:57",
- "updated_utc": "2026-10-27T09:57:03Z",
+ "updated": "2026-10-27 17:02",
+ "updated_utc": "2026-10-27T10:02:05Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -1271,9 +1271,9 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 31,
+   "runs": 32,
    "restarts": 18,
-   "rest_median_s": 90,
+   "rest_median_s": 94,
    "rest_longest_s": 847,
    "breaks": [
     {
@@ -1292,9 +1292,9 @@
     },
     {
      "name": "ZEUS VARIANTS",
-     "runs": 17,
+     "runs": 18,
      "first": "15:36",
-     "last": "16:54"
+     "last": "16:58"
     }
    ],
    "scenarios": [
@@ -1418,11 +1418,11 @@
     },
     {
      "name": "ZEUS PART 5 - CLOSE 600",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS VARIANTS",
      "first": "16:54",
-     "best": 539,
-     "median": 539
+     "best": 559,
+     "median": 549
     }
    ]
   },
@@ -4360,7 +4360,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 950,
+  "runs": 951,
   "days": 21,
   "groups": [
    {
@@ -6330,12 +6330,12 @@
    },
    {
     "scenario": "ZEUS PART 5 - CLOSE 600",
-    "runs": 1,
-    "on_target": 39,
+    "runs": 2,
+    "on_target": 40,
     "reaction_ms": 133,
     "overshoot_pct": 35,
     "pps_by_distance": {
-     "close": 9.0
+     "close": 9.2
     }
    }
   ]
