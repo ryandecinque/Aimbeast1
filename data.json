@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 21:57",
- "updated_utc": "2026-10-27T14:57:25Z",
+ "updated": "2026-10-27 22:07",
+ "updated_utc": "2026-10-27T15:07:29Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -1277,8 +1277,8 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 73,
-   "restarts": 88,
+   "runs": 76,
+   "restarts": 95,
    "rest_median_s": 61,
    "rest_longest_s": 847,
    "breaks": [
@@ -1328,9 +1328,9 @@
     },
     {
      "name": "ZEUS VARIANTS",
-     "runs": 55,
+     "runs": 58,
      "first": "15:36",
-     "last": "21:56"
+     "last": "22:05"
     }
    ],
    "scenarios": [
@@ -1462,11 +1462,11 @@
     },
     {
      "name": "ZEUS PART 6 - FAR CATCH-UP",
-     "runs": 7,
+     "runs": 8,
      "routine": "ZEUS VARIANTS",
      "first": "17:03",
      "best": 274,
-     "median": 258
+     "median": 261
     },
     {
      "name": "ZEUS PART 7 - FAR LONG STRAFES",
@@ -1478,11 +1478,11 @@
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 7,
+     "runs": 9,
      "routine": "ZEUS VARIANTS",
      "first": "19:46",
      "best": 544,
-     "median": 457
+     "median": 458
     },
     {
      "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
@@ -4436,12 +4436,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 991,
+  "runs": 995,
   "days": 21,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 395,
+    "runs": 397,
     "pct": 100.0
    },
    {
@@ -4451,7 +4451,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 345,
+    "runs": 346,
     "pct": 101.1
    },
    {
@@ -6416,7 +6416,7 @@
    },
    {
     "scenario": "ZEUS PART 6 - FAR CATCH-UP",
-    "runs": 7,
+    "runs": 8,
     "on_target": 24,
     "reaction_ms": 104,
     "overshoot_pct": 44,
@@ -6436,9 +6436,9 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 7,
-    "on_target": 31,
-    "reaction_ms": 133,
+    "runs": 9,
+    "on_target": 33,
+    "reaction_ms": 134,
     "overshoot_pct": 41,
     "pps_by_distance": {
      "close": 7.6
