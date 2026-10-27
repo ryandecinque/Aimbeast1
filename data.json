@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 15:42",
- "updated_utc": "2026-10-27T08:42:32Z",
+ "updated": "2026-10-27 15:47",
+ "updated_utc": "2026-10-27T08:47:15Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -1271,9 +1271,9 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 17,
-   "restarts": 10,
-   "rest_median_s": 86,
+   "runs": 20,
+   "restarts": 11,
+   "rest_median_s": 61,
    "rest_longest_s": 674,
    "breaks": [
     {
@@ -1292,9 +1292,9 @@
     },
     {
      "name": "ZEUS VARIANTS",
-     "runs": 3,
+     "runs": 6,
      "first": "15:36",
-     "last": "15:40"
+     "last": "15:45"
     }
    ],
    "scenarios": [
@@ -1386,11 +1386,19 @@
     },
     {
      "name": "ZEUS PART 1 - FAR 2600",
-     "runs": 3,
+     "runs": 4,
      "routine": "ZEUS VARIANTS",
      "first": "15:36",
-     "best": 264,
-     "median": 256
+     "best": 268,
+     "median": 260
+    },
+    {
+     "name": "ZEUS PART 2 - 2100",
+     "runs": 2,
+     "routine": "ZEUS VARIANTS",
+     "first": "15:44",
+     "best": 324,
+     "median": 314
     }
    ]
   },
@@ -4328,22 +4336,22 @@
   }
  ],
  "rest_effect": {
-  "runs": 936,
+  "runs": 939,
   "days": 21,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 378,
+    "runs": 379,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
     "runs": 92,
-    "pct": 99.5
+    "pct": 99.3
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 322,
+    "runs": 324,
     "pct": 101.1
    },
    {
@@ -6255,12 +6263,22 @@
    },
    {
     "scenario": "ZEUS PART 1 - FAR 2600",
-    "runs": 3,
+    "runs": 4,
     "on_target": 24,
-    "reaction_ms": null,
-    "overshoot_pct": 36,
+    "reaction_ms": 167,
+    "overshoot_pct": 38,
     "pps_by_distance": {
      "far": 4.2
+    }
+   },
+   {
+    "scenario": "ZEUS PART 2 - 2100",
+    "runs": 2,
+    "on_target": 24,
+    "reaction_ms": 177,
+    "overshoot_pct": 41,
+    "pps_by_distance": {
+     "far": 5.2
     }
    }
   ]
