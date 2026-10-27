@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 22:57",
- "updated_utc": "2026-10-27T15:57:03Z",
+ "updated": "2026-10-27 23:12",
+ "updated_utc": "2026-10-27T16:12:05Z",
  "today": {
   "date": "2026-10-27",
   "progress": {}
@@ -1277,9 +1277,9 @@
  "days": [
   {
    "date": "2026-10-27",
-   "runs": 91,
+   "runs": 93,
    "restarts": 129,
-   "rest_median_s": 69,
+   "rest_median_s": 72,
    "rest_longest_s": 847,
    "breaks": [
     {
@@ -1328,9 +1328,9 @@
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 26,
+     "runs": 28,
      "first": "00:01",
-     "last": "22:54"
+     "last": "23:09"
     },
     {
      "name": "ZEUS VARIANTS",
@@ -1508,11 +1508,19 @@
     },
     {
      "name": "LSI VERY FAR DODGE L2",
-     "runs": 2,
+     "runs": 3,
      "routine": "(single scenario)",
      "first": "22:52",
-     "best": 497,
-     "median": 491
+     "best": 545,
+     "median": 497
+    },
+    {
+     "name": "LSI VERY FAR DODGE L2 - 2X STRAFES",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "23:09",
+     "best": 511,
+     "median": 511
     }
    ]
   },
@@ -4450,12 +4458,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1010,
+  "runs": 1012,
   "days": 21,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 400,
+    "runs": 401,
     "pct": 100.0
    },
    {
@@ -4465,8 +4473,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 356,
-    "pct": 101.0
+    "runs": 357,
+    "pct": 100.9
    },
    {
     "label": "First run after a break of 15 min+",
@@ -6275,12 +6283,22 @@
    },
    {
     "scenario": "LSI VERY FAR DODGE L2",
-    "runs": 2,
+    "runs": 3,
     "on_target": 34,
-    "reaction_ms": 88,
-    "overshoot_pct": 42,
+    "reaction_ms": 92,
+    "overshoot_pct": 41,
     "pps_by_distance": {
-     "far": 8.1
+     "far": 8.2
+    }
+   },
+   {
+    "scenario": "LSI VERY FAR DODGE L2 - 2X STRAFES",
+    "runs": 1,
+    "on_target": 38,
+    "reaction_ms": 133,
+    "overshoot_pct": 41,
+    "pps_by_distance": {
+     "far": 8.5
     }
    },
    {
