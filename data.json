@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-29 14:32",
- "updated_utc": "2026-10-29T07:32:02Z",
+ "updated": "2026-10-29 14:42",
+ "updated_utc": "2026-10-29T07:42:09Z",
  "today": {
   "date": "2026-10-29",
   "progress": {}
@@ -1277,17 +1277,17 @@
  "days": [
   {
    "date": "2026-10-29",
-   "runs": 5,
-   "restarts": 25,
+   "runs": 7,
+   "restarts": 28,
    "rest_median_s": 114,
-   "rest_longest_s": 347,
+   "rest_longest_s": 429,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS VARIANTS",
-     "runs": 5,
+     "runs": 7,
      "first": "13:27",
-     "last": "14:29"
+     "last": "14:41"
     }
    ],
    "scenarios": [
@@ -1301,11 +1301,11 @@
     },
     {
      "name": "ZEUS PART 2 - 2100",
-     "runs": 2,
+     "runs": 4,
      "routine": "ZEUS VARIANTS",
      "first": "14:27",
-     "best": 297,
-     "median": 286
+     "best": 349,
+     "median": 300
     }
    ]
   },
@@ -4534,7 +4534,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1030,
+  "runs": 1032,
   "days": 23,
   "groups": [
    {
@@ -4549,8 +4549,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 359,
-    "pct": 101.1
+    "runs": 360,
+    "pct": 101.0
    },
    {
     "label": "First run after a break of 15 min+",
@@ -6630,13 +6630,13 @@
    },
    {
     "scenario": "ZEUS PART 2 - 2100",
-    "runs": 2,
-    "on_target": 22,
+    "runs": 4,
+    "on_target": 23,
     "reaction_ms": 133,
-    "overshoot_pct": 48,
+    "overshoot_pct": 46,
     "pps_by_distance": {
-     "far": 4.8,
-     "mid": 1.5
+     "far": 5.1,
+     "mid": 2.0
     }
    }
   ]
