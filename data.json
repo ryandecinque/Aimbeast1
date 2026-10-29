@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-29 18:32",
- "updated_utc": "2026-10-29T11:32:07Z",
+ "updated": "2026-10-29 18:37",
+ "updated_utc": "2026-10-29T11:37:04Z",
  "today": {
   "date": "2026-10-29",
   "progress": {}
@@ -1277,9 +1277,9 @@
  "days": [
   {
    "date": "2026-10-29",
-   "runs": 38,
-   "restarts": 79,
-   "rest_median_s": 90,
+   "runs": 40,
+   "restarts": 81,
+   "rest_median_s": 89,
    "rest_longest_s": 479,
    "breaks": [
     {
@@ -1304,9 +1304,9 @@
     },
     {
      "name": "1",
-     "runs": 3,
+     "runs": 5,
      "first": "18:26",
-     "last": "18:32"
+     "last": "18:36"
     }
    ],
    "scenarios": [
@@ -1397,6 +1397,14 @@
      "first": "18:32",
      "best": 610,
      "median": 610
+    },
+    {
+     "name": "LSI FAR DODGE L3",
+     "runs": 2,
+     "routine": "1",
+     "first": "18:34",
+     "best": 452,
+     "median": 446
     }
    ]
   },
@@ -4625,18 +4633,18 @@
   }
  ],
  "rest_effect": {
-  "runs": 1062,
+  "runs": 1064,
   "days": 23,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 418,
+    "runs": 420,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
     "runs": 101,
-    "pct": 99.2
+    "pct": 98.8
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -6709,6 +6717,16 @@
    }
   ],
   "2026-10-29": [
+   {
+    "scenario": "LSI FAR DODGE L3",
+    "runs": 2,
+    "on_target": 36,
+    "reaction_ms": 58,
+    "overshoot_pct": 46,
+    "pps_by_distance": {
+     "far": 7.4
+    }
+   },
    {
     "scenario": "LSI VERY FAR DODGE L2",
     "runs": 2,
