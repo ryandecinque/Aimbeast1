@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-29 15:12",
- "updated_utc": "2026-10-29T08:12:06Z",
+ "updated": "2026-10-29 15:17",
+ "updated_utc": "2026-10-29T08:17:04Z",
  "today": {
   "date": "2026-10-29",
   "progress": {}
@@ -1277,17 +1277,17 @@
  "days": [
   {
    "date": "2026-10-29",
-   "runs": 15,
+   "runs": 17,
    "restarts": 43,
-   "rest_median_s": 105,
+   "rest_median_s": 103,
    "rest_longest_s": 479,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS VARIANTS",
-     "runs": 15,
+     "runs": 17,
      "first": "13:27",
-     "last": "15:09"
+     "last": "15:13"
     }
    ],
    "scenarios": [
@@ -1317,11 +1317,19 @@
     },
     {
      "name": "ZEUS PART 4 - 1100",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS VARIANTS",
      "first": "15:06",
-     "best": 394,
-     "median": 392
+     "best": 438,
+     "median": 394
+    },
+    {
+     "name": "ZEUS PART 5 - CLOSE 600",
+     "runs": 1,
+     "routine": "ZEUS VARIANTS",
+     "first": "15:13",
+     "best": 549,
+     "median": 549
     }
    ]
   },
@@ -4550,12 +4558,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1040,
+  "runs": 1042,
   "days": 23,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 412,
+    "runs": 413,
     "pct": 100.0
    },
    {
@@ -4565,8 +4573,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 362,
-    "pct": 100.9
+    "runs": 363,
+    "pct": 101.1
    },
    {
     "label": "First run after a break of 15 min+",
@@ -6668,13 +6676,23 @@
    },
    {
     "scenario": "ZEUS PART 4 - 1100",
-    "runs": 2,
+    "runs": 3,
     "on_target": 28,
-    "reaction_ms": 134,
-    "overshoot_pct": 38,
+    "reaction_ms": 133,
+    "overshoot_pct": 40,
     "pps_by_distance": {
-     "mid": 6.9,
-     "close": 5.9
+     "mid": 7.3,
+     "close": 6.6
+    }
+   },
+   {
+    "scenario": "ZEUS PART 5 - CLOSE 600",
+    "runs": 1,
+    "on_target": 41,
+    "reaction_ms": 150,
+    "overshoot_pct": 30,
+    "pps_by_distance": {
+     "close": 9.2
     }
    }
   ]
