@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-29 17:47",
- "updated_utc": "2026-10-29T10:47:46Z",
+ "updated": "2026-10-29 18:32",
+ "updated_utc": "2026-10-29T11:32:07Z",
  "today": {
   "date": "2026-10-29",
   "progress": {}
@@ -1277,9 +1277,9 @@
  "days": [
   {
    "date": "2026-10-29",
-   "runs": 35,
-   "restarts": 77,
-   "rest_median_s": 87,
+   "runs": 38,
+   "restarts": 79,
+   "rest_median_s": 90,
    "rest_longest_s": 479,
    "breaks": [
     {
@@ -1287,6 +1287,12 @@
      "before": "ZEUS VARIANTS",
      "at": "15:13",
      "minutes": 99.2
+    },
+    {
+     "after": "ZEUS VARIANTS",
+     "before": "1",
+     "at": "17:45",
+     "minutes": 39.8
     }
    ],
    "playlists": [
@@ -1295,6 +1301,12 @@
      "runs": 35,
      "first": "13:27",
      "last": "17:45"
+    },
+    {
+     "name": "1",
+     "runs": 3,
+     "first": "18:26",
+     "last": "18:32"
     }
    ],
    "scenarios": [
@@ -1369,6 +1381,22 @@
      "first": "17:32",
      "best": 766,
      "median": 746
+    },
+    {
+     "name": "LSI VERY FAR DODGE L2",
+     "runs": 2,
+     "routine": "1",
+     "first": "18:26",
+     "best": 582,
+     "median": 548
+    },
+    {
+     "name": "LSI VERY FAR DODGE L2 - 2X STRAFES",
+     "runs": 1,
+     "routine": "1",
+     "first": "18:32",
+     "best": 610,
+     "median": 610
     }
    ]
   },
@@ -4597,12 +4625,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1060,
+  "runs": 1062,
   "days": 23,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 417,
+    "runs": 418,
     "pct": 100.0
    },
    {
@@ -4612,13 +4640,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 372,
+    "runs": 373,
     "pct": 101.1
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 66,
-    "pct": 96.5
+    "runs": 67,
+    "pct": 96.6
    }
   ]
  },
@@ -6681,6 +6709,26 @@
    }
   ],
   "2026-10-29": [
+   {
+    "scenario": "LSI VERY FAR DODGE L2",
+    "runs": 2,
+    "on_target": 36,
+    "reaction_ms": 80,
+    "overshoot_pct": 32,
+    "pps_by_distance": {
+     "far": 9.1
+    }
+   },
+   {
+    "scenario": "LSI VERY FAR DODGE L2 - 2X STRAFES",
+    "runs": 1,
+    "on_target": 48,
+    "reaction_ms": 17,
+    "overshoot_pct": 31,
+    "pps_by_distance": {
+     "far": 10.0
+    }
+   },
    {
     "scenario": "ZEUS PART 1 - FAR 2600",
     "runs": 3,
