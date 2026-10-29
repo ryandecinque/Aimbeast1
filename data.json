@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-29 13:42",
- "updated_utc": "2026-10-29T06:42:05Z",
+ "updated": "2026-10-29 14:27",
+ "updated_utc": "2026-10-29T07:27:20Z",
  "today": {
   "date": "2026-10-29",
   "progress": {}
@@ -1277,26 +1277,26 @@
  "days": [
   {
    "date": "2026-10-29",
-   "runs": 2,
-   "restarts": 10,
-   "rest_median_s": 230,
+   "runs": 3,
+   "restarts": 20,
+   "rest_median_s": 144,
    "rest_longest_s": 347,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS VARIANTS",
-     "runs": 2,
+     "runs": 3,
      "first": "13:27",
-     "last": "13:37"
+     "last": "14:24"
     }
    ],
    "scenarios": [
     {
      "name": "ZEUS PART 1 - FAR 2600",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS VARIANTS",
      "first": "13:27",
-     "best": 276,
+     "best": 312,
      "median": 276
     }
    ]
@@ -4526,7 +4526,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1027,
+  "runs": 1028,
   "days": 23,
   "groups": [
    {
@@ -4541,8 +4541,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 357,
-    "pct": 100.9
+    "runs": 358,
+    "pct": 101.0
    },
    {
     "label": "First run after a break of 15 min+",
@@ -6612,12 +6612,12 @@
   "2026-10-29": [
    {
     "scenario": "ZEUS PART 1 - FAR 2600",
-    "runs": 2,
-    "on_target": 24,
+    "runs": 3,
+    "on_target": 26,
     "reaction_ms": null,
-    "overshoot_pct": 44,
+    "overshoot_pct": 46,
     "pps_by_distance": {
-     "far": 4.5
+     "far": 4.6
     }
    }
   ]
