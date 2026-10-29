@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-28 04:57",
- "updated_utc": "2026-10-27T21:57:17Z",
+ "updated": "2026-10-29 13:32",
+ "updated_utc": "2026-10-29T06:32:20Z",
  "today": {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "progress": {}
  },
  "plan_start": "2026-10-07",
@@ -95,9 +95,9 @@
    "name": "PASU TRACK EVO (RCT) - 0.85X",
    "master3": 506.0,
    "official_best": 398.0,
-   "best_14d": 351.0,
-   "median_14d": 307,
-   "runs_14d": 24,
+   "best_14d": 321.0,
+   "median_14d": 284,
+   "runs_14d": 10,
    "steps": [
     0.0,
     138.0,
@@ -123,9 +123,9 @@
    "name": "PASU TRACK XYZ",
    "master3": 660.0,
    "official_best": 580.0,
-   "best_14d": 524.0,
-   "median_14d": 424,
-   "runs_14d": 21,
+   "best_14d": 494.0,
+   "median_14d": 402,
+   "runs_14d": 8,
    "steps": [
     0.0,
     180.0,
@@ -152,8 +152,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 570.0,
-   "median_14d": 503,
-   "runs_14d": 121,
+   "median_14d": 504,
+   "runs_14d": 105,
    "steps": [
     0.0,
     198.0,
@@ -1275,6 +1275,32 @@
   }
  ],
  "days": [
+  {
+   "date": "2026-10-29",
+   "runs": 1,
+   "restarts": 2,
+   "rest_median_s": null,
+   "rest_longest_s": null,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "ZEUS VARIANTS",
+     "runs": 1,
+     "first": "13:27",
+     "last": "13:27"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "ZEUS PART 1 - FAR 2600",
+     "runs": 1,
+     "routine": "ZEUS VARIANTS",
+     "first": "13:27",
+     "best": 276,
+     "median": 276
+    }
+   ]
+  },
   {
    "date": "2026-10-28",
    "runs": 14,
@@ -4500,12 +4526,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1025,
-  "days": 22,
+  "runs": 1026,
+  "days": 23,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 408,
+    "runs": 409,
     "pct": 100.0
    },
    {
@@ -4521,7 +4547,7 @@
    {
     "label": "First run after a break of 15 min+",
     "runs": 65,
-    "pct": 97.2
+    "pct": 96.6
    }
   ]
  },
@@ -6580,6 +6606,18 @@
     "overshoot_pct": 40,
     "pps_by_distance": {
      "far": 9.3
+    }
+   }
+  ],
+  "2026-10-29": [
+   {
+    "scenario": "ZEUS PART 1 - FAR 2600",
+    "runs": 1,
+    "on_target": 23,
+    "reaction_ms": null,
+    "overshoot_pct": 52,
+    "pps_by_distance": {
+     "far": 4.5
     }
    }
   ]
