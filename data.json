@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-29 17:17",
- "updated_utc": "2026-10-29T10:17:08Z",
+ "updated": "2026-10-29 17:27",
+ "updated_utc": "2026-10-29T10:27:06Z",
  "today": {
   "date": "2026-10-29",
   "progress": {}
@@ -1277,9 +1277,9 @@
  "days": [
   {
    "date": "2026-10-29",
-   "runs": 25,
-   "restarts": 61,
-   "rest_median_s": 78,
+   "runs": 27,
+   "restarts": 63,
+   "rest_median_s": 96,
    "rest_longest_s": 479,
    "breaks": [
     {
@@ -1292,9 +1292,9 @@
    "playlists": [
     {
      "name": "ZEUS VARIANTS",
-     "runs": 25,
+     "runs": 27,
      "first": "13:27",
-     "last": "17:15"
+     "last": "17:24"
     }
    ],
    "scenarios": [
@@ -1348,11 +1348,19 @@
     },
     {
      "name": "ZEUS PART 7 - FAR LONG STRAFES",
-     "runs": 3,
+     "runs": 4,
      "routine": "ZEUS VARIANTS",
      "first": "17:05",
-     "best": 388,
-     "median": 379
+     "best": 409,
+     "median": 384
+    },
+    {
+     "name": "ZEUS PART 8 - CLOSE CATCH-UP",
+     "runs": 1,
+     "routine": "ZEUS VARIANTS",
+     "first": "17:24",
+     "best": 497,
+     "median": 497
     }
    ]
   },
@@ -4581,12 +4589,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1050,
+  "runs": 1052,
   "days": 23,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 415,
+    "runs": 416,
     "pct": 100.0
    },
    {
@@ -4596,8 +4604,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 366,
-    "pct": 101.0
+    "runs": 367,
+    "pct": 101.1
    },
    {
     "label": "First run after a break of 15 min+",
@@ -6730,12 +6738,22 @@
    },
    {
     "scenario": "ZEUS PART 7 - FAR LONG STRAFES",
-    "runs": 3,
+    "runs": 4,
     "on_target": 34,
     "reaction_ms": null,
-    "overshoot_pct": 19,
+    "overshoot_pct": 21,
     "pps_by_distance": {
-     "far": 6.3
+     "far": 6.4
+    }
+   },
+   {
+    "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
+    "runs": 1,
+    "on_target": 36,
+    "reaction_ms": 134,
+    "overshoot_pct": 36,
+    "pps_by_distance": {
+     "close": 8.2
     }
    }
   ]
