@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31 05:42",
- "updated_utc": "2026-10-30T22:42:20Z",
+ "updated": "2026-10-31 05:47",
+ "updated_utc": "2026-10-30T22:47:10Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
-   "ZEUS FOCUS": 5
+   "ZEUS FOCUS": 8
   }
  },
  "plan_start": "2026-10-07",
@@ -948,6 +948,16 @@
    "text": "Playlist: ZEUS FOCUS, second play of the day\nEvery scenario beat your usual. Zeus Part 2 - 2100 led the way, a typical 337 against your 14-day typical of 311.\nOne thing to try: after each turn, the correction is landing past the bot. Use a smaller input from the wrist and fingers and aim to stop on the bot's near side. It should feel quiet, almost too small."
   },
   {
+   "date": "2026-10-31",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, third play of the day\nEvery scenario came in under your usual. Zeus Part 8 - Close Catch-Up dropped the most: a typical 458, against 475 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim and mouse movement were all close to usual or better.\nOne thing to try: the over-aim comes from corrections that are bigger than the bot's move. Make them with your wrist and fingers, and make them smaller. It should feel like a nudge that stops on the near edge of the bot, a little late rather than through it."
+  },
+  {
+   "date": "2026-10-31",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, fourth play of the day\nBelow your usual on every scenario. Zeus Part 8 - Close Catch-Up was the weak spot, a typical 448 against your 14-day typical of 475.\nZeus Part 8 - Close Catch-Up had more over-aim than your last 14 days: 46% of corrections went past the bot.\nOne thing to try: too much arm in each correction carries the crosshair past the bot. Correct with wrist and fingers only, and smaller than feels natural. It should feel calm and slightly behind, not like a swing."
+  },
+  {
    "date": "2026-10-26",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS\nAbove your usual on every scenario. Zeus Track Evo - Close 115% stood out: a typical 475, against 454 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim and mouse movement were all close to usual or better.\nOne thing to try: too much arm in each correction carries the crosshair past the bot. Correct with wrist and fingers only, and smaller than feels natural. It should feel calm and slightly behind, not like a swing."
@@ -1676,9 +1686,9 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 33,
-   "restarts": 141,
-   "rest_median_s": 159,
+   "runs": 36,
+   "restarts": 144,
+   "rest_median_s": 154,
    "rest_longest_s": 558,
    "breaks": [
     {
@@ -1739,9 +1749,9 @@
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 5,
+     "runs": 8,
      "first": "05:30",
-     "last": "05:40"
+     "last": "05:45"
     }
    ],
    "scenarios": [
@@ -1803,11 +1813,11 @@
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 2,
+     "runs": 5,
      "routine": "ZEUS FOCUS",
      "first": "05:38",
      "best": 489,
-     "median": 487
+     "median": 475
     }
    ]
   },
@@ -5286,7 +5296,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1140,
+  "runs": 1143,
   "days": 25,
   "groups": [
    {
@@ -5296,12 +5306,12 @@
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 101,
-    "pct": 98.6
+    "runs": 102,
+    "pct": 98.7
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 404,
+    "runs": 406,
     "pct": 101.1
    },
    {
@@ -7664,12 +7674,12 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 2,
+    "runs": 5,
     "on_target": 35,
-    "reaction_ms": 142,
-    "overshoot_pct": 36,
+    "reaction_ms": 150,
+    "overshoot_pct": 44,
     "pps_by_distance": {
-     "close": 8.1
+     "close": 7.9
     }
    },
    {
