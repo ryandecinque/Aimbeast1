@@ -611,19 +611,19 @@
  "2026-10-31": [
   {
    "scenario": "Zeus Track Evo - Noblink",
-   "score": 499,
-   "time": "02:00",
+   "score": 530,
+   "time": "02:14",
    "gif": "best-zeus-2026-10-31",
    "video": true,
-   "on_target": 36,
-   "reaction_ms": 150,
-   "overshoot_pct": 42,
+   "on_target": 39,
+   "reaction_ms": 133,
+   "overshoot_pct": 36,
    "best_14d": 574,
    "master3": 726,
-   "note": "Best of 2 recorded today (median 490). The clip is its 8 seconds with the most hits.",
+   "note": "Best of 4 recorded today (median 490). The clip is its 8 seconds with the most hits.",
    "model": {
     "file": "model-zeus-2026-10-31",
-    "label": "Model: 599"
+    "label": "Model: 636"
    }
   }
  ]
