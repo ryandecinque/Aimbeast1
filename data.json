@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31 05:32",
- "updated_utc": "2026-10-30T22:32:12Z",
+ "updated": "2026-10-31 05:37",
+ "updated_utc": "2026-10-30T22:37:15Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
-   "ZEUS FOCUS": 2
+   "ZEUS FOCUS": 3
   }
  },
  "plan_start": "2026-10-07",
@@ -938,6 +938,11 @@
  ],
  "journal": [
   {
+   "date": "2026-10-31",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS\nA typical play: scores matched your usual. Zeus Part 2 - 2100 was a typical 312, the same level as your last 14 days (311).\nOne thing to try: the extra input comes from chasing every small change. Let small bot moves go and reduce your input to the bot's real path. It should feel slower and steadier."
+  },
+  {
    "date": "2026-10-26",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS\nAbove your usual on every scenario. Zeus Track Evo - Close 115% stood out: a typical 475, against 454 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim and mouse movement were all close to usual or better.\nOne thing to try: too much arm in each correction carries the crosshair past the bot. Correct with wrist and fingers only, and smaller than feels natural. It should feel calm and slightly behind, not like a swing."
@@ -1666,9 +1671,9 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 30,
+   "runs": 31,
    "restarts": 138,
-   "rest_median_s": 192,
+   "rest_median_s": 175,
    "rest_longest_s": 558,
    "breaks": [
     {
@@ -1729,9 +1734,9 @@
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 2,
+     "runs": 3,
      "first": "05:30",
-     "last": "05:31"
+     "last": "05:35"
     }
    ],
    "scenarios": [
@@ -1785,11 +1790,11 @@
     },
     {
      "name": "ZEUS PART 2 - 2100",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS FOCUS",
      "first": "05:30",
-     "best": 313,
-     "median": 312
+     "best": 337,
+     "median": 313
     }
    ]
   },
@@ -5268,7 +5273,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1136,
+  "runs": 1138,
   "days": 25,
   "groups": [
    {
@@ -5283,7 +5288,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 402,
+    "runs": 403,
     "pct": 101.1
    },
    {
@@ -7635,12 +7640,13 @@
    },
    {
     "scenario": "ZEUS PART 2 - 2100",
-    "runs": 2,
-    "on_target": 24,
-    "reaction_ms": 155,
-    "overshoot_pct": 44,
+    "runs": 3,
+    "on_target": 25,
+    "reaction_ms": 160,
+    "overshoot_pct": 45,
     "pps_by_distance": {
-     "far": 5.2
+     "far": 5.3,
+     "mid": 4.2
     }
    },
    {
