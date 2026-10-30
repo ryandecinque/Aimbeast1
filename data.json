@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-31 01:02",
- "updated_utc": "2026-10-30T18:02:05Z",
+ "updated": "2026-10-31 01:27",
+ "updated_utc": "2026-10-30T18:27:08Z",
  "today": {
   "date": "2026-10-31",
   "progress": {}
@@ -1283,8 +1283,8 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 3,
-   "restarts": 2,
+   "runs": 4,
+   "restarts": 3,
    "rest_median_s": 175,
    "rest_longest_s": 175,
    "breaks": [
@@ -1293,14 +1293,20 @@
      "before": "1",
      "at": "00:40",
      "minutes": 16.8
+    },
+    {
+     "after": "1",
+     "before": "1",
+     "at": "00:58",
+     "minutes": 24.9
     }
    ],
    "playlists": [
     {
      "name": "1",
-     "runs": 3,
+     "runs": 4,
      "first": "00:36",
-     "last": "00:58"
+     "last": "01:24"
     }
    ],
    "scenarios": [
@@ -1314,11 +1320,11 @@
     },
     {
      "name": "LSI VERY FAR DODGE L2 - 2X STRAFES",
-     "runs": 1,
+     "runs": 2,
      "routine": "1",
      "first": "00:58",
      "best": 557,
-     "median": 557
+     "median": 548
     }
    ]
   },
@@ -4797,7 +4803,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1110,
+  "runs": 1111,
   "days": 25,
   "groups": [
    {
@@ -4817,8 +4823,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 69,
-    "pct": 96.6
+    "runs": 70,
+    "pct": 97.4
    }
   ]
  },
@@ -7124,12 +7130,12 @@
    },
    {
     "scenario": "LSI VERY FAR DODGE L2 - 2X STRAFES",
-    "runs": 1,
+    "runs": 2,
     "on_target": 46,
-    "reaction_ms": 100,
-    "overshoot_pct": 37,
+    "reaction_ms": 75,
+    "overshoot_pct": 42,
     "pps_by_distance": {
-     "far": 9.2
+     "far": 9.1
     }
    }
   ]
