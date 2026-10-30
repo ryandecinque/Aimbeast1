@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-30 18:41",
- "updated_utc": "2026-10-30T11:41:58Z",
+ "updated": "2026-10-30 18:47",
+ "updated_utc": "2026-10-30T11:47:02Z",
  "today": {
   "date": "2026-10-30",
   "progress": {}
@@ -1277,17 +1277,17 @@
  "days": [
   {
    "date": "2026-10-30",
-   "runs": 19,
-   "restarts": 38,
-   "rest_median_s": 48,
-   "rest_longest_s": 304,
+   "runs": 20,
+   "restarts": 39,
+   "rest_median_s": 50,
+   "rest_longest_s": 385,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS VARIANTS",
-     "runs": 19,
+     "runs": 20,
      "first": "17:53",
-     "last": "18:37"
+     "last": "18:44"
     }
    ],
    "scenarios": [
@@ -1346,6 +1346,14 @@
      "first": "18:31",
      "best": 400,
      "median": 395
+    },
+    {
+     "name": "ZEUS PART 8 - CLOSE CATCH-UP",
+     "runs": 1,
+     "routine": "ZEUS VARIANTS",
+     "first": "18:44",
+     "best": 493,
+     "median": 493
     }
    ]
   },
@@ -4707,12 +4715,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1085,
+  "runs": 1086,
   "days": 24,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 427,
+    "runs": 428,
     "pct": 100.0
    },
    {
@@ -6986,6 +6994,16 @@
     "overshoot_pct": 28,
     "pps_by_distance": {
      "far": 6.6
+    }
+   },
+   {
+    "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
+    "runs": 1,
+    "on_target": 36,
+    "reaction_ms": 133,
+    "overshoot_pct": 44,
+    "pps_by_distance": {
+     "close": 8.2
     }
    }
   ]
