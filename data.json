@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31 05:52",
- "updated_utc": "2026-10-30T22:52:23Z",
+ "updated": "2026-10-31 05:57",
+ "updated_utc": "2026-10-30T22:57:08Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
-   "ZEUS FOCUS": 9
+   "ZEUS FOCUS": 10
   }
  },
  "plan_start": "2026-10-07",
@@ -981,6 +981,11 @@
    "date": "2026-10-31",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS, 9th play of the day\nRight at your usual level. Zeus Part 8 - Close Catch-Up sat right on your usual: a typical 484, against 475 over the last 14 days.\nOne thing to try: after each turn, the correction is landing past the bot. Use a smaller input from the wrist and fingers and aim to stop on the bot's near side. It should feel quiet, almost too small."
+  },
+  {
+   "date": "2026-10-31",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, 10th play of the day\nScores sat on your usual level. Zeus Part 8 - Close Catch-Up was a typical 478, the same level as your last 14 days (475).\nOne thing to try: too much arm in each correction carries the crosshair past the bot. Correct with wrist and fingers only, and smaller than feels natural. It should feel calm and slightly behind, not like a swing."
   },
   {
    "date": "2026-10-26",
@@ -2316,8 +2321,8 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 37,
-   "restarts": 146,
+   "runs": 38,
+   "restarts": 150,
    "rest_median_s": 151,
    "rest_longest_s": 558,
    "breaks": [
@@ -2379,9 +2384,9 @@
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 9,
+     "runs": 10,
      "first": "05:30",
-     "last": "05:48"
+     "last": "05:53"
     }
    ],
    "scenarios": [
@@ -2443,11 +2448,11 @@
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 6,
+     "runs": 7,
      "routine": "ZEUS FOCUS",
      "first": "05:38",
      "best": 489,
-     "median": 480
+     "median": 478
     }
    ]
   },
@@ -5926,7 +5931,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1144,
+  "runs": 1145,
   "days": 25,
   "groups": [
    {
@@ -8304,10 +8309,10 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 6,
+    "runs": 7,
     "on_target": 34,
     "reaction_ms": 150,
-    "overshoot_pct": 46,
+    "overshoot_pct": 44,
     "pps_by_distance": {
      "close": 8.0
     }
