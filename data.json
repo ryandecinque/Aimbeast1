@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-31 01:32",
- "updated_utc": "2026-10-30T18:32:04Z",
+ "updated": "2026-10-31 01:37",
+ "updated_utc": "2026-10-30T18:37:04Z",
  "today": {
   "date": "2026-10-31",
   "progress": {}
@@ -1283,9 +1283,9 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 6,
-   "restarts": 6,
-   "rest_median_s": 228,
+   "runs": 8,
+   "restarts": 9,
+   "rest_median_s": 175,
    "rest_longest_s": 281,
    "breaks": [
     {
@@ -1305,20 +1305,26 @@
      "before": "(single scenario)",
      "at": "01:30",
      "minutes": 0.8
+    },
+    {
+     "after": "(single scenario)",
+     "before": "1",
+     "at": "01:34",
+     "minutes": 1.6
     }
    ],
    "playlists": [
     {
      "name": "1",
-     "runs": 5,
+     "runs": 6,
      "first": "00:36",
-     "last": "01:30"
+     "last": "01:36"
     },
     {
      "name": "(single scenario)",
-     "runs": 1,
+     "runs": 2,
      "first": "01:32",
-     "last": "01:32"
+     "last": "01:34"
     }
    ],
    "scenarios": [
@@ -1345,6 +1351,22 @@
      "first": "01:32",
      "best": 611,
      "median": 611
+    },
+    {
+     "name": "143 ANY STRAFES (FAR)",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "01:34",
+     "best": 696,
+     "median": 696
+    },
+    {
+     "name": "LSI FAR DODGE L3",
+     "runs": 1,
+     "routine": "1",
+     "first": "01:36",
+     "best": 382,
+     "median": 382
     }
    ]
   },
@@ -4823,18 +4845,18 @@
   }
  ],
  "rest_effect": {
-  "runs": 1112,
+  "runs": 1114,
   "days": 25,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 432,
+    "runs": 434,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
     "runs": 101,
-    "pct": 98.6
+    "pct": 99.2
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -7138,6 +7160,26 @@
    }
   ],
   "2026-10-31": [
+   {
+    "scenario": "143 ANY STRAFES FAR",
+    "runs": 1,
+    "on_target": 23,
+    "reaction_ms": null,
+    "overshoot_pct": 52,
+    "pps_by_distance": {
+     "far": 7.7
+    }
+   },
+   {
+    "scenario": "LSI FAR DODGE L3",
+    "runs": 1,
+    "on_target": 31,
+    "reaction_ms": 83,
+    "overshoot_pct": 49,
+    "pps_by_distance": {
+     "far": 6.3
+    }
+   },
    {
     "scenario": "LSI VERY FAR DODGE L2",
     "runs": 2,
