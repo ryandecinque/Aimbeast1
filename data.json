@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-30 18:27",
- "updated_utc": "2026-10-30T11:27:05Z",
+ "updated": "2026-10-30 18:32",
+ "updated_utc": "2026-10-30T11:32:00Z",
  "today": {
   "date": "2026-10-30",
   "progress": {}
@@ -1277,17 +1277,17 @@
  "days": [
   {
    "date": "2026-10-30",
-   "runs": 17,
+   "runs": 18,
    "restarts": 37,
-   "rest_median_s": 44,
-   "rest_longest_s": 93,
+   "rest_median_s": 45,
+   "rest_longest_s": 304,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS VARIANTS",
-     "runs": 17,
+     "runs": 18,
      "first": "17:53",
-     "last": "18:25"
+     "last": "18:31"
     }
    ],
    "scenarios": [
@@ -1338,6 +1338,14 @@
      "first": "18:23",
      "best": 272,
      "median": 251
+    },
+    {
+     "name": "ZEUS PART 7 - FAR LONG STRAFES",
+     "runs": 1,
+     "routine": "ZEUS VARIANTS",
+     "first": "18:31",
+     "best": 390,
+     "median": 390
     }
    ]
   },
@@ -4699,12 +4707,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1083,
+  "runs": 1084,
   "days": 24,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 426,
+    "runs": 427,
     "pct": 100.0
    },
    {
@@ -6968,6 +6976,16 @@
     "overshoot_pct": 46,
     "pps_by_distance": {
      "far": 4.2
+    }
+   },
+   {
+    "scenario": "ZEUS PART 7 - FAR LONG STRAFES",
+    "runs": 1,
+    "on_target": 34,
+    "reaction_ms": null,
+    "overshoot_pct": 30,
+    "pps_by_distance": {
+     "far": 6.5
     }
    }
   ]
