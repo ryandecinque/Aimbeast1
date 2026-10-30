@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-29 18:42",
- "updated_utc": "2026-10-29T11:42:01Z",
+ "updated": "2026-10-30 17:57",
+ "updated_utc": "2026-10-30T10:57:12Z",
  "today": {
-  "date": "2026-10-29",
+  "date": "2026-10-30",
   "progress": {}
  },
  "plan_start": "2026-10-07",
@@ -95,9 +95,9 @@
    "name": "PASU TRACK EVO (RCT) - 0.85X",
    "master3": 506.0,
    "official_best": 398.0,
-   "best_14d": 321.0,
-   "median_14d": 284,
-   "runs_14d": 10,
+   "best_14d": null,
+   "median_14d": null,
+   "runs_14d": 0,
    "steps": [
     0.0,
     138.0,
@@ -123,9 +123,9 @@
    "name": "PASU TRACK XYZ",
    "master3": 660.0,
    "official_best": 580.0,
-   "best_14d": 494.0,
-   "median_14d": 402,
-   "runs_14d": 8,
+   "best_14d": null,
+   "median_14d": null,
+   "runs_14d": 0,
    "steps": [
     0.0,
     180.0,
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 570.0,
    "median_14d": 504,
-   "runs_14d": 105,
+   "runs_14d": 97,
    "steps": [
     0.0,
     198.0,
@@ -1275,6 +1275,48 @@
   }
  ],
  "days": [
+  {
+   "date": "2026-10-30",
+   "runs": 3,
+   "restarts": 4,
+   "rest_median_s": 33,
+   "rest_longest_s": 34,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "ZEUS VARIANTS",
+     "runs": 3,
+     "first": "17:53",
+     "last": "17:56"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "ZEUS PART 1 - FAR 2600",
+     "runs": 1,
+     "routine": "ZEUS VARIANTS",
+     "first": "17:53",
+     "best": 306,
+     "median": 306
+    },
+    {
+     "name": "ZEUS PART 2 - 2100",
+     "runs": 1,
+     "routine": "ZEUS VARIANTS",
+     "first": "17:54",
+     "best": 335,
+     "median": 335
+    },
+    {
+     "name": "ZEUS PART 3 - 1600",
+     "runs": 1,
+     "routine": "ZEUS VARIANTS",
+     "first": "17:56",
+     "best": 308,
+     "median": 308
+    }
+   ]
+  },
   {
    "date": "2026-10-29",
    "runs": 41,
@@ -4633,18 +4675,18 @@
   }
  ],
  "rest_effect": {
-  "runs": 1066,
-  "days": 23,
+  "runs": 1069,
+  "days": 24,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 420,
+    "runs": 423,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
     "runs": 101,
-    "pct": 98.8
+    "pct": 98.6
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -6838,6 +6880,39 @@
     "overshoot_pct": 18,
     "pps_by_distance": {
      "close": 12.4
+    }
+   }
+  ],
+  "2026-10-30": [
+   {
+    "scenario": "ZEUS PART 1 - FAR 2600",
+    "runs": 1,
+    "on_target": 28,
+    "reaction_ms": null,
+    "overshoot_pct": 44,
+    "pps_by_distance": {
+     "far": 5.0
+    }
+   },
+   {
+    "scenario": "ZEUS PART 2 - 2100",
+    "runs": 1,
+    "on_target": 27,
+    "reaction_ms": 167,
+    "overshoot_pct": 45,
+    "pps_by_distance": {
+     "far": 5.6
+    }
+   },
+   {
+    "scenario": "ZEUS PART 3 - 1600",
+    "runs": 1,
+    "on_target": 23,
+    "reaction_ms": 150,
+    "overshoot_pct": 47,
+    "pps_by_distance": {
+     "far": 2.2,
+     "mid": 6.0
     }
    }
   ]
