@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-31 01:42",
- "updated_utc": "2026-10-30T18:42:06Z",
+ "updated": "2026-10-31 01:52",
+ "updated_utc": "2026-10-30T18:52:05Z",
  "today": {
   "date": "2026-10-31",
   "progress": {}
@@ -1283,8 +1283,8 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 9,
-   "restarts": 10,
+   "runs": 10,
+   "restarts": 13,
    "rest_median_s": 130,
    "rest_longest_s": 281,
    "breaks": [
@@ -1311,6 +1311,12 @@
      "before": "1",
      "at": "01:34",
      "minutes": 1.6
+    },
+    {
+     "after": "1",
+     "before": "(single scenario)",
+     "at": "01:39",
+     "minutes": 6.1
     }
    ],
    "playlists": [
@@ -1322,9 +1328,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 2,
+     "runs": 3,
      "first": "01:32",
-     "last": "01:34"
+     "last": "01:46"
     }
    ],
    "scenarios": [
@@ -1354,11 +1360,11 @@
     },
     {
      "name": "143 ANY STRAFES (FAR)",
-     "runs": 1,
+     "runs": 2,
      "routine": "(single scenario)",
      "first": "01:34",
-     "best": 696,
-     "median": 696
+     "best": 732,
+     "median": 714
     },
     {
      "name": "LSI FAR DODGE L3",
@@ -4845,18 +4851,18 @@
   }
  ],
  "rest_effect": {
-  "runs": 1116,
+  "runs": 1117,
   "days": 25,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 435,
+    "runs": 436,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
     "runs": 101,
-    "pct": 99.2
+    "pct": 98.6
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -7162,12 +7168,12 @@
   "2026-10-31": [
    {
     "scenario": "143 ANY STRAFES FAR",
-    "runs": 1,
-    "on_target": 23,
+    "runs": 2,
+    "on_target": 21,
     "reaction_ms": null,
-    "overshoot_pct": 52,
+    "overshoot_pct": 54,
     "pps_by_distance": {
-     "far": 7.7
+     "far": 7.9
     }
    },
    {
