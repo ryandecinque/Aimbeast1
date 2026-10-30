@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-30 20:37",
- "updated_utc": "2026-10-30T13:37:05Z",
+ "updated": "2026-10-31 00:37",
+ "updated_utc": "2026-10-30T17:37:06Z",
  "today": {
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "progress": {}
  },
  "plan_start": "2026-10-07",
@@ -39,9 +39,9 @@
    "name": "AIR TRACK SMOOTH V3 150%",
    "master3": 660.0,
    "official_best": 548.0,
-   "best_14d": 497.0,
-   "median_14d": 489,
-   "runs_14d": 5,
+   "best_14d": null,
+   "median_14d": null,
+   "runs_14d": 0,
    "steps": [
     0.0,
     180.0,
@@ -67,9 +67,9 @@
    "name": "AIR CONTROL SPHERE - S",
    "master3": 880.0,
    "official_best": 878.0,
-   "best_14d": 861.0,
-   "median_14d": 740,
-   "runs_14d": 5,
+   "best_14d": null,
+   "median_14d": null,
+   "runs_14d": 0,
    "steps": [
     0.0,
     240.0,
@@ -152,8 +152,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 574.0,
-   "median_14d": 505,
-   "runs_14d": 102,
+   "median_14d": 506,
+   "runs_14d": 92,
    "steps": [
     0.0,
     198.0,
@@ -1281,6 +1281,32 @@
   }
  ],
  "days": [
+  {
+   "date": "2026-10-31",
+   "runs": 1,
+   "restarts": 0,
+   "rest_median_s": null,
+   "rest_longest_s": null,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "1",
+     "runs": 1,
+     "first": "00:36",
+     "last": "00:36"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "LSI VERY FAR DODGE L2",
+     "runs": 1,
+     "routine": "1",
+     "first": "00:36",
+     "best": 556,
+     "median": 556
+    }
+   ]
+  },
   {
    "date": "2026-10-30",
    "runs": 41,
@@ -4756,12 +4782,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1106,
-  "days": 24,
+  "runs": 1108,
+  "days": 25,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 430,
+    "runs": 431,
     "pct": 100.0
    },
    {
@@ -4771,13 +4797,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 396,
+    "runs": 397,
     "pct": 101.1
    },
    {
     "label": "First run after a break of 15 min+",
     "runs": 68,
-    "pct": 97.4
+    "pct": 96.5
    }
   ]
  },
@@ -7067,6 +7093,18 @@
      "far": 9.3,
      "mid": 9.4,
      "close": 8.6
+    }
+   }
+  ],
+  "2026-10-31": [
+   {
+    "scenario": "LSI VERY FAR DODGE L2",
+    "runs": 1,
+    "on_target": 32,
+    "reaction_ms": 67,
+    "overshoot_pct": 27,
+    "pps_by_distance": {
+     "far": 9.3
     }
    }
   ]
