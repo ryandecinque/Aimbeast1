@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31 15:07",
- "updated_utc": "2026-10-31T08:07:12Z",
+ "updated": "2026-10-31 15:12",
+ "updated_utc": "2026-10-31T08:12:08Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
-   "ZEUS FOCUS": 24
+   "ZEUS FOCUS": 26
   }
  },
  "plan_start": "2026-10-07",
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 574.0,
    "median_14d": 506,
-   "runs_14d": 111,
+   "runs_14d": 112,
    "steps": [
     0.0,
     198.0,
@@ -929,9 +929,9 @@
     },
     {
      "date": "2026-10-31",
-     "median": 509,
+     "median": 510,
      "best": 551,
-     "runs": 19
+     "runs": 20
     }
    ]
   }
@@ -2351,8 +2351,8 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 54,
-   "restarts": 187,
+   "runs": 57,
+   "restarts": 189,
    "rest_median_s": 124,
    "rest_longest_s": 558,
    "breaks": [
@@ -2415,6 +2415,12 @@
      "before": "(single scenario)",
      "at": "15:04",
      "minutes": 0.3
+    },
+    {
+     "after": "(single scenario)",
+     "before": "ZEUS FOCUS",
+     "at": "15:08",
+     "minutes": 0.9
     }
    ],
    "playlists": [
@@ -2426,15 +2432,15 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 23,
+     "runs": 24,
      "first": "01:32",
-     "last": "15:05"
+     "last": "15:08"
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 24,
+     "runs": 26,
      "first": "05:30",
-     "last": "15:04"
+     "last": "15:11"
     }
    ],
    "scenarios": [
@@ -2480,11 +2486,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 19,
+     "runs": 20,
      "routine": "(single scenario)",
      "first": "01:56",
      "best": 551,
-     "median": 509
+     "median": 510
     },
     {
      "name": "ZEUS PART 2 - 2100",
@@ -2504,11 +2510,19 @@
     },
     {
      "name": "XEN TS 90% - RANKED",
-     "runs": 6,
+     "runs": 7,
      "routine": "(single scenario)",
      "first": "14:49",
      "best": 305,
-     "median": 298
+     "median": 297
+    },
+    {
+     "name": "TRM TS VARIED 5H - RANKED",
+     "runs": 1,
+     "routine": "ZEUS FOCUS",
+     "first": "15:10",
+     "best": 362,
+     "median": 362
     }
    ]
   },
@@ -5987,12 +6001,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1161,
+  "runs": 1163,
   "days": 25,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 447,
+    "runs": 448,
     "pct": 100.0
    },
    {
@@ -6002,7 +6016,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 409,
+    "runs": 410,
     "pct": 100.8
    },
    {
@@ -8375,7 +8389,7 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 19,
+    "runs": 20,
     "on_target": 36,
     "reaction_ms": 150,
     "overshoot_pct": 36,
