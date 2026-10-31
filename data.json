@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31 14:47",
- "updated_utc": "2026-10-31T07:47:17Z",
+ "updated": "2026-10-31 14:52",
+ "updated_utc": "2026-10-31T07:52:11Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
-   "ZEUS FOCUS": 16
+   "ZEUS FOCUS": 17
   }
  },
  "plan_start": "2026-10-07",
@@ -2351,9 +2351,9 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 44,
-   "restarts": 179,
-   "rest_median_s": 140,
+   "runs": 46,
+   "restarts": 182,
+   "rest_median_s": 138,
    "rest_longest_s": 558,
    "breaks": [
     {
@@ -2403,6 +2403,12 @@
      "before": "ZEUS FOCUS",
      "at": "06:18",
      "minutes": 500.4
+    },
+    {
+     "after": "(single scenario)",
+     "before": "ZEUS FOCUS",
+     "at": "14:49",
+     "minutes": 1.1
     }
    ],
    "playlists": [
@@ -2414,15 +2420,15 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 21,
+     "runs": 22,
      "first": "01:32",
-     "last": "05:03"
+     "last": "14:49"
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 16,
+     "runs": 17,
      "first": "05:30",
-     "last": "14:45"
+     "last": "14:51"
     }
    ],
    "scenarios": [
@@ -2484,11 +2490,19 @@
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 13,
+     "runs": 14,
      "routine": "ZEUS FOCUS",
      "first": "05:38",
-     "best": 502,
+     "best": 514,
      "median": 484
+    },
+    {
+     "name": "XEN TS 90% - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "14:49",
+     "best": 305,
+     "median": 305
     }
    ]
   },
@@ -5967,12 +5981,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1151,
+  "runs": 1152,
   "days": 25,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 439,
+    "runs": 440,
     "pct": 100.0
    },
    {
@@ -8345,12 +8359,12 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 13,
+    "runs": 14,
     "on_target": 34,
     "reaction_ms": 150,
     "overshoot_pct": 38,
     "pps_by_distance": {
-     "close": 8.0
+     "close": 8.1
     }
    },
    {
