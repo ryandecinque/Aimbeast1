@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-01 05:42",
- "updated_utc": "2026-10-31T22:42:33Z",
+ "updated": "2026-11-01 06:02",
+ "updated_utc": "2026-10-31T23:02:14Z",
  "today": {
   "date": "2026-11-01",
   "progress": {
-   "ZEUS FOCUS": 27
+   "ZEUS FOCUS": 29
   }
  },
  "plan_start": "2026-10-07",
@@ -951,6 +951,11 @@
    "date": "2026-11-01",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS, third play of the day\nAll of it was above your usual. Zeus Part 8 - Close Catch-Up stood out: a typical 522, against 485 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim, mouse movement and rests were all close to usual or better.\nOne thing to try: the long pauses cost your warm-up. Start the next run within a minute or two. It should feel like one steady block, not a series of fresh starts."
+  },
+  {
+   "date": "2026-11-01",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, fourth play of the day\nAbove your usual on every scenario. Zeus Part 8 - Close Catch-Up stood out: a typical 531, against 485 over the last 14 days.\nOne thing to try: going straight into the next run carries tension over. Rest half a minute to a minute and shake out your hand first. Starting should feel relaxed."
   },
   {
    "date": "2026-10-31",
@@ -2366,17 +2371,24 @@
  "days": [
   {
    "date": "2026-11-01",
-   "runs": 27,
-   "restarts": 59,
-   "rest_median_s": 49,
+   "runs": 29,
+   "restarts": 64,
+   "rest_median_s": 48,
    "rest_longest_s": 398,
-   "breaks": [],
+   "breaks": [
+    {
+     "after": "ZEUS FOCUS",
+     "before": "ZEUS FOCUS",
+     "at": "05:40",
+     "minutes": 18.0
+    }
+   ],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 27,
+     "runs": 29,
      "first": "04:24",
-     "last": "05:40"
+     "last": "06:00"
     }
    ],
    "scenarios": [
@@ -2406,19 +2418,19 @@
     },
     {
      "name": "POSSESSION STATIC SPHERE FAR CLICK",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS FOCUS",
      "first": "04:54",
      "best": 41,
-     "median": 30
+     "median": 41
     },
     {
      "name": "FLAT ARENA POSS -THIN FAST CLICK",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS FOCUS",
      "first": "05:00",
      "best": 23,
-     "median": 23
+     "median": 22
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR) BURST",
@@ -6168,12 +6180,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1232,
+  "runs": 1234,
   "days": 26,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 476,
+    "runs": 478,
     "pct": 100.0
    },
    {
@@ -6188,8 +6200,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 78,
-    "pct": 98.3
+    "runs": 79,
+    "pct": 98.2
    }
   ]
  },
