@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-01 05:12",
- "updated_utc": "2026-10-31T22:12:07Z",
+ "updated": "2026-11-01 05:17",
+ "updated_utc": "2026-10-31T22:17:06Z",
  "today": {
   "date": "2026-11-01",
   "progress": {
-   "ZEUS FOCUS": 18
+   "ZEUS FOCUS": 19
   }
  },
  "plan_start": "2026-10-07",
@@ -2361,17 +2361,17 @@
  "days": [
   {
    "date": "2026-11-01",
-   "runs": 18,
-   "restarts": 36,
+   "runs": 19,
+   "restarts": 43,
    "rest_median_s": 48,
    "rest_longest_s": 398,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 18,
+     "runs": 19,
      "first": "04:24",
-     "last": "05:11"
+     "last": "05:14"
     }
    ],
    "scenarios": [
@@ -2417,7 +2417,7 @@
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR) BURST",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS FOCUS",
      "first": "05:07",
      "best": 94,
@@ -6155,7 +6155,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1223,
+  "runs": 1224,
   "days": 26,
   "groups": [
    {
