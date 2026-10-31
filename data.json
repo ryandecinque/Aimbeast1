@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-31 18:02",
- "updated_utc": "2026-10-31T11:02:30Z",
+ "updated": "2026-10-31 18:12",
+ "updated_utc": "2026-10-31T11:12:17Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
@@ -2351,9 +2351,9 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 69,
-   "restarts": 202,
-   "rest_median_s": 94,
+   "runs": 73,
+   "restarts": 205,
+   "rest_median_s": 93,
    "rest_longest_s": 558,
    "breaks": [
     {
@@ -2432,9 +2432,9 @@
    "playlists": [
     {
      "name": "1",
-     "runs": 15,
+     "runs": 19,
      "first": "00:36",
-     "last": "18:00"
+     "last": "18:11"
     },
     {
      "name": "(single scenario)",
@@ -2460,11 +2460,11 @@
     },
     {
      "name": "LSI VERY FAR DODGE L2 - 2X STRAFES",
-     "runs": 5,
+     "runs": 7,
      "routine": "1",
      "first": "00:58",
      "best": 642,
-     "median": 540
+     "median": 550
     },
     {
      "name": "LSI VERY FAR L2",
@@ -2484,11 +2484,11 @@
     },
     {
      "name": "LSI FAR DODGE L3",
-     "runs": 2,
+     "runs": 4,
      "routine": "1",
      "first": "01:36",
      "best": 475,
-     "median": 428
+     "median": 448
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -6023,28 +6023,28 @@
   }
  ],
  "rest_effect": {
-  "runs": 1176,
+  "runs": 1179,
   "days": 25,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 454,
+    "runs": 455,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
     "runs": 103,
-    "pct": 98.6
+    "pct": 98.5
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 414,
+    "runs": 415,
     "pct": 100.8
    },
    {
     "label": "First run after a break of 15 min+",
     "runs": 74,
-    "pct": 97.5
+    "pct": 97.4
    }
   ]
  },
@@ -8350,12 +8350,12 @@
    },
    {
     "scenario": "LSI FAR DODGE L3",
-    "runs": 2,
+    "runs": 4,
     "on_target": 36,
     "reaction_ms": 83,
     "overshoot_pct": 46,
     "pps_by_distance": {
-     "far": 7.1
+     "far": 7.5
     }
    },
    {
@@ -8370,12 +8370,12 @@
    },
    {
     "scenario": "LSI VERY FAR DODGE L2 - 2X STRAFES",
-    "runs": 5,
-    "on_target": 45,
+    "runs": 7,
+    "on_target": 46,
     "reaction_ms": 83,
     "overshoot_pct": 37,
     "pps_by_distance": {
-     "far": 9.0
+     "far": 9.1
     }
    },
    {
