@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31 20:57",
- "updated_utc": "2026-10-31T13:57:15Z",
+ "updated": "2026-10-31 21:42",
+ "updated_utc": "2026-10-31T14:42:18Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
-   "ZEUS FOCUS": 42
+   "ZEUS FOCUS": 44
   }
  },
  "plan_start": "2026-10-07",
@@ -2351,8 +2351,8 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 96,
-   "restarts": 226,
+   "runs": 98,
+   "restarts": 227,
    "rest_median_s": 85,
    "rest_longest_s": 558,
    "breaks": [
@@ -2439,6 +2439,12 @@
      "before": "ZEUS FOCUS",
      "at": "19:52",
      "minutes": 29.9
+    },
+    {
+     "after": "ZEUS FOCUS",
+     "before": "ZEUS FOCUS",
+     "at": "20:54",
+     "minutes": 43.1
     }
    ],
    "playlists": [
@@ -2456,9 +2462,9 @@
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 42,
+     "runs": 44,
      "first": "05:30",
-     "last": "20:54"
+     "last": "21:40"
     }
    ],
    "scenarios": [
@@ -2573,6 +2579,22 @@
      "first": "19:41",
      "best": 200,
      "median": 194
+    },
+    {
+     "name": "POSSESSION STATIC SPHERE FAR CLICK",
+     "runs": 1,
+     "routine": "ZEUS FOCUS",
+     "first": "21:39",
+     "best": 32,
+     "median": 32
+    },
+    {
+     "name": "FLAT ARENA POSS -THIN FAST CLICK",
+     "runs": 1,
+     "routine": "ZEUS FOCUS",
+     "first": "21:40",
+     "best": 15,
+     "median": 15
     }
    ]
   },
@@ -6051,12 +6073,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1203,
+  "runs": 1205,
   "days": 25,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 463,
+    "runs": 465,
     "pct": 100.0
    },
    {
@@ -6071,8 +6093,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 76,
-    "pct": 97.4
+    "runs": 77,
+    "pct": 98.2
    }
   ]
  },
