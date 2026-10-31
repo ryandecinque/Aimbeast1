@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-31 17:52",
- "updated_utc": "2026-10-31T10:52:09Z",
+ "updated": "2026-10-31 18:02",
+ "updated_utc": "2026-10-31T11:02:30Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
@@ -2351,9 +2351,9 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 66,
-   "restarts": 199,
-   "rest_median_s": 98,
+   "runs": 69,
+   "restarts": 202,
+   "rest_median_s": 94,
    "rest_longest_s": 558,
    "breaks": [
     {
@@ -2432,9 +2432,9 @@
    "playlists": [
     {
      "name": "1",
-     "runs": 12,
+     "runs": 15,
      "first": "00:36",
-     "last": "17:50"
+     "last": "18:00"
     },
     {
      "name": "(single scenario)",
@@ -2452,19 +2452,19 @@
    "scenarios": [
     {
      "name": "LSI VERY FAR DODGE L2",
-     "runs": 7,
+     "runs": 8,
      "routine": "1",
      "first": "00:36",
      "best": 594,
-     "median": 553
+     "median": 554
     },
     {
      "name": "LSI VERY FAR DODGE L2 - 2X STRAFES",
-     "runs": 3,
+     "runs": 5,
      "routine": "1",
      "first": "00:58",
      "best": 642,
-     "median": 557
+     "median": 540
     },
     {
      "name": "LSI VERY FAR L2",
@@ -6023,28 +6023,28 @@
   }
  ],
  "rest_effect": {
-  "runs": 1173,
+  "runs": 1176,
   "days": 25,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 453,
+    "runs": 454,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
     "runs": 103,
-    "pct": 98.5
+    "pct": 98.6
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 412,
+    "runs": 414,
     "pct": 100.8
    },
    {
     "label": "First run after a break of 15 min+",
     "runs": 74,
-    "pct": 96.8
+    "pct": 97.5
    }
   ]
  },
@@ -8360,22 +8360,22 @@
    },
    {
     "scenario": "LSI VERY FAR DODGE L2",
-    "runs": 7,
+    "runs": 8,
     "on_target": 38,
     "reaction_ms": 67,
-    "overshoot_pct": 31,
+    "overshoot_pct": 32,
     "pps_by_distance": {
      "far": 9.2
     }
    },
    {
     "scenario": "LSI VERY FAR DODGE L2 - 2X STRAFES",
-    "runs": 3,
-    "on_target": 46,
-    "reaction_ms": 75,
+    "runs": 5,
+    "on_target": 45,
+    "reaction_ms": 83,
     "overshoot_pct": 37,
     "pps_by_distance": {
-     "far": 9.2
+     "far": 9.0
     }
    },
    {
