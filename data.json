@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31 21:42",
- "updated_utc": "2026-10-31T14:42:18Z",
+ "updated": "2026-11-01 04:27",
+ "updated_utc": "2026-10-31T21:27:15Z",
  "today": {
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "progress": {
-   "ZEUS FOCUS": 44
+   "ZEUS FOCUS": 1
   }
  },
  "plan_start": "2026-10-07",
@@ -13,9 +13,9 @@
    "name": "SMOOTH THIN TRACK V2",
    "master3": 616.0,
    "official_best": 555.0,
-   "best_14d": 424.0,
-   "median_14d": 388,
-   "runs_14d": 5,
+   "best_14d": null,
+   "median_14d": null,
+   "runs_14d": 0,
    "steps": [
     0.0,
     168.0,
@@ -154,8 +154,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 574.0,
-   "median_14d": 506,
-   "runs_14d": 112,
+   "median_14d": 507,
+   "runs_14d": 102,
    "steps": [
     0.0,
     198.0,
@@ -2350,9 +2350,35 @@
  ],
  "days": [
   {
+   "date": "2026-11-01",
+   "runs": 1,
+   "restarts": 10,
+   "rest_median_s": 133,
+   "rest_longest_s": 133,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "ZEUS FOCUS",
+     "runs": 1,
+     "first": "04:24",
+     "last": "04:24"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "ZEUS PART 8 - CLOSE CATCH-UP",
+     "runs": 1,
+     "routine": "ZEUS FOCUS",
+     "first": "04:24",
+     "best": 519,
+     "median": 519
+    }
+   ]
+  },
+  {
    "date": "2026-10-31",
    "runs": 98,
-   "restarts": 227,
+   "restarts": 229,
    "rest_median_s": 85,
    "rest_longest_s": 558,
    "breaks": [
@@ -2445,6 +2471,12 @@
      "before": "ZEUS FOCUS",
      "at": "20:54",
      "minutes": 43.1
+    },
+    {
+     "after": "ZEUS FOCUS",
+     "before": "(single scenario)",
+     "at": "21:40",
+     "minutes": 57.5
     }
    ],
    "playlists": [
@@ -6073,12 +6105,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1205,
-  "days": 25,
+  "runs": 1206,
+  "days": 26,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 465,
+    "runs": 466,
     "pct": 100.0
    },
    {
@@ -6093,8 +6125,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 77,
-    "pct": 98.2
+    "runs": 78,
+    "pct": 98.3
    }
   ]
  },
@@ -8488,6 +8520,18 @@
     "pps_by_distance": {
      "far": 7.9,
      "mid": 8.7,
+     "close": 8.6
+    }
+   }
+  ],
+  "2026-11-01": [
+   {
+    "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
+    "runs": 1,
+    "on_target": 37,
+    "reaction_ms": 133,
+    "overshoot_pct": 41,
+    "pps_by_distance": {
      "close": 8.6
     }
    }
