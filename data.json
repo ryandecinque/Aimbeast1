@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-01 05:02",
- "updated_utc": "2026-10-31T22:02:16Z",
+ "updated": "2026-11-01 05:07",
+ "updated_utc": "2026-10-31T22:07:08Z",
  "today": {
   "date": "2026-11-01",
   "progress": {
-   "ZEUS FOCUS": 15
+   "ZEUS FOCUS": 16
   }
  },
  "plan_start": "2026-10-07",
@@ -2361,27 +2361,27 @@
  "days": [
   {
    "date": "2026-11-01",
-   "runs": 15,
-   "restarts": 30,
-   "rest_median_s": 42,
+   "runs": 16,
+   "restarts": 36,
+   "rest_median_s": 46,
    "rest_longest_s": 398,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 15,
+     "runs": 16,
      "first": "04:24",
-     "last": "05:00"
+     "last": "05:05"
     }
    ],
    "scenarios": [
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 3,
+     "runs": 4,
      "routine": "ZEUS FOCUS",
      "first": "04:24",
      "best": 552,
-     "median": 530
+     "median": 528
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR)",
@@ -6147,12 +6147,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1220,
+  "runs": 1221,
   "days": 26,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 472,
+    "runs": 473,
     "pct": 100.0
    },
    {
@@ -8610,10 +8610,10 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 3,
-    "on_target": 37,
+    "runs": 4,
+    "on_target": 38,
     "reaction_ms": 133,
-    "overshoot_pct": 35,
+    "overshoot_pct": 38,
     "pps_by_distance": {
      "close": 8.8
     }
