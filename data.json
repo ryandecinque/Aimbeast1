@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-31 17:42",
- "updated_utc": "2026-10-31T10:42:10Z",
+ "updated": "2026-10-31 17:52",
+ "updated_utc": "2026-10-31T10:52:09Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
@@ -2351,9 +2351,9 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 64,
-   "restarts": 195,
-   "rest_median_s": 103,
+   "runs": 66,
+   "restarts": 199,
+   "rest_median_s": 98,
    "rest_longest_s": 558,
    "breaks": [
     {
@@ -2432,9 +2432,9 @@
    "playlists": [
     {
      "name": "1",
-     "runs": 10,
+     "runs": 12,
      "first": "00:36",
-     "last": "17:41"
+     "last": "17:50"
     },
     {
      "name": "(single scenario)",
@@ -2452,7 +2452,7 @@
    "scenarios": [
     {
      "name": "LSI VERY FAR DODGE L2",
-     "runs": 5,
+     "runs": 7,
      "routine": "1",
      "first": "00:36",
      "best": 594,
@@ -6023,7 +6023,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1170,
+  "runs": 1173,
   "days": 25,
   "groups": [
    {
@@ -6038,7 +6038,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 410,
+    "runs": 412,
     "pct": 100.8
    },
    {
@@ -8360,8 +8360,8 @@
    },
    {
     "scenario": "LSI VERY FAR DODGE L2",
-    "runs": 5,
-    "on_target": 34,
+    "runs": 7,
+    "on_target": 38,
     "reaction_ms": 67,
     "overshoot_pct": 31,
     "pps_by_distance": {
