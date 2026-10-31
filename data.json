@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31 15:12",
- "updated_utc": "2026-10-31T08:12:08Z",
+ "updated": "2026-10-31 15:17",
+ "updated_utc": "2026-10-31T08:17:09Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
-   "ZEUS FOCUS": 26
+   "ZEUS FOCUS": 28
   }
  },
  "plan_start": "2026-10-07",
@@ -2351,9 +2351,9 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 57,
-   "restarts": 189,
-   "rest_median_s": 124,
+   "runs": 59,
+   "restarts": 193,
+   "rest_median_s": 110,
    "rest_longest_s": 558,
    "breaks": [
     {
@@ -2438,9 +2438,9 @@
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 26,
+     "runs": 28,
      "first": "05:30",
-     "last": "15:11"
+     "last": "15:15"
     }
    ],
    "scenarios": [
@@ -2523,6 +2523,14 @@
      "first": "15:10",
      "best": 362,
      "median": 362
+    },
+    {
+     "name": "SUMO AIR TS 180 V2 - RANKED",
+     "runs": 2,
+     "routine": "ZEUS FOCUS",
+     "first": "15:14",
+     "best": 1121,
+     "median": 1098
     }
    ]
   },
@@ -6001,17 +6009,17 @@
   }
  ],
  "rest_effect": {
-  "runs": 1163,
+  "runs": 1166,
   "days": 25,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 448,
+    "runs": 450,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 102,
+    "runs": 103,
     "pct": 98.5
    },
    {
