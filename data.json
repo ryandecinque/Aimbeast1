@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-31 18:12",
- "updated_utc": "2026-10-31T11:12:17Z",
+ "updated": "2026-10-31 18:17",
+ "updated_utc": "2026-10-31T11:17:13Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
@@ -2351,9 +2351,9 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 73,
-   "restarts": 205,
-   "rest_median_s": 93,
+   "runs": 75,
+   "restarts": 206,
+   "rest_median_s": 88,
    "rest_longest_s": 558,
    "breaks": [
     {
@@ -2432,9 +2432,9 @@
    "playlists": [
     {
      "name": "1",
-     "runs": 19,
+     "runs": 21,
      "first": "00:36",
-     "last": "18:11"
+     "last": "18:15"
     },
     {
      "name": "(single scenario)",
@@ -2484,11 +2484,11 @@
     },
     {
      "name": "LSI FAR DODGE L3",
-     "runs": 4,
+     "runs": 5,
      "routine": "1",
      "first": "01:36",
-     "best": 475,
-     "median": 448
+     "best": 490,
+     "median": 465
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -2545,6 +2545,14 @@
      "first": "15:18",
      "best": 350,
      "median": 350
+    },
+    {
+     "name": "POSSESSION EVO STATIC SPHERE (FAR)",
+     "runs": 1,
+     "routine": "1",
+     "first": "18:15",
+     "best": 365,
+     "median": 365
     }
    ]
   },
@@ -6023,12 +6031,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1179,
+  "runs": 1182,
   "days": 25,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 455,
+    "runs": 456,
     "pct": 100.0
    },
    {
@@ -6038,8 +6046,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 415,
-    "pct": 100.8
+    "runs": 417,
+    "pct": 100.9
    },
    {
     "label": "First run after a break of 15 min+",
@@ -8350,12 +8358,12 @@
    },
    {
     "scenario": "LSI FAR DODGE L3",
-    "runs": 4,
-    "on_target": 36,
+    "runs": 5,
+    "on_target": 38,
     "reaction_ms": 83,
     "overshoot_pct": 46,
     "pps_by_distance": {
-     "far": 7.5
+     "far": 7.7
     }
    },
    {
