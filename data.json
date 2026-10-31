@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-31 18:17",
- "updated_utc": "2026-10-31T11:17:13Z",
+ "updated": "2026-10-31 18:27",
+ "updated_utc": "2026-10-31T11:27:08Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
@@ -2351,7 +2351,7 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 75,
+   "runs": 76,
    "restarts": 206,
    "rest_median_s": 88,
    "rest_longest_s": 558,
@@ -2432,9 +2432,9 @@
    "playlists": [
     {
      "name": "1",
-     "runs": 21,
+     "runs": 22,
      "first": "00:36",
-     "last": "18:15"
+     "last": "18:25"
     },
     {
      "name": "(single scenario)",
@@ -2548,11 +2548,11 @@
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR)",
-     "runs": 1,
+     "runs": 2,
      "routine": "1",
      "first": "18:15",
-     "best": 365,
-     "median": 365
+     "best": 408,
+     "median": 386
     }
    ]
   },
@@ -6031,7 +6031,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1182,
+  "runs": 1183,
   "days": 25,
   "groups": [
    {
@@ -8394,6 +8394,16 @@
     "overshoot_pct": 28,
     "pps_by_distance": {
      "far": 10.3
+    }
+   },
+   {
+    "scenario": "POSSESSION EVO STATIC SPHERE FAR",
+    "runs": 1,
+    "on_target": 16,
+    "reaction_ms": 125,
+    "overshoot_pct": 36,
+    "pps_by_distance": {
+     "mid": 6.8
     }
    },
    {
