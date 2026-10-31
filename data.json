@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-31 19:47",
- "updated_utc": "2026-10-31T12:47:23Z",
+ "updated": "2026-10-31 19:52",
+ "updated_utc": "2026-10-31T12:52:22Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
@@ -2351,9 +2351,9 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 82,
-   "restarts": 208,
-   "rest_median_s": 85,
+   "runs": 83,
+   "restarts": 210,
+   "rest_median_s": 88,
    "rest_longest_s": 558,
    "breaks": [
     {
@@ -2438,9 +2438,9 @@
    "playlists": [
     {
      "name": "1",
-     "runs": 28,
+     "runs": 29,
      "first": "00:36",
-     "last": "19:44"
+     "last": "19:49"
     },
     {
      "name": "(single scenario)",
@@ -2562,11 +2562,11 @@
     },
     {
      "name": "FLAT ARENA POSS - THIN FAST",
-     "runs": 3,
+     "runs": 4,
      "routine": "1",
      "first": "19:41",
      "best": 196,
-     "median": 177
+     "median": 184
     }
    ]
   },
@@ -6045,7 +6045,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1189,
+  "runs": 1190,
   "days": 25,
   "groups": [
    {
@@ -8372,12 +8372,12 @@
    },
    {
     "scenario": "FLAT ARENA POSS - THIN FAST",
-    "runs": 3,
+    "runs": 4,
     "on_target": 17,
-    "reaction_ms": 150,
-    "overshoot_pct": 71,
+    "reaction_ms": 142,
+    "overshoot_pct": 70,
     "pps_by_distance": {
-     "close": 2.9
+     "close": 3.0
     }
    },
    {
