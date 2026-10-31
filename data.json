@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31 06:22",
- "updated_utc": "2026-10-30T23:22:15Z",
+ "updated": "2026-10-31 14:47",
+ "updated_utc": "2026-10-31T07:47:17Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
-   "ZEUS FOCUS": 14
+   "ZEUS FOCUS": 16
   }
  },
  "plan_start": "2026-10-07",
@@ -1006,6 +1006,16 @@
    "date": "2026-10-31",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS, 14th play of the day\nRight at your usual level. Zeus Part 8 - Close Catch-Up was a typical 484, the same level as your last 14 days (475).\nOne thing to try: too much arm in each correction carries the crosshair past the bot. Correct with wrist and fingers only, and smaller than feels natural. It should feel calm and slightly behind, not like a swing."
+  },
+  {
+   "date": "2026-10-31",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, 15th play of the day\nA typical play: scores matched your usual. Zeus Part 8 - Close Catch-Up was a typical 484, the same level as your last 14 days (475).\nOne thing to try: after each turn, the correction is landing past the bot. Use a smaller input from the wrist and fingers and aim to stop on the bot's near side. It should feel quiet, almost too small."
+  },
+  {
+   "date": "2026-10-31",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, 16th play of the day\nAbove your usual on every scenario. Zeus Part 8 - Close Catch-Up led the way, a typical 502 against your 14-day typical of 475.\nOne thing to try: too much arm in each correction carries the crosshair past the bot. Correct with wrist and fingers only, and smaller than feels natural. It should feel calm and slightly behind, not like a swing."
   },
   {
    "date": "2026-10-26",
@@ -2341,9 +2351,9 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 42,
-   "restarts": 171,
-   "rest_median_s": 147,
+   "runs": 44,
+   "restarts": 179,
+   "rest_median_s": 140,
    "rest_longest_s": 558,
    "breaks": [
     {
@@ -2387,6 +2397,12 @@
      "before": "ZEUS FOCUS",
      "at": "05:03",
      "minutes": 24.8
+    },
+    {
+     "after": "ZEUS FOCUS",
+     "before": "ZEUS FOCUS",
+     "at": "06:18",
+     "minutes": 500.4
     }
    ],
    "playlists": [
@@ -2404,9 +2420,9 @@
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 14,
+     "runs": 16,
      "first": "05:30",
-     "last": "06:18"
+     "last": "14:45"
     }
    ],
    "scenarios": [
@@ -2468,11 +2484,11 @@
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 11,
+     "runs": 13,
      "routine": "ZEUS FOCUS",
      "first": "05:38",
-     "best": 498,
-     "median": 478
+     "best": 502,
+     "median": 484
     }
    ]
   },
@@ -5951,7 +5967,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1149,
+  "runs": 1151,
   "days": 25,
   "groups": [
    {
@@ -5967,12 +5983,12 @@
    {
     "label": "Later attempts, rest 20 s to 2 min",
     "runs": 408,
-    "pct": 101.1
+    "pct": 101.0
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 72,
-    "pct": 96.8
+    "runs": 73,
+    "pct": 96.9
    }
   ]
  },
@@ -8329,10 +8345,10 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 11,
-    "on_target": 33,
+    "runs": 13,
+    "on_target": 34,
     "reaction_ms": 150,
-    "overshoot_pct": 39,
+    "overshoot_pct": 38,
     "pps_by_distance": {
      "close": 8.0
     }
