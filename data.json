@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-01 04:57",
- "updated_utc": "2026-10-31T21:57:06Z",
+ "updated": "2026-11-01 05:02",
+ "updated_utc": "2026-10-31T22:02:16Z",
  "today": {
   "date": "2026-11-01",
   "progress": {
-   "ZEUS FOCUS": 13
+   "ZEUS FOCUS": 15
   }
  },
  "plan_start": "2026-10-07",
@@ -941,6 +941,11 @@
    "date": "2026-11-01",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS\nAbove your usual on one of two scenarios, the rest about level. Possession Evo Static Sphere (Far) was a typical 411, the same level as your last 14 days (408).\nNothing slipped clearly against your last 14 days: over-aim, mouse movement and rests were all close to usual or better.\nOne thing to try: going straight into the next run carries tension over. Rest half a minute to a minute and shake out your hand first. Starting should feel relaxed."
+  },
+  {
+   "date": "2026-11-01",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, second play of the day\nZeus Part 8 - Close Catch-Up reached 552, your best since the score log started. Above your usual on one of two scenarios, below on one.\nOne thing to try: rests this short don't give your hand time to reset. Take about a minute between runs: let go of the mouse and loosen your hand, then start. The next run should feel fresh, not rushed."
   },
   {
    "date": "2026-10-31",
@@ -2356,27 +2361,27 @@
  "days": [
   {
    "date": "2026-11-01",
-   "runs": 13,
-   "restarts": 23,
-   "rest_median_s": 43,
+   "runs": 15,
+   "restarts": 30,
+   "rest_median_s": 42,
    "rest_longest_s": 398,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 13,
+     "runs": 15,
      "first": "04:24",
-     "last": "04:56"
+     "last": "05:00"
     }
    ],
    "scenarios": [
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS FOCUS",
      "first": "04:24",
-     "best": 530,
-     "median": 524
+     "best": 552,
+     "median": 530
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR)",
@@ -2401,6 +2406,14 @@
      "first": "04:54",
      "best": 41,
      "median": 30
+    },
+    {
+     "name": "FLAT ARENA POSS -THIN FAST CLICK",
+     "runs": 1,
+     "routine": "ZEUS FOCUS",
+     "first": "05:00",
+     "best": 23,
+     "median": 23
     }
    ]
   },
@@ -6134,12 +6147,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1217,
+  "runs": 1220,
   "days": 26,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 470,
+    "runs": 472,
     "pct": 100.0
    },
    {
@@ -6149,7 +6162,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 430,
+    "runs": 431,
     "pct": 101.0
    },
    {
@@ -8565,6 +8578,16 @@
     }
    },
    {
+    "scenario": "FLAT ARENA POSS -THIN FAST CLICK",
+    "runs": 1,
+    "on_target": 12,
+    "reaction_ms": 151,
+    "overshoot_pct": 67,
+    "pps_by_distance": {
+     "close": 0.4
+    }
+   },
+   {
     "scenario": "POSSESSION EVO STATIC SPHERE FAR",
     "runs": 4,
     "on_target": 16,
@@ -8587,12 +8610,12 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 2,
+    "runs": 3,
     "on_target": 37,
     "reaction_ms": 133,
-    "overshoot_pct": 38,
+    "overshoot_pct": 35,
     "pps_by_distance": {
-     "close": 8.7
+     "close": 8.8
     }
    }
   ]
