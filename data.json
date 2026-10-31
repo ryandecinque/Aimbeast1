@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-01 04:37",
- "updated_utc": "2026-10-31T21:37:03Z",
+ "updated": "2026-11-01 04:42",
+ "updated_utc": "2026-10-31T21:42:10Z",
  "today": {
   "date": "2026-11-01",
   "progress": {
-   "ZEUS FOCUS": 6
+   "ZEUS FOCUS": 9
   }
  },
  "plan_start": "2026-10-07",
@@ -937,6 +937,11 @@
   }
  ],
  "journal": [
+  {
+   "date": "2026-11-01",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS\nAbove your usual on one of two scenarios, the rest about level. Possession Evo Static Sphere (Far) was a typical 411, the same level as your last 14 days (408).\nNothing slipped clearly against your last 14 days: over-aim, mouse movement and rests were all close to usual or better.\nOne thing to try: going straight into the next run carries tension over. Rest half a minute to a minute and shake out your hand first. Starting should feel relaxed."
+  },
   {
    "date": "2026-10-31",
    "author": "AimJournal",
@@ -2351,27 +2356,27 @@
  "days": [
   {
    "date": "2026-11-01",
-   "runs": 6,
-   "restarts": 16,
+   "runs": 9,
+   "restarts": 21,
    "rest_median_s": 40,
    "rest_longest_s": 133,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 6,
+     "runs": 9,
      "first": "04:24",
-     "last": "04:35"
+     "last": "04:41"
     }
    ],
    "scenarios": [
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS FOCUS",
      "first": "04:24",
-     "best": 519,
-     "median": 519
+     "best": 530,
+     "median": 524
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR)",
@@ -2380,6 +2385,14 @@
      "first": "04:28",
      "best": 526,
      "median": 411
+    },
+    {
+     "name": "FLAT ARENA POSS - THIN FAST",
+     "runs": 2,
+     "routine": "ZEUS FOCUS",
+     "first": "04:38",
+     "best": 196,
+     "median": 180
     }
    ]
   },
@@ -6113,12 +6126,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1211,
+  "runs": 1213,
   "days": 26,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 467,
+    "runs": 469,
     "pct": 100.0
    },
    {
@@ -8534,6 +8547,16 @@
   ],
   "2026-11-01": [
    {
+    "scenario": "FLAT ARENA POSS - THIN FAST",
+    "runs": 2,
+    "on_target": 19,
+    "reaction_ms": 133,
+    "overshoot_pct": 66,
+    "pps_by_distance": {
+     "close": 3.0
+    }
+   },
+   {
     "scenario": "POSSESSION EVO STATIC SPHERE FAR",
     "runs": 4,
     "on_target": 16,
@@ -8545,12 +8568,12 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 1,
+    "runs": 2,
     "on_target": 37,
     "reaction_ms": 133,
-    "overshoot_pct": 41,
+    "overshoot_pct": 38,
     "pps_by_distance": {
-     "close": 8.6
+     "close": 8.7
     }
    }
   ]
