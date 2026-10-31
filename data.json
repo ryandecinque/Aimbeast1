@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-01 05:22",
- "updated_utc": "2026-10-31T22:22:09Z",
+ "updated": "2026-11-01 05:27",
+ "updated_utc": "2026-10-31T22:27:07Z",
  "today": {
   "date": "2026-11-01",
   "progress": {
-   "ZEUS FOCUS": 20
+   "ZEUS FOCUS": 21
   }
  },
  "plan_start": "2026-10-07",
@@ -946,6 +946,11 @@
    "date": "2026-11-01",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS, second play of the day\nZeus Part 8 - Close Catch-Up reached 552, your best since the score log started. Above your usual on one of two scenarios, below on one.\nOne thing to try: rests this short don't give your hand time to reset. Take about a minute between runs: let go of the mouse and loosen your hand, then start. The next run should feel fresh, not rushed."
+  },
+  {
+   "date": "2026-11-01",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, third play of the day\nAll of it was above your usual. Zeus Part 8 - Close Catch-Up stood out: a typical 522, against 485 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim, mouse movement and rests were all close to usual or better.\nOne thing to try: the long pauses cost your warm-up. Start the next run within a minute or two. It should feel like one steady block, not a series of fresh starts."
   },
   {
    "date": "2026-10-31",
@@ -2361,27 +2366,27 @@
  "days": [
   {
    "date": "2026-11-01",
-   "runs": 20,
-   "restarts": 48,
-   "rest_median_s": 46,
+   "runs": 21,
+   "restarts": 54,
+   "rest_median_s": 48,
    "rest_longest_s": 398,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 20,
+     "runs": 21,
      "first": "04:24",
-     "last": "05:18"
+     "last": "05:24"
     }
    ],
    "scenarios": [
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 5,
+     "runs": 6,
      "routine": "ZEUS FOCUS",
      "first": "04:24",
      "best": 552,
-     "median": 527
+     "median": 524
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR)",
@@ -6155,7 +6160,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1225,
+  "runs": 1226,
   "days": 26,
   "groups": [
    {
@@ -6170,7 +6175,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 431,
+    "runs": 432,
     "pct": 101.0
    },
    {
@@ -8618,8 +8623,8 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 5,
-    "on_target": 39,
+    "runs": 7,
+    "on_target": 38,
     "reaction_ms": 133,
     "overshoot_pct": 39,
     "pps_by_distance": {
