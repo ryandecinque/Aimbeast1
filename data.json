@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31 19:52",
- "updated_utc": "2026-10-31T12:52:22Z",
+ "updated": "2026-10-31 20:27",
+ "updated_utc": "2026-10-31T13:27:20Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
-   "ZEUS FOCUS": 30
+   "ZEUS FOCUS": 31
   }
  },
  "plan_start": "2026-10-07",
@@ -2351,9 +2351,9 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 83,
-   "restarts": 210,
-   "rest_median_s": 88,
+   "runs": 85,
+   "restarts": 213,
+   "rest_median_s": 92,
    "rest_longest_s": 558,
    "breaks": [
     {
@@ -2433,14 +2433,20 @@
      "before": "1",
      "at": "18:27",
      "minutes": 66.5
+    },
+    {
+     "after": "1",
+     "before": "ZEUS FOCUS",
+     "at": "19:52",
+     "minutes": 29.9
     }
    ],
    "playlists": [
     {
      "name": "1",
-     "runs": 29,
+     "runs": 30,
      "first": "00:36",
-     "last": "19:49"
+     "last": "19:52"
     },
     {
      "name": "(single scenario)",
@@ -2450,9 +2456,9 @@
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 30,
+     "runs": 31,
      "first": "05:30",
-     "last": "15:20"
+     "last": "20:25"
     }
    ],
    "scenarios": [
@@ -2514,7 +2520,7 @@
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 17,
+     "runs": 18,
      "routine": "ZEUS FOCUS",
      "first": "05:38",
      "best": 520,
@@ -2562,11 +2568,11 @@
     },
     {
      "name": "FLAT ARENA POSS - THIN FAST",
-     "runs": 4,
+     "runs": 5,
      "routine": "1",
      "first": "19:41",
-     "best": 196,
-     "median": 184
+     "best": 198,
+     "median": 191
     }
    ]
   },
@@ -6045,12 +6051,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1190,
+  "runs": 1192,
   "days": 25,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 457,
+    "runs": 458,
     "pct": 100.0
    },
    {
@@ -6065,8 +6071,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 75,
-    "pct": 96.6
+    "runs": 76,
+    "pct": 97.4
    }
   ]
  },
@@ -8372,12 +8378,12 @@
    },
    {
     "scenario": "FLAT ARENA POSS - THIN FAST",
-    "runs": 4,
+    "runs": 5,
     "on_target": 17,
-    "reaction_ms": 142,
+    "reaction_ms": 134,
     "overshoot_pct": 70,
     "pps_by_distance": {
-     "close": 3.0
+     "close": 3.2
     }
    },
    {
@@ -8443,7 +8449,7 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 17,
+    "runs": 18,
     "on_target": 35,
     "reaction_ms": 150,
     "overshoot_pct": 38,
