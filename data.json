@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31 20:52",
- "updated_utc": "2026-10-31T13:52:11Z",
+ "updated": "2026-10-31 20:57",
+ "updated_utc": "2026-10-31T13:57:15Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
-   "ZEUS FOCUS": 40
+   "ZEUS FOCUS": 42
   }
  },
  "plan_start": "2026-10-07",
@@ -2351,8 +2351,8 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 94,
-   "restarts": 223,
+   "runs": 96,
+   "restarts": 226,
    "rest_median_s": 85,
    "rest_longest_s": 558,
    "breaks": [
@@ -2456,9 +2456,9 @@
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 40,
+     "runs": 42,
      "first": "05:30",
-     "last": "20:49"
+     "last": "20:54"
     }
    ],
    "scenarios": [
@@ -2560,19 +2560,19 @@
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR)",
-     "runs": 8,
+     "runs": 9,
      "routine": "1",
      "first": "18:15",
      "best": 538,
-     "median": 398
+     "median": 408
     },
     {
      "name": "FLAT ARENA POSS - THIN FAST",
-     "runs": 7,
+     "runs": 8,
      "routine": "1",
      "first": "19:41",
-     "best": 198,
-     "median": 191
+     "best": 200,
+     "median": 194
     }
    ]
   },
@@ -6051,12 +6051,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1201,
+  "runs": 1203,
   "days": 25,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 462,
+    "runs": 463,
     "pct": 100.0
    },
    {
@@ -8378,7 +8378,7 @@
    },
    {
     "scenario": "FLAT ARENA POSS - THIN FAST",
-    "runs": 7,
+    "runs": 8,
     "on_target": 17,
     "reaction_ms": 133,
     "overshoot_pct": 62,
@@ -8428,12 +8428,12 @@
    },
    {
     "scenario": "POSSESSION EVO STATIC SPHERE FAR",
-    "runs": 5,
+    "runs": 6,
     "on_target": 16,
-    "reaction_ms": 117,
-    "overshoot_pct": 39,
+    "reaction_ms": 112,
+    "overshoot_pct": 37,
     "pps_by_distance": {
-     "mid": 6.5
+     "mid": 6.7
     }
    },
    {
