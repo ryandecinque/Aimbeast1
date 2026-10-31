@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31 20:32",
- "updated_utc": "2026-10-31T13:32:13Z",
+ "updated": "2026-10-31 20:37",
+ "updated_utc": "2026-10-31T13:37:14Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
-   "ZEUS FOCUS": 34
+   "ZEUS FOCUS": 35
   }
  },
  "plan_start": "2026-10-07",
@@ -2351,8 +2351,8 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 88,
-   "restarts": 216,
+   "runs": 89,
+   "restarts": 220,
    "rest_median_s": 85,
    "rest_longest_s": 558,
    "breaks": [
@@ -2456,9 +2456,9 @@
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 34,
+     "runs": 35,
      "first": "05:30",
-     "last": "20:31"
+     "last": "20:33"
     }
    ],
    "scenarios": [
@@ -2520,11 +2520,11 @@
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 18,
+     "runs": 19,
      "routine": "ZEUS FOCUS",
      "first": "05:38",
      "best": 520,
-     "median": 484
+     "median": 485
     },
     {
      "name": "XEN TS 90% - RANKED",
@@ -6051,12 +6051,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1194,
+  "runs": 1196,
   "days": 25,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 460,
+    "runs": 461,
     "pct": 100.0
    },
    {
@@ -6066,8 +6066,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 420,
-    "pct": 100.8
+    "runs": 421,
+    "pct": 100.9
    },
    {
     "label": "First run after a break of 15 min+",
@@ -8449,10 +8449,10 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 18,
+    "runs": 19,
     "on_target": 35,
     "reaction_ms": 150,
-    "overshoot_pct": 38,
+    "overshoot_pct": 37,
     "pps_by_distance": {
      "close": 8.1
     }
