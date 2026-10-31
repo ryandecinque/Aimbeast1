@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-01 04:47",
- "updated_utc": "2026-10-31T21:47:07Z",
+ "updated": "2026-11-01 04:57",
+ "updated_utc": "2026-10-31T21:57:06Z",
  "today": {
   "date": "2026-11-01",
   "progress": {
-   "ZEUS FOCUS": 10
+   "ZEUS FOCUS": 13
   }
  },
  "plan_start": "2026-10-07",
@@ -2356,17 +2356,17 @@
  "days": [
   {
    "date": "2026-11-01",
-   "runs": 10,
-   "restarts": 21,
-   "rest_median_s": 46,
-   "rest_longest_s": 172,
+   "runs": 13,
+   "restarts": 23,
+   "rest_median_s": 43,
+   "rest_longest_s": 398,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 10,
+     "runs": 13,
      "first": "04:24",
-     "last": "04:45"
+     "last": "04:56"
     }
    ],
    "scenarios": [
@@ -2388,11 +2388,19 @@
     },
     {
      "name": "FLAT ARENA POSS - THIN FAST",
-     "runs": 3,
+     "runs": 4,
      "routine": "ZEUS FOCUS",
      "first": "04:38",
-     "best": 196,
-     "median": 181
+     "best": 220,
+     "median": 188
+    },
+    {
+     "name": "POSSESSION STATIC SPHERE FAR CLICK",
+     "runs": 2,
+     "routine": "ZEUS FOCUS",
+     "first": "04:54",
+     "best": 41,
+     "median": 30
     }
    ]
   },
@@ -6126,12 +6134,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1215,
+  "runs": 1217,
   "days": 26,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 469,
+    "runs": 470,
     "pct": 100.0
    },
    {
@@ -6141,7 +6149,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 429,
+    "runs": 430,
     "pct": 101.0
    },
    {
@@ -8548,12 +8556,12 @@
   "2026-11-01": [
    {
     "scenario": "FLAT ARENA POSS - THIN FAST",
-    "runs": 3,
-    "on_target": 18,
+    "runs": 4,
+    "on_target": 19,
     "reaction_ms": 133,
-    "overshoot_pct": 69,
+    "overshoot_pct": 66,
     "pps_by_distance": {
-     "close": 3.0
+     "close": 3.1
     }
    },
    {
@@ -8564,6 +8572,17 @@
     "overshoot_pct": 34,
     "pps_by_distance": {
      "mid": 7.0
+    }
+   },
+   {
+    "scenario": "POSSESSION STATIC SPHERE FAR CLICK",
+    "runs": 1,
+    "on_target": 12,
+    "reaction_ms": 150,
+    "overshoot_pct": 40,
+    "pps_by_distance": {
+     "mid": 0.7,
+     "close": 0.8
     }
    },
    {
