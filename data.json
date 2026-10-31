@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-31 15:17",
- "updated_utc": "2026-10-31T08:17:09Z",
+ "updated": "2026-10-31 15:22",
+ "updated_utc": "2026-10-31T08:22:32Z",
  "today": {
   "date": "2026-10-31",
   "progress": {
-   "ZEUS FOCUS": 28
+   "ZEUS FOCUS": 30
   }
  },
  "plan_start": "2026-10-07",
@@ -2351,9 +2351,9 @@
  "days": [
   {
    "date": "2026-10-31",
-   "runs": 59,
-   "restarts": 193,
-   "rest_median_s": 110,
+   "runs": 61,
+   "restarts": 195,
+   "rest_median_s": 103,
    "rest_longest_s": 558,
    "breaks": [
     {
@@ -2438,9 +2438,9 @@
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 28,
+     "runs": 30,
      "first": "05:30",
-     "last": "15:15"
+     "last": "15:20"
     }
    ],
    "scenarios": [
@@ -2502,7 +2502,7 @@
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 16,
+     "runs": 17,
      "routine": "ZEUS FOCUS",
      "first": "05:38",
      "best": 520,
@@ -2531,6 +2531,14 @@
      "first": "15:14",
      "best": 1121,
      "median": 1098
+    },
+    {
+     "name": "VOX TS BALANCED 125% - RANKED",
+     "runs": 1,
+     "routine": "ZEUS FOCUS",
+     "first": "15:18",
+     "best": 350,
+     "median": 350
     }
    ]
   },
@@ -6009,12 +6017,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1166,
+  "runs": 1168,
   "days": 25,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 450,
+    "runs": 452,
     "pct": 100.0
    },
    {
@@ -8387,7 +8395,7 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 16,
+    "runs": 17,
     "on_target": 35,
     "reaction_ms": 150,
     "overshoot_pct": 38,
