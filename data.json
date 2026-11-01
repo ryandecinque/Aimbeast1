@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-02 03:57",
- "updated_utc": "2026-11-01T20:57:18Z",
+ "updated": "2026-11-02 04:07",
+ "updated_utc": "2026-11-01T21:07:04Z",
  "today": {
   "date": "2026-11-02",
   "progress": {}
@@ -2375,27 +2375,27 @@
  "days": [
   {
    "date": "2026-11-02",
-   "runs": 5,
-   "restarts": 9,
+   "runs": 6,
+   "restarts": 15,
    "rest_median_s": 78,
-   "rest_longest_s": 96,
+   "rest_longest_s": 682,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS VARIANTS",
-     "runs": 5,
+     "runs": 6,
      "first": "03:41",
-     "last": "03:53"
+     "last": "04:05"
     }
    ],
    "scenarios": [
     {
      "name": "ZEUS PART 1 - FAR 2600",
-     "runs": 5,
+     "runs": 6,
      "routine": "ZEUS VARIANTS",
      "first": "03:41",
      "best": 284,
-     "median": 253
+     "median": 262
     }
    ]
   },
@@ -6258,7 +6258,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1243,
+  "runs": 1244,
   "days": 27,
   "groups": [
    {
@@ -8755,12 +8755,12 @@
   "2026-11-02": [
    {
     "scenario": "ZEUS PART 1 - FAR 2600",
-    "runs": 8,
+    "runs": 9,
     "on_target": 24,
     "reaction_ms": 120,
     "overshoot_pct": 39,
     "pps_by_distance": {
-     "far": 4.1
+     "far": 4.2
     }
    }
   ]
