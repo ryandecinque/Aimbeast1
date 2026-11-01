@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-02 06:52",
- "updated_utc": "2026-11-01T23:52:21Z",
+ "updated": "2026-11-02 06:57",
+ "updated_utc": "2026-11-01T23:57:26Z",
  "today": {
   "date": "2026-11-02",
   "progress": {}
@@ -2375,9 +2375,9 @@
  "days": [
   {
    "date": "2026-11-02",
-   "runs": 24,
+   "runs": 26,
    "restarts": 52,
-   "rest_median_s": 70,
+   "rest_median_s": 75,
    "rest_longest_s": 854,
    "breaks": [
     {
@@ -2390,9 +2390,9 @@
    "playlists": [
     {
      "name": "ZEUS VARIANTS",
-     "runs": 24,
+     "runs": 26,
      "first": "03:41",
-     "last": "06:51"
+     "last": "06:55"
     }
    ],
    "scenarios": [
@@ -2406,11 +2406,11 @@
     },
     {
      "name": "ZEUS PART 2 - 2100",
-     "runs": 12,
+     "runs": 13,
      "routine": "ZEUS VARIANTS",
      "first": "04:14",
      "best": 322,
-     "median": 309
+     "median": 310
     },
     {
      "name": "ZEUS PART 3 - 1600",
@@ -2422,11 +2422,11 @@
     },
     {
      "name": "ZEUS PART 4 - 1100",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS VARIANTS",
      "first": "06:50",
-     "best": 345,
-     "median": 337
+     "best": 391,
+     "median": 345
     }
    ]
   },
@@ -6289,12 +6289,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1261,
+  "runs": 1264,
   "days": 27,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 481,
+    "runs": 483,
     "pct": 100.0
    },
    {
@@ -6304,8 +6304,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 450,
-    "pct": 100.9
+    "runs": 451,
+    "pct": 101.0
    },
    {
     "label": "First run after a break of 15 min+",
@@ -8796,9 +8796,9 @@
    },
    {
     "scenario": "ZEUS PART 2 - 2100",
-    "runs": 18,
+    "runs": 19,
     "on_target": 24,
-    "reaction_ms": 154,
+    "reaction_ms": 150,
     "overshoot_pct": 49,
     "pps_by_distance": {
      "far": 5.1,
@@ -8818,13 +8818,13 @@
    },
    {
     "scenario": "ZEUS PART 4 - 1100",
-    "runs": 2,
+    "runs": 3,
     "on_target": 25,
     "reaction_ms": 150,
-    "overshoot_pct": 45,
+    "overshoot_pct": 42,
     "pps_by_distance": {
-     "mid": 6.0,
-     "close": 5.0
+     "mid": 6.1,
+     "close": 4.7
     }
    }
   ]
