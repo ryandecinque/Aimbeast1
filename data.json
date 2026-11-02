@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-02 07:52",
- "updated_utc": "2026-11-02T00:52:08Z",
+ "updated": "2026-11-02 07:57",
+ "updated_utc": "2026-11-02T00:57:29Z",
  "today": {
   "date": "2026-11-02",
   "progress": {}
@@ -2375,7 +2375,7 @@
  "days": [
   {
    "date": "2026-11-02",
-   "runs": 43,
+   "runs": 45,
    "restarts": 74,
    "rest_median_s": 78,
    "rest_longest_s": 854,
@@ -2390,9 +2390,9 @@
    "playlists": [
     {
      "name": "ZEUS VARIANTS",
-     "runs": 43,
+     "runs": 45,
      "first": "03:41",
-     "last": "07:51"
+     "last": "07:55"
     }
    ],
    "scenarios": [
@@ -2422,11 +2422,11 @@
     },
     {
      "name": "ZEUS PART 4 - 1100",
-     "runs": 13,
+     "runs": 14,
      "routine": "ZEUS VARIANTS",
      "first": "06:50",
      "best": 406,
-     "median": 345
+     "median": 348
     },
     {
      "name": "ZEUS PART 5 - CLOSE 600",
@@ -2459,6 +2459,14 @@
      "first": "07:47",
      "best": 463,
      "median": 433
+    },
+    {
+     "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
+     "runs": 1,
+     "routine": "ZEUS VARIANTS",
+     "first": "07:55",
+     "best": 702,
+     "median": 702
     }
    ]
   },
@@ -6321,12 +6329,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1281,
+  "runs": 1283,
   "days": 27,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 494,
+    "runs": 496,
     "pct": 100.0
    },
    {
@@ -6337,7 +6345,7 @@
    {
     "label": "Later attempts, rest 20 s to 2 min",
     "runs": 453,
-    "pct": 100.9
+    "pct": 101.0
    },
    {
     "label": "First run after a break of 15 min+",
@@ -8850,12 +8858,12 @@
    },
    {
     "scenario": "ZEUS PART 4 - 1100",
-    "runs": 15,
-    "on_target": 24,
+    "runs": 16,
+    "on_target": 25,
     "reaction_ms": 150,
-    "overshoot_pct": 43,
+    "overshoot_pct": 44,
     "pps_by_distance": {
-     "mid": 5.9,
+     "mid": 6.0,
      "close": 5.1
     }
    },
@@ -8897,6 +8905,16 @@
     "overshoot_pct": 44,
     "pps_by_distance": {
      "close": 7.5
+    }
+   },
+   {
+    "scenario": "ZEUS PART 9 - CLOSE LONG STRAFES",
+    "runs": 1,
+    "on_target": 44,
+    "reaction_ms": 117,
+    "overshoot_pct": 26,
+    "pps_by_distance": {
+     "close": 11.8
     }
    }
   ]
