@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-02 23:52",
- "updated_utc": "2026-11-02T16:52:16Z",
+ "updated": "2026-11-02 23:57",
+ "updated_utc": "2026-11-02T16:57:18Z",
  "today": {
   "date": "2026-11-02",
   "progress": {
-   "ZEUS FOCUS": 10
+   "ZEUS FOCUS": 12
   }
  },
  "plan_start": "2026-10-07",
@@ -2382,8 +2382,8 @@
  "days": [
   {
    "date": "2026-11-02",
-   "runs": 79,
-   "restarts": 102,
+   "runs": 81,
+   "restarts": 105,
    "rest_median_s": 71,
    "rest_longest_s": 854,
    "breaks": [
@@ -2427,9 +2427,9 @@
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 10,
+     "runs": 12,
      "first": "23:25",
-     "last": "23:50"
+     "last": "23:55"
     }
    ],
    "scenarios": [
@@ -2512,6 +2512,14 @@
      "first": "23:27",
      "best": 511,
      "median": 467
+    },
+    {
+     "name": "FLAT ARENA POSS - THIN FAST",
+     "runs": 2,
+     "routine": "ZEUS FOCUS",
+     "first": "23:53",
+     "best": 189,
+     "median": 187
     }
    ]
   },
@@ -6374,12 +6382,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1317,
+  "runs": 1319,
   "days": 27,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 527,
+    "runs": 528,
     "pct": 100.0
    },
    {
@@ -6389,7 +6397,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 454,
+    "runs": 455,
     "pct": 100.9
    },
    {
@@ -8869,6 +8877,16 @@
    }
   ],
   "2026-11-02": [
+   {
+    "scenario": "FLAT ARENA POSS - THIN FAST",
+    "runs": 2,
+    "on_target": 21,
+    "reaction_ms": 138,
+    "overshoot_pct": 72,
+    "pps_by_distance": {
+     "close": 3.2
+    }
+   },
    {
     "scenario": "ZEUS PART 1 - FAR 2600",
     "runs": 12,
