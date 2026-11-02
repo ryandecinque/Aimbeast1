@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-02 16:32",
- "updated_utc": "2026-11-02T09:32:11Z",
+ "updated": "2026-11-02 16:37",
+ "updated_utc": "2026-11-02T09:37:11Z",
  "today": {
   "date": "2026-11-02",
   "progress": {}
@@ -2375,9 +2375,9 @@
  "days": [
   {
    "date": "2026-11-02",
-   "runs": 59,
+   "runs": 62,
    "restarts": 89,
-   "rest_median_s": 78,
+   "rest_median_s": 77,
    "rest_longest_s": 854,
    "breaks": [
     {
@@ -2396,9 +2396,9 @@
    "playlists": [
     {
      "name": "ZEUS VARIANTS",
-     "runs": 59,
+     "runs": 62,
      "first": "03:41",
-     "last": "16:28"
+     "last": "16:35"
     }
    ],
    "scenarios": [
@@ -2428,11 +2428,11 @@
     },
     {
      "name": "ZEUS PART 4 - 1100",
-     "runs": 20,
+     "runs": 22,
      "routine": "ZEUS VARIANTS",
      "first": "06:50",
-     "best": 406,
-     "median": 356
+     "best": 436,
+     "median": 358
     },
     {
      "name": "ZEUS PART 5 - CLOSE 600",
@@ -2468,11 +2468,11 @@
     },
     {
      "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
-     "runs": 5,
+     "runs": 6,
      "routine": "ZEUS VARIANTS",
      "first": "07:55",
      "best": 747,
-     "median": 711
+     "median": 716
     }
    ]
   },
@@ -6335,12 +6335,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1297,
+  "runs": 1300,
   "days": 27,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 508,
+    "runs": 511,
     "pct": 100.0
    },
    {
@@ -8864,13 +8864,13 @@
    },
    {
     "scenario": "ZEUS PART 4 - 1100",
-    "runs": 22,
+    "runs": 24,
     "on_target": 26,
     "reaction_ms": 150,
     "overshoot_pct": 44,
     "pps_by_distance": {
-     "mid": 6.2,
-     "close": 5.2
+     "mid": 6.3,
+     "close": 5.3
     }
    },
    {
@@ -8915,12 +8915,12 @@
    },
    {
     "scenario": "ZEUS PART 9 - CLOSE LONG STRAFES",
-    "runs": 5,
-    "on_target": 48,
+    "runs": 6,
+    "on_target": 49,
     "reaction_ms": 117,
-    "overshoot_pct": 21,
+    "overshoot_pct": 22,
     "pps_by_distance": {
-     "close": 12.0
+     "close": 12.1
     }
    }
   ]
