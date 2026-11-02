@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-02 22:57",
- "updated_utc": "2026-11-02T15:57:16Z",
+ "updated": "2026-11-02 23:22",
+ "updated_utc": "2026-11-02T16:22:13Z",
  "today": {
   "date": "2026-11-02",
   "progress": {}
@@ -2375,9 +2375,9 @@
  "days": [
   {
    "date": "2026-11-02",
-   "runs": 64,
+   "runs": 67,
    "restarts": 92,
-   "rest_median_s": 78,
+   "rest_median_s": 75,
    "rest_longest_s": 854,
    "breaks": [
     {
@@ -2397,14 +2397,20 @@
      "before": "ZEUS VARIANTS",
      "at": "16:40",
      "minutes": 374.7
+    },
+    {
+     "after": "ZEUS VARIANTS",
+     "before": "ZEUS VARIANTS",
+     "at": "22:56",
+     "minutes": 19.6
     }
    ],
    "playlists": [
     {
      "name": "ZEUS VARIANTS",
-     "runs": 64,
+     "runs": 67,
      "first": "03:41",
-     "last": "22:56"
+     "last": "23:20"
     }
    ],
    "scenarios": [
@@ -2466,15 +2472,15 @@
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 8,
+     "runs": 9,
      "routine": "ZEUS VARIANTS",
      "first": "07:47",
      "best": 519,
-     "median": 478
+     "median": 492
     },
     {
      "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
-     "runs": 6,
+     "runs": 8,
      "routine": "ZEUS VARIANTS",
      "first": "07:55",
      "best": 747,
@@ -6341,12 +6347,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1302,
+  "runs": 1305,
   "days": 27,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 512,
+    "runs": 515,
     "pct": 100.0
    },
    {
@@ -6361,8 +6367,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 86,
-    "pct": 98.5
+    "runs": 87,
+    "pct": 98.4
    }
   ]
  },
@@ -8911,19 +8917,19 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 13,
+    "runs": 14,
     "on_target": 34,
-    "reaction_ms": 150,
-    "overshoot_pct": 42,
+    "reaction_ms": 142,
+    "overshoot_pct": 40,
     "pps_by_distance": {
-     "close": 7.8
+     "close": 7.9
     }
    },
    {
     "scenario": "ZEUS PART 9 - CLOSE LONG STRAFES",
-    "runs": 6,
+    "runs": 8,
     "on_target": 49,
-    "reaction_ms": 117,
+    "reaction_ms": 125,
     "overshoot_pct": 22,
     "pps_by_distance": {
      "close": 12.1
