@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-02 07:57",
- "updated_utc": "2026-11-02T00:57:29Z",
+ "updated": "2026-11-02 08:02",
+ "updated_utc": "2026-11-02T01:02:03Z",
  "today": {
   "date": "2026-11-02",
   "progress": {}
@@ -2375,7 +2375,7 @@
  "days": [
   {
    "date": "2026-11-02",
-   "runs": 45,
+   "runs": 47,
    "restarts": 74,
    "rest_median_s": 78,
    "rest_longest_s": 854,
@@ -2390,9 +2390,9 @@
    "playlists": [
     {
      "name": "ZEUS VARIANTS",
-     "runs": 45,
+     "runs": 47,
      "first": "03:41",
-     "last": "07:55"
+     "last": "07:59"
     }
    ],
    "scenarios": [
@@ -2422,11 +2422,11 @@
     },
     {
      "name": "ZEUS PART 4 - 1100",
-     "runs": 14,
+     "runs": 15,
      "routine": "ZEUS VARIANTS",
      "first": "06:50",
      "best": 406,
-     "median": 348
+     "median": 350
     },
     {
      "name": "ZEUS PART 5 - CLOSE 600",
@@ -2462,11 +2462,11 @@
     },
     {
      "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
-     "runs": 1,
+     "runs": 2,
      "routine": "ZEUS VARIANTS",
      "first": "07:55",
      "best": 702,
-     "median": 702
+     "median": 700
     }
    ]
   },
@@ -6329,12 +6329,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1283,
+  "runs": 1285,
   "days": 27,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 496,
+    "runs": 497,
     "pct": 100.0
    },
    {
@@ -6344,8 +6344,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 453,
-    "pct": 101.0
+    "runs": 454,
+    "pct": 100.9
    },
    {
     "label": "First run after a break of 15 min+",
@@ -8858,12 +8858,12 @@
    },
    {
     "scenario": "ZEUS PART 4 - 1100",
-    "runs": 16,
+    "runs": 17,
     "on_target": 25,
     "reaction_ms": 150,
-    "overshoot_pct": 44,
+    "overshoot_pct": 45,
     "pps_by_distance": {
-     "mid": 6.0,
+     "mid": 5.9,
      "close": 5.1
     }
    },
@@ -8909,10 +8909,10 @@
    },
    {
     "scenario": "ZEUS PART 9 - CLOSE LONG STRAFES",
-    "runs": 1,
-    "on_target": 44,
-    "reaction_ms": 117,
-    "overshoot_pct": 26,
+    "runs": 2,
+    "on_target": 45,
+    "reaction_ms": 125,
+    "overshoot_pct": 20,
     "pps_by_distance": {
      "close": 11.8
     }
