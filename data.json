@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-03 00:17",
- "updated_utc": "2026-11-02T17:17:11Z",
+ "updated": "2026-11-03 00:22",
+ "updated_utc": "2026-11-02T17:22:06Z",
  "today": {
   "date": "2026-11-03",
   "progress": {
-   "ZEUS FOCUS": 4
+   "ZEUS FOCUS": 5
   }
  },
  "plan_start": "2026-10-07",
@@ -2387,23 +2387,23 @@
  "days": [
   {
    "date": "2026-11-03",
-   "runs": 4,
-   "restarts": 1,
-   "rest_median_s": 20,
-   "rest_longest_s": 55,
+   "runs": 5,
+   "restarts": 2,
+   "rest_median_s": 38,
+   "rest_longest_s": 127,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 4,
+     "runs": 5,
      "first": "00:12",
-     "last": "00:16"
+     "last": "00:19"
     }
    ],
    "scenarios": [
     {
      "name": "POSSESSION STATIC SPHERE FAR CLICK",
-     "runs": 2,
+     "runs": 3,
      "routine": "ZEUS FOCUS",
      "first": "00:12",
      "best": 23,
@@ -6421,12 +6421,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1322,
+  "runs": 1324,
   "days": 28,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 531,
+    "runs": 533,
     "pct": 100.0
    },
    {
