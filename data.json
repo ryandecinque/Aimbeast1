@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-02 16:37",
- "updated_utc": "2026-11-02T09:37:11Z",
+ "updated": "2026-11-02 16:42",
+ "updated_utc": "2026-11-02T09:42:10Z",
  "today": {
   "date": "2026-11-02",
   "progress": {}
@@ -2375,9 +2375,9 @@
  "days": [
   {
    "date": "2026-11-02",
-   "runs": 62,
+   "runs": 63,
    "restarts": 89,
-   "rest_median_s": 77,
+   "rest_median_s": 78,
    "rest_longest_s": 854,
    "breaks": [
     {
@@ -2396,9 +2396,9 @@
    "playlists": [
     {
      "name": "ZEUS VARIANTS",
-     "runs": 62,
+     "runs": 63,
      "first": "03:41",
-     "last": "16:35"
+     "last": "16:40"
     }
    ],
    "scenarios": [
@@ -2460,11 +2460,11 @@
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 6,
+     "runs": 7,
      "routine": "ZEUS VARIANTS",
      "first": "07:47",
-     "best": 518,
-     "median": 456
+     "best": 519,
+     "median": 463
     },
     {
      "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
@@ -6335,12 +6335,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1300,
+  "runs": 1301,
   "days": 27,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 511,
+    "runs": 512,
     "pct": 100.0
    },
    {
@@ -8905,12 +8905,12 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 10,
+    "runs": 11,
     "on_target": 33,
-    "reaction_ms": 142,
-    "overshoot_pct": 43,
+    "reaction_ms": 150,
+    "overshoot_pct": 42,
     "pps_by_distance": {
-     "close": 7.6
+     "close": 7.7
     }
    },
    {
