@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-02 23:57",
- "updated_utc": "2026-11-02T16:57:18Z",
+ "updated": "2026-11-03 00:17",
+ "updated_utc": "2026-11-02T17:17:11Z",
  "today": {
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "progress": {
-   "ZEUS FOCUS": 12
+   "ZEUS FOCUS": 4
   }
  },
  "plan_start": "2026-10-07",
@@ -154,8 +154,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 574.0,
-   "median_14d": 507,
-   "runs_14d": 99,
+   "median_14d": 506,
+   "runs_14d": 84,
    "steps": [
     0.0,
     198.0,
@@ -947,6 +947,11 @@
    "date": "2026-11-02",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS\nAbove your usual on one of two scenarios, below on one. Possession Evo Static Sphere (Far) stood out: a typical 467, against 410 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim, mouse movement and rests were all close to usual or better.\nOne thing to try: the extra input comes from chasing every small change. Let small bot moves go and reduce your input to the bot's real path. It should feel slower and steadier."
+  },
+  {
+   "date": "2026-11-02",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, second play of the day\nAbove your usual on two of four scenarios, below on two. Biggest drop: Possession Static Sphere Far Click, a typical 23 against 32 over the last 14 days.\nOver-aim rose on Flat Arena Poss - Thin Fast: 70% of corrections went through the bot, more than your last 14 days.\nOne thing to try: the over-aim comes from corrections that are bigger than the bot's move. Make them with your wrist and fingers, and make them smaller. It should feel like a nudge that stops on the near edge of the bot, a little late rather than through it."
   },
   {
    "date": "2026-11-01",
@@ -2380,6 +2385,40 @@
   }
  ],
  "days": [
+  {
+   "date": "2026-11-03",
+   "runs": 4,
+   "restarts": 1,
+   "rest_median_s": 20,
+   "rest_longest_s": 55,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "ZEUS FOCUS",
+     "runs": 4,
+     "first": "00:12",
+     "last": "00:16"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "POSSESSION STATIC SPHERE FAR CLICK",
+     "runs": 2,
+     "routine": "ZEUS FOCUS",
+     "first": "00:12",
+     "best": 23,
+     "median": 23
+    },
+    {
+     "name": "FLAT ARENA POSS - THIN FAST",
+     "runs": 2,
+     "routine": "ZEUS FOCUS",
+     "first": "00:14",
+     "best": 227,
+     "median": 204
+    }
+   ]
+  },
   {
    "date": "2026-11-02",
    "runs": 81,
@@ -6382,12 +6421,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1319,
-  "days": 27,
+  "runs": 1322,
+  "days": 28,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 528,
+    "runs": 531,
     "pct": 100.0
    },
    {
@@ -6403,7 +6442,7 @@
    {
     "label": "First run after a break of 15 min+",
     "runs": 87,
-    "pct": 98.4
+    "pct": 98.6
    }
   ]
  },
@@ -8978,6 +9017,18 @@
     "overshoot_pct": 21,
     "pps_by_distance": {
      "close": 12.1
+    }
+   }
+  ],
+  "2026-11-03": [
+   {
+    "scenario": "FLAT ARENA POSS - THIN FAST",
+    "runs": 2,
+    "on_target": 21,
+    "reaction_ms": 142,
+    "overshoot_pct": 68,
+    "pps_by_distance": {
+     "close": 3.4
     }
    }
   ]
