@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-03 01:22",
- "updated_utc": "2026-11-02T18:22:15Z",
+ "updated": "2026-11-03 01:27",
+ "updated_utc": "2026-11-02T18:27:10Z",
  "today": {
   "date": "2026-11-03",
   "progress": {
@@ -2392,8 +2392,8 @@
  "days": [
   {
    "date": "2026-11-03",
-   "runs": 11,
-   "restarts": 2,
+   "runs": 12,
+   "restarts": 3,
    "rest_median_s": 75,
    "rest_longest_s": 424,
    "breaks": [
@@ -2413,9 +2413,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 1,
+     "runs": 2,
      "first": "01:21",
-     "last": "01:21"
+     "last": "01:23"
     }
    ],
    "scenarios": [
@@ -2466,6 +2466,14 @@
      "first": "01:21",
      "best": 829,
      "median": 829
+    },
+    {
+     "name": "POSSESSED DODGE AIM",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "01:23",
+     "best": 1070,
+     "median": 1070
     }
    ]
   },
@@ -6471,12 +6479,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1330,
+  "runs": 1331,
   "days": 28,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 538,
+    "runs": 539,
     "pct": 100.0
    },
    {
@@ -9099,6 +9107,18 @@
     "overshoot_pct": 71,
     "pps_by_distance": {
      "close": 0.7
+    }
+   },
+   {
+    "scenario": "POSSESSED DODGE AIM",
+    "runs": 2,
+    "on_target": 29,
+    "reaction_ms": 84,
+    "overshoot_pct": 46,
+    "pps_by_distance": {
+     "far": 4.1,
+     "mid": 4.1,
+     "close": 4.5
     }
    },
    {
