@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-02 16:07",
- "updated_utc": "2026-11-02T09:07:08Z",
+ "updated": "2026-11-02 16:12",
+ "updated_utc": "2026-11-02T09:12:11Z",
  "today": {
   "date": "2026-11-02",
   "progress": {}
@@ -2375,8 +2375,8 @@
  "days": [
   {
    "date": "2026-11-02",
-   "runs": 50,
-   "restarts": 77,
+   "runs": 53,
+   "restarts": 80,
    "rest_median_s": 78,
    "rest_longest_s": 854,
    "breaks": [
@@ -2396,9 +2396,9 @@
    "playlists": [
     {
      "name": "ZEUS VARIANTS",
-     "runs": 50,
+     "runs": 53,
      "first": "03:41",
-     "last": "16:05"
+     "last": "16:11"
     }
    ],
    "scenarios": [
@@ -2428,11 +2428,11 @@
     },
     {
      "name": "ZEUS PART 4 - 1100",
-     "runs": 16,
+     "runs": 18,
      "routine": "ZEUS VARIANTS",
      "first": "06:50",
      "best": 406,
-     "median": 348
+     "median": 352
     },
     {
      "name": "ZEUS PART 5 - CLOSE 600",
@@ -2460,11 +2460,11 @@
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 3,
+     "runs": 4,
      "routine": "ZEUS VARIANTS",
      "first": "07:47",
      "best": 492,
-     "median": 463
+     "median": 456
     },
     {
      "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
@@ -6335,12 +6335,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1288,
+  "runs": 1290,
   "days": 27,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 499,
+    "runs": 501,
     "pct": 100.0
    },
    {
@@ -8864,12 +8864,12 @@
    },
    {
     "scenario": "ZEUS PART 4 - 1100",
-    "runs": 18,
+    "runs": 20,
     "on_target": 25,
     "reaction_ms": 150,
-    "overshoot_pct": 44,
+    "overshoot_pct": 43,
     "pps_by_distance": {
-     "mid": 6.0,
+     "mid": 6.1,
      "close": 5.1
     }
    },
@@ -8905,12 +8905,12 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 6,
-    "on_target": 32,
-    "reaction_ms": 142,
-    "overshoot_pct": 42,
+    "runs": 8,
+    "on_target": 33,
+    "reaction_ms": 150,
+    "overshoot_pct": 43,
     "pps_by_distance": {
-     "close": 7.7
+     "close": 7.6
     }
    },
    {
