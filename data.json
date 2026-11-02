@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-02 23:37",
- "updated_utc": "2026-11-02T16:37:14Z",
+ "updated": "2026-11-02 23:52",
+ "updated_utc": "2026-11-02T16:52:16Z",
  "today": {
   "date": "2026-11-02",
   "progress": {
-   "ZEUS FOCUS": 6
+   "ZEUS FOCUS": 10
   }
  },
  "plan_start": "2026-10-07",
@@ -943,6 +943,11 @@
   }
  ],
  "journal": [
+  {
+   "date": "2026-11-02",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS\nAbove your usual on one of two scenarios, below on one. Possession Evo Static Sphere (Far) stood out: a typical 467, against 410 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim, mouse movement and rests were all close to usual or better.\nOne thing to try: the extra input comes from chasing every small change. Let small bot moves go and reduce your input to the bot's real path. It should feel slower and steadier."
+  },
   {
    "date": "2026-11-01",
    "author": "AimJournal",
@@ -2377,9 +2382,9 @@
  "days": [
   {
    "date": "2026-11-02",
-   "runs": 75,
+   "runs": 79,
    "restarts": 102,
-   "rest_median_s": 72,
+   "rest_median_s": 71,
    "rest_longest_s": 854,
    "breaks": [
     {
@@ -2422,9 +2427,9 @@
     },
     {
      "name": "ZEUS FOCUS",
-     "runs": 6,
+     "runs": 10,
      "first": "23:25",
-     "last": "23:34"
+     "last": "23:50"
     }
    ],
    "scenarios": [
@@ -2486,11 +2491,11 @@
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
-     "runs": 13,
+     "runs": 15,
      "routine": "ZEUS VARIANTS",
      "first": "07:47",
-     "best": 519,
-     "median": 463
+     "best": 537,
+     "median": 478
     },
     {
      "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
@@ -2502,10 +2507,10 @@
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR)",
-     "runs": 3,
+     "runs": 5,
      "routine": "ZEUS FOCUS",
      "first": "23:27",
-     "best": 508,
+     "best": 511,
      "median": 467
     }
    ]
@@ -6369,12 +6374,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1313,
+  "runs": 1317,
   "days": 27,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 523,
+    "runs": 527,
     "pct": 100.0
    },
    {
@@ -8939,12 +8944,12 @@
    },
    {
     "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
-    "runs": 19,
-    "on_target": 33,
+    "runs": 21,
+    "on_target": 34,
     "reaction_ms": 133,
-    "overshoot_pct": 41,
+    "overshoot_pct": 40,
     "pps_by_distance": {
-     "close": 7.7
+     "close": 7.8
     }
    },
    {
