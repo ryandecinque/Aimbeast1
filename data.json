@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-03 00:32",
- "updated_utc": "2026-11-02T17:32:11Z",
+ "updated": "2026-11-03 00:42",
+ "updated_utc": "2026-11-02T17:42:12Z",
  "today": {
   "date": "2026-11-03",
   "progress": {
-   "ZEUS FOCUS": 8
+   "ZEUS FOCUS": 9
   }
  },
  "plan_start": "2026-10-07",
@@ -943,6 +943,11 @@
   }
  ],
  "journal": [
+  {
+   "date": "2026-11-03",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS\nFlat Arena Poss - Thin Fast reached 227, your best since the score log started. Above your usual on two of three scenarios, below on one.\nNothing slipped clearly against your last 14 days: rests were all close to usual or better.\nOne thing to try: the long pauses cost your warm-up. Start the next run within a minute or two. It should feel like one steady block, not a series of fresh starts."
+  },
   {
    "date": "2026-11-02",
    "author": "AimJournal",
@@ -2387,17 +2392,17 @@
  "days": [
   {
    "date": "2026-11-03",
-   "runs": 8,
+   "runs": 9,
    "restarts": 2,
-   "rest_median_s": 55,
-   "rest_longest_s": 351,
+   "rest_median_s": 75,
+   "rest_longest_s": 424,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 8,
+     "runs": 9,
      "first": "00:12",
-     "last": "00:31"
+     "last": "00:39"
     }
    ],
    "scenarios": [
@@ -2424,6 +2429,14 @@
      "first": "00:26",
      "best": 37,
      "median": 37
+    },
+    {
+     "name": "POSSESSION EVO STATIC SPHERE (FAR) BURST",
+     "runs": 1,
+     "routine": "ZEUS FOCUS",
+     "first": "00:39",
+     "best": 111,
+     "median": 111
     }
    ]
   },
@@ -6429,12 +6442,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1327,
+  "runs": 1328,
   "days": 28,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 535,
+    "runs": 536,
     "pct": 100.0
    },
    {
