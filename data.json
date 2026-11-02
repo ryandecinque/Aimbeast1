@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-03 00:47",
- "updated_utc": "2026-11-02T17:47:05Z",
+ "updated": "2026-11-03 01:22",
+ "updated_utc": "2026-11-02T18:22:15Z",
  "today": {
   "date": "2026-11-03",
   "progress": {
@@ -2392,17 +2392,30 @@
  "days": [
   {
    "date": "2026-11-03",
-   "runs": 10,
+   "runs": 11,
    "restarts": 2,
-   "rest_median_s": 95,
+   "rest_median_s": 75,
    "rest_longest_s": 424,
-   "breaks": [],
+   "breaks": [
+    {
+     "after": "ZEUS FOCUS",
+     "before": "(single scenario)",
+     "at": "00:43",
+     "minutes": 36.5
+    }
+   ],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
      "runs": 10,
      "first": "00:12",
      "last": "00:43"
+    },
+    {
+     "name": "(single scenario)",
+     "runs": 1,
+     "first": "01:21",
+     "last": "01:21"
     }
    ],
    "scenarios": [
@@ -2445,6 +2458,14 @@
      "first": "00:43",
      "best": 114,
      "median": 114
+    },
+    {
+     "name": "TERRAIN POSSESSION - EASY",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "01:21",
+     "best": 829,
+     "median": 829
     }
    ]
   },
@@ -6450,12 +6471,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1329,
+  "runs": 1330,
   "days": 28,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 537,
+    "runs": 538,
     "pct": 100.0
    },
    {
@@ -6470,7 +6491,7 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 87,
+    "runs": 88,
     "pct": 98.6
    }
   ]
@@ -9078,6 +9099,17 @@
     "overshoot_pct": 71,
     "pps_by_distance": {
      "close": 0.7
+    }
+   },
+   {
+    "scenario": "TERRAIN POSSESSION - EASY",
+    "runs": 1,
+    "on_target": 23,
+    "reaction_ms": 117,
+    "overshoot_pct": 57,
+    "pps_by_distance": {
+     "mid": 8.4,
+     "close": 5.7
     }
    }
   ]
