@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 06:22",
- "updated_utc": "2026-11-03T23:22:23Z",
+ "updated": "2026-11-04 06:27",
+ "updated_utc": "2026-11-03T23:27:22Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2427,9 +2427,9 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 41,
+   "runs": 43,
    "restarts": 36,
-   "rest_median_s": 99,
+   "rest_median_s": 94,
    "rest_longest_s": 665,
    "breaks": [
     {
@@ -2443,6 +2443,12 @@
      "before": "(single scenario)",
      "at": "05:33",
      "minutes": 23.6
+    },
+    {
+     "after": "(single scenario)",
+     "before": "POSSESSION TRACKING BY BALVARINE",
+     "at": "06:22",
+     "minutes": 2.4
     }
    ],
    "playlists": [
@@ -2457,6 +2463,12 @@
      "runs": 30,
      "first": "03:43",
      "last": "06:22"
+    },
+    {
+     "name": "POSSESSION TRACKING BY BALVARINE",
+     "runs": 2,
+     "first": "06:25",
+     "last": "06:27"
     }
    ],
    "scenarios": [
@@ -2491,6 +2503,14 @@
      "first": "04:37",
      "best": 875,
      "median": 767
+    },
+    {
+     "name": "SMOOTH THIN TRACK V1 (EZ) POSS",
+     "runs": 2,
+     "routine": "POSSESSION TRACKING BY BALVARINE",
+     "first": "06:25",
+     "best": 355,
+     "median": 350
     }
    ]
   },
@@ -6597,12 +6617,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1403,
+  "runs": 1405,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 568,
+    "runs": 569,
     "pct": 100.0
    },
    {
@@ -6612,7 +6632,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 480,
+    "runs": 481,
     "pct": 101.0
    },
    {
@@ -9283,6 +9303,16 @@
      "far": 4.1,
      "mid": 4.4,
      "close": 4.7
+    }
+   },
+   {
+    "scenario": "SMOOTH THIN TRACK V1 EZ POSS",
+    "runs": 2,
+    "on_target": 30,
+    "reaction_ms": null,
+    "overshoot_pct": 58,
+    "pps_by_distance": {
+     "mid": 5.8
     }
    },
    {
