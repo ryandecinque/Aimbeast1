@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-04 03:22",
- "updated_utc": "2026-11-03T20:22:30Z",
+ "updated": "2026-11-04 03:27",
+ "updated_utc": "2026-11-03T20:27:11Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
-   "ZEUS FOCUS": 3
+   "ZEUS FOCUS": 5
   }
  },
  "plan_start": "2026-10-07",
@@ -2422,23 +2422,23 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 3,
+   "runs": 5,
    "restarts": 1,
-   "rest_median_s": 94,
+   "rest_median_s": 66,
    "rest_longest_s": 104,
    "breaks": [],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 3,
+     "runs": 5,
      "first": "03:15",
-     "last": "03:21"
+     "last": "03:24"
     }
    ],
    "scenarios": [
     {
      "name": "FLAT ARENA POSS - THIN FAST",
-     "runs": 3,
+     "runs": 5,
      "routine": "ZEUS FOCUS",
      "first": "03:15",
      "best": 209,
@@ -6549,7 +6549,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1366,
+  "runs": 1368,
   "days": 29,
   "groups": [
    {
@@ -6564,7 +6564,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 462,
+    "runs": 464,
     "pct": 100.9
    },
    {
@@ -9206,7 +9206,7 @@
   "2026-11-04": [
    {
     "scenario": "FLAT ARENA POSS - THIN FAST",
-    "runs": 3,
+    "runs": 5,
     "on_target": 21,
     "reaction_ms": 150,
     "overshoot_pct": 71,
