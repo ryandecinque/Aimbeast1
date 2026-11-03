@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 03:53",
- "updated_utc": "2026-11-03T20:53:57Z",
+ "updated": "2026-11-04 04:07",
+ "updated_utc": "2026-11-03T21:07:58Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2427,10 +2427,10 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 16,
-   "restarts": 10,
-   "rest_median_s": 40,
-   "rest_longest_s": 399,
+   "runs": 18,
+   "restarts": 11,
+   "rest_median_s": 44,
+   "rest_longest_s": 455,
    "breaks": [
     {
      "after": "ZEUS FOCUS",
@@ -2448,9 +2448,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 5,
+     "runs": 7,
      "first": "03:43",
-     "last": "03:52"
+     "last": "04:03"
     }
    ],
    "scenarios": [
@@ -2472,10 +2472,10 @@
     },
     {
      "name": "POSSESSION DUELS - 80%",
-     "runs": 1,
+     "runs": 3,
      "routine": "(single scenario)",
      "first": "03:52",
-     "best": 1565,
+     "best": 1600,
      "median": 1565
     }
    ]
@@ -6583,12 +6583,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1378,
+  "runs": 1381,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 566,
+    "runs": 567,
     "pct": 100.0
    },
    {
@@ -6598,7 +6598,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 472,
+    "runs": 473,
     "pct": 101.0
    },
    {
@@ -9250,14 +9250,14 @@
    },
    {
     "scenario": "POSSESSION DUELS - 80",
-    "runs": 1,
-    "on_target": 34,
-    "reaction_ms": 119,
-    "overshoot_pct": 27,
+    "runs": 3,
+    "on_target": 33,
+    "reaction_ms": 134,
+    "overshoot_pct": 37,
     "pps_by_distance": {
      "far": 4.1,
-     "mid": 4.4,
-     "close": 5.2
+     "mid": 4.8,
+     "close": 4.7
     }
    },
    {
