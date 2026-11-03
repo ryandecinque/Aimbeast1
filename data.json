@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-03 20:12",
- "updated_utc": "2026-11-03T13:12:35Z",
+ "updated": "2026-11-03 20:17",
+ "updated_utc": "2026-11-03T13:17:41Z",
  "today": {
   "date": "2026-11-03",
   "progress": {
-   "ZEUS FOCUS": 33
+   "ZEUS FOCUS": 36
   }
  },
  "plan_start": "2026-10-07",
@@ -962,6 +962,11 @@
    "date": "2026-11-03",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS, fourth play of the day\nAbove your usual on one of two scenarios, the rest about level. Clearest gain: Possession Evo Static Sphere (Far), a typical 465 against 420 over the last 14 days.\nOne thing to try: the over-aim comes from corrections that are bigger than the bot's move. Make them with your wrist and fingers, and make them smaller. It should feel like a nudge that stops on the near edge of the bot, a little late rather than through it."
+  },
+  {
+   "date": "2026-11-03",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, 5th play of the day\nAbove your usual on one of two scenarios, below on one. Flat Arena Poss - Thin Fast was the weak spot, a typical 185 against your 14-day typical of 190.\nYour rests between runs were short, about 8 seconds, shorter than your last 14 days.\nOne thing to try: rests this short don't give your hand time to reset. Take about a minute between runs: let go of the mouse and loosen your hand, then start. The next run should feel fresh, not rushed."
   },
   {
    "date": "2026-11-02",
@@ -2412,9 +2417,9 @@
  "days": [
   {
    "date": "2026-11-03",
-   "runs": 35,
-   "restarts": 19,
-   "rest_median_s": 47,
+   "runs": 38,
+   "restarts": 21,
+   "rest_median_s": 48,
    "rest_longest_s": 679,
    "breaks": [
     {
@@ -2433,9 +2438,9 @@
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 33,
+     "runs": 36,
      "first": "00:12",
-     "last": "20:11"
+     "last": "20:16"
     },
     {
      "name": "(single scenario)",
@@ -2455,7 +2460,7 @@
     },
     {
      "name": "FLAT ARENA POSS - THIN FAST",
-     "runs": 13,
+     "runs": 15,
      "routine": "ZEUS FOCUS",
      "first": "00:14",
      "best": 227,
@@ -2503,11 +2508,11 @@
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR)",
-     "runs": 12,
+     "runs": 13,
      "routine": "ZEUS FOCUS",
      "first": "19:10",
      "best": 535,
-     "median": 450
+     "median": 451
     }
    ]
   },
@@ -6513,12 +6518,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1353,
+  "runs": 1356,
   "days": 28,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 561,
+    "runs": 564,
     "pct": 100.0
    },
    {
@@ -9115,9 +9120,9 @@
   "2026-11-03": [
    {
     "scenario": "FLAT ARENA POSS - THIN FAST",
-    "runs": 13,
+    "runs": 15,
     "on_target": 21,
-    "reaction_ms": 150,
+    "reaction_ms": 133,
     "overshoot_pct": 72,
     "pps_by_distance": {
      "close": 3.2
