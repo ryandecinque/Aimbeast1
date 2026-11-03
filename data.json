@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-03 01:27",
- "updated_utc": "2026-11-02T18:27:10Z",
+ "updated": "2026-11-03 19:12",
+ "updated_utc": "2026-11-03T12:12:22Z",
  "today": {
   "date": "2026-11-03",
   "progress": {
-   "ZEUS FOCUS": 10
+   "ZEUS FOCUS": 11
   }
  },
  "plan_start": "2026-10-07",
@@ -977,6 +977,11 @@
    "date": "2026-11-01",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS, fourth play of the day\nAbove your usual on every scenario. Zeus Part 8 - Close Catch-Up stood out: a typical 531, against 485 over the last 14 days.\nOne thing to try: going straight into the next run carries tension over. Rest half a minute to a minute and shake out your hand first. Starting should feel relaxed."
+  },
+  {
+   "date": "2026-11-01",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, 5th play of the day\nNot enough earlier runs of these scenarios in the last 14 days to compare scores.\nOne thing to try: the over-aim comes from corrections that are bigger than the bot's move. Make them with your wrist and fingers, and make them smaller. It should feel like a nudge that stops on the near edge of the bot, a little late rather than through it."
   },
   {
    "date": "2026-10-31",
@@ -2392,7 +2397,7 @@
  "days": [
   {
    "date": "2026-11-03",
-   "runs": 12,
+   "runs": 13,
    "restarts": 3,
    "rest_median_s": 75,
    "rest_longest_s": 424,
@@ -2402,14 +2407,20 @@
      "before": "(single scenario)",
      "at": "00:43",
      "minutes": 36.5
+    },
+    {
+     "after": "(single scenario)",
+     "before": "ZEUS FOCUS",
+     "at": "01:23",
+     "minutes": 1065.5
     }
    ],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 10,
+     "runs": 11,
      "first": "00:12",
-     "last": "00:43"
+     "last": "19:10"
     },
     {
      "name": "(single scenario)",
@@ -2474,6 +2485,14 @@
      "first": "01:23",
      "best": 1070,
      "median": 1070
+    },
+    {
+     "name": "POSSESSION EVO STATIC SPHERE (FAR)",
+     "runs": 1,
+     "routine": "ZEUS FOCUS",
+     "first": "19:10",
+     "best": 461,
+     "median": 461
     }
    ]
   },
@@ -6479,12 +6498,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1331,
+  "runs": 1332,
   "days": 28,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 539,
+    "runs": 540,
     "pct": 100.0
    },
    {
@@ -6499,8 +6518,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 88,
-    "pct": 98.6
+    "runs": 89,
+    "pct": 98.7
    }
   ]
  },
