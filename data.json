@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 06:32",
- "updated_utc": "2026-11-03T23:32:23Z",
+ "updated": "2026-11-04 06:37",
+ "updated_utc": "2026-11-03T23:37:25Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2427,8 +2427,8 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 46,
-   "restarts": 38,
+   "runs": 47,
+   "restarts": 39,
    "rest_median_s": 83,
    "rest_longest_s": 665,
    "breaks": [
@@ -2466,9 +2466,9 @@
     },
     {
      "name": "POSSESSION TRACKING BY BALVARINE",
-     "runs": 5,
+     "runs": 6,
      "first": "06:25",
-     "last": "06:32"
+     "last": "06:36"
     }
    ],
    "scenarios": [
@@ -2514,11 +2514,11 @@
     },
     {
      "name": "POSSESSION STATIC SPHERE",
-     "runs": 3,
+     "runs": 4,
      "routine": "POSSESSION TRACKING BY BALVARINE",
      "first": "06:28",
-     "best": 579,
-     "median": 560
+     "best": 635,
+     "median": 570
     }
    ]
   },
@@ -6625,7 +6625,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1408,
+  "runs": 1410,
   "days": 29,
   "groups": [
    {
@@ -6640,7 +6640,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 483,
+    "runs": 484,
     "pct": 101.0
    },
    {
