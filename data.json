@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-03 20:32",
- "updated_utc": "2026-11-03T13:32:19Z",
+ "updated": "2026-11-03 20:37",
+ "updated_utc": "2026-11-03T13:37:22Z",
  "today": {
   "date": "2026-11-03",
   "progress": {
-   "ZEUS FOCUS": 39
+   "ZEUS FOCUS": 42
   }
  },
  "plan_start": "2026-10-07",
@@ -967,6 +967,11 @@
    "date": "2026-11-03",
    "author": "AimJournal",
    "text": "Playlist: ZEUS FOCUS, 5th play of the day\nAbove your usual on one of two scenarios, below on one. Flat Arena Poss - Thin Fast was the weak spot, a typical 185 against your 14-day typical of 190.\nYour rests between runs were short, about 8 seconds, shorter than your last 14 days.\nOne thing to try: rests this short don't give your hand time to reset. Take about a minute between runs: let go of the mouse and loosen your hand, then start. The next run should feel fresh, not rushed."
+  },
+  {
+   "date": "2026-11-03",
+   "author": "AimJournal",
+   "text": "Playlist: ZEUS FOCUS, 6th play of the day\nAbove your usual on one of two scenarios, the rest about level. Clearest gain: Possession Evo Static Sphere (Far), a typical 514 against 420 over the last 14 days.\nNothing slipped clearly against your last 14 days: over-aim, mouse movement and rests were all close to usual or better.\nOne thing to try: the over-aim comes from corrections that are bigger than the bot's move. Make them with your wrist and fingers, and make them smaller. It should feel like a nudge that stops on the near edge of the bot, a little late rather than through it."
   },
   {
    "date": "2026-11-02",
@@ -2417,8 +2422,8 @@
  "days": [
   {
    "date": "2026-11-03",
-   "runs": 41,
-   "restarts": 25,
+   "runs": 44,
+   "restarts": 28,
    "rest_median_s": 50,
    "rest_longest_s": 679,
    "breaks": [
@@ -2438,9 +2443,9 @@
    "playlists": [
     {
      "name": "ZEUS FOCUS",
-     "runs": 39,
+     "runs": 42,
      "first": "00:12",
-     "last": "20:29"
+     "last": "20:36"
     },
     {
      "name": "(single scenario)",
@@ -2460,11 +2465,11 @@
     },
     {
      "name": "FLAT ARENA POSS - THIN FAST",
-     "runs": 18,
+     "runs": 21,
      "routine": "ZEUS FOCUS",
      "first": "00:14",
      "best": 227,
-     "median": 188
+     "median": 190
     },
     {
      "name": "FLAT ARENA POSS -THIN FAST CLICK",
@@ -6518,7 +6523,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1360,
+  "runs": 1362,
   "days": 28,
   "groups": [
    {
@@ -6533,8 +6538,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 458,
-    "pct": 100.8
+    "runs": 459,
+    "pct": 100.9
    },
    {
     "label": "First run after a break of 15 min+",
@@ -9120,7 +9125,7 @@
   "2026-11-03": [
    {
     "scenario": "FLAT ARENA POSS - THIN FAST",
-    "runs": 20,
+    "runs": 23,
     "on_target": 20,
     "reaction_ms": 133,
     "overshoot_pct": 72,
