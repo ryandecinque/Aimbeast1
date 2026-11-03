@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 06:52",
- "updated_utc": "2026-11-03T23:52:20Z",
+ "updated": "2026-11-04 06:57",
+ "updated_utc": "2026-11-03T23:57:27Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 574.0,
    "median_14d": 506,
-   "runs_14d": 70,
+   "runs_14d": 71,
    "steps": [
     0.0,
     198.0,
@@ -941,9 +941,9 @@
     },
     {
      "date": "2026-11-04",
-     "median": 488,
-     "best": 488,
-     "runs": 1
+     "median": 510,
+     "best": 533,
+     "runs": 2
     }
    ]
   }
@@ -2433,7 +2433,7 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 54,
+   "runs": 57,
    "restarts": 49,
    "rest_median_s": 73,
    "rest_longest_s": 665,
@@ -2461,6 +2461,12 @@
      "before": "(single scenario)",
      "at": "06:48",
      "minutes": 0.3
+    },
+    {
+     "after": "(single scenario)",
+     "before": "BAZHAN MEDIUM TRACKING",
+     "at": "06:54",
+     "minutes": 0.6
     }
    ],
    "playlists": [
@@ -2472,15 +2478,21 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 31,
+     "runs": 32,
      "first": "03:43",
-     "last": "06:51"
+     "last": "06:54"
     },
     {
      "name": "POSSESSION TRACKING BY BALVARINE",
      "runs": 12,
      "first": "06:25",
      "last": "06:48"
+    },
+    {
+     "name": "BAZHAN MEDIUM TRACKING",
+     "runs": 2,
+     "first": "06:56",
+     "last": "06:57"
     }
    ],
    "scenarios": [
@@ -2550,11 +2562,27 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 1,
+     "runs": 2,
      "routine": "(single scenario)",
      "first": "06:51",
-     "best": 488,
-     "median": 488
+     "best": 533,
+     "median": 510
+    },
+    {
+     "name": "ARCHTRACK",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "06:56",
+     "best": 4470,
+     "median": 4470
+    },
+    {
+     "name": "OLD BOXTRACK V2",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "06:57",
+     "best": 319,
+     "median": 319
     }
    ]
   },
@@ -6661,12 +6689,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1417,
+  "runs": 1419,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 574,
+    "runs": 575,
     "pct": 100.0
    },
    {
@@ -7496,9 +7524,9 @@
    {
     "scenario": "ARCHTRACK",
     "runs": 1,
-    "on_target": 23,
+    "on_target": 24,
     "reaction_ms": 183,
-    "overshoot_pct": 4,
+    "overshoot_pct": 5,
     "pps_by_distance": {
      "far": 2.2,
      "mid": 1.9
@@ -9317,6 +9345,17 @@
   ],
   "2026-11-04": [
    {
+    "scenario": "ARCHTRACK",
+    "runs": 1,
+    "on_target": 32,
+    "reaction_ms": 200,
+    "overshoot_pct": 5,
+    "pps_by_distance": {
+     "far": 8.1,
+     "mid": 7.3
+    }
+   },
+   {
     "scenario": "FLAT ARENA POSS",
     "runs": 4,
     "on_target": 27,
@@ -9345,6 +9384,17 @@
     "pps_by_distance": {
      "mid": 8.0,
      "close": 7.3
+    }
+   },
+   {
+    "scenario": "OLD BOXTRACK V2",
+    "runs": 1,
+    "on_target": 28,
+    "reaction_ms": 33,
+    "overshoot_pct": 17,
+    "pps_by_distance": {
+     "mid": 5.4,
+     "close": 4.8
     }
    },
    {
@@ -9382,14 +9432,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 2,
-    "on_target": 34,
+    "runs": 3,
+    "on_target": 35,
     "reaction_ms": 133,
-    "overshoot_pct": 44,
+    "overshoot_pct": 41,
     "pps_by_distance": {
-     "far": 6.2,
-     "mid": 8.1,
-     "close": 8.7
+     "far": 6.3,
+     "mid": 8.2,
+     "close": 9.0
     }
    }
   ]
@@ -10104,16 +10154,16 @@
   "2026-11-04": [
    {
     "scenario": "Zeus Track Evo - Noblink",
-    "score": 488,
-    "time": "06:50",
+    "score": 533,
+    "time": "06:53",
     "gif": "best-zeus-2026-11-04",
     "video": true,
-    "on_target": 35,
+    "on_target": 39,
     "reaction_ms": 133,
-    "overshoot_pct": 41,
+    "overshoot_pct": 38,
     "best_14d": 574,
     "master3": 726,
-    "note": "Best of 2 recorded today (median 422). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 3 recorded today (median 487). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available: model videos are for tracking runs only."
     }
