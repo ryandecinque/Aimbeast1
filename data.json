@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 06:47",
- "updated_utc": "2026-11-03T23:47:21Z",
+ "updated": "2026-11-04 06:52",
+ "updated_utc": "2026-11-03T23:52:20Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -155,7 +155,7 @@
    "official_best": 591.0,
    "best_14d": 574.0,
    "median_14d": 506,
-   "runs_14d": 69,
+   "runs_14d": 70,
    "steps": [
     0.0,
     198.0,
@@ -938,6 +938,12 @@
      "median": 502,
      "best": 508,
      "runs": 5
+    },
+    {
+     "date": "2026-11-04",
+     "median": 488,
+     "best": 488,
+     "runs": 1
     }
    ]
   }
@@ -2427,9 +2433,9 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 52,
-   "restarts": 42,
-   "rest_median_s": 82,
+   "runs": 54,
+   "restarts": 49,
+   "rest_median_s": 73,
    "rest_longest_s": 665,
    "breaks": [
     {
@@ -2449,6 +2455,12 @@
      "before": "POSSESSION TRACKING BY BALVARINE",
      "at": "06:22",
      "minutes": 2.4
+    },
+    {
+     "after": "POSSESSION TRACKING BY BALVARINE",
+     "before": "(single scenario)",
+     "at": "06:48",
+     "minutes": 0.3
     }
    ],
    "playlists": [
@@ -2460,15 +2472,15 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 30,
+     "runs": 31,
      "first": "03:43",
-     "last": "06:22"
+     "last": "06:51"
     },
     {
      "name": "POSSESSION TRACKING BY BALVARINE",
-     "runs": 11,
+     "runs": 12,
      "first": "06:25",
-     "last": "06:46"
+     "last": "06:48"
     }
    ],
    "scenarios": [
@@ -2527,6 +2539,22 @@
      "first": "06:37",
      "best": 320,
      "median": 310
+    },
+    {
+     "name": "STATIC SPHERE POSSESSION",
+     "runs": 1,
+     "routine": "POSSESSION TRACKING BY BALVARINE",
+     "first": "06:48",
+     "best": 357,
+     "median": 357
+    },
+    {
+     "name": "ZEUS TRACK EVO - NOBLINK",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "06:51",
+     "best": 488,
+     "median": 488
     }
    ]
   },
@@ -6633,12 +6661,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1414,
+  "runs": 1417,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 571,
+    "runs": 574,
     "pct": 100.0
    },
    {
@@ -9351,6 +9379,18 @@
      "mid": 7.8,
      "close": 7.6
     }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - NOBLINK",
+    "runs": 2,
+    "on_target": 34,
+    "reaction_ms": 133,
+    "overshoot_pct": 44,
+    "pps_by_distance": {
+     "far": 6.2,
+     "mid": 8.1,
+     "close": 8.7
+    }
    }
   ]
  },
@@ -10056,6 +10096,24 @@
     "best_14d": 574,
     "master3": 726,
     "note": "Best of 6 recorded today (median 498). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available: model videos are for tracking runs only."
+    }
+   }
+  ],
+  "2026-11-04": [
+   {
+    "scenario": "Zeus Track Evo - Noblink",
+    "score": 488,
+    "time": "06:50",
+    "gif": "best-zeus-2026-11-04",
+    "video": true,
+    "on_target": 35,
+    "reaction_ms": 133,
+    "overshoot_pct": 41,
+    "best_14d": 574,
+    "master3": 726,
+    "note": "Best of 2 recorded today (median 422). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available: model videos are for tracking runs only."
     }
