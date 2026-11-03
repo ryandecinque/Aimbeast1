@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 05:32",
- "updated_utc": "2026-11-03T22:32:54Z",
+ "updated": "2026-11-04 06:03",
+ "updated_utc": "2026-11-03T23:03:03Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2427,9 +2427,9 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 32,
+   "runs": 35,
    "restarts": 33,
-   "rest_median_s": 112,
+   "rest_median_s": 108,
    "rest_longest_s": 665,
    "breaks": [
     {
@@ -2437,6 +2437,12 @@
      "before": "(single scenario)",
      "at": "03:42",
      "minutes": 0.4
+    },
+    {
+     "after": "(single scenario)",
+     "before": "(single scenario)",
+     "at": "05:33",
+     "minutes": 23.6
     }
    ],
    "playlists": [
@@ -2448,9 +2454,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 21,
+     "runs": 24,
      "first": "03:43",
-     "last": "05:28"
+     "last": "05:59"
     }
    ],
    "scenarios": [
@@ -2480,11 +2486,11 @@
     },
     {
      "name": "MOVEMENT TRACKING",
-     "runs": 10,
+     "runs": 13,
      "routine": "(single scenario)",
      "first": "04:37",
      "best": 866,
-     "median": 722
+     "median": 721
     }
    ]
   },
@@ -6591,7 +6597,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1395,
+  "runs": 1398,
   "days": 29,
   "groups": [
    {
@@ -6601,8 +6607,8 @@
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 105,
-    "pct": 98.5
+    "runs": 106,
+    "pct": 98.6
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -6611,8 +6617,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 89,
-    "pct": 98.6
+    "runs": 90,
+    "pct": 98.5
    }
   ]
  },
@@ -9258,13 +9264,13 @@
    },
    {
     "scenario": "MOVEMENT TRACKING",
-    "runs": 11,
+    "runs": 14,
     "on_target": 21,
     "reaction_ms": 117,
     "overshoot_pct": 50,
     "pps_by_distance": {
-     "mid": 7.4,
-     "close": 7.1
+     "mid": 7.2,
+     "close": 7.0
     }
    },
    {
