@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 04:17",
- "updated_utc": "2026-11-03T21:17:51Z",
+ "updated": "2026-11-04 04:23",
+ "updated_utc": "2026-11-03T21:23:17Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2427,9 +2427,9 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 19,
-   "restarts": 11,
-   "rest_median_s": 48,
+   "runs": 21,
+   "restarts": 17,
+   "rest_median_s": 72,
    "rest_longest_s": 556,
    "breaks": [
     {
@@ -2448,9 +2448,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 8,
+     "runs": 10,
      "first": "03:43",
-     "last": "04:13"
+     "last": "04:23"
     }
    ],
    "scenarios": [
@@ -2472,11 +2472,11 @@
     },
     {
      "name": "POSSESSION DUELS - 80%",
-     "runs": 4,
+     "runs": 6,
      "routine": "(single scenario)",
      "first": "03:52",
      "best": 1600,
-     "median": 1565
+     "median": 1558
     }
    ]
   },
@@ -6583,7 +6583,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1382,
+  "runs": 1383,
   "days": 29,
   "groups": [
    {
@@ -9250,14 +9250,14 @@
    },
    {
     "scenario": "POSSESSION DUELS - 80",
-    "runs": 4,
+    "runs": 6,
     "on_target": 31,
-    "reaction_ms": 126,
+    "reaction_ms": 118,
     "overshoot_pct": 34,
     "pps_by_distance": {
      "far": 4.1,
-     "mid": 4.6,
-     "close": 4.7
+     "mid": 4.5,
+     "close": 4.6
     }
    },
    {
