@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 05:18",
- "updated_utc": "2026-11-03T22:18:09Z",
+ "updated": "2026-11-04 05:32",
+ "updated_utc": "2026-11-03T22:32:54Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2427,10 +2427,10 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 31,
-   "restarts": 28,
-   "rest_median_s": 104,
-   "rest_longest_s": 556,
+   "runs": 32,
+   "restarts": 33,
+   "rest_median_s": 112,
+   "rest_longest_s": 665,
    "breaks": [
     {
      "after": "ZEUS FOCUS",
@@ -2448,9 +2448,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 20,
+     "runs": 21,
      "first": "03:43",
-     "last": "05:15"
+     "last": "05:28"
     }
    ],
    "scenarios": [
@@ -2480,11 +2480,11 @@
     },
     {
      "name": "MOVEMENT TRACKING",
-     "runs": 9,
+     "runs": 10,
      "routine": "(single scenario)",
      "first": "04:37",
      "best": 866,
-     "median": 721
+     "median": 722
     }
    ]
   },
@@ -6591,7 +6591,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1394,
+  "runs": 1395,
   "days": 29,
   "groups": [
    {
@@ -9258,13 +9258,13 @@
    },
    {
     "scenario": "MOVEMENT TRACKING",
-    "runs": 10,
+    "runs": 11,
     "on_target": 21,
     "reaction_ms": 117,
     "overshoot_pct": 50,
     "pps_by_distance": {
-     "mid": 7.2,
-     "close": 7.0
+     "mid": 7.4,
+     "close": 7.1
     }
    },
    {
