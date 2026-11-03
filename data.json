@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 03:42",
- "updated_utc": "2026-11-03T20:42:31Z",
+ "updated": "2026-11-04 03:47",
+ "updated_utc": "2026-11-03T20:47:30Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2427,17 +2427,30 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 11,
-   "restarts": 5,
-   "rest_median_s": 60,
+   "runs": 14,
+   "restarts": 8,
+   "rest_median_s": 44,
    "rest_longest_s": 399,
-   "breaks": [],
+   "breaks": [
+    {
+     "after": "ZEUS FOCUS",
+     "before": "(single scenario)",
+     "at": "03:42",
+     "minutes": 0.4
+    }
+   ],
    "playlists": [
     {
      "name": "ZEUS FOCUS",
      "runs": 11,
      "first": "03:15",
      "last": "03:42"
+    },
+    {
+     "name": "(single scenario)",
+     "runs": 3,
+     "first": "03:43",
+     "last": "03:47"
     }
    ],
    "scenarios": [
@@ -2448,6 +2461,14 @@
      "first": "03:15",
      "best": 221,
      "median": 201
+    },
+    {
+     "name": "TERRAIN POSSESSION - EASY",
+     "runs": 3,
+     "routine": "(single scenario)",
+     "first": "03:43",
+     "best": 988,
+     "median": 909
     }
    ]
   },
@@ -6554,12 +6575,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1373,
+  "runs": 1376,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 565,
+    "runs": 566,
     "pct": 100.0
    },
    {
@@ -6569,8 +6590,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 468,
-    "pct": 100.9
+    "runs": 470,
+    "pct": 101.0
    },
    {
     "label": "First run after a break of 15 min+",
@@ -9199,9 +9220,9 @@
    {
     "scenario": "TERRAIN POSSESSION - EASY",
     "runs": 1,
-    "on_target": 23,
+    "on_target": 21,
     "reaction_ms": 117,
-    "overshoot_pct": 57,
+    "overshoot_pct": 58,
     "pps_by_distance": {
      "mid": 8.4,
      "close": 5.7
@@ -9217,6 +9238,17 @@
     "overshoot_pct": 71,
     "pps_by_distance": {
      "close": 3.4
+    }
+   },
+   {
+    "scenario": "TERRAIN POSSESSION - EASY",
+    "runs": 3,
+    "on_target": 24,
+    "reaction_ms": 100,
+    "overshoot_pct": 67,
+    "pps_by_distance": {
+     "mid": 8.4,
+     "close": 7.1
     }
    }
   ]
