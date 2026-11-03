@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 06:13",
- "updated_utc": "2026-11-03T23:13:05Z",
+ "updated": "2026-11-04 06:17",
+ "updated_utc": "2026-11-03T23:17:33Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2427,9 +2427,9 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 36,
-   "restarts": 33,
-   "rest_median_s": 112,
+   "runs": 38,
+   "restarts": 34,
+   "rest_median_s": 108,
    "rest_longest_s": 665,
    "breaks": [
     {
@@ -2454,9 +2454,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 25,
+     "runs": 27,
      "first": "03:43",
-     "last": "06:06"
+     "last": "06:16"
     }
    ],
    "scenarios": [
@@ -2486,11 +2486,11 @@
     },
     {
      "name": "MOVEMENT TRACKING",
-     "runs": 14,
+     "runs": 16,
      "routine": "(single scenario)",
      "first": "04:37",
-     "best": 866,
-     "median": 722
+     "best": 875,
+     "median": 726
     }
    ]
   },
@@ -6597,7 +6597,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1399,
+  "runs": 1401,
   "days": 29,
   "groups": [
    {
@@ -6608,11 +6608,11 @@
    {
     "label": "Later attempts, rest under 20 s",
     "runs": 106,
-    "pct": 98.6
+    "pct": 98.5
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 477,
+    "runs": 478,
     "pct": 101.0
    },
    {
@@ -9264,13 +9264,13 @@
    },
    {
     "scenario": "MOVEMENT TRACKING",
-    "runs": 15,
-    "on_target": 21,
+    "runs": 17,
+    "on_target": 22,
     "reaction_ms": 117,
     "overshoot_pct": 50,
     "pps_by_distance": {
-     "mid": 7.4,
-     "close": 7.1
+     "mid": 7.7,
+     "close": 7.2
     }
    },
    {
