@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 06:42",
- "updated_utc": "2026-11-03T23:42:15Z",
+ "updated": "2026-11-04 06:47",
+ "updated_utc": "2026-11-03T23:47:21Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2427,9 +2427,9 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 49,
-   "restarts": 39,
-   "rest_median_s": 92,
+   "runs": 52,
+   "restarts": 42,
+   "rest_median_s": 82,
    "rest_longest_s": 665,
    "breaks": [
     {
@@ -2466,9 +2466,9 @@
     },
     {
      "name": "POSSESSION TRACKING BY BALVARINE",
-     "runs": 8,
+     "runs": 11,
      "first": "06:25",
-     "last": "06:40"
+     "last": "06:46"
     }
    ],
    "scenarios": [
@@ -2506,11 +2506,11 @@
     },
     {
      "name": "SMOOTH THIN TRACK V1 (EZ) POSS",
-     "runs": 2,
+     "runs": 3,
      "routine": "POSSESSION TRACKING BY BALVARINE",
      "first": "06:25",
-     "best": 355,
-     "median": 350
+     "best": 361,
+     "median": 355
     },
     {
      "name": "POSSESSION STATIC SPHERE",
@@ -2522,10 +2522,10 @@
     },
     {
      "name": "FLAT ARENA POSS",
-     "runs": 2,
+     "runs": 4,
      "routine": "POSSESSION TRACKING BY BALVARINE",
      "first": "06:37",
-     "best": 311,
+     "best": 320,
      "median": 310
     }
    ]
@@ -6633,7 +6633,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1412,
+  "runs": 1414,
   "days": 29,
   "groups": [
    {
@@ -6648,7 +6648,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 484,
+    "runs": 486,
     "pct": 101.0
    },
    {
@@ -9290,10 +9290,10 @@
   "2026-11-04": [
    {
     "scenario": "FLAT ARENA POSS",
-    "runs": 2,
-    "on_target": 26,
-    "reaction_ms": 134,
-    "overshoot_pct": 56,
+    "runs": 4,
+    "on_target": 27,
+    "reaction_ms": 150,
+    "overshoot_pct": 59,
     "pps_by_distance": {
      "close": 5.2
     }
@@ -9333,12 +9333,12 @@
    },
    {
     "scenario": "SMOOTH THIN TRACK V1 EZ POSS",
-    "runs": 2,
+    "runs": 3,
     "on_target": 30,
     "reaction_ms": null,
-    "overshoot_pct": 58,
+    "overshoot_pct": 57,
     "pps_by_distance": {
-     "mid": 5.8
+     "mid": 5.9
     }
    },
    {
