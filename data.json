@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 07:12",
- "updated_utc": "2026-11-04T00:12:18Z",
+ "updated": "2026-11-04 07:22",
+ "updated_utc": "2026-11-04T00:22:20Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2433,8 +2433,8 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 64,
-   "restarts": 54,
+   "runs": 66,
+   "restarts": 59,
    "rest_median_s": 66,
    "rest_longest_s": 665,
    "breaks": [
@@ -2473,6 +2473,12 @@
      "before": "AIR REACTIVE",
      "at": "07:00",
      "minutes": 0.7
+    },
+    {
+     "after": "AIR REACTIVE",
+     "before": "AIR REACTIVE BY BALVARINE",
+     "at": "07:19",
+     "minutes": 0.6
     }
    ],
    "playlists": [
@@ -2502,9 +2508,15 @@
     },
     {
      "name": "AIR REACTIVE",
-     "runs": 5,
+     "runs": 6,
      "first": "07:02",
-     "last": "07:11"
+     "last": "07:19"
+    },
+    {
+     "name": "AIR REACTIVE BY BALVARINE",
+     "runs": 1,
+     "first": "07:21",
+     "last": "07:21"
     }
    ],
    "scenarios": [
@@ -2598,11 +2610,11 @@
     },
     {
      "name": "AIR KVAKA",
-     "runs": 4,
+     "runs": 5,
      "routine": "AIR REACTIVE",
      "first": "07:02",
-     "best": 845,
-     "median": 816
+     "best": 954,
+     "median": 836
     },
     {
      "name": "CONTACTIVE2 360",
@@ -2611,6 +2623,14 @@
      "first": "07:03",
      "best": 342,
      "median": 342
+    },
+    {
+     "name": "AIR CLOSE",
+     "runs": 1,
+     "routine": "AIR REACTIVE BY BALVARINE",
+     "first": "07:21",
+     "best": 310,
+     "median": 310
     }
    ]
   },
@@ -6717,7 +6737,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1426,
+  "runs": 1428,
   "days": 29,
   "groups": [
    {
@@ -6732,7 +6752,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 486,
+    "runs": 487,
     "pct": 101.0
    },
    {
@@ -9373,13 +9393,23 @@
   ],
   "2026-11-04": [
    {
-    "scenario": "AIR KVAKA",
-    "runs": 4,
-    "on_target": 33,
-    "reaction_ms": 150,
-    "overshoot_pct": 22,
+    "scenario": "AIR CLOSE",
+    "runs": 1,
+    "on_target": 24,
+    "reaction_ms": 167,
+    "overshoot_pct": 26,
     "pps_by_distance": {
-     "close": 13.7
+     "close": 5.2
+    }
+   },
+   {
+    "scenario": "AIR KVAKA",
+    "runs": 5,
+    "on_target": 34,
+    "reaction_ms": 150,
+    "overshoot_pct": 20,
+    "pps_by_distance": {
+     "close": 14.0
     }
    },
    {
