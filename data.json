@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 07:27",
- "updated_utc": "2026-11-04T00:27:23Z",
+ "updated": "2026-11-04 11:17",
+ "updated_utc": "2026-11-04T04:17:27Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2433,9 +2433,9 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 68,
-   "restarts": 59,
-   "rest_median_s": 66,
+   "runs": 70,
+   "restarts": 62,
+   "rest_median_s": 69,
    "rest_longest_s": 665,
    "breaks": [
     {
@@ -2479,6 +2479,12 @@
      "before": "AIR REACTIVE BY BALVARINE",
      "at": "07:19",
      "minutes": 0.6
+    },
+    {
+     "after": "AIR REACTIVE BY BALVARINE",
+     "before": "AIR REACTIVE BY BALVARINE",
+     "at": "07:27",
+     "minutes": 227.1
     }
    ],
    "playlists": [
@@ -2514,9 +2520,9 @@
     },
     {
      "name": "AIR REACTIVE BY BALVARINE",
-     "runs": 3,
+     "runs": 5,
      "first": "07:21",
-     "last": "07:26"
+     "last": "11:15"
     }
    ],
    "scenarios": [
@@ -2639,6 +2645,22 @@
      "first": "07:26",
      "best": 258,
      "median": 258
+    },
+    {
+     "name": "REACTIVE AIR",
+     "runs": 1,
+     "routine": "AIR REACTIVE BY BALVARINE",
+     "first": "07:27",
+     "best": 322,
+     "median": 322
+    },
+    {
+     "name": "DECELERAIR",
+     "runs": 1,
+     "routine": "AIR REACTIVE BY BALVARINE",
+     "first": "11:15",
+     "best": 295,
+     "median": 295
     }
    ]
   },
@@ -6745,12 +6767,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1431,
+  "runs": 1433,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 583,
+    "runs": 585,
     "pct": 100.0
    },
    {
@@ -6765,8 +6787,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 90,
-    "pct": 98.5
+    "runs": 91,
+    "pct": 98.6
    }
   ]
  },
@@ -9454,6 +9476,17 @@
     }
    },
    {
+    "scenario": "DECELERAIR",
+    "runs": 1,
+    "on_target": 22,
+    "reaction_ms": 192,
+    "overshoot_pct": 24,
+    "pps_by_distance": {
+     "mid": 4.8,
+     "close": 5.3
+    }
+   },
+   {
     "scenario": "FLAT ARENA POSS",
     "runs": 4,
     "on_target": 27,
@@ -9506,6 +9539,18 @@
      "far": 4.1,
      "mid": 4.4,
      "close": 4.7
+    }
+   },
+   {
+    "scenario": "REACTIVE AIR",
+    "runs": 1,
+    "on_target": 23,
+    "reaction_ms": 167,
+    "overshoot_pct": 32,
+    "pps_by_distance": {
+     "far": 4.8,
+     "mid": 5.2,
+     "close": 5.9
     }
    },
    {
