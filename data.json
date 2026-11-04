@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 07:02",
- "updated_utc": "2026-11-04T00:02:34Z",
+ "updated": "2026-11-04 07:07",
+ "updated_utc": "2026-11-04T00:07:14Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2433,9 +2433,9 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 60,
-   "restarts": 53,
-   "rest_median_s": 69,
+   "runs": 62,
+   "restarts": 54,
+   "rest_median_s": 66,
    "rest_longest_s": 665,
    "breaks": [
     {
@@ -2502,9 +2502,9 @@
     },
     {
      "name": "AIR REACTIVE",
-     "runs": 1,
+     "runs": 3,
      "first": "07:02",
-     "last": "07:02"
+     "last": "07:05"
     }
    ],
    "scenarios": [
@@ -2598,11 +2598,19 @@
     },
     {
      "name": "AIR KVAKA",
-     "runs": 1,
+     "runs": 2,
      "routine": "AIR REACTIVE",
      "first": "07:02",
-     "best": 747,
-     "median": 747
+     "best": 845,
+     "median": 796
+    },
+    {
+     "name": "CONTACTIVE2 360",
+     "runs": 1,
+     "routine": "AIR REACTIVE",
+     "first": "07:03",
+     "best": 342,
+     "median": 342
     }
    ]
   },
@@ -6709,12 +6717,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1422,
+  "runs": 1425,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 578,
+    "runs": 581,
     "pct": 100.0
    },
    {
@@ -9366,12 +9374,12 @@
   "2026-11-04": [
    {
     "scenario": "AIR KVAKA",
-    "runs": 1,
-    "on_target": 31,
+    "runs": 2,
+    "on_target": 33,
     "reaction_ms": 150,
-    "overshoot_pct": 29,
+    "overshoot_pct": 24,
     "pps_by_distance": {
-     "close": 12.6
+     "close": 13.4
     }
    },
    {
@@ -9383,6 +9391,17 @@
     "pps_by_distance": {
      "far": 8.1,
      "mid": 6.7
+    }
+   },
+   {
+    "scenario": "CONTACTIVE2 360",
+    "runs": 1,
+    "on_target": 23,
+    "reaction_ms": 125,
+    "overshoot_pct": 35,
+    "pps_by_distance": {
+     "mid": 6.0,
+     "close": 5.6
     }
    },
    {
