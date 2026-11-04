@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 11:57",
- "updated_utc": "2026-11-04T04:57:21Z",
+ "updated": "2026-11-04 12:02",
+ "updated_utc": "2026-11-04T05:02:23Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2433,9 +2433,9 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 93,
-   "restarts": 77,
-   "rest_median_s": 54,
+   "runs": 96,
+   "restarts": 79,
+   "rest_median_s": 52,
    "rest_longest_s": 665,
    "breaks": [
     {
@@ -2520,9 +2520,9 @@
     },
     {
      "name": "AIR REACTIVE BY BALVARINE",
-     "runs": 28,
+     "runs": 31,
      "first": "07:21",
-     "last": "11:57"
+     "last": "12:01"
     }
    ],
    "scenarios": [
@@ -2696,11 +2696,11 @@
     },
     {
      "name": "REACTIVE UFO",
-     "runs": 6,
+     "runs": 7,
      "routine": "AIR REACTIVE BY BALVARINE",
      "first": "11:41",
      "best": 1265,
-     "median": 1178
+     "median": 1153
     },
     {
      "name": "HELL TRACK STATIC",
@@ -2712,11 +2712,19 @@
     },
     {
      "name": "HECTIC BALL INTERMEDIATE - RANKED",
-     "runs": 2,
+     "runs": 3,
      "routine": "AIR REACTIVE BY BALVARINE",
      "first": "11:55",
-     "best": 366,
-     "median": 363
+     "best": 467,
+     "median": 467
+    },
+    {
+     "name": "AGILE TRACK INTERMEDIATE - RANKED",
+     "runs": 1,
+     "routine": "AIR REACTIVE BY BALVARINE",
+     "first": "12:00",
+     "best": 416,
+     "median": 416
     }
    ]
   },
@@ -6823,12 +6831,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1455,
+  "runs": 1456,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 598,
+    "runs": 599,
     "pct": 100.0
    },
    {
@@ -9479,6 +9487,16 @@
   ],
   "2026-11-04": [
    {
+    "scenario": "AGILE TRACK INTERMEDIATE - RANKED",
+    "runs": 1,
+    "on_target": 19,
+    "reaction_ms": 100,
+    "overshoot_pct": 19,
+    "pps_by_distance": {
+     "close": 7.0
+    }
+   },
+   {
     "scenario": "AIR CLOSE",
     "runs": 2,
     "on_target": 23,
@@ -9575,12 +9593,12 @@
    },
    {
     "scenario": "HECTIC BALL INTERMEDIATE - RANKED",
-    "runs": 2,
+    "runs": 3,
     "on_target": 17,
     "reaction_ms": 183,
-    "overshoot_pct": 19,
+    "overshoot_pct": 21,
     "pps_by_distance": {
-     "far": 6.1
+     "far": 6.2
     }
    },
    {
@@ -9653,10 +9671,10 @@
    },
    {
     "scenario": "REACTIVE UFO",
-    "runs": 10,
+    "runs": 12,
     "on_target": 12,
     "reaction_ms": null,
-    "overshoot_pct": 12,
+    "overshoot_pct": 11,
     "pps_by_distance": {
      "mid": 0.1,
      "close": 5.0
