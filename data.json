@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 12:07",
- "updated_utc": "2026-11-04T05:07:22Z",
+ "updated": "2026-11-04 12:12",
+ "updated_utc": "2026-11-04T05:12:43Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -13,9 +13,9 @@
    "name": "SMOOTH THIN TRACK V2",
    "master3": 616.0,
    "official_best": 555.0,
-   "best_14d": null,
-   "median_14d": null,
-   "runs_14d": 0,
+   "best_14d": 414.0,
+   "median_14d": 414,
+   "runs_14d": 1,
    "steps": [
     0.0,
     168.0,
@@ -97,9 +97,9 @@
    "name": "PASU TRACK EVO (RCT) - 0.85X",
    "master3": 506.0,
    "official_best": 398.0,
-   "best_14d": 265.0,
-   "median_14d": 265,
-   "runs_14d": 1,
+   "best_14d": 275.0,
+   "median_14d": 270,
+   "runs_14d": 2,
    "steps": [
     0.0,
     138.0,
@@ -276,6 +276,12 @@
      "median": 388,
      "best": 424,
      "runs": 5
+    },
+    {
+     "date": "2026-11-04",
+     "median": 414,
+     "best": 414,
+     "runs": 1
     }
    ]
   },
@@ -567,9 +573,9 @@
     },
     {
      "date": "2026-11-04",
-     "median": 265,
-     "best": 265,
-     "runs": 1
+     "median": 270,
+     "best": 275,
+     "runs": 2
     }
    ]
   },
@@ -2445,8 +2451,8 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 100,
-   "restarts": 81,
+   "runs": 102,
+   "restarts": 82,
    "rest_median_s": 52,
    "rest_longest_s": 665,
    "breaks": [
@@ -2514,9 +2520,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 34,
+     "runs": 36,
      "first": "03:43",
-     "last": "12:06"
+     "last": "12:10"
     },
     {
      "name": "POSSESSION TRACKING BY BALVARINE",
@@ -2754,11 +2760,11 @@
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
-     "runs": 1,
+     "runs": 2,
      "routine": "(single scenario)",
      "first": "12:05",
-     "best": 265,
-     "median": 265
+     "best": 275,
+     "median": 270
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
@@ -2767,6 +2773,14 @@
      "first": "12:06",
      "best": 342,
      "median": 342
+    },
+    {
+     "name": "SMOOTH THIN TRACK V2 - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "12:10",
+     "best": 414,
+     "median": 414
     }
    ]
   },
@@ -6873,12 +6887,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1460,
+  "runs": 1463,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 603,
+    "runs": 606,
     "pct": 100.0
    },
    {
@@ -6889,7 +6903,7 @@
    {
     "label": "Later attempts, rest 20 s to 2 min",
     "runs": 495,
-    "pct": 100.9
+    "pct": 101.0
    },
    {
     "label": "First run after a break of 15 min+",
@@ -9689,12 +9703,12 @@
    },
    {
     "scenario": "PASU TRACK EVO RCT - 0.85X",
-    "runs": 1,
-    "on_target": 19,
+    "runs": 2,
+    "on_target": 20,
     "reaction_ms": 183,
-    "overshoot_pct": 34,
+    "overshoot_pct": 37,
     "pps_by_distance": {
-     "far": 3.4,
+     "far": 4.0,
      "mid": 4.5
     }
    },
@@ -9773,6 +9787,16 @@
     "overshoot_pct": 57,
     "pps_by_distance": {
      "mid": 5.9
+    }
+   },
+   {
+    "scenario": "SMOOTH THIN TRACK V2 - RANKED",
+    "runs": 1,
+    "on_target": 31,
+    "reaction_ms": 133,
+    "overshoot_pct": 41,
+    "pps_by_distance": {
+     "mid": 6.9
     }
    },
    {
@@ -10525,22 +10549,6 @@
     }
    },
    {
-    "scenario": "PASU Track Evo (RCT) - 0.85X",
-    "score": 264,
-    "time": "12:04",
-    "gif": "best-pasu085-2026-11-04",
-    "video": true,
-    "on_target": 19,
-    "reaction_ms": 183,
-    "overshoot_pct": 34,
-    "best_14d": 275,
-    "master3": 506,
-    "note": "Best of 1 recorded today (median 264). The clip is its 8 seconds with the most hits.",
-    "model": {
-     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (event 2 is triggered on hit (speed up/down))"
-    }
-   },
-   {
     "scenario": "PASU Track XYZ",
     "score": 170,
     "time": "12:05",
@@ -10554,6 +10562,38 @@
     "note": "Best of 1 recorded today (median 170). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (the bot can be destroyed, and it comes back after a kill)"
+    }
+   },
+   {
+    "scenario": "Smooth Thin Track V2",
+    "score": 414,
+    "time": "12:09",
+    "gif": "best-smooththin-2026-11-04",
+    "video": true,
+    "on_target": 31,
+    "reaction_ms": 133,
+    "overshoot_pct": 41,
+    "best_14d": 414,
+    "master3": 616,
+    "note": "Best of 1 recorded today (median 413). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available: model videos are for tracking runs only."
+    }
+   },
+   {
+    "scenario": "PASU Track Evo (RCT) - 0.85X",
+    "score": 275,
+    "time": "12:07",
+    "gif": "best-pasu085-2026-11-04",
+    "video": true,
+    "on_target": 20,
+    "reaction_ms": 183,
+    "overshoot_pct": 40,
+    "best_14d": 275,
+    "master3": 506,
+    "note": "Best of 2 recorded today (median 268). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (event 2 is triggered on hit (speed up/down))"
     }
    }
   ]
