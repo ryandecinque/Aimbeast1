@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 11:17",
- "updated_utc": "2026-11-04T04:17:27Z",
+ "updated": "2026-11-04 11:22",
+ "updated_utc": "2026-11-04T04:22:22Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2433,9 +2433,9 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 70,
-   "restarts": 62,
-   "rest_median_s": 69,
+   "runs": 73,
+   "restarts": 64,
+   "rest_median_s": 66,
    "rest_longest_s": 665,
    "breaks": [
     {
@@ -2520,9 +2520,9 @@
     },
     {
      "name": "AIR REACTIVE BY BALVARINE",
-     "runs": 5,
+     "runs": 8,
      "first": "07:21",
-     "last": "11:15"
+     "last": "11:21"
     }
    ],
    "scenarios": [
@@ -2656,11 +2656,11 @@
     },
     {
      "name": "DECELERAIR",
-     "runs": 1,
+     "runs": 4,
      "routine": "AIR REACTIVE BY BALVARINE",
      "first": "11:15",
      "best": 295,
-     "median": 295
+     "median": 290
     }
    ]
   },
@@ -6767,7 +6767,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1433,
+  "runs": 1435,
   "days": 29,
   "groups": [
    {
@@ -6782,8 +6782,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 487,
-    "pct": 101.0
+    "runs": 489,
+    "pct": 100.9
    },
    {
     "label": "First run after a break of 15 min+",
@@ -9477,13 +9477,13 @@
    },
    {
     "scenario": "DECELERAIR",
-    "runs": 1,
-    "on_target": 22,
-    "reaction_ms": 192,
-    "overshoot_pct": 24,
+    "runs": 4,
+    "on_target": 21,
+    "reaction_ms": 188,
+    "overshoot_pct": 26,
     "pps_by_distance": {
      "mid": 4.8,
-     "close": 5.3
+     "close": 5.0
     }
    },
    {
