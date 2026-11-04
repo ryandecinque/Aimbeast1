@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 11:32",
- "updated_utc": "2026-11-04T04:32:23Z",
+ "updated": "2026-11-04 11:37",
+ "updated_utc": "2026-11-04T04:37:22Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2433,8 +2433,8 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 79,
-   "restarts": 65,
+   "runs": 82,
+   "restarts": 68,
    "rest_median_s": 54,
    "rest_longest_s": 665,
    "breaks": [
@@ -2520,9 +2520,9 @@
     },
     {
      "name": "AIR REACTIVE BY BALVARINE",
-     "runs": 14,
+     "runs": 17,
      "first": "07:21",
-     "last": "11:30"
+     "last": "11:36"
     }
    ],
    "scenarios": [
@@ -2669,6 +2669,30 @@
      "first": "11:26",
      "best": 330,
      "median": 327
+    },
+    {
+     "name": "RESPHERE",
+     "runs": 1,
+     "routine": "AIR REACTIVE BY BALVARINE",
+     "first": "11:33",
+     "best": 331,
+     "median": 331
+    },
+    {
+     "name": "GAME BALL V2",
+     "runs": 1,
+     "routine": "AIR REACTIVE BY BALVARINE",
+     "first": "11:35",
+     "best": 472,
+     "median": 472
+    },
+    {
+     "name": "REACTIVE FAR STRAFER",
+     "runs": 1,
+     "routine": "AIR REACTIVE BY BALVARINE",
+     "first": "11:36",
+     "best": 471,
+     "median": 471
     }
    ]
   },
@@ -6775,12 +6799,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1442,
+  "runs": 1444,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 589,
+    "runs": 591,
     "pct": 100.0
    },
    {
@@ -9516,6 +9540,16 @@
     }
    },
    {
+    "scenario": "GAME BALL V2",
+    "runs": 1,
+    "on_target": 17,
+    "reaction_ms": 300,
+    "overshoot_pct": 14,
+    "pps_by_distance": {
+     "mid": 5.3
+    }
+   },
+   {
     "scenario": "MOVEMENT TRACKING",
     "runs": 20,
     "on_target": 22,
@@ -9571,6 +9605,27 @@
      "far": 4.8,
      "mid": 5.2,
      "close": 5.9
+    }
+   },
+   {
+    "scenario": "REACTIVE FAR STRAFER",
+    "runs": 1,
+    "on_target": 17,
+    "reaction_ms": 250,
+    "overshoot_pct": 41,
+    "pps_by_distance": {
+     "far": 6.3
+    }
+   },
+   {
+    "scenario": "RESPHERE",
+    "runs": 2,
+    "on_target": 24,
+    "reaction_ms": 150,
+    "overshoot_pct": 45,
+    "pps_by_distance": {
+     "mid": 4.0,
+     "close": 5.8
     }
    },
    {
