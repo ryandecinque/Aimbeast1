@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 11:37",
- "updated_utc": "2026-11-04T04:37:22Z",
+ "updated": "2026-11-04 11:42",
+ "updated_utc": "2026-11-04T04:42:23Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2433,8 +2433,8 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 82,
-   "restarts": 68,
+   "runs": 85,
+   "restarts": 70,
    "rest_median_s": 54,
    "rest_longest_s": 665,
    "breaks": [
@@ -2520,9 +2520,9 @@
     },
     {
      "name": "AIR REACTIVE BY BALVARINE",
-     "runs": 17,
+     "runs": 20,
      "first": "07:21",
-     "last": "11:36"
+     "last": "11:41"
     }
    ],
    "scenarios": [
@@ -2680,19 +2680,27 @@
     },
     {
      "name": "GAME BALL V2",
-     "runs": 1,
+     "runs": 2,
      "routine": "AIR REACTIVE BY BALVARINE",
      "first": "11:35",
-     "best": 472,
-     "median": 472
+     "best": 480,
+     "median": 476
     },
     {
      "name": "REACTIVE FAR STRAFER",
-     "runs": 1,
+     "runs": 2,
      "routine": "AIR REACTIVE BY BALVARINE",
      "first": "11:36",
-     "best": 471,
-     "median": 471
+     "best": 474,
+     "median": 472
+    },
+    {
+     "name": "REACTIVE UFO",
+     "runs": 1,
+     "routine": "AIR REACTIVE BY BALVARINE",
+     "first": "11:41",
+     "best": 833,
+     "median": 833
     }
    ]
   },
@@ -6799,12 +6807,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1444,
+  "runs": 1447,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 591,
+    "runs": 594,
     "pct": 100.0
    },
    {
@@ -9541,10 +9549,10 @@
    },
    {
     "scenario": "GAME BALL V2",
-    "runs": 1,
-    "on_target": 17,
+    "runs": 2,
+    "on_target": 16,
     "reaction_ms": 300,
-    "overshoot_pct": 14,
+    "overshoot_pct": 12,
     "pps_by_distance": {
      "mid": 5.3
     }
@@ -9609,12 +9617,23 @@
    },
    {
     "scenario": "REACTIVE FAR STRAFER",
-    "runs": 1,
-    "on_target": 17,
-    "reaction_ms": 250,
-    "overshoot_pct": 41,
+    "runs": 2,
+    "on_target": 18,
+    "reaction_ms": 242,
+    "overshoot_pct": 44,
     "pps_by_distance": {
      "far": 6.3
+    }
+   },
+   {
+    "scenario": "REACTIVE UFO",
+    "runs": 2,
+    "on_target": 10,
+    "reaction_ms": null,
+    "overshoot_pct": 18,
+    "pps_by_distance": {
+     "mid": 0.0,
+     "close": 3.8
     }
    },
    {
