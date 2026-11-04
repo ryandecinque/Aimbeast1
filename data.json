@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 17:57",
- "updated_utc": "2026-11-04T10:57:20Z",
+ "updated": "2026-11-04 18:07",
+ "updated_utc": "2026-11-04T11:07:22Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -69,9 +69,9 @@
    "name": "AIR CONTROL SPHERE - S",
    "master3": 880.0,
    "official_best": 878.0,
-   "best_14d": null,
-   "median_14d": null,
-   "runs_14d": 0,
+   "best_14d": 649.0,
+   "median_14d": 634,
+   "runs_14d": 2,
    "steps": [
     0.0,
     240.0,
@@ -494,6 +494,12 @@
      "median": 740,
      "best": 861,
      "runs": 5
+    },
+    {
+     "date": "2026-11-04",
+     "median": 634,
+     "best": 649,
+     "runs": 2
     }
    ]
   },
@@ -2457,8 +2463,8 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 115,
-   "restarts": 100,
+   "runs": 117,
+   "restarts": 104,
    "rest_median_s": 54,
    "rest_longest_s": 732,
    "breaks": [
@@ -2568,9 +2574,9 @@
     },
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 13,
+     "runs": 15,
      "first": "16:40",
-     "last": "17:56"
+     "last": "18:01"
     }
    ],
    "scenarios": [
@@ -2813,6 +2819,14 @@
      "first": "17:05",
      "best": 472,
      "median": 434
+    },
+    {
+     "name": "AIR CONTROL SPHERE - S - RANKED",
+     "runs": 2,
+     "routine": "AIMBEAST 1 INTERMEDIATE",
+     "first": "17:57",
+     "best": 649,
+     "median": 634
     }
    ]
   },
@@ -6919,12 +6933,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1475,
+  "runs": 1477,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 607,
+    "runs": 608,
     "pct": 100.0
    },
    {
@@ -6935,7 +6949,7 @@
    {
     "label": "Later attempts, rest 20 s to 2 min",
     "runs": 500,
-    "pct": 100.8
+    "pct": 100.9
    },
    {
     "label": "First run after a break of 15 min+",
@@ -9595,6 +9609,17 @@
     }
    },
    {
+    "scenario": "AIR CONTROL SPHERE - S - RANKED",
+    "runs": 3,
+    "on_target": 43,
+    "reaction_ms": null,
+    "overshoot_pct": 32,
+    "pps_by_distance": {
+     "mid": 9.7,
+     "close": 11.4
+    }
+   },
+   {
     "scenario": "AIR KVAKA",
     "runs": 5,
     "on_target": 34,
@@ -10653,6 +10678,22 @@
     "best_14d": 472,
     "master3": 660,
     "note": "Best of 14 recorded today (median 422). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available: model videos are for tracking runs only."
+    }
+   },
+   {
+    "scenario": "Air Control Sphere - S",
+    "score": 649,
+    "time": "17:56",
+    "gif": "best-spheres-2026-11-04",
+    "video": true,
+    "on_target": 43,
+    "reaction_ms": null,
+    "overshoot_pct": 32,
+    "best_14d": 649,
+    "master3": 880,
+    "note": "Best of 3 recorded today (median 619). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available: model videos are for tracking runs only."
     }
