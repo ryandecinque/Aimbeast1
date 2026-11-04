@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 17:22",
- "updated_utc": "2026-11-04T10:22:19Z",
+ "updated": "2026-11-04 17:37",
+ "updated_utc": "2026-11-04T10:37:20Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -42,8 +42,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 458.0,
-   "median_14d": 432,
-   "runs_14d": 6,
+   "median_14d": 442,
+   "runs_14d": 8,
    "steps": [
     0.0,
     180.0,
@@ -391,9 +391,9 @@
     },
     {
      "date": "2026-11-04",
-     "median": 432,
+     "median": 442,
      "best": 458,
-     "runs": 6
+     "runs": 8
     }
    ]
   },
@@ -2457,8 +2457,8 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 110,
-   "restarts": 92,
+   "runs": 112,
+   "restarts": 95,
    "rest_median_s": 54,
    "rest_longest_s": 665,
    "breaks": [
@@ -2568,9 +2568,9 @@
     },
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 8,
+     "runs": 10,
      "first": "16:40",
-     "last": "17:20"
+     "last": "17:36"
     }
    ],
    "scenarios": [
@@ -2808,11 +2808,11 @@
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
-     "runs": 6,
+     "runs": 8,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "17:05",
      "best": 458,
-     "median": 432
+     "median": 442
     }
    ]
   },
@@ -6919,7 +6919,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1470,
+  "runs": 1472,
   "days": 29,
   "groups": [
    {
@@ -9616,14 +9616,14 @@
    },
    {
     "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
-    "runs": 8,
-    "on_target": 27,
+    "runs": 10,
+    "on_target": 28,
     "reaction_ms": 83,
     "overshoot_pct": 12,
     "pps_by_distance": {
-     "far": 6.5,
-     "mid": 7.2,
-     "close": 6.1
+     "far": 6.1,
+     "mid": 7.3,
+     "close": 6.4
     }
    },
    {
