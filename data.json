@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 07:22",
- "updated_utc": "2026-11-04T00:22:20Z",
+ "updated": "2026-11-04 07:27",
+ "updated_utc": "2026-11-04T00:27:23Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2433,7 +2433,7 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 66,
+   "runs": 68,
    "restarts": 59,
    "rest_median_s": 66,
    "rest_longest_s": 665,
@@ -2514,9 +2514,9 @@
     },
     {
      "name": "AIR REACTIVE BY BALVARINE",
-     "runs": 1,
+     "runs": 3,
      "first": "07:21",
-     "last": "07:21"
+     "last": "07:26"
     }
    ],
    "scenarios": [
@@ -2626,11 +2626,19 @@
     },
     {
      "name": "AIR CLOSE",
-     "runs": 1,
+     "runs": 2,
      "routine": "AIR REACTIVE BY BALVARINE",
      "first": "07:21",
-     "best": 310,
-     "median": 310
+     "best": 313,
+     "median": 312
+    },
+    {
+     "name": "CONTACTIVE SMALL",
+     "runs": 1,
+     "routine": "AIR REACTIVE BY BALVARINE",
+     "first": "07:26",
+     "best": 258,
+     "median": 258
     }
    ]
   },
@@ -6737,17 +6745,17 @@
   }
  ],
  "rest_effect": {
-  "runs": 1428,
+  "runs": 1431,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 581,
+    "runs": 583,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 106,
+    "runs": 107,
     "pct": 98.5
    },
    {
@@ -9394,10 +9402,10 @@
   "2026-11-04": [
    {
     "scenario": "AIR CLOSE",
-    "runs": 1,
-    "on_target": 24,
-    "reaction_ms": 167,
-    "overshoot_pct": 26,
+    "runs": 2,
+    "on_target": 23,
+    "reaction_ms": 158,
+    "overshoot_pct": 27,
     "pps_by_distance": {
      "close": 5.2
     }
@@ -9421,6 +9429,17 @@
     "pps_by_distance": {
      "far": 8.1,
      "mid": 6.7
+    }
+   },
+   {
+    "scenario": "CONTACTIVE SMALL",
+    "runs": 1,
+    "on_target": 21,
+    "reaction_ms": 117,
+    "overshoot_pct": 23,
+    "pps_by_distance": {
+     "mid": 4.1,
+     "close": 5.1
     }
    },
    {
