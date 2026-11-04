@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 06:57",
- "updated_utc": "2026-11-03T23:57:27Z",
+ "updated": "2026-11-04 07:02",
+ "updated_utc": "2026-11-04T00:02:34Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2433,9 +2433,9 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 57,
-   "restarts": 49,
-   "rest_median_s": 73,
+   "runs": 60,
+   "restarts": 53,
+   "rest_median_s": 69,
    "rest_longest_s": 665,
    "breaks": [
     {
@@ -2467,6 +2467,12 @@
      "before": "BAZHAN MEDIUM TRACKING",
      "at": "06:54",
      "minutes": 0.6
+    },
+    {
+     "after": "BAZHAN MEDIUM TRACKING",
+     "before": "AIR REACTIVE",
+     "at": "07:00",
+     "minutes": 0.7
     }
    ],
    "playlists": [
@@ -2490,9 +2496,15 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 2,
+     "runs": 4,
      "first": "06:56",
-     "last": "06:57"
+     "last": "07:00"
+    },
+    {
+     "name": "AIR REACTIVE",
+     "runs": 1,
+     "first": "07:02",
+     "last": "07:02"
     }
    ],
    "scenarios": [
@@ -2570,19 +2582,27 @@
     },
     {
      "name": "ARCHTRACK",
-     "runs": 1,
+     "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "06:56",
      "best": 4470,
-     "median": 4470
+     "median": 4315
     },
     {
      "name": "OLD BOXTRACK V2",
-     "runs": 1,
+     "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "06:57",
      "best": 319,
-     "median": 319
+     "median": 316
+    },
+    {
+     "name": "AIR KVAKA",
+     "runs": 1,
+     "routine": "AIR REACTIVE",
+     "first": "07:02",
+     "best": 747,
+     "median": 747
     }
    ]
   },
@@ -6689,12 +6709,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1419,
+  "runs": 1422,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 575,
+    "runs": 578,
     "pct": 100.0
    },
    {
@@ -9345,14 +9365,24 @@
   ],
   "2026-11-04": [
    {
-    "scenario": "ARCHTRACK",
+    "scenario": "AIR KVAKA",
     "runs": 1,
-    "on_target": 32,
+    "on_target": 31,
+    "reaction_ms": 150,
+    "overshoot_pct": 29,
+    "pps_by_distance": {
+     "close": 12.6
+    }
+   },
+   {
+    "scenario": "ARCHTRACK",
+    "runs": 3,
+    "on_target": 29,
     "reaction_ms": 200,
-    "overshoot_pct": 5,
+    "overshoot_pct": 3,
     "pps_by_distance": {
      "far": 8.1,
-     "mid": 7.3
+     "mid": 6.7
     }
    },
    {
@@ -9388,13 +9418,14 @@
    },
    {
     "scenario": "OLD BOXTRACK V2",
-    "runs": 1,
+    "runs": 2,
     "on_target": 28,
-    "reaction_ms": 33,
-    "overshoot_pct": 17,
+    "reaction_ms": 83,
+    "overshoot_pct": 16,
     "pps_by_distance": {
-     "mid": 5.4,
-     "close": 4.8
+     "far": 1.6,
+     "mid": 5.2,
+     "close": 5.7
     }
    },
    {
