@@ -776,6 +776,22 @@
    "model": {
     "none": "Not available: model videos are for tracking runs only."
    }
+  },
+  {
+   "scenario": "Air Control Sphere - S",
+   "score": 573,
+   "time": "03:01",
+   "gif": "best-spheres-2026-11-05",
+   "video": true,
+   "on_target": 38,
+   "reaction_ms": null,
+   "overshoot_pct": 39,
+   "best_14d": 649,
+   "master3": 880,
+   "note": "Best of 1 recorded today (median 572). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "none": "Not available: model videos are for tracking runs only."
+   }
   }
  ]
 }
