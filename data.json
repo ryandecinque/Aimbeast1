@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 12:02",
- "updated_utc": "2026-11-04T05:02:23Z",
+ "updated": "2026-11-04 12:07",
+ "updated_utc": "2026-11-04T05:07:22Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -97,9 +97,9 @@
    "name": "PASU TRACK EVO (RCT) - 0.85X",
    "master3": 506.0,
    "official_best": 398.0,
-   "best_14d": null,
-   "median_14d": null,
-   "runs_14d": 0,
+   "best_14d": 265.0,
+   "median_14d": 265,
+   "runs_14d": 1,
    "steps": [
     0.0,
     138.0,
@@ -125,9 +125,9 @@
    "name": "PASU TRACK XYZ",
    "master3": 660.0,
    "official_best": 580.0,
-   "best_14d": null,
-   "median_14d": null,
-   "runs_14d": 0,
+   "best_14d": 342.0,
+   "median_14d": 342,
+   "runs_14d": 1,
    "steps": [
     0.0,
     180.0,
@@ -564,6 +564,12 @@
      "median": 284,
      "best": 321,
      "runs": 8
+    },
+    {
+     "date": "2026-11-04",
+     "median": 265,
+     "best": 265,
+     "runs": 1
     }
    ]
   },
@@ -652,6 +658,12 @@
      "median": 402,
      "best": 494,
      "runs": 8
+    },
+    {
+     "date": "2026-11-04",
+     "median": 342,
+     "best": 342,
+     "runs": 1
     }
    ]
   },
@@ -2433,8 +2445,8 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 96,
-   "restarts": 79,
+   "runs": 100,
+   "restarts": 81,
    "rest_median_s": 52,
    "rest_longest_s": 665,
    "breaks": [
@@ -2485,6 +2497,12 @@
      "before": "AIR REACTIVE BY BALVARINE",
      "at": "07:27",
      "minutes": 227.1
+    },
+    {
+     "after": "AIR REACTIVE BY BALVARINE",
+     "before": "(single scenario)",
+     "at": "12:04",
+     "minutes": 0.4
     }
    ],
    "playlists": [
@@ -2496,9 +2514,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 32,
+     "runs": 34,
      "first": "03:43",
-     "last": "06:54"
+     "last": "12:06"
     },
     {
      "name": "POSSESSION TRACKING BY BALVARINE",
@@ -2520,9 +2538,9 @@
     },
     {
      "name": "AIR REACTIVE BY BALVARINE",
-     "runs": 31,
+     "runs": 33,
      "first": "07:21",
-     "last": "12:01"
+     "last": "12:04"
     }
    ],
    "scenarios": [
@@ -2696,11 +2714,11 @@
     },
     {
      "name": "REACTIVE UFO",
-     "runs": 7,
+     "runs": 8,
      "routine": "AIR REACTIVE BY BALVARINE",
      "first": "11:41",
      "best": 1265,
-     "median": 1153
+     "median": 1126
     },
     {
      "name": "HELL TRACK STATIC",
@@ -2725,6 +2743,30 @@
      "first": "12:00",
      "best": 416,
      "median": 416
+    },
+    {
+     "name": "AIR KVAKA - S",
+     "runs": 1,
+     "routine": "AIR REACTIVE BY BALVARINE",
+     "first": "12:02",
+     "best": 454,
+     "median": 454
+    },
+    {
+     "name": "PASU TRACK EVO (RCT) - 0.85X",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "12:05",
+     "best": 265,
+     "median": 265
+    },
+    {
+     "name": "PASU TRACK XYZ - RANKED",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "12:06",
+     "best": 342,
+     "median": 342
     }
    ]
   },
@@ -6831,18 +6873,18 @@
   }
  ],
  "rest_effect": {
-  "runs": 1456,
+  "runs": 1460,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 599,
+    "runs": 603,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
     "runs": 108,
-    "pct": 98.5
+    "pct": 98.6
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -9517,6 +9559,16 @@
     }
    },
    {
+    "scenario": "AIR KVAKA - S",
+    "runs": 1,
+    "on_target": 19,
+    "reaction_ms": 167,
+    "overshoot_pct": 28,
+    "pps_by_distance": {
+     "close": 7.7
+    }
+   },
+   {
     "scenario": "ARCHTRACK",
     "runs": 3,
     "on_target": 29,
@@ -9636,6 +9688,28 @@
     }
    },
    {
+    "scenario": "PASU TRACK EVO RCT - 0.85X",
+    "runs": 1,
+    "on_target": 19,
+    "reaction_ms": 183,
+    "overshoot_pct": 34,
+    "pps_by_distance": {
+     "far": 3.4,
+     "mid": 4.5
+    }
+   },
+   {
+    "scenario": "PASU TRACK XYZ - RANKED",
+    "runs": 1,
+    "on_target": 19,
+    "reaction_ms": 175,
+    "overshoot_pct": 37,
+    "pps_by_distance": {
+     "mid": 2.6,
+     "close": 3.2
+    }
+   },
+   {
     "scenario": "POSSESSION DUELS - 80",
     "runs": 7,
     "on_target": 31,
@@ -9671,13 +9745,13 @@
    },
    {
     "scenario": "REACTIVE UFO",
-    "runs": 12,
+    "runs": 13,
     "on_target": 12,
     "reaction_ms": null,
-    "overshoot_pct": 11,
+    "overshoot_pct": 10,
     "pps_by_distance": {
      "mid": 0.1,
-     "close": 5.0
+     "close": 4.9
     }
    },
    {
@@ -10448,6 +10522,38 @@
     "note": "Best of 3 recorded today (median 487). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available: model videos are for tracking runs only."
+    }
+   },
+   {
+    "scenario": "PASU Track Evo (RCT) - 0.85X",
+    "score": 264,
+    "time": "12:04",
+    "gif": "best-pasu085-2026-11-04",
+    "video": true,
+    "on_target": 19,
+    "reaction_ms": 183,
+    "overshoot_pct": 34,
+    "best_14d": 275,
+    "master3": 506,
+    "note": "Best of 1 recorded today (median 264). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (event 2 is triggered on hit (speed up/down))"
+    }
+   },
+   {
+    "scenario": "PASU Track XYZ",
+    "score": 170,
+    "time": "12:05",
+    "gif": "best-pasuxyz-2026-11-04",
+    "video": true,
+    "on_target": 19,
+    "reaction_ms": 175,
+    "overshoot_pct": 37,
+    "best_14d": 342,
+    "master3": 660,
+    "note": "Best of 1 recorded today (median 170). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (the bot can be destroyed, and it comes back after a kill)"
     }
    }
   ]
