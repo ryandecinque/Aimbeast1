@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-05 03:42",
- "updated_utc": "2026-11-04T20:42:18Z",
+ "updated": "2026-11-05 03:52",
+ "updated_utc": "2026-11-04T20:52:29Z",
  "today": {
   "date": "2026-11-05",
   "progress": {}
@@ -67,9 +67,9 @@
    "name": "AIR CONTROL SPHERE - S",
    "master3": 880.0,
    "official_best": 878.0,
-   "best_14d": 649.0,
-   "median_14d": 609,
-   "runs_14d": 9,
+   "best_14d": 655.0,
+   "median_14d": 608,
+   "runs_14d": 14,
    "steps": [
     0.0,
     240.0,
@@ -513,9 +513,9 @@
     },
     {
      "date": "2026-11-05",
-     "median": 586,
-     "best": 622,
-     "runs": 5
+     "median": 594,
+     "best": 655,
+     "runs": 10
     }
    ]
   },
@@ -2479,9 +2479,9 @@
  "days": [
   {
    "date": "2026-11-05",
-   "runs": 23,
-   "restarts": 47,
-   "rest_median_s": 82,
+   "runs": 28,
+   "restarts": 52,
+   "rest_median_s": 80,
    "rest_longest_s": 403,
    "breaks": [
     {
@@ -2494,9 +2494,9 @@
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 23,
+     "runs": 28,
      "first": "02:08",
-     "last": "03:40"
+     "last": "03:52"
     }
    ],
    "scenarios": [
@@ -2518,11 +2518,11 @@
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
-     "runs": 5,
+     "runs": 10,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "03:02",
-     "best": 622,
-     "median": 586
+     "best": 655,
+     "median": 594
     }
    ]
   },
@@ -6998,7 +6998,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1502,
+  "runs": 1506,
   "days": 30,
   "groups": [
    {
@@ -7013,8 +7013,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 514,
-    "pct": 100.9
+    "runs": 517,
+    "pct": 101.0
    },
    {
     "label": "First run after a break of 15 min+",
@@ -9960,13 +9960,13 @@
   "2026-11-05": [
    {
     "scenario": "AIR CONTROL SPHERE - S - RANKED",
-    "runs": 7,
+    "runs": 12,
     "on_target": 38,
     "reaction_ms": null,
-    "overshoot_pct": 35,
+    "overshoot_pct": 34,
     "pps_by_distance": {
-     "mid": 9.3,
-     "close": 10.4
+     "mid": 9.8,
+     "close": 10.2
     }
    },
    {
