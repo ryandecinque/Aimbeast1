@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 11:52",
- "updated_utc": "2026-11-04T04:52:25Z",
+ "updated": "2026-11-04 11:57",
+ "updated_utc": "2026-11-04T04:57:21Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2433,8 +2433,8 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 90,
-   "restarts": 75,
+   "runs": 93,
+   "restarts": 77,
    "rest_median_s": 54,
    "rest_longest_s": 665,
    "breaks": [
@@ -2520,9 +2520,9 @@
     },
     {
      "name": "AIR REACTIVE BY BALVARINE",
-     "runs": 25,
+     "runs": 28,
      "first": "07:21",
-     "last": "11:51"
+     "last": "11:57"
     }
    ],
    "scenarios": [
@@ -2696,11 +2696,11 @@
     },
     {
      "name": "REACTIVE UFO",
-     "runs": 5,
+     "runs": 6,
      "routine": "AIR REACTIVE BY BALVARINE",
      "first": "11:41",
      "best": 1265,
-     "median": 1153
+     "median": 1178
     },
     {
      "name": "HELL TRACK STATIC",
@@ -2709,6 +2709,14 @@
      "first": "11:45",
      "best": 310,
      "median": 310
+    },
+    {
+     "name": "HECTIC BALL INTERMEDIATE - RANKED",
+     "runs": 2,
+     "routine": "AIR REACTIVE BY BALVARINE",
+     "first": "11:55",
+     "best": 366,
+     "median": 363
     }
    ]
   },
@@ -6815,23 +6823,23 @@
   }
  ],
  "rest_effect": {
-  "runs": 1452,
+  "runs": 1455,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 597,
+    "runs": 598,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
     "runs": 108,
-    "pct": 98.6
+    "pct": 98.5
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 493,
-    "pct": 100.8
+    "runs": 495,
+    "pct": 100.9
    },
    {
     "label": "First run after a break of 15 min+",
@@ -9566,6 +9574,16 @@
     }
    },
    {
+    "scenario": "HECTIC BALL INTERMEDIATE - RANKED",
+    "runs": 2,
+    "on_target": 17,
+    "reaction_ms": 183,
+    "overshoot_pct": 19,
+    "pps_by_distance": {
+     "far": 6.1
+    }
+   },
+   {
     "scenario": "MOVEMENT TRACKING",
     "runs": 20,
     "on_target": 22,
@@ -9635,13 +9653,13 @@
    },
    {
     "scenario": "REACTIVE UFO",
-    "runs": 8,
+    "runs": 10,
     "on_target": 12,
     "reaction_ms": null,
     "overshoot_pct": 12,
     "pps_by_distance": {
      "mid": 0.1,
-     "close": 4.5
+     "close": 5.0
     }
    },
    {
