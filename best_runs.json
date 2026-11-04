@@ -679,22 +679,6 @@
    }
   },
   {
-   "scenario": "Smooth Thin Track V2",
-   "score": 414,
-   "time": "12:09",
-   "gif": "best-smooththin-2026-11-04",
-   "video": true,
-   "on_target": 31,
-   "reaction_ms": 133,
-   "overshoot_pct": 41,
-   "best_14d": 414,
-   "master3": 616,
-   "note": "Best of 1 recorded today (median 413). The clip is its 8 seconds with the most hits.",
-   "model": {
-    "none": "Not available: model videos are for tracking runs only."
-   }
-  },
-  {
    "scenario": "PASU Track Evo (RCT) - 0.85X",
    "score": 275,
    "time": "12:07",
@@ -708,6 +692,40 @@
    "note": "Best of 2 recorded today (median 268). The clip is its 8 seconds with the most hits.",
    "model": {
     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (event 2 is triggered on hit (speed up/down))"
+   }
+  },
+  {
+   "scenario": "Smooth Thin Track V2",
+   "score": 455,
+   "time": "16:42",
+   "gif": "best-smooththin-2026-11-04",
+   "video": true,
+   "on_target": 35,
+   "reaction_ms": 150,
+   "overshoot_pct": 35,
+   "best_14d": 455,
+   "master3": 616,
+   "note": "Best of 4 recorded today (median 252). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "file": "model-smooththin-2026-11-04",
+    "label": "Model: 563 (the closest it could get to 546)"
+   }
+  },
+  {
+   "scenario": "Air Track Smooth V3 150%",
+   "score": 367,
+   "time": "17:06",
+   "gif": "best-airtrack-2026-11-04",
+   "video": true,
+   "on_target": 23,
+   "reaction_ms": 83,
+   "overshoot_pct": 18,
+   "best_14d": 367,
+   "master3": 660,
+   "note": "Best of 2 recorded today (median 363). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "file": "model-airtrack-2026-11-04",
+    "label": "Model: 446"
    }
   }
  ]
