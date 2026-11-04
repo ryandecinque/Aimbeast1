@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 11:47",
- "updated_utc": "2026-11-04T04:47:22Z",
+ "updated": "2026-11-04 11:52",
+ "updated_utc": "2026-11-04T04:52:25Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -2433,8 +2433,8 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 87,
-   "restarts": 72,
+   "runs": 90,
+   "restarts": 75,
    "rest_median_s": 54,
    "rest_longest_s": 665,
    "breaks": [
@@ -2520,9 +2520,9 @@
     },
     {
      "name": "AIR REACTIVE BY BALVARINE",
-     "runs": 22,
+     "runs": 25,
      "first": "07:21",
-     "last": "11:45"
+     "last": "11:51"
     }
    ],
    "scenarios": [
@@ -2696,11 +2696,11 @@
     },
     {
      "name": "REACTIVE UFO",
-     "runs": 2,
+     "runs": 5,
      "routine": "AIR REACTIVE BY BALVARINE",
      "first": "11:41",
-     "best": 1153,
-     "median": 993
+     "best": 1265,
+     "median": 1153
     },
     {
      "name": "HELL TRACK STATIC",
@@ -6815,12 +6815,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1450,
+  "runs": 1452,
   "days": 29,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 596,
+    "runs": 597,
     "pct": 100.0
    },
    {
@@ -6830,7 +6830,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 492,
+    "runs": 493,
     "pct": 100.8
    },
    {
@@ -9635,13 +9635,13 @@
    },
    {
     "scenario": "REACTIVE UFO",
-    "runs": 3,
-    "on_target": 11,
+    "runs": 8,
+    "on_target": 12,
     "reaction_ms": null,
     "overshoot_pct": 12,
     "pps_by_distance": {
-     "mid": 0.0,
-     "close": 4.1
+     "mid": 0.1,
+     "close": 4.5
     }
    },
    {
