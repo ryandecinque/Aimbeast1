@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04 18:07",
- "updated_utc": "2026-11-04T11:07:22Z",
+ "updated": "2026-11-04 18:12",
+ "updated_utc": "2026-11-04T11:12:14Z",
  "today": {
   "date": "2026-11-04",
   "progress": {
@@ -70,8 +70,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 649.0,
-   "median_14d": 634,
-   "runs_14d": 2,
+   "median_14d": 614,
+   "runs_14d": 4,
    "steps": [
     0.0,
     240.0,
@@ -497,9 +497,9 @@
     },
     {
      "date": "2026-11-04",
-     "median": 634,
+     "median": 614,
      "best": 649,
-     "runs": 2
+     "runs": 4
     }
    ]
   },
@@ -2463,8 +2463,8 @@
  "days": [
   {
    "date": "2026-11-04",
-   "runs": 117,
-   "restarts": 104,
+   "runs": 119,
+   "restarts": 106,
    "rest_median_s": 54,
    "rest_longest_s": 732,
    "breaks": [
@@ -2574,9 +2574,9 @@
     },
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 15,
+     "runs": 17,
      "first": "16:40",
-     "last": "18:01"
+     "last": "18:10"
     }
    ],
    "scenarios": [
@@ -2822,11 +2822,11 @@
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
-     "runs": 2,
+     "runs": 4,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "17:57",
      "best": 649,
-     "median": 634
+     "median": 614
     }
    ]
   },
@@ -6933,7 +6933,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1477,
+  "runs": 1479,
   "days": 29,
   "groups": [
    {
@@ -6948,8 +6948,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 500,
-    "pct": 100.9
+    "runs": 501,
+    "pct": 101.0
    },
    {
     "label": "First run after a break of 15 min+",
@@ -9610,12 +9610,12 @@
    },
    {
     "scenario": "AIR CONTROL SPHERE - S - RANKED",
-    "runs": 3,
-    "on_target": 43,
+    "runs": 6,
+    "on_target": 41,
     "reaction_ms": null,
     "overshoot_pct": 32,
     "pps_by_distance": {
-     "mid": 9.7,
+     "mid": 9.5,
      "close": 11.4
     }
    },
