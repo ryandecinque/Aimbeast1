@@ -763,19 +763,19 @@
   },
   {
    "scenario": "Air Track Smooth V3 150%",
-   "score": 427,
-   "time": "02:35",
+   "score": 449,
+   "time": "02:43",
    "gif": "best-airtrack-2026-11-05",
    "video": true,
-   "on_target": 25,
+   "on_target": 29,
    "reaction_ms": 67,
    "overshoot_pct": 13,
-   "best_14d": 472,
+   "best_14d": 475,
    "master3": 660,
-   "note": "Best of 3 recorded today (median 422). The clip is its 8 seconds with the most hits.",
+   "note": "Best of 6 recorded today (median 421). The clip is its 8 seconds with the most hits.",
    "model": {
     "file": "model-airtrack-2026-11-05",
-    "label": "Model: 525"
+    "label": "Model: 538"
    }
   }
  ]

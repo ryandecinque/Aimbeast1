@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-05 02:42",
- "updated_utc": "2026-11-04T19:42:17Z",
+ "updated": "2026-11-05 02:47",
+ "updated_utc": "2026-11-04T19:47:19Z",
  "today": {
   "date": "2026-11-05",
   "progress": {}
@@ -41,7 +41,7 @@
    "official_best": 548.0,
    "best_14d": 472.0,
    "median_14d": 427,
-   "runs_14d": 15,
+   "runs_14d": 17,
    "steps": [
     0.0,
     180.0,
@@ -402,8 +402,8 @@
     {
      "date": "2026-11-05",
      "median": 422,
-     "best": 427,
-     "runs": 4
+     "best": 451,
+     "runs": 6
     }
    ]
   },
@@ -2473,17 +2473,17 @@
  "days": [
   {
    "date": "2026-11-05",
-   "runs": 12,
-   "restarts": 29,
+   "runs": 14,
+   "restarts": 32,
    "rest_median_s": 82,
    "rest_longest_s": 167,
    "breaks": [],
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 12,
+     "runs": 14,
      "first": "02:08",
-     "last": "02:40"
+     "last": "02:44"
     }
    ],
    "scenarios": [
@@ -2497,10 +2497,10 @@
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
-     "runs": 4,
+     "runs": 6,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "02:30",
-     "best": 427,
+     "best": 451,
      "median": 422
     }
    ]
@@ -6977,7 +6977,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1491,
+  "runs": 1493,
   "days": 30,
   "groups": [
    {
@@ -6992,8 +6992,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 507,
-    "pct": 101.0
+    "runs": 509,
+    "pct": 100.9
    },
    {
     "label": "First run after a break of 15 min+",
@@ -9939,14 +9939,14 @@
   "2026-11-05": [
    {
     "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
-    "runs": 4,
-    "on_target": 25,
+    "runs": 6,
+    "on_target": 26,
     "reaction_ms": 83,
     "overshoot_pct": 12,
     "pps_by_distance": {
-     "far": 6.2,
+     "far": 6.3,
      "mid": 7.3,
-     "close": 6.2
+     "close": 6.8
     }
    },
    {
@@ -10786,19 +10786,19 @@
    },
    {
     "scenario": "Air Track Smooth V3 150%",
-    "score": 427,
-    "time": "02:35",
+    "score": 449,
+    "time": "02:43",
     "gif": "best-airtrack-2026-11-05",
     "video": true,
-    "on_target": 25,
+    "on_target": 29,
     "reaction_ms": 67,
     "overshoot_pct": 13,
-    "best_14d": 472,
+    "best_14d": 475,
     "master3": 660,
-    "note": "Best of 3 recorded today (median 422). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 6 recorded today (median 421). The clip is its 8 seconds with the most hits.",
     "model": {
      "file": "model-airtrack-2026-11-05",
-     "label": "Model: 525"
+     "label": "Model: 538"
     }
    }
   ]
