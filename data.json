@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-05 16:17",
- "updated_utc": "2026-11-05T09:17:28Z",
+ "updated": "2026-11-05 16:22",
+ "updated_utc": "2026-11-05T09:22:22Z",
  "today": {
   "date": "2026-11-05",
   "progress": {}
@@ -13,7 +13,7 @@
    "official_best": 555.0,
    "best_14d": 471.0,
    "median_14d": 410,
-   "runs_14d": 13,
+   "runs_14d": 14,
    "steps": [
     0.0,
     168.0,
@@ -41,7 +41,7 @@
    "official_best": 548.0,
    "best_14d": 475.0,
    "median_14d": 426,
-   "runs_14d": 21,
+   "runs_14d": 22,
    "steps": [
     0.0,
     180.0,
@@ -283,9 +283,9 @@
     },
     {
      "date": "2026-11-05",
-     "median": 403,
+     "median": 406,
      "best": 471,
-     "runs": 11
+     "runs": 12
     }
    ]
   },
@@ -401,9 +401,9 @@
     },
     {
      "date": "2026-11-05",
-     "median": 422,
+     "median": 423,
      "best": 475,
-     "runs": 10
+     "runs": 11
     }
    ]
   },
@@ -2497,9 +2497,9 @@
  "days": [
   {
    "date": "2026-11-05",
-   "runs": 61,
-   "restarts": 96,
-   "rest_median_s": 78,
+   "runs": 63,
+   "restarts": 98,
+   "rest_median_s": 77,
    "rest_longest_s": 403,
    "breaks": [
     {
@@ -2542,27 +2542,27 @@
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 61,
+     "runs": 63,
      "first": "02:08",
-     "last": "16:14"
+     "last": "16:19"
     }
    ],
    "scenarios": [
     {
      "name": "SMOOTH THIN TRACK V2 - RANKED",
-     "runs": 11,
+     "runs": 12,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "02:08",
      "best": 471,
-     "median": 403
+     "median": 406
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
-     "runs": 10,
+     "runs": 11,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "02:30",
      "best": 475,
-     "median": 422
+     "median": 423
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
@@ -7070,12 +7070,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1540,
+  "runs": 1542,
   "days": 30,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 615,
+    "runs": 616,
     "pct": 100.0
    },
    {
@@ -10043,14 +10043,14 @@
    },
    {
     "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
-    "runs": 12,
+    "runs": 13,
     "on_target": 26,
     "reaction_ms": 100,
     "overshoot_pct": 10,
     "pps_by_distance": {
-     "far": 6.0,
-     "mid": 7.2,
-     "close": 6.7
+     "far": 6.2,
+     "mid": 7.3,
+     "close": 6.4
     }
    },
    {
@@ -10077,8 +10077,8 @@
    },
    {
     "scenario": "SMOOTH THIN TRACK V2 - RANKED",
-    "runs": 19,
-    "on_target": 30,
+    "runs": 20,
+    "on_target": 31,
     "reaction_ms": 133,
     "overshoot_pct": 36,
     "pps_by_distance": {
