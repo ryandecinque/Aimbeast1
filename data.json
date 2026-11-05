@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-05 16:22",
- "updated_utc": "2026-11-05T09:22:22Z",
+ "updated": "2026-11-05 16:32",
+ "updated_utc": "2026-11-05T09:32:42Z",
  "today": {
   "date": "2026-11-05",
   "progress": {}
@@ -41,7 +41,7 @@
    "official_best": 548.0,
    "best_14d": 475.0,
    "median_14d": 426,
-   "runs_14d": 22,
+   "runs_14d": 23,
    "steps": [
     0.0,
     180.0,
@@ -401,9 +401,9 @@
     },
     {
      "date": "2026-11-05",
-     "median": 423,
+     "median": 424,
      "best": 475,
-     "runs": 11
+     "runs": 12
     }
    ]
   },
@@ -2497,10 +2497,10 @@
  "days": [
   {
    "date": "2026-11-05",
-   "runs": 63,
-   "restarts": 98,
-   "rest_median_s": 77,
-   "rest_longest_s": 403,
+   "runs": 64,
+   "restarts": 99,
+   "rest_median_s": 78,
+   "rest_longest_s": 593,
    "breaks": [
     {
      "after": "AIMBEAST 1 INTERMEDIATE",
@@ -2542,9 +2542,9 @@
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 63,
+     "runs": 64,
      "first": "02:08",
-     "last": "16:19"
+     "last": "16:30"
     }
    ],
    "scenarios": [
@@ -2558,11 +2558,11 @@
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
-     "runs": 11,
+     "runs": 12,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "02:30",
      "best": 475,
-     "median": 423
+     "median": 424
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
@@ -7070,7 +7070,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1542,
+  "runs": 1543,
   "days": 30,
   "groups": [
    {
@@ -10043,14 +10043,14 @@
    },
    {
     "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
-    "runs": 13,
+    "runs": 14,
     "on_target": 26,
     "reaction_ms": 100,
     "overshoot_pct": 10,
     "pps_by_distance": {
      "far": 6.2,
-     "mid": 7.3,
-     "close": 6.4
+     "mid": 7.2,
+     "close": 6.7
     }
    },
    {
