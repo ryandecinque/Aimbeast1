@@ -842,5 +842,23 @@
     "label": "Model: 643"
    }
   }
+ ],
+ "2026-11-06": [
+  {
+   "scenario": "Smooth Thin Track V2",
+   "score": 440,
+   "time": "04:54",
+   "gif": "best-smooththin-2026-11-06",
+   "video": true,
+   "on_target": 36,
+   "reaction_ms": 133,
+   "overshoot_pct": 35,
+   "best_14d": 471,
+   "master3": 616,
+   "note": "Best of 1 recorded today (median 438). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "none": "Not available: model videos are for tracking runs only."
+   }
+  }
  ]
 }
