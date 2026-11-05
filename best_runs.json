@@ -762,22 +762,6 @@
    }
   },
   {
-   "scenario": "Air Control Sphere - S",
-   "score": 667,
-   "time": "03:09",
-   "gif": "best-spheres-2026-11-05",
-   "video": true,
-   "on_target": 43,
-   "reaction_ms": null,
-   "overshoot_pct": 37,
-   "best_14d": 649,
-   "master3": 880,
-   "note": "Best of 3 recorded today (median 585). The clip is its 8 seconds with the most hits.",
-   "model": {
-    "none": "Not available: model videos are for tracking runs only."
-   }
-  },
-  {
    "scenario": "PASU Track Evo (RCT) - 0.85X",
    "score": 338,
    "time": "05:03",
@@ -837,6 +821,22 @@
    "best_14d": 480,
    "master3": 660,
    "note": "Best of 21 recorded today (median 425). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "none": "Not available: model videos are for tracking runs only."
+   }
+  },
+  {
+   "scenario": "Air Control Sphere - S",
+   "score": 689,
+   "time": "17:38",
+   "gif": "best-spheres-2026-11-05",
+   "video": true,
+   "on_target": 44,
+   "reaction_ms": null,
+   "overshoot_pct": 38,
+   "best_14d": 695,
+   "master3": 880,
+   "note": "Best of 16 recorded today (median 606). The clip is its 8 seconds with the most hits.",
    "model": {
     "none": "Not available: model videos are for tracking runs only."
    }
