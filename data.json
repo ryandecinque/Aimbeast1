@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-05 22:12",
- "updated_utc": "2026-11-05T15:12:24Z",
+ "updated": "2026-11-05 22:17",
+ "updated_utc": "2026-11-05T15:17:36Z",
  "today": {
   "date": "2026-11-05",
   "progress": {}
@@ -12,8 +12,8 @@
    "master3": 616.0,
    "official_best": 555.0,
    "best_14d": 471.0,
-   "median_14d": 411,
-   "runs_14d": 16,
+   "median_14d": 412,
+   "runs_14d": 17,
    "steps": [
     0.0,
     168.0,
@@ -285,7 +285,7 @@
      "date": "2026-11-05",
      "median": 410,
      "best": 471,
-     "runs": 14
+     "runs": 15
     }
    ]
   },
@@ -2497,8 +2497,8 @@
  "days": [
   {
    "date": "2026-11-05",
-   "runs": 114,
-   "restarts": 139,
+   "runs": 115,
+   "restarts": 140,
    "rest_median_s": 73,
    "rest_longest_s": 745,
    "breaks": [
@@ -2560,15 +2560,15 @@
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 114,
+     "runs": 115,
      "first": "02:08",
-     "last": "22:10"
+     "last": "22:15"
     }
    ],
    "scenarios": [
     {
      "name": "SMOOTH THIN TRACK V2 - RANKED",
-     "runs": 14,
+     "runs": 15,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "02:08",
      "best": 471,
@@ -7088,7 +7088,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1593,
+  "runs": 1594,
   "days": 30,
   "groups": [
    {
@@ -10095,10 +10095,10 @@
    },
    {
     "scenario": "SMOOTH THIN TRACK V2 - RANKED",
-    "runs": 22,
+    "runs": 23,
     "on_target": 31,
     "reaction_ms": 133,
-    "overshoot_pct": 34,
+    "overshoot_pct": 35,
     "pps_by_distance": {
      "mid": 6.8
     }
