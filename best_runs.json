@@ -827,16 +827,16 @@
   },
   {
    "scenario": "Air Control Sphere - S",
-   "score": 689,
-   "time": "17:38",
+   "score": 703,
+   "time": "17:48",
    "gif": "best-spheres-2026-11-05",
    "video": true,
-   "on_target": 44,
+   "on_target": 45,
    "reaction_ms": null,
-   "overshoot_pct": 38,
-   "best_14d": 695,
+   "overshoot_pct": 31,
+   "best_14d": 703,
    "master3": 880,
-   "note": "Best of 16 recorded today (median 606). The clip is its 8 seconds with the most hits.",
+   "note": "Best of 19 recorded today (median 614). The clip is its 8 seconds with the most hits.",
    "model": {
     "none": "Not available: model videos are for tracking runs only."
    }
