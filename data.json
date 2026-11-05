@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-05 12:32",
- "updated_utc": "2026-11-05T05:32:26Z",
+ "updated": "2026-11-05 12:42",
+ "updated_utc": "2026-11-05T05:42:31Z",
  "today": {
   "date": "2026-11-05",
   "progress": {}
@@ -125,7 +125,7 @@
    "official_best": 580.0,
    "best_14d": 498.0,
    "median_14d": 409,
-   "runs_14d": 6,
+   "runs_14d": 8,
    "steps": [
     0.0,
     180.0,
@@ -709,7 +709,7 @@
      "date": "2026-11-05",
      "median": 418,
      "best": 498,
-     "runs": 5
+     "runs": 7
     }
    ]
   },
@@ -2491,9 +2491,9 @@
  "days": [
   {
    "date": "2026-11-05",
-   "runs": 43,
+   "runs": 45,
    "restarts": 65,
-   "rest_median_s": 79,
+   "rest_median_s": 80,
    "rest_longest_s": 403,
    "breaks": [
     {
@@ -2518,9 +2518,9 @@
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 43,
+     "runs": 45,
      "first": "02:08",
-     "last": "12:30"
+     "last": "12:39"
     }
    ],
    "scenarios": [
@@ -2558,7 +2558,7 @@
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
-     "runs": 5,
+     "runs": 7,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "05:10",
      "best": 498,
@@ -7038,7 +7038,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1522,
+  "runs": 1524,
   "days": 30,
   "groups": [
    {
@@ -7053,7 +7053,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 526,
+    "runs": 527,
     "pct": 100.9
    },
    {
@@ -10034,7 +10034,7 @@
    },
    {
     "scenario": "PASU TRACK XYZ - RANKED",
-    "runs": 5,
+    "runs": 7,
     "on_target": 23,
     "reaction_ms": 183,
     "overshoot_pct": 33,
