@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-05 20:17",
- "updated_utc": "2026-11-05T13:17:44Z",
+ "updated": "2026-11-05 20:22",
+ "updated_utc": "2026-11-05T13:22:27Z",
  "today": {
   "date": "2026-11-05",
   "progress": {}
@@ -97,7 +97,7 @@
    "official_best": 398.0,
    "best_14d": 338.0,
    "median_14d": 286,
-   "runs_14d": 12,
+   "runs_14d": 13,
    "steps": [
     0.0,
     138.0,
@@ -607,9 +607,9 @@
     },
     {
      "date": "2026-11-05",
-     "median": 291,
+     "median": 296,
      "best": 338,
-     "runs": 10
+     "runs": 11
     }
    ]
   },
@@ -2497,8 +2497,8 @@
  "days": [
   {
    "date": "2026-11-05",
-   "runs": 82,
-   "restarts": 115,
+   "runs": 83,
+   "restarts": 117,
    "rest_median_s": 78,
    "rest_longest_s": 593,
    "breaks": [
@@ -2554,9 +2554,9 @@
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 82,
+     "runs": 83,
      "first": "02:08",
-     "last": "20:16"
+     "last": "20:19"
     }
    ],
    "scenarios": [
@@ -2586,11 +2586,11 @@
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
-     "runs": 10,
+     "runs": 11,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "03:55",
      "best": 338,
-     "median": 291
+     "median": 296
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
@@ -7082,12 +7082,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1560,
+  "runs": 1562,
   "days": 30,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 617,
+    "runs": 618,
     "pct": 100.0
    },
    {
@@ -7097,8 +7097,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 545,
-    "pct": 101.0
+    "runs": 546,
+    "pct": 100.9
    },
    {
     "label": "First run after a break of 15 min+",
@@ -10067,13 +10067,13 @@
    },
    {
     "scenario": "PASU TRACK EVO RCT - 0.85X",
-    "runs": 10,
+    "runs": 11,
     "on_target": 21,
     "reaction_ms": 183,
-    "overshoot_pct": 32,
+    "overshoot_pct": 34,
     "pps_by_distance": {
      "far": 3.0,
-     "mid": 4.9
+     "mid": 5.0
     }
    },
    {
