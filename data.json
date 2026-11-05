@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-05 16:52",
- "updated_utc": "2026-11-05T09:52:38Z",
+ "updated": "2026-11-05 17:27",
+ "updated_utc": "2026-11-05T10:27:31Z",
  "today": {
   "date": "2026-11-05",
   "progress": {}
@@ -40,8 +40,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 480.0,
-   "median_14d": 428,
-   "runs_14d": 30,
+   "median_14d": 430,
+   "runs_14d": 31,
    "steps": [
     0.0,
     180.0,
@@ -403,7 +403,7 @@
      "date": "2026-11-05",
      "median": 427,
      "best": 480,
-     "runs": 19
+     "runs": 20
     }
    ]
   },
@@ -2497,9 +2497,9 @@
  "days": [
   {
    "date": "2026-11-05",
-   "runs": 71,
-   "restarts": 105,
-   "rest_median_s": 78,
+   "runs": 72,
+   "restarts": 109,
+   "rest_median_s": 79,
    "rest_longest_s": 593,
    "breaks": [
     {
@@ -2537,14 +2537,20 @@
      "before": "AIMBEAST 1 INTERMEDIATE",
      "at": "14:34",
      "minutes": 92.3
+    },
+    {
+     "after": "AIMBEAST 1 INTERMEDIATE",
+     "before": "AIMBEAST 1 INTERMEDIATE",
+     "at": "16:50",
+     "minutes": 31.2
     }
    ],
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 71,
+     "runs": 72,
      "first": "02:08",
-     "last": "16:50"
+     "last": "17:22"
     }
    ],
    "scenarios": [
@@ -2558,7 +2564,7 @@
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
-     "runs": 19,
+     "runs": 20,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "02:30",
      "best": 480,
@@ -7070,7 +7076,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1550,
+  "runs": 1551,
   "days": 30,
   "groups": [
    {
@@ -7090,7 +7096,7 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 99,
+    "runs": 100,
     "pct": 98.2
    }
   ]
@@ -10043,14 +10049,14 @@
    },
    {
     "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
-    "runs": 21,
-    "on_target": 26,
-    "reaction_ms": 100,
+    "runs": 22,
+    "on_target": 27,
+    "reaction_ms": 96,
     "overshoot_pct": 12,
     "pps_by_distance": {
      "far": 6.2,
-     "mid": 7.4,
-     "close": 6.9
+     "mid": 7.3,
+     "close": 7.0
     }
    },
    {
