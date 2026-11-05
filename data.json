@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-05 05:17",
- "updated_utc": "2026-11-04T22:17:27Z",
+ "updated": "2026-11-05 12:32",
+ "updated_utc": "2026-11-05T05:32:26Z",
  "today": {
   "date": "2026-11-05",
   "progress": {}
@@ -124,8 +124,8 @@
    "master3": 660.0,
    "official_best": 580.0,
    "best_14d": 498.0,
-   "median_14d": 400,
-   "runs_14d": 5,
+   "median_14d": 409,
+   "runs_14d": 6,
    "steps": [
     0.0,
     180.0,
@@ -707,9 +707,9 @@
     },
     {
      "date": "2026-11-05",
-     "median": 431,
+     "median": 418,
      "best": 498,
-     "runs": 4
+     "runs": 5
     }
    ]
   },
@@ -2491,7 +2491,7 @@
  "days": [
   {
    "date": "2026-11-05",
-   "runs": 42,
+   "runs": 43,
    "restarts": 65,
    "rest_median_s": 79,
    "rest_longest_s": 403,
@@ -2507,14 +2507,20 @@
      "before": "AIMBEAST 1 INTERMEDIATE",
      "at": "04:07",
      "minutes": 49.5
+    },
+    {
+     "after": "AIMBEAST 1 INTERMEDIATE",
+     "before": "AIMBEAST 1 INTERMEDIATE",
+     "at": "05:17",
+     "minutes": 432.5
     }
    ],
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 42,
+     "runs": 43,
      "first": "02:08",
-     "last": "05:17"
+     "last": "12:30"
     }
    ],
    "scenarios": [
@@ -2552,11 +2558,11 @@
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
-     "runs": 4,
+     "runs": 5,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "05:10",
      "best": 498,
-     "median": 431
+     "median": 418
     }
    ]
   },
@@ -7032,7 +7038,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1520,
+  "runs": 1522,
   "days": 30,
   "groups": [
    {
@@ -7047,13 +7053,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 525,
+    "runs": 526,
     "pct": 100.9
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 95,
-    "pct": 98.4
+    "runs": 96,
+    "pct": 98.3
    }
   ]
  },
@@ -10028,13 +10034,13 @@
    },
    {
     "scenario": "PASU TRACK XYZ - RANKED",
-    "runs": 4,
-    "on_target": 22,
+    "runs": 5,
+    "on_target": 23,
     "reaction_ms": 183,
-    "overshoot_pct": 32,
+    "overshoot_pct": 33,
     "pps_by_distance": {
      "mid": 3.6,
-     "close": 3.8
+     "close": 3.5
     }
    },
    {
