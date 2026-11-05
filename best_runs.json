@@ -762,22 +762,6 @@
    }
   },
   {
-   "scenario": "Air Track Smooth V3 150%",
-   "score": 475,
-   "time": "02:46",
-   "gif": "best-airtrack-2026-11-05",
-   "video": true,
-   "on_target": 29,
-   "reaction_ms": 92,
-   "overshoot_pct": 6,
-   "best_14d": 475,
-   "master3": 660,
-   "note": "Best of 10 recorded today (median 419). The clip is its 8 seconds with the most hits.",
-   "model": {
-    "none": "Not available: model videos are for tracking runs only."
-   }
-  },
-  {
    "scenario": "Air Control Sphere - S",
    "score": 667,
    "time": "03:09",
@@ -837,6 +821,22 @@
    "best_14d": 574,
    "master3": 726,
    "note": "Best of 6 recorded today (median 450). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "none": "Not available: model videos are for tracking runs only."
+   }
+  },
+  {
+   "scenario": "Air Track Smooth V3 150%",
+   "score": 480,
+   "time": "16:49",
+   "gif": "best-airtrack-2026-11-05",
+   "video": true,
+   "on_target": 32,
+   "reaction_ms": 84,
+   "overshoot_pct": 15,
+   "best_14d": 480,
+   "master3": 660,
+   "note": "Best of 21 recorded today (median 425). The clip is its 8 seconds with the most hits.",
    "model": {
     "none": "Not available: model videos are for tracking runs only."
    }
