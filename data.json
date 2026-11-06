@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-07 05:57",
- "updated_utc": "2026-11-06T22:57:25Z",
+ "updated": "2026-11-07 06:12",
+ "updated_utc": "2026-11-06T23:12:18Z",
  "today": {
   "date": "2026-11-07",
   "progress": {}
@@ -2240,10 +2240,10 @@
  "days": [
   {
    "date": "2026-11-07",
-   "runs": 15,
+   "runs": 16,
    "restarts": 11,
-   "rest_median_s": 94,
-   "rest_longest_s": 181,
+   "rest_median_s": 100,
+   "rest_longest_s": 807,
    "breaks": [
     {
      "after": "AIMBEAST 1 INTERMEDIATE",
@@ -2267,9 +2267,9 @@
     },
     {
      "name": "ZEUS VARIANTS",
-     "runs": 5,
+     "runs": 6,
      "first": "05:45",
-     "last": "05:56"
+     "last": "06:10"
     }
    ],
    "scenarios": [
@@ -2289,11 +2289,11 @@
     },
     {
      "name": "ZEUS PART 4 - 1100",
-     "runs": 5,
+     "runs": 6,
      "routine": "ZEUS VARIANTS",
      "first": "05:45",
      "best": 375,
-     "median": 340
+     "median": 339
     }
    ]
   },
@@ -6963,7 +6963,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1419,
+  "runs": 1421,
   "days": 32,
   "groups": [
    {
@@ -6978,7 +6978,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 496,
+    "runs": 497,
     "pct": 101.7
    },
    {
@@ -10085,13 +10085,13 @@
    },
    {
     "scenario": "ZEUS PART 4 - 1100",
-    "runs": 5,
-    "on_target": 26,
+    "runs": 6,
+    "on_target": 25,
     "reaction_ms": 133,
-    "overshoot_pct": 43,
+    "overshoot_pct": 44,
     "pps_by_distance": {
      "mid": 5.6,
-     "close": 6.5
+     "close": 6.0
     }
    },
    {
