@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-07 06:42",
- "updated_utc": "2026-11-06T23:42:29Z",
+ "updated": "2026-11-07 06:52",
+ "updated_utc": "2026-11-06T23:52:25Z",
  "today": {
   "date": "2026-11-07",
   "progress": {}
@@ -2247,9 +2247,9 @@
  "days": [
   {
    "date": "2026-11-07",
-   "runs": 25,
+   "runs": 27,
    "restarts": 23,
-   "rest_median_s": 80,
+   "rest_median_s": 84,
    "rest_longest_s": 812,
    "breaks": [
     {
@@ -2286,9 +2286,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 4,
+     "runs": 6,
      "first": "06:34",
-     "last": "06:41"
+     "last": "06:49"
     }
    ],
    "scenarios": [
@@ -2331,6 +2331,14 @@
      "first": "06:36",
      "best": 311,
      "median": 291
+    },
+    {
+     "name": "CENTERING NO STRAFES II",
+     "runs": 2,
+     "routine": "(single scenario)",
+     "first": "06:47",
+     "best": 429,
+     "median": 428
     }
    ]
   },
@@ -7000,12 +7008,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1430,
+  "runs": 1432,
   "days": 32,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 578,
+    "runs": 579,
     "pct": 100.0
    },
    {
@@ -7015,7 +7023,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 503,
+    "runs": 504,
     "pct": 101.7
    },
    {
@@ -10109,6 +10117,16 @@
    }
   ],
   "2026-11-07": [
+   {
+    "scenario": "CENTERING NO STRAFES II",
+    "runs": 2,
+    "on_target": 43,
+    "reaction_ms": 134,
+    "overshoot_pct": 25,
+    "pps_by_distance": {
+     "mid": 7.2
+    }
+   },
    {
     "scenario": "PASU TRACK XYZ - RANKED",
     "runs": 5,
