@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-06 07:12",
- "updated_utc": "2026-11-06T00:12:22Z",
+ "updated": "2026-11-06 07:32",
+ "updated_utc": "2026-11-06T00:32:42Z",
  "today": {
   "date": "2026-11-06",
   "progress": {}
@@ -67,9 +67,9 @@
    "name": "AIR CONTROL SPHERE - S",
    "master3": 880.0,
    "official_best": 878.0,
-   "best_14d": 703.0,
-   "median_14d": 612,
-   "runs_14d": 24,
+   "best_14d": 737.0,
+   "median_14d": 616,
+   "runs_14d": 27,
    "steps": [
     0.0,
     240.0,
@@ -528,6 +528,12 @@
      "median": 608,
      "best": 703,
      "runs": 20
+    },
+    {
+     "date": "2026-11-06",
+     "median": 693,
+     "best": 737,
+     "runs": 3
     }
    ]
   },
@@ -2509,8 +2515,8 @@
  "days": [
   {
    "date": "2026-11-06",
-   "runs": 10,
-   "restarts": 5,
+   "runs": 13,
+   "restarts": 9,
    "rest_median_s": 41,
    "rest_longest_s": 109,
    "breaks": [
@@ -2519,14 +2525,20 @@
      "before": "AIMBEAST 1 INTERMEDIATE",
      "at": "04:55",
      "minutes": 117.3
+    },
+    {
+     "after": "AIMBEAST 1 INTERMEDIATE",
+     "before": "AIMBEAST 1 INTERMEDIATE",
+     "at": "07:09",
+     "minutes": 17.1
     }
    ],
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 10,
+     "runs": 13,
      "first": "04:55",
-     "last": "07:09"
+     "last": "07:32"
     }
    ],
    "scenarios": [
@@ -2545,6 +2557,14 @@
      "first": "07:02",
      "best": 510,
      "median": 442
+    },
+    {
+     "name": "AIR CONTROL SPHERE - S - RANKED",
+     "runs": 3,
+     "routine": "AIMBEAST 1 INTERMEDIATE",
+     "first": "07:27",
+     "best": 737,
+     "median": 693
     }
    ]
   },
@@ -7141,12 +7161,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1604,
+  "runs": 1606,
   "days": 31,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 622,
+    "runs": 623,
     "pct": 100.0
    },
    {
@@ -7156,13 +7176,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 574,
+    "runs": 575,
     "pct": 100.9
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 103,
-    "pct": 98.0
+    "runs": 104,
+    "pct": 98.1
    }
   ]
  },
@@ -10171,6 +10191,17 @@
   ],
   "2026-11-06": [
    {
+    "scenario": "AIR CONTROL SPHERE - S - RANKED",
+    "runs": 5,
+    "on_target": 40,
+    "reaction_ms": null,
+    "overshoot_pct": 32,
+    "pps_by_distance": {
+     "mid": 11.5,
+     "close": 10.7
+    }
+   },
+   {
     "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
     "runs": 5,
     "on_target": 29,
@@ -11132,6 +11163,23 @@
     "model": {
      "file": "model-airtrack-2026-11-06",
      "label": "Model: 611"
+    }
+   },
+   {
+    "scenario": "Air Control Sphere - S",
+    "score": 737,
+    "time": "07:26",
+    "gif": "best-spheres-2026-11-06",
+    "video": true,
+    "on_target": 43,
+    "reaction_ms": null,
+    "overshoot_pct": 32,
+    "best_14d": 737,
+    "master3": 880,
+    "note": "Best of 5 recorded today (median 605). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "file": "model-spheres-2026-11-06",
+     "label": "Model: 884"
     }
    }
   ]
