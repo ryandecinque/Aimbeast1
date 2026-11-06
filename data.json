@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-06 09:12",
- "updated_utc": "2026-11-06T02:12:24Z",
+ "updated": "2026-11-06 22:57",
+ "updated_utc": "2026-11-06T15:57:43Z",
  "today": {
   "date": "2026-11-06",
   "progress": {}
@@ -13,7 +13,7 @@
    "official_best": 555.0,
    "best_14d": 471.0,
    "median_14d": 414,
-   "runs_14d": 22,
+   "runs_14d": 23,
    "steps": [
     0.0,
     168.0,
@@ -289,9 +289,9 @@
     },
     {
      "date": "2026-11-06",
-     "median": 433,
+     "median": 431,
      "best": 448,
-     "runs": 5
+     "runs": 6
     }
    ]
   },
@@ -2533,8 +2533,8 @@
  "days": [
   {
    "date": "2026-11-06",
-   "runs": 37,
-   "restarts": 32,
+   "runs": 38,
+   "restarts": 44,
    "rest_median_s": 50,
    "rest_longest_s": 302,
    "breaks": [
@@ -2561,14 +2561,20 @@
      "before": "(single scenario)",
      "at": "08:32",
      "minutes": 28.1
+    },
+    {
+     "after": "(single scenario)",
+     "before": "AIMBEAST 1 INTERMEDIATE",
+     "at": "09:10",
+     "minutes": 822.0
     }
    ],
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 30,
+     "runs": 31,
      "first": "04:55",
-     "last": "08:13"
+     "last": "22:55"
     },
     {
      "name": "(single scenario)",
@@ -2580,11 +2586,11 @@
    "scenarios": [
     {
      "name": "SMOOTH THIN TRACK V2 - RANKED",
-     "runs": 5,
+     "runs": 6,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "04:55",
      "best": 448,
-     "median": 433
+     "median": 431
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
@@ -7229,12 +7235,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1631,
+  "runs": 1632,
   "days": 31,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 627,
+    "runs": 628,
     "pct": 100.0
    },
    {
@@ -7249,8 +7255,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 105,
-    "pct": 98.0
+    "runs": 106,
+    "pct": 98.1
    }
   ]
  },
@@ -10316,12 +10322,12 @@
    },
    {
     "scenario": "SMOOTH THIN TRACK V2 - RANKED",
-    "runs": 5,
-    "on_target": 35,
+    "runs": 8,
+    "on_target": 34,
     "reaction_ms": 133,
-    "overshoot_pct": 36,
+    "overshoot_pct": 38,
     "pps_by_distance": {
-     "mid": 7.3
+     "mid": 7.1
     }
    },
    {
