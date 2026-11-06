@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-07 05:42",
- "updated_utc": "2026-11-06T22:42:24Z",
+ "updated": "2026-11-07 05:47",
+ "updated_utc": "2026-11-06T22:47:23Z",
  "today": {
   "date": "2026-11-07",
   "progress": {}
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 574.0,
    "median_14d": 502,
-   "runs_14d": 84,
+   "runs_14d": 85,
    "steps": [
     0.0,
     198.0,
@@ -751,313 +751,8 @@
   },
   {
    "name": "ZEUS TRACK EVO - NOBLINK",
-   "baseline": {
-    "median": 491,
-    "best": 553,
-    "runs": 121
-   },
-   "days": [
-    {
-     "date": "2026-08-29",
-     "median": 462,
-     "best": 561,
-     "runs": 13
-    },
-    {
-     "date": "2026-08-30",
-     "median": 473,
-     "best": 521,
-     "runs": 36
-    },
-    {
-     "date": "2026-08-31",
-     "median": 491,
-     "best": 554,
-     "runs": 20
-    },
-    {
-     "date": "2026-09-01",
-     "median": 461,
-     "best": 481,
-     "runs": 15
-    },
-    {
-     "date": "2026-09-02",
-     "median": 483,
-     "best": 541,
-     "runs": 37
-    },
-    {
-     "date": "2026-09-03",
-     "median": 473,
-     "best": 525,
-     "runs": 20
-    },
-    {
-     "date": "2026-09-04",
-     "median": 485,
-     "best": 520,
-     "runs": 15
-    },
-    {
-     "date": "2026-09-05",
-     "median": 494,
-     "best": 591,
-     "runs": 29
-    },
-    {
-     "date": "2026-09-06",
-     "median": 502,
-     "best": 551,
-     "runs": 30
-    },
-    {
-     "date": "2026-09-07",
-     "median": 510,
-     "best": 550,
-     "runs": 20
-    },
-    {
-     "date": "2026-09-08",
-     "median": 473,
-     "best": 533,
-     "runs": 20
-    },
-    {
-     "date": "2026-09-10",
-     "median": 478,
-     "best": 527,
-     "runs": 10
-    },
-    {
-     "date": "2026-09-14",
-     "median": 481,
-     "best": 569,
-     "runs": 15
-    },
-    {
-     "date": "2026-09-15",
-     "median": 550,
-     "best": 581,
-     "runs": 2
-    },
-    {
-     "date": "2026-09-16",
-     "median": 497,
-     "best": 561,
-     "runs": 12
-    },
-    {
-     "date": "2026-09-17",
-     "median": 495,
-     "best": 520,
-     "runs": 7
-    },
-    {
-     "date": "2026-09-18",
-     "median": 481,
-     "best": 497,
-     "runs": 7
-    },
-    {
-     "date": "2026-09-23",
-     "median": 516,
-     "best": 528,
-     "runs": 3
-    },
-    {
-     "date": "2026-09-25",
-     "median": 482,
-     "best": 551,
-     "runs": 12
-    },
-    {
-     "date": "2026-09-27",
-     "median": 516,
-     "best": 549,
-     "runs": 9
-    },
-    {
-     "date": "2026-09-28",
-     "median": 496,
-     "best": 526,
-     "runs": 9
-    },
-    {
-     "date": "2026-09-29",
-     "median": 488,
-     "best": 547,
-     "runs": 21
-    },
-    {
-     "date": "2026-10-01",
-     "median": 472,
-     "best": 498,
-     "runs": 8
-    },
-    {
-     "date": "2026-10-02",
-     "median": 494,
-     "best": 541,
-     "runs": 14
-    },
-    {
-     "date": "2026-10-03",
-     "median": 500,
-     "best": 547,
-     "runs": 28
-    },
-    {
-     "date": "2026-10-04",
-     "median": 495,
-     "best": 553,
-     "runs": 8
-    },
-    {
-     "date": "2026-10-05",
-     "median": 451,
-     "best": 491,
-     "runs": 9
-    },
-    {
-     "date": "2026-10-08",
-     "median": 501,
-     "best": 549,
-     "runs": 23
-    },
-    {
-     "date": "2026-10-10",
-     "median": 497,
-     "best": 526,
-     "runs": 19
-    },
-    {
-     "date": "2026-10-11",
-     "median": 485,
-     "best": 509,
-     "runs": 15
-    },
-    {
-     "date": "2026-10-13",
-     "median": 500,
-     "best": 550,
-     "runs": 6
-    },
-    {
-     "date": "2026-10-14",
-     "median": 492,
-     "best": 548,
-     "runs": 16
-    },
-    {
-     "date": "2026-10-15",
-     "median": 488,
-     "best": 524,
-     "runs": 8
-    },
-    {
-     "date": "2026-10-16",
-     "median": 486,
-     "best": 533,
-     "runs": 10
-    },
-    {
-     "date": "2026-10-17",
-     "median": 450,
-     "best": 543,
-     "runs": 10
-    },
-    {
-     "date": "2026-10-18",
-     "median": 504,
-     "best": 532,
-     "runs": 8
-    },
-    {
-     "date": "2026-10-19",
-     "median": 515,
-     "best": 543,
-     "runs": 15
-    },
-    {
-     "date": "2026-10-20",
-     "median": 507,
-     "best": 570,
-     "runs": 15
-    },
-    {
-     "date": "2026-10-21",
-     "median": 498,
-     "best": 545,
-     "runs": 8
-    },
-    {
-     "date": "2026-10-22",
-     "median": 503,
-     "best": 548,
-     "runs": 8
-    },
-    {
-     "date": "2026-10-24",
-     "median": 504,
-     "best": 508,
-     "runs": 4
-    },
-    {
-     "date": "2026-10-25",
-     "median": 506,
-     "best": 522,
-     "runs": 9
-    },
-    {
-     "date": "2026-10-27",
-     "median": 516,
-     "best": 552,
-     "runs": 10
-    },
-    {
-     "date": "2026-10-30",
-     "median": 511,
-     "best": 574,
-     "runs": 5
-    },
-    {
-     "date": "2026-10-31",
-     "median": 510,
-     "best": 551,
-     "runs": 20
-    },
-    {
-     "date": "2026-11-01",
-     "median": 502,
-     "best": 508,
-     "runs": 5
-    },
-    {
-     "date": "2026-11-04",
-     "median": 510,
-     "best": 533,
-     "runs": 2
-    },
-    {
-     "date": "2026-11-05",
-     "median": 466,
-     "best": 536,
-     "runs": 20
-    },
-    {
-     "date": "2026-11-06",
-     "median": 517,
-     "best": 524,
-     "runs": 5
-    },
-    {
-     "date": "2026-11-07",
-     "median": 442,
-     "best": 473,
-     "runs": 4
-    }
-   ]
+   "baseline": null,
+   "days": []
   }
  ],
  "journal": [
@@ -2545,9 +2240,9 @@
  "days": [
   {
    "date": "2026-11-07",
-   "runs": 9,
-   "restarts": 4,
-   "rest_median_s": 87,
+   "runs": 11,
+   "restarts": 8,
+   "rest_median_s": 84,
    "rest_longest_s": 181,
    "breaks": [
     {
@@ -2555,14 +2250,26 @@
      "before": "AIMBEAST 1 INTERMEDIATE",
      "at": "00:08",
      "minutes": 322.0
+    },
+    {
+     "after": "AIMBEAST 1 INTERMEDIATE",
+     "before": "ZEUS VARIANTS",
+     "at": "05:44",
+     "minutes": 0.6
     }
    ],
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 9,
+     "runs": 10,
      "first": "00:00",
-     "last": "05:41"
+     "last": "05:44"
+    },
+    {
+     "name": "ZEUS VARIANTS",
+     "runs": 1,
+     "first": "05:45",
+     "last": "05:45"
     }
    ],
    "scenarios": [
@@ -2576,11 +2283,17 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 4,
+     "runs": 5,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "05:31",
-     "best": 473,
-     "median": 442
+     "first": "05:31"
+    },
+    {
+     "name": "ZEUS PART 4 - 1100",
+     "runs": 1,
+     "routine": "ZEUS VARIANTS",
+     "first": "05:45",
+     "best": 338,
+     "median": 338
     }
    ]
   },
@@ -2687,9 +2400,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 5,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "08:05",
-     "best": 524,
-     "median": 517
+     "first": "08:05"
     },
     {
      "name": "MOVEMENT TRACKING",
@@ -2816,9 +2527,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 20,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "13:09",
-     "best": 536,
-     "median": 466
+     "first": "13:09"
     }
    ]
   },
@@ -3009,9 +2718,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "06:51",
-     "best": 533,
-     "median": 510
+     "first": "06:51"
     },
     {
      "name": "ARCHTRACK",
@@ -3560,9 +3267,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 5,
      "routine": "(single scenario)",
-     "first": "08:00",
-     "best": 508,
-     "median": 502
+     "first": "08:00"
     }
    ]
   },
@@ -3735,9 +3440,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 20,
      "routine": "(single scenario)",
-     "first": "01:56",
-     "best": 551,
-     "median": 510
+     "first": "01:56"
     },
     {
      "name": "ZEUS PART 2 - 2100",
@@ -3930,9 +3633,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 5,
      "routine": "(single scenario)",
-     "first": "20:25",
-     "best": 574,
-     "median": 511
+     "first": "20:25"
     }
    ]
   },
@@ -4338,9 +4039,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 10,
      "routine": "(single scenario)",
-     "first": "20:18",
-     "best": 552,
-     "median": 516
+     "first": "20:18"
     },
     {
      "name": "LSI VERY FAR DODGE L2",
@@ -4580,9 +4279,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 9,
      "routine": "ZEUS FOCUS",
-     "first": "01:26",
-     "best": 522,
-     "median": 506
+     "first": "01:26"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 130%",
@@ -4645,9 +4342,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 4,
      "routine": "ZEUS FOCUS",
-     "first": "13:38",
-     "best": 508,
-     "median": 504
+     "first": "13:38"
     }
    ]
   },
@@ -4710,9 +4405,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 8,
      "routine": "(single scenario)",
-     "first": "00:03",
-     "best": 548,
-     "median": 503
+     "first": "00:03"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 115%",
@@ -4817,9 +4510,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 8,
      "routine": "ZEUS FOCUS",
-     "first": "18:27",
-     "best": 545,
-     "median": 498
+     "first": "18:27"
     },
     {
      "name": "143 CLOVER CONTROL",
@@ -5046,9 +4737,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 15,
      "routine": "ZEUS FOCUS",
-     "first": "20:17",
-     "best": 570,
-     "median": 507
+     "first": "20:17"
     }
    ]
   },
@@ -5129,9 +4818,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 15,
      "routine": "ZEUS FOCUS",
-     "first": "10:00",
-     "best": 543,
-     "median": 515
+     "first": "10:00"
     }
    ]
   },
@@ -5210,9 +4897,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 8,
      "routine": "ZEUS FOCUS",
-     "first": "10:53",
-     "best": 532,
-     "median": 504
+     "first": "10:53"
     },
     {
      "name": "ZEUS TRACK EVO - FAR",
@@ -5389,9 +5074,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 10,
      "routine": "ZEUS DAILY",
-     "first": "08:38",
-     "best": 543,
-     "median": 450
+     "first": "08:38"
     },
     {
      "name": "SMOOTH THIN TRACK V2 - RANKED",
@@ -5614,9 +5297,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 10,
      "routine": "ZEUS DAILY",
-     "first": "13:05",
-     "best": 533,
-     "median": 486
+     "first": "13:05"
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
@@ -5801,9 +5482,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 8,
      "routine": "RANK INT B",
-     "first": "12:52",
-     "best": 524,
-     "median": 488
+     "first": "12:52"
     },
     {
      "name": "SCX CLOSE STRAFES",
@@ -5966,9 +5645,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 16,
      "routine": "1",
-     "first": "09:30",
-     "best": 548,
-     "median": 492
+     "first": "09:30"
     },
     {
      "name": "SCX CLOSE STRAFES",
@@ -6103,9 +5780,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 6,
      "routine": "(single scenario)",
-     "first": "02:10",
-     "best": 550,
-     "median": 500
+     "first": "02:10"
     },
     {
      "name": "SCX CLOSE STRAFES",
@@ -6371,9 +6046,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 15,
      "routine": "(single scenario)",
-     "first": "01:26",
-     "best": 509,
-     "median": 485
+     "first": "01:26"
     },
     {
      "name": "PENNYTRACKING",
@@ -6492,9 +6165,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 19,
      "routine": "RANK INT B",
-     "first": "09:33",
-     "best": 526,
-     "median": 497
+     "first": "09:33"
     },
     {
      "name": "AIR TRACK SMOOTH V3 - RANKED",
@@ -6870,9 +6541,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 23,
      "routine": "RANK INT B",
-     "first": "06:11",
-     "best": 549,
-     "median": 501
+     "first": "06:11"
     },
     {
      "name": "GROUND PLAZA FS NO UFO",
@@ -7294,28 +6963,28 @@
   }
  ],
  "rest_effect": {
-  "runs": 1659,
+  "runs": 1416,
   "days": 32,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 633,
+    "runs": 575,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 112,
-    "pct": 98.7
+    "runs": 104,
+    "pct": 99.0
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 611,
-    "pct": 101.2
+    "runs": 493,
+    "pct": 101.8
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 108,
-    "pct": 97.7
+    "runs": 92,
+    "pct": 97.3
    }
   ]
  },
@@ -10415,15 +10084,26 @@
     }
    },
    {
+    "scenario": "ZEUS PART 4 - 1100",
+    "runs": 1,
+    "on_target": 24,
+    "reaction_ms": 133,
+    "overshoot_pct": 40,
+    "pps_by_distance": {
+     "mid": 6.3,
+     "close": 4.5
+    }
+   },
+   {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 4,
+    "runs": 5,
     "on_target": 32,
     "reaction_ms": 150,
-    "overshoot_pct": 42,
+    "overshoot_pct": 40,
     "pps_by_distance": {
-     "far": 7.5,
-     "mid": 7.1,
-     "close": 7.5
+     "far": 7.9,
+     "mid": 6.7,
+     "close": 7.7
     }
    }
   ]
@@ -11783,27 +11463,6 @@
      "title": "PASU Track XYZ",
      "score": 544,
      "old": 542
-    }
-   ],
-   "2026-10-13": [
-    {
-     "title": "Zeus Track Evo - Noblink",
-     "score": 550,
-     "old": 549
-    }
-   ],
-   "2026-10-20": [
-    {
-     "title": "Zeus Track Evo - Noblink",
-     "score": 570,
-     "old": 550
-    }
-   ],
-   "2026-10-30": [
-    {
-     "title": "Zeus Track Evo - Noblink",
-     "score": 574,
-     "old": 570
     }
    ]
   }
