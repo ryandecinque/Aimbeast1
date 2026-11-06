@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-07 06:17",
- "updated_utc": "2026-11-06T23:17:14Z",
+ "updated": "2026-11-07 06:32",
+ "updated_utc": "2026-11-06T23:32:28Z",
  "today": {
   "date": "2026-11-07",
   "progress": {}
@@ -2240,10 +2240,10 @@
  "days": [
   {
    "date": "2026-11-07",
-   "runs": 17,
-   "restarts": 12,
-   "rest_median_s": 100,
-   "rest_longest_s": 807,
+   "runs": 20,
+   "restarts": 15,
+   "rest_median_s": 93,
+   "rest_longest_s": 812,
    "breaks": [
     {
      "after": "AIMBEAST 1 INTERMEDIATE",
@@ -2267,9 +2267,9 @@
     },
     {
      "name": "ZEUS VARIANTS",
-     "runs": 7,
+     "runs": 10,
      "first": "05:45",
-     "last": "06:13"
+     "last": "06:31"
     }
    ],
    "scenarios": [
@@ -2294,6 +2294,14 @@
      "first": "05:45",
      "best": 398,
      "median": 340
+    },
+    {
+     "name": "ZEUS PART 8 - CLOSE CATCH-UP",
+     "runs": 3,
+     "routine": "ZEUS VARIANTS",
+     "first": "06:28",
+     "best": 496,
+     "median": 483
     }
    ]
   },
@@ -6963,12 +6971,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1422,
+  "runs": 1424,
   "days": 32,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 575,
+    "runs": 576,
     "pct": 100.0
    },
    {
@@ -6978,7 +6986,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 498,
+    "runs": 499,
     "pct": 101.7
    },
    {
@@ -10092,6 +10100,16 @@
     "pps_by_distance": {
      "mid": 5.6,
      "close": 5.5
+    }
+   },
+   {
+    "scenario": "ZEUS PART 8 - CLOSE CATCH-UP",
+    "runs": 3,
+    "on_target": 35,
+    "reaction_ms": 150,
+    "overshoot_pct": 40,
+    "pps_by_distance": {
+     "close": 8.1
     }
    },
    {
