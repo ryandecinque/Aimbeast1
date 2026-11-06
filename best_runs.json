@@ -846,18 +846,19 @@
  "2026-11-06": [
   {
    "scenario": "Smooth Thin Track V2",
-   "score": 440,
-   "time": "04:54",
+   "score": 448,
+   "time": "06:59",
    "gif": "best-smooththin-2026-11-06",
    "video": true,
-   "on_target": 36,
-   "reaction_ms": 133,
-   "overshoot_pct": 35,
+   "on_target": 38,
+   "reaction_ms": 117,
+   "overshoot_pct": 36,
    "best_14d": 471,
    "master3": 616,
-   "note": "Best of 1 recorded today (median 438). The clip is its 8 seconds with the most hits.",
+   "note": "Best of 5 recorded today (median 431). The clip is its 8 seconds with the most hits.",
    "model": {
-    "none": "Not available: model videos are for tracking runs only."
+    "file": "model-smooththin-2026-11-06",
+    "label": "Model: 538"
    }
   }
  ]
