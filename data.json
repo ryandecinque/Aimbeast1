@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-06 23:57",
- "updated_utc": "2026-11-06T16:57:35Z",
+ "updated": "2026-11-07 00:02",
+ "updated_utc": "2026-11-06T17:02:27Z",
  "today": {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "progress": {}
  },
  "plan_start": "2026-10-07",
@@ -123,9 +123,9 @@
    "name": "PASU TRACK XYZ",
    "master3": 660.0,
    "official_best": 580.0,
-   "best_14d": 542.0,
-   "median_14d": 454,
-   "runs_14d": 26,
+   "best_14d": 544.0,
+   "median_14d": 456,
+   "runs_14d": 27,
    "steps": [
     0.0,
     180.0,
@@ -740,6 +740,12 @@
      "median": 480,
      "best": 542,
      "runs": 5
+    },
+    {
+     "date": "2026-11-07",
+     "median": 544,
+     "best": 544,
+     "runs": 1
     }
    ]
   },
@@ -2532,10 +2538,36 @@
  ],
  "days": [
   {
+   "date": "2026-11-07",
+   "runs": 1,
+   "restarts": 2,
+   "rest_median_s": 87,
+   "rest_longest_s": 87,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "AIMBEAST 1 INTERMEDIATE",
+     "runs": 1,
+     "first": "00:00",
+     "last": "00:00"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "PASU TRACK XYZ - RANKED",
+     "runs": 1,
+     "routine": "AIMBEAST 1 INTERMEDIATE",
+     "first": "00:00",
+     "best": 544,
+     "median": 544
+    }
+   ]
+  },
+  {
    "date": "2026-11-06",
    "runs": 57,
    "restarts": 71,
-   "rest_median_s": 53,
+   "rest_median_s": 54,
    "rest_longest_s": 302,
    "breaks": [
     {
@@ -7241,12 +7273,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1650,
-  "days": 31,
+  "runs": 1652,
+  "days": 32,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 631,
+    "runs": 632,
     "pct": 100.0
    },
    {
@@ -7256,13 +7288,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 606,
+    "runs": 607,
     "pct": 101.1
    },
    {
     "label": "First run after a break of 15 min+",
     "runs": 107,
-    "pct": 98.1
+    "pct": 97.8
    }
   ]
  },
@@ -10317,12 +10349,12 @@
    },
    {
     "scenario": "PASU TRACK XYZ - RANKED",
-    "runs": 6,
-    "on_target": 24,
+    "runs": 7,
+    "on_target": 25,
     "reaction_ms": 167,
-    "overshoot_pct": 32,
+    "overshoot_pct": 31,
     "pps_by_distance": {
-     "mid": 3.6,
+     "mid": 3.8,
      "close": 4.2
     }
    },
@@ -10346,6 +10378,19 @@
      "far": 7.3,
      "mid": 8.8,
      "close": 8.9
+    }
+   }
+  ],
+  "2026-11-07": [
+   {
+    "scenario": "PASU TRACK XYZ - RANKED",
+    "runs": 1,
+    "on_target": 19,
+    "reaction_ms": 183,
+    "overshoot_pct": 27,
+    "pps_by_distance": {
+     "mid": 3.0,
+     "close": 3.8
     }
    }
   ]
@@ -11324,22 +11369,6 @@
     }
    },
    {
-    "scenario": "PASU Track XYZ",
-    "score": 270,
-    "time": "08:00",
-    "gif": "best-pasuxyz-2026-11-06",
-    "video": true,
-    "on_target": 30,
-    "reaction_ms": 167,
-    "overshoot_pct": 30,
-    "best_14d": 542,
-    "master3": 660,
-    "note": "Best of 6 recorded today (median 224). The clip is its 8 seconds with the most hits.",
-    "model": {
-     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (the bot can be destroyed, and it comes back after a kill)"
-    }
-   },
-   {
     "scenario": "Zeus Track Evo - Noblink",
     "score": 524,
     "time": "08:04",
@@ -11354,6 +11383,40 @@
     "model": {
      "file": "model-zeus-2026-11-06",
      "label": "Model: 629"
+    }
+   },
+   {
+    "scenario": "PASU Track XYZ",
+    "score": 271,
+    "time": "23:59",
+    "gif": "best-pasuxyz-2026-11-06",
+    "video": true,
+    "on_target": 28,
+    "reaction_ms": 167,
+    "overshoot_pct": 31,
+    "best_14d": 544,
+    "master3": 660,
+    "note": "Best of 7 recorded today (median 239). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (the bot can be destroyed, and it comes back after a kill)"
+    }
+   }
+  ],
+  "2026-11-07": [
+   {
+    "scenario": "PASU Track XYZ",
+    "score": 32,
+    "time": "00:02",
+    "gif": "best-pasuxyz-2026-11-07",
+    "video": true,
+    "on_target": 19,
+    "reaction_ms": 183,
+    "overshoot_pct": 27,
+    "best_14d": 544,
+    "master3": 660,
+    "note": "Best of 1 recorded today (median 32). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (the bot can be destroyed, and it comes back after a kill)"
     }
    }
   ]
@@ -11664,6 +11727,13 @@
      "title": "PASU Track XYZ",
      "score": 542,
      "old": 532
+    }
+   ],
+   "2026-11-07": [
+    {
+     "title": "PASU Track XYZ",
+     "score": 544,
+     "old": 542
     }
    ],
    "2026-10-13": [

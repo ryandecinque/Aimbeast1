@@ -912,22 +912,6 @@
    }
   },
   {
-   "scenario": "PASU Track XYZ",
-   "score": 270,
-   "time": "08:00",
-   "gif": "best-pasuxyz-2026-11-06",
-   "video": true,
-   "on_target": 30,
-   "reaction_ms": 167,
-   "overshoot_pct": 30,
-   "best_14d": 542,
-   "master3": 660,
-   "note": "Best of 6 recorded today (median 224). The clip is its 8 seconds with the most hits.",
-   "model": {
-    "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (the bot can be destroyed, and it comes back after a kill)"
-   }
-  },
-  {
    "scenario": "Zeus Track Evo - Noblink",
    "score": 524,
    "time": "08:04",
@@ -942,6 +926,40 @@
    "model": {
     "file": "model-zeus-2026-11-06",
     "label": "Model: 629"
+   }
+  },
+  {
+   "scenario": "PASU Track XYZ",
+   "score": 271,
+   "time": "23:59",
+   "gif": "best-pasuxyz-2026-11-06",
+   "video": true,
+   "on_target": 28,
+   "reaction_ms": 167,
+   "overshoot_pct": 31,
+   "best_14d": 544,
+   "master3": 660,
+   "note": "Best of 7 recorded today (median 239). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (the bot can be destroyed, and it comes back after a kill)"
+   }
+  }
+ ],
+ "2026-11-07": [
+  {
+   "scenario": "PASU Track XYZ",
+   "score": 32,
+   "time": "00:02",
+   "gif": "best-pasuxyz-2026-11-07",
+   "video": true,
+   "on_target": 19,
+   "reaction_ms": 183,
+   "overshoot_pct": 27,
+   "best_14d": 544,
+   "master3": 660,
+   "note": "Best of 1 recorded today (median 32). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (the bot can be destroyed, and it comes back after a kill)"
    }
   }
  ]
