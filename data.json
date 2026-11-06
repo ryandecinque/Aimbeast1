@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-06 23:17",
- "updated_utc": "2026-11-06T16:17:25Z",
+ "updated": "2026-11-06 23:22",
+ "updated_utc": "2026-11-06T16:22:22Z",
  "today": {
   "date": "2026-11-06",
   "progress": {}
@@ -68,8 +68,8 @@
    "master3": 880.0,
    "official_best": 878.0,
    "best_14d": 737.0,
-   "median_14d": 618,
-   "runs_14d": 30,
+   "median_14d": 621,
+   "runs_14d": 32,
    "steps": [
     0.0,
     240.0,
@@ -531,9 +531,9 @@
     },
     {
      "date": "2026-11-06",
-     "median": 683,
+     "median": 692,
      "best": 737,
-     "runs": 6
+     "runs": 8
     }
    ]
   },
@@ -2533,9 +2533,9 @@
  "days": [
   {
    "date": "2026-11-06",
-   "runs": 48,
-   "restarts": 60,
-   "rest_median_s": 50,
+   "runs": 50,
+   "restarts": 63,
+   "rest_median_s": 52,
    "rest_longest_s": 302,
    "breaks": [
     {
@@ -2572,9 +2572,9 @@
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 41,
+     "runs": 43,
      "first": "04:55",
-     "last": "23:17"
+     "last": "23:21"
     },
     {
      "name": "(single scenario)",
@@ -2602,11 +2602,11 @@
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
-     "runs": 6,
+     "runs": 8,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "07:27",
      "best": 737,
-     "median": 683
+     "median": 692
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
@@ -7235,12 +7235,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1641,
+  "runs": 1643,
   "days": 31,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 629,
+    "runs": 630,
     "pct": 100.0
    },
    {
@@ -7250,7 +7250,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 600,
+    "runs": 601,
     "pct": 101.1
    },
    {
@@ -10266,13 +10266,13 @@
   "2026-11-06": [
    {
     "scenario": "AIR CONTROL SPHERE - S - RANKED",
-    "runs": 9,
+    "runs": 11,
     "on_target": 43,
     "reaction_ms": null,
     "overshoot_pct": 31,
     "pps_by_distance": {
      "mid": 10.5,
-     "close": 10.7
+     "close": 11.1
     }
    },
    {
