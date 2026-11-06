@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-06 07:47",
- "updated_utc": "2026-11-06T00:47:27Z",
+ "updated": "2026-11-06 07:52",
+ "updated_utc": "2026-11-06T00:52:30Z",
  "today": {
   "date": "2026-11-06",
   "progress": {}
@@ -124,8 +124,8 @@
    "master3": 660.0,
    "official_best": 580.0,
    "best_14d": 506.0,
-   "median_14d": 452,
-   "runs_14d": 21,
+   "median_14d": 444,
+   "runs_14d": 23,
    "steps": [
     0.0,
     180.0,
@@ -734,6 +734,12 @@
      "median": 454,
      "best": 506,
      "runs": 20
+    },
+    {
+     "date": "2026-11-06",
+     "median": 407,
+     "best": 422,
+     "runs": 2
     }
    ]
   },
@@ -2521,9 +2527,9 @@
  "days": [
   {
    "date": "2026-11-06",
-   "runs": 20,
-   "restarts": 15,
-   "rest_median_s": 45,
+   "runs": 22,
+   "restarts": 16,
+   "rest_median_s": 46,
    "rest_longest_s": 109,
    "breaks": [
     {
@@ -2542,9 +2548,9 @@
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 20,
+     "runs": 22,
      "first": "04:55",
-     "last": "07:47"
+     "last": "07:51"
     }
    ],
    "scenarios": [
@@ -2579,6 +2585,14 @@
      "first": "07:39",
      "best": 361,
      "median": 350
+    },
+    {
+     "name": "PASU TRACK XYZ - RANKED",
+     "runs": 2,
+     "routine": "AIMBEAST 1 INTERMEDIATE",
+     "first": "07:49",
+     "best": 422,
+     "median": 407
     }
    ]
   },
@@ -7175,12 +7189,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1613,
+  "runs": 1615,
   "days": 31,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 624,
+    "runs": 625,
     "pct": 100.0
    },
    {
@@ -7190,7 +7204,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 581,
+    "runs": 582,
     "pct": 101.0
    },
    {
@@ -10239,6 +10253,17 @@
     }
    },
    {
+    "scenario": "PASU TRACK XYZ - RANKED",
+    "runs": 2,
+    "on_target": 22,
+    "reaction_ms": 158,
+    "overshoot_pct": 31,
+    "pps_by_distance": {
+     "mid": 3.2,
+     "close": 3.7
+    }
+   },
+   {
     "scenario": "SMOOTH THIN TRACK V2 - RANKED",
     "runs": 5,
     "on_target": 35,
@@ -11221,6 +11246,22 @@
     "note": "Best of 2 recorded today (median 330). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (event 2 is triggered on hit (speed up/down))"
+    }
+   },
+   {
+    "scenario": "PASU Track XYZ",
+    "score": 210,
+    "time": "07:50",
+    "gif": "best-pasuxyz-2026-11-06",
+    "video": true,
+    "on_target": 22,
+    "reaction_ms": 150,
+    "overshoot_pct": 27,
+    "best_14d": 506,
+    "master3": 660,
+    "note": "Best of 2 recorded today (median 202). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (the bot can be destroyed, and it comes back after a kill)"
     }
    }
   ]
