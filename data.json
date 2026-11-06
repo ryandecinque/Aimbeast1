@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-07 06:37",
- "updated_utc": "2026-11-06T23:37:27Z",
+ "updated": "2026-11-07 06:42",
+ "updated_utc": "2026-11-06T23:42:29Z",
  "today": {
   "date": "2026-11-07",
   "progress": {}
@@ -2247,9 +2247,9 @@
  "days": [
   {
    "date": "2026-11-07",
-   "runs": 23,
-   "restarts": 19,
-   "rest_median_s": 84,
+   "runs": 25,
+   "restarts": 23,
+   "rest_median_s": 80,
    "rest_longest_s": 812,
    "breaks": [
     {
@@ -2286,9 +2286,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 2,
+     "runs": 4,
      "first": "06:34",
-     "last": "06:36"
+     "last": "06:41"
     }
    ],
    "scenarios": [
@@ -2326,11 +2326,11 @@
     },
     {
      "name": "SMOOTH THIN",
-     "runs": 1,
+     "runs": 3,
      "routine": "(single scenario)",
      "first": "06:36",
      "best": 311,
-     "median": 311
+     "median": 291
     }
    ]
   },
@@ -7000,12 +7000,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1427,
+  "runs": 1430,
   "days": 32,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 577,
+    "runs": 578,
     "pct": 100.0
    },
    {
@@ -7015,7 +7015,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 501,
+    "runs": 503,
     "pct": 101.7
    },
    {
@@ -10122,13 +10122,13 @@
    },
    {
     "scenario": "SMOOTH THIN",
-    "runs": 2,
-    "on_target": 25,
-    "reaction_ms": 158,
-    "overshoot_pct": 34,
+    "runs": 6,
+    "on_target": 24,
+    "reaction_ms": 167,
+    "overshoot_pct": 37,
     "pps_by_distance": {
-     "mid": 4.8,
-     "close": 2.9
+     "mid": 4.5,
+     "close": 3.4
     }
    },
    {
