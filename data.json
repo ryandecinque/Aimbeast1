@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-06 23:07",
- "updated_utc": "2026-11-06T16:07:28Z",
+ "updated": "2026-11-06 23:12",
+ "updated_utc": "2026-11-06T16:12:24Z",
  "today": {
   "date": "2026-11-06",
   "progress": {}
@@ -40,8 +40,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 510.0,
-   "median_14d": 432,
-   "runs_14d": 37,
+   "median_14d": 433,
+   "runs_14d": 39,
    "steps": [
     0.0,
     180.0,
@@ -413,9 +413,9 @@
     },
     {
      "date": "2026-11-06",
-     "median": 443,
+     "median": 451,
      "best": 510,
-     "runs": 6
+     "runs": 8
     }
    ]
   },
@@ -2533,8 +2533,8 @@
  "days": [
   {
    "date": "2026-11-06",
-   "runs": 43,
-   "restarts": 52,
+   "runs": 45,
+   "restarts": 55,
    "rest_median_s": 50,
    "rest_longest_s": 302,
    "breaks": [
@@ -2572,9 +2572,9 @@
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 36,
+     "runs": 38,
      "first": "04:55",
-     "last": "23:07"
+     "last": "23:10"
     },
     {
      "name": "(single scenario)",
@@ -2594,11 +2594,11 @@
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
-     "runs": 6,
+     "runs": 8,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "07:02",
      "best": 510,
-     "median": 443
+     "median": 451
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
@@ -7235,28 +7235,28 @@
   }
  ],
  "rest_effect": {
-  "runs": 1636,
+  "runs": 1639,
   "days": 31,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 628,
+    "runs": 629,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 111,
-    "pct": 98.6
+    "runs": 112,
+    "pct": 98.7
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 597,
+    "runs": 598,
     "pct": 101.1
    },
    {
     "label": "First run after a break of 15 min+",
     "runs": 106,
-    "pct": 98.1
+    "pct": 97.9
    }
   ]
  },
@@ -10277,14 +10277,14 @@
    },
    {
     "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
-    "runs": 6,
-    "on_target": 30,
+    "runs": 8,
+    "on_target": 29,
     "reaction_ms": 83,
     "overshoot_pct": 13,
     "pps_by_distance": {
-     "far": 5.8,
-     "mid": 8.1,
-     "close": 6.5
+     "far": 6.4,
+     "mid": 7.9,
+     "close": 6.6
     }
    },
    {
