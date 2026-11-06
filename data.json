@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-07 05:47",
- "updated_utc": "2026-11-06T22:47:23Z",
+ "updated": "2026-11-07 05:52",
+ "updated_utc": "2026-11-06T22:52:23Z",
  "today": {
   "date": "2026-11-07",
   "progress": {}
@@ -2240,9 +2240,9 @@
  "days": [
   {
    "date": "2026-11-07",
-   "runs": 11,
+   "runs": 13,
    "restarts": 8,
-   "rest_median_s": 84,
+   "rest_median_s": 94,
    "rest_longest_s": 181,
    "breaks": [
     {
@@ -2267,9 +2267,9 @@
     },
     {
      "name": "ZEUS VARIANTS",
-     "runs": 1,
+     "runs": 3,
      "first": "05:45",
-     "last": "05:45"
+     "last": "05:51"
     }
    ],
    "scenarios": [
@@ -2289,11 +2289,11 @@
     },
     {
      "name": "ZEUS PART 4 - 1100",
-     "runs": 1,
+     "runs": 3,
      "routine": "ZEUS VARIANTS",
      "first": "05:45",
-     "best": 338,
-     "median": 338
+     "best": 375,
+     "median": 340
     }
    ]
   },
@@ -6963,7 +6963,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1416,
+  "runs": 1417,
   "days": 32,
   "groups": [
    {
@@ -6978,7 +6978,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 493,
+    "runs": 494,
     "pct": 101.8
    },
    {
@@ -10085,13 +10085,13 @@
    },
    {
     "scenario": "ZEUS PART 4 - 1100",
-    "runs": 1,
-    "on_target": 24,
+    "runs": 3,
+    "on_target": 26,
     "reaction_ms": 133,
-    "overshoot_pct": 40,
+    "overshoot_pct": 44,
     "pps_by_distance": {
-     "mid": 6.3,
-     "close": 4.5
+     "mid": 6.2,
+     "close": 6.5
     }
    },
    {
