@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-06 07:02",
- "updated_utc": "2026-11-06T00:02:29Z",
+ "updated": "2026-11-06 07:07",
+ "updated_utc": "2026-11-06T00:07:26Z",
  "today": {
   "date": "2026-11-06",
   "progress": {}
@@ -40,8 +40,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 480.0,
-   "median_14d": 430,
-   "runs_14d": 31,
+   "median_14d": 432,
+   "runs_14d": 34,
    "steps": [
     0.0,
     180.0,
@@ -410,6 +410,12 @@
      "median": 427,
      "best": 480,
      "runs": 20
+    },
+    {
+     "date": "2026-11-06",
+     "median": 442,
+     "best": 444,
+     "runs": 3
     }
    ]
   },
@@ -2503,9 +2509,9 @@
  "days": [
   {
    "date": "2026-11-06",
-   "runs": 5,
-   "restarts": 4,
-   "rest_median_s": 71,
+   "runs": 8,
+   "restarts": 5,
+   "rest_median_s": 42,
    "rest_longest_s": 109,
    "breaks": [
     {
@@ -2518,9 +2524,9 @@
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 5,
+     "runs": 8,
      "first": "04:55",
-     "last": "07:00"
+     "last": "07:06"
     }
    ],
    "scenarios": [
@@ -2531,6 +2537,14 @@
      "first": "04:55",
      "best": 448,
      "median": 433
+    },
+    {
+     "name": "AIR TRACK SMOOTH V3 150% - RANKED",
+     "runs": 3,
+     "routine": "AIMBEAST 1 INTERMEDIATE",
+     "first": "07:02",
+     "best": 444,
+     "median": 442
     }
    ]
   },
@@ -7127,12 +7141,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1599,
+  "runs": 1601,
   "days": 31,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 621,
+    "runs": 622,
     "pct": 100.0
    },
    {
@@ -7142,13 +7156,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 571,
+    "runs": 572,
     "pct": 100.9
    },
    {
     "label": "First run after a break of 15 min+",
     "runs": 103,
-    "pct": 98.2
+    "pct": 98.1
    }
   ]
  },
@@ -10157,6 +10171,18 @@
   ],
   "2026-11-06": [
    {
+    "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
+    "runs": 3,
+    "on_target": 29,
+    "reaction_ms": 83,
+    "overshoot_pct": 14,
+    "pps_by_distance": {
+     "far": 5.7,
+     "mid": 7.9,
+     "close": 6.5
+    }
+   },
+   {
     "scenario": "SMOOTH THIN TRACK V2 - RANKED",
     "runs": 5,
     "on_target": 35,
@@ -11089,6 +11115,22 @@
     "model": {
      "file": "model-smooththin-2026-11-06",
      "label": "Model: 538"
+    }
+   },
+   {
+    "scenario": "Air Track Smooth V3 150%",
+    "score": 443,
+    "time": "07:05",
+    "gif": "best-airtrack-2026-11-06",
+    "video": true,
+    "on_target": 31,
+    "reaction_ms": 83,
+    "overshoot_pct": 19,
+    "best_14d": 510,
+    "master3": 660,
+    "note": "Best of 3 recorded today (median 441). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available: model videos are for tracking runs only."
     }
    }
   ]
