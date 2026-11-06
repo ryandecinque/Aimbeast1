@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-06 07:42",
- "updated_utc": "2026-11-06T00:42:26Z",
+ "updated": "2026-11-06 07:47",
+ "updated_utc": "2026-11-06T00:47:27Z",
  "today": {
   "date": "2026-11-06",
   "progress": {}
@@ -96,8 +96,8 @@
    "master3": 506.0,
    "official_best": 398.0,
    "best_14d": 361.0,
-   "median_14d": 303,
-   "runs_14d": 24,
+   "median_14d": 316,
+   "runs_14d": 27,
    "steps": [
     0.0,
     138.0,
@@ -631,9 +631,9 @@
     },
     {
      "date": "2026-11-06",
-     "median": 332,
+     "median": 350,
      "best": 361,
-     "runs": 2
+     "runs": 5
     }
    ]
   },
@@ -2521,9 +2521,9 @@
  "days": [
   {
    "date": "2026-11-06",
-   "runs": 17,
+   "runs": 20,
    "restarts": 15,
-   "rest_median_s": 42,
+   "rest_median_s": 45,
    "rest_longest_s": 109,
    "breaks": [
     {
@@ -2542,9 +2542,9 @@
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 17,
+     "runs": 20,
      "first": "04:55",
-     "last": "07:40"
+     "last": "07:47"
     }
    ],
    "scenarios": [
@@ -2574,11 +2574,11 @@
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
-     "runs": 2,
+     "runs": 5,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "07:39",
      "best": 361,
-     "median": 332
+     "median": 350
     }
    ]
   },
@@ -7175,7 +7175,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1611,
+  "runs": 1613,
   "days": 31,
   "groups": [
    {
@@ -7190,7 +7190,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 579,
+    "runs": 581,
     "pct": 101.0
    },
    {
@@ -10229,13 +10229,13 @@
    },
    {
     "scenario": "PASU TRACK EVO RCT - 0.85X",
-    "runs": 2,
-    "on_target": 23,
+    "runs": 5,
+    "on_target": 24,
     "reaction_ms": 167,
-    "overshoot_pct": 32,
+    "overshoot_pct": 27,
     "pps_by_distance": {
      "far": 6.6,
-     "mid": 5.5
+     "mid": 5.7
     }
    },
    {
