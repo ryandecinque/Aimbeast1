@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-06 23:32",
- "updated_utc": "2026-11-06T16:32:57Z",
+ "updated": "2026-11-06 23:52",
+ "updated_utc": "2026-11-06T16:52:42Z",
  "today": {
   "date": "2026-11-06",
   "progress": {}
@@ -96,8 +96,8 @@
    "master3": 506.0,
    "official_best": 398.0,
    "best_14d": 361.0,
-   "median_14d": 316,
-   "runs_14d": 27,
+   "median_14d": 317,
+   "runs_14d": 30,
    "steps": [
     0.0,
     138.0,
@@ -631,9 +631,9 @@
     },
     {
      "date": "2026-11-06",
-     "median": 350,
+     "median": 332,
      "best": 361,
-     "runs": 5
+     "runs": 8
     }
    ]
   },
@@ -2533,8 +2533,8 @@
  "days": [
   {
    "date": "2026-11-06",
-   "runs": 52,
-   "restarts": 65,
+   "runs": 55,
+   "restarts": 69,
    "rest_median_s": 52,
    "rest_longest_s": 302,
    "breaks": [
@@ -2567,14 +2567,20 @@
      "before": "AIMBEAST 1 INTERMEDIATE",
      "at": "09:10",
      "minutes": 822.0
+    },
+    {
+     "after": "AIMBEAST 1 INTERMEDIATE",
+     "before": "AIMBEAST 1 INTERMEDIATE",
+     "at": "23:28",
+     "minutes": 18.1
     }
    ],
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 45,
+     "runs": 48,
      "first": "04:55",
-     "last": "23:28"
+     "last": "23:51"
     },
     {
      "name": "(single scenario)",
@@ -2610,11 +2616,11 @@
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
-     "runs": 5,
+     "runs": 8,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "07:39",
      "best": 361,
-     "median": 350
+     "median": 332
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
@@ -7235,12 +7241,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1646,
+  "runs": 1648,
   "days": 31,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 630,
+    "runs": 631,
     "pct": 100.0
    },
    {
@@ -7250,13 +7256,13 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 603,
+    "runs": 604,
     "pct": 101.1
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 106,
-    "pct": 97.9
+    "runs": 107,
+    "pct": 98.1
    }
   ]
  },
@@ -10300,13 +10306,13 @@
    },
    {
     "scenario": "PASU TRACK EVO RCT - 0.85X",
-    "runs": 5,
+    "runs": 8,
     "on_target": 24,
-    "reaction_ms": 167,
-    "overshoot_pct": 27,
+    "reaction_ms": 175,
+    "overshoot_pct": 29,
     "pps_by_distance": {
-     "far": 6.6,
-     "mid": 5.7
+     "far": 5.2,
+     "mid": 5.5
     }
    },
    {
