@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-06 08:12",
- "updated_utc": "2026-11-06T01:12:21Z",
+ "updated": "2026-11-06 08:22",
+ "updated_utc": "2026-11-06T01:22:25Z",
  "today": {
   "date": "2026-11-06",
   "progress": {}
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 574.0,
    "median_14d": 504,
-   "runs_14d": 79,
+   "runs_14d": 80,
    "steps": [
     0.0,
     198.0,
@@ -1041,9 +1041,9 @@
     },
     {
      "date": "2026-11-06",
-     "median": 518,
+     "median": 517,
      "best": 524,
-     "runs": 4
+     "runs": 5
     }
    ]
   }
@@ -2533,9 +2533,9 @@
  "days": [
   {
    "date": "2026-11-06",
-   "runs": 29,
+   "runs": 32,
    "restarts": 28,
-   "rest_median_s": 50,
+   "rest_median_s": 49,
    "rest_longest_s": 302,
    "breaks": [
     {
@@ -2549,14 +2549,26 @@
      "before": "AIMBEAST 1 INTERMEDIATE",
      "at": "07:09",
      "minutes": 17.1
+    },
+    {
+     "after": "AIMBEAST 1 INTERMEDIATE",
+     "before": "(single scenario)",
+     "at": "08:13",
+     "minutes": 6.2
     }
    ],
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
-     "runs": 29,
+     "runs": 30,
      "first": "04:55",
-     "last": "08:11"
+     "last": "08:13"
+    },
+    {
+     "name": "(single scenario)",
+     "runs": 2,
+     "first": "08:20",
+     "last": "08:22"
     }
    ],
    "scenarios": [
@@ -2602,11 +2614,19 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 4,
+     "runs": 5,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "08:05",
      "best": 524,
-     "median": 518
+     "median": 517
+    },
+    {
+     "name": "MOVEMENT TRACKING",
+     "runs": 2,
+     "routine": "(single scenario)",
+     "first": "08:20",
+     "best": 837,
+     "median": 832
     }
    ]
   },
@@ -7203,12 +7223,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1623,
+  "runs": 1625,
   "days": 31,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 626,
+    "runs": 627,
     "pct": 100.0
    },
    {
@@ -7218,7 +7238,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 588,
+    "runs": 589,
     "pct": 101.0
    },
    {
@@ -10256,6 +10276,17 @@
     }
    },
    {
+    "scenario": "MOVEMENT TRACKING",
+    "runs": 2,
+    "on_target": 24,
+    "reaction_ms": 125,
+    "overshoot_pct": 66,
+    "pps_by_distance": {
+     "mid": 13.1,
+     "close": 14.8
+    }
+   },
+   {
     "scenario": "PASU TRACK EVO RCT - 0.85X",
     "runs": 5,
     "on_target": 24,
@@ -10289,13 +10320,13 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 4,
-    "on_target": 39,
+    "runs": 5,
+    "on_target": 38,
     "reaction_ms": 133,
-    "overshoot_pct": 39,
+    "overshoot_pct": 41,
     "pps_by_distance": {
-     "far": 7.4,
-     "mid": 8.9,
+     "far": 7.3,
+     "mid": 8.8,
      "close": 8.9
     }
    }
