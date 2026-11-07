@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-07 17:02",
- "updated_utc": "2026-11-07T10:02:39Z",
+ "updated": "2026-11-07 17:22",
+ "updated_utc": "2026-11-07T10:22:23Z",
  "today": {
   "date": "2026-11-07",
   "progress": {}
@@ -2247,9 +2247,9 @@
  "days": [
   {
    "date": "2026-11-07",
-   "runs": 32,
-   "restarts": 32,
-   "rest_median_s": 78,
+   "runs": 33,
+   "restarts": 33,
+   "rest_median_s": 70,
    "rest_longest_s": 812,
    "breaks": [
     {
@@ -2298,9 +2298,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 10,
+     "runs": 11,
      "first": "06:34",
-     "last": "16:59"
+     "last": "17:20"
     },
     {
      "name": "2",
@@ -2381,6 +2381,14 @@
      "first": "16:59",
      "best": 286,
      "median": 286
+    },
+    {
+     "name": "BOUNCETRACK FAR DODGE L1",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "17:20",
+     "best": 381,
+     "median": 381
     }
    ]
   },
@@ -7050,12 +7058,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1437,
+  "runs": 1438,
   "days": 32,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 582,
+    "runs": 583,
     "pct": 100.0
    },
    {
@@ -10178,6 +10186,16 @@
     "pps_by_distance": {
      "mid": 4.1,
      "close": 4.3
+    }
+   },
+   {
+    "scenario": "BOUNCETRACK FAR DODGE L1",
+    "runs": 1,
+    "on_target": 26,
+    "reaction_ms": null,
+    "overshoot_pct": 14,
+    "pps_by_distance": {
+     "far": 6.4
     }
    },
    {
