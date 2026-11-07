@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-07 13:22",
- "updated_utc": "2026-11-07T06:22:57Z",
+ "updated": "2026-11-07 17:02",
+ "updated_utc": "2026-11-07T10:02:39Z",
  "today": {
   "date": "2026-11-07",
   "progress": {}
@@ -2247,9 +2247,9 @@
  "days": [
   {
    "date": "2026-11-07",
-   "runs": 29,
-   "restarts": 23,
-   "rest_median_s": 84,
+   "runs": 32,
+   "restarts": 32,
+   "rest_median_s": 78,
    "rest_longest_s": 812,
    "breaks": [
     {
@@ -2275,6 +2275,12 @@
      "before": "2",
      "at": "06:52",
      "minutes": 384.3
+    },
+    {
+     "after": "2",
+     "before": "(single scenario)",
+     "at": "13:18",
+     "minutes": 205.9
     }
    ],
    "playlists": [
@@ -2292,9 +2298,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 7,
+     "runs": 10,
      "first": "06:34",
-     "last": "06:52"
+     "last": "16:59"
     },
     {
      "name": "2",
@@ -2359,6 +2365,22 @@
      "first": "13:18",
      "best": 225,
      "median": 225
+    },
+    {
+     "name": "AIRTIVE FAR DODGE L1",
+     "runs": 2,
+     "routine": "(single scenario)",
+     "first": "16:57",
+     "best": 313,
+     "median": 294
+    },
+    {
+     "name": "XYZ FAR DODGE L1",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "16:59",
+     "best": 286,
+     "median": 286
     }
    ]
   },
@@ -7028,18 +7050,18 @@
   }
  ],
  "rest_effect": {
-  "runs": 1434,
+  "runs": 1437,
   "days": 32,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 580,
+    "runs": 582,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 104,
-    "pct": 99.0
+    "runs": 105,
+    "pct": 99.2
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -7048,8 +7070,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 93,
-    "pct": 97.5
+    "runs": 94,
+    "pct": 97.3
    }
   ]
  },
@@ -10138,6 +10160,27 @@
   ],
   "2026-11-07": [
    {
+    "scenario": "AIRTIVE FAR DODGE L1",
+    "runs": 2,
+    "on_target": 22,
+    "reaction_ms": 142,
+    "overshoot_pct": 49,
+    "pps_by_distance": {
+     "far": 5.0
+    }
+   },
+   {
+    "scenario": "BOUNCE FAR DODGE L2",
+    "runs": 1,
+    "on_target": 29,
+    "reaction_ms": 408,
+    "overshoot_pct": 0,
+    "pps_by_distance": {
+     "mid": 4.1,
+     "close": 4.3
+    }
+   },
+   {
     "scenario": "CENTERING NO STRAFES II",
     "runs": 3,
     "on_target": 44,
@@ -10177,6 +10220,26 @@
     "pps_by_distance": {
      "mid": 4.5,
      "close": 3.4
+    }
+   },
+   {
+    "scenario": "XYZ CLOSE DODGE L1",
+    "runs": 1,
+    "on_target": 30,
+    "reaction_ms": 308,
+    "overshoot_pct": 23,
+    "pps_by_distance": {
+     "far": 7.2
+    }
+   },
+   {
+    "scenario": "XYZ FAR DODGE L1",
+    "runs": 1,
+    "on_target": 22,
+    "reaction_ms": 83,
+    "overshoot_pct": 33,
+    "pps_by_distance": {
+     "far": 4.8
     }
    },
    {
