@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-08 16:07",
- "updated_utc": "2026-11-08T09:07:13Z",
+ "updated": "2026-11-09 15:07",
+ "updated_utc": "2026-11-09T08:07:37Z",
  "today": {
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "progress": {}
  },
  "plan_start": "2026-10-07",
@@ -152,8 +152,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 574.0,
-   "median_14d": 501,
-   "runs_14d": 96,
+   "median_14d": 499,
+   "runs_14d": 87,
    "steps": [
     0.0,
     198.0,
@@ -2251,6 +2251,48 @@
   }
  ],
  "days": [
+  {
+   "date": "2026-11-09",
+   "runs": 3,
+   "restarts": 2,
+   "rest_median_s": 24,
+   "rest_longest_s": 25,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "(single scenario)",
+     "runs": 3,
+     "first": "15:04",
+     "last": "15:07"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "ANTI-MIRROR AUTO",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "15:04",
+     "best": 925,
+     "median": 925
+    },
+    {
+     "name": "CLOSE ANTI-MIRROR AUTO",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "15:06",
+     "best": 1044,
+     "median": 1044
+    },
+    {
+     "name": "AUTO LONG STRAFE - HUMAN GROUND",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "15:07",
+     "best": 741,
+     "median": 741
+    }
+   ]
+  },
   {
    "date": "2026-11-08",
    "runs": 14,
@@ -7090,12 +7132,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1452,
-  "days": 33,
+  "runs": 1454,
+  "days": 34,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 584,
+    "runs": 586,
     "pct": 100.0
    },
    {
@@ -10337,6 +10379,49 @@
      "far": 8.0,
      "mid": 8.5,
      "close": 8.3
+    }
+   }
+  ],
+  "2026-11-09": [
+   {
+    "scenario": "ANTI-MIRROR - SHORT STRAFES",
+    "runs": 1,
+    "on_target": 13,
+    "reaction_ms": null,
+    "overshoot_pct": 60,
+    "pps_by_distance": {
+     "mid": 3.6,
+     "close": 1.9
+    }
+   },
+   {
+    "scenario": "ANTI-MIRROR AUTO",
+    "runs": 1,
+    "on_target": 49,
+    "reaction_ms": 167,
+    "overshoot_pct": 27,
+    "pps_by_distance": {
+     "mid": 15.7
+    }
+   },
+   {
+    "scenario": "AUTO LONG STRAFE - HUMAN GROUND",
+    "runs": 1,
+    "on_target": 32,
+    "reaction_ms": 150,
+    "overshoot_pct": 48,
+    "pps_by_distance": {
+     "far": 12.3
+    }
+   },
+   {
+    "scenario": "CLOSE ANTI-MIRROR AUTO",
+    "runs": 1,
+    "on_target": 54,
+    "reaction_ms": 167,
+    "overshoot_pct": 29,
+    "pps_by_distance": {
+     "mid": 17.5
     }
    }
   ]
