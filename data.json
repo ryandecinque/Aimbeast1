@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-09 15:12",
- "updated_utc": "2026-11-09T08:12:23Z",
+ "updated": "2026-11-09 18:17",
+ "updated_utc": "2026-11-09T11:17:40Z",
  "today": {
   "date": "2026-11-09",
   "progress": {}
@@ -152,8 +152,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 574.0,
-   "median_14d": 499,
-   "runs_14d": 87,
+   "median_14d": 497,
+   "runs_14d": 89,
    "steps": [
     0.0,
     198.0,
@@ -764,6 +764,12 @@
      "median": 496,
      "best": 534,
      "runs": 14
+    },
+    {
+     "date": "2026-11-09",
+     "median": 430,
+     "best": 443,
+     "runs": 2
     }
    ]
   }
@@ -2253,17 +2259,17 @@
  "days": [
   {
    "date": "2026-11-09",
-   "runs": 5,
-   "restarts": 4,
+   "runs": 7,
+   "restarts": 22,
    "rest_median_s": 25,
    "rest_longest_s": 68,
    "breaks": [],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 5,
+     "runs": 7,
      "first": "15:04",
-     "last": "15:11"
+     "last": "18:16"
     }
    ],
    "scenarios": [
@@ -2306,6 +2312,14 @@
      "first": "15:11",
      "best": 2560,
      "median": 2560
+    },
+    {
+     "name": "ZEUS TRACK EVO - NOBLINK",
+     "runs": 2,
+     "routine": "(single scenario)",
+     "first": "18:14",
+     "best": 443,
+     "median": 430
     }
    ]
   },
@@ -7148,12 +7162,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1457,
+  "runs": 1459,
   "days": 34,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 589,
+    "runs": 590,
     "pct": 100.0
    },
    {
@@ -7163,7 +7177,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 517,
+    "runs": 518,
     "pct": 101.3
    },
    {
@@ -10431,6 +10445,16 @@
     }
    },
    {
+    "scenario": "AUTO REVOLVING ARC",
+    "runs": 1,
+    "on_target": 31,
+    "reaction_ms": 83,
+    "overshoot_pct": 44,
+    "pps_by_distance": {
+     "mid": 11.6
+    }
+   },
+   {
     "scenario": "AUTOSTRAF",
     "runs": 1,
     "on_target": 23,
@@ -10460,6 +10484,81 @@
     "overshoot_pct": 29,
     "pps_by_distance": {
      "mid": 17.5
+    }
+   },
+   {
+    "scenario": "HELL TRACK STATIC",
+    "runs": 1,
+    "on_target": 32,
+    "reaction_ms": null,
+    "overshoot_pct": 52,
+    "pps_by_distance": {
+     "close": 7.1
+    }
+   },
+   {
+    "scenario": "HSRATE V2 POSSD",
+    "runs": 1,
+    "on_target": 25,
+    "reaction_ms": 200,
+    "overshoot_pct": 58,
+    "pps_by_distance": {
+     "mid": 4.4,
+     "close": 3.3
+    }
+   },
+   {
+    "scenario": "POSSD CENTERING BOT V3",
+    "runs": 1,
+    "on_target": 20,
+    "reaction_ms": 67,
+    "overshoot_pct": 68,
+    "pps_by_distance": {
+     "far": 3.8
+    }
+   },
+   {
+    "scenario": "POSSD CENTERING V4 BETTER THIN",
+    "runs": 1,
+    "on_target": 20,
+    "reaction_ms": 234,
+    "overshoot_pct": 66,
+    "pps_by_distance": {
+     "mid": 3.5
+    }
+   },
+   {
+    "scenario": "POSSESSED DODGE AIM",
+    "runs": 1,
+    "on_target": 48,
+    "reaction_ms": 25,
+    "overshoot_pct": 34,
+    "pps_by_distance": {
+     "close": 7.9
+    }
+   },
+   {
+    "scenario": "TERRAIN POSSESSION - EASY",
+    "runs": 1,
+    "on_target": 0,
+    "reaction_ms": 58,
+    "overshoot_pct": 33,
+    "pps_by_distance": {
+     "far": 3.6,
+     "mid": 3.6,
+     "close": 4.9
+    }
+   },
+   {
+    "scenario": "ZEUS TRACK EVO - NOBLINK",
+    "runs": 2,
+    "on_target": 30,
+    "reaction_ms": 150,
+    "overshoot_pct": 39,
+    "pps_by_distance": {
+     "far": 6.2,
+     "mid": 8.1,
+     "close": 7.3
     }
    }
   ]
@@ -11518,6 +11617,24 @@
     "best_14d": 574,
     "master3": 726,
     "note": "Best of 8 recorded today (median 468). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available: model videos are for tracking runs only."
+    }
+   }
+  ],
+  "2026-11-09": [
+   {
+    "scenario": "Zeus Track Evo - Noblink",
+    "score": 443,
+    "time": "18:15",
+    "gif": "best-zeus-2026-11-09",
+    "video": true,
+    "on_target": 31,
+    "reaction_ms": 150,
+    "overshoot_pct": 33,
+    "best_14d": 574,
+    "master3": 726,
+    "note": "Best of 2 recorded today (median 429). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available: model videos are for tracking runs only."
     }
