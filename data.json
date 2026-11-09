@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-09 15:07",
- "updated_utc": "2026-11-09T08:07:37Z",
+ "updated": "2026-11-09 15:12",
+ "updated_utc": "2026-11-09T08:12:23Z",
  "today": {
   "date": "2026-11-09",
   "progress": {}
@@ -2253,17 +2253,17 @@
  "days": [
   {
    "date": "2026-11-09",
-   "runs": 3,
-   "restarts": 2,
-   "rest_median_s": 24,
-   "rest_longest_s": 25,
+   "runs": 5,
+   "restarts": 4,
+   "rest_median_s": 25,
+   "rest_longest_s": 68,
    "breaks": [],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 3,
+     "runs": 5,
      "first": "15:04",
-     "last": "15:07"
+     "last": "15:11"
     }
    ],
    "scenarios": [
@@ -2290,6 +2290,22 @@
      "first": "15:07",
      "best": 741,
      "median": 741
+    },
+    {
+     "name": "AUTOSTRAF ",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "15:09",
+     "best": 313,
+     "median": 313
+    },
+    {
+     "name": "AUTOSTRAFE CONTROLSPHERE",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "15:11",
+     "best": 2560,
+     "median": 2560
     }
    ]
   },
@@ -7132,12 +7148,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1454,
+  "runs": 1457,
   "days": 34,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 586,
+    "runs": 589,
     "pct": 100.0
    },
    {
@@ -10412,6 +10428,28 @@
     "overshoot_pct": 48,
     "pps_by_distance": {
      "far": 12.3
+    }
+   },
+   {
+    "scenario": "AUTOSTRAF",
+    "runs": 1,
+    "on_target": 23,
+    "reaction_ms": 125,
+    "overshoot_pct": 61,
+    "pps_by_distance": {
+     "mid": 5.2,
+     "close": 6.0
+    }
+   },
+   {
+    "scenario": "AUTOSTRAFE CONTROLSPHERE",
+    "runs": 1,
+    "on_target": 22,
+    "reaction_ms": 200,
+    "overshoot_pct": 32,
+    "pps_by_distance": {
+     "far": 7.9,
+     "mid": 10.8
     }
    },
    {
