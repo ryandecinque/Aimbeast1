@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-11 16:22",
- "updated_utc": "2026-11-11T09:22:35Z",
+ "updated": "2026-11-11 16:27",
+ "updated_utc": "2026-11-11T09:27:32Z",
  "today": {
   "date": "2026-11-11",
   "progress": {}
@@ -2271,7 +2271,7 @@
  "days": [
   {
    "date": "2026-11-11",
-   "runs": 38,
+   "runs": 41,
    "restarts": 49,
    "rest_median_s": 32,
    "rest_longest_s": 159,
@@ -2304,9 +2304,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 24,
+     "runs": 27,
      "first": "13:18",
-     "last": "16:20"
+     "last": "16:25"
     }
    ],
    "scenarios": [
@@ -2388,9 +2388,21 @@
     },
     {
      "name": "FLAT ARENA POSS - THIN",
-     "runs": 1,
+     "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "16:20"
+    },
+    {
+     "name": "SMOOTH PILL EZ (CLOSE)",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "16:24"
+    },
+    {
+     "name": "REACTIVE STRAFER 1",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "16:25"
     }
    ]
   },
@@ -10763,10 +10775,10 @@
    },
    {
     "scenario": "FLAT ARENA POSS - THIN",
-    "runs": 1,
+    "runs": 2,
     "on_target": 20,
-    "reaction_ms": 167,
-    "overshoot_pct": 68,
+    "reaction_ms": 158,
+    "overshoot_pct": 66,
     "pps_by_distance": {
      "close": 1.9
     }
@@ -10815,6 +10827,17 @@
     }
    },
    {
+    "scenario": "REACTIVE STRAFER 1",
+    "runs": 1,
+    "on_target": 24,
+    "reaction_ms": 267,
+    "overshoot_pct": 41,
+    "pps_by_distance": {
+     "mid": 2.8,
+     "close": 2.6
+    }
+   },
+   {
     "scenario": "REACTIVE STRAFER EVOLUTION",
     "runs": 2,
     "on_target": 27,
@@ -10833,6 +10856,17 @@
     "overshoot_pct": 34,
     "pps_by_distance": {
      "mid": 14.5
+    }
+   },
+   {
+    "scenario": "SMOOTH PILL EZ CLOSE",
+    "runs": 1,
+    "on_target": 35,
+    "reaction_ms": 133,
+    "overshoot_pct": 30,
+    "pps_by_distance": {
+     "mid": 3.6,
+     "close": 4.1
     }
    },
    {
