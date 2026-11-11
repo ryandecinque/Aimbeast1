@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-11 13:37",
- "updated_utc": "2026-11-11T06:37:27Z",
+ "updated": "2026-11-11 13:42",
+ "updated_utc": "2026-11-11T06:42:27Z",
  "today": {
   "date": "2026-11-11",
   "progress": {}
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 574.0,
    "median_14d": 482,
-   "runs_14d": 118,
+   "runs_14d": 119,
    "steps": [
     0.0,
     198.0,
@@ -779,9 +779,9 @@
     },
     {
      "date": "2026-11-11",
-     "median": 458,
-     "best": 488,
-     "runs": 8
+     "median": 462,
+     "best": 547,
+     "runs": 9
     }
    ]
   }
@@ -2271,33 +2271,40 @@
  "days": [
   {
    "date": "2026-11-11",
-   "runs": 19,
-   "restarts": 29,
-   "rest_median_s": 31,
+   "runs": 22,
+   "restarts": 31,
+   "rest_median_s": 32,
    "rest_longest_s": 159,
-   "breaks": [],
+   "breaks": [
+    {
+     "after": "BAZHAN MEDIUM TRACKING",
+     "before": "(single scenario)",
+     "at": "13:40",
+     "minutes": 0.2
+    }
+   ],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 8,
+     "runs": 9,
      "first": "13:04",
-     "last": "13:16"
+     "last": "13:42"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 11,
+     "runs": 13,
      "first": "13:18",
-     "last": "13:36"
+     "last": "13:40"
     }
    ],
    "scenarios": [
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 8,
+     "runs": 9,
      "routine": "(single scenario)",
      "first": "13:04",
-     "best": 488,
-     "median": 458
+     "best": 547,
+     "median": 462
     },
     {
      "name": "OLD BOXTRACK V2",
@@ -2325,10 +2332,10 @@
     },
     {
      "name": "NEEDLETRACK MS",
-     "runs": 1,
+     "runs": 3,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "13:35",
-     "best": 292,
+     "best": 337,
      "median": 292
     }
    ]
@@ -7264,12 +7271,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1508,
+  "runs": 1511,
   "days": 36,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 596,
+    "runs": 598,
     "pct": 100.0
    },
    {
@@ -10681,10 +10688,10 @@
   "2026-11-11": [
    {
     "scenario": "NEEDLETRACK MS",
-    "runs": 1,
+    "runs": 3,
     "on_target": 34,
     "reaction_ms": null,
-    "overshoot_pct": 49,
+    "overshoot_pct": 48,
     "pps_by_distance": {
      "mid": 4.9
     }
@@ -10723,14 +10730,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 10,
+    "runs": 11,
     "on_target": 32,
-    "reaction_ms": 138,
+    "reaction_ms": 133,
     "overshoot_pct": 40,
     "pps_by_distance": {
-     "far": 7.2,
-     "mid": 7.9,
-     "close": 7.2
+     "far": 7.3,
+     "mid": 8.1,
+     "close": 7.3
     }
    }
   ]
@@ -11833,16 +11840,16 @@
   "2026-11-11": [
    {
     "scenario": "Zeus Track Evo - Noblink",
-    "score": 488,
-    "time": "13:15",
+    "score": 547,
+    "time": "13:41",
     "gif": "best-zeus-2026-11-11",
     "video": true,
-    "on_target": 33,
+    "on_target": 40,
     "reaction_ms": 133,
-    "overshoot_pct": 34,
+    "overshoot_pct": 35,
     "best_14d": 574,
     "master3": 726,
-    "note": "Best of 10 recorded today (median 446). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 11 recorded today (median 454). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available: model videos are for tracking runs only."
     }
@@ -12162,6 +12169,13 @@
      "title": "PASU Track XYZ",
      "score": 544,
      "old": 542
+    }
+   ],
+   "2026-11-11": [
+    {
+     "title": "Zeus Track Evo - Noblink",
+     "score": 547,
+     "old": 537
     }
    ]
   }
