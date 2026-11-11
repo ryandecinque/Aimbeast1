@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-11 16:47",
- "updated_utc": "2026-11-11T09:47:34Z",
+ "updated": "2026-11-11 16:53",
+ "updated_utc": "2026-11-11T09:53:26Z",
  "today": {
   "date": "2026-11-11",
   "progress": {}
@@ -2271,7 +2271,7 @@
  "days": [
   {
    "date": "2026-11-11",
-   "runs": 51,
+   "runs": 53,
    "restarts": 57,
    "rest_median_s": 32,
    "rest_longest_s": 236,
@@ -2304,9 +2304,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 37,
+     "runs": 39,
      "first": "13:18",
-     "last": "16:46"
+     "last": "16:49"
     }
    ],
    "scenarios": [
@@ -2421,6 +2421,12 @@
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "16:38"
+    },
+    {
+     "name": "TORNADO COW (MICRO)",
+     "runs": 2,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "16:47"
     }
    ]
   },
@@ -10928,6 +10934,17 @@
     "overshoot_pct": 34,
     "pps_by_distance": {
      "mid": 2.8
+    }
+   },
+   {
+    "scenario": "TORNADO COW MICRO",
+    "runs": 2,
+    "on_target": 29,
+    "reaction_ms": null,
+    "overshoot_pct": 21,
+    "pps_by_distance": {
+     "mid": 3.1,
+     "close": 3.5
     }
    },
    {
