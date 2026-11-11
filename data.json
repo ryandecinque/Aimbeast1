@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-11 13:27",
- "updated_utc": "2026-11-11T06:27:27Z",
+ "updated": "2026-11-11 13:32",
+ "updated_utc": "2026-11-11T06:32:28Z",
  "today": {
   "date": "2026-11-11",
   "progress": {}
@@ -2271,9 +2271,9 @@
  "days": [
   {
    "date": "2026-11-11",
-   "runs": 12,
-   "restarts": 23,
-   "rest_median_s": 38,
+   "runs": 15,
+   "restarts": 26,
+   "rest_median_s": 36,
    "rest_longest_s": 159,
    "breaks": [],
    "playlists": [
@@ -2285,9 +2285,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 4,
+     "runs": 7,
      "first": "13:18",
-     "last": "13:25"
+     "last": "13:31"
     }
    ],
    "scenarios": [
@@ -2301,11 +2301,27 @@
     },
     {
      "name": "OLD BOXTRACK V2",
-     "runs": 4,
+     "runs": 5,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "13:18",
-     "best": 316,
-     "median": 300
+     "best": 341,
+     "median": 303
+    },
+    {
+     "name": "テ SWAYTRACK (EZ) - RANKED",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "13:29",
+     "best": 826,
+     "median": 826
+    },
+    {
+     "name": "SLIPPERY STRAFE",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "13:31",
+     "best": 890,
+     "median": 890
     }
    ]
   },
@@ -7240,12 +7256,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1502,
+  "runs": 1504,
   "days": 36,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 591,
+    "runs": 592,
     "pct": 100.0
    },
    {
@@ -7255,7 +7271,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 546,
+    "runs": 547,
     "pct": 101.3
    },
    {
@@ -10657,14 +10673,34 @@
   "2026-11-11": [
    {
     "scenario": "OLD BOXTRACK V2",
-    "runs": 5,
-    "on_target": 25,
-    "reaction_ms": 130,
+    "runs": 6,
+    "on_target": 26,
+    "reaction_ms": 117,
     "overshoot_pct": 21,
     "pps_by_distance": {
      "far": 7.8,
      "mid": 5.0,
-     "close": 5.1
+     "close": 5.0
+    }
+   },
+   {
+    "scenario": "SLIPPERY STRAFE",
+    "runs": 1,
+    "on_target": 39,
+    "reaction_ms": 133,
+    "overshoot_pct": 34,
+    "pps_by_distance": {
+     "mid": 14.9
+    }
+   },
+   {
+    "scenario": "SWAYTRACK EZ - RANKED",
+    "runs": 1,
+    "on_target": 34,
+    "reaction_ms": null,
+    "overshoot_pct": 12,
+    "pps_by_distance": {
+     "mid": 13.8
     }
    },
    {
