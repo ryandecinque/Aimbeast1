@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-11 16:37",
- "updated_utc": "2026-11-11T09:37:31Z",
+ "updated": "2026-11-11 16:42",
+ "updated_utc": "2026-11-11T09:42:28Z",
  "today": {
   "date": "2026-11-11",
   "progress": {}
@@ -2271,7 +2271,7 @@
  "days": [
   {
    "date": "2026-11-11",
-   "runs": 47,
+   "runs": 49,
    "restarts": 54,
    "rest_median_s": 32,
    "rest_longest_s": 159,
@@ -2304,9 +2304,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 33,
+     "runs": 35,
      "first": "13:18",
-     "last": "16:35"
+     "last": "16:39"
     }
    ],
    "scenarios": [
@@ -2336,7 +2336,7 @@
     },
     {
      "name": "SLIPPERY STRAFE",
-     "runs": 3,
+     "runs": 4,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "13:31",
      "best": 890,
@@ -2415,6 +2415,12 @@
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "16:31"
+    },
+    {
+     "name": "LR XYZ STRAFES SLOW ACCEL",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "16:38"
     }
    ]
   },
@@ -7354,13 +7360,13 @@
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 599,
+    "runs": 598,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 107,
-    "pct": 99.2
+    "runs": 108,
+    "pct": 99.3
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -10807,6 +10813,18 @@
     }
    },
    {
+    "scenario": "LR XYZ STRAFES SLOW ACCEL",
+    "runs": 1,
+    "on_target": 30,
+    "reaction_ms": null,
+    "overshoot_pct": 14,
+    "pps_by_distance": {
+     "far": 2.5,
+     "mid": 3.4,
+     "close": 6.4
+    }
+   },
+   {
     "scenario": "MICROSPHERE EZ - RANKED",
     "runs": 2,
     "on_target": 26,
@@ -10873,12 +10891,12 @@
    },
    {
     "scenario": "SLIPPERY STRAFE",
-    "runs": 3,
+    "runs": 4,
     "on_target": 37,
     "reaction_ms": 133,
     "overshoot_pct": 34,
     "pps_by_distance": {
-     "mid": 14.5
+     "mid": 14.1
     }
    },
    {
