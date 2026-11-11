@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-11 13:52",
- "updated_utc": "2026-11-11T06:52:26Z",
+ "updated": "2026-11-11 13:57",
+ "updated_utc": "2026-11-11T06:57:28Z",
  "today": {
   "date": "2026-11-11",
   "progress": {}
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 574.0,
    "median_14d": 482,
-   "runs_14d": 123,
+   "runs_14d": 124,
    "steps": [
     0.0,
     198.0,
@@ -779,9 +779,9 @@
     },
     {
      "date": "2026-11-11",
-     "median": 481,
+     "median": 482,
      "best": 547,
-     "runs": 13
+     "runs": 14
     }
    ]
   }
@@ -2271,9 +2271,9 @@
  "days": [
   {
    "date": "2026-11-11",
-   "runs": 26,
-   "restarts": 39,
-   "rest_median_s": 34,
+   "runs": 29,
+   "restarts": 46,
+   "rest_median_s": 33,
    "rest_longest_s": 159,
    "breaks": [
     {
@@ -2281,30 +2281,36 @@
      "before": "(single scenario)",
      "at": "13:40",
      "minutes": 0.2
+    },
+    {
+     "after": "(single scenario)",
+     "before": "BAZHAN MEDIUM TRACKING",
+     "at": "13:53",
+     "minutes": 0.7
     }
    ],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 13,
+     "runs": 14,
      "first": "13:04",
-     "last": "13:51"
+     "last": "13:53"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 13,
+     "runs": 15,
      "first": "13:18",
-     "last": "13:40"
+     "last": "13:56"
     }
    ],
    "scenarios": [
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 13,
+     "runs": 14,
      "routine": "(single scenario)",
      "first": "13:04",
      "best": 547,
-     "median": 481
+     "median": 482
     },
     {
      "name": "OLD BOXTRACK V2",
@@ -2337,6 +2343,18 @@
      "first": "13:35",
      "best": 337,
      "median": 292
+    },
+    {
+     "name": "FLAT ARENA POSS",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "13:55"
+    },
+    {
+     "name": "テ MICROSPHERE (EZ) - RANKED",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "13:56"
     }
    ]
   },
@@ -7271,7 +7289,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1515,
+  "runs": 1517,
   "days": 36,
   "groups": [
    {
@@ -7286,7 +7304,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 549,
+    "runs": 551,
     "pct": 101.3
    },
    {
@@ -10687,6 +10705,27 @@
   ],
   "2026-11-11": [
    {
+    "scenario": "FLAT ARENA POSS",
+    "runs": 1,
+    "on_target": 31,
+    "reaction_ms": 150,
+    "overshoot_pct": 60,
+    "pps_by_distance": {
+     "close": 2.5
+    }
+   },
+   {
+    "scenario": "MICROSPHERE EZ - RANKED",
+    "runs": 1,
+    "on_target": 26,
+    "reaction_ms": null,
+    "overshoot_pct": 19,
+    "pps_by_distance": {
+     "far": 2.1,
+     "mid": 2.9
+    }
+   },
+   {
     "scenario": "NEEDLETRACK MS",
     "runs": 3,
     "on_target": 34,
@@ -10730,14 +10769,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 15,
+    "runs": 16,
     "on_target": 33,
     "reaction_ms": 133,
     "overshoot_pct": 40,
     "pps_by_distance": {
-     "far": 7.4,
-     "mid": 9.3,
-     "close": 7.4
+     "far": 7.5,
+     "mid": 9.4,
+     "close": 7.6
     }
    }
   ]
