@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-11 16:32",
- "updated_utc": "2026-11-11T09:32:39Z",
+ "updated": "2026-11-11 16:37",
+ "updated_utc": "2026-11-11T09:37:31Z",
  "today": {
   "date": "2026-11-11",
   "progress": {}
@@ -2271,9 +2271,9 @@
  "days": [
   {
    "date": "2026-11-11",
-   "runs": 45,
-   "restarts": 51,
-   "rest_median_s": 31,
+   "runs": 47,
+   "restarts": 54,
+   "rest_median_s": 32,
    "rest_longest_s": 159,
    "breaks": [
     {
@@ -2304,9 +2304,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 31,
+     "runs": 33,
      "first": "13:18",
-     "last": "16:31"
+     "last": "16:35"
     }
    ],
    "scenarios": [
@@ -2406,13 +2406,13 @@
     },
     {
      "name": "'ZEUSTRACK' CLOSE - S",
-     "runs": 1,
+     "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "16:30"
     },
     {
      "name": "HAND BENDING SPHERE - EASY",
-     "runs": 1,
+     "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "16:31"
     }
@@ -10797,13 +10797,13 @@
    },
    {
     "scenario": "HAND BENDING SPHERE - EASY",
-    "runs": 1,
-    "on_target": 33,
-    "reaction_ms": 100,
-    "overshoot_pct": 11,
+    "runs": 2,
+    "on_target": 32,
+    "reaction_ms": 88,
+    "overshoot_pct": 10,
     "pps_by_distance": {
-     "mid": 2.1,
-     "close": 4.0
+     "mid": 2.5,
+     "close": 3.9
     }
    },
    {
@@ -10926,13 +10926,13 @@
    },
    {
     "scenario": "ZEUSTRACK CLOSE - S",
-    "runs": 1,
-    "on_target": 28,
+    "runs": 2,
+    "on_target": 29,
     "reaction_ms": 150,
-    "overshoot_pct": 46,
+    "overshoot_pct": 44,
     "pps_by_distance": {
-     "mid": 3.0,
-     "close": 3.4
+     "mid": 4.3,
+     "close": 3.5
     }
    }
   ]
