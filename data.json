@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-11 16:17",
- "updated_utc": "2026-11-11T09:17:47Z",
+ "updated": "2026-11-11 16:22",
+ "updated_utc": "2026-11-11T09:22:35Z",
  "today": {
   "date": "2026-11-11",
   "progress": {}
@@ -2271,9 +2271,9 @@
  "days": [
   {
    "date": "2026-11-11",
-   "runs": 36,
+   "runs": 38,
    "restarts": 49,
-   "rest_median_s": 31,
+   "rest_median_s": 32,
    "rest_longest_s": 159,
    "breaks": [
     {
@@ -2304,9 +2304,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 22,
+     "runs": 24,
      "first": "13:18",
-     "last": "16:17"
+     "last": "16:20"
     }
    ],
    "scenarios": [
@@ -2382,9 +2382,15 @@
     },
     {
      "name": "REACTIVE STRAFER EVOLUTION",
-     "runs": 1,
+     "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "16:15"
+    },
+    {
+     "name": "FLAT ARENA POSS - THIN",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "16:20"
     }
    ]
   },
@@ -10756,6 +10762,16 @@
     }
    },
    {
+    "scenario": "FLAT ARENA POSS - THIN",
+    "runs": 1,
+    "on_target": 20,
+    "reaction_ms": 167,
+    "overshoot_pct": 68,
+    "pps_by_distance": {
+     "close": 1.9
+    }
+   },
+   {
     "scenario": "MICROSPHERE EZ - RANKED",
     "runs": 2,
     "on_target": 26,
@@ -10800,13 +10816,13 @@
    },
    {
     "scenario": "REACTIVE STRAFER EVOLUTION",
-    "runs": 1,
-    "on_target": 26,
-    "reaction_ms": 267,
+    "runs": 2,
+    "on_target": 27,
+    "reaction_ms": 258,
     "overshoot_pct": 42,
     "pps_by_distance": {
-     "mid": 2.0,
-     "close": 2.3
+     "mid": 2.1,
+     "close": 2.5
     }
    },
    {
