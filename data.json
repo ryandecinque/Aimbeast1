@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-11 13:32",
- "updated_utc": "2026-11-11T06:32:28Z",
+ "updated": "2026-11-11 13:37",
+ "updated_utc": "2026-11-11T06:37:27Z",
  "today": {
   "date": "2026-11-11",
   "progress": {}
@@ -2271,9 +2271,9 @@
  "days": [
   {
    "date": "2026-11-11",
-   "runs": 15,
-   "restarts": 26,
-   "rest_median_s": 36,
+   "runs": 19,
+   "restarts": 29,
+   "rest_median_s": 31,
    "rest_longest_s": 159,
    "breaks": [],
    "playlists": [
@@ -2285,9 +2285,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 7,
+     "runs": 11,
      "first": "13:18",
-     "last": "13:31"
+     "last": "13:36"
     }
    ],
    "scenarios": [
@@ -2309,19 +2309,27 @@
     },
     {
      "name": "テ SWAYTRACK (EZ) - RANKED",
-     "runs": 1,
+     "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "13:29",
-     "best": 826,
-     "median": 826
+     "best": 860,
+     "median": 843
     },
     {
      "name": "SLIPPERY STRAFE",
-     "runs": 1,
+     "runs": 3,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "13:31",
      "best": 890,
-     "median": 890
+     "median": 863
+    },
+    {
+     "name": "NEEDLETRACK MS",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "13:35",
+     "best": 292,
+     "median": 292
     }
    ]
   },
@@ -7256,12 +7264,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1504,
+  "runs": 1508,
   "days": 36,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 592,
+    "runs": 596,
     "pct": 100.0
    },
    {
@@ -10672,6 +10680,16 @@
   ],
   "2026-11-11": [
    {
+    "scenario": "NEEDLETRACK MS",
+    "runs": 1,
+    "on_target": 34,
+    "reaction_ms": null,
+    "overshoot_pct": 49,
+    "pps_by_distance": {
+     "mid": 4.9
+    }
+   },
+   {
     "scenario": "OLD BOXTRACK V2",
     "runs": 6,
     "on_target": 26,
@@ -10685,22 +10703,22 @@
    },
    {
     "scenario": "SLIPPERY STRAFE",
-    "runs": 1,
-    "on_target": 39,
+    "runs": 3,
+    "on_target": 37,
     "reaction_ms": 133,
     "overshoot_pct": 34,
     "pps_by_distance": {
-     "mid": 14.9
+     "mid": 14.5
     }
    },
    {
     "scenario": "SWAYTRACK EZ - RANKED",
-    "runs": 1,
-    "on_target": 34,
+    "runs": 2,
+    "on_target": 35,
     "reaction_ms": null,
-    "overshoot_pct": 12,
+    "overshoot_pct": 10,
     "pps_by_distance": {
-     "mid": 13.8
+     "mid": 14.2
     }
    },
    {
