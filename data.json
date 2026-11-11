@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-11 13:17",
- "updated_utc": "2026-11-11T06:17:28Z",
+ "updated": "2026-11-11 13:22",
+ "updated_utc": "2026-11-11T06:22:28Z",
  "today": {
   "date": "2026-11-11",
   "progress": {}
@@ -2271,8 +2271,8 @@
  "days": [
   {
    "date": "2026-11-11",
-   "runs": 8,
-   "restarts": 17,
+   "runs": 11,
+   "restarts": 20,
    "rest_median_s": 34,
    "rest_longest_s": 50,
    "breaks": [],
@@ -2282,6 +2282,12 @@
      "runs": 8,
      "first": "13:04",
      "last": "13:16"
+    },
+    {
+     "name": "BAZHAN MEDIUM TRACKING",
+     "runs": 3,
+     "first": "13:18",
+     "last": "13:21"
     }
    ],
    "scenarios": [
@@ -2292,6 +2298,14 @@
      "first": "13:04",
      "best": 488,
      "median": 458
+    },
+    {
+     "name": "OLD BOXTRACK V2",
+     "runs": 3,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "13:18",
+     "best": 316,
+     "median": 297
     }
    ]
   },
@@ -7226,17 +7240,17 @@
   }
  ],
  "rest_effect": {
-  "runs": 1497,
+  "runs": 1500,
   "days": 36,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 590,
+    "runs": 591,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 105,
+    "runs": 107,
     "pct": 99.2
    },
    {
@@ -10641,6 +10655,18 @@
    }
   ],
   "2026-11-11": [
+   {
+    "scenario": "OLD BOXTRACK V2",
+    "runs": 4,
+    "on_target": 25,
+    "reaction_ms": 117,
+    "overshoot_pct": 17,
+    "pps_by_distance": {
+     "far": 7.8,
+     "mid": 4.8,
+     "close": 5.8
+    }
+   },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
     "runs": 10,
