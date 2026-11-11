@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-11 14:02",
- "updated_utc": "2026-11-11T07:02:29Z",
+ "updated": "2026-11-11 16:17",
+ "updated_utc": "2026-11-11T09:17:47Z",
  "today": {
   "date": "2026-11-11",
   "progress": {}
@@ -2271,9 +2271,9 @@
  "days": [
   {
    "date": "2026-11-11",
-   "runs": 32,
-   "restarts": 47,
-   "rest_median_s": 32,
+   "runs": 36,
+   "restarts": 49,
+   "rest_median_s": 31,
    "rest_longest_s": 159,
    "breaks": [
     {
@@ -2287,6 +2287,12 @@
      "before": "BAZHAN MEDIUM TRACKING",
      "at": "13:53",
      "minutes": 0.7
+    },
+    {
+     "after": "BAZHAN MEDIUM TRACKING",
+     "before": "BAZHAN MEDIUM TRACKING",
+     "at": "14:02",
+     "minutes": 130.5
     }
    ],
    "playlists": [
@@ -2298,9 +2304,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 18,
+     "runs": 22,
      "first": "13:18",
-     "last": "14:01"
+     "last": "16:17"
     }
    ],
    "scenarios": [
@@ -2361,6 +2367,24 @@
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "13:59"
+    },
+    {
+     "name": "CAGED CONTROLSPHERE - 50% EASIER",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "14:02"
+    },
+    {
+     "name": "SYW - S",
+     "runs": 2,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "16:14"
+    },
+    {
+     "name": "REACTIVE STRAFER EVOLUTION",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "16:15"
     }
    ]
   },
@@ -8312,9 +8336,9 @@
    {
     "scenario": "SYW - S",
     "runs": 1,
-    "on_target": 39,
+    "on_target": 41,
     "reaction_ms": 200,
-    "overshoot_pct": 26,
+    "overshoot_pct": 29,
     "pps_by_distance": {
      "mid": 2.6
     }
@@ -10711,6 +10735,17 @@
   ],
   "2026-11-11": [
    {
+    "scenario": "CAGED CONTROLSPHERE - 50 EASIER",
+    "runs": 1,
+    "on_target": 31,
+    "reaction_ms": null,
+    "overshoot_pct": 26,
+    "pps_by_distance": {
+     "far": 2.4,
+     "mid": 2.9
+    }
+   },
+   {
     "scenario": "FLAT ARENA POSS",
     "runs": 1,
     "on_target": 31,
@@ -10764,6 +10799,17 @@
     }
    },
    {
+    "scenario": "REACTIVE STRAFER EVOLUTION",
+    "runs": 1,
+    "on_target": 26,
+    "reaction_ms": 267,
+    "overshoot_pct": 42,
+    "pps_by_distance": {
+     "mid": 2.0,
+     "close": 2.3
+    }
+   },
+   {
     "scenario": "SLIPPERY STRAFE",
     "runs": 3,
     "on_target": 37,
@@ -10781,6 +10827,16 @@
     "overshoot_pct": 10,
     "pps_by_distance": {
      "mid": 14.2
+    }
+   },
+   {
+    "scenario": "SYW - S",
+    "runs": 2,
+    "on_target": 42,
+    "reaction_ms": 84,
+    "overshoot_pct": 34,
+    "pps_by_distance": {
+     "mid": 2.8
     }
    },
    {
