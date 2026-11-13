@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-13 17:02",
- "updated_utc": "2026-11-13T10:02:40Z",
+ "updated": "2026-11-13 17:07",
+ "updated_utc": "2026-11-13T10:07:31Z",
  "today": {
   "date": "2026-11-13",
   "progress": {}
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 574.0,
    "median_14d": 484,
-   "runs_14d": 143,
+   "runs_14d": 144,
    "steps": [
     0.0,
     198.0,
@@ -785,9 +785,9 @@
     },
     {
      "date": "2026-11-13",
-     "median": 489,
+     "median": 492,
      "best": 546,
-     "runs": 19
+     "runs": 20
     }
    ]
   }
@@ -2277,9 +2277,9 @@
  "days": [
   {
    "date": "2026-11-13",
-   "runs": 25,
-   "restarts": 39,
-   "rest_median_s": 51,
+   "runs": 27,
+   "restarts": 41,
+   "rest_median_s": 46,
    "rest_longest_s": 888,
    "breaks": [
     {
@@ -2304,9 +2304,9 @@
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 19,
+     "runs": 21,
      "first": "08:47",
-     "last": "17:02"
+     "last": "17:06"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
@@ -2318,11 +2318,11 @@
    "scenarios": [
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 19,
+     "runs": 20,
      "routine": "(single scenario)",
      "first": "08:47",
      "best": 546,
-     "median": 489
+     "median": 492
     },
     {
      "name": "FAR STRAFER - L",
@@ -2337,6 +2337,14 @@
      "first": "08:57",
      "best": 494,
      "median": 422
+    },
+    {
+     "name": "WHISPHERE SMALL & SLOW 55% (PORT)",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "17:06",
+     "best": 1224,
+     "median": 1224
     }
    ]
   },
@@ -7432,7 +7440,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1540,
+  "runs": 1542,
   "days": 37,
   "groups": [
    {
@@ -7447,7 +7455,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 568,
+    "runs": 570,
     "pct": 101.3
    },
    {
@@ -11056,14 +11064,25 @@
     }
    },
    {
+    "scenario": "WHISPHERE SMALL  SLOW 55 PORT",
+    "runs": 2,
+    "on_target": 58,
+    "reaction_ms": 33,
+    "overshoot_pct": 6,
+    "pps_by_distance": {
+     "far": 54.6,
+     "mid": 45.6
+    }
+   },
+   {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 25,
+    "runs": 26,
     "on_target": 34,
-    "reaction_ms": 150,
+    "reaction_ms": 146,
     "overshoot_pct": 37,
     "pps_by_distance": {
      "far": 7.8,
-     "mid": 8.9,
+     "mid": 8.8,
      "close": 8.0
     }
    }
