@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-13 16:37",
- "updated_utc": "2026-11-13T09:37:33Z",
+ "updated": "2026-11-13 16:42",
+ "updated_utc": "2026-11-13T09:42:40Z",
  "today": {
   "date": "2026-11-13",
   "progress": {}
@@ -152,8 +152,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 574.0,
-   "median_14d": 483,
-   "runs_14d": 137,
+   "median_14d": 484,
+   "runs_14d": 139,
    "steps": [
     0.0,
     198.0,
@@ -785,9 +785,9 @@
     },
     {
      "date": "2026-11-13",
-     "median": 489,
+     "median": 495,
      "best": 546,
-     "runs": 13
+     "runs": 15
     }
    ]
   }
@@ -2277,9 +2277,9 @@
  "days": [
   {
    "date": "2026-11-13",
-   "runs": 19,
-   "restarts": 35,
-   "rest_median_s": 40,
+   "runs": 21,
+   "restarts": 39,
+   "rest_median_s": 48,
    "rest_longest_s": 104,
    "breaks": [
     {
@@ -2304,9 +2304,9 @@
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 13,
+     "runs": 15,
      "first": "08:47",
-     "last": "16:37"
+     "last": "16:40"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
@@ -2318,11 +2318,11 @@
    "scenarios": [
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 13,
+     "runs": 15,
      "routine": "(single scenario)",
      "first": "08:47",
      "best": 546,
-     "median": 489
+     "median": 495
     },
     {
      "name": "FAR STRAFER - L",
@@ -7432,7 +7432,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1534,
+  "runs": 1537,
   "days": 37,
   "groups": [
    {
@@ -7447,7 +7447,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 563,
+    "runs": 566,
     "pct": 101.3
    },
    {
@@ -11057,14 +11057,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 19,
-    "on_target": 34,
+    "runs": 21,
+    "on_target": 35,
     "reaction_ms": 150,
     "overshoot_pct": 37,
     "pps_by_distance": {
-     "far": 7.7,
+     "far": 7.8,
      "mid": 9.0,
-     "close": 7.9
+     "close": 8.0
     }
    }
   ]
