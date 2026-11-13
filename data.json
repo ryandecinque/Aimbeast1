@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-13 09:07",
- "updated_utc": "2026-11-13T02:07:37Z",
+ "updated": "2026-11-13 09:12",
+ "updated_utc": "2026-11-13T02:12:30Z",
  "today": {
   "date": "2026-11-13",
   "progress": {}
@@ -152,8 +152,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 574.0,
-   "median_14d": 482,
-   "runs_14d": 128,
+   "median_14d": 483,
+   "runs_14d": 129,
    "steps": [
     0.0,
     198.0,
@@ -785,9 +785,9 @@
     },
     {
      "date": "2026-11-13",
-     "median": 478,
+     "median": 489,
      "best": 516,
-     "runs": 4
+     "runs": 5
     }
    ]
   }
@@ -2277,9 +2277,9 @@
  "days": [
   {
    "date": "2026-11-13",
-   "runs": 10,
-   "restarts": 11,
-   "rest_median_s": 56,
+   "runs": 11,
+   "restarts": 20,
+   "rest_median_s": 70,
    "rest_longest_s": 104,
    "breaks": [
     {
@@ -2287,14 +2287,20 @@
      "before": "BAZHAN MEDIUM TRACKING",
      "at": "08:54",
      "minutes": 0.2
+    },
+    {
+     "after": "BAZHAN MEDIUM TRACKING",
+     "before": "(single scenario)",
+     "at": "09:06",
+     "minutes": 1.8
     }
    ],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 4,
+     "runs": 5,
      "first": "08:47",
-     "last": "08:54"
+     "last": "09:09"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
@@ -2306,11 +2312,11 @@
    "scenarios": [
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 4,
+     "runs": 5,
      "routine": "(single scenario)",
      "first": "08:47",
      "best": 516,
-     "median": 478
+     "median": 489
     },
     {
      "name": "FAR STRAFER - L",
@@ -7420,12 +7426,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1526,
+  "runs": 1527,
   "days": 37,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 601,
+    "runs": 602,
     "pct": 100.0
    },
    {
@@ -11045,13 +11051,13 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 5,
-    "on_target": 33,
+    "runs": 9,
+    "on_target": 35,
     "reaction_ms": 150,
-    "overshoot_pct": 37,
+    "overshoot_pct": 35,
     "pps_by_distance": {
      "far": 7.8,
-     "mid": 9.5,
+     "mid": 9.1,
      "close": 7.5
     }
    }
