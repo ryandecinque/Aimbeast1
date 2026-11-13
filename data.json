@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-13 16:32",
- "updated_utc": "2026-11-13T09:32:34Z",
+ "updated": "2026-11-13 16:37",
+ "updated_utc": "2026-11-13T09:37:33Z",
  "today": {
   "date": "2026-11-13",
   "progress": {}
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 574.0,
    "median_14d": 483,
-   "runs_14d": 134,
+   "runs_14d": 137,
    "steps": [
     0.0,
     198.0,
@@ -785,9 +785,9 @@
     },
     {
      "date": "2026-11-13",
-     "median": 486,
-     "best": 525,
-     "runs": 10
+     "median": 489,
+     "best": 546,
+     "runs": 13
     }
    ]
   }
@@ -2277,9 +2277,9 @@
  "days": [
   {
    "date": "2026-11-13",
-   "runs": 16,
-   "restarts": 32,
-   "rest_median_s": 41,
+   "runs": 19,
+   "restarts": 35,
+   "rest_median_s": 40,
    "rest_longest_s": 104,
    "breaks": [
     {
@@ -2304,9 +2304,9 @@
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 10,
+     "runs": 13,
      "first": "08:47",
-     "last": "16:30"
+     "last": "16:37"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
@@ -2318,11 +2318,11 @@
    "scenarios": [
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 10,
+     "runs": 13,
      "routine": "(single scenario)",
      "first": "08:47",
-     "best": 525,
-     "median": 486
+     "best": 546,
+     "median": 489
     },
     {
      "name": "FAR STRAFER - L",
@@ -7432,7 +7432,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1532,
+  "runs": 1534,
   "days": 37,
   "groups": [
    {
@@ -7447,7 +7447,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 561,
+    "runs": 563,
     "pct": 101.3
    },
    {
@@ -11057,14 +11057,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 16,
+    "runs": 19,
     "on_target": 34,
     "reaction_ms": 150,
     "overshoot_pct": 37,
     "pps_by_distance": {
-     "far": 7.8,
-     "mid": 8.9,
-     "close": 7.8
+     "far": 7.7,
+     "mid": 9.0,
+     "close": 7.9
     }
    }
   ]
@@ -12185,16 +12185,16 @@
   "2026-11-13": [
    {
     "scenario": "Zeus Track Evo - Noblink",
-    "score": 525,
-    "time": "09:13",
+    "score": 546,
+    "time": "16:33",
     "gif": "best-zeus-2026-11-13",
     "video": true,
-    "on_target": 38,
-    "reaction_ms": 150,
-    "overshoot_pct": 40,
+    "on_target": 40,
+    "reaction_ms": 133,
+    "overshoot_pct": 37,
     "best_14d": 574,
     "master3": 726,
-    "note": "Best of 11 recorded today (median 464). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 19 recorded today (median 458). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available: model videos are for tracking runs only."
     }
