@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-13 17:07",
- "updated_utc": "2026-11-13T10:07:31Z",
+ "updated": "2026-11-16 08:58",
+ "updated_utc": "2026-11-16T01:58:22Z",
  "today": {
-  "date": "2026-11-13",
+  "date": "2026-11-16",
   "progress": {}
  },
  "plan_start": "2026-10-07",
@@ -151,9 +151,9 @@
    "name": "ZEUS TRACK EVO - NOBLINK",
    "master3": 726.0,
    "official_best": 591.0,
-   "best_14d": 574.0,
-   "median_14d": 484,
-   "runs_14d": 144,
+   "best_14d": 547.0,
+   "median_14d": 480,
+   "runs_14d": 116,
    "steps": [
     0.0,
     198.0,
@@ -788,6 +788,12 @@
      "median": 492,
      "best": 546,
      "runs": 20
+    },
+    {
+     "date": "2026-11-16",
+     "median": 458,
+     "best": 501,
+     "runs": 2
     }
    ]
   }
@@ -2276,8 +2282,34 @@
  ],
  "days": [
   {
+   "date": "2026-11-16",
+   "runs": 2,
+   "restarts": 6,
+   "rest_median_s": 72,
+   "rest_longest_s": 79,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "(single scenario)",
+     "runs": 2,
+     "first": "08:53",
+     "last": "08:55"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "ZEUS TRACK EVO - NOBLINK",
+     "runs": 2,
+     "routine": "(single scenario)",
+     "first": "08:53",
+     "best": 501,
+     "median": 458
+    }
+   ]
+  },
+  {
    "date": "2026-11-13",
-   "runs": 27,
+   "runs": 28,
    "restarts": 41,
    "rest_median_s": 46,
    "rest_longest_s": 888,
@@ -2304,9 +2336,9 @@
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 21,
+     "runs": 22,
      "first": "08:47",
-     "last": "17:06"
+     "last": "17:08"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
@@ -2345,6 +2377,14 @@
      "first": "17:06",
      "best": 1224,
      "median": 1224
+    },
+    {
+     "name": "PGTI VOLTAIC EASY 80% (PORT)",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "17:08",
+     "best": 1289,
+     "median": 1289
     }
    ]
   },
@@ -7440,12 +7480,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1542,
-  "days": 37,
+  "runs": 1546,
+  "days": 38,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 602,
+    "runs": 605,
     "pct": 100.0
    },
    {
@@ -7455,7 +7495,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 570,
+    "runs": 571,
     "pct": 101.3
    },
    {
@@ -11064,6 +11104,18 @@
     }
    },
    {
+    "scenario": "PGTI VOLTAIC EASY 80 PORT",
+    "runs": 1,
+    "on_target": 26,
+    "reaction_ms": null,
+    "overshoot_pct": 6,
+    "pps_by_distance": {
+     "far": 30.1,
+     "mid": 10.6,
+     "close": 17.8
+    }
+   },
+   {
     "scenario": "WHISPHERE SMALL  SLOW 55 PORT",
     "runs": 2,
     "on_target": 58,
@@ -11083,6 +11135,20 @@
     "pps_by_distance": {
      "far": 7.8,
      "mid": 8.8,
+     "close": 8.0
+    }
+   }
+  ],
+  "2026-11-16": [
+   {
+    "scenario": "ZEUS TRACK EVO - NOBLINK",
+    "runs": 3,
+    "on_target": 29,
+    "reaction_ms": 134,
+    "overshoot_pct": 44,
+    "pps_by_distance": {
+     "far": 5.8,
+     "mid": 7.0,
      "close": 8.0
     }
    }
@@ -12214,6 +12280,24 @@
     "best_14d": 574,
     "master3": 726,
     "note": "Best of 19 recorded today (median 458). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available: model videos are for tracking runs only."
+    }
+   }
+  ],
+  "2026-11-16": [
+   {
+    "scenario": "Zeus Track Evo - Noblink",
+    "score": 501,
+    "time": "08:54",
+    "gif": "best-zeus-2026-11-16",
+    "video": true,
+    "on_target": 36,
+    "reaction_ms": 151,
+    "overshoot_pct": 28,
+    "best_14d": 547,
+    "master3": 726,
+    "note": "Best of 3 recorded today (median 415). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available: model videos are for tracking runs only."
     }
