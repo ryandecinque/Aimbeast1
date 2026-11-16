@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-16 13:37",
- "updated_utc": "2026-11-16T06:37:57Z",
+ "updated": "2026-11-16 16:13",
+ "updated_utc": "2026-11-16T09:13:32Z",
  "today": {
   "date": "2026-11-16",
   "progress": {}
@@ -152,8 +152,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 547.0,
-   "median_14d": 480,
-   "runs_14d": 134,
+   "median_14d": 479,
+   "runs_14d": 135,
    "steps": [
     0.0,
     198.0,
@@ -791,9 +791,9 @@
     },
     {
      "date": "2026-11-16",
-     "median": 484,
+     "median": 474,
      "best": 530,
-     "runs": 20
+     "runs": 21
     }
    ]
   }
@@ -2283,7 +2283,7 @@
  "days": [
   {
    "date": "2026-11-16",
-   "runs": 20,
+   "runs": 21,
    "restarts": 52,
    "rest_median_s": 72,
    "rest_longest_s": 540,
@@ -2293,24 +2293,30 @@
      "before": "(single scenario)",
      "at": "09:52",
      "minutes": 170.6
+    },
+    {
+     "after": "(single scenario)",
+     "before": "(single scenario)",
+     "at": "13:31",
+     "minutes": 158.0
     }
    ],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 20,
+     "runs": 21,
      "first": "08:53",
-     "last": "13:31"
+     "last": "16:10"
     }
    ],
    "scenarios": [
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 20,
+     "runs": 21,
      "routine": "(single scenario)",
      "first": "08:53",
      "best": 530,
-     "median": 484
+     "median": 474
     }
    ]
   },
@@ -7487,7 +7493,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1564,
+  "runs": 1565,
   "days": 38,
   "groups": [
    {
@@ -7507,8 +7513,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 96,
-    "pct": 96.8
+    "runs": 97,
+    "pct": 97.1
    }
   ]
  },
@@ -11149,13 +11155,13 @@
   "2026-11-16": [
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 26,
+    "runs": 27,
     "on_target": 34,
     "reaction_ms": 150,
     "overshoot_pct": 36,
     "pps_by_distance": {
      "far": 7.4,
-     "mid": 8.3,
+     "mid": 8.5,
      "close": 8.0
     }
    }
