@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-17 16:07",
- "updated_utc": "2026-11-17T09:07:28Z",
+ "updated": "2026-11-17 16:12",
+ "updated_utc": "2026-11-17T09:12:28Z",
  "today": {
   "date": "2026-11-17",
   "progress": {}
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 547.0,
    "median_14d": 478,
-   "runs_14d": 194,
+   "runs_14d": 195,
    "steps": [
     0.0,
     198.0,
@@ -797,9 +797,9 @@
     },
     {
      "date": "2026-11-17",
-     "median": 466,
-     "best": 518,
-     "runs": 26
+     "median": 467,
+     "best": 519,
+     "runs": 27
     }
    ]
   }
@@ -2289,8 +2289,8 @@
  "days": [
   {
    "date": "2026-11-17",
-   "runs": 41,
-   "restarts": 21,
+   "runs": 43,
+   "restarts": 25,
    "rest_median_s": 19,
    "rest_longest_s": 192,
    "breaks": [
@@ -2335,30 +2335,36 @@
      "before": "BAZHAN MEDIUM TRACKING",
      "at": "16:04",
      "minutes": 0.2
+    },
+    {
+     "after": "BAZHAN MEDIUM TRACKING",
+     "before": "(single scenario)",
+     "at": "16:08",
+     "minutes": 0.3
     }
    ],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 26,
+     "runs": 27,
      "first": "03:37",
-     "last": "16:04"
+     "last": "16:09"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 15,
+     "runs": 16,
      "first": "10:53",
-     "last": "16:07"
+     "last": "16:08"
     }
    ],
    "scenarios": [
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 26,
+     "runs": 27,
      "routine": "(single scenario)",
      "first": "03:37",
-     "best": 518,
-     "median": 466
+     "best": 519,
+     "median": 467
     },
     {
      "name": "NEEDLETRACK MS",
@@ -2442,11 +2448,11 @@
     },
     {
      "name": "AIR KVAKA",
-     "runs": 1,
+     "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "16:07",
-     "best": 779,
-     "median": 779
+     "best": 893,
+     "median": 836
     }
    ]
   },
@@ -7668,17 +7674,17 @@
   }
  ],
  "rest_effect": {
-  "runs": 1638,
+  "runs": 1641,
   "days": 39,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 618,
+    "runs": 620,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 125,
+    "runs": 126,
     "pct": 99.8
    },
    {
@@ -11344,12 +11350,12 @@
   "2026-11-17": [
    {
     "scenario": "AIR KVAKA",
-    "runs": 1,
-    "on_target": 30,
+    "runs": 2,
+    "on_target": 33,
     "reaction_ms": 150,
-    "overshoot_pct": 31,
+    "overshoot_pct": 28,
     "pps_by_distance": {
-     "close": 13.0
+     "close": 14.0
     }
    },
    {
@@ -11454,12 +11460,12 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 26,
+    "runs": 28,
     "on_target": 33,
     "reaction_ms": 150,
     "overshoot_pct": 40,
     "pps_by_distance": {
-     "far": 7.2,
+     "far": 7.3,
      "mid": 8.4,
      "close": 7.7
     }
@@ -12618,16 +12624,16 @@
   "2026-11-17": [
    {
     "scenario": "Zeus Track Evo - Noblink",
-    "score": 518,
-    "time": "03:49",
+    "score": 519,
+    "time": "16:08",
     "gif": "best-zeus-2026-11-17",
     "video": true,
     "on_target": 37,
-    "reaction_ms": 150,
-    "overshoot_pct": 43,
+    "reaction_ms": 133,
+    "overshoot_pct": 39,
     "best_14d": 547,
     "master3": 726,
-    "note": "Best of 10 recorded today (median 478). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 28 recorded today (median 466). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available: model videos are for tracking runs only."
     }
