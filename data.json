@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-17 10:57",
- "updated_utc": "2026-11-17T03:57:56Z",
+ "updated": "2026-11-17 11:02",
+ "updated_utc": "2026-11-17T04:02:49Z",
  "today": {
   "date": "2026-11-17",
   "progress": {}
@@ -2289,7 +2289,7 @@
  "days": [
   {
    "date": "2026-11-17",
-   "runs": 25,
+   "runs": 28,
    "restarts": 15,
    "rest_median_s": 20,
    "rest_longest_s": 50,
@@ -2310,9 +2310,9 @@
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 4,
+     "runs": 7,
      "first": "10:53",
-     "last": "10:57"
+     "last": "11:01"
     }
    ],
    "scenarios": [
@@ -2347,6 +2347,22 @@
      "first": "10:57",
      "best": 594,
      "median": 594
+    },
+    {
+     "name": "CONTROLSPHERE MODERN - S",
+     "runs": 2,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "10:58",
+     "best": 788,
+     "median": 716
+    },
+    {
+     "name": "GAME BALL",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "11:01",
+     "best": 742,
+     "median": 742
     }
    ]
   },
@@ -7568,12 +7584,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1622,
+  "runs": 1626,
   "days": 39,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 607,
+    "runs": 610,
     "pct": 100.0
    },
    {
@@ -7583,7 +7599,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 615,
+    "runs": 616,
     "pct": 101.3
    },
    {
@@ -11242,6 +11258,26 @@
    }
   ],
   "2026-11-17": [
+   {
+    "scenario": "CONTROLSPHERE MODERN - S",
+    "runs": 2,
+    "on_target": 29,
+    "reaction_ms": null,
+    "overshoot_pct": 29,
+    "pps_by_distance": {
+     "close": 12.0
+    }
+   },
+   {
+    "scenario": "GAME BALL",
+    "runs": 1,
+    "on_target": 26,
+    "reaction_ms": 275,
+    "overshoot_pct": 20,
+    "pps_by_distance": {
+     "mid": 8.3
+    }
+   },
    {
     "scenario": "LINETRACK I",
     "runs": 1,
