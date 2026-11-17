@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-17 11:02",
- "updated_utc": "2026-11-17T04:02:49Z",
+ "updated": "2026-11-17 15:52",
+ "updated_utc": "2026-11-17T08:52:53Z",
  "today": {
   "date": "2026-11-17",
   "progress": {}
@@ -152,8 +152,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 547.0,
-   "median_14d": 479,
-   "runs_14d": 189,
+   "median_14d": 478,
+   "runs_14d": 191,
    "steps": [
     0.0,
     198.0,
@@ -799,7 +799,7 @@
      "date": "2026-11-17",
      "median": 467,
      "best": 518,
-     "runs": 21
+     "runs": 23
     }
    ]
   }
@@ -2289,24 +2289,30 @@
  "days": [
   {
    "date": "2026-11-17",
-   "runs": 28,
-   "restarts": 15,
+   "runs": 30,
+   "restarts": 17,
    "rest_median_s": 20,
-   "rest_longest_s": 50,
+   "rest_longest_s": 192,
    "breaks": [
     {
      "after": "(single scenario)",
      "before": "BAZHAN MEDIUM TRACKING",
      "at": "04:07",
      "minutes": 405.0
+    },
+    {
+     "after": "BAZHAN MEDIUM TRACKING",
+     "before": "(single scenario)",
+     "at": "11:01",
+     "minutes": 285.1
     }
    ],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 21,
+     "runs": 23,
      "first": "03:37",
-     "last": "04:07"
+     "last": "15:51"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
@@ -2318,7 +2324,7 @@
    "scenarios": [
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 21,
+     "runs": 23,
      "routine": "(single scenario)",
      "first": "03:37",
      "best": 518,
@@ -7584,12 +7590,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1626,
+  "runs": 1627,
   "days": 39,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 610,
+    "runs": 611,
     "pct": 100.0
    },
    {
@@ -7604,8 +7610,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 99,
-    "pct": 97.5
+    "runs": 100,
+    "pct": 97.3
    }
   ]
  },
@@ -11310,7 +11316,7 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 21,
+    "runs": 23,
     "on_target": 33,
     "reaction_ms": 150,
     "overshoot_pct": 40,
