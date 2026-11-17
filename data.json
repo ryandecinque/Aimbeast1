@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-17 15:52",
- "updated_utc": "2026-11-17T08:52:53Z",
+ "updated": "2026-11-17 15:57",
+ "updated_utc": "2026-11-17T08:57:35Z",
  "today": {
   "date": "2026-11-17",
   "progress": {}
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 547.0,
    "median_14d": 478,
-   "runs_14d": 191,
+   "runs_14d": 192,
    "steps": [
     0.0,
     198.0,
@@ -797,9 +797,9 @@
     },
     {
      "date": "2026-11-17",
-     "median": 467,
+     "median": 466,
      "best": 518,
-     "runs": 23
+     "runs": 24
     }
    ]
   }
@@ -2289,8 +2289,8 @@
  "days": [
   {
    "date": "2026-11-17",
-   "runs": 30,
-   "restarts": 17,
+   "runs": 33,
+   "restarts": 20,
    "rest_median_s": 20,
    "rest_longest_s": 192,
    "breaks": [
@@ -2305,30 +2305,36 @@
      "before": "(single scenario)",
      "at": "11:01",
      "minutes": 285.1
+    },
+    {
+     "after": "(single scenario)",
+     "before": "BAZHAN MEDIUM TRACKING",
+     "at": "15:54",
+     "minutes": 0.3
     }
    ],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 23,
+     "runs": 24,
      "first": "03:37",
-     "last": "15:51"
+     "last": "15:54"
     },
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 7,
+     "runs": 9,
      "first": "10:53",
-     "last": "11:01"
+     "last": "15:57"
     }
    ],
    "scenarios": [
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 23,
+     "runs": 24,
      "routine": "(single scenario)",
      "first": "03:37",
      "best": 518,
-     "median": 467
+     "median": 466
     },
     {
      "name": "NEEDLETRACK MS",
@@ -2369,6 +2375,22 @@
      "first": "11:01",
      "best": 742,
      "median": 742
+    },
+    {
+     "name": "RSPHERE - 0.8X",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "15:55",
+     "best": 1547,
+     "median": 1547
+    },
+    {
+     "name": "LHC V1 40% SMALLER - 0.5X",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "15:57",
+     "best": 241,
+     "median": 241
     }
    ]
   },
@@ -7590,12 +7612,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1627,
+  "runs": 1630,
   "days": 39,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 611,
+    "runs": 612,
     "pct": 100.0
    },
    {
@@ -7605,7 +7627,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 616,
+    "runs": 617,
     "pct": 101.3
    },
    {
@@ -11285,6 +11307,16 @@
     }
    },
    {
+    "scenario": "LHC V1 40 SMALLER - 0.5X",
+    "runs": 1,
+    "on_target": 25,
+    "reaction_ms": 167,
+    "overshoot_pct": 13,
+    "pps_by_distance": {
+     "mid": 4.1
+    }
+   },
+   {
     "scenario": "LINETRACK I",
     "runs": 1,
     "on_target": 29,
@@ -11305,6 +11337,16 @@
     }
    },
    {
+    "scenario": "RSPHERE - 0.8X",
+    "runs": 1,
+    "on_target": 32,
+    "reaction_ms": null,
+    "overshoot_pct": 15,
+    "pps_by_distance": {
+     "far": 13.0
+    }
+   },
+   {
     "scenario": "SYW - S",
     "runs": 1,
     "on_target": 48,
@@ -11316,12 +11358,12 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 23,
+    "runs": 24,
     "on_target": 33,
     "reaction_ms": 150,
     "overshoot_pct": 40,
     "pps_by_distance": {
-     "far": 7.3,
+     "far": 7.2,
      "mid": 8.3,
      "close": 7.6
     }
