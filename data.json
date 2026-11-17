@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-17 04:07",
- "updated_utc": "2026-11-16T21:07:30Z",
+ "updated": "2026-11-17 10:57",
+ "updated_utc": "2026-11-17T03:57:56Z",
  "today": {
   "date": "2026-11-17",
   "progress": {}
@@ -2289,17 +2289,30 @@
  "days": [
   {
    "date": "2026-11-17",
-   "runs": 21,
+   "runs": 25,
    "restarts": 15,
    "rest_median_s": 20,
    "rest_longest_s": 50,
-   "breaks": [],
+   "breaks": [
+    {
+     "after": "(single scenario)",
+     "before": "BAZHAN MEDIUM TRACKING",
+     "at": "04:07",
+     "minutes": 405.0
+    }
+   ],
    "playlists": [
     {
      "name": "(single scenario)",
      "runs": 21,
      "first": "03:37",
      "last": "04:07"
+    },
+    {
+     "name": "BAZHAN MEDIUM TRACKING",
+     "runs": 4,
+     "first": "10:53",
+     "last": "10:57"
     }
    ],
    "scenarios": [
@@ -2310,6 +2323,30 @@
      "first": "03:37",
      "best": 518,
      "median": 467
+    },
+    {
+     "name": "NEEDLETRACK MS",
+     "runs": 2,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "10:53",
+     "best": 394,
+     "median": 350
+    },
+    {
+     "name": "SYW - S",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "10:55",
+     "best": 319,
+     "median": 319
+    },
+    {
+     "name": "LINETRACK I",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "10:57",
+     "best": 594,
+     "median": 594
     }
    ]
   },
@@ -7531,28 +7568,28 @@
   }
  ],
  "rest_effect": {
-  "runs": 1618,
+  "runs": 1622,
   "days": 39,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 605,
+    "runs": 607,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 122,
+    "runs": 123,
     "pct": 99.5
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 614,
+    "runs": 615,
     "pct": 101.3
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 98,
-    "pct": 97.3
+    "runs": 99,
+    "pct": 97.5
    }
   ]
  },
@@ -11205,6 +11242,36 @@
    }
   ],
   "2026-11-17": [
+   {
+    "scenario": "LINETRACK I",
+    "runs": 1,
+    "on_target": 29,
+    "reaction_ms": null,
+    "overshoot_pct": 11,
+    "pps_by_distance": {
+     "far": 10.7
+    }
+   },
+   {
+    "scenario": "NEEDLETRACK MS",
+    "runs": 2,
+    "on_target": 39,
+    "reaction_ms": null,
+    "overshoot_pct": 34,
+    "pps_by_distance": {
+     "mid": 5.8
+    }
+   },
+   {
+    "scenario": "SYW - S",
+    "runs": 1,
+    "on_target": 48,
+    "reaction_ms": 75,
+    "overshoot_pct": 25,
+    "pps_by_distance": {
+     "mid": 5.3
+    }
+   },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
     "runs": 21,
