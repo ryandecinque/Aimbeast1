@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18 09:47",
- "updated_utc": "2026-11-18T02:47:27Z",
+ "updated": "2026-11-18 09:52",
+ "updated_utc": "2026-11-18T02:52:28Z",
  "today": {
   "date": "2026-11-18",
   "progress": {}
@@ -2289,9 +2289,9 @@
  "days": [
   {
    "date": "2026-11-18",
-   "runs": 12,
-   "restarts": 7,
-   "rest_median_s": 67,
+   "runs": 15,
+   "restarts": 8,
+   "rest_median_s": 66,
    "rest_longest_s": 399,
    "breaks": [
     {
@@ -2304,9 +2304,9 @@
    "playlists": [
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 12,
+     "runs": 15,
      "first": "08:48",
-     "last": "09:46"
+     "last": "09:50"
     }
    ],
    "scenarios": [
@@ -2357,6 +2357,30 @@
      "first": "09:46",
      "best": 212,
      "median": 212
+    },
+    {
+     "name": "FLAT ARENA POSS - THIN",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:47",
+     "best": 226,
+     "median": 226
+    },
+    {
+     "name": "SMOOTHLY JUMPING BOT",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:48",
+     "best": 428,
+     "median": 428
+    },
+    {
+     "name": "TORNADO COW (MICRO)",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:50",
+     "best": 398,
+     "median": 398
     }
    ]
   },
@@ -7767,12 +7791,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1657,
+  "runs": 1660,
   "days": 40,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 628,
+    "runs": 631,
     "pct": 100.0
    },
    {
@@ -11586,6 +11610,16 @@
     }
    },
    {
+    "scenario": "FLAT ARENA POSS - THIN",
+    "runs": 1,
+    "on_target": 22,
+    "reaction_ms": 150,
+    "overshoot_pct": 75,
+    "pps_by_distance": {
+     "close": 3.8
+    }
+   },
+   {
     "scenario": "LHC MICRO - 0.75x",
     "runs": 1,
     "on_target": 25,
@@ -11625,6 +11659,29 @@
     "overshoot_pct": 38,
     "pps_by_distance": {
      "mid": 12.8
+    }
+   },
+   {
+    "scenario": "SMOOTHLY JUMPING BOT",
+    "runs": 1,
+    "on_target": 37,
+    "reaction_ms": 0,
+    "overshoot_pct": 22,
+    "pps_by_distance": {
+     "far": 8.5,
+     "mid": 7.1,
+     "close": 5.5
+    }
+   },
+   {
+    "scenario": "TORNADO COW MICRO",
+    "runs": 1,
+    "on_target": 31,
+    "reaction_ms": null,
+    "overshoot_pct": 18,
+    "pps_by_distance": {
+     "mid": 6.7,
+     "close": 5.9
     }
    },
    {
