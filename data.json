@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-17 16:22",
- "updated_utc": "2026-11-17T09:22:55Z",
+ "updated": "2026-11-18 08:52",
+ "updated_utc": "2026-11-18T01:52:39Z",
  "today": {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "progress": {}
  },
  "plan_start": "2026-10-07",
@@ -2287,6 +2287,32 @@
   }
  ],
  "days": [
+  {
+   "date": "2026-11-18",
+   "runs": 1,
+   "restarts": 1,
+   "rest_median_s": null,
+   "rest_longest_s": null,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "BAZHAN MEDIUM TRACKING",
+     "runs": 1,
+     "first": "08:48",
+     "last": "08:48"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "SHORT STRAFES (LMP) - S",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "08:48",
+     "best": 348,
+     "median": 348
+    }
+   ]
+  },
   {
    "date": "2026-11-17",
    "runs": 47,
@@ -7694,12 +7720,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1644,
-  "days": 39,
+  "runs": 1646,
+  "days": 40,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 622,
+    "runs": 623,
     "pct": 100.0
    },
    {
@@ -7709,7 +7735,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 618,
+    "runs": 619,
     "pct": 101.3
    },
    {
@@ -11498,6 +11524,18 @@
      "far": 7.3,
      "mid": 8.5,
      "close": 7.8
+    }
+   }
+  ],
+  "2026-11-18": [
+   {
+    "scenario": "SHORT STRAFES LMP - S",
+    "runs": 1,
+    "on_target": 11,
+    "reaction_ms": 167,
+    "overshoot_pct": 46,
+    "pps_by_distance": {
+     "mid": 5.8
     }
    }
   ]
