@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18 09:37",
- "updated_utc": "2026-11-18T02:37:26Z",
+ "updated": "2026-11-18 09:42",
+ "updated_utc": "2026-11-18T02:42:23Z",
  "today": {
   "date": "2026-11-18",
   "progress": {}
@@ -2289,9 +2289,9 @@
  "days": [
   {
    "date": "2026-11-18",
-   "runs": 7,
-   "restarts": 4,
-   "rest_median_s": 331,
+   "runs": 9,
+   "restarts": 5,
+   "rest_median_s": 134,
    "rest_longest_s": 399,
    "breaks": [
     {
@@ -2304,9 +2304,9 @@
    "playlists": [
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 7,
+     "runs": 9,
      "first": "08:48",
-     "last": "09:35"
+     "last": "09:41"
     }
    ],
    "scenarios": [
@@ -2328,11 +2328,19 @@
     },
     {
      "name": "SLIPPERY STRAFE",
-     "runs": 4,
+     "runs": 5,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "09:05",
      "best": 798,
-     "median": 763
+     "median": 762
+    },
+    {
+     "name": "WARCHTRACK",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:41",
+     "best": 754,
+     "median": 754
     }
    ]
   },
@@ -7743,7 +7751,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1652,
+  "runs": 1653,
   "days": 40,
   "groups": [
    {
@@ -7764,7 +7772,7 @@
    {
     "label": "First run after a break of 15 min+",
     "runs": 101,
-    "pct": 97.1
+    "pct": 97.5
    }
   ]
  },
@@ -11575,12 +11583,22 @@
    },
    {
     "scenario": "SLIPPERY STRAFE",
-    "runs": 4,
+    "runs": 5,
     "on_target": 36,
     "reaction_ms": 133,
-    "overshoot_pct": 37,
+    "overshoot_pct": 38,
     "pps_by_distance": {
      "mid": 12.8
+    }
+   },
+   {
+    "scenario": "WARCHTRACK",
+    "runs": 1,
+    "on_target": 33,
+    "reaction_ms": 200,
+    "overshoot_pct": 11,
+    "pps_by_distance": {
+     "far": 12.8
     }
    }
   ]
