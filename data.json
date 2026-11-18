@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18 09:52",
- "updated_utc": "2026-11-18T02:52:28Z",
+ "updated": "2026-11-18 09:57",
+ "updated_utc": "2026-11-18T02:57:27Z",
  "today": {
   "date": "2026-11-18",
   "progress": {}
@@ -2289,9 +2289,9 @@
  "days": [
   {
    "date": "2026-11-18",
-   "runs": 15,
-   "restarts": 8,
-   "rest_median_s": 66,
+   "runs": 19,
+   "restarts": 10,
+   "rest_median_s": 26,
    "rest_longest_s": 399,
    "breaks": [
     {
@@ -2304,9 +2304,9 @@
    "playlists": [
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 15,
+     "runs": 19,
      "first": "08:48",
-     "last": "09:50"
+     "last": "09:56"
     }
    ],
    "scenarios": [
@@ -2381,6 +2381,30 @@
      "first": "09:50",
      "best": 398,
      "median": 398
+    },
+    {
+     "name": "SHORT STRAFES (LMP)",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:52",
+     "best": 414,
+     "median": 414
+    },
+    {
+     "name": "ARCHTRACK",
+     "runs": 2,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:53",
+     "best": 4260,
+     "median": 4220
+    },
+    {
+     "name": "HECTIC BALL BEGINNER - FORK",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:56",
+     "best": 816,
+     "median": 816
     }
    ]
   },
@@ -7791,17 +7815,17 @@
   }
  ],
  "rest_effect": {
-  "runs": 1660,
+  "runs": 1663,
   "days": 40,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 631,
+    "runs": 633,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 127,
+    "runs": 128,
     "pct": 99.9
    },
    {
@@ -11600,6 +11624,17 @@
   ],
   "2026-11-18": [
    {
+    "scenario": "ARCHTRACK",
+    "runs": 2,
+    "on_target": 32,
+    "reaction_ms": 192,
+    "overshoot_pct": 6,
+    "pps_by_distance": {
+     "far": 8.2,
+     "mid": 6.7
+    }
+   },
+   {
     "scenario": "CLOUDY TRACK I",
     "runs": 1,
     "on_target": 35,
@@ -11617,6 +11652,16 @@
     "overshoot_pct": 75,
     "pps_by_distance": {
      "close": 3.8
+    }
+   },
+   {
+    "scenario": "HECTIC BALL BEGINNER - FORK",
+    "runs": 1,
+    "on_target": 35,
+    "reaction_ms": 167,
+    "overshoot_pct": 15,
+    "pps_by_distance": {
+     "far": 13.7
     }
    },
    {
@@ -11639,6 +11684,16 @@
      "far": 13.3,
      "mid": 15.0,
      "close": 19.8
+    }
+   },
+   {
+    "scenario": "SHORT STRAFES LMP",
+    "runs": 1,
+    "on_target": 25,
+    "reaction_ms": 158,
+    "overshoot_pct": 53,
+    "pps_by_distance": {
+     "mid": 6.9
     }
    },
    {
