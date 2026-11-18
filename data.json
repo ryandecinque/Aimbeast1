@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18 09:42",
- "updated_utc": "2026-11-18T02:42:23Z",
+ "updated": "2026-11-18 09:47",
+ "updated_utc": "2026-11-18T02:47:27Z",
  "today": {
   "date": "2026-11-18",
   "progress": {}
@@ -2289,9 +2289,9 @@
  "days": [
   {
    "date": "2026-11-18",
-   "runs": 9,
-   "restarts": 5,
-   "rest_median_s": 134,
+   "runs": 12,
+   "restarts": 7,
+   "rest_median_s": 67,
    "rest_longest_s": 399,
    "breaks": [
     {
@@ -2304,9 +2304,9 @@
    "playlists": [
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 9,
+     "runs": 12,
      "first": "08:48",
-     "last": "09:41"
+     "last": "09:46"
     }
    ],
    "scenarios": [
@@ -2336,11 +2336,27 @@
     },
     {
      "name": "WARCHTRACK",
-     "runs": 1,
+     "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "09:41",
-     "best": 754,
-     "median": 754
+     "best": 845,
+     "median": 800
+    },
+    {
+     "name": "CLOUDY TRACK I",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:44",
+     "best": 2137,
+     "median": 2137
+    },
+    {
+     "name": "LHC (MICRO) - 0.75x",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:46",
+     "best": 212,
+     "median": 212
     }
    ]
   },
@@ -7751,18 +7767,18 @@
   }
  ],
  "rest_effect": {
-  "runs": 1653,
+  "runs": 1657,
   "days": 40,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 625,
+    "runs": 628,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 126,
-    "pct": 99.8
+    "runs": 127,
+    "pct": 99.9
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
@@ -11560,6 +11576,26 @@
   ],
   "2026-11-18": [
    {
+    "scenario": "CLOUDY TRACK I",
+    "runs": 1,
+    "on_target": 35,
+    "reaction_ms": null,
+    "overshoot_pct": 16,
+    "pps_by_distance": {
+     "far": 14.3
+    }
+   },
+   {
+    "scenario": "LHC MICRO - 0.75x",
+    "runs": 1,
+    "on_target": 25,
+    "reaction_ms": null,
+    "overshoot_pct": 10,
+    "pps_by_distance": {
+     "far": 4.7
+    }
+   },
+   {
     "scenario": "PRECISETRACK EZ - RANKED",
     "runs": 1,
     "on_target": 38,
@@ -11593,12 +11629,12 @@
    },
    {
     "scenario": "WARCHTRACK",
-    "runs": 1,
-    "on_target": 33,
-    "reaction_ms": 200,
-    "overshoot_pct": 11,
+    "runs": 2,
+    "on_target": 34,
+    "reaction_ms": 204,
+    "overshoot_pct": 10,
     "pps_by_distance": {
-     "far": 12.8
+     "far": 13.6
     }
    }
   ]
