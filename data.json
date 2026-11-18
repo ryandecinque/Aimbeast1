@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18 08:57",
- "updated_utc": "2026-11-18T01:57:25Z",
+ "updated": "2026-11-18 09:07",
+ "updated_utc": "2026-11-18T02:07:26Z",
  "today": {
   "date": "2026-11-18",
   "progress": {}
@@ -2289,17 +2289,17 @@
  "days": [
   {
    "date": "2026-11-18",
-   "runs": 2,
-   "restarts": 1,
-   "rest_median_s": 331,
-   "rest_longest_s": 331,
+   "runs": 5,
+   "restarts": 2,
+   "rest_median_s": 212,
+   "rest_longest_s": 399,
    "breaks": [],
    "playlists": [
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 2,
+     "runs": 5,
      "first": "08:48",
-     "last": "08:55"
+     "last": "09:07"
     }
    ],
    "scenarios": [
@@ -2310,6 +2310,22 @@
      "first": "08:48",
      "best": 356,
      "median": 352
+    },
+    {
+     "name": "テ PRECISETRACK (EZ) - RANKED",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:03",
+     "best": 922,
+     "median": 922
+    },
+    {
+     "name": "SLIPPERY STRAFE",
+     "runs": 2,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:05",
+     "best": 764,
+     "median": 758
     }
    ]
   },
@@ -7720,12 +7736,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1647,
+  "runs": 1649,
   "days": 40,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 623,
+    "runs": 625,
     "pct": 100.0
    },
    {
@@ -8849,7 +8865,7 @@
     "runs": 1,
     "on_target": 42,
     "reaction_ms": null,
-    "overshoot_pct": 13,
+    "overshoot_pct": 12,
     "pps_by_distance": {
      "far": 13.7,
      "mid": 15.8,
@@ -11529,6 +11545,18 @@
   ],
   "2026-11-18": [
    {
+    "scenario": "PRECISETRACK EZ - RANKED",
+    "runs": 1,
+    "on_target": 38,
+    "reaction_ms": null,
+    "overshoot_pct": 14,
+    "pps_by_distance": {
+     "far": 13.3,
+     "mid": 15.0,
+     "close": 19.8
+    }
+   },
+   {
     "scenario": "SHORT STRAFES LMP - S",
     "runs": 2,
     "on_target": 15,
@@ -11536,6 +11564,16 @@
     "overshoot_pct": 40,
     "pps_by_distance": {
      "mid": 5.8
+    }
+   },
+   {
+    "scenario": "SLIPPERY STRAFE",
+    "runs": 2,
+    "on_target": 34,
+    "reaction_ms": 133,
+    "overshoot_pct": 36,
+    "pps_by_distance": {
+     "mid": 12.8
     }
    }
   ]
