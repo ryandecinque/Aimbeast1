@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18 10:22",
- "updated_utc": "2026-11-18T03:22:27Z",
+ "updated": "2026-11-18 10:27",
+ "updated_utc": "2026-11-18T03:27:51Z",
  "today": {
   "date": "2026-11-18",
   "progress": {}
@@ -2289,9 +2289,9 @@
  "days": [
   {
    "date": "2026-11-18",
-   "runs": 29,
+   "runs": 30,
    "restarts": 13,
-   "rest_median_s": 57,
+   "rest_median_s": 60,
    "rest_longest_s": 399,
    "breaks": [
     {
@@ -2304,9 +2304,9 @@
    "playlists": [
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 29,
+     "runs": 30,
      "first": "08:48",
-     "last": "10:21"
+     "last": "10:24"
     }
    ],
    "scenarios": [
@@ -2485,6 +2485,14 @@
      "first": "10:21",
      "best": 300,
      "median": 300
+    },
+    {
+     "name": "ELUSIVE DODGE BEGINNER - FORK",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "10:24",
+     "best": 1122,
+     "median": 1122
     }
    ]
   },
@@ -7895,12 +7903,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1674,
+  "runs": 1675,
   "days": 40,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 644,
+    "runs": 645,
     "pct": 100.0
    },
    {
@@ -11754,6 +11762,16 @@
     "overshoot_pct": 16,
     "pps_by_distance": {
      "far": 14.3
+    }
+   },
+   {
+    "scenario": "ELUSIVE DODGE BEGINNER - FORK",
+    "runs": 1,
+    "on_target": 47,
+    "reaction_ms": 100,
+    "overshoot_pct": 21,
+    "pps_by_distance": {
+     "close": 23.5
     }
    },
    {
