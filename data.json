@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18 09:57",
- "updated_utc": "2026-11-18T02:57:27Z",
+ "updated": "2026-11-18 10:02",
+ "updated_utc": "2026-11-18T03:02:26Z",
  "today": {
   "date": "2026-11-18",
   "progress": {}
@@ -2289,9 +2289,9 @@
  "days": [
   {
    "date": "2026-11-18",
-   "runs": 19,
+   "runs": 22,
    "restarts": 10,
-   "rest_median_s": 26,
+   "rest_median_s": 28,
    "rest_longest_s": 399,
    "breaks": [
     {
@@ -2304,9 +2304,9 @@
    "playlists": [
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 19,
+     "runs": 22,
      "first": "08:48",
-     "last": "09:56"
+     "last": "10:01"
     }
    ],
    "scenarios": [
@@ -2405,6 +2405,30 @@
      "first": "09:56",
      "best": 816,
      "median": 816
+    },
+    {
+     "name": "テ PLAYFUL SPHERE EVO - L - RANKED",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:57",
+     "best": 753,
+     "median": 753
+    },
+    {
+     "name": "CAGED CONTROLSPHERE - 25% EASIER",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "09:59",
+     "best": 590,
+     "median": 590
+    },
+    {
+     "name": "テ MICROSPHERE (EZ) - RANKED",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "10:01",
+     "best": 720,
+     "median": 720
     }
    ]
   },
@@ -7815,12 +7839,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1663,
+  "runs": 1666,
   "days": 40,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 633,
+    "runs": 636,
     "pct": 100.0
    },
    {
@@ -11635,6 +11659,16 @@
     }
    },
    {
+    "scenario": "CAGED CONTROLSPHERE - 25 EASIER",
+    "runs": 1,
+    "on_target": 27,
+    "reaction_ms": null,
+    "overshoot_pct": 25,
+    "pps_by_distance": {
+     "far": 9.9
+    }
+   },
+   {
     "scenario": "CLOUDY TRACK I",
     "runs": 1,
     "on_target": 35,
@@ -11672,6 +11706,29 @@
     "overshoot_pct": 10,
     "pps_by_distance": {
      "far": 4.7
+    }
+   },
+   {
+    "scenario": "MICROSPHERE EZ - RANKED",
+    "runs": 1,
+    "on_target": 33,
+    "reaction_ms": null,
+    "overshoot_pct": 20,
+    "pps_by_distance": {
+     "far": 12.1,
+     "mid": 12.2
+    }
+   },
+   {
+    "scenario": "PLAYFUL SPHERE EVO - L - RANKED",
+    "runs": 1,
+    "on_target": 30,
+    "reaction_ms": 100,
+    "overshoot_pct": 18,
+    "pps_by_distance": {
+     "far": 11.4,
+     "mid": 12.6,
+     "close": 13.9
     }
    },
    {
