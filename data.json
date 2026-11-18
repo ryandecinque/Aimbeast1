@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18 10:02",
- "updated_utc": "2026-11-18T03:02:26Z",
+ "updated": "2026-11-18 10:12",
+ "updated_utc": "2026-11-18T03:12:24Z",
  "today": {
   "date": "2026-11-18",
   "progress": {}
@@ -2289,9 +2289,9 @@
  "days": [
   {
    "date": "2026-11-18",
-   "runs": 22,
-   "restarts": 10,
-   "rest_median_s": 28,
+   "runs": 24,
+   "restarts": 12,
+   "rest_median_s": 57,
    "rest_longest_s": 399,
    "breaks": [
     {
@@ -2304,9 +2304,9 @@
    "playlists": [
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 22,
+     "runs": 24,
      "first": "08:48",
-     "last": "10:01"
+     "last": "10:11"
     }
    ],
    "scenarios": [
@@ -2429,6 +2429,22 @@
      "first": "10:01",
      "best": 720,
      "median": 720
+    },
+    {
+     "name": "JUMPING STRAFER",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "10:03",
+     "best": 248,
+     "median": 248
+    },
+    {
+     "name": "テ SMOOTH PILL EVO (EZ) - RANKED",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "10:11",
+     "best": 920,
+     "median": 920
     }
    ]
   },
@@ -7839,12 +7855,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1666,
+  "runs": 1669,
   "days": 40,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 636,
+    "runs": 639,
     "pct": 100.0
    },
    {
@@ -11699,6 +11715,17 @@
     }
    },
    {
+    "scenario": "JUMPING STRAFER",
+    "runs": 1,
+    "on_target": 19,
+    "reaction_ms": 100,
+    "overshoot_pct": 22,
+    "pps_by_distance": {
+     "mid": 4.8,
+     "close": 4.0
+    }
+   },
+   {
     "scenario": "LHC MICRO - 0.75x",
     "runs": 1,
     "on_target": 25,
@@ -11771,6 +11798,18 @@
     "overshoot_pct": 38,
     "pps_by_distance": {
      "mid": 12.8
+    }
+   },
+   {
+    "scenario": "SMOOTH PILL EVO EZ - RANKED",
+    "runs": 1,
+    "on_target": 42,
+    "reaction_ms": 100,
+    "overshoot_pct": 23,
+    "pps_by_distance": {
+     "far": 15.3,
+     "mid": 15.4,
+     "close": 15.6
     }
    },
    {
