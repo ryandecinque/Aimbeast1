@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18 09:07",
- "updated_utc": "2026-11-18T02:07:26Z",
+ "updated": "2026-11-18 09:17",
+ "updated_utc": "2026-11-18T02:17:22Z",
  "today": {
   "date": "2026-11-18",
   "progress": {}
@@ -2289,17 +2289,17 @@
  "days": [
   {
    "date": "2026-11-18",
-   "runs": 5,
+   "runs": 6,
    "restarts": 2,
-   "rest_median_s": 212,
+   "rest_median_s": 331,
    "rest_longest_s": 399,
    "breaks": [],
    "playlists": [
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 5,
+     "runs": 6,
      "first": "08:48",
-     "last": "09:07"
+     "last": "09:14"
     }
    ],
    "scenarios": [
@@ -2321,11 +2321,11 @@
     },
     {
      "name": "SLIPPERY STRAFE",
-     "runs": 2,
+     "runs": 3,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "09:05",
-     "best": 764,
-     "median": 758
+     "best": 798,
+     "median": 764
     }
    ]
   },
@@ -7736,7 +7736,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1649,
+  "runs": 1651,
   "days": 40,
   "groups": [
    {
@@ -7751,7 +7751,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 619,
+    "runs": 620,
     "pct": 101.3
    },
    {
@@ -11568,10 +11568,10 @@
    },
    {
     "scenario": "SLIPPERY STRAFE",
-    "runs": 2,
-    "on_target": 34,
+    "runs": 3,
+    "on_target": 36,
     "reaction_ms": 133,
-    "overshoot_pct": 36,
+    "overshoot_pct": 38,
     "pps_by_distance": {
      "mid": 12.8
     }
