@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18 10:12",
- "updated_utc": "2026-11-18T03:12:24Z",
+ "updated": "2026-11-18 10:17",
+ "updated_utc": "2026-11-18T03:17:27Z",
  "today": {
   "date": "2026-11-18",
   "progress": {}
@@ -2289,9 +2289,9 @@
  "days": [
   {
    "date": "2026-11-18",
-   "runs": 24,
-   "restarts": 12,
-   "rest_median_s": 57,
+   "runs": 27,
+   "restarts": 13,
+   "rest_median_s": 42,
    "rest_longest_s": 399,
    "breaks": [
     {
@@ -2304,9 +2304,9 @@
    "playlists": [
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 24,
+     "runs": 27,
      "first": "08:48",
-     "last": "10:11"
+     "last": "10:17"
     }
    ],
    "scenarios": [
@@ -2445,6 +2445,30 @@
      "first": "10:11",
      "best": 920,
      "median": 920
+    },
+    {
+     "name": "CAGED CONTROLSPHERE HORIZONTAL L",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "10:13",
+     "best": 880,
+     "median": 880
+    },
+    {
+     "name": "BRUSH SWIPES - 0.75X",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "10:14",
+     "best": 435,
+     "median": 435
+    },
+    {
+     "name": "FAR STRAFER - L",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "10:17",
+     "best": 894,
+     "median": 894
     }
    ]
   },
@@ -7855,12 +7879,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1669,
+  "runs": 1671,
   "days": 40,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 639,
+    "runs": 641,
     "pct": 100.0
    },
    {
@@ -11675,6 +11699,18 @@
     }
    },
    {
+    "scenario": "BRUSH SWIPES - 0.75X",
+    "runs": 1,
+    "on_target": 32,
+    "reaction_ms": 33,
+    "overshoot_pct": 34,
+    "pps_by_distance": {
+     "far": 10.5,
+     "mid": 8.9,
+     "close": 10.9
+    }
+   },
+   {
     "scenario": "CAGED CONTROLSPHERE - 25 EASIER",
     "runs": 1,
     "on_target": 27,
@@ -11685,6 +11721,16 @@
     }
    },
    {
+    "scenario": "CAGED CONTROLSPHERE HORIZONTAL L",
+    "runs": 1,
+    "on_target": 38,
+    "reaction_ms": null,
+    "overshoot_pct": 26,
+    "pps_by_distance": {
+     "far": 14.8
+    }
+   },
+   {
     "scenario": "CLOUDY TRACK I",
     "runs": 1,
     "on_target": 35,
@@ -11692,6 +11738,16 @@
     "overshoot_pct": 16,
     "pps_by_distance": {
      "far": 14.3
+    }
+   },
+   {
+    "scenario": "FAR STRAFER - L",
+    "runs": 1,
+    "on_target": 38,
+    "reaction_ms": null,
+    "overshoot_pct": 32,
+    "pps_by_distance": {
+     "far": 15.0
     }
    },
    {
