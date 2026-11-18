@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18 09:17",
- "updated_utc": "2026-11-18T02:17:22Z",
+ "updated": "2026-11-18 09:37",
+ "updated_utc": "2026-11-18T02:37:26Z",
  "today": {
   "date": "2026-11-18",
   "progress": {}
@@ -2289,17 +2289,24 @@
  "days": [
   {
    "date": "2026-11-18",
-   "runs": 6,
-   "restarts": 2,
+   "runs": 7,
+   "restarts": 4,
    "rest_median_s": 331,
    "rest_longest_s": 399,
-   "breaks": [],
+   "breaks": [
+    {
+     "after": "BAZHAN MEDIUM TRACKING",
+     "before": "BAZHAN MEDIUM TRACKING",
+     "at": "09:14",
+     "minutes": 19.4
+    }
+   ],
    "playlists": [
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 6,
+     "runs": 7,
      "first": "08:48",
-     "last": "09:14"
+     "last": "09:35"
     }
    ],
    "scenarios": [
@@ -2321,11 +2328,11 @@
     },
     {
      "name": "SLIPPERY STRAFE",
-     "runs": 3,
+     "runs": 4,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "09:05",
      "best": 798,
-     "median": 764
+     "median": 763
     }
    ]
   },
@@ -7736,7 +7743,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1651,
+  "runs": 1652,
   "days": 40,
   "groups": [
    {
@@ -7756,8 +7763,8 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 100,
-    "pct": 97.3
+    "runs": 101,
+    "pct": 97.1
    }
   ]
  },
@@ -11568,10 +11575,10 @@
    },
    {
     "scenario": "SLIPPERY STRAFE",
-    "runs": 3,
+    "runs": 4,
     "on_target": 36,
     "reaction_ms": 133,
-    "overshoot_pct": 38,
+    "overshoot_pct": 37,
     "pps_by_distance": {
      "mid": 12.8
     }
