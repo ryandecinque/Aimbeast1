@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18 10:17",
- "updated_utc": "2026-11-18T03:17:27Z",
+ "updated": "2026-11-18 10:22",
+ "updated_utc": "2026-11-18T03:22:27Z",
  "today": {
   "date": "2026-11-18",
   "progress": {}
@@ -2289,9 +2289,9 @@
  "days": [
   {
    "date": "2026-11-18",
-   "runs": 27,
+   "runs": 29,
    "restarts": 13,
-   "rest_median_s": 42,
+   "rest_median_s": 57,
    "rest_longest_s": 399,
    "breaks": [
     {
@@ -2304,9 +2304,9 @@
    "playlists": [
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 27,
+     "runs": 29,
      "first": "08:48",
-     "last": "10:17"
+     "last": "10:21"
     }
    ],
    "scenarios": [
@@ -2469,6 +2469,22 @@
      "first": "10:17",
      "best": 894,
      "median": 894
+    },
+    {
+     "name": "REACTIVE STRAFER 3",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "10:18",
+     "best": 1032,
+     "median": 1032
+    },
+    {
+     "name": "TORNADO COW V2",
+     "runs": 1,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "10:21",
+     "best": 300,
+     "median": 300
     }
    ]
   },
@@ -7879,12 +7895,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1671,
+  "runs": 1674,
   "days": 40,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 641,
+    "runs": 644,
     "pct": 100.0
    },
    {
@@ -11827,6 +11843,17 @@
     }
    },
    {
+    "scenario": "REACTIVE STRAFER 3",
+    "runs": 1,
+    "on_target": 29,
+    "reaction_ms": 267,
+    "overshoot_pct": 38,
+    "pps_by_distance": {
+     "mid": 10.2,
+     "close": 12.4
+    }
+   },
+   {
     "scenario": "SHORT STRAFES LMP",
     "runs": 1,
     "on_target": 25,
@@ -11889,6 +11916,17 @@
     "pps_by_distance": {
      "mid": 6.7,
      "close": 5.9
+    }
+   },
+   {
+    "scenario": "TORNADO COW V2",
+    "runs": 1,
+    "on_target": 26,
+    "reaction_ms": 125,
+    "overshoot_pct": 27,
+    "pps_by_distance": {
+     "far": 4.6,
+     "mid": 5.4
     }
    },
    {
