@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-19 19:22",
- "updated_utc": "2026-11-19T12:22:48Z",
+ "updated": "2026-11-19 19:27",
+ "updated_utc": "2026-11-19T12:27:28Z",
  "today": {
   "date": "2026-11-19",
   "progress": {}
@@ -2289,27 +2289,35 @@
  "days": [
   {
    "date": "2026-11-19",
-   "runs": 2,
-   "restarts": 2,
-   "rest_median_s": 60,
+   "runs": 5,
+   "restarts": 4,
+   "rest_median_s": 27,
    "rest_longest_s": 75,
    "breaks": [],
    "playlists": [
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 2,
+     "runs": 5,
      "first": "19:19",
-     "last": "19:21"
+     "last": "19:27"
     }
    ],
    "scenarios": [
     {
      "name": "LR XYZ STRAFES SLOW ACCEL",
-     "runs": 2,
+     "runs": 3,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "19:19",
-     "best": 434,
+     "best": 480,
      "median": 434
+    },
+    {
+     "name": "EASYTRACK - S",
+     "runs": 2,
+     "routine": "BAZHAN MEDIUM TRACKING",
+     "first": "19:25",
+     "best": 729,
+     "median": 683
     }
    ]
   },
@@ -7929,12 +7937,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1676,
+  "runs": 1679,
   "days": 41,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 646,
+    "runs": 647,
     "pct": 100.0
    },
    {
@@ -7944,7 +7952,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 620,
+    "runs": 622,
     "pct": 101.2
    },
    {
@@ -11986,8 +11994,19 @@
   ],
   "2026-11-19": [
    {
-    "scenario": "LR XYZ STRAFES SLOW ACCEL",
+    "scenario": "EASYTRACK - S",
     "runs": 2,
+    "on_target": 29,
+    "reaction_ms": 112,
+    "overshoot_pct": 21,
+    "pps_by_distance": {
+     "far": 11.4,
+     "mid": 11.4
+    }
+   },
+   {
+    "scenario": "LR XYZ STRAFES SLOW ACCEL",
+    "runs": 4,
     "on_target": 35,
     "reaction_ms": null,
     "overshoot_pct": 13,
