@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-19 19:37",
- "updated_utc": "2026-11-19T12:37:26Z",
+ "updated": "2026-11-19 19:42",
+ "updated_utc": "2026-11-19T12:42:27Z",
  "today": {
   "date": "2026-11-19",
   "progress": {}
@@ -2295,9 +2295,9 @@
  "days": [
   {
    "date": "2026-11-19",
-   "runs": 8,
-   "restarts": 6,
-   "rest_median_s": 26,
+   "runs": 12,
+   "restarts": 7,
+   "rest_median_s": 23,
    "rest_longest_s": 75,
    "breaks": [
     {
@@ -2305,6 +2305,12 @@
      "before": "(single scenario)",
      "at": "19:28",
      "minutes": 6.0
+    },
+    {
+     "after": "(single scenario)",
+     "before": "BAZHAN HARD TRACKING",
+     "at": "19:37",
+     "minutes": 0.4
     }
    ],
    "playlists": [
@@ -2319,6 +2325,12 @@
      "runs": 2,
      "first": "19:35",
      "last": "19:37"
+    },
+    {
+     "name": "BAZHAN HARD TRACKING",
+     "runs": 4,
+     "first": "19:38",
+     "last": "19:42"
     }
    ],
    "scenarios": [
@@ -2345,6 +2357,38 @@
      "first": "19:35",
      "best": 475,
      "median": 470
+    },
+    {
+     "name": "STT NEEDLE",
+     "runs": 1,
+     "routine": "BAZHAN HARD TRACKING",
+     "first": "19:38",
+     "best": 692,
+     "median": 692
+    },
+    {
+     "name": "THINBOT XYZ II",
+     "runs": 1,
+     "routine": "BAZHAN HARD TRACKING",
+     "first": "19:39",
+     "best": 713,
+     "median": 713
+    },
+    {
+     "name": "'STT' SHORT - L - 1.4X",
+     "runs": 1,
+     "routine": "BAZHAN HARD TRACKING",
+     "first": "19:41",
+     "best": 291,
+     "median": 291
+    },
+    {
+     "name": "XYZ MICROTRACK BLINK - L",
+     "runs": 1,
+     "routine": "BAZHAN HARD TRACKING",
+     "first": "19:42",
+     "best": 641,
+     "median": 641
     }
    ]
   },
@@ -7964,12 +8008,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1682,
+  "runs": 1686,
   "days": 41,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 648,
+    "runs": 651,
     "pct": 100.0
    },
    {
@@ -7979,7 +8023,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 624,
+    "runs": 625,
     "pct": 101.3
    },
    {
@@ -12040,6 +12084,49 @@
     "pps_by_distance": {
      "far": 7.2,
      "mid": 7.5
+    }
+   },
+   {
+    "scenario": "STT NEEDLE",
+    "runs": 1,
+    "on_target": 34,
+    "reaction_ms": 133,
+    "overshoot_pct": 31,
+    "pps_by_distance": {
+     "mid": 11.6
+    }
+   },
+   {
+    "scenario": "STT SHORT - L - 1.4X",
+    "runs": 1,
+    "on_target": 29,
+    "reaction_ms": 133,
+    "overshoot_pct": 30,
+    "pps_by_distance": {
+     "mid": 4.8
+    }
+   },
+   {
+    "scenario": "THINBOT XYZ II",
+    "runs": 1,
+    "on_target": 24,
+    "reaction_ms": null,
+    "overshoot_pct": 51,
+    "pps_by_distance": {
+     "far": 8.2,
+     "mid": 7.9,
+     "close": 9.2
+    }
+   },
+   {
+    "scenario": "XYZ MICROTRACK BLINK - L",
+    "runs": 1,
+    "on_target": 24,
+    "reaction_ms": 183,
+    "overshoot_pct": 44,
+    "pps_by_distance": {
+     "far": 9.5,
+     "mid": 11.4
     }
    },
    {
