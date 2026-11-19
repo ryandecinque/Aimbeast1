@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-19 19:27",
- "updated_utc": "2026-11-19T12:27:28Z",
+ "updated": "2026-11-19 19:32",
+ "updated_utc": "2026-11-19T12:32:24Z",
  "today": {
   "date": "2026-11-19",
   "progress": {}
@@ -2289,17 +2289,17 @@
  "days": [
   {
    "date": "2026-11-19",
-   "runs": 5,
-   "restarts": 4,
+   "runs": 6,
+   "restarts": 5,
    "rest_median_s": 27,
    "rest_longest_s": 75,
    "breaks": [],
    "playlists": [
     {
      "name": "BAZHAN MEDIUM TRACKING",
-     "runs": 5,
+     "runs": 6,
      "first": "19:19",
-     "last": "19:27"
+     "last": "19:28"
     }
    ],
    "scenarios": [
@@ -2313,11 +2313,11 @@
     },
     {
      "name": "EASYTRACK - S",
-     "runs": 2,
+     "runs": 3,
      "routine": "BAZHAN MEDIUM TRACKING",
      "first": "19:25",
-     "best": 729,
-     "median": 683
+     "best": 767,
+     "median": 729
     }
    ]
   },
@@ -7937,7 +7937,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1679,
+  "runs": 1681,
   "days": 41,
   "groups": [
    {
@@ -7952,7 +7952,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 622,
+    "runs": 624,
     "pct": 101.2
    },
    {
@@ -11995,13 +11995,13 @@
   "2026-11-19": [
    {
     "scenario": "EASYTRACK - S",
-    "runs": 2,
-    "on_target": 29,
-    "reaction_ms": 112,
-    "overshoot_pct": 21,
+    "runs": 3,
+    "on_target": 32,
+    "reaction_ms": 125,
+    "overshoot_pct": 20,
     "pps_by_distance": {
-     "far": 11.4,
-     "mid": 11.4
+     "far": 11.9,
+     "mid": 12.5
     }
    },
    {
