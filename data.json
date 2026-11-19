@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-19 20:12",
- "updated_utc": "2026-11-19T13:12:30Z",
+ "updated": "2026-11-19 20:17",
+ "updated_utc": "2026-11-19T13:17:27Z",
  "today": {
   "date": "2026-11-19",
   "progress": {}
@@ -152,8 +152,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 553.0,
-   "median_14d": 479,
-   "runs_14d": 203,
+   "median_14d": 480,
+   "runs_14d": 205,
    "steps": [
     0.0,
     198.0,
@@ -805,7 +805,7 @@
      "date": "2026-11-19",
      "median": 503,
      "best": 553,
-     "runs": 7
+     "runs": 9
     }
    ]
   }
@@ -2295,9 +2295,9 @@
  "days": [
   {
    "date": "2026-11-19",
-   "runs": 19,
-   "restarts": 9,
-   "rest_median_s": 27,
+   "runs": 21,
+   "restarts": 12,
+   "rest_median_s": 41,
    "rest_longest_s": 499,
    "breaks": [
     {
@@ -2328,9 +2328,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 7,
+     "runs": 9,
      "first": "19:35",
-     "last": "20:10"
+     "last": "20:17"
     },
     {
      "name": "BAZHAN HARD TRACKING",
@@ -2358,7 +2358,7 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 7,
+     "runs": 9,
      "routine": "(single scenario)",
      "first": "19:35",
      "best": 553,
@@ -8022,7 +8022,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1694,
+  "runs": 1695,
   "days": 41,
   "groups": [
    {
@@ -8037,7 +8037,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 629,
+    "runs": 630,
     "pct": 101.3
    },
    {
@@ -12156,10 +12156,10 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 7,
+    "runs": 9,
     "on_target": 34,
     "reaction_ms": 133,
-    "overshoot_pct": 36,
+    "overshoot_pct": 39,
     "pps_by_distance": {
      "far": 7.8,
      "mid": 9.4,
