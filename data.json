@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-19 19:42",
- "updated_utc": "2026-11-19T12:42:27Z",
+ "updated": "2026-11-19 19:57",
+ "updated_utc": "2026-11-19T12:57:22Z",
  "today": {
   "date": "2026-11-19",
   "progress": {}
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 547.0,
    "median_14d": 478,
-   "runs_14d": 198,
+   "runs_14d": 199,
    "steps": [
     0.0,
     198.0,
@@ -803,9 +803,9 @@
     },
     {
      "date": "2026-11-19",
-     "median": 470,
-     "best": 475,
-     "runs": 2
+     "median": 475,
+     "best": 481,
+     "runs": 3
     }
    ]
   }
@@ -2295,10 +2295,10 @@
  "days": [
   {
    "date": "2026-11-19",
-   "runs": 12,
-   "restarts": 7,
-   "rest_median_s": 23,
-   "rest_longest_s": 75,
+   "runs": 15,
+   "restarts": 8,
+   "rest_median_s": 26,
+   "rest_longest_s": 499,
    "breaks": [
     {
      "after": "BAZHAN MEDIUM TRACKING",
@@ -2311,6 +2311,12 @@
      "before": "BAZHAN HARD TRACKING",
      "at": "19:37",
      "minutes": 0.4
+    },
+    {
+     "after": "BAZHAN HARD TRACKING",
+     "before": "(single scenario)",
+     "at": "19:53",
+     "minutes": 1.1
     }
    ],
    "playlists": [
@@ -2322,15 +2328,15 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 2,
+     "runs": 3,
      "first": "19:35",
-     "last": "19:37"
+     "last": "19:55"
     },
     {
      "name": "BAZHAN HARD TRACKING",
-     "runs": 4,
+     "runs": 6,
      "first": "19:38",
-     "last": "19:42"
+     "last": "19:53"
     }
    ],
    "scenarios": [
@@ -2352,11 +2358,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 2,
+     "runs": 3,
      "routine": "(single scenario)",
      "first": "19:35",
-     "best": 475,
-     "median": 470
+     "best": 481,
+     "median": 475
     },
     {
      "name": "STT NEEDLE",
@@ -2389,6 +2395,14 @@
      "first": "19:42",
      "best": 641,
      "median": 641
+    },
+    {
+     "name": "GLIDE TRACK INTERMEDIATE - FORK",
+     "runs": 2,
+     "routine": "BAZHAN HARD TRACKING",
+     "first": "19:51",
+     "best": 710,
+     "median": 669
     }
    ]
   },
@@ -8008,12 +8022,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1686,
+  "runs": 1690,
   "days": 41,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 651,
+    "runs": 654,
     "pct": 100.0
    },
    {
@@ -8023,7 +8037,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 625,
+    "runs": 626,
     "pct": 101.3
    },
    {
@@ -12076,6 +12090,17 @@
     }
    },
    {
+    "scenario": "GLIDE TRACK INTERMEDIATE - FORK",
+    "runs": 2,
+    "on_target": 34,
+    "reaction_ms": 54,
+    "overshoot_pct": 26,
+    "pps_by_distance": {
+     "mid": 11.2,
+     "close": 11.4
+    }
+   },
+   {
     "scenario": "LR XYZ STRAFES SLOW ACCEL",
     "runs": 4,
     "on_target": 35,
@@ -12131,14 +12156,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 2,
+    "runs": 3,
     "on_target": 33,
     "reaction_ms": 133,
-    "overshoot_pct": 38,
+    "overshoot_pct": 36,
     "pps_by_distance": {
      "far": 7.2,
-     "mid": 8.6,
-     "close": 7.7
+     "mid": 7.6,
+     "close": 8.3
     }
    }
   ]
@@ -13313,16 +13338,16 @@
   "2026-11-19": [
    {
     "scenario": "Zeus Track Evo - Noblink",
-    "score": 475,
-    "time": "19:34",
+    "score": 480,
+    "time": "19:54",
     "gif": "best-zeus-2026-11-19",
     "video": true,
-    "on_target": 33,
+    "on_target": 34,
     "reaction_ms": 133,
-    "overshoot_pct": 34,
+    "overshoot_pct": 36,
     "best_14d": 547,
     "master3": 726,
-    "note": "Best of 2 recorded today (median 468). The clip is its 8 seconds with the most hits.",
+    "note": "Best of 3 recorded today (median 474). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available: model videos are for tracking runs only."
     }
