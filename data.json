@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-19 20:22",
- "updated_utc": "2026-11-19T13:22:29Z",
+ "updated": "2026-11-19 20:27",
+ "updated_utc": "2026-11-19T13:27:29Z",
  "today": {
   "date": "2026-11-19",
   "progress": {}
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 480,
-   "runs_14d": 207,
+   "runs_14d": 208,
    "steps": [
     0.0,
     198.0,
@@ -803,9 +803,9 @@
     },
     {
      "date": "2026-11-19",
-     "median": 503,
+     "median": 505,
      "best": 553,
-     "runs": 11
+     "runs": 12
     }
    ]
   }
@@ -2295,8 +2295,8 @@
  "days": [
   {
    "date": "2026-11-19",
-   "runs": 23,
-   "restarts": 18,
+   "runs": 24,
+   "restarts": 21,
    "rest_median_s": 43,
    "rest_longest_s": 499,
    "breaks": [
@@ -2328,9 +2328,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 11,
+     "runs": 12,
      "first": "19:35",
-     "last": "20:21"
+     "last": "20:23"
     },
     {
      "name": "BAZHAN HARD TRACKING",
@@ -2358,11 +2358,11 @@
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
-     "runs": 11,
+     "runs": 12,
      "routine": "(single scenario)",
      "first": "19:35",
      "best": 553,
-     "median": 503
+     "median": 505
     },
     {
      "name": "STT NEEDLE",
@@ -8022,7 +8022,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1697,
+  "runs": 1699,
   "days": 41,
   "groups": [
    {
@@ -8037,7 +8037,7 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 631,
+    "runs": 633,
     "pct": 101.3
    },
    {
@@ -12156,14 +12156,14 @@
    },
    {
     "scenario": "ZEUS TRACK EVO - NOBLINK",
-    "runs": 11,
+    "runs": 13,
     "on_target": 36,
     "reaction_ms": 133,
-    "overshoot_pct": 39,
+    "overshoot_pct": 40,
     "pps_by_distance": {
      "far": 7.8,
      "mid": 9.5,
-     "close": 8.3
+     "close": 8.2
     }
    }
   ]
