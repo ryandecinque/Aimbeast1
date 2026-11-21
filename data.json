@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21 09:22",
- "updated_utc": "2026-11-21T02:22:54Z",
+ "updated": "2026-11-21 09:27",
+ "updated_utc": "2026-11-21T02:27:30Z",
  "today": {
   "date": "2026-11-21",
   "progress": {}
@@ -2295,17 +2295,17 @@
  "days": [
   {
    "date": "2026-11-21",
-   "runs": 1,
-   "restarts": 10,
-   "rest_median_s": 12,
-   "rest_longest_s": 12,
+   "runs": 2,
+   "restarts": 15,
+   "rest_median_s": 16,
+   "rest_longest_s": 20,
    "breaks": [],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 1,
+     "runs": 2,
      "first": "09:16",
-     "last": "09:16"
+     "last": "09:25"
     }
    ],
    "scenarios": [
@@ -2316,6 +2316,14 @@
      "first": "09:16",
      "best": 171,
      "median": 171
+    },
+    {
+     "name": "KRUNKER TRACKING POSSESSION",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "09:25",
+     "best": 915,
+     "median": 915
     }
    ]
   },
@@ -8048,12 +8056,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1703,
+  "runs": 1704,
   "days": 42,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 655,
+    "runs": 656,
     "pct": 100.0
    },
    {
@@ -12195,6 +12203,17 @@
   ],
   "2026-11-21": [
    {
+    "scenario": "AIR DEMONIC POSS",
+    "runs": 1,
+    "on_target": 26,
+    "reaction_ms": 33,
+    "overshoot_pct": 51,
+    "pps_by_distance": {
+     "far": 8.2,
+     "mid": 10.1
+    }
+   },
+   {
     "scenario": "ASTRONAUTS RNG",
     "runs": 1,
     "on_target": 14,
@@ -12212,6 +12231,39 @@
     "overshoot_pct": 14,
     "pps_by_distance": {
      "far": 2.7
+    }
+   },
+   {
+    "scenario": "DISTANCE FS DODGE V2 POSSD RNG",
+    "runs": 1,
+    "on_target": 22,
+    "reaction_ms": 50,
+    "overshoot_pct": 51,
+    "pps_by_distance": {
+     "mid": 6.4,
+     "close": 9.5
+    }
+   },
+   {
+    "scenario": "FISHTRACK POSS",
+    "runs": 1,
+    "on_target": 12,
+    "reaction_ms": 217,
+    "overshoot_pct": 27,
+    "pps_by_distance": {
+     "mid": 4.8,
+     "close": 7.5
+    }
+   },
+   {
+    "scenario": "KRUNKER TRACKING POSSESSION",
+    "runs": 2,
+    "on_target": 24,
+    "reaction_ms": 125,
+    "overshoot_pct": 52,
+    "pps_by_distance": {
+     "far": 2.8,
+     "mid": 3.2
     }
    }
   ]
