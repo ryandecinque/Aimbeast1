@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-19 20:37",
- "updated_utc": "2026-11-19T13:37:35Z",
+ "updated": "2026-11-21 09:22",
+ "updated_utc": "2026-11-21T02:22:54Z",
  "today": {
-  "date": "2026-11-19",
+  "date": "2026-11-21",
   "progress": {}
  },
  "plan_start": "2026-10-07",
@@ -11,9 +11,9 @@
    "name": "SMOOTH THIN TRACK V2",
    "master3": 616.0,
    "official_best": 555.0,
-   "best_14d": 471.0,
-   "median_14d": 419,
-   "runs_14d": 25,
+   "best_14d": null,
+   "median_14d": null,
+   "runs_14d": 0,
    "steps": [
     0.0,
     168.0,
@@ -39,9 +39,9 @@
    "name": "AIR TRACK SMOOTH V3 150%",
    "master3": 660.0,
    "official_best": 548.0,
-   "best_14d": 510.0,
-   "median_14d": 436,
-   "runs_14d": 30,
+   "best_14d": null,
+   "median_14d": null,
+   "runs_14d": 0,
    "steps": [
     0.0,
     180.0,
@@ -67,9 +67,9 @@
    "name": "AIR CONTROL SPHERE - S",
    "master3": 880.0,
    "official_best": 878.0,
-   "best_14d": 737.0,
-   "median_14d": 623,
-   "runs_14d": 30,
+   "best_14d": null,
+   "median_14d": null,
+   "runs_14d": 0,
    "steps": [
     0.0,
     240.0,
@@ -95,9 +95,9 @@
    "name": "PASU TRACK EVO (RCT) - 0.85X",
    "master3": 506.0,
    "official_best": 398.0,
-   "best_14d": 361.0,
-   "median_14d": 318,
-   "runs_14d": 30,
+   "best_14d": null,
+   "median_14d": null,
+   "runs_14d": 0,
    "steps": [
     0.0,
     138.0,
@@ -124,8 +124,8 @@
    "master3": 660.0,
    "official_best": 580.0,
    "best_14d": 544.0,
-   "median_14d": 454,
-   "runs_14d": 30,
+   "median_14d": 446,
+   "runs_14d": 5,
    "steps": [
     0.0,
     180.0,
@@ -152,8 +152,8 @@
    "master3": 726.0,
    "official_best": 591.0,
    "best_14d": 553.0,
-   "median_14d": 481,
-   "runs_14d": 211,
+   "median_14d": 482,
+   "runs_14d": 186,
    "steps": [
     0.0,
     198.0,
@@ -2293,6 +2293,32 @@
   }
  ],
  "days": [
+  {
+   "date": "2026-11-21",
+   "runs": 1,
+   "restarts": 10,
+   "rest_median_s": 12,
+   "rest_longest_s": 12,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "(single scenario)",
+     "runs": 1,
+     "first": "09:16",
+     "last": "09:16"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "ASTRONAUTS RNG++",
+     "runs": 1,
+     "routine": "(single scenario)",
+     "first": "09:16",
+     "best": 171,
+     "median": 171
+    }
+   ]
+  },
   {
    "date": "2026-11-19",
    "runs": 27,
@@ -8022,12 +8048,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1702,
-  "days": 41,
+  "runs": 1703,
+  "days": 42,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 654,
+    "runs": 655,
     "pct": 100.0
    },
    {
@@ -11709,9 +11735,9 @@
    {
     "scenario": "ASTRONAUTS RNG",
     "runs": 1,
-    "on_target": 19,
+    "on_target": 20,
     "reaction_ms": 167,
-    "overshoot_pct": 13,
+    "overshoot_pct": 15,
     "pps_by_distance": {
      "far": 3.6
     }
@@ -12164,6 +12190,28 @@
      "far": 7.9,
      "mid": 9.5,
      "close": 8.2
+    }
+   }
+  ],
+  "2026-11-21": [
+   {
+    "scenario": "ASTRONAUTS RNG",
+    "runs": 1,
+    "on_target": 14,
+    "reaction_ms": 183,
+    "overshoot_pct": 17,
+    "pps_by_distance": {
+     "far": 2.9
+    }
+   },
+   {
+    "scenario": "AUTO PEEK",
+    "runs": 1,
+    "on_target": 13,
+    "reaction_ms": 58,
+    "overshoot_pct": 14,
+    "pps_by_distance": {
+     "far": 2.7
     }
    }
   ]
