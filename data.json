@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-23 13:32",
- "updated_utc": "2026-11-23T06:32:39Z",
+ "updated": "2026-11-23 14:32",
+ "updated_utc": "2026-11-23T07:32:26Z",
  "today": {
   "date": "2026-11-23",
   "progress": {}
@@ -1759,17 +1759,24 @@
  "days": [
   {
    "date": "2026-11-23",
-   "runs": 19,
-   "restarts": 12,
+   "runs": 24,
+   "restarts": 18,
    "rest_median_s": 26,
    "rest_longest_s": 751,
-   "breaks": [],
+   "breaks": [
+    {
+     "after": "(single scenario)",
+     "before": "(single scenario)",
+     "at": "13:33",
+     "minutes": 52.1
+    }
+   ],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 19,
+     "runs": 24,
      "first": "12:48",
-     "last": "13:32"
+     "last": "14:32"
     }
    ],
    "scenarios": [
@@ -1783,11 +1790,19 @@
     },
     {
      "name": "AIR TRACK SMOOTH V3 (EZ) - RANKED",
-     "runs": 9,
+     "runs": 10,
      "routine": "(single scenario)",
      "first": "13:20",
      "best": 546,
-     "median": 462
+     "median": 472
+    },
+    {
+     "name": "AIR CONTROL SPHERE - RANKED",
+     "runs": 4,
+     "routine": "(single scenario)",
+     "first": "14:26",
+     "best": 679,
+     "median": 668
     }
    ]
   },
@@ -6768,23 +6783,23 @@
   }
  ],
  "rest_effect": {
-  "runs": 11,
+  "runs": 14,
   "days": 1,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 2,
-    "pct": 96.6
+    "runs": 3,
+    "pct": 97.6
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 4,
-    "pct": 96.6
+    "runs": 5,
+    "pct": 97.6
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 4,
-    "pct": 103.4
+    "runs": 5,
+    "pct": 104.3
    },
    {
     "label": "First run after a break of 15 min+",
@@ -10991,15 +11006,26 @@
   ],
   "2026-11-23": [
    {
+    "scenario": "AIR CONTROL SPHERE - RANKED",
+    "runs": 4,
+    "on_target": 30,
+    "reaction_ms": null,
+    "overshoot_pct": 24,
+    "pps_by_distance": {
+     "mid": 10.2,
+     "close": 11.4
+    }
+   },
+   {
     "scenario": "AIR TRACK SMOOTH V3 EZ - RANKED",
-    "runs": 9,
+    "runs": 10,
     "on_target": 34,
     "reaction_ms": 117,
     "overshoot_pct": 21,
     "pps_by_distance": {
-     "far": 7.1,
-     "mid": 8.2,
-     "close": 8.0
+     "far": 8.0,
+     "mid": 7.9,
+     "close": 8.1
     }
    },
    {
