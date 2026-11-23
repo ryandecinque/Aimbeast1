@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-23 13:22",
- "updated_utc": "2026-11-23T06:22:38Z",
+ "updated": "2026-11-23 13:27",
+ "updated_utc": "2026-11-23T06:27:43Z",
  "today": {
   "date": "2026-11-23",
   "progress": {}
@@ -1759,17 +1759,17 @@
  "days": [
   {
    "date": "2026-11-23",
-   "runs": 12,
-   "restarts": 9,
-   "rest_median_s": 56,
+   "runs": 15,
+   "restarts": 10,
+   "rest_median_s": 31,
    "rest_longest_s": 751,
    "breaks": [],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 12,
+     "runs": 15,
      "first": "12:48",
-     "last": "13:22"
+     "last": "13:26"
     }
    ],
    "scenarios": [
@@ -1783,11 +1783,11 @@
     },
     {
      "name": "AIR TRACK SMOOTH V3 (EZ) - RANKED",
-     "runs": 2,
+     "runs": 5,
      "routine": "(single scenario)",
      "first": "13:20",
-     "best": 481,
-     "median": 466
+     "best": 546,
+     "median": 460
     }
    ]
   },
@@ -6768,23 +6768,23 @@
   }
  ],
  "rest_effect": {
-  "runs": 4,
+  "runs": 7,
   "days": 1,
   "groups": [
    {
     "label": "First attempt on a scenario",
     "runs": 2,
-    "pct": 98.8
+    "pct": 98.2
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 0,
-    "pct": null
+    "runs": 2,
+    "pct": 99.7
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 1,
-    "pct": 100.0
+    "runs": 2,
+    "pct": 102.9
    },
    {
     "label": "First run after a break of 15 min+",
@@ -10992,14 +10992,14 @@
   "2026-11-23": [
    {
     "scenario": "AIR TRACK SMOOTH V3 EZ - RANKED",
-    "runs": 2,
-    "on_target": 33,
-    "reaction_ms": 108,
-    "overshoot_pct": 19,
+    "runs": 5,
+    "on_target": 34,
+    "reaction_ms": 117,
+    "overshoot_pct": 21,
     "pps_by_distance": {
-     "far": 4.0,
-     "mid": 8.1,
-     "close": 7.6
+     "far": 6.6,
+     "mid": 8.2,
+     "close": 7.5
     }
    },
    {
