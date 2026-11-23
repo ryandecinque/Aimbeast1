@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-21 09:27",
- "updated_utc": "2026-11-21T02:27:30Z",
+ "updated": "2026-11-23 12:52",
+ "updated_utc": "2026-11-23T05:52:52Z",
  "today": {
-  "date": "2026-11-21",
+  "date": "2026-11-23",
   "progress": {}
  },
  "plan_start": "2026-10-07",
@@ -123,9 +123,9 @@
    "name": "PASU TRACK XYZ",
    "master3": 660.0,
    "official_best": 580.0,
-   "best_14d": 544.0,
-   "median_14d": 446,
-   "runs_14d": 5,
+   "best_14d": null,
+   "median_14d": null,
+   "runs_14d": 0,
    "steps": [
     0.0,
     180.0,
@@ -153,7 +153,7 @@
    "official_best": 591.0,
    "best_14d": 553.0,
    "median_14d": 482,
-   "runs_14d": 186,
+   "runs_14d": 166,
    "steps": [
     0.0,
     198.0,
@@ -179,573 +179,79 @@
  "history": [
   {
    "name": "SMOOTH THIN TRACK V2",
-   "baseline": {
-    "median": 429,
-    "best": 490,
-    "runs": 103
-   },
+   "baseline": null,
    "days": [
     {
-     "date": "2026-09-23",
-     "median": 430,
-     "best": 457,
-     "runs": 3
-    },
-    {
-     "date": "2026-09-24",
-     "median": 406,
-     "best": 444,
-     "runs": 3
-    },
-    {
-     "date": "2026-09-25",
-     "median": 425,
-     "best": 477,
-     "runs": 15
-    },
-    {
-     "date": "2026-09-26",
-     "median": 418,
-     "best": 439,
-     "runs": 3
-    },
-    {
-     "date": "2026-09-27",
-     "median": 430,
-     "best": 490,
-     "runs": 12
-    },
-    {
-     "date": "2026-09-28",
-     "median": 442,
-     "best": 482,
-     "runs": 12
-    },
-    {
-     "date": "2026-09-29",
-     "median": 425,
-     "best": 463,
-     "runs": 18
-    },
-    {
-     "date": "2026-09-30",
-     "median": 400,
-     "best": 471,
-     "runs": 3
-    },
-    {
-     "date": "2026-10-01",
-     "median": 433,
-     "best": 479,
-     "runs": 19
-    },
-    {
-     "date": "2026-10-02",
-     "median": 409,
-     "best": 448,
-     "runs": 5
-    },
-    {
-     "date": "2026-10-03",
-     "median": 430,
-     "best": 472,
-     "runs": 10
-    },
-    {
-     "date": "2026-10-07",
-     "median": 400,
-     "best": 464,
-     "runs": 16
-    },
-    {
-     "date": "2026-10-09",
-     "median": 438,
-     "best": 474,
-     "runs": 8
-    },
-    {
-     "date": "2026-10-12",
-     "median": 450,
-     "best": 476,
-     "runs": 8
-    },
-    {
-     "date": "2026-10-17",
-     "median": 388,
-     "best": 424,
-     "runs": 5
-    },
-    {
-     "date": "2026-11-04",
-     "median": 434,
-     "best": 455,
-     "runs": 2
-    },
-    {
-     "date": "2026-11-05",
-     "median": 410,
-     "best": 471,
-     "runs": 15
-    },
-    {
-     "date": "2026-11-06",
-     "median": 434,
-     "best": 448,
-     "runs": 10
+     "date": "2026-05-05",
+     "median": 458,
+     "best": 485,
+     "runs": 4
     }
    ]
   },
   {
    "name": "AIR TRACK SMOOTH V3 150%",
-   "baseline": {
-    "median": 447,
-    "best": 545,
-    "runs": 94
-   },
+   "baseline": null,
    "days": [
     {
-     "date": "2026-09-23",
-     "median": 442,
-     "best": 494,
-     "runs": 3
-    },
-    {
-     "date": "2026-09-24",
-     "median": 430,
-     "best": 438,
-     "runs": 3
-    },
-    {
-     "date": "2026-09-25",
-     "median": 454,
-     "best": 487,
-     "runs": 15
-    },
-    {
-     "date": "2026-09-26",
-     "median": 435,
-     "best": 436,
-     "runs": 3
-    },
-    {
-     "date": "2026-09-27",
-     "median": 463,
-     "best": 505,
-     "runs": 9
-    },
-    {
-     "date": "2026-09-28",
-     "median": 433,
-     "best": 473,
-     "runs": 12
-    },
-    {
-     "date": "2026-09-29",
-     "median": 472,
-     "best": 521,
-     "runs": 18
-    },
-    {
-     "date": "2026-09-30",
-     "median": 416,
-     "best": 482,
-     "runs": 3
-    },
-    {
-     "date": "2026-10-01",
-     "median": 463,
-     "best": 499,
-     "runs": 13
-    },
-    {
-     "date": "2026-10-02",
-     "median": 413,
-     "best": 445,
-     "runs": 5
-    },
-    {
-     "date": "2026-10-03",
-     "median": 488,
-     "best": 545,
-     "runs": 10
-    },
-    {
-     "date": "2026-10-07",
-     "median": 404,
-     "best": 537,
-     "runs": 16
-    },
-    {
-     "date": "2026-10-09",
-     "median": 482,
-     "best": 526,
-     "runs": 8
-    },
-    {
-     "date": "2026-10-12",
-     "median": 441,
-     "best": 461,
-     "runs": 5
-    },
-    {
-     "date": "2026-10-13",
-     "median": 458,
-     "best": 477,
-     "runs": 3
-    },
-    {
-     "date": "2026-10-16",
-     "median": 489,
-     "best": 497,
-     "runs": 5
-    },
-    {
-     "date": "2026-11-04",
-     "median": 434,
-     "best": 472,
-     "runs": 11
-    },
-    {
-     "date": "2026-11-05",
-     "median": 427,
-     "best": 480,
-     "runs": 20
-    },
-    {
-     "date": "2026-11-06",
-     "median": 464,
-     "best": 510,
-     "runs": 10
+     "date": "2026-05-05",
+     "median": 557,
+     "best": 557,
+     "runs": 1
     }
    ]
   },
   {
    "name": "AIR CONTROL SPHERE - S",
-   "baseline": {
-    "median": 663,
-    "best": 842,
-    "runs": 95
-   },
+   "baseline": null,
    "days": [
     {
-     "date": "2026-09-23",
-     "median": 648,
-     "best": 744,
-     "runs": 6
-    },
-    {
-     "date": "2026-09-24",
-     "median": 566,
-     "best": 577,
-     "runs": 2
-    },
-    {
-     "date": "2026-09-25",
-     "median": 633,
-     "best": 745,
-     "runs": 15
-    },
-    {
-     "date": "2026-09-26",
-     "median": 624,
-     "best": 639,
-     "runs": 2
-    },
-    {
-     "date": "2026-09-27",
-     "median": 663,
-     "best": 770,
-     "runs": 9
-    },
-    {
-     "date": "2026-09-28",
-     "median": 662,
-     "best": 811,
-     "runs": 12
-    },
-    {
-     "date": "2026-09-29",
-     "median": 705,
-     "best": 842,
-     "runs": 18
-    },
-    {
-     "date": "2026-09-30",
-     "median": 648,
-     "best": 692,
-     "runs": 3
-    },
-    {
-     "date": "2026-10-01",
-     "median": 652,
-     "best": 768,
-     "runs": 13
-    },
-    {
-     "date": "2026-10-02",
-     "median": 694,
-     "best": 801,
-     "runs": 5
-    },
-    {
-     "date": "2026-10-03",
-     "median": 701,
-     "best": 799,
-     "runs": 10
-    },
-    {
-     "date": "2026-10-07",
-     "median": 602,
-     "best": 780,
-     "runs": 16
-    },
-    {
-     "date": "2026-10-09",
-     "median": 740,
-     "best": 853,
-     "runs": 8
-    },
-    {
-     "date": "2026-10-13",
-     "median": 625,
-     "best": 802,
-     "runs": 8
-    },
-    {
-     "date": "2026-10-16",
-     "median": 740,
-     "best": 861,
-     "runs": 5
-    },
-    {
-     "date": "2026-11-04",
-     "median": 614,
-     "best": 649,
-     "runs": 4
-    },
-    {
-     "date": "2026-11-05",
-     "median": 608,
-     "best": 703,
-     "runs": 20
-    },
-    {
-     "date": "2026-11-06",
-     "median": 692,
-     "best": 737,
-     "runs": 10
+     "date": "2026-05-05",
+     "median": 789,
+     "best": 789,
+     "runs": 1
     }
    ]
   },
   {
    "name": "PASU TRACK EVO (RCT) - 0.85X",
-   "baseline": {
-    "median": 340,
-    "best": 398,
-    "runs": 87
-   },
+   "baseline": null,
    "days": [
     {
-     "date": "2026-09-23",
-     "median": 340,
-     "best": 351,
-     "runs": 5
-    },
-    {
-     "date": "2026-09-25",
-     "median": 324,
-     "best": 359,
-     "runs": 15
-    },
-    {
-     "date": "2026-09-27",
-     "median": 346,
-     "best": 390,
-     "runs": 9
-    },
-    {
-     "date": "2026-09-28",
-     "median": 340,
-     "best": 356,
-     "runs": 12
-    },
-    {
-     "date": "2026-09-29",
-     "median": 344,
-     "best": 379,
-     "runs": 18
-    },
-    {
-     "date": "2026-10-01",
-     "median": 346,
-     "best": 398,
-     "runs": 13
-    },
-    {
-     "date": "2026-10-02",
-     "median": 328,
-     "best": 359,
-     "runs": 5
-    },
-    {
-     "date": "2026-10-03",
+     "date": "2026-05-05",
      "median": 350,
-     "best": 392,
-     "runs": 10
+     "best": 360,
+     "runs": 4
     },
     {
-     "date": "2026-10-08",
-     "median": 302,
-     "best": 354,
-     "runs": 8
+     "date": "2026-05-07",
+     "median": 336,
+     "best": 336,
+     "runs": 1
     },
     {
-     "date": "2026-10-10",
-     "median": 335,
-     "best": 385,
-     "runs": 16
+     "date": "2026-05-08",
+     "median": 331,
+     "best": 331,
+     "runs": 1
     },
     {
-     "date": "2026-10-14",
-     "median": 328,
-     "best": 351,
-     "runs": 14
-    },
-    {
-     "date": "2026-10-15",
-     "median": 284,
-     "best": 321,
-     "runs": 8
-    },
-    {
-     "date": "2026-11-04",
-     "median": 270,
-     "best": 275,
-     "runs": 2
-    },
-    {
-     "date": "2026-11-05",
-     "median": 310,
-     "best": 338,
-     "runs": 20
-    },
-    {
-     "date": "2026-11-06",
-     "median": 330,
-     "best": 361,
-     "runs": 10
+     "date": "2026-05-09",
+     "median": 301,
+     "best": 301,
+     "runs": 1
     }
    ]
   },
   {
    "name": "PASU TRACK XYZ",
-   "baseline": {
-    "median": 472,
-    "best": 556,
-    "runs": 84
-   },
+   "baseline": null,
    "days": [
     {
-     "date": "2026-09-23",
-     "median": 421,
-     "best": 446,
-     "runs": 2
-    },
-    {
-     "date": "2026-09-25",
-     "median": 450,
-     "best": 556,
-     "runs": 15
-    },
-    {
-     "date": "2026-09-27",
-     "median": 480,
-     "best": 526,
-     "runs": 9
-    },
-    {
-     "date": "2026-09-28",
-     "median": 470,
-     "best": 490,
-     "runs": 9
-    },
-    {
-     "date": "2026-09-29",
-     "median": 482,
-     "best": 534,
-     "runs": 21
-    },
-    {
-     "date": "2026-10-01",
-     "median": 473,
-     "best": 536,
-     "runs": 12
-    },
-    {
-     "date": "2026-10-02",
-     "median": 435,
-     "best": 488,
-     "runs": 4
-    },
-    {
-     "date": "2026-10-03",
-     "median": 470,
-     "best": 524,
-     "runs": 12
-    },
-    {
-     "date": "2026-10-08",
-     "median": 471,
-     "best": 524,
-     "runs": 8
-    },
-    {
-     "date": "2026-10-09",
-     "median": 436,
-     "best": 436,
-     "runs": 1
-    },
-    {
-     "date": "2026-10-10",
-     "median": 469,
-     "best": 532,
-     "runs": 16
-    },
-    {
-     "date": "2026-10-14",
-     "median": 430,
-     "best": 524,
-     "runs": 13
-    },
-    {
-     "date": "2026-10-15",
-     "median": 402,
-     "best": 494,
-     "runs": 8
-    },
-    {
-     "date": "2026-11-04",
-     "median": 342,
-     "best": 342,
-     "runs": 1
-    },
-    {
-     "date": "2026-11-05",
-     "median": 454,
-     "best": 506,
-     "runs": 20
-    },
-    {
-     "date": "2026-11-06",
-     "median": 480,
-     "best": 542,
-     "runs": 5
-    },
-    {
-     "date": "2026-11-07",
-     "median": 446,
-     "best": 544,
-     "runs": 5
+     "date": "2026-05-05",
+     "median": 510,
+     "best": 576,
+     "runs": 3
     }
    ]
   },
@@ -754,58 +260,16 @@
    "baseline": null,
    "days": [
     {
-     "date": "2026-11-07",
-     "median": 537,
-     "best": 537,
-     "runs": 1
+     "date": "2026-05-05",
+     "median": 490,
+     "best": 533,
+     "runs": 5
     },
     {
-     "date": "2026-11-08",
-     "median": 496,
-     "best": 534,
-     "runs": 14
-    },
-    {
-     "date": "2026-11-09",
-     "median": 449,
-     "best": 479,
-     "runs": 8
-    },
-    {
-     "date": "2026-11-10",
-     "median": 478,
-     "best": 528,
-     "runs": 25
-    },
-    {
-     "date": "2026-11-11",
-     "median": 482,
-     "best": 547,
-     "runs": 14
-    },
-    {
-     "date": "2026-11-13",
-     "median": 492,
-     "best": 546,
-     "runs": 20
-    },
-    {
-     "date": "2026-11-16",
-     "median": 483,
-     "best": 530,
-     "runs": 54
-    },
-    {
-     "date": "2026-11-17",
-     "median": 467,
-     "best": 519,
-     "runs": 30
-    },
-    {
-     "date": "2026-11-19",
-     "median": 508,
-     "best": 553,
-     "runs": 15
+     "date": "2026-05-09",
+     "median": 373,
+     "best": 409,
+     "runs": 2
     }
    ]
   }
@@ -2294,9 +1758,35 @@
  ],
  "days": [
   {
+   "date": "2026-11-23",
+   "runs": 3,
+   "restarts": 4,
+   "rest_median_s": 48,
+   "rest_longest_s": 58,
+   "breaks": [],
+   "playlists": [
+    {
+     "name": "(single scenario)",
+     "runs": 3,
+     "first": "12:48",
+     "last": "12:51"
+    }
+   ],
+   "scenarios": [
+    {
+     "name": "SMOOTH THIN TRACK V2 (EZ) - RANK",
+     "runs": 3,
+     "routine": "(single scenario)",
+     "first": "12:48",
+     "best": 480,
+     "median": 410
+    }
+   ]
+  },
+  {
    "date": "2026-11-21",
    "runs": 2,
-   "restarts": 15,
+   "restarts": 25,
    "rest_median_s": 16,
    "rest_longest_s": 20,
    "breaks": [],
@@ -2313,17 +1803,13 @@
      "name": "ASTRONAUTS RNG++",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "09:16",
-     "best": 171,
-     "median": 171
+     "first": "09:16"
     },
     {
      "name": "KRUNKER TRACKING POSSESSION",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "09:25",
-     "best": 915,
-     "median": 915
+     "first": "09:25"
     }
    ]
   },
@@ -2378,65 +1864,49 @@
      "name": "LR XYZ STRAFES SLOW ACCEL",
      "runs": 3,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "19:19",
-     "best": 480,
-     "median": 434
+     "first": "19:19"
     },
     {
      "name": "EASYTRACK - S",
      "runs": 3,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "19:25",
-     "best": 767,
-     "median": 729
+     "first": "19:25"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 15,
      "routine": "(single scenario)",
-     "first": "19:35",
-     "best": 553,
-     "median": 508
+     "first": "19:35"
     },
     {
      "name": "STT NEEDLE",
      "runs": 1,
      "routine": "BAZHAN HARD TRACKING",
-     "first": "19:38",
-     "best": 692,
-     "median": 692
+     "first": "19:38"
     },
     {
      "name": "THINBOT XYZ II",
      "runs": 1,
      "routine": "BAZHAN HARD TRACKING",
-     "first": "19:39",
-     "best": 713,
-     "median": 713
+     "first": "19:39"
     },
     {
      "name": "'STT' SHORT - L - 1.4X",
      "runs": 1,
      "routine": "BAZHAN HARD TRACKING",
-     "first": "19:41",
-     "best": 291,
-     "median": 291
+     "first": "19:41"
     },
     {
      "name": "XYZ MICROTRACK BLINK - L",
      "runs": 1,
      "routine": "BAZHAN HARD TRACKING",
-     "first": "19:42",
-     "best": 641,
-     "median": 641
+     "first": "19:42"
     },
     {
      "name": "GLIDE TRACK INTERMEDIATE - FORK",
      "runs": 2,
      "routine": "BAZHAN HARD TRACKING",
-     "first": "19:51",
-     "best": 710,
-     "median": 669
+     "first": "19:51"
     }
    ]
   },
@@ -2467,185 +1937,139 @@
      "name": "SHORT STRAFES (LMP) - S",
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "08:48",
-     "best": 356,
-     "median": 352
+     "first": "08:48"
     },
     {
      "name": "テ PRECISETRACK (EZ) - RANKED",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:03",
-     "best": 922,
-     "median": 922
+     "first": "09:03"
     },
     {
      "name": "SLIPPERY STRAFE",
      "runs": 5,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:05",
-     "best": 798,
-     "median": 762
+     "first": "09:05"
     },
     {
      "name": "WARCHTRACK",
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:41",
-     "best": 845,
-     "median": 800
+     "first": "09:41"
     },
     {
      "name": "CLOUDY TRACK I",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:44",
-     "best": 2137,
-     "median": 2137
+     "first": "09:44"
     },
     {
      "name": "LHC (MICRO) - 0.75x",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:46",
-     "best": 212,
-     "median": 212
+     "first": "09:46"
     },
     {
      "name": "FLAT ARENA POSS - THIN",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:47",
-     "best": 226,
-     "median": 226
+     "first": "09:47"
     },
     {
      "name": "SMOOTHLY JUMPING BOT",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:48",
-     "best": 428,
-     "median": 428
+     "first": "09:48"
     },
     {
      "name": "TORNADO COW (MICRO)",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:50",
-     "best": 398,
-     "median": 398
+     "first": "09:50"
     },
     {
      "name": "SHORT STRAFES (LMP)",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:52",
-     "best": 414,
-     "median": 414
+     "first": "09:52"
     },
     {
      "name": "ARCHTRACK",
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:53",
-     "best": 4260,
-     "median": 4220
+     "first": "09:53"
     },
     {
      "name": "HECTIC BALL BEGINNER - FORK",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:56",
-     "best": 816,
-     "median": 816
+     "first": "09:56"
     },
     {
      "name": "テ PLAYFUL SPHERE EVO - L - RANKED",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:57",
-     "best": 753,
-     "median": 753
+     "first": "09:57"
     },
     {
      "name": "CAGED CONTROLSPHERE - 25% EASIER",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:59",
-     "best": 590,
-     "median": 590
+     "first": "09:59"
     },
     {
      "name": "テ MICROSPHERE (EZ) - RANKED",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "10:01",
-     "best": 720,
-     "median": 720
+     "first": "10:01"
     },
     {
      "name": "JUMPING STRAFER",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "10:03",
-     "best": 248,
-     "median": 248
+     "first": "10:03"
     },
     {
      "name": "テ SMOOTH PILL EVO (EZ) - RANKED",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "10:11",
-     "best": 920,
-     "median": 920
+     "first": "10:11"
     },
     {
      "name": "CAGED CONTROLSPHERE HORIZONTAL L",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "10:13",
-     "best": 880,
-     "median": 880
+     "first": "10:13"
     },
     {
      "name": "BRUSH SWIPES - 0.75X",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "10:14",
-     "best": 435,
-     "median": 435
+     "first": "10:14"
     },
     {
      "name": "FAR STRAFER - L",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "10:17",
-     "best": 894,
-     "median": 894
+     "first": "10:17"
     },
     {
      "name": "REACTIVE STRAFER 3",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "10:18",
-     "best": 1032,
-     "median": 1032
+     "first": "10:18"
     },
     {
      "name": "TORNADO COW V2",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "10:21",
-     "best": 300,
-     "median": 300
+     "first": "10:21"
     },
     {
      "name": "ELUSIVE DODGE BEGINNER - FORK",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "10:24",
-     "best": 1122,
-     "median": 1122
+     "first": "10:24"
     }
    ]
   },
@@ -2736,105 +2160,79 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 30,
      "routine": "(single scenario)",
-     "first": "03:37",
-     "best": 519,
-     "median": 467
+     "first": "03:37"
     },
     {
      "name": "NEEDLETRACK MS",
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "10:53",
-     "best": 394,
-     "median": 350
+     "first": "10:53"
     },
     {
      "name": "SYW - S",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "10:55",
-     "best": 319,
-     "median": 319
+     "first": "10:55"
     },
     {
      "name": "LINETRACK I",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "10:57",
-     "best": 594,
-     "median": 594
+     "first": "10:57"
     },
     {
      "name": "CONTROLSPHERE MODERN - S",
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "10:58",
-     "best": 788,
-     "median": 716
+     "first": "10:58"
     },
     {
      "name": "GAME BALL",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "11:01",
-     "best": 742,
-     "median": 742
+     "first": "11:01"
     },
     {
      "name": "RSPHERE - 0.8X",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "15:55",
-     "best": 1547,
-     "median": 1547
+     "first": "15:55"
     },
     {
      "name": "LHC V1 40% SMALLER - 0.5X",
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "15:57",
-     "best": 278,
-     "median": 260
+     "first": "15:57"
     },
     {
      "name": "FLAT ARENA POSS",
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "16:00",
-     "best": 329,
-     "median": 308
+     "first": "16:00"
     },
     {
      "name": "XYTRACK MICRO - L",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "16:03",
-     "best": 3185,
-     "median": 3185
+     "first": "16:03"
     },
     {
      "name": "ASTRONAUTS RNG++",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "16:05",
-     "best": 216,
-     "median": 216
+     "first": "16:05"
     },
     {
      "name": "AIR KVAKA",
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "16:07",
-     "best": 893,
-     "median": 836
+     "first": "16:07"
     },
     {
      "name": "INFINITYTRACK",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "16:14",
-     "best": 338,
-     "median": 338
+     "first": "16:14"
     }
    ]
   },
@@ -2877,9 +2275,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 54,
      "routine": "(single scenario)",
-     "first": "08:53",
-     "best": 530,
-     "median": 483
+     "first": "08:53"
     }
    ]
   },
@@ -2928,9 +2324,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 20,
      "routine": "(single scenario)",
-     "first": "08:47",
-     "best": 546,
-     "median": 492
+     "first": "08:47"
     },
     {
      "name": "FAR STRAFER - L",
@@ -2942,25 +2336,19 @@
      "name": "LR XYZ STRAFES SLOW ACCEL",
      "runs": 5,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "08:57",
-     "best": 494,
-     "median": 422
+     "first": "08:57"
     },
     {
      "name": "WHISPHERE SMALL & SLOW 55% (PORT)",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "17:06",
-     "best": 1224,
-     "median": 1224
+     "first": "17:06"
     },
     {
      "name": "PGTI VOLTAIC EASY 80% (PORT)",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "17:08",
-     "best": 1289,
-     "median": 1289
+     "first": "17:08"
     }
    ]
   },
@@ -3009,41 +2397,31 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 14,
      "routine": "(single scenario)",
-     "first": "13:04",
-     "best": 547,
-     "median": 482
+     "first": "13:04"
     },
     {
      "name": "OLD BOXTRACK V2",
      "runs": 7,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "13:18",
-     "best": 341,
-     "median": 303
+     "first": "13:18"
     },
     {
      "name": "テ SWAYTRACK (EZ) - RANKED",
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "13:29",
-     "best": 860,
-     "median": 843
+     "first": "13:29"
     },
     {
      "name": "SLIPPERY STRAFE",
      "runs": 4,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "13:31",
-     "best": 890,
-     "median": 863
+     "first": "13:31"
     },
     {
      "name": "NEEDLETRACK MS",
      "runs": 3,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "13:35",
-     "best": 337,
-     "median": 292
+     "first": "13:35"
     },
     {
      "name": "FLAT ARENA POSS",
@@ -3145,9 +2523,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 25,
      "routine": "(single scenario)",
-     "first": "07:36",
-     "best": 528,
-     "median": 478
+     "first": "07:36"
     }
    ]
   },
@@ -3171,49 +2547,37 @@
      "name": "ANTI-MIRROR AUTO",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "15:04",
-     "best": 925,
-     "median": 925
+     "first": "15:04"
     },
     {
      "name": "CLOSE ANTI-MIRROR AUTO",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "15:06",
-     "best": 1044,
-     "median": 1044
+     "first": "15:06"
     },
     {
      "name": "AUTO LONG STRAFE - HUMAN GROUND",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "15:07",
-     "best": 741,
-     "median": 741
+     "first": "15:07"
     },
     {
      "name": "AUTOSTRAF ",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "15:09",
-     "best": 313,
-     "median": 313
+     "first": "15:09"
     },
     {
      "name": "AUTOSTRAFE CONTROLSPHERE",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "15:11",
-     "best": 2560,
-     "median": 2560
+     "first": "15:11"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 8,
      "routine": "(single scenario)",
-     "first": "18:14",
-     "best": 479,
-     "median": 449
+     "first": "18:14"
     }
    ]
   },
@@ -3237,9 +2601,7 @@
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 14,
      "routine": "(single scenario)",
-     "first": "15:33",
-     "best": 534,
-     "median": 496
+     "first": "15:33"
     }
    ]
   },
@@ -3312,81 +2674,61 @@
      "name": "PASU TRACK XYZ - RANKED",
      "runs": 5,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "00:00",
-     "best": 544,
-     "median": 446
+     "first": "00:00"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
      "runs": 6,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "05:31",
-     "best": 537,
-     "median": 537
+     "first": "05:31"
     },
     {
      "name": "ZEUS PART 4 - 1100",
      "runs": 7,
      "routine": "ZEUS VARIANTS",
-     "first": "05:45",
-     "best": 398,
-     "median": 340
+     "first": "05:45"
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
      "runs": 4,
      "routine": "ZEUS VARIANTS",
-     "first": "06:28",
-     "best": 545,
-     "median": 490
+     "first": "06:28"
     },
     {
      "name": "SMOOTH THIN",
      "runs": 3,
      "routine": "(single scenario)",
-     "first": "06:36",
-     "best": 311,
-     "median": 291
+     "first": "06:36"
     },
     {
      "name": "CENTERING NO STRAFES II",
      "runs": 3,
      "routine": "(single scenario)",
-     "first": "06:47",
-     "best": 429,
-     "median": 428
+     "first": "06:47"
     },
     {
      "name": "KTN MID DODGE L3",
      "runs": 1,
      "routine": "2",
-     "first": "13:18",
-     "best": 225,
-     "median": 225
+     "first": "13:18"
     },
     {
      "name": "AIRTIVE FAR DODGE L1",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "16:57",
-     "best": 313,
-     "median": 294
+     "first": "16:57"
     },
     {
      "name": "XYZ FAR DODGE L1",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "16:59",
-     "best": 286,
-     "median": 286
+     "first": "16:59"
     },
     {
      "name": "BOUNCETRACK FAR DODGE L1",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "17:20",
-     "best": 381,
-     "median": 381
+     "first": "17:20"
     }
    ]
   },
@@ -3453,41 +2795,31 @@
      "name": "SMOOTH THIN TRACK V2 - RANKED",
      "runs": 10,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "04:55",
-     "best": 448,
-     "median": 434
+     "first": "04:55"
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
      "runs": 10,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "07:02",
-     "best": 510,
-     "median": 464
+     "first": "07:02"
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
      "runs": 10,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "07:27",
-     "best": 737,
-     "median": 692
+     "first": "07:27"
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
      "runs": 10,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "07:39",
-     "best": 361,
-     "median": 330
+     "first": "07:39"
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
      "runs": 5,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "07:49",
-     "best": 542,
-     "median": 480
+     "first": "07:49"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -3499,9 +2831,7 @@
      "name": "MOVEMENT TRACKING",
      "runs": 7,
      "routine": "(single scenario)",
-     "first": "08:20",
-     "best": 927,
-     "median": 837
+     "first": "08:20"
     }
    ]
   },
@@ -3580,41 +2910,31 @@
      "name": "SMOOTH THIN TRACK V2 - RANKED",
      "runs": 15,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "02:08",
-     "best": 471,
-     "median": 410
+     "first": "02:08"
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
      "runs": 20,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "02:30",
-     "best": 480,
-     "median": 427
+     "first": "02:30"
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
      "runs": 20,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "03:02",
-     "best": 703,
-     "median": 608
+     "first": "03:02"
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
      "runs": 20,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "03:55",
-     "best": 338,
-     "median": 310
+     "first": "03:55"
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
      "runs": 20,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "05:10",
-     "best": 506,
-     "median": 454
+     "first": "05:10"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -3747,65 +3067,49 @@
      "name": "FLAT ARENA POSS - THIN FAST",
      "runs": 11,
      "routine": "ZEUS FOCUS",
-     "first": "03:15",
-     "best": 221,
-     "median": 201
+     "first": "03:15"
     },
     {
      "name": "TERRAIN POSSESSION - EASY",
      "runs": 4,
      "routine": "(single scenario)",
-     "first": "03:43",
-     "best": 988,
-     "median": 880
+     "first": "03:43"
     },
     {
      "name": "POSSESSION DUELS - 80%",
      "runs": 7,
      "routine": "(single scenario)",
-     "first": "03:52",
-     "best": 1660,
-     "median": 1565
+     "first": "03:52"
     },
     {
      "name": "MOVEMENT TRACKING",
      "runs": 19,
      "routine": "(single scenario)",
-     "first": "04:37",
-     "best": 875,
-     "median": 767
+     "first": "04:37"
     },
     {
      "name": "SMOOTH THIN TRACK V1 (EZ) POSS",
      "runs": 3,
      "routine": "POSSESSION TRACKING BY BALVARINE",
-     "first": "06:25",
-     "best": 361,
-     "median": 355
+     "first": "06:25"
     },
     {
      "name": "POSSESSION STATIC SPHERE",
      "runs": 4,
      "routine": "POSSESSION TRACKING BY BALVARINE",
-     "first": "06:28",
-     "best": 635,
-     "median": 570
+     "first": "06:28"
     },
     {
      "name": "FLAT ARENA POSS",
      "runs": 4,
      "routine": "POSSESSION TRACKING BY BALVARINE",
-     "first": "06:37",
-     "best": 320,
-     "median": 310
+     "first": "06:37"
     },
     {
      "name": "STATIC SPHERE POSSESSION",
      "runs": 1,
      "routine": "POSSESSION TRACKING BY BALVARINE",
-     "first": "06:48",
-     "best": 357,
-     "median": 357
+     "first": "06:48"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -3817,177 +3121,133 @@
      "name": "ARCHTRACK",
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "06:56",
-     "best": 4470,
-     "median": 4315
+     "first": "06:56"
     },
     {
      "name": "OLD BOXTRACK V2",
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "06:57",
-     "best": 319,
-     "median": 316
+     "first": "06:57"
     },
     {
      "name": "AIR KVAKA",
      "runs": 5,
      "routine": "AIR REACTIVE",
-     "first": "07:02",
-     "best": 954,
-     "median": 836
+     "first": "07:02"
     },
     {
      "name": "CONTACTIVE2 360",
      "runs": 1,
      "routine": "AIR REACTIVE",
-     "first": "07:03",
-     "best": 342,
-     "median": 342
+     "first": "07:03"
     },
     {
      "name": "AIR CLOSE",
      "runs": 2,
      "routine": "AIR REACTIVE BY BALVARINE",
-     "first": "07:21",
-     "best": 313,
-     "median": 312
+     "first": "07:21"
     },
     {
      "name": "CONTACTIVE SMALL",
      "runs": 1,
      "routine": "AIR REACTIVE BY BALVARINE",
-     "first": "07:26",
-     "best": 258,
-     "median": 258
+     "first": "07:26"
     },
     {
      "name": "REACTIVE AIR",
      "runs": 1,
      "routine": "AIR REACTIVE BY BALVARINE",
-     "first": "07:27",
-     "best": 322,
-     "median": 322
+     "first": "07:27"
     },
     {
      "name": "DECELERAIR",
      "runs": 8,
      "routine": "AIR REACTIVE BY BALVARINE",
-     "first": "11:15",
-     "best": 337,
-     "median": 292
+     "first": "11:15"
     },
     {
      "name": "NOT AIR NUNS AIO",
      "runs": 2,
      "routine": "AIR REACTIVE BY BALVARINE",
-     "first": "11:26",
-     "best": 330,
-     "median": 327
+     "first": "11:26"
     },
     {
      "name": "RESPHERE",
      "runs": 1,
      "routine": "AIR REACTIVE BY BALVARINE",
-     "first": "11:33",
-     "best": 331,
-     "median": 331
+     "first": "11:33"
     },
     {
      "name": "GAME BALL V2",
      "runs": 2,
      "routine": "AIR REACTIVE BY BALVARINE",
-     "first": "11:35",
-     "best": 480,
-     "median": 476
+     "first": "11:35"
     },
     {
      "name": "REACTIVE FAR STRAFER",
      "runs": 2,
      "routine": "AIR REACTIVE BY BALVARINE",
-     "first": "11:36",
-     "best": 474,
-     "median": 472
+     "first": "11:36"
     },
     {
      "name": "REACTIVE UFO",
      "runs": 8,
      "routine": "AIR REACTIVE BY BALVARINE",
-     "first": "11:41",
-     "best": 1265,
-     "median": 1126
+     "first": "11:41"
     },
     {
      "name": "HELL TRACK STATIC",
      "runs": 1,
      "routine": "AIR REACTIVE BY BALVARINE",
-     "first": "11:45",
-     "best": 310,
-     "median": 310
+     "first": "11:45"
     },
     {
      "name": "HECTIC BALL INTERMEDIATE - RANKED",
      "runs": 3,
      "routine": "AIR REACTIVE BY BALVARINE",
-     "first": "11:55",
-     "best": 467,
-     "median": 467
+     "first": "11:55"
     },
     {
      "name": "AGILE TRACK INTERMEDIATE - RANKED",
      "runs": 1,
      "routine": "AIR REACTIVE BY BALVARINE",
-     "first": "12:00",
-     "best": 416,
-     "median": 416
+     "first": "12:00"
     },
     {
      "name": "AIR KVAKA - S",
      "runs": 1,
      "routine": "AIR REACTIVE BY BALVARINE",
-     "first": "12:02",
-     "best": 454,
-     "median": 454
+     "first": "12:02"
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "12:05",
-     "best": 275,
-     "median": 270
+     "first": "12:05"
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "12:06",
-     "best": 342,
-     "median": 342
+     "first": "12:06"
     },
     {
      "name": "SMOOTH THIN TRACK V2 - RANKED",
      "runs": 3,
      "routine": "(single scenario)",
-     "first": "12:10",
-     "best": 455,
-     "median": 434
+     "first": "12:10"
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
      "runs": 11,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "17:05",
-     "best": 472,
-     "median": 434
+     "first": "17:05"
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
      "runs": 4,
      "routine": "AIMBEAST 1 INTERMEDIATE",
-     "first": "17:57",
-     "best": 649,
-     "median": 614
+     "first": "17:57"
     }
    ]
   },
@@ -4030,65 +3290,49 @@
      "name": "POSSESSION STATIC SPHERE FAR CLICK",
      "runs": 5,
      "routine": "ZEUS FOCUS",
-     "first": "00:12",
-     "best": 36,
-     "median": 23
+     "first": "00:12"
     },
     {
      "name": "FLAT ARENA POSS - THIN FAST",
      "runs": 21,
      "routine": "ZEUS FOCUS",
-     "first": "00:14",
-     "best": 227,
-     "median": 190
+     "first": "00:14"
     },
     {
      "name": "FLAT ARENA POSS -THIN FAST CLICK",
      "runs": 1,
      "routine": "ZEUS FOCUS",
-     "first": "00:26",
-     "best": 37,
-     "median": 37
+     "first": "00:26"
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR) BURST",
      "runs": 1,
      "routine": "ZEUS FOCUS",
-     "first": "00:39",
-     "best": 111,
-     "median": 111
+     "first": "00:39"
     },
     {
      "name": "FLAT ARENA POSS - THIN FAST BURST",
      "runs": 1,
      "routine": "ZEUS FOCUS",
-     "first": "00:43",
-     "best": 114,
-     "median": 114
+     "first": "00:43"
     },
     {
      "name": "TERRAIN POSSESSION - EASY",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "01:21",
-     "best": 829,
-     "median": 829
+     "first": "01:21"
     },
     {
      "name": "POSSESSED DODGE AIM",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "01:23",
-     "best": 1070,
-     "median": 1070
+     "first": "01:23"
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR)",
      "runs": 13,
      "routine": "ZEUS FOCUS",
-     "first": "19:10",
-     "best": 535,
-     "median": 451
+     "first": "19:10"
     }
    ]
   },
@@ -4149,89 +3393,67 @@
      "name": "ZEUS PART 1 - FAR 2600",
      "runs": 7,
      "routine": "ZEUS VARIANTS",
-     "first": "03:41",
-     "best": 301,
-     "median": 271
+     "first": "03:41"
     },
     {
      "name": "ZEUS PART 2 - 2100",
      "runs": 14,
      "routine": "ZEUS VARIANTS",
-     "first": "04:14",
-     "best": 325,
-     "median": 311
+     "first": "04:14"
     },
     {
      "name": "ZEUS PART 3 - 1600",
      "runs": 3,
      "routine": "ZEUS VARIANTS",
-     "first": "05:05",
-     "best": 360,
-     "median": 316
+     "first": "05:05"
     },
     {
      "name": "ZEUS PART 4 - 1100",
      "runs": 22,
      "routine": "ZEUS VARIANTS",
-     "first": "06:50",
-     "best": 436,
-     "median": 358
+     "first": "06:50"
     },
     {
      "name": "ZEUS PART 5 - CLOSE 600",
      "runs": 1,
      "routine": "ZEUS VARIANTS",
-     "first": "07:15",
-     "best": 575,
-     "median": 575
+     "first": "07:15"
     },
     {
      "name": "ZEUS PART 6 - FAR CATCH-UP",
      "runs": 2,
      "routine": "ZEUS VARIANTS",
-     "first": "07:22",
-     "best": 290,
-     "median": 270
+     "first": "07:22"
     },
     {
      "name": "ZEUS PART 7 - FAR LONG STRAFES",
      "runs": 1,
      "routine": "ZEUS VARIANTS",
-     "first": "07:37",
-     "best": 403,
-     "median": 403
+     "first": "07:37"
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
      "runs": 15,
      "routine": "ZEUS VARIANTS",
-     "first": "07:47",
-     "best": 537,
-     "median": 478
+     "first": "07:47"
     },
     {
      "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
      "runs": 9,
      "routine": "ZEUS VARIANTS",
-     "first": "07:55",
-     "best": 803,
-     "median": 720
+     "first": "07:55"
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR)",
      "runs": 5,
      "routine": "ZEUS FOCUS",
-     "first": "23:27",
-     "best": 511,
-     "median": 467
+     "first": "23:27"
     },
     {
      "name": "FLAT ARENA POSS - THIN FAST",
      "runs": 2,
      "routine": "ZEUS FOCUS",
-     "first": "23:53",
-     "best": 189,
-     "median": 187
+     "first": "23:53"
     }
    ]
   },
@@ -4304,57 +3526,43 @@
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
      "runs": 7,
      "routine": "ZEUS FOCUS",
-     "first": "04:24",
-     "best": 552,
-     "median": 527
+     "first": "04:24"
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR)",
      "runs": 5,
      "routine": "ZEUS FOCUS",
-     "first": "04:28",
-     "best": 526,
-     "median": 411
+     "first": "04:28"
     },
     {
      "name": "FLAT ARENA POSS - THIN FAST",
      "runs": 4,
      "routine": "ZEUS FOCUS",
-     "first": "04:38",
-     "best": 220,
-     "median": 188
+     "first": "04:38"
     },
     {
      "name": "POSSESSION STATIC SPHERE FAR CLICK",
      "runs": 4,
      "routine": "ZEUS FOCUS",
-     "first": "04:54",
-     "best": 41,
-     "median": 36
+     "first": "04:54"
     },
     {
      "name": "FLAT ARENA POSS -THIN FAST CLICK",
      "runs": 6,
      "routine": "ZEUS FOCUS",
-     "first": "05:00",
-     "best": 34,
-     "median": 34
+     "first": "05:00"
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR) BURST",
      "runs": 3,
      "routine": "ZEUS FOCUS",
-     "first": "05:07",
-     "best": 94,
-     "median": 94
+     "first": "05:07"
     },
     {
      "name": "FLAT ARENA POSS - THIN FAST BURST",
      "runs": 5,
      "routine": "ZEUS FOCUS",
-     "first": "05:28",
-     "best": 100,
-     "median": 91
+     "first": "05:28"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -4493,41 +3701,31 @@
      "name": "LSI VERY FAR DODGE L2",
      "runs": 8,
      "routine": "1",
-     "first": "00:36",
-     "best": 594,
-     "median": 554
+     "first": "00:36"
     },
     {
      "name": "LSI VERY FAR DODGE L2 - 2X STRAFES",
      "runs": 7,
      "routine": "1",
-     "first": "00:58",
-     "best": 642,
-     "median": 550
+     "first": "00:58"
     },
     {
      "name": "LSI VERY FAR L2",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "01:32",
-     "best": 611,
-     "median": 611
+     "first": "01:32"
     },
     {
      "name": "143 ANY STRAFES (FAR)",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "01:34",
-     "best": 732,
-     "median": 714
+     "first": "01:34"
     },
     {
      "name": "LSI FAR DODGE L3",
      "runs": 5,
      "routine": "1",
-     "first": "01:36",
-     "best": 490,
-     "median": 465
+     "first": "01:36"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -4539,73 +3737,55 @@
      "name": "ZEUS PART 2 - 2100",
      "runs": 3,
      "routine": "ZEUS FOCUS",
-     "first": "05:30",
-     "best": 337,
-     "median": 313
+     "first": "05:30"
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
      "runs": 22,
      "routine": "ZEUS FOCUS",
-     "first": "05:38",
-     "best": 521,
-     "median": 494
+     "first": "05:38"
     },
     {
      "name": "XEN TS 90% - RANKED",
      "runs": 7,
      "routine": "(single scenario)",
-     "first": "14:49",
-     "best": 305,
-     "median": 297
+     "first": "14:49"
     },
     {
      "name": "TRM TS VARIED 5H - RANKED",
      "runs": 1,
      "routine": "ZEUS FOCUS",
-     "first": "15:10",
-     "best": 362,
-     "median": 362
+     "first": "15:10"
     },
     {
      "name": "SUMO AIR TS 180 V2 - RANKED",
      "runs": 2,
      "routine": "ZEUS FOCUS",
-     "first": "15:14",
-     "best": 1121,
-     "median": 1098
+     "first": "15:14"
     },
     {
      "name": "VOX TS BALANCED 125% - RANKED",
      "runs": 1,
      "routine": "ZEUS FOCUS",
-     "first": "15:18",
-     "best": 350,
-     "median": 350
+     "first": "15:18"
     },
     {
      "name": "POSSESSION EVO STATIC SPHERE (FAR)",
      "runs": 9,
      "routine": "1",
-     "first": "18:15",
-     "best": 538,
-     "median": 408
+     "first": "18:15"
     },
     {
      "name": "FLAT ARENA POSS - THIN FAST",
      "runs": 8,
      "routine": "1",
-     "first": "19:41",
-     "best": 200,
-     "median": 194
+     "first": "19:41"
     },
     {
      "name": "POSSESSION STATIC SPHERE FAR CLICK",
      "runs": 1,
      "routine": "ZEUS FOCUS",
-     "first": "21:39",
-     "best": 32,
-     "median": 32
+     "first": "21:39"
     },
     {
      "name": "FLAT ARENA POSS -THIN FAST CLICK",
@@ -4654,73 +3834,55 @@
      "name": "ZEUS PART 1 - FAR 2600",
      "runs": 1,
      "routine": "ZEUS VARIANTS",
-     "first": "17:53",
-     "best": 306,
-     "median": 306
+     "first": "17:53"
     },
     {
      "name": "ZEUS PART 2 - 2100",
      "runs": 1,
      "routine": "ZEUS VARIANTS",
-     "first": "17:54",
-     "best": 335,
-     "median": 335
+     "first": "17:54"
     },
     {
      "name": "ZEUS PART 3 - 1600",
      "runs": 6,
      "routine": "ZEUS VARIANTS",
-     "first": "17:56",
-     "best": 363,
-     "median": 330
+     "first": "17:56"
     },
     {
      "name": "ZEUS PART 4 - 1100",
      "runs": 5,
      "routine": "ZEUS VARIANTS",
-     "first": "18:08",
-     "best": 430,
-     "median": 389
+     "first": "18:08"
     },
     {
      "name": "ZEUS PART 5 - CLOSE 600",
      "runs": 2,
      "routine": "ZEUS VARIANTS",
-     "first": "18:18",
-     "best": 565,
-     "median": 547
+     "first": "18:18"
     },
     {
      "name": "ZEUS PART 6 - FAR CATCH-UP",
      "runs": 2,
      "routine": "ZEUS VARIANTS",
-     "first": "18:23",
-     "best": 272,
-     "median": 251
+     "first": "18:23"
     },
     {
      "name": "ZEUS PART 7 - FAR LONG STRAFES",
      "runs": 2,
      "routine": "ZEUS VARIANTS",
-     "first": "18:31",
-     "best": 400,
-     "median": 395
+     "first": "18:31"
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
      "runs": 8,
      "routine": "ZEUS VARIANTS",
-     "first": "18:44",
-     "best": 533,
-     "median": 478
+     "first": "18:44"
     },
     {
      "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
      "runs": 9,
      "routine": "ZEUS VARIANTS",
-     "first": "19:36",
-     "best": 785,
-     "median": 733
+     "first": "19:36"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -4769,97 +3931,73 @@
      "name": "ZEUS PART 1 - FAR 2600",
      "runs": 3,
      "routine": "ZEUS VARIANTS",
-     "first": "13:27",
-     "best": 312,
-     "median": 276
+     "first": "13:27"
     },
     {
      "name": "ZEUS PART 2 - 2100",
      "runs": 4,
      "routine": "ZEUS VARIANTS",
-     "first": "14:27",
-     "best": 349,
-     "median": 300
+     "first": "14:27"
     },
     {
      "name": "ZEUS PART 3 - 1600",
      "runs": 6,
      "routine": "ZEUS VARIANTS",
-     "first": "14:42",
-     "best": 376,
-     "median": 344
+     "first": "14:42"
     },
     {
      "name": "ZEUS PART 4 - 1100",
      "runs": 3,
      "routine": "ZEUS VARIANTS",
-     "first": "15:06",
-     "best": 438,
-     "median": 394
+     "first": "15:06"
     },
     {
      "name": "ZEUS PART 5 - CLOSE 600",
      "runs": 3,
      "routine": "ZEUS VARIANTS",
-     "first": "15:13",
-     "best": 579,
-     "median": 549
+     "first": "15:13"
     },
     {
      "name": "ZEUS PART 6 - FAR CATCH-UP",
      "runs": 3,
      "routine": "ZEUS VARIANTS",
-     "first": "17:01",
-     "best": 265,
-     "median": 256
+     "first": "17:01"
     },
     {
      "name": "ZEUS PART 7 - FAR LONG STRAFES",
      "runs": 4,
      "routine": "ZEUS VARIANTS",
-     "first": "17:05",
-     "best": 409,
-     "median": 384
+     "first": "17:05"
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
      "runs": 3,
      "routine": "ZEUS VARIANTS",
-     "first": "17:24",
-     "best": 529,
-     "median": 497
+     "first": "17:24"
     },
     {
      "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
      "runs": 6,
      "routine": "ZEUS VARIANTS",
-     "first": "17:32",
-     "best": 766,
-     "median": 746
+     "first": "17:32"
     },
     {
      "name": "LSI VERY FAR DODGE L2",
      "runs": 2,
      "routine": "1",
-     "first": "18:26",
-     "best": 582,
-     "median": 548
+     "first": "18:26"
     },
     {
      "name": "LSI VERY FAR DODGE L2 - 2X STRAFES",
      "runs": 1,
      "routine": "1",
-     "first": "18:32",
-     "best": 610,
-     "median": 610
+     "first": "18:32"
     },
     {
      "name": "LSI FAR DODGE L3",
      "runs": 3,
      "routine": "1",
-     "first": "18:34",
-     "best": 452,
-     "median": 440
+     "first": "18:34"
     }
    ]
   },
@@ -4883,25 +4021,19 @@
      "name": "LSI VERY FAR DODGE L2",
      "runs": 6,
      "routine": "1",
-     "first": "02:15",
-     "best": 554,
-     "median": 532
+     "first": "02:15"
     },
     {
      "name": "LSI VERY FAR DODGE L2 - 2X STRAFES",
      "runs": 4,
      "routine": "1",
-     "first": "02:36",
-     "best": 601,
-     "median": 560
+     "first": "02:36"
     },
     {
      "name": "LSI FAR DODGE L3",
      "runs": 4,
      "routine": "1",
-     "first": "02:42",
-     "best": 434,
-     "median": 412
+     "first": "02:42"
     }
    ]
   },
@@ -4974,57 +4106,43 @@
      "name": "TRACKSTOP PART 1 - CLOSE 260-400",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "00:01",
-     "best": 377,
-     "median": 377
+     "first": "00:01"
     },
     {
      "name": "TRACKSTOP PART 2 - CLOSE 400-530",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "00:03",
-     "best": 348,
-     "median": 348
+     "first": "00:03"
     },
     {
      "name": "TRACKSTOP PART 3 - MID 620-760",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "00:05",
-     "best": 338,
-     "median": 338
+     "first": "00:05"
     },
     {
      "name": "TRACKSTOP PART 4 - MID 760-900",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "00:08",
-     "best": 348,
-     "median": 348
+     "first": "00:08"
     },
     {
      "name": "TRACKSTOP CLOSE 1 - SHORT STRAFES",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "00:20",
-     "best": 469,
-     "median": 444
+     "first": "00:20"
     },
     {
      "name": "TRACKSTOP CLOSE 2 - LONG STRAFES",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "00:21",
-     "best": 832,
-     "median": 786
+     "first": "00:21"
     },
     {
      "name": "TRACKSTOP CLOSE 3 - STOPS",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "00:22",
-     "best": 378,
-     "median": 378
+     "first": "00:22"
     },
     {
      "name": "TRACKSTOP CLOSE 3 - STOPS (RANKED)",
@@ -5036,97 +4154,73 @@
      "name": "143 TRACKSTOP DISTANCE EVO",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "00:39",
-     "best": 390,
-     "median": 390
+     "first": "00:39"
     },
     {
      "name": "TRACKSTOP FAR 3 - STOPS",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "00:50",
-     "best": 359,
-     "median": 359
+     "first": "00:50"
     },
     {
      "name": "TRACKSTOP CLOSE 4 - MORE STOPS",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "00:53",
-     "best": 389,
-     "median": 350
+     "first": "00:53"
     },
     {
      "name": "ZEUS PART 1 - FAR 2600",
      "runs": 8,
      "routine": "ZEUS VARIANTS",
-     "first": "15:36",
-     "best": 299,
-     "median": 272
+     "first": "15:36"
     },
     {
      "name": "ZEUS PART 2 - 2100",
      "runs": 7,
      "routine": "ZEUS VARIANTS",
-     "first": "15:44",
-     "best": 334,
-     "median": 318
+     "first": "15:44"
     },
     {
      "name": "ZEUS PART 3 - 1600",
      "runs": 8,
      "routine": "ZEUS VARIANTS",
-     "first": "16:12",
-     "best": 379,
-     "median": 348
+     "first": "16:12"
     },
     {
      "name": "ZEUS PART 4 - 1100",
      "runs": 7,
      "routine": "ZEUS VARIANTS",
-     "first": "16:40",
-     "best": 416,
-     "median": 397
+     "first": "16:40"
     },
     {
      "name": "ZEUS PART 5 - CLOSE 600",
      "runs": 4,
      "routine": "ZEUS VARIANTS",
-     "first": "16:54",
-     "best": 564,
-     "median": 560
+     "first": "16:54"
     },
     {
      "name": "ZEUS PART 6 - FAR CATCH-UP",
      "runs": 8,
      "routine": "ZEUS VARIANTS",
-     "first": "17:03",
-     "best": 274,
-     "median": 261
+     "first": "17:03"
     },
     {
      "name": "ZEUS PART 7 - FAR LONG STRAFES",
      "runs": 5,
      "routine": "ZEUS VARIANTS",
-     "first": "17:08",
-     "best": 415,
-     "median": 392
+     "first": "17:08"
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
      "runs": 13,
      "routine": "ZEUS VARIANTS",
-     "first": "19:46",
-     "best": 544,
-     "median": 465
+     "first": "19:46"
     },
     {
      "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
      "runs": 5,
      "routine": "ZEUS VARIANTS",
-     "first": "20:13",
-     "best": 800,
-     "median": 757
+     "first": "20:13"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -5138,17 +4232,13 @@
      "name": "LSI VERY FAR DODGE L2",
      "runs": 3,
      "routine": "(single scenario)",
-     "first": "22:52",
-     "best": 545,
-     "median": 497
+     "first": "22:52"
     },
     {
      "name": "LSI VERY FAR DODGE L2 - 2X STRAFES",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "23:09",
-     "best": 511,
-     "median": 511
+     "first": "23:09"
     }
    ]
   },
@@ -5191,129 +4281,97 @@
      "name": "ZEUS TRACK EVO - FAR 115%",
      "runs": 6,
      "routine": "ZEUS FOCUS",
-     "first": "00:04",
-     "best": 430,
-     "median": 390
+     "first": "00:04"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 115%",
      "runs": 12,
      "routine": "ZEUS FOCUS",
-     "first": "00:09",
-     "best": 513,
-     "median": 486
+     "first": "00:09"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 130%",
      "runs": 3,
      "routine": "ZEUS FOCUS",
-     "first": "19:01",
-     "best": 428,
-     "median": 393
+     "first": "19:01"
     },
     {
      "name": "ZEUS TRACK EVO - FAR 130%",
      "runs": 3,
      "routine": "ZEUS FOCUS",
-     "first": "19:19",
-     "best": 334,
-     "median": 318
+     "first": "19:19"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE CATCH-UP",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "22:29",
-     "best": 452,
-     "median": 452
+     "first": "22:29"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE LONG STRAFES",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "22:31",
-     "best": 661,
-     "median": 660
+     "first": "22:31"
     },
     {
      "name": "ZEUS PART 1 - FAR 2600",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "22:52",
-     "best": 333,
-     "median": 288
+     "first": "22:52"
     },
     {
      "name": "ZEUS PART 2 - 2100",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "22:53",
-     "best": 369,
-     "median": 270
+     "first": "22:53"
     },
     {
      "name": "ZEUS PART 3 - 1600",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "22:55",
-     "best": 408,
-     "median": 327
+     "first": "22:55"
     },
     {
      "name": "ZEUS PART 4 - 1100",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "22:56",
-     "best": 490,
-     "median": 372
+     "first": "22:56"
     },
     {
      "name": "143 TRACKSTOP DISTANCE EVO",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "23:00",
-     "best": 373,
-     "median": 360
+     "first": "23:00"
     },
     {
      "name": "ZEUS PART 5 - CLOSE 600",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "23:26",
-     "best": 529,
-     "median": 529
+     "first": "23:26"
     },
     {
      "name": "ZEUS PART 6 - FAR CATCH-UP",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "23:40",
-     "best": 225,
-     "median": 225
+     "first": "23:40"
     },
     {
      "name": "ZEUS PART 7 - FAR LONG STRAFES",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "23:45",
-     "best": 319,
-     "median": 319
+     "first": "23:45"
     },
     {
      "name": "ZEUS PART 8 - CLOSE CATCH-UP",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "23:53",
-     "best": 469,
-     "median": 469
+     "first": "23:53"
     },
     {
      "name": "ZEUS PART 9 - CLOSE LONG STRAFES",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "23:58",
-     "best": 720,
-     "median": 720
+     "first": "23:58"
     }
    ]
   },
@@ -5356,17 +4414,13 @@
      "name": "ZEUS TRACK EVO - FAR 115%",
      "runs": 10,
      "routine": "ZEUS FOCUS",
-     "first": "01:15",
-     "best": 431,
-     "median": 392
+     "first": "01:15"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 115%",
      "runs": 9,
      "routine": "ZEUS FOCUS",
-     "first": "01:22",
-     "best": 539,
-     "median": 461
+     "first": "01:22"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -5378,17 +4432,13 @@
      "name": "ZEUS TRACK EVO - CLOSE 130%",
      "runs": 3,
      "routine": "ZEUS FOCUS",
-     "first": "21:48",
-     "best": 439,
-     "median": 415
+     "first": "21:48"
     },
     {
      "name": "ZEUS TRACK EVO - FAR 130%",
      "runs": 3,
      "routine": "ZEUS FOCUS",
-     "first": "22:15",
-     "best": 340,
-     "median": 309
+     "first": "22:15"
     }
    ]
   },
@@ -5419,17 +4469,13 @@
      "name": "ZEUS TRACK EVO - FAR 115%",
      "runs": 4,
      "routine": "ZEUS FOCUS",
-     "first": "13:23",
-     "best": 352,
-     "median": 334
+     "first": "13:23"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 115%",
      "runs": 3,
      "routine": "ZEUS FOCUS",
-     "first": "13:29",
-     "best": 454,
-     "median": 438
+     "first": "13:29"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -5490,9 +4536,7 @@
      "name": "143 FALER TRACK FAR",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "00:00",
-     "best": 412,
-     "median": 412
+     "first": "00:00"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -5504,25 +4548,19 @@
      "name": "ZEUS TRACK EVO - CLOSE 115%",
      "runs": 7,
      "routine": "(single scenario)",
-     "first": "10:14",
-     "best": 507,
-     "median": 408
+     "first": "10:14"
     },
     {
      "name": "ZEUS TRACK EVO - FAR 115%",
      "runs": 4,
      "routine": "(single scenario)",
-     "first": "10:16",
-     "best": 389,
-     "median": 343
+     "first": "10:16"
     },
     {
      "name": "VT SNAKE TRACK ADVANCED S5 (PORT)",
      "runs": 6,
      "routine": "(single scenario)",
-     "first": "16:30",
-     "best": 1611,
-     "median": 1178
+     "first": "16:30"
     }
    ]
   },
@@ -5571,33 +4609,25 @@
      "name": "SCX CLOSE STRAFES",
      "runs": 2,
      "routine": "ZEUS FOCUS",
-     "first": "15:01",
-     "best": 700,
-     "median": 700
+     "first": "15:01"
     },
     {
      "name": "ZEUS TRACK EVO - FAR",
      "runs": 6,
      "routine": "ZEUS FOCUS",
-     "first": "15:05",
-     "best": 500,
-     "median": 484
+     "first": "15:05"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 0.85X",
      "runs": 4,
      "routine": "ZEUS FOCUS",
-     "first": "15:20",
-     "best": 560,
-     "median": 545
+     "first": "15:20"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE",
      "runs": 6,
      "routine": "ZEUS FOCUS",
-     "first": "15:27",
-     "best": 565,
-     "median": 559
+     "first": "15:27"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -5609,17 +4639,13 @@
      "name": "143 CLOVER CONTROL",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "23:57",
-     "best": 3339,
-     "median": 3339
+     "first": "23:57"
     },
     {
      "name": "143 DOMISPHERE",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "23:59",
-     "best": 2565,
-     "median": 2565
+     "first": "23:59"
     }
    ]
   },
@@ -5662,169 +4688,127 @@
      "name": "HIVE CLICK HARD - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "12:42",
-     "best": 23,
-     "median": 23
+     "first": "12:42"
     },
     {
      "name": "PASU 2 TARGETS HARD - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "12:43",
-     "best": 33,
-     "median": 33
+     "first": "12:43"
     },
     {
      "name": "STAR CLICKING V3 - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "12:45",
-     "best": 22,
-     "median": 22
+     "first": "12:45"
     },
     {
      "name": "PASU 5TGS SMOOTH V2 - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "12:46",
-     "best": 36,
-     "median": 36
+     "first": "12:46"
     },
     {
      "name": "cisA Pasu Wave Advanced",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "12:49",
-     "best": 46,
-     "median": 46
+     "first": "12:49"
     },
     {
      "name": "cisA 3DBALLS Advanced",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "12:50",
-     "best": 62,
-     "median": 62
+     "first": "12:50"
     },
     {
      "name": "cisA VOX2CL Dodge Advanced",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "12:52",
-     "best": 1400,
-     "median": 1400
+     "first": "12:52"
     },
     {
      "name": "cisA PRESSURE DODGE Advanced",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "12:53",
-     "best": 2600,
-     "median": 2600
+     "first": "12:53"
     },
     {
      "name": "テ LEAVES CLICKING - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "12:54",
-     "best": 510,
-     "median": 510
+     "first": "12:54"
     },
     {
      "name": "テ LEAP CLICK - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "12:56",
-     "best": 310,
-     "median": 310
+     "first": "12:56"
     },
     {
      "name": "テ BARREL CLICK - RANKED",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "12:58",
-     "best": 400,
-     "median": 380
+     "first": "12:58"
     },
     {
      "name": "PRECISE SHOT ADVANCED - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "13:01",
-     "best": 410,
-     "median": 410
+     "first": "13:01"
     },
     {
      "name": "STARFALL ADVANCED - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "13:04",
-     "best": 270,
-     "median": 270
+     "first": "13:04"
     },
     {
      "name": "QUICK SHOT ADVANCED - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "13:06",
-     "best": 440,
-     "median": 440
+     "first": "13:06"
     },
     {
      "name": "143 WAVY CLICK",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "13:07",
-     "best": 416,
-     "median": 416
+     "first": "13:07"
     },
     {
      "name": "143 STRAFING HEADS CLICKING",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "13:08",
-     "best": 39,
-     "median": 39
+     "first": "13:08"
     },
     {
      "name": "143 MICRO EVASIVE",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "13:12",
-     "best": 51,
-     "median": 51
+     "first": "13:12"
     },
     {
      "name": "SCX CLOSE STRAFES",
      "runs": 4,
      "routine": "ZEUS FOCUS",
-     "first": "19:43",
-     "best": 710,
-     "median": 650
+     "first": "19:43"
     },
     {
      "name": "ZEUS TRACK EVO - FAR",
      "runs": 12,
      "routine": "ZEUS FOCUS",
-     "first": "19:46",
-     "best": 493,
-     "median": 444
+     "first": "19:46"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 0.85X",
      "runs": 8,
      "routine": "ZEUS FOCUS",
-     "first": "19:57",
-     "best": 586,
-     "median": 576
+     "first": "19:57"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE",
      "runs": 12,
      "routine": "ZEUS FOCUS",
-     "first": "20:06",
-     "best": 599,
-     "median": 548
+     "first": "20:06"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -5879,33 +4863,25 @@
      "name": "SCX CLOSE STRAFES",
      "runs": 4,
      "routine": "ZEUS FOCUS",
-     "first": "08:53",
-     "best": 671,
-     "median": 646
+     "first": "08:53"
     },
     {
      "name": "ZEUS TRACK EVO - FAR",
      "runs": 12,
      "routine": "ZEUS FOCUS",
-     "first": "08:58",
-     "best": 477,
-     "median": 444
+     "first": "08:58"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 0.85X",
      "runs": 8,
      "routine": "ZEUS FOCUS",
-     "first": "09:31",
-     "best": 598,
-     "median": 566
+     "first": "09:31"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE",
      "runs": 12,
      "routine": "ZEUS FOCUS",
-     "first": "09:37",
-     "best": 620,
-     "median": 553
+     "first": "09:37"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -5966,25 +4942,19 @@
      "name": "SCX CLOSE STRAFES",
      "runs": 6,
      "routine": "ZEUS FOCUS",
-     "first": "08:47",
-     "best": 652,
-     "median": 614
+     "first": "08:47"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE 0.85X",
      "runs": 9,
      "routine": "ZEUS FOCUS",
-     "first": "08:57",
-     "best": 574,
-     "median": 552
+     "first": "08:57"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE",
      "runs": 13,
      "routine": "ZEUS FOCUS",
-     "first": "09:14",
-     "best": 586,
-     "median": 542
+     "first": "09:14"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -5996,9 +4966,7 @@
      "name": "ZEUS TRACK EVO - FAR",
      "runs": 7,
      "routine": "(single scenario)",
-     "first": "12:28",
-     "best": 428,
-     "median": 415
+     "first": "12:28"
     }
    ]
   },
@@ -6095,73 +5063,55 @@
      "name": "SCX CLOSE STRAFES",
      "runs": 3,
      "routine": "ZEUS DAILY",
-     "first": "06:41",
-     "best": 657,
-     "median": 596
+     "first": "06:41"
     },
     {
      "name": "ZEUS TRACK FAR BZN EDITION",
      "runs": 2,
      "routine": "ZEUS DAILY",
-     "first": "06:52",
-     "best": 1057,
-     "median": 1035
+     "first": "06:52"
     },
     {
      "name": "THIN FAST",
      "runs": 2,
      "routine": "ZEUS DAILY",
-     "first": "06:58",
-     "best": 1260,
-     "median": 1150
+     "first": "06:58"
     },
     {
      "name": "SLOW ACCEL 'STT' SHORT",
      "runs": 2,
      "routine": "ZEUS DAILY",
-     "first": "07:07",
-     "best": 275,
-     "median": 257
+     "first": "07:07"
     },
     {
      "name": "ZEUS TRACK EVO NOBLINK EZ BURST",
      "runs": 4,
      "routine": "ZEUS DAILY",
-     "first": "07:57",
-     "best": 12,
-     "median": 10
+     "first": "07:57"
     },
     {
      "name": "CONTROLSPHERE OW - TEST",
      "runs": 2,
      "routine": "ZEUS DAILY",
-     "first": "08:05",
-     "best": 5994,
-     "median": 5454
+     "first": "08:05"
     },
     {
      "name": "MIXED XYZ STRAFES SLOW ACCEL",
      "runs": 2,
      "routine": "ZEUS DAILY",
-     "first": "08:09",
-     "best": 267,
-     "median": 252
+     "first": "08:09"
     },
     {
      "name": "REACTIVE ADJUSTMENTS STRAFES",
      "runs": 2,
      "routine": "ZEUS DAILY",
-     "first": "08:22",
-     "best": 1649,
-     "median": 1648
+     "first": "08:22"
     },
     {
      "name": "AIR EASY INVINCIBLE 4 VSB - TEST",
      "runs": 2,
      "routine": "ZEUS DAILY",
-     "first": "08:34",
-     "best": 2019,
-     "median": 1998
+     "first": "08:34"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -6173,9 +5123,7 @@
      "name": "SMOOTH THIN TRACK V2 - RANKED",
      "runs": 5,
      "routine": "OTHERS 2",
-     "first": "09:03",
-     "best": 424,
-     "median": 388
+     "first": "09:03"
     },
     {
      "name": "TORNADO COW (MICRO)",
@@ -6187,25 +5135,19 @@
      "name": "REACTIVE STRAFER 2",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:18",
-     "best": 1119,
-     "median": 1119
+     "first": "09:18"
     },
     {
      "name": "CONTROLTRACK",
      "runs": 2,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:19",
-     "best": 1004,
-     "median": 958
+     "first": "09:19"
     },
     {
      "name": "テ PRECISETRACK (EZ) - RANKED",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:24",
-     "best": 968,
-     "median": 968
+     "first": "09:24"
     },
     {
      "name": "AIR TRACK SMOOTH V3 (EZ) - RANKED",
@@ -6217,17 +5159,13 @@
      "name": "ZEUS TRACK EVO - NOBLINK (EZ)",
      "runs": 15,
      "routine": "1",
-     "first": "14:48",
-     "best": 557,
-     "median": 492
+     "first": "14:48"
     },
     {
      "name": "ZEUS TRACK EVO - CLOSE",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "23:20",
-     "best": 430,
-     "median": 430
+     "first": "23:20"
     }
    ]
   },
@@ -6318,73 +5256,55 @@
      "name": "SCX CLOSE STRAFES",
      "runs": 3,
      "routine": "ZEUS DAILY",
-     "first": "11:43",
-     "best": 633,
-     "median": 612
+     "first": "11:43"
     },
     {
      "name": "ZEUS TRACK FAR BZN EDITION",
      "runs": 2,
      "routine": "ZEUS DAILY",
-     "first": "11:48",
-     "best": 1108,
-     "median": 1106
+     "first": "11:48"
     },
     {
      "name": "THIN FAST",
      "runs": 2,
      "routine": "ZEUS DAILY",
-     "first": "11:52",
-     "best": 1675,
-     "median": 1628
+     "first": "11:52"
     },
     {
      "name": "SLOW ACCEL 'STT' SHORT",
      "runs": 2,
      "routine": "ZEUS DAILY",
-     "first": "11:56",
-     "best": 318,
-     "median": 311
+     "first": "11:56"
     },
     {
      "name": "ZEUS TRACK EVO NOBLINK EZ BURST",
      "runs": 4,
      "routine": "ZEUS DAILY",
-     "first": "12:03",
-     "best": 12,
-     "median": 10
+     "first": "12:03"
     },
     {
      "name": "CONTROLSPHERE OW - TEST",
      "runs": 3,
      "routine": "ZEUS DAILY",
-     "first": "12:13",
-     "best": 7056,
-     "median": 6102
+     "first": "12:13"
     },
     {
      "name": "MIXED XYZ STRAFES SLOW ACCEL",
      "runs": 3,
      "routine": "ZEUS DAILY",
-     "first": "12:16",
-     "best": 291,
-     "median": 270
+     "first": "12:16"
     },
     {
      "name": "REACTIVE ADJUSTMENTS STRAFES",
      "runs": 3,
      "routine": "ZEUS DAILY",
-     "first": "12:29",
-     "best": 1757,
-     "median": 1662
+     "first": "12:29"
     },
     {
      "name": "AIR EASY INVINCIBLE 4 VSB - TEST",
      "runs": 2,
      "routine": "ZEUS DAILY",
-     "first": "12:47",
-     "best": 1956,
-     "median": 1912
+     "first": "12:47"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -6396,25 +5316,19 @@
      "name": "AIR CONTROL SPHERE - S - RANKED",
      "runs": 5,
      "routine": "OTHERS 1",
-     "first": "14:04",
-     "best": 861,
-     "median": 740
+     "first": "14:04"
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
      "runs": 5,
      "routine": "OTHERS 1",
-     "first": "14:13",
-     "best": 497,
-     "median": 489
+     "first": "14:13"
     },
     {
      "name": "SMOOTH THIN TRACK V2 (EZ) BURST",
      "runs": 3,
      "routine": "BEGINNER TRACKING BURST",
-     "first": "15:06",
-     "best": 202,
-     "median": 193
+     "first": "15:06"
     },
     {
      "name": "SHORT STRAFES (LMP) - S",
@@ -6559,17 +5473,13 @@
      "name": "PASU TRACK EVO (RCT) - 0.85X",
      "runs": 10,
      "routine": "RANK INT B",
-     "first": "07:13",
-     "best": 297,
-     "median": 286
+     "first": "07:13"
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
      "runs": 8,
      "routine": "RANK INT B",
-     "first": "07:39",
-     "best": 494,
-     "median": 402
+     "first": "07:39"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -6581,33 +5491,25 @@
      "name": "SCX CLOSE STRAFES",
      "runs": 3,
      "routine": "ZEUS WEAKNESS",
-     "first": "13:21",
-     "best": 693,
-     "median": 663
+     "first": "13:21"
     },
     {
      "name": "CLOSELY STRAFING KYTAN",
      "runs": 1,
      "routine": "ZEUS WEAKNESS",
-     "first": "13:33",
-     "best": 505,
-     "median": 505
+     "first": "13:33"
     },
     {
      "name": "PENNYTRACKING",
      "runs": 3,
      "routine": "ZEUS WEAKNESS",
-     "first": "13:35",
-     "best": 760,
-     "median": 670
+     "first": "13:35"
     },
     {
      "name": "THIN FAST",
      "runs": 2,
      "routine": "ZEUS WEAKNESS",
-     "first": "14:20",
-     "best": 1100,
-     "median": 1070
+     "first": "14:20"
     },
     {
      "name": "SMOOTH THIN TRACK V2 (EZ) - RANK",
@@ -6722,17 +5624,13 @@
      "name": "PASU TRACK EVO (RCT) - 0.85X",
      "runs": 14,
      "routine": "1",
-     "first": "09:27",
-     "best": 351,
-     "median": 328
+     "first": "09:27"
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
      "runs": 13,
      "routine": "1",
-     "first": "09:28",
-     "best": 524,
-     "median": 430
+     "first": "09:28"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -6744,41 +5642,31 @@
      "name": "SCX CLOSE STRAFES",
      "runs": 3,
      "routine": "ZEUS WEAKNESS 3",
-     "first": "16:49",
-     "best": 716,
-     "median": 627
+     "first": "16:49"
     },
     {
      "name": "PENNYTRACKING",
      "runs": 5,
      "routine": "ZEUS WEAKNESS 3",
-     "first": "16:52",
-     "best": 635,
-     "median": 575
+     "first": "16:52"
     },
     {
      "name": "ZEUS TRACK FAR BZN EDITION",
      "runs": 3,
      "routine": "ZEUS WEAKNESS 3",
-     "first": "17:07",
-     "best": 1213,
-     "median": 1133
+     "first": "17:07"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK (EZ)",
      "runs": 3,
      "routine": "ZEUS TRIO",
-     "first": "17:13",
-     "best": 561,
-     "median": 560
+     "first": "17:13"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK 50%",
      "runs": 2,
      "routine": "ZEUS TRIO",
-     "first": "17:15",
-     "best": 235,
-     "median": 233
+     "first": "17:15"
     }
    ]
   },
@@ -6857,17 +5745,13 @@
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
      "runs": 3,
      "routine": "RANK INT A",
-     "first": "00:00",
-     "best": 477,
-     "median": 458
+     "first": "00:00"
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
      "runs": 8,
      "routine": "RANK INT A",
-     "first": "01:53",
-     "best": 802,
-     "median": 625
+     "first": "01:53"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -6879,113 +5763,85 @@
      "name": "SCX CLOSE STRAFES",
      "runs": 6,
      "routine": "ZEUS WEAKNESS",
-     "first": "07:30",
-     "best": 658,
-     "median": 598
+     "first": "07:30"
     },
     {
      "name": "CLOSELY STRAFING KYTAN",
      "runs": 2,
      "routine": "ZEUS WEAKNESS",
-     "first": "08:30",
-     "best": 431,
-     "median": 427
+     "first": "08:30"
     },
     {
      "name": "PENNYTRACKING",
      "runs": 6,
      "routine": "ZEUS WEAKNESS",
-     "first": "08:32",
-     "best": 670,
-     "median": 560
+     "first": "08:32"
     },
     {
      "name": "THIN FAST",
      "runs": 4,
      "routine": "ZEUS WEAKNESS",
-     "first": "08:48",
-     "best": 1440,
-     "median": 1365
+     "first": "08:48"
     },
     {
      "name": "SLOW ACCEL 'STT' SHORT",
      "runs": 4,
      "routine": "ZEUS WEAKNESS",
-     "first": "08:55",
-     "best": 329,
-     "median": 304
+     "first": "08:55"
     },
     {
      "name": "ZEUS TRACK FAR BZN EDITION",
      "runs": 4,
      "routine": "ZEUS WEAKNESS",
-     "first": "08:56",
-     "best": 1183,
-     "median": 1103
+     "first": "08:56"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK (EZ)",
      "runs": 4,
      "routine": "ZEUS TRIO",
-     "first": "09:47",
-     "best": 628,
-     "median": 576
+     "first": "09:47"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK 50%",
      "runs": 4,
      "routine": "ZEUS TRIO",
-     "first": "09:52",
-     "best": 306,
-     "median": 258
+     "first": "09:52"
     },
     {
      "name": "SNOWFLAKES INTERMEDIATE - RANKED",
      "runs": 3,
      "routine": "DYNAMIC INTERMEDIATE RANK",
-     "first": "11:15",
-     "best": 690,
-     "median": 620
+     "first": "11:15"
     },
     {
      "name": "STARFALL INTERMEDIATE - RANKED",
      "runs": 3,
      "routine": "DYNAMIC INTERMEDIATE RANK",
-     "first": "11:16",
-     "best": 520,
-     "median": 480
+     "first": "11:16"
     },
     {
      "name": "BALLOONS INTERMEDIATE - RANKED",
      "runs": 3,
      "routine": "DYNAMIC INTERMEDIATE RANK",
-     "first": "11:19",
-     "best": 720,
-     "median": 670
+     "first": "11:19"
     },
     {
      "name": "テ LEAVES CLICKING - L - RANKED",
      "runs": 3,
      "routine": "DYNAMIC INTERMEDIATE RANK",
-     "first": "11:21",
-     "best": 750,
-     "median": 690
+     "first": "11:21"
     },
     {
      "name": "テ LEAP CLICK - L - RANKED",
      "runs": 3,
      "routine": "DYNAMIC INTERMEDIATE RANK",
-     "first": "11:22",
-     "best": 570,
-     "median": 490
+     "first": "11:22"
     },
     {
      "name": "テ BARREL CLICK (EZ) - RANKED",
      "runs": 3,
      "routine": "DYNAMIC INTERMEDIATE RANK",
-     "first": "11:24",
-     "best": 660,
-     "median": 580
+     "first": "11:24"
     }
    ]
   },
@@ -7022,49 +5878,37 @@
      "name": "SCX CLOSE STRAFES",
      "runs": 1,
      "routine": "ZEUS WEAKNESS 3",
-     "first": "01:46",
-     "best": 616,
-     "median": 616
+     "first": "01:46"
     },
     {
      "name": "PENNYTRACKING",
      "runs": 3,
      "routine": "ZEUS WEAKNESS 3",
-     "first": "01:47",
-     "best": 605,
-     "median": 580
+     "first": "01:47"
     },
     {
      "name": "ZEUS TRACK FAR BZN EDITION",
      "runs": 1,
      "routine": "ZEUS WEAKNESS 3",
-     "first": "01:53",
-     "best": 1060,
-     "median": 1060
+     "first": "01:53"
     },
     {
      "name": "AIR CONTROL SPHERE",
      "runs": 2,
      "routine": "RANK INT A",
-     "first": "23:20",
-     "best": 836,
-     "median": 810
+     "first": "23:20"
     },
     {
      "name": "SMOOTH THIN TRACK V2 - RANKED",
      "runs": 8,
      "routine": "RANK INT A",
-     "first": "23:24",
-     "best": 476,
-     "median": 450
+     "first": "23:24"
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
      "runs": 5,
      "routine": "RANK INT A",
-     "first": "23:48",
-     "best": 461,
-     "median": 441
+     "first": "23:48"
     }
    ]
   },
@@ -7131,9 +5975,7 @@
      "name": "SCX CLOSE STRAFES",
      "runs": 8,
      "routine": "ZEUS WEAKNESS 3",
-     "first": "01:09",
-     "best": 653,
-     "median": 639
+     "first": "01:09"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -7145,17 +5987,13 @@
      "name": "PENNYTRACKING",
      "runs": 9,
      "routine": "ZEUS WEAKNESS 3",
-     "first": "07:45",
-     "best": 685,
-     "median": 620
+     "first": "07:45"
     },
     {
      "name": "ZEUS TRACK FAR BZN EDITION",
      "runs": 6,
      "routine": "(single scenario)",
-     "first": "07:59",
-     "best": 1107,
-     "median": 1078
+     "first": "07:59"
     }
    ]
   },
@@ -7234,25 +6072,19 @@
      "name": "PASU TRACK EVO (RCT) - 0.6X",
      "runs": 2,
      "routine": "RANK INT B",
-     "first": "08:51",
-     "best": 440,
-     "median": 430
+     "first": "08:51"
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
      "runs": 18,
      "routine": "RANK INT B",
-     "first": "08:54",
-     "best": 305,
-     "median": 300
+     "first": "08:54"
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
      "runs": 16,
      "routine": "RANK INT B",
-     "first": "09:11",
-     "best": 532,
-     "median": 469
+     "first": "09:11"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -7264,73 +6096,55 @@
      "name": "AIR TRACK SMOOTH V3 - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "10:24",
-     "best": 312,
-     "median": 312
+     "first": "10:24"
     },
     {
      "name": "143 ANY STRAFES",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "19:33",
-     "best": 705,
-     "median": 705
+     "first": "19:33"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK (EZ)",
      "runs": 1,
      "routine": "ZEUS WEAKNESS",
-     "first": "22:18",
-     "best": 522,
-     "median": 522
+     "first": "22:18"
     },
     {
      "name": "SCX CLOSE STRAFES",
      "runs": 4,
      "routine": "ZEUS WEAKNESS",
-     "first": "22:19",
-     "best": 648,
-     "median": 582
+     "first": "22:19"
     },
     {
      "name": "CLOSELY STRAFING KYTAN",
      "runs": 1,
      "routine": "ZEUS WEAKNESS",
-     "first": "22:28",
-     "best": 497,
-     "median": 497
+     "first": "22:28"
     },
     {
      "name": "PENNYTRACKING",
      "runs": 3,
      "routine": "ZEUS WEAKNESS",
-     "first": "22:32",
-     "best": 565,
-     "median": 540
+     "first": "22:32"
     },
     {
      "name": "THIN FAST",
      "runs": 2,
      "routine": "ZEUS WEAKNESS",
-     "first": "22:37",
-     "best": 1265,
-     "median": 1220
+     "first": "22:37"
     },
     {
      "name": "SLOW ACCEL 'STT' SHORT",
      "runs": 2,
      "routine": "ZEUS WEAKNESS",
-     "first": "22:49",
-     "best": 352,
-     "median": 322
+     "first": "22:49"
     },
     {
      "name": "ZEUS TRACK FAR BZN EDITION",
      "runs": 2,
      "routine": "ZEUS WEAKNESS",
-     "first": "22:56",
-     "best": 1108,
-     "median": 1060
+     "first": "22:56"
     }
    ]
   },
@@ -7391,137 +6205,103 @@
      "name": "AIR CONTROL SPHERE",
      "runs": 3,
      "routine": "RANK INT A",
-     "first": "07:05",
-     "best": 912,
-     "median": 909
+     "first": "07:05"
     },
     {
      "name": "SMOOTH THIN TRACK V2 - RANKED",
      "runs": 8,
      "routine": "RANK INT A",
-     "first": "07:08",
-     "best": 474,
-     "median": 438
+     "first": "07:08"
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
      "runs": 8,
      "routine": "RANK INT A",
-     "first": "07:32",
-     "best": 526,
-     "median": 482
+     "first": "07:32"
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
      "runs": 8,
      "routine": "RANK INT A",
-     "first": "07:47",
-     "best": 853,
-     "median": 740
+     "first": "07:47"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK (EZ)",
      "runs": 4,
      "routine": "ZEUS BUILDER",
-     "first": "09:52",
-     "best": 652,
-     "median": 536
+     "first": "09:52"
     },
     {
      "name": "GROUND PLAZA FS NO UFO",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "10:10",
-     "best": 345,
-     "median": 342
+     "first": "10:10"
     },
     {
      "name": "CONTROLSPHERE OW - TEST",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "10:14",
-     "best": 6804,
-     "median": 6422
+     "first": "10:14"
     },
     {
      "name": "PENNYTRACKING",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "10:24",
-     "best": 630,
-     "median": 588
+     "first": "10:24"
     },
     {
      "name": "SLOW ACCEL 'STT' SHORT",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "10:44",
-     "best": 300,
-     "median": 289
+     "first": "10:44"
     },
     {
      "name": "CLOSELY STRAFING KYTAN",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "10:56",
-     "best": 506,
-     "median": 485
+     "first": "10:56"
     },
     {
      "name": "TAMTARGETSWITCH SMOOTH EASY VSB",
      "runs": 4,
      "routine": "ZEUS BUILDER",
-     "first": "10:59",
-     "best": 32,
-     "median": 31
+     "first": "10:59"
     },
     {
      "name": "THIN FAST",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "11:04",
-     "best": 1650,
-     "median": 1510
+     "first": "11:04"
     },
     {
      "name": "1 WALL 4 TARGETS - RANKED",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "11:07",
-     "best": 78,
-     "median": 76
+     "first": "11:07"
     },
     {
      "name": "STAR CLICKING V3 150% - RANKED",
      "runs": 3,
      "routine": "(single scenario)",
-     "first": "11:09",
-     "best": 47,
-     "median": 40
+     "first": "11:09"
     },
     {
      "name": "POPCORN - M",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "11:22",
-     "best": 660,
-     "median": 660
+     "first": "11:22"
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "11:34",
-     "best": 436,
-     "median": 436
+     "first": "11:34"
     },
     {
      "name": "PASU XYZ",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "11:39",
-     "best": 160,
-     "median": 160
+     "first": "11:39"
     }
    ]
   },
@@ -7618,17 +6398,13 @@
      "name": "PASU TRACK EVO (RCT) - 0.85X",
      "runs": 8,
      "routine": "RANK INT B",
-     "first": "05:32",
-     "best": 354,
-     "median": 302
+     "first": "05:32"
     },
     {
      "name": "PASU TRACK XYZ - RANKED",
      "runs": 8,
      "routine": "RANK INT B",
-     "first": "05:50",
-     "best": 524,
-     "median": 471
+     "first": "05:50"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK",
@@ -7640,145 +6416,109 @@
      "name": "GROUND PLAZA FS NO UFO",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "06:27",
-     "best": 387,
-     "median": 354
+     "first": "06:27"
     },
     {
      "name": "'STT' SHORT - S - 0.5X",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "06:31",
-     "best": 266,
-     "median": 240
+     "first": "06:31"
     },
     {
      "name": "PENNYTRACKING",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "06:34",
-     "best": 575,
-     "median": 538
+     "first": "06:34"
     },
     {
      "name": "SLOW ACCEL 'STT' SHORT",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "06:39",
-     "best": 301,
-     "median": 294
+     "first": "06:39"
     },
     {
      "name": "CLOSELY STRAFING KYTAN",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "06:43",
-     "best": 502,
-     "median": 484
+     "first": "06:43"
     },
     {
      "name": "SMOOTH THIN TRACK V2 - S",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "06:46",
-     "best": 170,
-     "median": 164
+     "first": "06:46"
     },
     {
      "name": "THIN FAST",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "06:50",
-     "best": 1565,
-     "median": 1458
+     "first": "06:50"
     },
     {
      "name": "CONTROLTRACK",
      "runs": 3,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "08:59",
-     "best": 1070,
-     "median": 1013
+     "first": "08:59"
     },
     {
      "name": "GAME BALL",
      "runs": 3,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:15",
-     "best": 744,
-     "median": 668
+     "first": "09:15"
     },
     {
      "name": "SMOOTH ACCEL BOT",
      "runs": 3,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "09:28",
-     "best": 395,
-     "median": 357
+     "first": "09:28"
     },
     {
      "name": "AIR BENDER BEGINNER - FORK",
      "runs": 1,
      "routine": "BAZHAN MEDIUM TRACKING",
-     "first": "10:31",
-     "best": 829,
-     "median": 829
+     "first": "10:31"
     },
     {
      "name": "ZEUS TRACK EVO - NOBLINK (EZ)",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "10:37",
-     "best": 529,
-     "median": 529
+     "first": "10:37"
     },
     {
      "name": "VOX TS BALANCED 125% - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "20:22",
-     "best": 340,
-     "median": 340
+     "first": "20:22"
     },
     {
      "name": "TRM TS VARIED 5H - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "20:23",
-     "best": 322,
-     "median": 322
+     "first": "20:23"
     },
     {
      "name": "SUMO AIR TS 180 V2 - RANKED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "20:25",
-     "best": 1110,
-     "median": 1110
+     "first": "20:25"
     },
     {
      "name": "VOX TS BALANCED",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "21:48",
-     "best": 5,
-     "median": 5
+     "first": "21:48"
     },
     {
      "name": "POPCORN - M",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "22:30",
-     "best": 740,
-     "median": 370
+     "first": "22:30"
     },
     {
      "name": "VOX TS BALANCED - 150%",
      "runs": 1,
      "routine": "(single scenario)",
-     "first": "22:56",
-     "best": 347,
-     "median": 347
+     "first": "22:56"
     }
    ]
   },
@@ -7839,81 +6579,61 @@
      "name": "SMOOTH THIN TRACK V2 - RANKED",
      "runs": 16,
      "routine": "RANK INT A",
-     "first": "05:01",
-     "best": 464,
-     "median": 400
+     "first": "05:01"
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
      "runs": 16,
      "routine": "RANK INT A",
-     "first": "05:17",
-     "best": 537,
-     "median": 404
+     "first": "05:17"
     },
     {
      "name": "AIR CONTROL SPHERE - S - RANKED",
      "runs": 16,
      "routine": "RANK INT A",
-     "first": "05:31",
-     "best": 780,
-     "median": 602
+     "first": "05:31"
     },
     {
      "name": "GROUND PLAZA FS NO UFO",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "12:25",
-     "best": 337,
-     "median": 331
+     "first": "12:25"
     },
     {
      "name": "'STT' SHORT - S - 0.5X",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "12:28",
-     "best": 194,
-     "median": 184
+     "first": "12:28"
     },
     {
      "name": "CLOSE FAST PRECISE",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "12:31",
-     "best": 1645,
-     "median": 1550
+     "first": "12:31"
     },
     {
      "name": "SLOW ACCEL 'STT' SHORT",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "13:34",
-     "best": 265,
-     "median": 263
+     "first": "13:34"
     },
     {
      "name": "CLOSELY STRAFING KYTAN",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "13:38",
-     "best": 508,
-     "median": 478
+     "first": "13:38"
     },
     {
      "name": "SMOOTH THIN TRACK V2 - S",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "13:51",
-     "best": 162,
-     "median": 142
+     "first": "13:51"
     },
     {
      "name": "THIN FAST",
      "runs": 2,
      "routine": "ZEUS BUILDER",
-     "first": "13:57",
-     "best": 1435,
-     "median": 1410
+     "first": "13:57"
     }
    ]
   },
@@ -7992,92 +6712,76 @@
      "name": "143 CLOSE CHOPPY STRAFES",
      "runs": 8,
      "routine": "OCT DAY A1",
-     "first": "06:52",
-     "best": 511,
-     "median": 455
+     "first": "06:52"
     },
     {
      "name": "143 ANY STRAFES (FAR)",
      "runs": 8,
      "routine": "OCT DAY A1",
-     "first": "07:06",
-     "best": 780,
-     "median": 724
+     "first": "07:06"
     },
     {
      "name": "143 FLICKER ARENA",
      "runs": 8,
      "routine": "OCT DAY A1",
-     "first": "08:07",
-     "best": 476,
-     "median": 424
+     "first": "08:07"
     },
     {
      "name": "143 ZIGZAG STRAFES",
      "runs": 8,
      "routine": "OCT DAY A1",
-     "first": "08:15",
-     "best": 526,
-     "median": 430
+     "first": "08:15"
     },
     {
      "name": "143 SWEEPER STRAFES",
      "runs": 8,
      "routine": "OCT DAY A1",
-     "first": "08:22",
-     "best": 499,
-     "median": 436
+     "first": "08:22"
     },
     {
      "name": "143 ANY STRAFES",
      "runs": 6,
      "routine": "OCT DAY A1",
-     "first": "08:35",
-     "best": 866,
-     "median": 812
+     "first": "08:35"
     },
     {
      "name": "KTN CLOSE FS - RANKED",
      "runs": 11,
      "routine": "(single scenario)",
-     "first": "10:50",
-     "best": 320,
-     "median": 306
+     "first": "10:50"
     },
     {
      "name": "KTN CLOSE FS EASY - RANKED",
      "runs": 2,
      "routine": "(single scenario)",
-     "first": "11:22",
-     "best": 414,
-     "median": 390
+     "first": "11:22"
     }
    ]
   }
  ],
  "rest_effect": {
-  "runs": 1704,
-  "days": 42,
+  "runs": 2,
+  "days": 1,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 656,
-    "pct": 100.0
+    "runs": 1,
+    "pct": 95.9
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 128,
-    "pct": 99.8
+    "runs": 1,
+    "pct": 104.1
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 635,
-    "pct": 101.3
+    "runs": 0,
+    "pct": null
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 101,
-    "pct": 97.5
+    "runs": 0,
+    "pct": null
    }
   ]
  },
@@ -12245,6 +10949,16 @@
     }
    },
    {
+    "scenario": "FALLEN ANGEL V3 POSS",
+    "runs": 1,
+    "on_target": 14,
+    "reaction_ms": null,
+    "overshoot_pct": 41,
+    "pps_by_distance": {
+     "far": 2.5
+    }
+   },
+   {
     "scenario": "FISHTRACK POSS",
     "runs": 1,
     "on_target": 12,
@@ -12264,6 +10978,18 @@
     "pps_by_distance": {
      "far": 2.8,
      "mid": 3.2
+    }
+   }
+  ],
+  "2026-11-23": [
+   {
+    "scenario": "SMOOTH THIN TRACK V2 EZ - RANK",
+    "runs": 3,
+    "on_target": 28,
+    "reaction_ms": 133,
+    "overshoot_pct": 35,
+    "pps_by_distance": {
+     "mid": 6.8
     }
    }
   ]
@@ -13716,73 +12442,6 @@
     "card": "2026-11-01-zeus-week.png"
    }
   ],
-  "plan_bests": {
-   "2026-10-09": [
-    {
-     "title": "Smooth Thin Track V2",
-     "score": 474,
-     "old": 464
-    },
-    {
-     "title": "Air Control Sphere - S",
-     "score": 853,
-     "old": 780
-    }
-   ],
-   "2026-10-12": [
-    {
-     "title": "Smooth Thin Track V2",
-     "score": 476,
-     "old": 474
-    }
-   ],
-   "2026-10-16": [
-    {
-     "title": "Air Control Sphere - S",
-     "score": 861,
-     "old": 853
-    }
-   ],
-   "2026-10-10": [
-    {
-     "title": "PASU Track Evo (RCT) - 0.85X",
-     "score": 385,
-     "old": 354
-    },
-    {
-     "title": "PASU Track XYZ",
-     "score": 532,
-     "old": 524
-    }
-   ],
-   "2026-11-06": [
-    {
-     "title": "PASU Track XYZ",
-     "score": 542,
-     "old": 532
-    }
-   ],
-   "2026-11-07": [
-    {
-     "title": "PASU Track XYZ",
-     "score": 544,
-     "old": 542
-    }
-   ],
-   "2026-11-11": [
-    {
-     "title": "Zeus Track Evo - Noblink",
-     "score": 547,
-     "old": 537
-    }
-   ],
-   "2026-11-19": [
-    {
-     "title": "Zeus Track Evo - Noblink",
-     "score": 553,
-     "old": 547
-    }
-   ]
-  }
+  "plan_bests": {}
  }
 }
