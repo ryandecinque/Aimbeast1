@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-23 12:57",
- "updated_utc": "2026-11-23T05:57:46Z",
+ "updated": "2026-11-23 13:12",
+ "updated_utc": "2026-11-23T06:12:38Z",
  "today": {
   "date": "2026-11-23",
   "progress": {}
@@ -1759,27 +1759,27 @@
  "days": [
   {
    "date": "2026-11-23",
-   "runs": 6,
+   "runs": 8,
    "restarts": 9,
-   "rest_median_s": 22,
-   "rest_longest_s": 58,
+   "rest_median_s": 35,
+   "rest_longest_s": 751,
    "breaks": [],
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 6,
+     "runs": 8,
      "first": "12:48",
-     "last": "12:56"
+     "last": "13:11"
     }
    ],
    "scenarios": [
     {
      "name": "SMOOTH THIN TRACK V2 (EZ) - RANK",
-     "runs": 6,
+     "runs": 8,
      "routine": "(single scenario)",
      "first": "12:48",
-     "best": 480,
-     "median": 414
+     "best": 402,
+     "median": 402
     }
    ]
   },
@@ -6760,23 +6760,23 @@
   }
  ],
  "rest_effect": {
-  "runs": 5,
-  "days": 1,
+  "runs": 0,
+  "days": 0,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 1,
-    "pct": 91.7
+    "runs": 0,
+    "pct": null
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 2,
-    "pct": 99.8
+    "runs": 0,
+    "pct": null
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 2,
-    "pct": 108.9
+    "runs": 0,
+    "pct": null
    },
    {
     "label": "First run after a break of 15 min+",
@@ -10984,10 +10984,10 @@
   "2026-11-23": [
    {
     "scenario": "SMOOTH THIN TRACK V2 EZ - RANK",
-    "runs": 6,
-    "on_target": 29,
+    "runs": 8,
+    "on_target": 30,
     "reaction_ms": 133,
-    "overshoot_pct": 32,
+    "overshoot_pct": 30,
     "pps_by_distance": {
      "mid": 6.9
     }
