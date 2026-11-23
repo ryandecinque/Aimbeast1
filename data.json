@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-23 14:32",
- "updated_utc": "2026-11-23T07:32:26Z",
+ "updated": "2026-11-23 14:37",
+ "updated_utc": "2026-11-23T07:37:25Z",
  "today": {
   "date": "2026-11-23",
   "progress": {}
@@ -1759,9 +1759,9 @@
  "days": [
   {
    "date": "2026-11-23",
-   "runs": 24,
+   "runs": 26,
    "restarts": 18,
-   "rest_median_s": 26,
+   "rest_median_s": 31,
    "rest_longest_s": 751,
    "breaks": [
     {
@@ -1774,9 +1774,9 @@
    "playlists": [
     {
      "name": "(single scenario)",
-     "runs": 24,
+     "runs": 26,
      "first": "12:48",
-     "last": "14:32"
+     "last": "14:36"
     }
    ],
    "scenarios": [
@@ -1798,11 +1798,11 @@
     },
     {
      "name": "AIR CONTROL SPHERE - RANKED",
-     "runs": 4,
+     "runs": 6,
      "routine": "(single scenario)",
      "first": "14:26",
-     "best": 679,
-     "median": 668
+     "best": 753,
+     "median": 697
     }
    ]
   },
@@ -6783,13 +6783,13 @@
   }
  ],
  "rest_effect": {
-  "runs": 14,
+  "runs": 17,
   "days": 1,
   "groups": [
    {
     "label": "First attempt on a scenario",
     "runs": 3,
-    "pct": 97.6
+    "pct": 97.4
    },
    {
     "label": "Later attempts, rest under 20 s",
@@ -6798,8 +6798,8 @@
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 5,
-    "pct": 104.3
+    "runs": 8,
+    "pct": 103.5
    },
    {
     "label": "First run after a break of 15 min+",
@@ -11007,13 +11007,13 @@
   "2026-11-23": [
    {
     "scenario": "AIR CONTROL SPHERE - RANKED",
-    "runs": 4,
+    "runs": 6,
     "on_target": 30,
     "reaction_ms": null,
     "overshoot_pct": 24,
     "pps_by_distance": {
-     "mid": 10.2,
-     "close": 11.4
+     "mid": 10.7,
+     "close": 11.6
     }
    },
    {
