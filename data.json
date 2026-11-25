@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-26 03:27",
- "updated_utc": "2026-11-25T20:27:30Z",
+ "updated": "2026-11-26 03:42",
+ "updated_utc": "2026-11-25T20:42:22Z",
  "today": {
   "date": "2026-11-26",
   "progress": {}
@@ -95,9 +95,9 @@
    "name": "PASU TRACK EVO (RCT) - 0.85X",
    "master3": 506.0,
    "official_best": 398.0,
-   "best_14d": null,
-   "median_14d": null,
-   "runs_14d": 0,
+   "best_14d": 347.0,
+   "median_14d": 321,
+   "runs_14d": 3,
    "steps": [
     0.0,
     138.0,
@@ -646,6 +646,12 @@
      "median": 330,
      "best": 361,
      "runs": 10
+    },
+    {
+     "date": "2026-11-26",
+     "median": 321,
+     "best": 347,
+     "runs": 3
     }
    ]
   },
@@ -2307,17 +2313,30 @@
  "days": [
   {
    "date": "2026-11-26",
-   "runs": 7,
-   "restarts": 7,
-   "rest_median_s": 13,
-   "rest_longest_s": 38,
-   "breaks": [],
+   "runs": 10,
+   "restarts": 11,
+   "rest_median_s": 16,
+   "rest_longest_s": 48,
+   "breaks": [
+    {
+     "after": "AIMBEAST 1 INTERMEDIATE",
+     "before": "(single scenario)",
+     "at": "03:24",
+     "minutes": 11.3
+    }
+   ],
    "playlists": [
     {
      "name": "AIMBEAST 1 INTERMEDIATE",
      "runs": 7,
      "first": "03:16",
      "last": "03:24"
+    },
+    {
+     "name": "(single scenario)",
+     "runs": 3,
+     "first": "03:37",
+     "last": "03:40"
     }
    ],
    "scenarios": [
@@ -2336,6 +2355,14 @@
      "first": "03:23",
      "best": 468,
      "median": 460
+    },
+    {
+     "name": "PASU TRACK EVO (RCT) - 0.85X",
+     "runs": 3,
+     "routine": "(single scenario)",
+     "first": "03:37",
+     "best": 347,
+     "median": 321
     }
    ]
   },
@@ -8145,23 +8172,23 @@
   }
  ],
  "rest_effect": {
-  "runs": 1711,
+  "runs": 1714,
   "days": 43,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 658,
+    "runs": 659,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 131,
+    "runs": 132,
     "pct": 99.8
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 637,
-    "pct": 101.3
+    "runs": 638,
+    "pct": 101.2
    },
    {
     "label": "First run after a break of 15 min+",
@@ -12415,6 +12442,17 @@
     }
    },
    {
+    "scenario": "PASU TRACK EVO RCT - 0.85X",
+    "runs": 3,
+    "on_target": 22,
+    "reaction_ms": 183,
+    "overshoot_pct": 35,
+    "pps_by_distance": {
+     "far": 5.2,
+     "mid": 5.4
+    }
+   },
+   {
     "scenario": "SMOOTH THIN TRACK V2 - RANKED",
     "runs": 6,
     "on_target": 31,
@@ -13643,6 +13681,22 @@
     "note": "Best of 2 recorded today (median 460). The clip is its 8 seconds with the most hits.",
     "model": {
      "none": "Not available: model videos are for tracking runs only."
+    }
+   },
+   {
+    "scenario": "PASU Track Evo (RCT) - 0.85X",
+    "score": 347,
+    "time": "03:37",
+    "gif": "best-pasu085-2026-11-26",
+    "video": true,
+    "on_target": 25,
+    "reaction_ms": 183,
+    "overshoot_pct": 35,
+    "best_14d": 347,
+    "master3": 506,
+    "note": "Best of 3 recorded today (median 320). The clip is its 8 seconds with the most hits.",
+    "model": {
+     "none": "Not available for this scenario yet: the bot reacts to your hits, so a better run would change what the bot does. (event 2 is triggered on hit (speed up/down))"
     }
    }
   ]
