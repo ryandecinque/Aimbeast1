@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-26 04:42",
- "updated_utc": "2026-11-25T21:42:40Z",
+ "updated": "2026-11-26 04:47",
+ "updated_utc": "2026-11-25T21:47:46Z",
  "today": {
   "date": "2026-11-26",
   "progress": {}
@@ -40,8 +40,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 468.0,
-   "median_14d": 453,
-   "runs_14d": 3,
+   "median_14d": 423,
+   "runs_14d": 6,
    "steps": [
     0.0,
     180.0,
@@ -313,9 +313,9 @@
     },
     {
      "date": "2026-11-26",
-     "median": 453,
+     "median": 423,
      "best": 468,
-     "runs": 3
+     "runs": 6
     }
    ]
   },
@@ -2201,9 +2201,9 @@
  "days": [
   {
    "date": "2026-11-26",
-   "runs": 15,
-   "restarts": 19,
-   "rest_median_s": 28,
+   "runs": 18,
+   "restarts": 23,
+   "rest_median_s": 27,
    "rest_longest_s": 869,
    "breaks": [
     {
@@ -2228,9 +2228,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 8,
+     "runs": 11,
      "first": "03:37",
-     "last": "04:39"
+     "last": "04:45"
     }
    ],
    "scenarios": [
@@ -2244,11 +2244,11 @@
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
-     "runs": 3,
+     "runs": 6,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "03:23",
      "best": 468,
-     "median": 453
+     "median": 423
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
@@ -8052,7 +8052,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1647,
+  "runs": 1650,
   "days": 43,
   "groups": [
    {
@@ -8062,13 +8062,13 @@
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 118,
+    "runs": 120,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 606,
-    "pct": 101.1
+    "runs": 607,
+    "pct": 101.2
    },
    {
     "label": "First run after a break of 15 min+",
@@ -12311,14 +12311,14 @@
   "2026-11-26": [
    {
     "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
-    "runs": 5,
-    "on_target": 28,
+    "runs": 8,
+    "on_target": 26,
     "reaction_ms": 83,
     "overshoot_pct": 14,
     "pps_by_distance": {
-     "far": 6.8,
-     "mid": 8.2,
-     "close": 6.6
+     "far": 6.4,
+     "mid": 7.7,
+     "close": 6.8
     }
    },
    {
