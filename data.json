@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-26 04:02",
- "updated_utc": "2026-11-25T21:02:38Z",
+ "updated": "2026-11-26 04:42",
+ "updated_utc": "2026-11-25T21:42:40Z",
  "today": {
   "date": "2026-11-26",
   "progress": {}
@@ -40,8 +40,8 @@
    "master3": 660.0,
    "official_best": 548.0,
    "best_14d": 468.0,
-   "median_14d": 460,
-   "runs_14d": 2,
+   "median_14d": 453,
+   "runs_14d": 3,
    "steps": [
     0.0,
     180.0,
@@ -313,9 +313,9 @@
     },
     {
      "date": "2026-11-26",
-     "median": 460,
+     "median": 453,
      "best": 468,
-     "runs": 2
+     "runs": 3
     }
    ]
   },
@@ -2201,8 +2201,8 @@
  "days": [
   {
    "date": "2026-11-26",
-   "runs": 14,
-   "restarts": 14,
+   "runs": 15,
+   "restarts": 19,
    "rest_median_s": 28,
    "rest_longest_s": 869,
    "breaks": [
@@ -2211,6 +2211,12 @@
      "before": "(single scenario)",
      "at": "03:24",
      "minutes": 11.3
+    },
+    {
+     "after": "(single scenario)",
+     "before": "(single scenario)",
+     "at": "04:01",
+     "minutes": 37.0
     }
    ],
    "playlists": [
@@ -2222,9 +2228,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 7,
+     "runs": 8,
      "first": "03:37",
-     "last": "04:01"
+     "last": "04:39"
     }
    ],
    "scenarios": [
@@ -2238,11 +2244,11 @@
     },
     {
      "name": "AIR TRACK SMOOTH V3 150% - RANKED",
-     "runs": 2,
+     "runs": 3,
      "routine": "AIMBEAST 1 INTERMEDIATE",
      "first": "03:23",
      "best": 468,
-     "median": 460
+     "median": 453
     },
     {
      "name": "PASU TRACK EVO (RCT) - 0.85X",
@@ -8046,12 +8052,12 @@
   }
  ],
  "rest_effect": {
-  "runs": 1645,
+  "runs": 1647,
   "days": 43,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 648,
+    "runs": 650,
     "pct": 100.0
    },
    {
@@ -8066,7 +8072,7 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 94,
+    "runs": 95,
     "pct": 97.5
    }
   ]
@@ -12305,14 +12311,14 @@
   "2026-11-26": [
    {
     "scenario": "AIR TRACK SMOOTH V3 150 - RANKED",
-    "runs": 2,
-    "on_target": 30,
-    "reaction_ms": 100,
-    "overshoot_pct": 11,
+    "runs": 5,
+    "on_target": 28,
+    "reaction_ms": 83,
+    "overshoot_pct": 14,
     "pps_by_distance": {
-     "far": 5.4,
-     "mid": 8.4,
-     "close": 6.9
+     "far": 6.8,
+     "mid": 8.2,
+     "close": 6.6
     }
    },
    {
