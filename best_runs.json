@@ -1140,6 +1140,22 @@
     "file": "model-smooththin-2026-11-26",
     "label": "Model: 510"
    }
+  },
+  {
+   "scenario": "Air Track Smooth V3 150%",
+   "score": 468,
+   "time": "03:23",
+   "gif": "best-airtrack-2026-11-26",
+   "video": true,
+   "on_target": 32,
+   "reaction_ms": 117,
+   "overshoot_pct": 14,
+   "best_14d": 468,
+   "master3": 660,
+   "note": "Best of 2 recorded today (median 460). The clip is its 8 seconds with the most hits.",
+   "model": {
+    "none": "Not available: model videos are for tracking runs only."
+   }
   }
  ]
 }
