@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-26 04:47",
- "updated_utc": "2026-11-25T21:47:46Z",
+ "updated": "2026-11-26 18:02",
+ "updated_utc": "2026-11-26T11:02:43Z",
  "today": {
   "date": "2026-11-26",
   "progress": {}
@@ -2201,9 +2201,9 @@
  "days": [
   {
    "date": "2026-11-26",
-   "runs": 18,
-   "restarts": 23,
-   "rest_median_s": 27,
+   "runs": 22,
+   "restarts": 29,
+   "rest_median_s": 22,
    "rest_longest_s": 869,
    "breaks": [
     {
@@ -2217,6 +2217,12 @@
      "before": "(single scenario)",
      "at": "04:01",
      "minutes": 37.0
+    },
+    {
+     "after": "(single scenario)",
+     "before": "(single scenario)",
+     "at": "04:45",
+     "minutes": 790.3
     }
    ],
    "playlists": [
@@ -2228,9 +2234,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 11,
+     "runs": 15,
      "first": "03:37",
-     "last": "04:45"
+     "last": "18:02"
     }
    ],
    "scenarios": [
@@ -2257,6 +2263,14 @@
      "first": "03:37",
      "best": 347,
      "median": 321
+    },
+    {
+     "name": "PASU TRACK EVO (SMOOTH) - RANKED",
+     "runs": 4,
+     "routine": "(single scenario)",
+     "first": "17:56",
+     "best": 226,
+     "median": 206
     }
    ]
   },
@@ -8052,17 +8066,17 @@
   }
  ],
  "rest_effect": {
-  "runs": 1650,
+  "runs": 1653,
   "days": 43,
   "groups": [
    {
     "label": "First attempt on a scenario",
-    "runs": 650,
+    "runs": 651,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 120,
+    "runs": 122,
     "pct": 100.0
    },
    {
@@ -8072,7 +8086,7 @@
    },
    {
     "label": "First run after a break of 15 min+",
-    "runs": 95,
+    "runs": 96,
     "pct": 97.5
    }
   ]
@@ -12330,6 +12344,17 @@
     "pps_by_distance": {
      "far": 5.2,
      "mid": 5.4
+    }
+   },
+   {
+    "scenario": "PASU TRACK EVO SMOOTH - RANKED",
+    "runs": 4,
+    "on_target": 17,
+    "reaction_ms": null,
+    "overshoot_pct": 32,
+    "pps_by_distance": {
+     "far": 4.0,
+     "mid": 3.1
     }
    },
    {
