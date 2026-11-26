@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-26 18:02",
- "updated_utc": "2026-11-26T11:02:43Z",
+ "updated": "2026-11-26 18:12",
+ "updated_utc": "2026-11-26T11:12:46Z",
  "today": {
   "date": "2026-11-26",
   "progress": {}
@@ -2201,8 +2201,8 @@
  "days": [
   {
    "date": "2026-11-26",
-   "runs": 22,
-   "restarts": 29,
+   "runs": 24,
+   "restarts": 32,
    "rest_median_s": 22,
    "rest_longest_s": 869,
    "breaks": [
@@ -2234,9 +2234,9 @@
     },
     {
      "name": "(single scenario)",
-     "runs": 15,
+     "runs": 17,
      "first": "03:37",
-     "last": "18:02"
+     "last": "18:10"
     }
    ],
    "scenarios": [
@@ -2266,11 +2266,11 @@
     },
     {
      "name": "PASU TRACK EVO (SMOOTH) - RANKED",
-     "runs": 4,
+     "runs": 6,
      "routine": "(single scenario)",
      "first": "17:56",
-     "best": 226,
-     "median": 206
+     "best": 233,
+     "median": 220
     }
    ]
   },
@@ -8066,7 +8066,7 @@
   }
  ],
  "rest_effect": {
-  "runs": 1653,
+  "runs": 1656,
   "days": 43,
   "groups": [
    {
@@ -8076,12 +8076,12 @@
    },
    {
     "label": "Later attempts, rest under 20 s",
-    "runs": 122,
+    "runs": 123,
     "pct": 100.0
    },
    {
     "label": "Later attempts, rest 20 s to 2 min",
-    "runs": 607,
+    "runs": 608,
     "pct": 101.2
    },
    {
@@ -12348,13 +12348,13 @@
    },
    {
     "scenario": "PASU TRACK EVO SMOOTH - RANKED",
-    "runs": 4,
-    "on_target": 17,
+    "runs": 6,
+    "on_target": 18,
     "reaction_ms": null,
     "overshoot_pct": 32,
     "pps_by_distance": {
      "far": 4.0,
-     "mid": 3.1
+     "mid": 3.4
     }
    },
    {
